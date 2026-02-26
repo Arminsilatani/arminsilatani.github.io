@@ -1,12 +1,40 @@
+/* ساختار کلی سکشن */
 .hero-section {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 40px 0;
+    display: flex;
+    justify-content: center;
 }
 
-/* Blob background */
+.hero-container {
+    width: 90%;
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+/* ستون راست */
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* ستون چپ */
+.hero-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-left img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* حباب + عکس */
 .blob-behind-wrapper {
     position: relative;
     display: flex;
@@ -15,7 +43,7 @@
     width: 100%;
     min-height: 400px;
     background: transparent;
-    overflow: hidden;
+    overflow: visible;
     padding: 20px;
 }
 
@@ -28,6 +56,7 @@
     border-radius: 15px;
 }
 
+/* حباب */
 .blob-behind {
     position: absolute;
     top: 50%;
@@ -37,9 +66,10 @@
     height: 250px;
     background: #ff6b6b;
     border-radius: 80% 20% 70% 30% / 35% 60% 40% 65%;
-    box-shadow: 0 30px 40px -20px rgba(255,107,107,.5),
-                inset -10px -10px 20px rgba(0,0,0,.1),
-                inset 10px 10px 20px rgba(255,255,255,.3);
+    box-shadow: 
+        0 30px 40px -20px rgba(255,107,107,.5),
+        inset -10px -10px 20px rgba(0,0,0,.1),
+        inset 10px 10px 20px rgba(255,255,255,.3);
     animation: gentleBlob 25s cubic-bezier(0.4,0,0.2,1) infinite;
     filter: blur(0.5px);
     z-index: 1;
@@ -59,6 +89,7 @@
     animation: lightMove 18s ease-in-out infinite;
 }
 
+/* انیمیشن‌ها */
 @keyframes gentleBlob {
     0% { border-radius: 80% 20% 70% 30% / 35% 60% 40% 65%; transform: translate(-50%, -50%) scale(1) rotate(0); }
     15% { border-radius: 40% 60% 35% 65% / 70% 25% 75% 30%; transform: translate(-50%, -50%) scale(1.05) rotate(3deg); }
@@ -78,8 +109,15 @@
     75% { opacity: .6; transform: translate(5px,5px); }
 }
 
-.hero-logo img {
-    max-width: 800px;
-    width: 100%;
-    margin-top: 20px;
+/* ریسپانسیو موبایل */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .blob-behind {
+        width: 180px;
+        height: 180px;
+    }
 }
