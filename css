@@ -1,0 +1,61 @@
+/* Reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:system-ui,-apple-system,'Segoe UI',Tahoma,Arial;line-height:1.5;background:#fff;color:#111}
+:root{--accent:#4ECDC4}
+
+/* Menu (floating circular toggle + full-screen circle) */
+.nav-tgl{display:inline-block;cursor:pointer;position:fixed;z-index:100;right:30px;top:30px;width:70px;height:70px;border-radius:50%;background:var(--accent);box-shadow:0 4px 24px rgba(0,0,0,.24);border:none}
+.nav-tgl span{display:inline-block;position:relative;height:2px;width:34px;background:#293335;border-radius:1px}
+.nav{position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:90}
+.nav:before{content:'';position:fixed;top:0;left:0;width:100vw;height:100vh;background:#0d0d0d;clip-path:circle(30px at calc(100% - 65px) 65px);transition:clip-path .6s cubic-bezier(.4,0,.2,1)}
+.menu.active .nav:before{clip-path:circle(100%) ;pointer-events:auto}
+.nav ul{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);list-style:none;text-align:center;opacity:0;pointer-events:none;transition:opacity .3s .1s}
+.menu.active .nav ul{opacity:1;pointer-events:auto}
+.nav ul li{margin:1.2rem 0}
+.nav ul li a{color:#fff;font-size:2rem;text-decoration:none;font-weight:300}
+.nav ul li a.active{color:var(--accent)}
+.menu-footer{position:fixed;bottom:30px;left:10%;width:80%;text-align:center;color:#ccc;opacity:0;pointer-events:none}
+.menu.active .menu-footer{opacity:1;pointer-events:auto}
+body.menu-open{overflow:hidden}
+
+/* Hero */
+.hero-section{position:relative;overflow:hidden;padding:60px 20px;background:#f5f5f5;display:flex;gap:30px;align-items:center}
+.blob-behind-wrapper{position:relative;display:flex;align-items:center;justify-content:center;width:50%}
+.blob-behind-wrapper img{max-width:90%;border-radius:15px;z-index:2}
+.blob-behind{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:250px;height:250px;background:#ff6b6b;border-radius:80% 20% 70% 30%/35% 60% 40% 65%;z-index:1;opacity:.9;filter:blur(.5px);box-shadow:0 30px 40px -20px rgba(255,107,107,.5),inset -10px -10px 20px rgba(0,0,0,.1)}
+@keyframes gentleBlob{0%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.02)}100%{transform:translate(-50%,-50%) scale(1)}}
+.blob-behind{animation:gentleBlob 25s infinite}
+
+.intro{width:50%;padding:20px}
+.intro h1{font-size:48px;margin-bottom:12px}
+.intro p{margin-bottom:18px;color:#333}
+.cta{display:inline-block;padding:10px 18px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none}
+
+/* Partners marquee */
+.partners-section{position:relative;padding:60px 10px;overflow:hidden}
+.marquee-container{display:flex;flex-direction:column;gap:8px}
+.marquee-row{overflow:hidden}
+.marquee{display:flex;gap:35px;padding:6px 0;animation:scrollLeft 120s linear infinite}
+.marquee-right{animation-direction:reverse}
+.marquee-item{flex:0 0 auto;width:140px;height:80px;display:flex;align-items:center;justify-content:center}
+.marquee-item img{max-width:100%;max-height:100%;opacity:.6;transition:opacity .3s}
+.marquee-item img:hover{opacity:1}
+@keyframes scrollLeft{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* Testimonials */
+.testimonials-container{display:flex;gap:24px;max-width:1200px;margin:30px auto;height:560px;padding:16px}
+.column{flex:1;overflow:hidden}
+.testimonials{display:flex;flex-direction:column;gap:16px;animation:scrollUp 30s linear infinite}
+.card{background:#fff;padding:18px;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.profile{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.profile img{width:48px;height:48px;border-radius:50%;object-fit:cover}
+.content{color:#444;line-height:1.5;text-align:justify}
+@keyframes scrollUp{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}
+
+/* Footer */
+.site-footer{background:#fff;padding:30px 20px}
+.footer-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+
+/* Responsiveness */
+@media (max-width:900px){.hero-section{flex-direction:column}.blob-behind-wrapper,.intro{width:100%}.nav-tgl{right:20px;top:20px}}
