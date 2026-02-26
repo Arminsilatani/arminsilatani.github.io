@@ -15,26 +15,20 @@
     gap: 40px;
 }
 
-/* ستون راست */
-.hero-right {
+/* ستون راست و چپ */
+.hero-right, .hero-left {
     flex: 1;
     display: flex;
     justify-content: center;
 }
 
-/* ستون چپ */
-.hero-left {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
+/* تصویر ستون چپ */
 .hero-left img {
     max-width: 100%;
     height: auto;
 }
 
-/* حباب + عکس */
+/* تصویر ستون راست + حباب */
 .blob-behind-wrapper {
     position: relative;
     display: flex;
@@ -47,10 +41,12 @@
     padding: 20px;
 }
 
+/* تصویر ستون راست — نسخه اصلاح‌شده */
 .blob-behind-wrapper img {
     position: relative;
-    max-width: 90%;
-    max-height: 330px;
+    width: 100%;
+    max-width: 300px; /* مهم‌ترین اصلاح */
+    height: auto;
     z-index: 2;
     filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
     border-radius: 15px;
@@ -91,15 +87,15 @@
 
 /* انیمیشن‌ها */
 @keyframes gentleBlob {
-    0% { border-radius: 80% 20% 70% 30% / 35% 60% 40% 65%; transform: translate(-50%, -50%) scale(1) rotate(0); }
-    15% { border-radius: 40% 60% 35% 65% / 70% 25% 75% 30%; transform: translate(-50%, -50%) scale(1.05) rotate(3deg); }
-    27% { border-radius: 65% 35% 55% 45% / 45% 70% 30% 55%; transform: translate(-50%, -50%) scale(.96) rotate(-2deg); }
-    38% { border-radius: 30% 70% 45% 55% / 60% 35% 65% 40%; transform: translate(-50%, -50%) scale(1.02) rotate(4deg); }
-    52% { border-radius: 75% 25% 60% 40% / 30% 65% 35% 70%; transform: translate(-50%, -50%) scale(.98) rotate(-3deg); }
-    66% { border-radius: 45% 55% 30% 70% / 55% 30% 70% 45%; transform: translate(-50%, -50%) scale(1.03) rotate(2deg); }
-    80% { border-radius: 55% 45% 70% 30% / 40% 55% 45% 60%; transform: translate(-50%, -50%) scale(.97) rotate(-1deg); }
-    94% { border-radius: 70% 30% 45% 55% / 65% 35% 65% 35%; transform: translate(-50%, -50%) scale(1.01) rotate(1deg); }
-    100% { border-radius: 80% 20% 70% 30% / 35% 60% 40% 65%; transform: translate(-50%, -50%) scale(1) rotate(0); }
+    0% { transform: translate(-50%, -50%) scale(1) rotate(0); }
+    15% { transform: translate(-50%, -50%) scale(1.05) rotate(3deg); }
+    27% { transform: translate(-50%, -50%) scale(.96) rotate(-2deg); }
+    38% { transform: translate(-50%, -50%) scale(1.02) rotate(4deg); }
+    52% { transform: translate(-50%, -50%) scale(.98) rotate(-3deg); }
+    66% { transform: translate(-50%, -50%) scale(1.03) rotate(2deg); }
+    80% { transform: translate(-50%, -50%) scale(.97) rotate(-1deg); }
+    94% { transform: translate(-50%, -50%) scale(1.01) rotate(1deg); }
+    100% { transform: translate(-50%, -50%) scale(1) rotate(0); }
 }
 
 @keyframes lightMove {
