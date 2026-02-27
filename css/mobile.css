@@ -44,15 +44,35 @@
 ================================ */
 @media (max-width: 768px) {
 
-    .about-section {
-        height: 75vh;
-    }
-
     .about-container {
         flex-direction: column;
-        gap: 20px;
+        align-items: flex-end; /* راست‌چین واقعی */
+        width: 100%;
+    }
+
+    .about-text {
+        width: 100%;
+        text-align: right;
+        direction: rtl;
+    }
+
+    .about-text p {
+        text-align: right;
+        direction: rtl;
+    }
+
+    .about-text h1 {
+        text-align: center;
+        width: 100%;
+    }
+
+    .about-btn {
+        width: 100%;
+        padding: 12px 0;
         text-align: center;
     }
+}
+
 
     /* ===============================
        TITOLO MOBILE
