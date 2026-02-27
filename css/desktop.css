@@ -43,13 +43,10 @@ html, body {
 /* ===============================
    FLEX GLOBALI LTR
 ================================ */
-* {
-    direction: rtl;
-}
-
-*:where(.flex, .container, .row, .col, section, div) {
+section, div, .container, .row, .col {
     direction: ltr;
 }
+
 
 /* ===============================
    RESET BASE DELLA PAGINA
