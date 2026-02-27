@@ -152,3 +152,9 @@
         height: 150px;
     }
 }
+    /* ترتیب */
+@media (max-width: 768px) {
+    body {
+        background: yellow !important;
+    }
+}
