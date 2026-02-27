@@ -30,18 +30,23 @@ body {
 }
 
 /* ===============================
-   TESTO GLOBALE
+   TESTO GLOBALE RTL
 ================================ */
-body {
+html, body {
+    direction: rtl;
+    text-align: right;
     color: #f5f5f5;
 }
 
 /* ===============================
-   TESTO RTL
+   FLEX GLOBALI LTR
 ================================ */
-p, h1, h2, h3, h4, h5, h6 {
+* {
     direction: rtl;
-    text-align: right;
+}
+
+*:where(.flex, .container, .row, .col, section, div) {
+    direction: ltr;
 }
 
 /* ===============================
