@@ -36,7 +36,7 @@ html, body {
 }
 
 /* ===============================
-   BUTTON SMALL (دکمه کوچک)
+   BUTTON SMALL
 ================================ */
 .btn-small {
     display: inline-block;
@@ -61,13 +61,13 @@ html, body {
 }
 
 /* ===============================
-   BUTTON LARGE (دکمه بزرگ سرتاسری)
+   BUTTON LARGE
 ================================ */
 .btn-large {
     display: block;
     width: 100%;
-    max-width: 600px;        /* دقیقاً هم‌عرض پاراگراف */
-    margin: 20px auto 0;     /* وسط‌چین */
+    max-width: 600px;
+    margin: 20px auto 0;
     padding: 12px 24px;
     background: #0D0D0D;
     color: #4ECDC4;
@@ -76,6 +76,7 @@ html, body {
     font-weight: 400;
     font-size: 17px;
     text-align: center;
+    direction: ltr;
     cursor: pointer;
     transition: 0.25s ease;
     text-decoration: none;
@@ -92,15 +93,15 @@ html, body {
    HERO SEZIONE
 ================================ */
 .hero-section {
-    position: relative;   /* جلوگیری از ورود سکشن بعدی به فضای Hero */
+    position: relative;
     width: 100%;
-    height: 100vh;        /* پر کردن کامل ویوپورت */
-    height: 100dvh;       /* نسخه دقیق موبایل */
+    height: 100vh;
+    height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #f5f5f5;
-    overflow: hidden;     /* جلوگیری از بیرون‌زدگی SVG */
+    overflow: hidden;
 }
 
 /* ===============================
@@ -113,7 +114,6 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0;
 }
 
 /* ===============================
@@ -184,10 +184,9 @@ html, body {
     left: 0;
     width: 100%;
     height: 160px;
-    overflow: hidden; /* مهم */
+    overflow: hidden;
     line-height: 0;
 }
-
 
 .pro-divider svg {
     width: 100%;
@@ -196,7 +195,7 @@ html, body {
 }
 
 /* ===============================
-   ABOUT SEZIONE (centrato verticale)
+   ABOUT SEZIONE
 ================================ */
 .about-section {
     width: 100%;
@@ -204,8 +203,8 @@ html, body {
     height: 100vh;
     background: #0d0d0d;
     display: flex;
-    justify-content: center;   /* وسط‌چین افقی کل محتوا */
-    align-items: center;       /* وسط‌چین عمودی کل محتوا */
+    justify-content: center;
+    align-items: center;
 }
 
 /* ===============================
@@ -214,12 +213,11 @@ html, body {
 .about-container {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;   /* کل بلوک وسط صفحه */
-    align-items: center;       /* تصویر و متن عمودی وسط */
+    justify-content: center;
+    align-items: center;
     gap: 40px;
     width: 100%;
 }
-
 
 /* ===============================
    ABOUT IMMAGINE
@@ -252,22 +250,8 @@ html, body {
     color: #4ECDC4;
 }
 
-
 /* ===============================
-   ABOUT BOTTONE (uguale alla colonna del testo)
-================================ */
-.about-btn {
-    display: block;
-    direction: ltr;          /* جلوگیری از راست‌چین شدن متن */
-    text-align: center;      /* وسط‌چین واقعی */
-    width: 100%;             /* هم‌عرض ستون متن */
-    max-width: 600px;        /* دقیقاً هم‌عرض پاراگراف */
-    margin: 20px auto 0;     /* وسط قرار گرفتن دکمه */
-}
-
-
-/* ===============================
-   GLOBAL MOBILE
+   MOBILE GLOBAL
 ================================ */
 @media (max-width: 768px) {
     html, body {
@@ -277,7 +261,7 @@ html, body {
 }
 
 /* ===============================
-   HERO MOBILE
+   MOBILE HERO
 ================================ */
 @media (max-width: 768px) {
 
@@ -297,10 +281,6 @@ html, body {
         width: 100%;
     }
 
-    .hero-right {
-        justify-content: center;
-    }
-
     .hero-img {
         max-width: 220px;
     }
@@ -312,7 +292,7 @@ html, body {
 }
 
 /* ===============================
-   ABOUT MOBILE
+   MOBILE ABOUT
 ================================ */
 @media (max-width: 768px) {
 
@@ -334,14 +314,8 @@ html, body {
         justify-content: center;
     }
 
-    .about-image img {
-        width: 100%;
-    }
-
     .about-text {
         max-width: 90%;
-        text-align: justify;
-        text-align-last: right;
     }
 
     .about-text h1 {
@@ -349,7 +323,8 @@ html, body {
         text-align: center;
     }
 
-    .about-btn {
+    .btn-large {
         width: 100%;
+        max-width: 90%;
     }
 }
