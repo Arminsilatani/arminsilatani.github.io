@@ -2,18 +2,23 @@
    GLOBAL RTL + JUSTIFY
 ================================ */
 html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
     direction: rtl;
     text-align: justify;
     text-align-last: right;
     color: #f5f5f5;
     unicode-bidi: plaintext;
+    font-family: 'Kalameh', sans-serif;
 }
 
 /* ===============================
    FONT PERSONALIZZATO (Kalameh)
 ================================ */
 
-/* Peso Normale (Regular) */
+/* Regular */
 @font-face {
     font-family: 'Kalameh';
     src: url('https://arminsilatani.github.io/fonts/KalamehWebFaNum-Regular.woff2') format('woff2'),
@@ -23,7 +28,7 @@ html, body {
     font-display: swap;
 }
 
-/* Peso Bold (Black) */
+/* Black */
 @font-face {
     font-family: 'Kalameh';
     src: url('https://arminsilatani.github.io/fonts/KalamehWebFaNum-Black.woff2') format('woff2'),
@@ -34,61 +39,31 @@ html, body {
 }
 
 /* ===============================
-   FONT GLOBALE DEL SITO
-================================ */
-body {
-    font-family: 'Kalameh', sans-serif;
-}
-
-
-/* ===============================
-   RESET BASE DELLA PAGINA
-================================ */
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-}
-
-
-/* ===============================
-   SEZIONE HERO
+   HERO SECTION
 ================================ */
 .hero-section {
-    position: relative; /* Necessario per posizionare il divider in basso */
+    position: relative;
     width: 100%;
-    height: 100vh; /* Occupa tutta l’altezza del viewport */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #f5f5f5;
     overflow: hidden;
 }
-/* ===============================
-   HERO DESKTOP
-================================ */
+
+/* جلوگیری از برعکس شدن چیدمان */
 .hero-container {
-    direction: ltr; /* جلوگیری از جابه‌جایی تصویر و حباب */
-}
-
-
-
-/* ===============================
-   CONTENITORE CENTRALE HERO
-================================ */
-.hero-container {
+    direction: ltr;
     width: 90%;
     max-width: 1300px;
     display: flex;
-    justify-content: center; /* tutto il contenuto al centro */
+    justify-content: center;
     align-items: center;
-    gap: 0; /* nessuno spazio tra gli elementi */
+    gap: 0;
 }
 
-/* ===============================
-   SLOGAN (Testo / Logo Slogan)
-================================ */
+/* Slogan */
 .hero-left {
     display: flex;
     justify-content: center;
@@ -100,10 +75,7 @@ html, body {
     width: 100%;
 }
 
-
-/* ===============================
-   FOTO + BLOB (Immagine + Blob)
-================================ */
+/* Foto + Blob */
 .hero-right {
     display: flex;
     justify-content: center;
@@ -116,7 +88,6 @@ html, body {
     height: fit-content;
 }
 
-/* Immagine principale */
 .hero-img {
     max-width: 300px;
     width: 100%;
@@ -125,7 +96,6 @@ html, body {
     z-index: 2;
 }
 
-/* Effetto Blob Animato */
 .blob {
     position: absolute;
     top: 50%;
@@ -136,46 +106,27 @@ html, body {
     background: #ff6b6b;
     border-radius: 60% 40% 70% 30% / 40% 60% 40% 60%;
     z-index: 1;
-
-    /* Animazione morbida tipo "gelatina" */
     animation: blobMorph 7s ease-in-out infinite;
     opacity: 0.9;
 }
 
-/* morphing della forma */
 @keyframes blobMorph {
-    0% {
-        border-radius: 60% 40% 70% 30% / 40% 60% 40% 60%;
-    }
-    25% {
-        border-radius: 55% 45% 65% 35% / 45% 55% 50% 50%;
-    }
-    50% {
-        border-radius: 70% 30% 60% 40% / 50% 40% 60% 50%;
-    }
-    75% {
-        border-radius: 65% 35% 75% 25% / 35% 65% 45% 55%;
-    }
-    100% {
-        border-radius: 60% 40% 70% 30% / 40% 60% 40% 60%;
-    }
+    0% { border-radius: 60% 40% 70% 30% / 40% 60% 40% 60%; }
+    25% { border-radius: 55% 45% 65% 35% / 45% 55% 50% 50%; }
+    50% { border-radius: 70% 30% 60% 40% / 50% 40% 60% 50%; }
+    75% { border-radius: 65% 35% 75% 25% / 35% 65% 45% 55%; }
+    100% { border-radius: 60% 40% 70% 30% / 40% 60% 40% 60%; }
 }
 
-
-/* ===============================
-   Separatore inferiore
-================================ */
+/* Divider */
 .pro-divider {
     position: absolute;
-    bottom: 0; /* Attaccato al fondo del viewport */
+    bottom: 0;
     left: 0;
     width: 100%;
     height: 160px;
     overflow: hidden;
     line-height: 0;
-    margin: 0;
-    padding: 0;
-    display: block;
 }
 
 .pro-divider svg {
@@ -185,7 +136,7 @@ html, body {
 }
 
 /* ===============================
-   SEZIONE INFO PERSONALE
+   ABOUT SECTION
 ================================ */
 .about-section {
     width: 100%;
@@ -196,70 +147,23 @@ html, body {
     align-items: center;
 }
 
-
-/* ===============================
-   CONTENITORE DESKTOP
-================================ */
+/* چیدمان درست بدون خراب کردن RTL متن */
 .about-container {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
     gap: 25px;
-    direction: ltr; /* جلوگیری از برعکس شدن چیدمان */
 }
 
-
-/* ===============================
-   COLONNA TESTO
-================================ */
+/* متن کاملاً RTL + Justify */
 .about-text {
     max-width: 600px;
-    text-align: right;
     direction: rtl;
+    text-align: justify;
+    text-align-last: right;
 }
-
 
 .about-text h1 {
     font-size: 48px;
-    margin-bottom: 20px;
-    color: #4ECDC4; /* colore richiesto */
-}
-
-
-/* ===============================
-   BOTTONE
-================================ */
-.about-btn {
-    display: block;
-    width: 100%;
-    padding: 12px 0; /* niente padding orizzontale */
-    border: 2px solid #4ECDC4;
-    color: #4ECDC4;
-    background: transparent;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 17px;
-    text-align: center;
-    margin-top: 10px;
-    transition: 0.25s ease;
-}
-
-.about-btn:hover {
-    background: rgba(78, 205, 196, 0.12);
-}
-
-
-/* ===============================
-   COLONNA IMMAGINE
-================================ */
-.about-image {
-    width: auto !important;
-}
-
-.about-image img {
-    width: 275px;
-    display: block;
-}
-
+    margin
