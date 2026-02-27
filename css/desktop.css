@@ -134,3 +134,70 @@ html, body {
     height: 100%;
     display: block;
 }
+/* ===============================
+   SEZIONE INFO PERSONALE
+================================ */
+.about-section {
+    width: 100%;
+    padding: 120px 0;
+    background: #0d0d0d; /* رنگ پس‌زمینه مثل المنتور */
+    display: flex;
+    justify-content: center;
+}
+
+
+/* ===============================
+   CONTENITORE PRINCIPALE
+================================ */
+.about-container {
+    width: 90%;
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* ===============================
+   COLONNA TESTO
+================================ */
+.about-text {
+    max-width: 600px;
+    color: #fff;
+}
+
+.about-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Bottone */
+.about-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #ffffff;
+    color: #000;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.about-btn:hover {
+    background: #e6e6e6;
+}
+
+
+/* ===============================
+   COLONNA IMMAGINE (Solo Desktop)
+================================ */
+.about-image img {
+    width: 420px;
+    border-radius: 12px;
+}
