@@ -237,11 +237,14 @@ html, body {
    ABOUT BOTTONE (uguale alla colonna del testo)
 ================================ */
 .about-btn {
-    width: 100%;            /* دکمه هم‌عرض پاراگراف */
-    display: block;         /* لازم برای 100% */
-    margin-top: 20px;       /* فاصله از پاراگراف */
-    text-align: center;     /* وسط‌چین */
+    display: block;
+    direction: ltr;          /* متن وسط می‌ماند و راست‌چین نمی‌شود */
+    text-align: center;      /* وسط‌چین واقعی */
+    width: 100%;             /* هم‌عرض ستون متن */
+    max-width: 600px;        /* دقیقاً اندازهٔ پاراگراف */
+    margin: 20px auto 0;     /* وسط‌چین شدن دکمه */
 }
+
 
 
 /* ===============================
