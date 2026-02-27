@@ -1,121 +1,77 @@
 /* ===============================
-   VERSIONE MOBILE (max-width: 768px)
+   HERO MOBILE
 ================================ */
 @media (max-width: 768px) {
 
-    /* Sezione Hero */
     .hero-section {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        height: auto;
+        padding: 60px 0;
     }
 
-    /* Contenitore verticale */
     .hero-container {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 25px;
-    }
-
-    /* Slogan */
-    .hero-left {
-        transform: translateY(15%);
+        gap: 40px;
+        direction: ltr;
     }
 
     .hero-left img {
-        max-width: 330px;
+        max-width: 350px;
+        width: 100%;
     }
 
-    /* Immagine principale */
+    .hero-right {
+        justify-content: center;
+    }
+
     .hero-img {
-        max-width: 240px;
+        max-width: 220px;
     }
 
-    /* Blob più piccolo su mobile */
     .blob {
         width: 180px;
         height: 180px;
     }
+}
 
 /* ===============================
-   SEZIONE MOBILE
+   ABOUT MOBILE
 ================================ */
 @media (max-width: 768px) {
 
+    .about-section {
+        height: auto;
+        padding: 60px 0;
+    }
+
     .about-container {
-        flex-direction: column;
-        align-items: flex-end; /* راست‌چین واقعی */
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .about-image {
+        width: 220px;
+        justify-content: center;
+    }
+
+    .about-image img {
         width: 100%;
     }
 
     .about-text {
-        width: 100%;
-        text-align: right;
-        direction: rtl;
-    }
-
-    .about-text p {
-        text-align: right;
-        direction: rtl;
+        max-width: 90%;
+        text-align: justify;
+        text-align-last: right;
     }
 
     .about-text h1 {
+        font-size: 32px;
         text-align: center;
-        width: 100%;
     }
 
     .about-btn {
         width: 100%;
-        padding: 12px 0;
-        text-align: center;
-    }
-}
-
-
-    /* ===============================
-       TITOLO MOBILE
-    ================================ */
-    .about-text h1 {
-        text-align: center;
-    }
-
-/* ===============================
-   PARAGRAFO MOBILE
-================================ */
-.about-text p {
-    text-align: right;
-    direction: rtl;
-}
-
-    .about-image {
-        display: none;
-    }
-}
-
-/* ===============================
-   CONTENITORE MOBILE
-================================ */
-.about-container {
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 20px;
-}
-
-
-    /* Testo */
-    .about-text h1 {
-        font-size: 36px;
-    }
-
-    .about-text p {
-        font-size: 16px;
-    }
-
-
-    /* Divider mobile */
-    .pro-divider {
-        height: 120px;
     }
 }
