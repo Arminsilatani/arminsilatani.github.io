@@ -150,11 +150,12 @@ html, body {
 /* چیدمان درست بدون خراب کردن RTL متن */
 .about-container {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    gap: 25px;
+    flex-direction: row-reverse; /* متن راست، عکس چپ */
+    justify-content: flex-start; /* جلوگیری از وسط آمدن */
+    align-items: flex-start;     /* جلوگیری از وسط‌چینی عمودی */
+    gap: 40px;                   /* فاصلهٔ طبیعی بین متن و عکس */
 }
+
 
 /* متن کاملاً RTL + Justify */
 .about-text {
