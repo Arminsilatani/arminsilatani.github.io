@@ -168,17 +168,16 @@ html, body {
 
 /* ===============================
    SEZIONE INFO PERSONALE
-   (altezza uguale al viewport)
 ================================ */
 .about-section {
     width: 100%;
-    height: 100vh; /* altezza piena */
-    padding: 0; /* rimuovere padding verticale */
+    height: 100vh;
     background: #0d0d0d;
     display: flex;
     justify-content: center;
-    align-items: center; /* centrare verticalmente */
+    align-items: center;
 }
+
 
 /* ===============================
    CONTENITORE PRINCIPALE
@@ -187,10 +186,10 @@ html, body {
     width: 90%;
     max-width: 1300px;
     display: flex;
-    flex-direction: row-reverse; /* testo a destra, immagine a sinistra */
-    justify-content: center;
+    flex-direction: row-reverse; /* testo a destra */
     align-items: center;
-    gap: 25px; /* distanza tra immagine e testo */
+    justify-content: center;
+    gap: 25px; /* distanza precisa */
 }
 
 
@@ -199,11 +198,10 @@ html, body {
 ================================ */
 .about-text {
     max-width: 600px;
+    direction: rtl;
+    text-align: right;
     color: #fff;
-    text-align: right; /* allineamento a destra */
-    direction: rtl; /* per testi persiani */
 }
-
 
 .about-text h1 {
     font-size: 48px;
@@ -211,38 +209,39 @@ html, body {
     color: #4ECDC4; /* colore richiesto */
 }
 
-
 .about-text p {
     font-size: 18px;
-    line-height: 1.8;
+    line-height: 1.9;
     margin-bottom: 30px;
 }
 
-   BOTTONE (stile neon turchese)
+
+/* ===============================
+   BOTTONE
 ================================ */
 .about-btn {
     display: inline-block;
-    padding turchese */
-    */
+    padding: 14px 38px;
+    border: 2px solid #4ECDC4;
+    color: #4ECDC4;
+    background: transparent;
     border-radius: 8px;
     text-decoration: none;
-    font font-size: 17px* Effetto hover (più luminoso) */
-: 14px 38px;
-    border: 3px solid #4ECDC4; /* bordo color: #4ECDC4; /* testo turchese */
-    background: transparent; /* sfondo trasparente-weight: 700;
-   ;
+    font-weight: 700;
+    font-size: 17px;
     transition: 0.25s ease;
 }
 
-/.about-btn:hover {
-    background: rgba(78, 205, o bagliore */
-   196, 0.12); /* legger color: #4ECDC4;
+.about-btn:hover {
+    background: rgba(78, 205, 196, 0.12);
 }
 
+
 /* ===============================
-   COLONNA IMMAGINE (Solo Desktop)
+   COLONNA IMMAGINE
 ================================ */
 .about-image img {
     width: 240px; /* 15% più grande */
     border-radius: 12px;
+    display: block;
 }
