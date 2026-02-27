@@ -5,11 +5,12 @@
         flex-direction: column;
         text-align: center;
         gap: 20px;
+        height: auto;
     }
 
     /* شعار 30% پایین‌تر */
     .hero-left {
-        transform: translateY(30%);
+        transform: translateY(30%) !important;
         order: 1;
     }
 
@@ -24,7 +25,6 @@
         order: 2;
     }
 
-    /* تصویر تو */
     .blob-behind-wrapper img {
         max-width: 250px;
         width: 100%;
@@ -33,17 +33,13 @@
 
     /* حباب 10% بزرگ‌تر */
     .blob-behind {
-        width: 165px;   /* 150px + 10% */
+        width: 165px;
         height: 165px;
     }
 
-    /* سکشن هیرو اندازه محتوا بشه */
+    /* سکشن هیرو اندازه محتوا */
     .hero-section {
         padding: 20px 0;
-        height: auto;
-    }
-
-    .hero-container {
         height: auto;
     }
 }
