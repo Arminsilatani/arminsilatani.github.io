@@ -232,27 +232,14 @@ html, body {
     color: #4ECDC4;
 }
 
+
 /* ===============================
-   ABOUT BOTTONE
+   ABOUT BOTTONE (uguale al paragrafo)
 ================================ */
 .about-btn {
-    display: block;
-    width: 100%;
-    padding: 12px 0;
-    border: 2px solid #4ECDC4;
-    color: #4ECDC4;
-    background: transparent;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 17px;
-    text-align: center;
-    margin-top: 10px;
-    transition: 0.25s ease;
-}
-
-.about-btn:hover {
-    background: rgba(78, 205, 196, 0.12);
+    width: fit-content;     /* اندازه دقیق مثل متن */
+    margin: 0 auto;         /* وسط‌چین شدن */
+    display: block;         /* برای کارکردن margin auto */
 }
 
 
