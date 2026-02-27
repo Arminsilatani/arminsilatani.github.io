@@ -1,45 +1,43 @@
 @media (max-width: 768px) {
 
-    /* ترتیب: شعار بالا، عکس پایین */
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-        height: auto;
+    /* سکشن تمام‌قد */
+    .hero-section {
+        height: 100vh;
+        padding: 0;
     }
 
-    /* شعار 50% پایین‌تر */
+    /* کانتینر عمودی */
+    .hero-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        gap: 10px;
+    }
+
+    /* شعار 65% پایین‌تر */
     .hero-left {
-        transform: translateY(50%) !important;
+        transform: translateY(65%) !important;
         order: 1;
     }
 
     .hero-left img {
-        max-width: 350px;
+        max-width: 330px;
         width: 100%;
-        height: auto;
     }
 
-    /* عکس + حباب پایین */
+    /* عکس + حباب */
     .hero-right {
         order: 2;
     }
 
     .blob-behind-wrapper img {
-        max-width: 250px;
-        width: 100%;
-        height: auto;
+        max-width: 240px;
     }
 
     /* حباب 10% بزرگ‌تر */
     .blob-behind {
         width: 180px;
         height: 180px;
-    }
-
-    /* سکشن هیرو اندازه محتوا */
-    .hero-section {
-        padding: 20px 0;
-        height: auto;
     }
 }
