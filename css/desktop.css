@@ -189,14 +189,13 @@ html, body {
    CONTENITORE DESKTOP
 ================================ */
 .about-container {
-    width: 90%;
-    max-width: 1300px;
-    display: flex;
-    flex-direction: row-reverse; /* testo a destra, immagine a sinistra */
+    display: flex !important;
+    flex-direction: row-reverse !important;
     justify-content: space-between;
     align-items: center;
     gap: 25px;
 }
+
 
 
 /* ===============================
@@ -204,10 +203,7 @@ html, body {
 ================================ */
 .about-text {
     max-width: 600px;
-    width: auto;
-    direction: rtl;
-    text-align: right;
-    color: #f5f5f5;
+    width: auto !important;
 }
 
 
@@ -246,11 +242,11 @@ html, body {
    COLONNA IMMAGINE
 ================================ */
 .about-image {
-    width: auto;
+    width: auto !important;
 }
 
 .about-image img {
     width: 275px;
-    border-radius: 12px;
     display: block;
 }
+
