@@ -75,11 +75,3 @@ html, body {
     50%  { transform: translate(-50%, -50%) scale(1.18); }
     100% { transform: translate(-50%, -50%) scale(1); }
 }
-
-
-/* انیمیشن ژله‌ای */
-@keyframes blobAnim {
-    0%   { transform: translate(-50%, -50%) scale(1); }
-    50%  { transform: translate(-50%, -50%) scale(1.12); }
-    100% { transform: translate(-50%, -50%) scale(1); }
-}
