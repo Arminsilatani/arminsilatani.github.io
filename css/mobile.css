@@ -1,5 +1,6 @@
 @media (max-width: 768px) {
 
+    /* سکشن تمام‌قد و وسط */
     .hero-section {
         height: 100vh;
         padding: 0;
@@ -8,17 +9,17 @@
         align-items: center;
     }
 
+    /* کانتینر عمودی */
     .hero-container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: auto;
         gap: 25px;
     }
 
+    /* شعار */
     .hero-left {
         transform: translateY(15%) !important;
-        order: 1;
     }
 
     .hero-left img {
@@ -26,18 +27,20 @@
         width: 100%;
     }
 
-    .hero-right {
-        order: 2;
-    }
-
+    /* تصویر تو */
     .blob-behind-wrapper img {
         max-width: 240px;
     }
 
-    /* نسخه اصلاح‌شده — انیمیشن دوباره فعال می‌شود */
+    /* لایه بیرونی حباب */
     .blob-behind {
         width: 180px;
         height: 180px;
-        transform: translate(-50%, -50%); /* این خط باعث فعال شدن انیمیشن می‌شود */
+        /* مهم: هیچ transform اینجا نباشه */
+    }
+
+    /* لایه داخلی — انیمیشن */
+    .blob-inner {
+        animation: gentleBlob 25s cubic-bezier(0.4,0,0.2,1) infinite;
     }
 }
