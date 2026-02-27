@@ -31,16 +31,16 @@ html, body {
     width: 90%;
     max-width: 1300px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* elementi attaccati a sinistra */
     align-items: center;
-    gap: 0; /* distanza zero tra slogan e immagine */
+    gap: 0; /* nessuno spazio tra gli elementi */
 }
 
+
 /* ===============================
-   Testo / Logo Slogan
+   SLOGAN (Testo / Logo Slogan)
 ================================ */
 .hero-left {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,10 +53,9 @@ html, body {
 
 
 /* ===============================
-   Immagine + Blob
+   FOTO + BLOB (Immagine + Blob)
 ================================ */
 .hero-right {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
