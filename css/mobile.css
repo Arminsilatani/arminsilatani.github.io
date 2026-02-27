@@ -1,0 +1,30 @@
+@media (max-width: 768px) {
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .hero-left {
+        transform: translateX(0) !important;
+        order: 1;
+    }
+
+    .hero-right {
+        order: 2;
+    }
+
+    .hero-left img {
+        max-width: 350px;
+    }
+
+    .blob-behind-wrapper img {
+        max-width: 250px;
+    }
+
+    .blob-behind {
+        width: 150px;
+        height: 150px;
+    }
+}
