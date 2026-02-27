@@ -27,9 +27,13 @@
     align-items: center;
 }
 
-/* تصویر شعار (۳۰٪ بزرگ‌تر) */
+/* تصویر شعار (۲۰٪ نزدیک‌تر + ۳۰٪ بزرگ‌تر) */
+.hero-left {
+    transform: translateX(20%); /* نزدیک‌تر شدن به ستون راست */
+}
+
 .hero-left img {
-    max-width: 520px;
+    max-width: 520px; /* بزرگ‌تر از قبل */
     width: 100%;
     height: auto;
     display: block;
@@ -60,14 +64,14 @@
     border-radius: 15px;
 }
 
-/* حباب */
+/* حباب — ۱۵٪ کوچک‌تر */
 .blob-behind {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 250px;
-    height: 250px;
+    width: 212px;   /* 250px - 15% */
+    height: 212px;  /* 250px - 15% */
     background: #ff6b6b;
     border-radius: 80% 20% 70% 30% / 35% 60% 40% 65%;
     box-shadow: 
@@ -120,8 +124,12 @@
         text-align: center;
     }
 
+    .hero-left {
+        transform: translateX(0); /* در موبایل وسط‌چین */
+    }
+
     .blob-behind {
-        width: 180px;
-        height: 180px;
+        width: 150px;
+        height: 150px;
     }
 }
