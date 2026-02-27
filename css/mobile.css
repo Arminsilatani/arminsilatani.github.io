@@ -39,12 +39,49 @@
         height: 180px;
     }
 
-   /* ===============================
+/* ===============================
    SEZIONE MOBILE
 ================================ */
 @media (max-width: 768px) {
+
     .about-section {
-        height: 50vh; /* metà viewport */
+        height: 75vh;
+    }
+
+    .about-container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    /* ===============================
+       TITOLO MOBILE
+    ================================ */
+    .about-text h1 {
+        text-align: center;
+    }
+
+    /* ===============================
+       PARAGRAFO MOBILE
+    ================================ */
+    .about-text p {
+        text-align: right;
+        direction: rtl;
+    }
+
+    /* ===============================
+       BOTTONE MOBILE
+    ================================ */
+    .about-btn {
+        width: 100%;
+        max-width: 600px; /* larghezza del paragrafo */
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .about-image {
+        display: none;
     }
 }
 
