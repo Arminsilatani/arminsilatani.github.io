@@ -36,6 +36,25 @@ html, body {
 }
 
 /* ===============================
+   BOTTONE GENERALE (per tutto il sito)
+================================ */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #0D0D0D;          /* بک‌گراند عادی */
+    color: #4ECDC4;               /* رنگ متن */
+    border: 2px solid #4ECDC4;    /* رنگ بوردر */
+    border-radius: 3px;           /* گوشه‌های 3px */
+    font-weight: 400;             /* متن نرمال */
+    font-size: 17px;
+    text-align: center;           /* وسط‌چین */
+    cursor: pointer;
+    transition: 0.25s ease;
+    text-decoration: none;
+}
+
+
+/* ===============================
    BOTTONE HOVER (ombra più forte)
 ================================ */
 .btn:hover {
