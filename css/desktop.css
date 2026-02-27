@@ -5,7 +5,8 @@
 /* Peso Normale (Regular) */
 @font-face {
     font-family: 'Kalameh';
-    src: url('https://arminsilatani.github.io/fonts/KalamehWebFaNum-Regular.woff') format('woff');
+    src: url('https://arminsilatani.github.io/fonts/KalamehWebFaNum-Regular.woff2') format('woff2'),
+         url('https://arminsilatani.github.io/fonts/KalamehWebFaNum-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -14,7 +15,8 @@
 /* Peso Bold (Black) */
 @font-face {
     font-family: 'Kalameh';
-    src: url('https://arminsilatani.github.io/fonts/KalamehWebFaNum-Black.woff') format('woff');
+    src: url('https://arminsilatani.github.io/fonts/KalamehWebFaNum-Black.woff2') format('woff2'),
+         url('https://arminsilatani.github.io/fonts/KalamehWebFaNum-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
