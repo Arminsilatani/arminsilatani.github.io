@@ -1,23 +1,26 @@
 @media (max-width: 768px) {
 
-    /* سکشن تمام‌قد */
+    /* سکشن تمام‌قد و وسط */
     .hero-section {
         height: 100vh;
         padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center; /* کل محتوا وسط */
     }
 
-    /* کانتینر عمودی */
+    /* کانتینر عمودی و وسط */
     .hero-container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100%;
-        gap: 10px;
+        height: auto;
+        gap: 25px; /* فاصله بین شعار و عکس */
     }
 
-    /* شعار 65% پایین‌تر */
+    /* شعار — 15% پایین‌تر (نزدیک‌تر به عکس) */
     .hero-left {
-        transform: translateY(65%) !important;
+        transform: translateY(15%) !important;
         order: 1;
     }
 
