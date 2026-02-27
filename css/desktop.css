@@ -26,16 +26,16 @@ html, body {
 
 /* ===============================
    CONTENITORE CENTRALE HERO
+   (centrare slogan e immagine insieme)
 ================================ */
 .hero-container {
     width: 90%;
     max-width: 1300px;
     display: flex;
-    justify-content: flex-start; /* elementi attaccati a sinistra */
+    justify-content: center; /* tutto il contenuto al centro */
     align-items: center;
     gap: 0; /* nessuno spazio tra gli elementi */
 }
-
 
 /* ===============================
    SLOGAN (Testo / Logo Slogan)
