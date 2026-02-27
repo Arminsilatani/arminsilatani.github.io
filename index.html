@@ -49,16 +49,25 @@
 
         </div>
 
-        <!-- ===============================
-             HERO DIVISORE
-        ================================= -->
-        <div class="pro-divider">
-            <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
-                <path fill="#0d0d0d" d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"/>
-            </svg>
-        </div>
+        
+<!-- ===============================
+     HERO DIVISORE
+================================= -->
+<div class="pro-divider">
+    <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
 
-    </section>
+        <!-- فیلتر سایه مخصوص path -->
+        <defs>
+            <filter id="dividerShadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="-6" stdDeviation="10" flood-color="rgba(0,0,0,0.35)" />
+            </filter>
+        </defs>
+
+        <!-- path با سایه واقعی روی خطوط -->
+        <path filter="url(#dividerShadow)" fill="#0d0d0d"
+              d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"/>
+    </svg>
+</div>
 
 
     <!-- ===============================
