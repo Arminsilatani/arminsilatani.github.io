@@ -186,26 +186,27 @@ html, body {
 
 
 /* ===============================
-   CONTENITORE PRINCIPALE
+   CONTENITORE DESKTOP
 ================================ */
 .about-container {
     width: 90%;
     max-width: 1300px;
     display: flex;
-    flex-direction: row-reverse; /* testo a destra */
+    flex-direction: row-reverse; /* testo a destra, immagine a sinistra */
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    gap: 25px; /* distanza precisa */
+    gap: 25px;
 }
 
 
 /* ===============================
    COLONNA TESTO
 ================================ */
-.about-text p {
-    font-size: 18px;
-    line-height: 1.9;
-    margin-bottom: 30px;
+.about-text {
+    max-width: 600px;
+    width: auto; /* جلوگیری از تمام‌عرض شدن */
+    direction: rtl;
+    text-align: right;
 }
 
 
@@ -244,7 +245,7 @@ html, body {
    COLONNA IMMAGINE
 ================================ */
 .about-image img {
-    width: 275px; /* +15% */
+    width: 275px;
     border-radius: 12px;
     display: block;
 }
