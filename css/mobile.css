@@ -4,9 +4,9 @@
 @media (max-width: 768px) {
 
     .hero-section {
-        height: 100vh;      
+        height: 100vh;
         height: 100dvh;
-        padding: 0;      
+        padding: 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -78,7 +78,9 @@
         text-align: center;
     }
 
-    .about-btn {
+    .btn-large {
         width: 100%;
+        max-width: 90%;
+        margin: 20px auto 0;
     }
 }
