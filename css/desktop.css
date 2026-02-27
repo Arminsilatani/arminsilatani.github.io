@@ -1,4 +1,3 @@
-/* حذف فاصله‌های پیش‌فرض صفحه */
 html, body {
     margin: 0;
     padding: 0;
@@ -6,7 +5,6 @@ html, body {
     height: 100%;
 }
 
-/* سکشن هیرو تمام‌قد */
 .hero-section {
     width: 100%;
     height: 100vh;
@@ -14,23 +12,19 @@ html, body {
     justify-content: center;
     align-items: center;
     background: #f5f5f5;
-    overflow: hidden;
 }
 
-/* کانتینر وسط */
 .hero-container {
     width: 90%;
     max-width: 1300px;
-    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px;
 }
 
-/* ستون‌ها */
 .hero-left,
-.blob-behind-wrapper {
+.hero-right {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -38,53 +32,43 @@ html, body {
 }
 
 /* شعار */
-.hero-left {
-    transform: translateX(20%);
-}
-
 .hero-left img {
     max-width: 520px;
     width: 100%;
-    height: auto;
 }
 
-/* تصویر تو */
-.blob-behind-wrapper img {
+/* تصویر + حباب */
+.blob-wrapper {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+
+.hero-img {
     max-width: 300px;
     width: 100%;
-    height: auto;
-    z-index: 2;
     border-radius: 15px;
+    position: relative;
+    z-index: 2;
 }
 
-/* لایه بیرونی حباب */
-.blob-behind {
+/* حباب */
+.blob {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 220px;
+    height: 220px;
     transform: translate(-50%, -50%);
-    width: 212px;
-    height: 212px;
-    z-index: 1;
-}
-
-/* لایه داخلی حباب — فقط انیمیشن */
-.blob-inner {
-    width: 100%;
-    height: 100%;
     background: #ff6b6b;
-    border-radius: 80% 20% 70% 30% / 35% 60% 40% 65%;
-    box-shadow:
-        0 30px 40px -20px rgba(255,107,107,.5),
-        inset -10px -10px 20px rgba(0,0,0,.1),
-        inset 10px 10px 20px rgba(255,255,255,.3);
-    animation: gentleBlob 25s cubic-bezier(0.4,0,0.2,1) infinite;
+    border-radius: 60% 40% 70% 30% / 40% 60% 40% 60%;
+    z-index: 1;
+    animation: blobAnim 18s ease-in-out infinite;
     opacity: 0.9;
 }
 
-/* انیمیشن */
-@keyframes gentleBlob {
-    0%   { transform: scale(1); }
-    50%  { transform: scale(1.05); }
-    100% { transform: scale(1); }
+@keyframes blobAnim {
+    0%   { transform: translate(-50%, -50%) scale(1); }
+    50%  { transform: translate(-50%, -50%) scale(1.08); }
+    100% { transform: translate(-50%, -50%) scale(1); }
 }
