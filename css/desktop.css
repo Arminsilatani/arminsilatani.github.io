@@ -234,12 +234,13 @@ html, body {
 
 
 /* ===============================
-   ABOUT BOTTONE (uguale al paragrafo)
+   ABOUT BOTTONE (uguale alla colonna del testo)
 ================================ */
 .about-btn {
-    width: fit-content;     /* اندازه دقیق مثل متن */
-    margin: 0 auto;         /* وسط‌چین شدن */
-    display: block;         /* برای کارکردن margin auto */
+    width: 100%;            /* دکمه هم‌عرض پاراگراف */
+    display: block;         /* لازم برای 100% */
+    margin-top: 20px;       /* فاصله از پاراگراف */
+    text-align: center;     /* وسط‌چین */
 }
 
 
