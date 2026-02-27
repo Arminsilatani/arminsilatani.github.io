@@ -69,17 +69,6 @@
         direction: rtl;
     }
 
-    /* ===============================
-       BOTTONE MOBILE
-    ================================ */
-    .about-btn {
-        width: 100%;
-        max-width: 600px; /* larghezza del paragrafo */
-        display: block;
-        text-align: center;
-        margin: 0 auto;
-    }
-
     .about-image {
         display: none;
     }
