@@ -1,4 +1,15 @@
 /* ===============================
+   GLOBAL RTL + JUSTIFY
+================================ */
+html, body {
+    direction: rtl;
+    text-align: justify;
+    text-align-last: right;
+    color: #f5f5f5;
+    unicode-bidi: plaintext;
+}
+
+/* ===============================
    FONT PERSONALIZZATO (Kalameh)
 ================================ */
 
@@ -27,16 +38,6 @@
 ================================ */
 body {
     font-family: 'Kalameh', sans-serif;
-}
-
-/* ===============================
-   TESTO GLOBALE RTL + JUSTIFY
-================================ */
-html, body {
-    direction: rtl;
-    text-align: justify;
-    text-align-last: right;
-    color: #f5f5f5;
 }
 
 
