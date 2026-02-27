@@ -69,14 +69,20 @@ html, body {
     max-width: 600px;
     margin: 20px auto 0;
     padding: 12px 24px;
+
     background: #0D0D0D;
     color: #4ECDC4;
     border: 2px solid #4ECDC4;
     border-radius: 3px;
+
     font-weight: 400;
     font-size: 17px;
+
     text-align: center;
+
     direction: ltr;
+    unicode-bidi: isolate;   /* ← این خط مشکل را 100٪ حل می‌کند */
+
     cursor: pointer;
     transition: 0.25s ease;
     text-decoration: none;
