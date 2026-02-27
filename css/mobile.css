@@ -74,12 +74,15 @@
     }
 }
 
-    /* Contenitore verticale */
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
-    }
+/* ===============================
+   CONTENITORE MOBILE
+================================ */
+.about-container {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+
 
     /* Testo */
     .about-text h1 {
