@@ -1,24 +1,21 @@
 @media (max-width: 768px) {
 
-    /* سکشن تمام‌قد و وسط */
     .hero-section {
         height: 100vh;
         padding: 0;
         display: flex;
         justify-content: center;
-        align-items: center; /* کل محتوا وسط */
+        align-items: center;
     }
 
-    /* کانتینر عمودی و وسط */
     .hero-container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         height: auto;
-        gap: 25px; /* فاصله بین شعار و عکس */
+        gap: 25px;
     }
 
-    /* شعار — 15% پایین‌تر (نزدیک‌تر به عکس) */
     .hero-left {
         transform: translateY(15%) !important;
         order: 1;
@@ -29,7 +26,6 @@
         width: 100%;
     }
 
-    /* عکس + حباب */
     .hero-right {
         order: 2;
     }
@@ -38,9 +34,10 @@
         max-width: 240px;
     }
 
-    /* حباب 10% بزرگ‌تر */
+    /* نسخه اصلاح‌شده — انیمیشن دوباره فعال می‌شود */
     .blob-behind {
         width: 180px;
         height: 180px;
+        transform: translate(-50%, -50%); /* این خط باعث فعال شدن انیمیشن می‌شود */
     }
 }
