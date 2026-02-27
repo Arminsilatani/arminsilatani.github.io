@@ -1,5 +1,9 @@
+/* ===============================
+   VERSIONE MOBILE (max-width: 768px)
+================================ */
 @media (max-width: 768px) {
 
+    /* Sezione Hero */
     .hero-section {
         height: 100vh;
         display: flex;
@@ -7,6 +11,7 @@
         align-items: center;
     }
 
+    /* Contenitore verticale */
     .hero-container {
         flex-direction: column;
         justify-content: center;
@@ -14,7 +19,7 @@
         gap: 25px;
     }
 
-    /* شعار */
+    /* Slogan */
     .hero-left {
         transform: translateY(15%);
     }
@@ -23,14 +28,19 @@
         max-width: 330px;
     }
 
-    /* تصویر + حباب */
+    /* Immagine principale */
     .hero-img {
         max-width: 240px;
     }
 
+    /* Blob più piccolo su mobile */
     .blob {
         width: 180px;
         height: 180px;
-        /* مهم: transform اینجا حذف شده */
+    }
+
+    /* Divider mobile */
+    .pro-divider {
+        height: 120px;
     }
 }
