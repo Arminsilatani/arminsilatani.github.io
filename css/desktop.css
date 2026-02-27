@@ -35,7 +35,6 @@ html, body {
     font-display: swap;
 }
 
-
 /* ===============================
    HERO SEZIONE
 ================================ */
@@ -141,7 +140,6 @@ html, body {
     display: block;
 }
 
-
 /* ===============================
    ABOUT SEZIONE
 ================================ */
@@ -218,4 +216,92 @@ html, body {
 
 .about-btn:hover {
     background: rgba(78, 205, 196, 0.12);
+}
+
+/* ===============================
+   GLOBAL MOBILE
+================================ */
+@media (max-width: 768px) {
+    html, body {
+        text-align: justify;
+        text-align-last: right;
+    }
+}
+
+/* ===============================
+   HERO MOBILE
+================================ */
+@media (max-width: 768px) {
+
+    .hero-section {
+        height: auto;
+        padding: 60px 0;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        gap: 40px;
+        direction: ltr;
+    }
+
+    .hero-left img {
+        max-width: 350px;
+        width: 100%;
+    }
+
+    .hero-right {
+        justify-content: center;
+    }
+
+    .hero-img {
+        max-width: 220px;
+    }
+
+    .blob {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* ===============================
+   ABOUT MOBILE
+================================ */
+@media (max-width: 768px) {
+
+    .about-section {
+        height: auto;
+        padding: 60px 0;
+    }
+
+    .about-container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .about-image {
+        width: 220px;
+        justify-content: center;
+    }
+
+    .about-image img {
+        width: 100%;
+    }
+
+    .about-text {
+        max-width: 90%;
+        text-align: justify;
+        text-align-last: right;
+    }
+
+    .about-text h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .about-btn {
+        width: 100%;
+    }
 }
