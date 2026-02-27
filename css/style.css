@@ -1,11 +1,13 @@
-/* ساختار کلی سکشن */
+/* سکشن با بک‌گراند اصلی */
 .hero-section {
     width: 100%;
     padding: 40px 0;
     display: flex;
     justify-content: center;
+    background: #f5f5f5;
 }
 
+/* کانتینر دو ستونه */
 .hero-container {
     width: 90%;
     max-width: 1300px;
@@ -13,19 +15,24 @@
     justify-content: space-between;
     align-items: center;
     gap: 40px;
+    box-sizing: border-box;
 }
 
-/* ستون راست و چپ */
-.hero-right, .hero-left {
+/* ستون‌ها */
+.hero-right,
+.hero-left {
     flex: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-/* تصویر ستون چپ */
+/* تصویر شعار (۳۰٪ بزرگ‌تر) */
 .hero-left img {
-    max-width: 100%;
+    max-width: 520px;
+    width: 100%;
     height: auto;
+    display: block;
 }
 
 /* تصویر ستون راست + حباب */
@@ -39,13 +46,14 @@
     background: transparent;
     overflow: visible;
     padding: 20px;
+    box-sizing: border-box;
 }
 
-/* تصویر ستون راست — نسخه اصلاح‌شده */
+/* تصویر ستون راست */
 .blob-behind-wrapper img {
     position: relative;
     width: 100%;
-    max-width: 300px; /* مهم‌ترین اصلاح */
+    max-width: 300px;
     height: auto;
     z-index: 2;
     filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
