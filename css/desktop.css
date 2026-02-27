@@ -241,7 +241,7 @@ html, body {
    COLONNA IMMAGINE
 ================================ */
 .about-image img {
-    width: 275px; /* immagine più grande del 15% */
+    width: 275px; /* +15% */
     border-radius: 12px;
     display: block;
 }
