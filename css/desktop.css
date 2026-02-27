@@ -63,12 +63,10 @@ html, body {
     background: #ff6b6b;
     z-index: 1;
 
-    /* سرعت جدید + حرکت ژله‌ای واقعی */
     animation: blobMorph 7s ease-in-out infinite;
     opacity: 0.9;
 }
 
-/* انیمیشن تغییر فرم حباب بدون تغییر اندازه */
 @keyframes blobMorph {
     0% {
         border-radius: 60% 40% 70% 30% / 40% 60% 40% 60%;
@@ -87,10 +85,27 @@ html, body {
     }
 }
 
+/* دیوایدر */
+.pro-divider {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
 
-/* انیمیشن ژله‌ای قوی‌تر */
-@keyframes blobAnim {
-    0%   { transform: translate(-50%, -50%) scale(1); }
-    50%  { transform: translate(-50%, -50%) scale(1.18); }
-    100% { transform: translate(-50%, -50%) scale(1); }
+.pro-divider .pro-shape {
+    display: block;
+    width: 100%;
+    height: 80px; /* می‌تونی تغییر بدی */
+}
+
+.pro-divider {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.pro-divider .pro-shape {
+    display: block;
+    width: 100%;
+    height: 80px; /* می‌تونی تغییر بدی */
 }
