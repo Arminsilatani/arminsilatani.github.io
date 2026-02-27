@@ -37,25 +37,37 @@ html, body {
 
 /* ===============================
    BOTTONE GENERALE (per tutto il sito)
+   دکمهٔ سراسری سایت
 ================================ */
 .btn {
     display: inline-block;
-    padding: 12px 20px;
-    border: 2px solid #4ECDC4;
-    background: transparent;
-    color: #4ECDC4;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 400;        /* متن نرمال */
+    padding: 12px 24px;
+    background: #0D0D0D;      /* بک‌گراند حالت عادی */
+    color: #4ECDC4;           /* رنگ متن */
+    border: 2px solid #4ECDC4;/* رنگ بوردر */
+    border-radius: 3px;       /* گوشه‌های 3px */
+    font-weight: 400;         /* متن نرمال */
     font-size: 17px;
-    text-align: center;      /* وسط‌چین */
+    text-align: center;       /* وسط‌چین */
     cursor: pointer;
     transition: 0.25s ease;
+    text-decoration: none;
 }
 
+/* ===============================
+   BOTTONE HOVER (effetto Elementor)
+   حالت هاور + سایه شبیه المنتور
+================================ */
 .btn:hover {
-    background: rgba(78, 205, 196, 0.12);
+    background: #4ECDC4;      /* بک‌گراند هاور */
+    color: #0D0D0D;           /* رنگ متن هاور */
+    border-color: #4ECDC4;    /* بوردر هاور */
+
+    /* سایه شبیه المنتور (از روی تصویر) */
+    box-shadow: 
+        0 0 20px 5px rgba(0, 0, 0, 0.25);
 }
+
 
 /* ===============================
    HERO SEZIONE
