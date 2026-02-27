@@ -1,15 +1,12 @@
 @media (max-width: 768px) {
 
-    /* سکشن تمام‌قد و وسط */
     .hero-section {
         height: 100vh;
-        padding: 0;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    /* کانتینر عمودی */
     .hero-container {
         flex-direction: column;
         justify-content: center;
@@ -19,28 +16,21 @@
 
     /* شعار */
     .hero-left {
-        transform: translateY(15%) !important;
+        transform: translateY(15%);
     }
 
     .hero-left img {
         max-width: 330px;
-        width: 100%;
     }
 
-    /* تصویر تو */
-    .blob-behind-wrapper img {
+    /* تصویر + حباب */
+    .hero-img {
         max-width: 240px;
     }
 
-    /* لایه بیرونی حباب */
-    .blob-behind {
+    .blob {
         width: 180px;
         height: 180px;
-        /* مهم: هیچ transform اینجا نباشه */
-    }
-
-    /* لایه داخلی — انیمیشن */
-    .blob-inner {
-        animation: gentleBlob 25s cubic-bezier(0.4,0,0.2,1) infinite;
+        /* مهم: transform اینجا حذف شده */
     }
 }
