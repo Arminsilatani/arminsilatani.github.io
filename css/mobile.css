@@ -38,15 +38,15 @@
         width: 180px;
         height: 180px;
     }
-/* ===============================
-   VERSIONE MOBILE
+
+   /* ===============================
+   SEZIONE MOBILE
 ================================ */
 @media (max-width: 768px) {
-
-    /* Sezione */
     .about-section {
-        padding: 80px 0;
+        height: 50vh; /* metà viewport */
     }
+}
 
     /* Contenitore verticale */
     .about-container {
