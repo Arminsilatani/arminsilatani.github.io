@@ -104,8 +104,8 @@ html, body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     transform: translate(-50%, -50%);
     background: #ff6b6b;
     border-radius: 60% 40% 70% 30% / 40% 60% 40% 60%;
@@ -220,6 +220,7 @@ html, body {
 .about-btn:hover {
     background: rgba(78, 205, 196, 0.12);
 }
+
 
 /* ===============================
    GLOBAL MOBILE
