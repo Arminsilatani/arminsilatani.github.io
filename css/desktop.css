@@ -36,37 +36,57 @@ html, body {
 }
 
 /* ===============================
-   BOTTONE GENERALE (per tutto il sito)
+   BUTTON SMALL (دکمه کوچک)
 ================================ */
-.btn {
+.btn-small {
     display: inline-block;
     padding: 12px 24px;
-    background: #0D0D0D;          /* بک‌گراند عادی */
-    color: #4ECDC4;               /* رنگ متن */
-    border: 2px solid #4ECDC4;    /* رنگ بوردر */
-    border-radius: 3px;           /* گوشه‌های 3px */
-    font-weight: 400;             /* متن نرمال */
+    background: #0D0D0D;
+    color: #4ECDC4;
+    border: 2px solid #4ECDC4;
+    border-radius: 3px;
+    font-weight: 400;
     font-size: 17px;
-    text-align: center;           /* وسط‌چین */
+    text-align: center;
     cursor: pointer;
     transition: 0.25s ease;
     text-decoration: none;
 }
 
-
-/* ===============================
-   BOTTONE HOVER (ombra più forte)
-================================ */
-.btn:hover {
+.btn-small:hover {
     background: #4ECDC4;
     color: #0D0D0D;
     border-color: #4ECDC4;
-
-    /* سایه با گستردگی دو برابر + شدت بیشتر */
-    box-shadow:
-        0 0 20px 10px rgba(78, 205, 196, 0.80);
+    box-shadow: 0 0 20px 10px rgba(78, 205, 196, 0.80);
 }
 
+/* ===============================
+   BUTTON LARGE (دکمه بزرگ سرتاسری)
+================================ */
+.btn-large {
+    display: block;
+    width: 100%;
+    max-width: 600px;        /* دقیقاً هم‌عرض پاراگراف */
+    margin: 20px auto 0;     /* وسط‌چین */
+    padding: 12px 24px;
+    background: #0D0D0D;
+    color: #4ECDC4;
+    border: 2px solid #4ECDC4;
+    border-radius: 3px;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.25s ease;
+    text-decoration: none;
+}
+
+.btn-large:hover {
+    background: #4ECDC4;
+    color: #0D0D0D;
+    border-color: #4ECDC4;
+    box-shadow: 0 0 20px 10px rgba(78, 205, 196, 0.80);
+}
 
 /* ===============================
    HERO SEZIONE
