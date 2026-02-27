@@ -1,35 +1,116 @@
-/* ریسپانسیو موبایل */
-@media (max-width: 768px) {
-
-    /* ترتیب ستون‌ها در موبایل */
-    .hero-container {
-        flex-direction: column; /* شعار بالا، عکس پایین */
-        text-align: center;
-        gap: 20px;
-    }
-
-    /* شعار وسط‌چین و بدون جابه‌جایی */
-    .hero-left {
-        transform: translateX(0);
-        order: 1; /* شعار اول */
-    }
-
-    /* عکس + حباب بیاد پایین */
-    .hero-right {
-        order: 2; /* عکس دوم */
-    }
-
-    /* اندازه‌ها در موبایل */
-    .hero-left img {
-        max-width: 350px;
-    }
-
-    .blob-behind-wrapper img {
-        max-width: 250px;
-    }
-
-    .blob-behind {
-        width: 150px;
-        height: 150px;
-    }
+/* سکشن با بک‌گراند اصلی */
+.hero-section {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    background: #f5f5f5;
 }
+
+/* کانتینر دو ستونه */
+.hero-container {
+    width: 90%;
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    box-sizing: border-box;
+}
+
+/* ستون‌ها */
+.hero-right,
+.hero-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* تصویر شعار (بزرگ‌تر + نزدیک‌تر) */
+.hero-left {
+    transform: translateX(20%);
+}
+
+.hero-left img {
+    max-width: 520px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* تصویر ستون راست + حباب */
+.blob-behind-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 400px;
+    background: transparent;
+    overflow: visible;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* تصویر ستون راست */
+.blob-behind-wrapper img {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    z-index: 2;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
+    border-radius: 15px;
+}
+
+/* حباب — ۱۵٪ کوچک‌تر */
+.blob-behind {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 212px;
+    height: 212px;
+    background: #ff6b6b;
+    border-radius: 80% 20% 70% 30% / 35% 60% 40% 65%;
+    box-shadow: 
+        0 30px 40px -20px rgba(255,107,107,.5),
+        inset -10px -10px 20px rgba(0,0,0,.1),
+        inset 10px 10px 20px rgba(255,255,255,.3);
+    animation: gentleBlob 25s cubic-bezier(0.4,0,0.2,1) infinite;
+    filter: blur(0.5px);
+    z-index: 1;
+    opacity: 0.9;
+}
+
+.blob-behind::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.3), transparent 70%);
+    border-radius: inherit;
+    opacity: .5;
+    animation: lightMove 18s ease-in-out infinite;
+}
+
+/* انیمیشن‌ها */
+@keyframes gentleBlob {
+    0% { transform: translate(-50%, -50%) scale(1) rotate(0); }
+    15% { transform: translate(-50%, -50%) scale(1.05) rotate(3deg); }
+    27% { transform: translate(-50%, -50%) scale(.96) rotate(-2deg); }
+    38% { transform: translate(-50%, -50%) scale(1.02) rotate(4deg); }
+    52% { transform: translate(-50%, -50%) scale(.98) rotate(-3deg); }
+    66% { transform: translate(-50%, -50%) scale(1.03) rotate(2deg); }
+    80% { transform: translate(-50%, -50%) scale(.97) rotate(-1deg); }
+    94% { transform: translate(-50%, -50%) scale(1.01) rotate(1deg); }
+    100% { transform: translate(-50%, -50%) scale(1) rotate(0); }
+}
+
+@keyframes lightMove {
+    0%, 100% { opacity: .3; transform: translate(0,0); }
+    25% { opacity: .5; transform: translate(5px,-5px); }
+    50% { opacity: .4; transform: translate(-5px
