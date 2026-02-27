@@ -38,6 +38,37 @@
         width: 180px;
         height: 180px;
     }
+/* ===============================
+   VERSIONE MOBILE
+================================ */
+@media (max-width: 768px) {
+
+    /* Sezione */
+    .about-section {
+        padding: 80px 0;
+    }
+
+    /* Contenitore verticale */
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    /* Testo */
+    .about-text h1 {
+        font-size: 36px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    /* Nascondere immagine su mobile */
+    .about-image {
+        display: none;
+    }
+}
 
     /* Divider mobile */
     .pro-divider {
