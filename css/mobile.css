@@ -4,14 +4,20 @@
 @media (max-width: 768px) {
 
     .hero-section {
-        height: auto;
-        padding: 60px 0;
+        height: 100vh;      /* پر کردن کامل ویوپورت */
+        height: 100dvh;     /* نسخه دقیق‌تر برای موبایل‌های جدید */
+        padding: 0;         /* حذف فاصله اضافی */
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .hero-container {
         flex-direction: column;
         gap: 40px;
         direction: ltr;
+        width: 100%;
+        max-width: 100%;
     }
 
     .hero-left img {
@@ -32,6 +38,7 @@
         height: 180px;
     }
 }
+
 
 /* ===============================
    ABOUT MOBILE
