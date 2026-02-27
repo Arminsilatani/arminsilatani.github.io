@@ -9,7 +9,7 @@ html, body {
 /* سکشن هیرو تمام‌قد */
 .hero-section {
     width: 100%;
-    height: 100vh; /* دقیقاً اندازه ویوپورت */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +21,7 @@ html, body {
 .hero-container {
     width: 90%;
     max-width: 1300px;
-    height: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,15 +29,15 @@ html, body {
 }
 
 /* ستون‌ها */
-.hero-right,
-.hero-left {
+.hero-left,
+.blob-behind-wrapper {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* شعار در دسکتاپ */
+/* شعار */
 .hero-left {
     transform: translateX(20%);
 }
@@ -48,14 +48,7 @@ html, body {
     height: auto;
 }
 
-/* تصویر تو + حباب */
-.blob-behind-wrapper {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+/* تصویر تو */
 .blob-behind-wrapper img {
     max-width: 300px;
     width: 100%;
@@ -64,7 +57,7 @@ html, body {
     border-radius: 15px;
 }
 
-/* حباب */
+/* لایه بیرونی حباب */
 .blob-behind {
     position: absolute;
     top: 50%;
@@ -72,19 +65,26 @@ html, body {
     transform: translate(-50%, -50%);
     width: 212px;
     height: 212px;
+    z-index: 1;
+}
+
+/* لایه داخلی حباب — فقط انیمیشن */
+.blob-inner {
+    width: 100%;
+    height: 100%;
     background: #ff6b6b;
     border-radius: 80% 20% 70% 30% / 35% 60% 40% 65%;
     box-shadow:
         0 30px 40px -20px rgba(255,107,107,.5),
         inset -10px -10px 20px rgba(0,0,0,.1),
         inset 10px 10px 20px rgba(255,255,255,.3);
-    animation: gentleBlob 25s infinite;
+    animation: gentleBlob 25s cubic-bezier(0.4,0,0.2,1) infinite;
     opacity: 0.9;
 }
 
 /* انیمیشن */
 @keyframes gentleBlob {
-    0% { transform: translate(-50%, -50%) scale(1); }
-    50% { transform: translate(-50%, -50%) scale(1.05); }
-    100% { transform: translate(-50%, -50%) scale(1); }
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
