@@ -156,16 +156,17 @@ html, body {
 }   
 
 /* ===============================
-   ABOUT CONTENITORE
+   ABOUT CONTENITORE (centrato)
 ================================ */
 .about-container {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: center;   /* ← این مهم‌ترین خط است */
     align-items: flex-start;
     gap: 40px;
     width: 100%;
 }
+
 
 /* ===============================
    ABOUT IMMAGINE
