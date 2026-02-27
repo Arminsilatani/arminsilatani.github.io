@@ -1,5 +1,5 @@
 /* ===============================
-   GLOBAL RTL + JUSTIFY
+   GLOBAL
 ================================ */
 html, body {
     margin: 0;
@@ -15,10 +15,8 @@ html, body {
 }
 
 /* ===============================
-   FONT PERSONALIZZATO (Kalameh)
+   FONT
 ================================ */
-
-/* Regular */
 @font-face {
     font-family: 'Kalameh';
     src: url('https://arminsilatani.github.io/fonts/KalamehWebFaNum-Regular.woff2') format('woff2'),
@@ -28,7 +26,6 @@ html, body {
     font-display: swap;
 }
 
-/* Black */
 @font-face {
     font-family: 'Kalameh';
     src: url('https://arminsilatani.github.io/fonts/KalamehWebFaNum-Black.woff2') format('woff2'),
@@ -38,8 +35,9 @@ html, body {
     font-display: swap;
 }
 
+
 /* ===============================
-   HERO SECTION
+   HERO SEZIONE
 ================================ */
 .hero-section {
     position: relative;
@@ -52,7 +50,9 @@ html, body {
     overflow: hidden;
 }
 
-/* جلوگیری از برعکس شدن چیدمان */
+/* ===============================
+   HERO CONTENITORE
+================================ */
 .hero-container {
     direction: ltr;
     width: 90%;
@@ -63,7 +63,9 @@ html, body {
     gap: 0;
 }
 
-/* Slogan */
+/* ===============================
+   HERO SINISTRA
+================================ */
 .hero-left {
     display: flex;
     justify-content: center;
@@ -75,7 +77,9 @@ html, body {
     width: 100%;
 }
 
-/* Foto + Blob */
+/* ===============================
+   HERO DESTRA
+================================ */
 .hero-right {
     display: flex;
     justify-content: center;
@@ -118,7 +122,9 @@ html, body {
     100% { border-radius: 60% 40% 70% 30% / 40% 60% 40% 60%; }
 }
 
-/* Divider */
+/* ===============================
+   HERO DIVISORE
+================================ */
 .pro-divider {
     position: absolute;
     bottom: 0;
@@ -135,8 +141,9 @@ html, body {
     display: block;
 }
 
+
 /* ===============================
-   ABOUT SECTION
+   ABOUT SEZIONE
 ================================ */
 .about-section {
     width: 100%;
@@ -147,17 +154,36 @@ html, body {
     align-items: center;
 }
 
-/* چیدمان درست بدون خراب کردن RTL متن */
+/* ===============================
+   ABOUT CONTENITORE
+================================ */
 .about-container {
     display: flex;
-    flex-direction: row-reverse; /* متن راست، عکس چپ */
-    justify-content: flex-start; /* جلوگیری از وسط آمدن */
-    align-items: flex-start;     /* جلوگیری از وسط‌چینی عمودی */
-    gap: 40px;                   /* فاصلهٔ طبیعی بین متن و عکس */
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
 }
 
+/* ===============================
+   ABOUT IMMAGINE
+================================ */
+.about-image {
+    width: 275px;
+    display: flex;
+    justify-content: flex-start;
+}
 
-/* متن کاملاً RTL + Justify */
+.about-image img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+}
+
+/* ===============================
+   ABOUT TESTO
+================================ */
 .about-text {
     max-width: 600px;
     direction: rtl;
@@ -167,4 +193,29 @@ html, body {
 
 .about-text h1 {
     font-size: 48px;
-    margin
+    margin-bottom: 20px;
+    color: #4ECDC4;
+}
+
+/* ===============================
+   ABOUT BOTTONE
+================================ */
+.about-btn {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    border: 2px solid #4ECDC4;
+    color: #4ECDC4;
+    background: transparent;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 17px;
+    text-align: center;
+    margin-top: 10px;
+    transition: 0.25s ease;
+}
+
+.about-btn:hover {
+    background: rgba(78, 205, 196, 0.12);
+}
