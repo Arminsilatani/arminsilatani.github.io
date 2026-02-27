@@ -1,3 +1,6 @@
+/* ===============================
+   RESET BASE DELLA PAGINA
+================================ */
 html, body {
     margin: 0;
     padding: 0;
@@ -5,15 +8,25 @@ html, body {
     height: 100%;
 }
 
+
+/* ===============================
+   SEZIONE HERO
+================================ */
 .hero-section {
+    position: relative; /* Necessario per posizionare il divider in basso */
     width: 100%;
-    height: 100vh;
+    height: 100vh; /* Occupa tutta l’altezza del viewport */
     display: flex;
     justify-content: center;
     align-items: center;
     background: #f5f5f5;
+    overflow: hidden;
 }
 
+
+/* ===============================
+   CONTENITORE CENTRALE HERO
+================================ */
 .hero-container {
     width: 90%;
     max-width: 1300px;
@@ -23,7 +36,26 @@ html, body {
     gap: 40px;
 }
 
-.hero-left,
+
+/* ===============================
+   Testo / Logo Slogan
+================================ */
+.hero-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-left img {
+    max-width: 520px;
+    width: 100%;
+}
+
+
+/* ===============================
+   Immagine + Blob
+================================ */
 .hero-right {
     flex: 1;
     display: flex;
@@ -31,19 +63,13 @@ html, body {
     align-items: center;
 }
 
-/* شعار */
-.hero-left img {
-    max-width: 520px;
-    width: 100%;
-}
-
-/* تصویر + حباب */
 .blob-wrapper {
     position: relative;
     width: fit-content;
     height: fit-content;
 }
 
+/* Immagine principale */
 .hero-img {
     max-width: 300px;
     width: 100%;
@@ -52,7 +78,7 @@ html, body {
     z-index: 2;
 }
 
-/* حباب */
+/* Effetto Blob Animato */
 .blob {
     position: absolute;
     top: 50%;
@@ -61,12 +87,15 @@ html, body {
     height: 220px;
     transform: translate(-50%, -50%);
     background: #ff6b6b;
+    border-radius: 60% 40% 70% 30% / 40% 60% 40% 60%;
     z-index: 1;
 
+    /* Animazione morbida tipo "gelatina" */
     animation: blobMorph 7s ease-in-out infinite;
     opacity: 0.9;
 }
 
+/* morphing della forma */
 @keyframes blobMorph {
     0% {
         border-radius: 60% 40% 70% 30% / 40% 60% 40% 60%;
@@ -85,18 +114,24 @@ html, body {
     }
 }
 
-/* دیوایدر */
+
+/* ===============================
+   Separatore inferiore
+================================ */
 .pro-divider {
+    position: absolute;
+    bottom: 0; /* Attaccato al fondo del viewport */
+    left: 0;
     width: 100%;
-    height: 160px; /* ارتفاع واقعی SVG */
+    height: 160px;
     overflow: hidden;
-    position: relative;
+    line-height: 0;
     margin: 0;
     padding: 0;
-    line-height: 0;
+    display: block;
 }
 
-.pro-divider .pro-shshape {
+.pro-divider svg {
     width: 100%;
     height: 100%;
     display: block;
