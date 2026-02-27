@@ -81,13 +81,14 @@
         text-align: center;
     }
 
-    /* ===============================
-       PARAGRAFO MOBILE
-    ================================ */
-    .about-text p {
-        text-align: right;
-        direction: rtl;
-    }
+/* ===============================
+   PARAGRAFO MOBILE
+================================ */
+.about-text p {
+    text-align: right;
+    direction: rtl;
+    color: #f5f5f5; /* colore del paragrafo */
+}
 
     .about-image {
         display: none;
@@ -113,11 +114,6 @@
         font-size: 16px;
     }
 
-    /* Nascondere immagine su mobile */
-    .about-image {
-        display: none;
-    }
-}
 
     /* Divider mobile */
     .pro-divider {
