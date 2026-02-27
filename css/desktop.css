@@ -36,6 +36,28 @@ html, body {
 }
 
 /* ===============================
+   BOTTONE GENERALE (per tutto il sito)
+================================ */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border: 2px solid #4ECDC4;
+    background: transparent;
+    color: #4ECDC4;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 400;        /* متن نرمال */
+    font-size: 17px;
+    text-align: center;      /* وسط‌چین */
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.btn:hover {
+    background: rgba(78, 205, 196, 0.12);
+}
+
+/* ===============================
    HERO SEZIONE
 ================================ */
 .hero-section {
