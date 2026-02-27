@@ -42,14 +42,6 @@ body {
 
 
 /* ===============================
-   FLEX GLOBALI LTR
-================================ */
-section, div, .container, .row, .col {
-    direction: ltr;
-}
-
-
-/* ===============================
    RESET BASE DELLA PAGINA
 ================================ */
 html, body {
