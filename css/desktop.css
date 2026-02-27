@@ -143,26 +143,26 @@ html, body {
 }
 
 /* ===============================
-   ABOUT SEZIONE
+   ABOUT SEZIONE (centrato verticale)
 ================================ */
 .about-section {
     width: 100%;
     position: relative;
     height: 100vh;
     background: #0d0d0d;
-    display: block;
-    justify-content: center;
-    align-items: center;
-}   
+    display: flex;
+    justify-content: center;   /* وسط‌چین افقی کل محتوا */
+    align-items: center;       /* وسط‌چین عمودی کل محتوا */
+}
 
 /* ===============================
-   ABOUT CONTENITORE (centrato)
+   ABOUT CONTENITORE
 ================================ */
 .about-container {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;   /* ← این مهم‌ترین خط است */
-    align-items: flex-start;
+    justify-content: center;   /* کل بلوک وسط صفحه */
+    align-items: center;       /* تصویر و متن عمودی وسط */
     gap: 40px;
     width: 100%;
 }
