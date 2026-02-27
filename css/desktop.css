@@ -161,7 +161,7 @@ html, body {
 .about-container {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     gap: 40px;
     width: 100%;
