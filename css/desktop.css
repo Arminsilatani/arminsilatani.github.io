@@ -88,24 +88,16 @@ html, body {
 /* دیوایدر */
 .pro-divider {
     width: 100%;
+    height: 160px; /* ارتفاع واقعی SVG */
     overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
     line-height: 0;
 }
 
-.pro-divider .pro-shape {
+.pro-divider .pro-shshape {
+    width: 100%;
+    height: 100%;
     display: block;
-    width: 100%;
-    height: 80px; /* می‌تونی تغییر بدی */
-}
-
-.pro-divider {
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.pro-divider .pro-shape {
-    display: block;
-    width: 100%;
-    height: 80px; /* می‌تونی تغییر بدی */
 }
