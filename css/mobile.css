@@ -14,7 +14,7 @@
 
     .hero-container {
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
         direction: ltr;
         width: 100%;
         max-width: 100%;
