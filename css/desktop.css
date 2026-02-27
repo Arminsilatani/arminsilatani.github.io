@@ -147,12 +147,12 @@ html, body {
 ================================ */
 .about-section {
     width: 100%;
+    position: relative;
     height: 100vh;
     background: #0d0d0d;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
-}
 
 /* ===============================
    ABOUT CONTENITORE
