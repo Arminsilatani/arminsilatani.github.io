@@ -64,10 +64,18 @@ html, body {
     border-radius: 60% 40% 70% 30% / 40% 60% 40% 60%;
     z-index: 1;
 
-    /* نسخه جدید: 40% سریع‌تر + ژله‌ای */
-    animation: blobAnim 11s cubic-bezier(0.25, 1.50, 0.35, 1) infinite;
+    /* نسخه جدید: خیلی سریع‌تر + ژله‌ای‌تر */
+    animation: blobAnim 7s cubic-bezier(0.20, 1.70, 0.30, 1) infinite;
     opacity: 0.9;
 }
+
+/* انیمیشن ژله‌ای قوی‌تر */
+@keyframes blobAnim {
+    0%   { transform: translate(-50%, -50%) scale(1); }
+    50%  { transform: translate(-50%, -50%) scale(1.18); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
 
 /* انیمیشن ژله‌ای */
 @keyframes blobAnim {
