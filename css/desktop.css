@@ -54,17 +54,16 @@ html, body {
 }
 
 /* ===============================
-   BOTTONE HOVER (effetto Elementor)
+   BOTTONE HOVER (ombra più grande)
 ================================ */
 .btn:hover {
     background: #4ECDC4;          /* بک‌گراند هاور */
     color: #0D0D0D;               /* رنگ متن هاور */
     border-color: #4ECDC4;        /* بوردر هاور */
 
-    /* سایه رنگی مثل المنتور */
+    /* سایه با گستردگی دو برابر */
     box-shadow: 
-        0 0 20px 5px rgba(78, 205, 196, 0.55);
-        /*        ↑ رنگ #4ECDC4 با شفافیت 55% */
+        0 0 20px 10px rgba(78, 205, 196, 0.55);
 }
 
 
