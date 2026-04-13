@@ -1,4 +1,4 @@
-/* ===============================
+/* ================================
    GLOBAL
 ================================ */
 html, body {
@@ -12,9 +12,10 @@ html, body {
     color: #f5f5f5;
     unicode-bidi: plaintext;
     font-family: 'Kalameh', sans-serif;
+    background: #0d0d0d;
 }
 
-/* ===============================
+/* ================================
    FONT
 ================================ */
 @font-face {
@@ -35,7 +36,7 @@ html, body {
     font-display: swap;
 }
 
-/* ===============================
+/* ================================
    BUTTON SMALL
 ================================ */
 .btn-small {
@@ -60,8 +61,8 @@ html, body {
     box-shadow: 0 0 20px 10px rgba(78, 205, 196, 0.80);
 }
 
-/* ===============================
-   BUTTON LARGE
+/* ================================
+   BUTTON LARGE — CLEAN & PRO
 ================================ */
 .btn-large {
     display: block;
@@ -69,6 +70,7 @@ html, body {
     max-width: 600px;
     margin: 20px auto 0;
     padding: 12px 24px;
+    box-sizing: border-box;
 
     background: #0D0D0D;
     color: #4ECDC4;
@@ -77,11 +79,15 @@ html, body {
 
     font-weight: 400;
     font-size: 17px;
+    font-family: inherit;
 
-    text-align: center;
-
+    /* ایزوله‌سازی جهت */
     direction: ltr;
-    unicode-bidi: isolate;   /* ← این خط مشکل را 100٪ حل می‌کند */
+    unicode-bidi: isolate;
+
+    /* مرکز کردن واقعی متن فارسی */
+    text-align: center;
+    text-align-last: center;
 
     cursor: pointer;
     transition: 0.25s ease;
@@ -95,8 +101,8 @@ html, body {
     box-shadow: 0 0 20px 10px rgba(78, 205, 196, 0.80);
 }
 
-/* ===============================
-   HERO SEZIONE
+/* ================================
+   HERO SECTION
 ================================ */
 .hero-section {
     position: relative;
@@ -110,8 +116,8 @@ html, body {
     overflow: hidden;
 }
 
-/* ===============================
-   HERO CONTENITORE
+/* ================================
+   HERO CONTAINER
 ================================ */
 .hero-container {
     direction: ltr;
@@ -122,8 +128,8 @@ html, body {
     align-items: center;
 }
 
-/* ===============================
-   HERO SINISTRA
+/* ================================
+   HERO LEFT
 ================================ */
 .hero-left {
     display: flex;
@@ -136,8 +142,8 @@ html, body {
     width: 100%;
 }
 
-/* ===============================
-   HERO DESTRA
+/* ================================
+   HERO RIGHT
 ================================ */
 .hero-right {
     display: flex;
@@ -181,8 +187,8 @@ html, body {
     100% { border-radius: 60% 40% 70% 30% / 40% 60% 40% 60%; }
 }
 
-/* ===============================
-   HERO DIVISORE
+/* ================================
+   HERO DIVIDER
 ================================ */
 .pro-divider {
     position: absolute;
@@ -200,8 +206,8 @@ html, body {
     display: block;
 }
 
-/* ===============================
-   ABOUT SEZIONE
+/* ================================
+   ABOUT SECTION
 ================================ */
 .about-section {
     width: 100%;
@@ -213,8 +219,8 @@ html, body {
     align-items: center;
 }
 
-/* ===============================
-   ABOUT CONTENITORE
+/* ================================
+   ABOUT CONTAINER
 ================================ */
 .about-container {
     display: flex;
@@ -225,8 +231,8 @@ html, body {
     width: 100%;
 }
 
-/* ===============================
-   ABOUT IMMAGINE
+/* ================================
+   ABOUT IMAGE
 ================================ */
 .about-image {
     width: 275px;
@@ -240,8 +246,8 @@ html, body {
     border-radius: 12px;
 }
 
-/* ===============================
-   ABOUT TESTO
+/* ================================
+   ABOUT TEXT
 ================================ */
 .about-text {
     max-width: 600px;
@@ -256,7 +262,7 @@ html, body {
     color: #4ECDC4;
 }
 
-/* ===============================
+/* ================================
    MOBILE GLOBAL
 ================================ */
 @media (max-width: 768px) {
@@ -266,11 +272,10 @@ html, body {
     }
 }
 
-/* ===============================
+/* ================================
    MOBILE HERO
 ================================ */
 @media (max-width: 768px) {
-
     .hero-section {
         height: auto;
         padding: 60px 0;
@@ -297,11 +302,10 @@ html, body {
     }
 }
 
-/* ===============================
+/* ================================
    MOBILE ABOUT
 ================================ */
 @media (max-width: 768px) {
-
     .about-section {
         height: auto;
         padding: 60px 0;
