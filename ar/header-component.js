@@ -260,12 +260,12 @@ class HeaderComponent extends HTMLElement {
     const menu = document.createElement("nav");
     menu.className = "sidebar";
     menu.innerHTML = `
-      <a href="http://127.0.0.1:5500/arminsilatani.github.io/ar/">الرئيسية</a>
-      <a href="/ar/services">الخدمات</a>
-      <a href="http://127.0.0.1:5500/arminsilatani.github.io/ar/about/">من أنا</a>
-      <a href="/ar/contact">تواصل معي</a>
-      <a href="/ar/tariff">الأسعار</a>
-      <a href="/ar/portfolio">أعمالي</a>
+      <a href="/ar/">الرئيسية</a>
+      <a href="/ar/#">الخدمات</a>
+      <a href=/ar/about/">من أنا</a>
+      <a href="/ar/#">تواصل معي</a>
+      <a href="/ar/#">الأسعار</a>
+      <a href="/ar/#">أعمالي</a>
     `;
 
     wrapper.append(lineBox, menu);
