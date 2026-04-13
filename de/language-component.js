@@ -154,7 +154,7 @@ class LanguageComponent extends HTMLElement {
       { name: 'فارسی', url: 'http://127.0.0.1:5500/arminsilatani.github.io/', hreflang: 'fa' },
       { name: 'English', url: 'http://127.0.0.1:5500/arminsilatani.github.io/en/', hreflang: 'en' },
       { name: 'العربية', url: 'http://127.0.0.1:5500/arminsilatani.github.io/ar/', hreflang: 'ar' },
-      { name: 'Türkçe', url: 'http://127.0.0.1:5500/arminsilatani.github.io/tr/', hreflang: 'tr' },
+      { name: 'Türkçe', url: 'https://arminsilatani.github.io/tr/', hreflang: 'tr' },
       { name: 'Italiano', url: 'http://127.0.0.1:5500/arminsilatani.github.io/it/', hreflang: 'it' },
     ];
 
