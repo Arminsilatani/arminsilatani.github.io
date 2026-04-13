@@ -256,11 +256,11 @@ class HeaderComponent extends HTMLElement {constructor() {
     menu.className = "sidebar";
     menu.innerHTML = `
       <a href="/it/">Home</a>
-      <a href="/it/services/">Servizi</a>
+      <a href="/it/#">Servizi</a>
       <a href="/it/about/">Chi Sono</a>
-      <a href="/it/contact/">Contattami</a>
-      <a href="/it/tariff/">Tariffe</a>
-      <a href="/it/portfolio/">Portfolio</a>
+      <a href="/it/#">Contattami</a>
+      <a href="/it/#">Tariffe</a>
+      <a href="/it/#">Portfolio</a>
     `;
 
     wrapper.appendChild(lineBox);
