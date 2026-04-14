@@ -230,7 +230,7 @@ class FooterComponent extends HTMLElement {
             <ul class="menu">
               <li><a href="#/">دخول</a></li>
               <li><a href="#/">المدونة</a></li>
-              <li><a href="/arminsilatani.github.io/ar/sitemap">خريطة الموقع</a></li>
+              <li><a href="/ar/sitemap">خريطة الموقع</a></li>
               <li><a href="#/">تحميل السيرة الذاتية</a></li>
             </ul>
           </div>
