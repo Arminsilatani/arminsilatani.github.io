@@ -1,0 +1,42 @@
+.btn-dark {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+
+    margin: 20px auto 0;
+    padding: 12px 24px;
+
+    box-sizing: border-box;
+
+    background: #0D0D0D;
+    color: #4ECDC4;
+
+    border: 2px solid #4ECDC4;
+    border-radius: 3px;
+
+    font-size: 17px;
+    font-weight: 400;
+
+    direction: ltr;
+    unicode-bidi: isolate;
+
+    text-align: center;
+    text-align-last: center;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.btn-dark:hover {
+    background: #4ECDC4;
+    color: #0D0D0D;
+    border-color: #4ECDC4;
+
+    box-shadow:
+        0 0 10px 5px rgba(78,205,196,0.80),
+        0 0 20px 10px rgba(78,205,196,0.60),
+        0 0 30px 15px rgba(78,205,196,0.40);
+}

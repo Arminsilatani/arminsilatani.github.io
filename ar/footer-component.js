@@ -228,10 +228,10 @@ class FooterComponent extends HTMLElement {
           <div class="column">
             <h2>روابط مفيدة</h2>
             <ul class="menu">
-              <li><a href="/login">دخول</a></li>
-              <li><a href="/blog">المدونة</a></li>
-              <li><a href="/sitemap">خريطة الموقع</a></li>
-              <li><a href="/resume.pdf">تحميل السيرة الذاتية</a></li>
+              <li><a href="#/">دخول</a></li>
+              <li><a href="#/">المدونة</a></li>
+              <li><a href="/arminsilatani.github.io/ar/sitemap">خريطة الموقع</a></li>
+              <li><a href="#/">تحميل السيرة الذاتية</a></li>
             </ul>
           </div>
 

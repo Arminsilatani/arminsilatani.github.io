@@ -1,19 +1,17 @@
 // price-calculator.js
 
-console.log("PRICE CALCULATOR LOADED - V3 (Integrated Colors & Fixes)");
+console.log("PRICE CALCULATOR LOADED - V4 (Cleaned & Sync with Main JS)");
 
 import { basePricesUSD } from './data/prices.js';
 import { getExchangeRates } from './services/exchange-rates.js';
 import { determineCurrency } from "./utils/currency-engine.js";
 
-// --- State Management ---
 const locale = document.documentElement.lang || "en";
 let selectedServices = [];
 let currentDisplayedTotal = 0;
 let currentCurrencyCode = '';
 let groupUpdating = false;
 
-// ---------- Formatter & Animation ----------
 function formatCurrency(amount, currencyCode) {
     const formatConfig = {
         'TOMAN': { locale: 'fa-IR', options: { style: 'decimal' }, suffix: ' تومان' },
@@ -43,7 +41,6 @@ function animateValue(element, start, end, duration, currencyCode) {
   window.requestAnimationFrame(step);
 }
 
-// ---------- UI Update Functions ----------
 function updateBoxPrices(selectedCurrency, rates) {
   const rate = rates[selectedCurrency] || 1;
   document.querySelectorAll('.price-display').forEach(el => {
@@ -86,7 +83,6 @@ function recalculateInvoiceTotal(selectedCurrency, rates) {
   if (invoiceSection) invoiceSection.classList.toggle('show-invoice', selectedServices.length > 0);
 }
 
-// ---------- Initialization ----------
 document.addEventListener("DOMContentLoaded", async () => {
   const currencySelect = document.getElementById('currency-select');
   const checkboxes = document.querySelectorAll('.service-checkbox');
@@ -100,7 +96,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     return;
   }
 
-  // Set Default Currency
   if (currencySelect) {
       const initialCurrency = determineCurrency(locale);
       currencySelect.value = initialCurrency;
@@ -121,17 +116,14 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
   }
 
-  // Checkbox Event Listeners
   checkboxes.forEach(checkbox => {
     checkbox.addEventListener('change', (e) => {
       
       const box = e.target;
       const subItem = box.closest(".sub-item");
 
-      // جلوگیری از شلیک رویداد برای چک‌باکس‌های مخفی
       if (subItem && subItem.offsetWidth === 0 && subItem.offsetHeight === 0) return;
 
-      // ----- GROUP CHECKBOX LOGIC -----
       if (!groupUpdating && box.dataset.group) {
         const group = box.dataset.group;
         const groupItems = document.querySelectorAll(`.service-checkbox[data-group="${group}"]`);
@@ -148,7 +140,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       const { category, plan } = box.dataset;
 
-      // استخراج نام سرویس
       let name = "نامشخص";
       const labelEl = box.closest('label');
       if (labelEl) {
@@ -172,9 +163,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         recalculateInvoiceTotal(currency, exchangeRates);
 
-        // -------------------------------
-        // *** تشخیص رنگ صحیح و کامل ***
-        // -------------------------------
         const checkboxContainer = subItem.querySelector("label");
         let colorClass = "bullet-green";
 
@@ -184,17 +172,21 @@ document.addEventListener("DOMContentLoaded", async () => {
         else if (checkboxContainer.classList.contains("white-checkbox-container")) {
             colorClass = "bullet-white";
         }
-        // سبز نیازی به شرط ندارد
 
         const row = document.createElement('li');
         row.className = `invoice-item entering ${colorClass}`;
         row.id = safeId;
-        row.innerHTML =
-          `<span class="item-name">${name}</span>
-           <span class="item-price">${formatCurrency(Math.round(basePrice * rate), currency)}</span>`;
+        
+        row.innerHTML = `
+            <div class="sliding-text-container">
+                <span class="item-name">${name}</span>
+            </div>
+            <span class="item-price">${formatCurrency(Math.round(basePrice * rate), currency)}</span>
+        `;
 
         if (listContainer) {
           listContainer.appendChild(row);
+
           row.addEventListener('animationend', (event) => {
             if (event.animationName === 'slideDownItem') {
                 row.classList.remove('entering');
@@ -217,7 +209,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   });
 
-  // Hover & Pin Effects
   document.querySelectorAll(".service-section:not(.final-cart-section)").forEach(section => {
     const header = section.querySelector(".service-header h3");
     const pinBtn = section.querySelector(".pin-btn");

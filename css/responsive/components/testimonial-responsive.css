@@ -1,0 +1,43 @@
+/* =========================================================
+TESTIMONIAL COMPONENT RESPONSIVE
+========================================================= */
+
+@media (max-width:1400px){
+
+.testimonials-container{
+max-width:95%;
+}
+
+}
+
+@media (max-width:768px){
+
+.testimonials-placeholder img{
+max-width:80%;
+}
+
+.testimonials-container{
+width:90%;
+padding:10px;
+gap:10px;
+height:80vh;
+}
+
+.testimonials-container .column{
+display:none;
+}
+
+.testimonials-container .column:first-child{
+display:block;
+}
+
+}
+
+@media (max-width:640px){
+
+.testimonials-container{
+padding:4px;
+gap:4px;
+}
+
+}

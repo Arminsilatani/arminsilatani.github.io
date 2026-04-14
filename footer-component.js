@@ -227,10 +227,10 @@ class FooterComponent extends HTMLElement {
           <div class="column">
             <h2>لینک‌های مفید</h2>
             <ul class="menu">
-              <li><a href="/login">ورود</a></li>
-              <li><a href="/blog">وبلاگ</a></li>
-              <li><a href="http://192.168.1.5:5500/arminsilatani.github.io/sitemap/">نقشه سایت</a></li>
-              <li><a href="/resume.pdf">دانلود رزومه</a></li>
+              <li><a href="/arminsilatani.github.io/#/">ورود</a></li>
+              <li><a href="/arminsilatani.github.io/#/">وبلاگ</a></li>
+              <li><a href="/arminsilatani.github.io/sitemap/">نقشه سایت</a></li>
+              <li><a href="/arminsilatani.github.io/#/">دانلود رزومه</a></li>
             </ul>
           </div>
 

@@ -1,0 +1,237 @@
+/* =========================================
+   PAGE: HOME – HERO SECTION
+========================================= */
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+
+.hero-section h1 {
+    color: #141414;
+}
+
+.hero-container {
+    direction: ltr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-left img {
+    width: 100%;
+    max-width: 520px;
+}
+
+.blob-wrapper {
+    position: relative;
+}
+
+.hero-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.pro-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+}
+
+.pro-divider svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(-1);
+}
+
+/* =========================================
+   COMPONENT: HERO BLOB (LOCAL TO HOME PAGE)
+========================================= */
+
+.blob {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 255px;
+    height: 255px;
+    transform: translate(-50%, -50%);
+    background: #ff6b6b;
+    border-radius: 60% 40% 70% 30% / 40% 60% 40% 60%;
+    opacity: 0.9;
+    z-index: 1;
+    animation: blobMorph 7s ease-in-out infinite;
+}
+
+/* =========================================
+   PAGE: HOME – ABOUT SECTION
+========================================= */
+
+.about-section {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    background: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-image {
+    width: 275px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #4ECDC4;
+}
+
+/* =========================================
+   PAGE: HOME – SERVICES SECTION
+========================================= */
+
+.services-section {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 60px 0;
+    background: #0d0d0d;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 1fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.service-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.service-main {
+    overflow: visible;
+}
+
+.service-main .service-header img {
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto 25px;
+    transition: transform 0.4s ease;
+}
+
+/* =========================================
+   PAGE: HOME – TESTIMONIALS SECTION
+========================================= */
+
+.testimonials-section {
+    background: #0D0D0D;
+    text-align: center;
+}
+
+.testimonials-section .title {
+    position: relative;
+    margin: 25px 0;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.testimonials-section .title::after {
+    content: "";
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    width: 80px;
+    height: 2px;
+    background: #1a1a1a;
+    transform: translateX(-50%);
+}
+
+.testimonials-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.testimonials-placeholder img {
+    max-width: 45%;
+    height: auto;
+}
+
+/* =========================================
+   COMPONENT: TV STATIC (LOCAL TO HOME PAGE)
+========================================= */
+
+.tv-static-container {
+    position: relative;
+    background: #141414;
+    cursor: pointer;
+    clip-path: polygon(35px 0, 100% 0, 100% 100%, 0 100%, 0 35px);
+    overflow: hidden;
+}
+
+.tv-static-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #4ECDC4 24px, transparent 25px);
+    opacity: 0.7;
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.tv-static-container:hover::before {
+    opacity: 1;
+    filter:
+        drop-shadow(0 0 10px rgba(78,205,196,0.80))
+        drop-shadow(0 0 20px rgba(78,205,196,0.60))
+        drop-shadow(0 0 30px rgba(78,205,196,0.40));
+}
+
+.tv-static-container img {
+    width: 45% !important;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out !important;
+}
+
+.tv-static-container:hover img {
+    transform: scale(1.15) !important;
+}

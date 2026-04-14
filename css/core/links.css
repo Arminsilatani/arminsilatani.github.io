@@ -1,0 +1,28 @@
+/* =========================================
+   CORE: INLINE LINKS
+========================================= */
+
+p a,
+li a,
+.content a {
+    color: #4ECDC4;
+    font-weight: 500;
+    text-decoration: none;
+
+    transition: color 0.3s ease-in-out,
+                text-decoration 0.3s ease-in-out;
+}
+
+p a:hover,
+li a:hover,
+.content a:hover {
+    color: #ff6b6b;
+}
+
+p a:focus,
+li a:focus,
+.content a:focus {
+    color: #ff6b6b;
+    outline: 2px dashed #ff6b6b;
+    outline-offset: 2px;
+}

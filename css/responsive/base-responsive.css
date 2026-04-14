@@ -1,0 +1,23 @@
+/*
+Author: Armin Silatani
+Responsive Core Base
+*/
+
+@media (max-width:768px){
+
+html[lang="fa"],
+html[lang="fa"] body{
+direction:rtl;
+text-align:justify;
+text-align-last:right;
+}
+
+}
+
+@media (prefers-reduced-motion: reduce){
+
+img[data-blurup="true"]{
+transition:none !important;
+}
+
+}

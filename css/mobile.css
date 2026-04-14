@@ -655,3 +655,13 @@
         white-space: nowrap;
     }
 }
+@media (max-width: 768px) {
+    #final-invoice-section .service-card {
+        padding: 20px 15px; 
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    img[data-blurup="true"] {
+        transition: none !important;
+    }
+}

@@ -1,0 +1,18 @@
+/* responsive/components/breadcrumb-responsive.css */
+
+@media (max-width: 768px) {
+
+    .fake-terminal-breadcrumb {
+        font-size: 13px !important;
+        line-height: 1.6;
+    }
+
+    .fake-terminal-breadcrumb span {
+        font-size: 13px !important;
+    }
+
+    #terminalPath {
+        font-size: 13px !important;
+    }
+
+}

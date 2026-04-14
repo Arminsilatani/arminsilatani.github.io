@@ -1,0 +1,157 @@
+/* =========================================
+   PAGE: SITEMAP
+   Structured + Clean + Page‑Scoped
+========================================= */
+
+.sitemap-section {
+    padding: 60px 0 100px;
+    background-color: #0d0d0d;
+    color: #f5f5f5;
+}
+
+/* =========================================
+   Header Text
+========================================= */
+
+.sitemap-header-text {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+/* =========================================
+   Grid System
+========================================= */
+
+.sitemap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+/* =========================================
+   Cards
+========================================= */
+
+.sitemap-card {
+    background: #151515;
+    border: 1px solid #252525;
+    border-radius: 3px;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.sitemap-card:hover {
+    border-color: #4ECDC4;
+}
+
+/* =========================================
+   Card Title
+========================================= */
+
+.card-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #252525;
+}
+
+.card-title h2 {
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* =========================================
+   List & Links
+========================================= */
+
+.sitemap-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sitemap-list li {
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.sitemap-list li:last-child {
+    margin-bottom: 0;
+}
+
+.sitemap-list a {
+    color: #a0a0a0;
+    text-decoration: none;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 8px 0;
+}
+
+.sitemap-list a:hover {
+    color: #f5f5f5;
+}
+
+/* =========================================
+   Hover Row Motion
+========================================= */
+
+.link-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: gap 0.3s ease;
+}
+
+/* در حالت هاور فاصله بین آیکن و متن بزرگ‌تر می‌شود */
+.link-row:has(a:hover) {
+    gap: 25px;
+}
+
+/* =========================================
+   Extra Meta Info
+========================================= */
+
+.last-update {
+    font-size: 0.80rem;
+    color: #4ECDC4;
+    opacity: 0.9;
+}
+
+/* =========================================
+   Hover Description Box
+========================================= */
+
+.hover-desc {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    padding: 0 14px;
+
+    background: rgba(78,205,196,0.08);
+    border-inline-start: 3px solid #4ECDC4;
+    border-radius: 3px;
+
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #d8fdfb;
+
+    transition:
+        max-height 0.55s cubic-bezier(.4,0,.2,1),
+        opacity 0.45s ease,
+        padding 0.45s ease,
+        margin-top 0.3s ease;
+}
+
+.sitemap-list li:has(.link-row a:hover) .hover-desc {
+    max-height: 220px;
+    opacity: 1;
+    padding: 12px 14px;
+}

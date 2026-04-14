@@ -1,0 +1,144 @@
+/* =========================================
+   PAGE: ABOUT / STORY
+========================================= */
+
+.story-container {
+    background-color: #0D0D0D;
+    color: #f5f5f5;
+    position: relative;
+    padding: 2rem 0;
+    overflow: hidden;
+}
+
+/* =========================================
+   Direction Handling (RTL / LTR)
+========================================= */
+
+/* -------- RTL -------- */
+
+html[dir="rtl"] .story-container {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] .content-text {
+    text-align: right;
+    transform-origin: right center;
+}
+
+html[dir="rtl"] .content-date {
+    justify-content: flex-end;
+}
+
+/* -------- LTR -------- */
+
+html[dir="ltr"] .story-container {
+    direction: ltr;
+    text-align: left;
+}
+
+html[dir="ltr"] .content-text {
+    text-align: left;
+    transform-origin: left center;
+}
+
+html[dir="ltr"] .content-date {
+    justify-content: flex-end;
+    padding-inline-start: 20px;
+}
+
+/* =========================================
+   Shared Layout
+========================================= */
+
+.story-block {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 1rem auto;
+    position: relative;
+    z-index: 1;
+}
+
+.content-date {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.content-text {
+    flex: 0 0 66.66%;
+    max-width: 66.66%;
+    box-sizing: border-box;
+
+    transform: scale(calc(0.4 + (0.6 * var(--progress, 0))));
+    opacity: calc(0.1 + (0.9 * var(--progress, 0)));
+}
+
+/* =========================================
+   Year (Timeline Marker)
+========================================= */
+
+.step-year {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 900;
+
+    direction: ltr;
+    unicode-bidi: isolate;
+    white-space: nowrap;
+
+    color: #54595f;
+    transform-origin: center center;
+    transition: color 0.3s ease;
+
+    transform:
+        translateY(var(--date-scroll-offset, 0px))
+        rotate(90deg)
+        scale(calc(0.4 + (0.6 * var(--progress, 0))));
+    opacity: calc(0.1 + (0.9 * var(--progress, 0)));
+}
+
+.story-block.active .step-year {
+    color: #f5f5f5;
+}
+
+/* -------- LTR Rotation Fix -------- */
+
+html[dir="ltr"] .step-year {
+    transform:
+        translateY(var(--date-scroll-offset, 0px))
+        rotate(-90deg)
+        scale(calc(0.4 + (0.6 * var(--progress, 0))));
+    text-align: right;
+}
+
+/* =========================================
+   Text Elements
+========================================= */
+
+.step-context {
+    display: block;
+    font-size: 1.1rem;
+    color: #4ECDC4;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.step-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    margin-top: 0.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.step-text {
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    color: #54595f;
+    line-height: 1.8;
+    font-weight: 300;
+}

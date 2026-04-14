@@ -758,11 +758,7 @@ img[data-blurup="true"].blurup-loaded {
     opacity: 1;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    img[data-blurup="true"] {
-        transition: none !important;
-    }
-}
+
 
 
 /* =========================================
@@ -1809,11 +1805,7 @@ letter-spacing:0.5px;
 }
 
 /* 🟢 حل مشکل اسکرول افقی: کاهش پدینگ کارت فاکتور در موبایل */
-@media (max-width: 768px) {
-    #final-invoice-section .service-card {
-        padding: 20px 15px; 
-    }
-}
+
     /* ۱. 🟢 محدود کردن فضا برای جلوگیری از هل دادن قیمت (پشتیبانی از تب سازمانی و فاکتور) */
     .green-checkbox-container,
     .green-checkbox-checked-container,

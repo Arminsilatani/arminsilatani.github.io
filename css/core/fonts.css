@@ -1,0 +1,51 @@
+/* =========================================
+   CORE: FONT DEFINITIONS
+========================================= */
+
+/* Persian / Arabic */
+@font-face {
+    font-family: 'KalamehFaNum';
+    src: url('../fonts/KalamehWebFaNum-Regular.woff2') format('woff2'),
+         url('../fonts/KalamehWebFaNum-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KalamehFaNum';
+    src: url('../fonts/KalamehWebFaNum-Black.woff2') format('woff2'),
+         url('../fonts/KalamehWebFaNum-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* English */
+@font-face {
+    font-family: 'KalamehEn';
+    src: url('../fonts/KalamehWeb-Regular.woff2') format('woff2'),
+         url('../fonts/KalamehWeb-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KalamehEn';
+    src: url('../fonts/KalamehWeb-Black.woff2') format('woff2'),
+         url('../fonts/KalamehWeb-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Font Variable */
+:root {
+    --main-font: 'KalamehEn', sans-serif;
+}
+
+:root:lang(fa),
+:root:lang(ar) {
+    --main-font: 'KalamehFaNum', sans-serif;
+}

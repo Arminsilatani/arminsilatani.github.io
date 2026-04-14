@@ -151,11 +151,11 @@ class LanguageComponent extends HTMLElement {
 
     /* Language Configuration */
     const languages = [
-      { name: 'فارسی', url: 'https://arminsilatani.github.io/', hreflang: 'fa' },
-      { name: 'English', url: 'https:/arminsilatani.github.io/en/', hreflang: 'en' },
-      { name: 'العربية', url: 'https:/arminsilatani.github.io/ar/', hreflang: 'ar' },
-      { name: 'Deutsch', url: 'https:/arminsilatani.github.io/de/', hreflang: 'de' },
-      { name: 'Italiano', url: 'https:/arminsilatani.github.io/it/', hreflang: 'it' },
+      { name: 'فارسی', url: '/arminsilatani.github.io/', hreflang: 'fa' },
+      { name: 'English', url: '/arminsilatani.github.io/en/', hreflang: 'en' },
+      { name: 'العربية', url: '/arminsilatani.github.io/ar/', hreflang: 'ar' },
+      { name: 'Deutsch', url: '/arminsilatani.github.io/de/', hreflang: 'de' },
+      { name: 'Italiano', url: '/arminsilatani.github.io/it/', hreflang: 'it' },
     ];
 
     /* Extract Current Path */

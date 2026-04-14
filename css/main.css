@@ -1,0 +1,55 @@
+/* ===============================
+   COMPONENTS
+================================= */
+
+@import url('components/breadcrumb.css');
+@import url('components/testimonial.css');
+
+
+/* ===============================
+   CORE
+================================= */
+
+@import url('core/animations.css');
+@import url('core/base.css');
+@import url('core/buttons.css');
+@import url('core/checkbox.css');
+@import url('core/containers.css');
+@import url('core/fonts.css');
+@import url('core/images.css');
+@import url('core/links.css');
+@import url('core/typography.css');
+
+
+/* ===============================
+   PAGES
+================================= */
+
+@import url('pages/about.css');
+@import url('pages/home.css');
+@import url('pages/sitemap.css');
+@import url('pages/tariff.css');
+
+
+/* ===============================
+   RESPONSIVE - COMPONENTS
+================================= */
+
+@import url('responsive/components/breadcrumb-responsive.css');
+@import url('responsive/components/testimonial-responsive.css');
+
+
+/* ===============================
+   RESPONSIVE - CORE
+================================= */
+
+@import url('responsive/base-responsive.css');
+@import url('responsive/core/typography-responsive.css');
+
+
+/* ===============================
+   RESPONSIVE - PAGES
+================================= */
+@import url('responsive/pages/about-responsive.css');
+@import url('responsive/pages/home-responsive.css');
+@import url('responsive/pages/tariff-responsive.css');

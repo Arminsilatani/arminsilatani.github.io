@@ -1,0 +1,50 @@
+/* =========================================
+   CORE: GLOBAL ANIMATIONS
+========================================= */
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+@keyframes blobMorph {
+    0%, 100% {
+        border-radius: 60% 40% 70% 30% / 40% 60% 40% 60%;
+    }
+    25% {
+        border-radius: 55% 45% 65% 35% / 45% 55% 50% 50%;
+    }
+    50% {
+        border-radius: 70% 30% 60% 40% / 50% 40% 60% 50%;
+    }
+    75% {
+        border-radius: 65% 35% 75% 25% / 35% 65% 45% 55%;
+    }
+}
+
+@keyframes scrollUp {
+    from { transform: translateY(0); }
+    to   { transform: translateY(-50%); }
+}
+
+@keyframes scrollDown {
+    from { transform: translateY(-50%); }
+    to   { transform: translateY(0); }
+}
+
+
+@keyframes slideTextInside {
+
+0%,15%{
+transform:translateX(0);
+}
+
+45%,55%{
+transform:translateX(calc(var(--overflow-amount) + 16px));
+}
+
+85%,100%{
+transform:translateX(0);
+}
+
+}

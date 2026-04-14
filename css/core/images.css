@@ -1,0 +1,18 @@
+/* =========================================
+   CORE: BLUR-UP IMAGE LOADING
+========================================= */
+
+img[data-blurup="true"] {
+    filter: blur(var(--blurup-blur, 12px));
+    transform: translateZ(0);
+    opacity: 0.98;
+
+    transition:
+        filter var(--blurup-dur, 500ms) cubic-bezier(0.4, 0, 0.2, 1),
+        opacity var(--blurup-dur, 500ms) ease-in-out;
+}
+
+img[data-blurup="true"].blurup-loaded {
+    filter: blur(0px);
+    opacity: 1;
+}
