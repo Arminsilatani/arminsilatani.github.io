@@ -1,92 +1,478 @@
 /* =========================================
-   COMPONENT: NEON CHECKBOX SYSTEM (DRY)
-========================================= */
+   UI CHECKBOX SYSTEM - NEON STYLE
+   ========================================= */
+
+
+/* ::::::::::::::::::::::::::::::::::::::: ANIMATIONS ::::::::::::::::::::::::::::::::::::::: */
 
 @keyframes pulseNeon {
-    0%, 100% { opacity: 0; }
-    50% { opacity: 0.75; }
+  0%, 100% { opacity: 0; }
+  50% { opacity: 0.75; }
 }
 
-/* Base structure for all checkboxes */
-.neon-checkbox {
-    appearance: none;
-    -webkit-appearance: none;
 
-    position: relative;
-    width: 24px;
-    height: 24px;
-    margin: 38;
-    vertical-align: middle;
+/* ------------------------------------------------------------------
+GREEN CHECKBOX
+--------------------------------------------------------------------- */
 
-    cursor: pointer;
-    border: none;
-    outline: none;
-    background-color: transparent;
+.green-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
 
-    --c-base: #7a7a7a;
-    --c-on: #f5f5f5;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin: 38;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
 
-    --base: radial-gradient(circle, var(--c-base) 40%, transparent 65%);
-    --on: radial-gradient(circle, var(--c-on) 40%, transparent 65%);
+  --c-base: #7a7a7a;
+  --c-on: #4ECDC4;
 
-    background-image:
-        var(--base), var(--base), var(--base),
-        var(--base), var(--base), var(--base),
-        var(--base), var(--base), var(--base);
+  --base: radial-gradient(circle, var(--c-base) 40%, transparent 65%);
+  --on: radial-gradient(circle, var(--c-on) 40%, transparent 65%);
 
-    background-size: 4px 4px;
-    background-repeat: no-repeat;
+  background-image:
+    var(--base), var(--base), var(--base),
+    var(--base), var(--base), var(--base),
+    var(--base), var(--base), var(--base);
 
-    background-position:
-        3px 3px, 9.5px 3px, 16px 3px,
-        3px 9.5px, 9.5px 9.5px, 16px 9.5px,
-        3px 16px, 9.5px 16px, 16px 16px;
+  background-size:
+    4px 4px, 4px 4px, 4px 4px,
+    4px 4px, 4px 4px, 4px 4px,
+    4px 4px, 4px 4px, 4px 4px;
+
+  background-position:
+    3px 3px, 9.5px 3px, 16px 3px,
+    3px 9.5px, 9.5px 9.5px, 16px 9.5px,
+    3px 16px, 9.5px 16px, 16px 16px;
+
+  background-repeat: no-repeat;
 }
 
-/* Overlay grid */
-.neon-checkbox::before,
-.neon-checkbox::after {
-    content: "";
-    position: absolute;
-    inset: 0;
+.green-checkbox::before,
+.green-checkbox::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 
-    background-image:
-        var(--on), var(--on), var(--on),
-        var(--on), var(--on), var(--on),
-        var(--on), var(--on), var(--on);
+  background-image:
+    var(--on), var(--on), var(--on),
+    var(--on), var(--on), var(--on),
+    var(--on), var(--on), var(--on);
 
-    background-size: inherit;
-    background-position: inherit;
-    background-repeat: inherit;
+  background-size: inherit;
+  background-position: inherit;
+  background-repeat: no-repeat;
 
-    pointer-events: none;
-    opacity: 0;
-    filter: drop-shadow(0 0 1.5px var(--c-on));
+  pointer-events: none;
+  opacity: 0;
+
+  filter: drop-shadow(0 0 1.5px var(--c-on));
 }
 
-/* Checked */
-.neon-checkbox:checked::before {
-    opacity: 1;
-    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+/* Checked Effect */
+
+.green-checkbox::before {
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Hover pulse */
-.neon-checkbox:hover:not(:checked)::after {
-    animation: pulseNeon 1.5s infinite ease-in-out;
+.green-checkbox:checked::before {
+  opacity: 1;
 }
 
-/* Always pulsing (Red non-interactive) */
-.neon-checkbox.is-static::after {
-    animation: pulseNeon 1.5s infinite ease-in-out;
-    opacity: 0.75;
+/* Hover Effect */
+
+.green-checkbox:hover:not(:checked)::after {
+  animation: pulseNeon 1.5s infinite ease-in-out;
+}
+/* ------------------------------------------------------------------
+GREEN CHECKED CHECKBOX
+--------------------------------------------------------------------- */
+.green-checkbox-checked {
+  appearance: none;
+  -webkit-appearance: none;
+
+  position: relative;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin: 38;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  --c-base: #7a7a7a;
+  --c-on: #4ECDC4;
+
+  --base: radial-gradient(circle, var(--c-base) 40%, transparent 65%);
+  --on: radial-gradient(circle, var(--c-on) 40%, transparent 65%);
+
+  background-image:
+    var(--base), var(--base), var(--base),
+    var(--base), var(--base), var(--base),
+    var(--base), var(--base), var(--base);
+
+  background-size:
+    4px 4px, 4px 4px, 4px 4px,
+    4px 4px, 4px 4px, 4px 4px,
+    4px 4px, 4px 4px, 4px 4px;
+
+  background-position:
+    3px 3px, 9.5px 3px, 16px 3px,
+    3px 9.5px, 9.5px 9.5px, 16px 9.5px,
+    3px 16px, 9.5px 16px, 16px 16px;
+
+  background-repeat: no-repeat;
 }
 
-/* Color Themes */
-.neon-green { --c-on: #4ECDC4; }
-.neon-yellow { --c-on: #ffe76d; }
-.neon-white { --c-on: #f5f5f5; }
-.neon-red {
-    --c-on: #ff6b6b;
-    pointer-events: none;
-    cursor: default;
+.green-checkbox-checked::before,
+.green-checkbox-checked::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    var(--on), var(--on), var(--on),
+    var(--on), var(--on), var(--on),
+    var(--on), var(--on), var(--on);
+
+  background-size: inherit;
+  background-position: inherit;
+  background-repeat: no-repeat;
+
+  pointer-events: none;
+  opacity: 0;
+
+  filter: drop-shadow(0 0 1.5px var(--c-on));
 }
+
+/* Checked Effect */
+
+.green-checkbox-checked::before {
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.green-checkbox-checked:checked::before {
+  opacity: 1;
+}
+
+/* Hover Effect */
+
+.green-checkbox-checked::after {
+  animation: pulseNeon 1.5s infinite ease-in-out;
+  opacity: 0.75;
+}
+/* ------------------------------------------------------------------
+YELLOW CHECKBOX
+--------------------------------------------------------------------- */
+
+.yellow-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+
+  position: relative;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin: 38;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  --c-base: #7a7a7a;
+  --c-on: #ffe76d;
+
+  --base: radial-gradient(circle, var(--c-base) 40%, transparent 65%);
+  --on: radial-gradient(circle, var(--c-on) 40%, transparent 65%);
+
+  background-image:
+    var(--base), var(--base), var(--base),
+    var(--base), var(--base), var(--base),
+    var(--base), var(--base), var(--base);
+
+  background-size:
+    4px 4px, 4px 4px, 4px 4px,
+    4px 4px, 4px 4px, 4px 4px,
+    4px 4px, 4px 4px, 4px 4px;
+
+  background-position:
+    3px 3px, 9.5px 3px, 16px 3px,
+    3px 9.5px, 9.5px 9.5px, 16px 9.5px,
+    3px 16px, 9.5px 16px, 16px 16px;
+
+
+  background-repeat: no-repeat;
+}
+
+.yellow-checkbox::before,
+.yellow-checkbox::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    var(--on), var(--on), var(--on),
+    var(--on), var(--on), var(--on),
+    var(--on), var(--on), var(--on);
+
+  background-size: inherit;
+  background-position: inherit;
+  background-repeat: no-repeat;
+
+  pointer-events: none;
+  opacity: 0;
+
+  filter: drop-shadow(0 0 1.5px var(--c-on));
+}
+
+/* Checked Effect */
+
+.yellow-checkbox::before {
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.yellow-checkbox:checked::before {
+  opacity: 1;
+}
+
+/* Hover Effect */
+
+.yellow-checkbox:hover:not(:checked)::after {
+  animation: pulseNeon 1.5s infinite ease-in-out;
+}
+/* ------------------------------------------------------------------
+YELLOW CHECKED CHECKBOX
+--------------------------------------------------------------------- */
+.yellow-checkbox-checked {
+  appearance: none;
+  -webkit-appearance: none;
+
+  position: relative;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin: 38;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  --c-base: #7a7a7a;
+  --c-on: #ffe76d;
+
+  --base: radial-gradient(circle, var(--c-base) 40%, transparent 65%);
+  --on: radial-gradient(circle, var(--c-on) 40%, transparent 65%);
+
+  background-image:
+    var(--base), var(--base), var(--base),
+    var(--base), var(--base), var(--base),
+    var(--base), var(--base), var(--base);
+
+  background-size:
+    4px 4px, 4px 4px, 4px 4px,
+    4px 4px, 4px 4px, 4px 4px,
+    4px 4px, 4px 4px, 4px 4px;
+
+  background-position:
+    3px 3px, 9.5px 3px, 16px 3px,
+    3px 9.5px, 9.5px 9.5px, 16px 9.5px,
+    3px 16px, 9.5px 16px, 16px 16px;
+
+  background-repeat: no-repeat;
+}
+
+.yellow-checkbox-checked::before,
+.yellow-checkbox-checked::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    var(--on), var(--on), var(--on),
+    var(--on), var(--on), var(--on),
+    var(--on), var(--on), var(--on);
+
+  background-size: inherit;
+  background-position: inherit;
+  background-repeat: no-repeat;
+
+  pointer-events: none;
+  opacity: 0;
+
+  filter: drop-shadow(0 0 1.5px var(--c-on));
+}
+
+/* Checked Effect */
+
+.yellow-checkbox-checked::before {
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.yellow-checkbox-checked:checked::before {
+  opacity: 1;
+}
+
+/* Hover Effect */
+
+.yellow-checkbox-checked::after {
+  animation: pulseNeon 1.5s infinite ease-in-out;
+  opacity: 0.75;
+}
+
+/* ------------------------------------------------------------------
+WHITE CHECKBOX
+--------------------------------------------------------------------- */
+
+.white-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+
+  position: relative;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin: 38;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  --c-base: #7a7a7a;
+  --c-on: #f5f5f5;
+
+  --base: radial-gradient(circle, var(--c-base) 40%, transparent 65%);
+  --on: radial-gradient(circle, var(--c-on) 40%, transparent 65%);
+
+  background-image:
+    var(--base), var(--base), var(--base),
+    var(--base), var(--base), var(--base),
+    var(--base), var(--base), var(--base);
+
+  background-size:
+    4px 4px, 4px 4px, 4px 4px,
+    4px 4px, 4px 4px, 4px 4px,
+    4px 4px, 4px 4px, 4px 4px;
+
+  background-position:
+    3px 3px, 9.5px 3px, 16px 3px,
+    3px 9.5px, 9.5px 9.5px, 16px 9.5px,
+    3px 16px, 9.5px 16px, 16px 16px;
+
+  background-repeat: no-repeat;
+}
+
+.white-checkbox::before,
+.white-checkbox::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    var(--on), var(--on), var(--on),
+    var(--on), var(--on), var(--on),
+    var(--on), var(--on), var(--on);
+
+  background-size: inherit;
+  background-position: inherit;
+  background-repeat: no-repeat;
+
+  pointer-events: none;
+  opacity: 0;
+
+  filter: drop-shadow(0 0 1.5px var(--c-on));
+}
+
+/* Checked Effect */
+
+.white-checkbox::before {
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.white-checkbox:checked::before {
+  opacity: 1;
+}
+
+/* Hover Effect */
+
+.white-checkbox:hover:not(:checked)::after {
+  animation: pulseNeon 1.5s infinite ease-in-out;
+}
+
+/* ------------------------------------------------------------------
+RED CHECKBOX (NON-INTERACTIVE)
+--------------------------------------------------------------------- */
+
+.red-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+
+  position: relative;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin: 38;
+
+  cursor: default;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  pointer-events: none;
+
+  --c-base: #7a7a7a;
+  --c-on: #ff6b6b;
+
+  --base: radial-gradient(circle, var(--c-base) 40%, transparent 65%);
+  --on: radial-gradient(circle, var(--c-on) 40%, transparent 65%);
+
+  background-image:
+    var(--base), var(--base), var(--base),
+    var(--base), var(--base), var(--base),
+    var(--base), var(--base), var(--base);
+
+  background-size:
+    4px 4px, 4px 4px, 4px 4px,
+    4px 4px, 4px 4px, 4px 4px,
+    4px 4px, 4px 4px, 4px 4px;
+
+  background-position:
+    3px 3px, 9.5px 3px, 16px 3px,
+    3px 9.5px, 9.5px 9.5px, 16px 9.5px,
+    3px 16px, 9.5px 16px, 16px 16px;
+
+  background-repeat: no-repeat;
+}
+
+.red-checkbox::before,
+.red-checkbox::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    var(--on), var(--on), var(--on),
+    var(--on), var(--on), var(--on),
+    var(--on), var(--on), var(--on);
+
+  background-size: inherit;
+  background-position: inherit;
+  background-repeat: no-repeat;
+
+  pointer-events: none;
+  opacity: 0;
+
+  filter: drop-shadow(0 0 1.5px var(--c-on));
+}
+
+/* Always Pulsing */
+
+.red-checkbox::after {
+  animation: pulseNeon 1.5s infinite ease-in-out;
+  opacity: 0.75;
+  }

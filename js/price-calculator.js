@@ -1,6 +1,6 @@
-// price-calculator.js
+/* price-calculator.js - Refactored V5 (Clean, Fixed DOM Structure) */
 
-console.log("PRICE CALCULATOR LOADED - V4 (Cleaned & Sync with Main JS)");
+console.log("PRICE CALCULATOR LOADED - V5 (Refactored & FIXED)");
 
 import { basePricesUSD } from './data/prices.js';
 import { getExchangeRates } from './services/exchange-rates.js';
@@ -12,6 +12,9 @@ let currentDisplayedTotal = 0;
 let currentCurrencyCode = '';
 let groupUpdating = false;
 
+/* ---------------------------------------------------------
+   Currency Formatter
+--------------------------------------------------------- */
 function formatCurrency(amount, currencyCode) {
     const formatConfig = {
         'TOMAN': { locale: 'fa-IR', options: { style: 'decimal' }, suffix: ' تومان' },
@@ -19,218 +22,270 @@ function formatCurrency(amount, currencyCode) {
         'EUR':   { locale: 'de-DE', options: { style: 'currency', currency: 'EUR' } },
         'AED':   { locale: 'ar-AE', options: { style: 'decimal' }, suffix: ' درهم' }
     };
+
     const config = formatConfig[currencyCode];
     if (!config) return `${new Intl.NumberFormat().format(amount)} ${currencyCode}`;
 
-    if (config.suffix) return `${new Intl.NumberFormat(config.locale).format(amount)}${config.suffix}`;
+    if (config.suffix)
+        return `${new Intl.NumberFormat(config.locale).format(amount)}${config.suffix}`;
+
     return new Intl.NumberFormat(config.locale, config.options).format(amount);
 }
 
+/* ---------------------------------------------------------
+   Animated Price Counter
+--------------------------------------------------------- */
 function animateValue(element, start, end, duration, currencyCode) {
-  let startTimestamp = null;
-  const step = (timestamp) => {
-    if (!startTimestamp) startTimestamp = timestamp;
-    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-    const easeProgress = 1 - Math.pow(1 - progress, 4);
-    const currentVal = Math.floor(easeProgress * (end - start) + start);
-    
-    element.textContent = formatCurrency(currentVal, currencyCode);
-    if (progress < 1) window.requestAnimationFrame(step);
-    else element.textContent = formatCurrency(end, currencyCode);
-  };
-  window.requestAnimationFrame(step);
+    let startTimestamp = null;
+
+    const step = (ts) => {
+        if (!startTimestamp) startTimestamp = ts;
+        const progress = Math.min((ts - startTimestamp) / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 4);
+        const current = Math.floor(ease * (end - start) + start);
+
+        element.textContent = formatCurrency(current, currencyCode);
+        if (progress < 1) requestAnimationFrame(step);
+        else element.textContent = formatCurrency(end, currencyCode);
+    };
+
+    requestAnimationFrame(step);
 }
 
-function updateBoxPrices(selectedCurrency, rates) {
-  const rate = rates[selectedCurrency] || 1;
-  document.querySelectorAll('.price-display').forEach(el => {
-    const category = el.parentElement.querySelector('.service-checkbox')?.getAttribute('data-category');
-    const plan = el.parentElement.querySelector('.service-checkbox')?.getAttribute('data-plan');
-    const basePrice = basePricesUSD?.[category]?.[plan];
+/* ---------------------------------------------------------
+   Update price on service boxes
+--------------------------------------------------------- */
+function updateBoxPrices(currency, rates) {
+    const rate = rates[currency] || 1;
 
-    if (typeof basePrice === 'number') {
-        el.textContent = formatCurrency(Math.round(basePrice * rate), selectedCurrency);
+    document.querySelectorAll('.price-display').forEach(el => {
+        const cb = el.parentElement.querySelector('.service-checkbox');
+        if (!cb) return;
+
+        const base = basePricesUSD?.[cb.dataset.category]?.[cb.dataset.plan];
+        if (typeof base !== 'number') return;
+
+        el.textContent = formatCurrency(Math.round(base * rate), currency);
+    });
+}
+
+/* ---------------------------------------------------------
+   Update existing invoice items price
+--------------------------------------------------------- */
+function updateExistingInvoiceItemsPrices(currency, rates) {
+    const rate = rates[currency] || 1;
+
+    selectedServices.forEach(service => {
+        const id = `invoice-item-${service.category}-${service.plan}`.replace(/\s+/g, '-');
+        const row = document.getElementById(id);
+        if (!row) return;
+
+        row.querySelector('.item-price').textContent =
+            formatCurrency(Math.round(service.basePrice * rate), currency);
+    });
+}
+
+/* ---------------------------------------------------------
+   Recalculate Total Invoice
+--------------------------------------------------------- */
+function recalculateInvoiceTotal(currency, rates) {
+    const rate = rates[currency] || 1;
+
+    const totalUSD = selectedServices.reduce((a, s) => a + s.basePrice, 0);
+    const converted = Math.round(totalUSD * rate);
+
+    const totalEl = document.getElementById('invoice-total-amount');
+    if (totalEl) {
+        if (currentCurrencyCode !== currency) {
+            currentDisplayedTotal = 0;
+            currentCurrencyCode = currency;
+        }
+        animateValue(totalEl, currentDisplayedTotal, converted, 800, currency);
+        currentDisplayedTotal = converted;
     }
-  });
+
+    const invoice = document.getElementById('final-invoice-section');
+    if (invoice) invoice.classList.toggle('show-invoice', selectedServices.length > 0);
 }
 
-function updateExistingInvoiceItemsPrices(selectedCurrency, rates) {
-  const rate = rates[selectedCurrency] || 1;
-  selectedServices.forEach(service => {
-    const safeId = `invoice-item-${service.category}-${service.plan}`.replace(/\s+/g, '-');
-    const row = document.getElementById(safeId);
-    if (!row) return;
-    row.querySelector('.item-price').textContent = formatCurrency(Math.round(service.basePrice * rate), selectedCurrency);
-  });
+/* ---------------------------------------------------------
+   Build Invoice Row DOM (FIXED VERSION)
+--------------------------------------------------------- */
+function buildInvoiceRow(name, basePrice, colorClass, rate, currency, category, plan) {
+
+    const safeId = `invoice-item-${category}-${plan}`.replace(/\s+/g, '-');
+
+    const li = document.createElement('li');
+    li.className = `invoice-item entering ${colorClass}`;
+    li.id = safeId;
+
+    li.innerHTML = `
+        <div class="sliding-text-container">
+            <span class="item-name">
+                <span class="scrolling-text-inner">${name}</span>
+            </span>
+        </div>
+
+        <span class="item-price">
+            ${formatCurrency(Math.round(basePrice * rate), currency)}
+        </span>
+    `;
+
+    li.addEventListener("animationend", e => {
+        if (e.animationName === "slideDownItem") {
+            li.classList.remove("entering");
+            li.classList.add("visible");
+        }
+    }, { once: true });
+
+    return li;
 }
 
-function recalculateInvoiceTotal(selectedCurrency, rates) {
-  const rate = rates[selectedCurrency] || 1;
-  const totalBaseUsd = selectedServices.reduce((total, service) => total + service.basePrice, 0);
-  const convertedTotal = Math.round(totalBaseUsd * rate);
-  const mainTotal = document.getElementById('invoice-total-amount');
-
-  if (mainTotal) {
-    if (currentCurrencyCode !== selectedCurrency) {
-      currentDisplayedTotal = 0;
-      currentCurrencyCode = selectedCurrency;
-    }
-    animateValue(mainTotal, currentDisplayedTotal, convertedTotal, 800, selectedCurrency);
-    currentDisplayedTotal = convertedTotal;
-  }
-
-  const invoiceSection = document.getElementById('final-invoice-section');
-  if (invoiceSection) invoiceSection.classList.toggle('show-invoice', selectedServices.length > 0);
-}
-
+/* ---------------------------------------------------------
+   DOM Ready
+--------------------------------------------------------- */
 document.addEventListener("DOMContentLoaded", async () => {
-  const currencySelect = document.getElementById('currency-select');
-  const checkboxes = document.querySelectorAll('.service-checkbox');
-  const listContainer = document.getElementById('invoice-items-list');
 
-  let exchangeRates;
-  try {
-    exchangeRates = await getExchangeRates();
-  } catch (error) {
-    console.error("FATAL: Could not fetch initial exchange rates.", error);
-    return;
-  }
+    const currencySelect = document.getElementById('currency-select');
+    const checkboxes = document.querySelectorAll('.service-checkbox');
+    const listContainer = document.getElementById('invoice-items-list');
 
-  if (currencySelect) {
-      const initialCurrency = determineCurrency(locale);
-      currencySelect.value = initialCurrency;
-      currentCurrencyCode = initialCurrency;
-      updateBoxPrices(initialCurrency, exchangeRates);
+    /* Load exchange rates */
+    let exchangeRates;
+    try {
+        exchangeRates = await getExchangeRates();
+    } catch (e) {
+        console.error("Fatal: cannot fetch exchange rates.", e);
+        return;
+    }
 
-      currencySelect.addEventListener('change', async (e) => {
-        const newCurrency = e.target.value;
-        localStorage.setItem("selectedCurrency", newCurrency);
-        try {
-          const currentRates = await getExchangeRates();
-          updateBoxPrices(newCurrency, currentRates);
-          updateExistingInvoiceItemsPrices(newCurrency, currentRates);
-          recalculateInvoiceTotal(newCurrency, currentRates);
-        } catch (error) {
-          console.error("Failed to update prices:", error);
-        }
-      });
-  }
+    /* Init Currency */
+    if (currencySelect) {
+        const initial = determineCurrency(locale);
+        currencySelect.value = initial;
+        currentCurrencyCode = initial;
 
-  checkboxes.forEach(checkbox => {
-    checkbox.addEventListener('change', (e) => {
-      
-      const box = e.target;
-      const subItem = box.closest(".sub-item");
+        updateBoxPrices(initial, exchangeRates);
 
-      if (subItem && subItem.offsetWidth === 0 && subItem.offsetHeight === 0) return;
+        currencySelect.addEventListener('change', async (e) => {
+            const newC = e.target.value;
+            localStorage.setItem("selectedCurrency", newC);
 
-      if (!groupUpdating && box.dataset.group) {
-        const group = box.dataset.group;
-        const groupItems = document.querySelectorAll(`.service-checkbox[data-group="${group}"]`);
-
-        groupUpdating = true;
-        groupItems.forEach(cb => {
-          if (cb !== box) {
-            cb.checked = box.checked;
-            cb.dispatchEvent(new Event("change", { bubbles: true }));
-          }
-        });
-        groupUpdating = false;
-      }
-
-      const { category, plan } = box.dataset;
-
-      let name = "نامشخص";
-      const labelEl = box.closest('label');
-      if (labelEl) {
-          const nameSpan = labelEl.querySelector('span[class*="-label"], .item-name');
-          name = nameSpan ? nameSpan.textContent.trim() : labelEl.textContent.trim();
-      }
-
-      const basePrice = basePricesUSD?.[category]?.[plan];
-      if (typeof basePrice !== 'number') return;
-
-      const currency = currencySelect.value;
-      const rate = exchangeRates[currency] || 1;
-      const safeId = `invoice-item-${category}-${plan}`.replace(/\s+/g, '-');
-      let existingRow = document.getElementById(safeId);
-
-      if (box.checked) {
-        if (existingRow) existingRow.remove();
-
-        selectedServices = selectedServices.filter(s => !(s.category === category && s.plan === plan));
-        selectedServices.push({ category, plan, name, basePrice });
-
-        recalculateInvoiceTotal(currency, exchangeRates);
-
-        const checkboxContainer = subItem.querySelector("label");
-        let colorClass = "bullet-green";
-
-        if (checkboxContainer.classList.contains("yellow-checkbox-checked-container")) {
-            colorClass = "bullet-yellow";
-        } 
-        else if (checkboxContainer.classList.contains("white-checkbox-container")) {
-            colorClass = "bullet-white";
-        }
-
-        const row = document.createElement('li');
-        row.className = `invoice-item entering ${colorClass}`;
-        row.id = safeId;
-        
-        row.innerHTML = `
-            <div class="sliding-text-container">
-                <span class="item-name">${name}</span>
-            </div>
-            <span class="item-price">${formatCurrency(Math.round(basePrice * rate), currency)}</span>
-        `;
-
-        if (listContainer) {
-          listContainer.appendChild(row);
-
-          row.addEventListener('animationend', (event) => {
-            if (event.animationName === 'slideDownItem') {
-                row.classList.remove('entering');
-                row.classList.add('visible');
+            try {
+                const freshRates = await getExchangeRates();
+                updateBoxPrices(newC, freshRates);
+                updateExistingInvoiceItemsPrices(newC, freshRates);
+                recalculateInvoiceTotal(newC, freshRates);
+            } catch (error) {
+                console.error("Currency update failed:", error);
             }
-          }, { once: true });
-        }
-      } else {
-        selectedServices = selectedServices.filter(s => !(s.category === category && s.plan === plan));
-        recalculateInvoiceTotal(currency, exchangeRates);
-
-        if (existingRow) {
-          existingRow.classList.remove('visible', 'entering');
-          existingRow.classList.add('leaving');
-          existingRow.addEventListener('animationend', (event) => {
-            if (event.animationName === 'slideUpItem') existingRow.remove();
-          }, { once: true });
-        }
-      }
-    });
-  });
-
-  document.querySelectorAll(".service-section:not(.final-cart-section)").forEach(section => {
-    const header = section.querySelector(".service-header h3");
-    const pinBtn = section.querySelector(".pin-btn");
-
-    if (header) {
-      header.addEventListener("mouseenter", () => {
-        document.querySelectorAll(".service-section:not(.final-cart-section)").forEach(s => {
-          if (!s.classList.contains("pinned") && s !== section) s.classList.remove("active");
         });
-        section.classList.add("active");
-      });
     }
 
-    section.addEventListener("mouseleave", () => {
-      if (!section.classList.contains("pinned")) section.classList.remove("active");
+    /* Service Checkboxes */
+    checkboxes.forEach(box => {
+        box.addEventListener("change", () => {
+
+            const subItem = box.closest(".sub-item");
+            if (subItem && subItem.offsetWidth === 0 && subItem.offsetHeight === 0) return;
+
+            /* Group behavior */
+            if (!groupUpdating && box.dataset.group) {
+                const group = box.dataset.group;
+                const groupItems = document.querySelectorAll(`.service-checkbox[data-group="${group}"]`);
+
+                groupUpdating = true;
+                groupItems.forEach(cb => {
+                    if (cb !== box) {
+                        cb.checked = box.checked;
+                        cb.dispatchEvent(new Event("change", { bubbles: true }));
+                    }
+                });
+                groupUpdating = false;
+            }
+
+            const { category, plan } = box.dataset;
+
+            /* Name detection */
+            let name = "نامشخص";
+            const label = box.closest("label");
+            if (label) {
+                const span = label.querySelector('span[class*="-label"], .item-name');
+                name = span ? span.textContent.trim() : label.textContent.trim();
+            }
+
+            /* Base price */
+            const basePrice = basePricesUSD?.[category]?.[plan];
+            if (typeof basePrice !== "number") return;
+
+            const currency = currencySelect.value;
+            const rate = exchangeRates[currency] || 1;
+
+            const safeId = `invoice-item-${category}-${plan}`.replace(/\s+/g, '-');
+            const existing = document.getElementById(safeId);
+
+            /* ADD ITEM */
+            if (box.checked) {
+
+                if (existing) existing.remove();
+
+                selectedServices = selectedServices.filter(s => !(s.category === category && s.plan === plan));
+                selectedServices.push({ category, plan, name, basePrice });
+
+                recalculateInvoiceTotal(currency, exchangeRates);
+
+                /* Bullet Color Detection */
+                const container = subItem.querySelector("label");
+                let colorClass = "bullet-green";
+                if (container.classList.contains("yellow-checkbox-checked-container")) colorClass = "bullet-yellow";
+                else if (container.classList.contains("white-checkbox-container")) colorClass = "bullet-white";
+
+                const row = buildInvoiceRow(name, basePrice, colorClass, rate, currency, category, plan);
+
+                if (listContainer) listContainer.appendChild(row);
+            }
+
+            /* REMOVE ITEM */
+            else {
+                selectedServices = selectedServices.filter(s => !(s.category === category && s.plan === plan));
+                recalculateInvoiceTotal(currency, exchangeRates);
+
+                if (existing) {
+                    existing.classList.remove("visible", "entering");
+                    existing.classList.add("leaving");
+
+                    existing.addEventListener("animationend", e => {
+                        if (e.animationName === "slideUpItem") existing.remove();
+                    }, { once: true });
+                }
+            }
+        });
     });
 
-    if (pinBtn) {
-      pinBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        section.classList.toggle("pinned");
-      });
-    }
-  });
+    /* Hover/Pin behavior for sections */
+    document.querySelectorAll(".service-section:not(.final-cart-section)").forEach(section => {
+
+        const header = section.querySelector(".service-header h3");
+        const pinBtn = section.querySelector(".pin-btn");
+
+        if (header) {
+            header.addEventListener("mouseenter", () => {
+                document.querySelectorAll(".service-section:not(.final-cart-section)").forEach(s => {
+                    if (!s.classList.contains("pinned") && s !== section) s.classList.remove("active");
+                });
+                section.classList.add("active");
+            });
+        }
+
+        section.addEventListener("mouseleave", () => {
+            if (!section.classList.contains("pinned")) section.classList.remove("active");
+        });
+
+        if (pinBtn) {
+            pinBtn.addEventListener("click", e => {
+                e.stopPropagation();
+                section.classList.toggle("pinned");
+            });
+        }
+    });
 });

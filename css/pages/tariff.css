@@ -1,22 +1,157 @@
-/* =========================================
-   PAGE: PRICING
-   ========================================= */
+/* ========================================= */
+PRICING PAGE
+/* ========================================= */
 
-/* =========================================
-   0. Desktop Fix (global for this page)
-   ========================================= */
+/* ::::::::::::::::::::::::::::::::::::::: GLOBAL BASE STYLES ::::::::::::::::::::::::::::::::::::::: */
+body {
+    background: #0b0b0b;
+    color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container-1080 {
+    max-width: 1080px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 .scrolling-text-inner {
     display: inline-flex !important;
     align-items: center;
     gap: 8px;
 }
 
-/* =========================================
-   1. Layout Wrappers
-   ========================================= */
+/* ------------------------------------------------------------------
+CURRENCY SELECTOR
+--------------------------------------------------------------------- */
+.currency-selector {
+    padding: 40px 40px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.currency-selector label {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+}
+
+.currency-selector select {
+    background: #161616;
+    color: #4ECDC4;
+    border: 1px solid #333;
+    padding: 8px 16px;
+    border-radius: 8px;
+    outline: none;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.currency-selector select:hover {
+    border-color: #4ECDC4;
+}
+
+/* ------------------------------------------------------------------
+TABS CONTAINER
+--------------------------------------------------------------------- */
+.tabs-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    flex-direction: row-reverse;
+}
+
+.pricing-tabs {
+    display: flex;
+    gap: 25px;
+    flex-direction: row-reverse;
+}
+
+.package-tabs-wrapper {
+    padding: 10px 40px;
+    margin-top: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.package-tabs {
+    display: flex;
+    gap: 25px;
+}
+
+/* ------------------------------------------------------------------
+PRICING TABS
+--------------------------------------------------------------------- */
+.pricing-tab {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 400;
+    cursor: pointer;
+    color: #9a9a9a;
+    transition: transform .35s cubic-bezier(.4,0,.2,1), color .25s ease, opacity .25s ease;
+}
+
+.pricing-tab.moving {
+    transform: translateX(-15px);
+    opacity: .7;
+}
+
+.pricing-tab.general:hover,
+.pricing-tab.general.active {
+    color: #4ECDC4;
+}
+
+.pricing-tab.specialist:hover,
+.pricing-tab.specialist.active {
+    color: #FFE76D;
+}
+
+.package-tab {
+    background: none;
+    border: none;
+    font-family: inherit;
+    padding: 5px 0;
+    font-size: .9rem;
+    font-weight: 400;
+    cursor: pointer;
+    color: #9a9a9a;
+    position: relative;
+    transition: color .25s ease;
+}
+
+.package-tab:hover {
+    color: #f5f5f5;
+}
+
+.package-tab.active {
+    color: var(--tab-color, #4ECDC4);
+}
+
+.package-tab::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--tab-color, #4ECDC4);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .3s cubic-bezier(.4,0,.2,1);
+}
+
+/* ------------------------------------------------------------------
+LAYOUT WRAPPERS
+--------------------------------------------------------------------- */
 .pricing-wrapper {
     padding: 0 50px;
     margin-top: 40px;
+    font-family: var(--font-family, inherit);
 }
 
 .service-section {
@@ -30,11 +165,8 @@
     margin-bottom: 0;
 }
 
-/* ------------------------------------------
-   Service Section Header
-------------------------------------------- */
 .service-header {
-    padding-inline-end: 40px;
+    padding-right: 40px;
     min-height: 40px;
     display: flex;
     align-items: center;
@@ -50,10 +182,9 @@
     z-index: 2;
 }
 
-/* Dot beside header */
 .service-dot {
     position: absolute;
-    inset-inline-end: 0;
+    right: 0;
     top: 9px;
     width: 22px;
     height: 22px;
@@ -61,7 +192,6 @@
     border-radius: 50%;
     background: transparent;
     box-sizing: border-box;
-
     transition:
         height 0.4s ease 0s,
         border-radius 0.3s ease 0.4s,
@@ -73,9 +203,9 @@
         box-shadow 0.45s cubic-bezier(.4,0,.2,1);
 }
 
-/* =========================================
-   2. Accordion (Card Open/Close)
-   ========================================= */
+/* ------------------------------------------------------------------
+ACCORDION (CARD OPEN/CLOSE)
+--------------------------------------------------------------------- */
 .service-card {
     display: grid;
     grid-template-rows: 0fr;
@@ -100,14 +230,14 @@
     font-size: 0.95rem;
 }
 
-/* Active State */
 .service-section.active .service-dot {
     top: 45px;
     width: 100%;
     height: calc(100% - 45px);
     border-radius: 18px;
     background: #161616;
-
+    border-width: 2px;
+    border-color: var(--tab-color, #4ECDC4);
     transition:
         top 0.3s ease 0s,
         width 0.3s ease 0.3s,
@@ -128,9 +258,9 @@
     transition: opacity 0.3s ease 0.7s;
 }
 
-/* =========================================
-   3. Pin Button
-   ========================================= */
+/* ------------------------------------------------------------------
+PIN BUTTON
+--------------------------------------------------------------------- */
 .pin-btn {
     position: absolute;
     left: 15px;
@@ -150,6 +280,7 @@
 .pin-btn svg {
     width: 18px;
     height: 18px;
+    transition: color 0.3s ease;
 }
 
 .pin-btn:hover {
@@ -167,18 +298,18 @@
     color: #4ECDC4;
 }
 
-/* =========================================
-   4. Sub-services (List of items)
-   ========================================= */
+/* ------------------------------------------------------------------
+SUB-SERVICES (LIST OF ITEMS)
+--------------------------------------------------------------------- */
 .sub-services {
     padding: 0 40px 24px;
 }
 
 .sub-item {
     display: flex;
-    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row-reverse;
     padding: 14px 0;
     gap: 24px;
 }
@@ -193,9 +324,52 @@
     letter-spacing: 0.5px;
 }
 
-/* =========================================
-   5. Final Invoice Section
-   ========================================= */
+/* ------------------------------------------------------------------
+GROUPED SERVICES BOX
+--------------------------------------------------------------------- */
+.sub-group-box {
+    border: 1px solid rgba(78,205,196,0.6);
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin: 12px 0 18px 0;
+    background: rgba(22,22,22,0.96);
+}
+
+.sub-group-box .sub-item {
+    border-bottom: none !important;
+    margin-bottom: 8px !important;
+    padding: 0 !important;
+}
+
+.sub-group-box:empty {
+    display: none;
+}
+
+.grouped-services-box {
+    border: 1px dashed rgba(255,255,255,0.1);
+    border-radius: 12px;
+    margin-bottom: 24px;
+    margin-right: -16px;
+    margin-left: -16px;
+    padding: 1px 16px 8px 16px;
+    transition: all 0.3s ease;
+}
+
+.grouped-services-box .sub-item {
+    border-bottom: none !important;
+    padding-bottom: 0px !important;
+    margin-bottom: 8px !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+.grouped-services-box .sub-item:last-child {
+    margin-bottom: 4px !important;
+}
+
+/* ------------------------------------------------------------------
+FINAL INVOICE SECTION
+--------------------------------------------------------------------- */
 #final-invoice-section {
     margin-top: 60px;
     visibility: hidden;
@@ -219,7 +393,6 @@
     box-sizing: border-box;
 }
 
-/* Prevent long names from pushing layout */
 .green-checkbox-container,
 .green-checkbox-checked-container,
 .yellow-checkbox-container,
@@ -227,13 +400,11 @@
 .white-checkbox-container,
 .white-checkbox-checked-container,
 .invoice-item .item-name {
-    max-width: 65%;
     overflow: hidden;
     display: flex;
     align-items: center;
 }
 
-/* Unified label structure */
 .sub-item label,
 [class*="-checkbox-label"],
 [class*="-checkbox-checked-label"],
@@ -251,9 +422,9 @@
     direction: rtl !important;
 }
 
-/* =========================================
-   6. Invoice Header
-   ========================================= */
+/* ------------------------------------------------------------------
+INVOICE HEADER
+--------------------------------------------------------------------- */
 .invoice-header {
     display: flex;
     justify-content: space-between;
@@ -267,6 +438,7 @@
     font-size: 1.4rem;
     margin: 0;
     font-weight: 600;
+    color: #f5f5f5;
 }
 
 #invoice-total-amount {
@@ -275,25 +447,36 @@
     color: #4ECDC4;
 }
 
-/* =========================================
-   7. Invoice Item Rows
-   ========================================= */
+/* ------------------------------------------------------------------
+INVOICE ITEM ROWS
+--------------------------------------------------------------------- */
 #invoice-items-list {
     padding: 0;
     margin: 0;
     list-style: none;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .invoice-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    width: 100%;
     box-sizing: border-box;
     overflow: hidden;
     opacity: 0;
-    gap: 10px;
     will-change: transform, opacity, max-height;
+    gap: 2px;
+    direction: rtl;
+}
+
+.invoice-item .sliding-text-container {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .invoice-item:last-child {
@@ -301,20 +484,31 @@
 }
 
 .invoice-item.visible {
-    padding: 15px 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
     opacity: 1;
     overflow: visible;
 }
 
 .invoice-item .item-name {
-    flex: 1;
-    white-space: normal;
-    word-break: break-word;
-    font-size: 1rem;
+    display: block;
+    width: 100%;
     text-align: right;
+    white-space: nowrap;
 }
 
-/* Bullet neon dot */
+.invoice-item .item-name .scrolling-text-inner {
+    display: inline-flex;
+    justify-content: flex-start;
+}
+
+.invoice-item .item-price {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    text-align: left;
+    direction: rtl;
+}
+
 .invoice-item::before {
     content: "";
     display: block;
@@ -327,11 +521,21 @@
     --c-on: #4ECDC4;
 }
 
-.invoice-item.bullet-yellow::before { --c-on: #FFE76D !important; }
-.invoice-item.bullet-green::before { --c-on: #4ECDC4 !important; }
-.invoice-item.bullet-white::before { --c-on: #f5f5f5 !important; }
+.invoice-item.bullet-yellow::before {
+    --c-on: #FFE76D !important;
+}
 
-.item-name::before { display: none !important; }
+.invoice-item.bullet-green::before {
+    --c-on: #4ECDC4 !important;
+}
+
+.invoice-item.bullet-white::before {
+    --c-on: #f5f5f5 !important;
+}
+
+.item-name::before {
+    display: none !important;
+}
 
 @keyframes pulseColorNeon {
     0%, 100% {
@@ -346,7 +550,6 @@
     }
 }
 
-/* Animations */
 .invoice-item.entering {
     animation: slideDownItem 0.45s cubic-bezier(0.2,0.8,0.2,1) forwards;
 }
@@ -356,127 +559,36 @@
 }
 
 @keyframes slideDownItem {
-    0% { max-height: 0; padding: 0; opacity: 0; transform: translateY(-15px); }
-    100% { max-height: 100px; padding: 15px 0; opacity: 1; transform: translateY(0); }
+    0% {
+        max-height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    100% {
+        max-height: 100px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes slideUpItem {
-    0% { max-height: 100px; padding: 15px 0; opacity: 1; }
-    100% { max-height: 0; padding: 0; opacity: 0; transform: translateY(-15px); border-color: transparent; }
-}
-
-/* =========================================
-   8. Pricing Tabs
-   ========================================= */
-.pricing-tab {
-    background: none;
-    border: none;
-    font-size: 0.95rem;
-    font-weight: 400;
-    cursor: pointer;
-    color: #9a9a9a;
-    transition: transform .35s cubic-bezier(.4,0,.2,1), color .25s ease, opacity .25s ease;
-}
-
-.pricing-tab.moving { transform: translateX(-15px); opacity: .7; }
-
-.pricing-tab.general:hover,
-.pricing-tab.general.active { color: #4ECDC4; }
-
-.pricing-tab.specialist:hover,
-.pricing-tab.specialist.active { color: #FFE76D; }
-
-/* Package tabs */
-.package-tab {
-    background: none;
-    border: none;
-    padding: 5px 0;
-    font-size: .9rem;
-    font-weight: 400;
-    cursor: pointer;
-    color: #9a9a9a;
-    position: relative;
-    transition: color .25s ease;
-}
-
-.package-tab:hover { color: #f5f5f5; }
-
-.package-tab.active { color: var(--tab-color, #4ECDC4); }
-
-.package-tab::after {
-    content: "";
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--tab-color, #4ECDC4);
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform .3s cubic-bezier(.4,0,.2,1);
-}
-
-/* =========================================
-   9. Tabs Container
-   ========================================= */
-.tabs-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 40px;
-    flex-direction: row-reverse;
-}
-
-.pricing-tabs {
-    display: flex;
-    gap: 25px;
-    flex-direction: row-reverse;
-}
-
-.package-tabs-wrapper {
-    padding: 10px 40px;
-    margin-top: 10px;
-    border-bottom: 1px solid #333;
-}
-
-.package-tabs {
-    display: flex;
-    gap: 25px;
-}
-
-/* =========================================
-   10. Grouped Services Box
-   ========================================= */
-.sub-group-box {
-    border: 1px solid rgba(78,205,196,0.6);
-    border-radius: 12px;
-    padding: 14px 18px;
-    margin: 12px 0 18px 0;
-    background: rgba(22,22,22,0.96);
-}
-
-.sub-group-box .sub-item {
-    border-bottom: none !important;
-    margin-bottom: 8px !important;
-    padding: 0 !important;
-}
-
-.sub-group-box:empty { display: none; }
-
-.grouped-services-box {
-    border: 1px dashed rgba(255,255,255,0.1);
-    border-radius: 12px;
-    margin-bottom: 24px;
-    margin-inline: -16px;
-    padding: 1px 16px 8px;
-    transition: all 0.3s ease;
-}
-
-.grouped-services-box .sub-item {
-    border-bottom: none !important;
-    margin-bottom: 8px !important;
-    padding-inline: 0 !important;
-}
-
-.grouped-services-box .sub-item:last-child {
-    margin-bottom: 4px !important;
+    0% {
+        max-height: 100px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        max-height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        opacity: 0;
+        transform: translateY(-15px);
+        border-color: transparent;
+    }
 }

@@ -1,161 +1,314 @@
-/* =========================================================
-PRICING PAGE RESPONSIVE
-========================================================= */
 
-/* MOBILE MENU */
+@media (max-width: 768px) {
+  /* Container settings */
+  .pricing-wrapper {
+    padding: 20px 10px 40px; 
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
 
-.mobile-menu{
-position:fixed;
-top:0;
-right:0;
-height:100vh;
-width:80%;
-background:#111;
-transform:translateX(100%);
-transition:transform .3s ease;
-z-index:1500;
-pointer-events:none;
+  .service-section {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+  }
+
+  .service-card {
+    margin: 0;
+    border-radius: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent; 
+  }
+
+  .service-header {
+    display: flex;
+    align-items: center; 
+    padding-right: 36px;
+    padding-left: 15px;  
+    min-height: 46px; 
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Green dot animation */
+  .service-dot {
+    position: absolute;
+    width: 14px;
+    height: 14px; 
+    border-radius: 50%;
+    right: 12px; 
+    top: 23px; 
+    transform: translateY(-50%); 
+    opacity: 0.8;
+    transition: height 0.25s ease 0s, border-radius 0.25s ease 0s, width 0.25s ease 0.25s, right 0.15s ease 0.5s, top 0.2s ease 0.65s, transform 0.2s ease 0.65s;
+  }
+
+  .service-section.active .service-dot {
+    top: 46px;     
+    right: 0;      
+    transform: translateY(0);
+    width: 100%;   
+    height: calc(100% - 46px); 
+    border-radius: 16px;
+    border-width: 1px;
+    border-style: solid; 
+    box-sizing: border-box;
+    transition: top 0.2s ease 0s, transform 0.2s ease 0s, right 0.15s ease 0.2s, width 0.25s ease 0.35s, height 0.25s ease 0.6s, border-radius 0.25s ease 0.6s;
+  }
+
+  /* Tab design */
+  .service-content { 
+    width: 100%; 
+    box-sizing: border-box; 
+  }
+
+  .tabs-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    flex-wrap: nowrap; 
+    padding: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
+    scrollbar-width: none; 
+  }
+  .tabs-container::-webkit-scrollbar { 
+    display: none; 
+  }
+
+  .tabs-container::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 16px;
+    background-color: rgba(255, 255, 255, 0.2);
+    order: 2; 
+    margin: 0 auto; 
+    flex-shrink: 0;
+  }
+
+  .package-tabs {
+    order: 1; 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0; 
+  }
+  .package-tabs::after { 
+    display: none; 
+  }
+
+  .pricing-tabs {
+    order: 3; 
+    display: flex;
+    align-items: center;
+    gap: 4px; 
+    flex-shrink: 0; 
+  }
+  .pricing-tabs::after, 
+  .pricing-tabs::before { 
+    display: none !important; 
+  }
+
+  .pricing-tab, 
+  .package-tab {
+    flex: 0 0 auto; 
+    white-space: nowrap; 
+    font-size: 0.85rem;
+    padding: 6px 6px; 
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+
+  /* Final cost estimation */
+  #final-invoice-section { 
+    margin: 12px 0 0; 
+    padding: 0; 
+    width: 100%; 
+    box-sizing: border-box; 
+  }
+  #final-invoice-section .service-card { 
+    padding: 16px 14px; 
+    box-sizing: border-box; 
+  }
+  #final-invoice-section h3 { 
+    font-size: 1.5rem; 
+    margin-bottom: .6rem; 
+  }
+
+  /* Service box fixes */
+  .grouped-services-box {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    padding: 12px 10px !important;
+  }
+
+  .sub-services {
+    padding: 10px 15px 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .sub-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 0; 
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.08); 
+  }
+  .sub-item:last-child { 
+    border-bottom: none; 
+  }
+
+  /* Pin button and price */
+  .pin-btn { 
+    top: 14px; 
+    left: 14px; 
+  }
+  
+  .price-display {
+    flex-shrink: 0; 
+    font-size: 0.8rem; 
+    font-weight: 500;
+    color: #94a3b8; 
+    white-space: nowrap;
+    background: rgba(255, 255, 255, 0.03); 
+    padding: 4px 8px;
+    border-radius: 6px;
+  }
+
+  /* Space constraints */
+  .green-checkbox-container,
+  .green-checkbox-checked-container,
+  .yellow-checkbox-container {
+    max-width: 65%; 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Label structure */
+  .sub-item label,
+  .green-checkbox-label,
+  .green-checkbox-checked-label,
+  .yellow-checkbox-label {
+    display: flex !important;
+    align-items: center;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #e2e8f0;
+    direction: rtl !important;
+  }
+
+  /* Icon sizing */
+  .green-checkbox,
+  .green-checkbox-checked,
+  .yellow-checkbox,
+  .service-checkbox {
+    flex: 0 0 auto !important;
+  }
+
+  /* Scrolling text container */
+  .scrolling-text-inner {
+    display: inline-flex; 
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap !important;
+    will-change: transform;
+  }
+
+  /* Hide manual line breaks */
+  .scrolling-text-inner br {
+    display: none !important;
+  }
+
+  /* Text animation */
+  .sliding-text {
+    animation: slideTextInside 8s linear infinite;
+  }
+
+  /* Invoice structure */
+  .invoice-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .invoice-item .sliding-text-container {
+    flex-grow: 1;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: 10px;
+  }
+
+  .invoice-item-price {
+    flex-shrink: 0;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .invoice-item .item-price {
+    flex-shrink: 0 !important;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    margin-right: auto;
+    z-index: 5;
+  }
+
+  
+  .invoice-item .item-name {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: calc(100% - 100px) !important;
+    overflow: hidden !important;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Final invoice padding adjustment */
+  #final-invoice-section .service-card {
+    padding: 20px 15px; 
+  }
 }
 
-.mobile-menu.active{
-transform:translateX(0);
-pointer-events:auto;
+/* ::::::::::::::::::::::::::::::::::::::: ANIMATIONS ::::::::::::::::::::::::::::::::::::::: */
+@keyframes slideTextInside {
+  0%, 15% { 
+    transform: translateX(0); 
+  }
+  45%, 55% { 
+    transform: translateX(calc(var(--overflow-amount) + 16px)); 
+  }
+  85%, 100% { 
+    transform: translateX(0); 
+  }
 }
 
-@media (max-width:768px){
-
-.pricing-wrapper{
-padding:20px 10px 40px;
-margin-bottom:30px;
-box-sizing:border-box;
-overflow-x:hidden;
-}
-
-.service-section{
-max-width:100%;
-width:100%;
-display:block;
-box-sizing:border-box;
-}
-
-.service-card{
-margin:0;
-border-radius:16px;
-width:100%;
-box-sizing:border-box;
-background:transparent;
-}
-
-.service-header{
-display:flex;
-align-items:center;
-padding-right:36px;
-padding-left:15px;
-min-height:46px;
-width:100%;
-box-sizing:border-box;
-}
-
-/* DOT */
-
-.service-dot{
-position:absolute;
-width:14px;
-height:14px;
-border-radius:50%;
-right:12px;
-top:23px;
-transform:translateY(-50%);
-opacity:0.8;
-}
-
-.service-section.active .service-dot{
-top:46px;
-right:0;
-transform:translateY(0);
-width:100%;
-height:calc(100% - 46px);
-border-radius:16px;
-border-width:1px;
-border-style:solid;
-box-sizing:border-box;
-}
-
-/* TABS */
-
-.tabs-container{
-display:flex;
-flex-direction:row;
-align-items:center;
-justify-content:space-between;
-flex-wrap:nowrap;
-padding:5px;
-box-sizing:border-box;
-width:100%;
-border-bottom:1px solid rgba(255,255,255,0.05);
-overflow-x:auto;
-}
-
-.package-tabs{
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.pricing-tabs{
-display:flex;
-align-items:center;
-gap:4px;
-}
-
-.pricing-tab,
-.package-tab{
-flex:0 0 auto;
-white-space:nowrap;
-font-size:0.85rem;
-padding:6px 6px;
-border-radius:8px;
-}
-
-/* INVOICE */
-
-#final-invoice-section{
-margin:12px 0 0;
-padding:0;
-width:100%;
-box-sizing:border-box;
-}
-
-#final-invoice-section .service-card{
-padding:16px 14px;
-}
-
-#final-invoice-section h3{
-font-size:1.5rem;
-margin-bottom:.6rem;
-}
-
-.invoice-item{
-display:flex;
-justify-content:space-between;
-align-items:center;
-width:100%;
-overflow:hidden;
-box-sizing:border-box;
-}
-
-.invoice-item .sliding-text-container{
-flex-grow:1;
-min-width:0;
-overflow:hidden;
-white-space:nowrap;
-margin-left:10px;
-}
-
-.invoice-item-price{
-flex-shrink:0;
-font-weight:bold;
-white-space:nowrap;
-}
-
+/* ::::::::::::::::::::::::::::::::::::::: ACCESSIBILITY ::::::::::::::::::::::::::::::::::::::: */
+@media (prefers-reduced-motion: reduce) {
+  img[data-blurup="true"] {
+    transition: none !important;
+  }
 }
