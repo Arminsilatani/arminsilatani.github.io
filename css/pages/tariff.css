@@ -18,10 +18,11 @@ body {
 }
 
 .scrolling-text-inner {
-    display: inline-flex !important;
+    display: flex;
     align-items: center;
     gap: 8px;
 }
+
 
 /* ------------------------------------------------------------------
 CURRENCY SELECTOR
@@ -398,8 +399,7 @@ FINAL INVOICE SECTION
 .yellow-checkbox-container,
 .yellow-checkbox-checked-container,
 .white-checkbox-container,
-.white-checkbox-checked-container,
-.invoice-item .item-name {
+.white-checkbox-checked-container {
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -407,19 +407,24 @@ FINAL INVOICE SECTION
 
 .sub-item label,
 [class*="-checkbox-label"],
-[class*="-checkbox-checked-label"],
-.invoice-item .item-name {
-    display: flex !important;
+[class*="-checkbox-checked-label"] {
+    display: flex;
     align-items: center;
     flex: 1 1 auto;
     min-width: 0;
     overflow: hidden;
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    font-weight: 400;
-    color: #e2e8f0;
-    direction: rtl !important;
+    white-space: nowrap;
+    text-align: right;
+}
+
+.invoice-item .item-name {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: right;
 }
 
 /* ------------------------------------------------------------------
@@ -490,11 +495,10 @@ INVOICE ITEM ROWS
     overflow: visible;
 }
 
-.invoice-item .item-name {
-    display: block;
-    width: 100%;
-    text-align: right;
-    white-space: nowrap;
+.invoice-item .scrolling-text-inner {
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .invoice-item .item-name .scrolling-text-inner {

@@ -431,40 +431,25 @@ setTimeout(() => {
 // 🟢 تشخیص خودکار و انیمیشن هوشمند متون طولانی (اصلاح شده برای فاکتور و تب سازمانی)
 // =================================================================
 function applyAutoSlidingText() {
-    // 🟢 انتخاب تمام کلاس‌ها (سبز، زرد، سفید/سازمانی) و نام اقلام داخل فاکتور نهایی
-    const targets = document.querySelectorAll(
-        '[class*="-checkbox-label"], [class*="-checkbox-checked-label"], .invoice-item .item-name'
-    );
+  // اضافه شدن انتخاب‌گر اقلام فاکتور
+  const targets = document.querySelectorAll(
+    '[class*="-checkbox-label"], [class*="-checkbox-checked-label"], .invoice-item .scrolling-text-inner'
+  );
+  
+  targets.forEach(target => {
+    // ... کد موجود ...
     
-    targets.forEach(target => {
-        // ۱. ساخت یک کادر داخلی امن برای حرکت دادن متن به همراه آیکون
-        let innerWrapper = target.querySelector('.scrolling-text-inner');
-        if (!innerWrapper) {
-            innerWrapper = document.createElement('div');
-            innerWrapper.className = 'scrolling-text-inner';
-            
-            // انتقال امن تمام محتویات به داخل کادر متحرک
-            while (target.firstChild) {
-                innerWrapper.appendChild(target.firstChild);
-            }
-            target.appendChild(innerWrapper);
-        }
-        
-        // ۲. پاک کردن انیمیشن‌های قبلی برای محاسبه دقیق
-        innerWrapper.classList.remove('sliding-text');
-        innerWrapper.style.removeProperty('--overflow-amount');
-        
-        // ۳. بررسی میزان بیرون‌زدگی
-        if (innerWrapper.scrollWidth > target.clientWidth) {
-            const overflowWidth = innerWrapper.scrollWidth - target.clientWidth;
-            
-            // ذخیره مقدار برای انیمیشن
-            innerWrapper.style.setProperty('--overflow-amount', `${overflowWidth}px`);
-            innerWrapper.classList.add('sliding-text');
-        }
-    });
+    // منطق جدید برای اقلام فاکتور
+    if (target.closest('.invoice-item')) {
+      const container = target.closest('.scrolling-text-container');
+      if (container && target.scrollWidth > container.clientWidth) {
+        const overflowWidth = target.scrollWidth - container.clientWidth;
+        target.style.setProperty('--overflow-amount', `${overflowWidth}px`);
+        target.classList.add('sliding-text');
+      }
+    }
+  });
 }
-
 window.addEventListener('load', applyAutoSlidingText);
 window.addEventListener('resize', applyAutoSlidingText);
 setTimeout(applyAutoSlidingText, 500);

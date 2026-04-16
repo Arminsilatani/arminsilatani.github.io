@@ -74,11 +74,15 @@
     padding: 5px;
     box-sizing: border-box;
     width: 100%;
+    height: 42px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
     overflow-x: auto; 
     -webkit-overflow-scrolling: touch; 
-    scrollbar-width: none; 
+    scrollbar-width: none;
+    align-items: center;
+    overflow-y: hidden;
   }
+  
   .tabs-container::-webkit-scrollbar { 
     display: none; 
   }
@@ -114,7 +118,7 @@
   }
   .pricing-tabs::after, 
   .pricing-tabs::before { 
-    display: none !important; 
+    display: none; 
   }
 
   .pricing-tab, 
@@ -145,9 +149,9 @@
 
   /* Service box fixes */
   .grouped-services-box {
-    margin-right: 0px !important;
-    margin-left: 0px !important;
-    padding: 12px 10px !important;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding: 12px 10px;
   }
 
   .sub-services {
@@ -203,7 +207,7 @@
   .green-checkbox-label,
   .green-checkbox-checked-label,
   .yellow-checkbox-label {
-    display: flex !important;
+    display: flex;
     align-items: center;
     flex: 1 1 auto;
     min-width: 0;
@@ -213,7 +217,7 @@
     font-size: 16px;
     font-weight: 400;
     color: #e2e8f0;
-    direction: rtl !important;
+    direction: rtl;
   }
 
   /* Icon sizing */
@@ -221,21 +225,20 @@
   .green-checkbox-checked,
   .yellow-checkbox,
   .service-checkbox {
-    flex: 0 0 auto !important;
+    flex: 0 0 auto;
   }
 
   /* Scrolling text container */
   .scrolling-text-inner {
     display: inline-flex; 
     align-items: center;
-    gap: 4px;
-    white-space: nowrap !important;
+    white-space: nowrap;
     will-change: transform;
   }
 
   /* Hide manual line breaks */
   .scrolling-text-inner br {
-    display: none !important;
+    display: none;
   }
 
   /* Text animation */
@@ -243,54 +246,73 @@
     animation: slideTextInside 8s linear infinite;
   }
 
-  /* Invoice structure */
   .invoice-item {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: nowrap; 
     align-items: center;
+    justify-content: space-between; /* هل دادن قیمت به انتها */
     width: 100%;
     overflow: hidden;
+    gap: 10px; /* فاصله تضمینی بین متن و قیمت */
     box-sizing: border-box;
   }
 
-  .invoice-item .sliding-text-container {
-    flex-grow: 1;
-    min-width: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    margin-left: 10px;
+    .invoice-item::before {
+    margin-left: 1px;
+    width: 5px;
+    height: 5px;
   }
+
+  .invoice-item .sliding-text-container {
+    display: block; /* یک بلاک ساده که فقط اسکرول را پنهان می‌کند */
+    width: 100%;
+    overflow: hidden;
+  }
+
 
   .invoice-item-price {
     flex-shrink: 0;
-    font-weight: bold;
+    font-weight: normal;
     white-space: nowrap;
   }
+
+
+  .invoice-item .scrolling-text-inner {
+    display: inline-flex;
+    align-items: center;
+    width: max-content; 
+    max-width: none; /* خنثی کردن هرگونه محدودیت عرضی از استایل‌های عمومی */
+    min-width: 100%; /* اطمینان از اینکه حداقل به اندازه کادر والد است */
+    overflow: visible; /* حدس درست شما: اجازه دادن به بیرون‌زدگی محتوا در این لایه */
+    white-space: nowrap;
+    will-change: transform;
+  }
+
 
   .invoice-item .item-price {
-    flex-shrink: 0 !important;
-    font-size: 0.85rem;
+    flex: 0 0 auto; /* این عنصر هرگز فشرده نمی‌شود */
     white-space: nowrap;
-    margin-right: auto;
-    z-index: 5;
+    font-size: 0.85rem; /* یا هر سایزی که مد نظر دارید */
+    font-weight: normal;
+    direction: rtl; /* برای جلوگیری از پرش نماد تومان */
   }
-
   
   .invoice-item .item-name {
-    flex: 1 1 auto;
-    min-width: 0;
-    max-width: calc(100% - 100px) !important;
-    overflow: hidden !important;
-    display: flex;
-    align-items: center;
+    flex: 1 1 0%; 
+    min-width: 0; 
+    width: 0; /* کلید نهایی: مجبور کردن مرورگر به نادیده گرفتن عرض محتوا */
+    display: block; /* حذف flex برای جلوگیری از رفتارهای زنجیره‌ای */
+    overflow: hidden;
     margin: 0;
     padding: 0;
   }
+
 
   /* Final invoice padding adjustment */
   #final-invoice-section .service-card {
     padding: 20px 15px; 
   }
+  
 }
 
 /* ::::::::::::::::::::::::::::::::::::::: ANIMATIONS ::::::::::::::::::::::::::::::::::::::: */
@@ -309,6 +331,6 @@
 /* ::::::::::::::::::::::::::::::::::::::: ACCESSIBILITY ::::::::::::::::::::::::::::::::::::::: */
 @media (prefers-reduced-motion: reduce) {
   img[data-blurup="true"] {
-    transition: none !important;
+    transition: none;
   }
 }

@@ -7,7 +7,7 @@ export async function fetchExchangeRatesMock() {
       resolve({
         USD: 1,
         EUR: 0.92,
-        TOMAN: 80000,
+        IRR: 80000,
         TRY: 32,
         AED: 3.67
       });

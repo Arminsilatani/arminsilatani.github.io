@@ -1,19 +1,24 @@
-/* price-calculator.js - Refactored V5 (Clean, Fixed DOM Structure) */
+/* 
+  price-calculator.js - Refactored V6
+  Full Integration with <currency-selector>
+  Author: GapGPT for Armin Silatani
+*/
 
-console.log("PRICE CALCULATOR LOADED - V5 (Refactored & FIXED)");
+console.log("PRICE CALCULATOR LOADED - V6 (Event-Driven & Reactive)");
 
 import { basePricesUSD } from './data/prices.js';
 import { getExchangeRates } from './services/exchange-rates.js';
 import { determineCurrency } from "./utils/currency-engine.js";
 
-const locale = document.documentElement.lang || "en";
+// متغیرهای سراسری برای مدیریت وضعیت
+let exchangeRates = {};
 let selectedServices = [];
 let currentDisplayedTotal = 0;
-let currentCurrencyCode = '';
+let currentCurrencyCode = localStorage.getItem("selectedCurrency") || determineCurrency(document.documentElement.lang || "en");
 let groupUpdating = false;
 
 /* ---------------------------------------------------------
-   Currency Formatter
+   فرمت‌کننده ارز (هماهنگ با تومان، دلار، یورو و درهم)
 --------------------------------------------------------- */
 function formatCurrency(amount, currencyCode) {
     const formatConfig = {
@@ -33,11 +38,10 @@ function formatCurrency(amount, currencyCode) {
 }
 
 /* ---------------------------------------------------------
-   Animated Price Counter
+   انیمیشن تغییر اعداد
 --------------------------------------------------------- */
 function animateValue(element, start, end, duration, currencyCode) {
     let startTimestamp = null;
-
     const step = (ts) => {
         if (!startTimestamp) startTimestamp = ts;
         const progress = Math.min((ts - startTimestamp) / duration, 1);
@@ -48,33 +52,31 @@ function animateValue(element, start, end, duration, currencyCode) {
         if (progress < 1) requestAnimationFrame(step);
         else element.textContent = formatCurrency(end, currencyCode);
     };
-
     requestAnimationFrame(step);
 }
 
 /* ---------------------------------------------------------
-   Update price on service boxes
+   بروزرسانی قیمت در باکس‌های خدمات (صفحه اصلی)
 --------------------------------------------------------- */
 function updateBoxPrices(currency, rates) {
     const rate = rates[currency] || 1;
-
-    document.querySelectorAll('.price-display').forEach(el => {
-        const cb = el.parentElement.querySelector('.service-checkbox');
-        if (!cb) return;
+    document.querySelectorAll('.sub-item').forEach(item => {
+        const display = item.querySelector('.price-display');
+        const cb = item.querySelector('.service-checkbox');
+        if (!display || !cb) return;
 
         const base = basePricesUSD?.[cb.dataset.category]?.[cb.dataset.plan];
         if (typeof base !== 'number') return;
 
-        el.textContent = formatCurrency(Math.round(base * rate), currency);
+        display.textContent = formatCurrency(Math.round(base * rate), currency);
     });
 }
 
 /* ---------------------------------------------------------
-   Update existing invoice items price
+   بروزرسانی قیمت آیتم‌های موجود در فاکتور نهایی
 --------------------------------------------------------- */
 function updateExistingInvoiceItemsPrices(currency, rates) {
     const rate = rates[currency] || 1;
-
     selectedServices.forEach(service => {
         const id = `invoice-item-${service.category}-${service.plan}`.replace(/\s+/g, '-');
         const row = document.getElementById(id);
@@ -86,20 +88,15 @@ function updateExistingInvoiceItemsPrices(currency, rates) {
 }
 
 /* ---------------------------------------------------------
-   Recalculate Total Invoice
+   محاسبه مجدد جمع کل فاکتور
 --------------------------------------------------------- */
 function recalculateInvoiceTotal(currency, rates) {
     const rate = rates[currency] || 1;
-
     const totalUSD = selectedServices.reduce((a, s) => a + s.basePrice, 0);
     const converted = Math.round(totalUSD * rate);
 
     const totalEl = document.getElementById('invoice-total-amount');
     if (totalEl) {
-        if (currentCurrencyCode !== currency) {
-            currentDisplayedTotal = 0;
-            currentCurrencyCode = currency;
-        }
         animateValue(totalEl, currentDisplayedTotal, converted, 800, currency);
         currentDisplayedTotal = converted;
     }
@@ -109,104 +106,89 @@ function recalculateInvoiceTotal(currency, rates) {
 }
 
 /* ---------------------------------------------------------
-   Build Invoice Row DOM (FIXED VERSION)
+   ساخت ردیف فاکتور (DOM)
 --------------------------------------------------------- */
 function buildInvoiceRow(name, basePrice, colorClass, rate, currency, category, plan) {
-
     const safeId = `invoice-item-${category}-${plan}`.replace(/\s+/g, '-');
-
     const li = document.createElement('li');
     li.className = `invoice-item entering ${colorClass}`;
     li.id = safeId;
 
     li.innerHTML = `
-        <div class="sliding-text-container">
-            <span class="item-name">
-                <span class="scrolling-text-inner">${name}</span>
-            </span>
+        <div class="item-name">
+            <div class="scrolling-text-container">
+                <div class="scrolling-text-inner">${name}</div>
+            </div>
         </div>
-
         <span class="item-price">
             ${formatCurrency(Math.round(basePrice * rate), currency)}
         </span>
     `;
 
-    li.addEventListener("animationend", e => {
-        if (e.animationName === "slideDownItem") {
-            li.classList.remove("entering");
-            li.classList.add("visible");
+    setTimeout(() => {
+        const textInner = li.querySelector('.scrolling-text-inner');
+        const container = li.querySelector('.scrolling-text-container');
+        if (textInner && container && textInner.scrollWidth > container.clientWidth) {
+            const overflowWidth = textInner.scrollWidth - container.clientWidth;
+            textInner.style.setProperty('--overflow-amount', `${overflowWidth}px`);
+            textInner.classList.add('sliding-text');
         }
-    }, { once: true });
+    }, 50);
 
     return li;
 }
 
 /* ---------------------------------------------------------
-   DOM Ready
+   اصلی: گوش دادن به تغییر ارز از طریق کامپوننت فوتر
+--------------------------------------------------------- */
+window.addEventListener("currency-change", async (event) => {
+    const newCurrency = event.detail.currency;
+    console.log("Event Received: Currency changed to", newCurrency);
+    
+    currentCurrencyCode = newCurrency;
+    
+    try {
+        // دریافت آخرین نرخ‌ها و بروزرسانی کل رابط کاربری
+        exchangeRates = await getExchangeRates();
+        updateBoxPrices(newCurrency, exchangeRates);
+        updateExistingInvoiceItemsPrices(newCurrency, exchangeRates);
+        recalculateInvoiceTotal(newCurrency, exchangeRates);
+    } catch (error) {
+        console.error("Failed to update prices after currency change:", error);
+    }
+});
+
+/* ---------------------------------------------------------
+   اجرا هنگام لود شدن صفحه
 --------------------------------------------------------- */
 document.addEventListener("DOMContentLoaded", async () => {
-
-    const currencySelect = document.getElementById('currency-select');
     const checkboxes = document.querySelectorAll('.service-checkbox');
     const listContainer = document.getElementById('invoice-items-list');
 
-    /* Load exchange rates */
-    let exchangeRates;
     try {
         exchangeRates = await getExchangeRates();
+        // مقدار اولیه
+        updateBoxPrices(currentCurrencyCode, exchangeRates);
     } catch (e) {
         console.error("Fatal: cannot fetch exchange rates.", e);
         return;
     }
 
-    /* Init Currency */
-    if (currencySelect) {
-        const initial = determineCurrency(locale);
-        currencySelect.value = initial;
-        currentCurrencyCode = initial;
-
-        updateBoxPrices(initial, exchangeRates);
-
-        currencySelect.addEventListener('change', async (e) => {
-            const newC = e.target.value;
-            localStorage.setItem("selectedCurrency", newC);
-
-            try {
-                const freshRates = await getExchangeRates();
-                updateBoxPrices(newC, freshRates);
-                updateExistingInvoiceItemsPrices(newC, freshRates);
-                recalculateInvoiceTotal(newC, freshRates);
-            } catch (error) {
-                console.error("Currency update failed:", error);
-            }
-        });
-    }
-
-    /* Service Checkboxes */
+    /* مدیریت چک‌باکس‌ها */
     checkboxes.forEach(box => {
         box.addEventListener("change", () => {
-
             const subItem = box.closest(".sub-item");
             if (subItem && subItem.offsetWidth === 0 && subItem.offsetHeight === 0) return;
 
-            /* Group behavior */
             if (!groupUpdating && box.dataset.group) {
                 const group = box.dataset.group;
                 const groupItems = document.querySelectorAll(`.service-checkbox[data-group="${group}"]`);
-
                 groupUpdating = true;
-                groupItems.forEach(cb => {
-                    if (cb !== box) {
-                        cb.checked = box.checked;
-                        cb.dispatchEvent(new Event("change", { bubbles: true }));
-                    }
-                });
+                groupItems.forEach(cb => { if (cb !== box) { cb.checked = box.checked; cb.dispatchEvent(new Event("change", { bubbles: true })); } });
                 groupUpdating = false;
             }
 
             const { category, plan } = box.dataset;
-
-            /* Name detection */
             let name = "نامشخص";
             const label = box.closest("label");
             if (label) {
@@ -214,78 +196,44 @@ document.addEventListener("DOMContentLoaded", async () => {
                 name = span ? span.textContent.trim() : label.textContent.trim();
             }
 
-            /* Base price */
             const basePrice = basePricesUSD?.[category]?.[plan];
             if (typeof basePrice !== "number") return;
 
-            const currency = currencySelect.value;
-            const rate = exchangeRates[currency] || 1;
-
+            const rate = exchangeRates[currentCurrencyCode] || 1;
             const safeId = `invoice-item-${category}-${plan}`.replace(/\s+/g, '-');
             const existing = document.getElementById(safeId);
 
-            /* ADD ITEM */
             if (box.checked) {
-
                 if (existing) existing.remove();
-
                 selectedServices = selectedServices.filter(s => !(s.category === category && s.plan === plan));
                 selectedServices.push({ category, plan, name, basePrice });
 
-                recalculateInvoiceTotal(currency, exchangeRates);
-
-                /* Bullet Color Detection */
-                const container = subItem.querySelector("label");
                 let colorClass = "bullet-green";
-                if (container.classList.contains("yellow-checkbox-checked-container")) colorClass = "bullet-yellow";
-                else if (container.classList.contains("white-checkbox-container")) colorClass = "bullet-white";
+                if (label.classList.contains("yellow-checkbox-checked-container")) colorClass = "bullet-yellow";
+                else if (label.classList.contains("white-checkbox-container")) colorClass = "bullet-white";
 
-                const row = buildInvoiceRow(name, basePrice, colorClass, rate, currency, category, plan);
-
+                const row = buildInvoiceRow(name, basePrice, colorClass, rate, currentCurrencyCode, category, plan);
                 if (listContainer) listContainer.appendChild(row);
-            }
-
-            /* REMOVE ITEM */
-            else {
+            } else {
                 selectedServices = selectedServices.filter(s => !(s.category === category && s.plan === plan));
-                recalculateInvoiceTotal(currency, exchangeRates);
-
                 if (existing) {
-                    existing.classList.remove("visible", "entering");
                     existing.classList.add("leaving");
-
-                    existing.addEventListener("animationend", e => {
-                        if (e.animationName === "slideUpItem") existing.remove();
-                    }, { once: true });
+                    existing.addEventListener("animationend", () => existing.remove(), { once: true });
                 }
             }
+            recalculateInvoiceTotal(currentCurrencyCode, exchangeRates);
         });
     });
 
-    /* Hover/Pin behavior for sections */
+    // مدیریت هاور بخش‌ها
     document.querySelectorAll(".service-section:not(.final-cart-section)").forEach(section => {
-
         const header = section.querySelector(".service-header h3");
-        const pinBtn = section.querySelector(".pin-btn");
-
         if (header) {
             header.addEventListener("mouseenter", () => {
-                document.querySelectorAll(".service-section:not(.final-cart-section)").forEach(s => {
-                    if (!s.classList.contains("pinned") && s !== section) s.classList.remove("active");
-                });
+                document.querySelectorAll(".service-section:not(.final-cart-section)").forEach(s => { if (!s.classList.contains("pinned") && s !== section) s.classList.remove("active"); });
                 section.classList.add("active");
             });
         }
-
-        section.addEventListener("mouseleave", () => {
-            if (!section.classList.contains("pinned")) section.classList.remove("active");
-        });
-
-        if (pinBtn) {
-            pinBtn.addEventListener("click", e => {
-                e.stopPropagation();
-                section.classList.toggle("pinned");
-            });
-        }
+        section.addEventListener("mouseleave", () => { if (!section.classList.contains("pinned")) section.classList.remove("active"); });
     });
 });

@@ -476,3 +476,70 @@ RED CHECKBOX (NON-INTERACTIVE)
   animation: pulseNeon 1.5s infinite ease-in-out;
   opacity: 0.75;
   }
+
+
+/* ================================
+   GREEN (سبز)
+   ================================ */
+.green-checkbox-checked-container {
+    cursor: default !important;
+}
+
+.green-checkbox-checked {
+    cursor: pointer !important;
+}
+
+.green-checkbox-checked-label {
+    cursor: pointer !important;
+}
+
+
+/* ================================
+   YELLOW (زرد)
+   ================================ */
+.yellow-checkbox-checked-container {
+    cursor: default !important;
+}
+
+.yellow-checkbox-checked {
+    cursor: pointer !important;
+}
+
+.yellow-checkbox-checked-label {
+    cursor: pointer !important;
+}
+
+
+/* ================================
+   WHITE (سفید)
+   ================================ */
+.white-checkbox-container {
+    cursor: default !important;
+}
+
+.white-checkbox {
+    cursor: pointer !important;
+}
+
+.white-checkbox-label {
+    cursor: pointer !important;
+}
+
+
+/* ================================
+   RED (قرمز – عمداً غیرفعال)
+   ================================ */
+.red-checkbox-container {
+    cursor: default !important;
+    pointer-events: none !important;
+}
+
+.red-checkbox {
+    cursor: default !important;
+    pointer-events: none !important;
+}
+
+.red-checkbox-label {
+    cursor: default !important;
+    pointer-events: none !important;
+}
