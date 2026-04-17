@@ -255,6 +255,7 @@
     overflow: hidden;
     gap: 10px; /* فاصله تضمینی بین متن و قیمت */
     box-sizing: border-box;
+    padding-right: 7px;
   }
 
     .invoice-item::before {

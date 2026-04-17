@@ -1,7 +1,6 @@
 /* 
-  price-calculator.js - Refactored V6
-  Full Integration with <currency-selector>
-  Author: GapGPT for Armin Silatani
+  price-calculator.js - Refactored V6 (With Quantity Support, Fixed Spacing & Smooth Animations)
+  Full Integration with <currency-selector> and Quantity Controls
 */
 
 console.log("PRICE CALCULATOR LOADED - V6 (Event-Driven & Reactive)");
@@ -22,7 +21,7 @@ let groupUpdating = false;
 --------------------------------------------------------- */
 function formatCurrency(amount, currencyCode) {
     const formatConfig = {
-        'TOMAN': { locale: 'fa-IR', options: { style: 'decimal' }, suffix: ' تومان' },
+        'IRR': { locale: 'fa-IR', options: { style: 'decimal' }, suffix: ' تومان' },
         'USD':   { locale: 'en-US', options: { style: 'currency', currency: 'USD' } },
         'EUR':   { locale: 'de-DE', options: { style: 'currency', currency: 'EUR' } },
         'AED':   { locale: 'ar-AE', options: { style: 'decimal' }, suffix: ' درهم' }
@@ -38,25 +37,37 @@ function formatCurrency(amount, currencyCode) {
 }
 
 /* ---------------------------------------------------------
-   انیمیشن تغییر اعداد
+   انیمیشن تغییر اعداد (اصلاح شده برای جلوگیری از پرش در کلیک‌های سریع)
 --------------------------------------------------------- */
 function animateValue(element, start, end, duration, currencyCode) {
+    // لغو انیمیشن قبلی روی همین المان اگر هنوز در حال اجراست
+    if (element.animationFrameId) {
+        cancelAnimationFrame(element.animationFrameId);
+    }
+
     let startTimestamp = null;
     const step = (ts) => {
         if (!startTimestamp) startTimestamp = ts;
         const progress = Math.min((ts - startTimestamp) / duration, 1);
+        
+        // تابع Easing نرم‌تر
         const ease = 1 - Math.pow(1 - progress, 4);
         const current = Math.floor(ease * (end - start) + start);
 
         element.textContent = formatCurrency(current, currencyCode);
-        if (progress < 1) requestAnimationFrame(step);
-        else element.textContent = formatCurrency(end, currencyCode);
+        
+        if (progress < 1) {
+            element.animationFrameId = requestAnimationFrame(step);
+        } else {
+            element.textContent = formatCurrency(end, currencyCode);
+            element.animationFrameId = null;
+        }
     };
-    requestAnimationFrame(step);
+    element.animationFrameId = requestAnimationFrame(step);
 }
 
 /* ---------------------------------------------------------
-   بروزرسانی قیمت در باکس‌های خدمات (صفحه اصلی)
+   بروزرسانی قیمت در باکس‌های خدمات
 --------------------------------------------------------- */
 function updateBoxPrices(currency, rates) {
     const rate = rates[currency] || 1;
@@ -68,7 +79,8 @@ function updateBoxPrices(currency, rates) {
         const base = basePricesUSD?.[cb.dataset.category]?.[cb.dataset.plan];
         if (typeof base !== 'number') return;
 
-        display.textContent = formatCurrency(Math.round(base * rate), currency);
+        const qty = parseInt(item.dataset.qty || "1", 10);
+        display.textContent = formatCurrency(Math.round(base * qty * rate), currency);
     });
 }
 
@@ -148,7 +160,6 @@ window.addEventListener("currency-change", async (event) => {
     currentCurrencyCode = newCurrency;
     
     try {
-        // دریافت آخرین نرخ‌ها و بروزرسانی کل رابط کاربری
         exchangeRates = await getExchangeRates();
         updateBoxPrices(newCurrency, exchangeRates);
         updateExistingInvoiceItemsPrices(newCurrency, exchangeRates);
@@ -167,7 +178,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     try {
         exchangeRates = await getExchangeRates();
-        // مقدار اولیه
         updateBoxPrices(currentCurrencyCode, exchangeRates);
     } catch (e) {
         console.error("Fatal: cannot fetch exchange rates.", e);
@@ -194,10 +204,17 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (label) {
                 const span = label.querySelector('span[class*="-label"], .item-name');
                 name = span ? span.textContent.trim() : label.textContent.trim();
+                
+                // === بخش اصلاح شده: جلوگیری از چسبیدن عدد به کلمه در فاکتور ===
+                name = name.replace(/\s+/g, ' ').replace(/^(\d+)(?=[^\s])/, '$1 ');
             }
 
-            const basePrice = basePricesUSD?.[category]?.[plan];
-            if (typeof basePrice !== "number") return;
+            const unitPrice = basePricesUSD?.[category]?.[plan];
+            if (typeof unitPrice !== "number") return;
+
+            // دریافت تعداد از استایل یا مقدار 1 و محاسبه قیمت نهایی آیتم
+            const qty = parseInt(subItem.dataset.qty || "1", 10);
+            const basePrice = unitPrice * qty;
 
             const rate = exchangeRates[currentCurrencyCode] || 1;
             const safeId = `invoice-item-${category}-${plan}`.replace(/\s+/g, '-');
@@ -223,6 +240,65 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
             recalculateInvoiceTotal(currentCurrencyCode, exchangeRates);
         });
+    });
+
+    /* مدیریت دکمه‌های افزایش و کاهش تعداد */
+    document.querySelectorAll('.sub-item').forEach(item => {
+        const minusBtn = item.querySelector('.qty-minus');
+        const plusBtn = item.querySelector('.qty-plus');
+        const qtyText = item.querySelector('.qty-text'); 
+        const checkbox = item.querySelector('.service-checkbox');
+        const priceDisplay = item.querySelector('.price-display');
+
+        if (minusBtn && plusBtn) {
+            minusBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation(); 
+                let qty = parseInt(item.dataset.qty || "1", 10);
+                if (qty > 1) {
+                    qty--;
+                    updateItemQty(qty);
+                }
+            });
+
+            plusBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation(); 
+                let qty = parseInt(item.dataset.qty || "1", 10);
+                qty++;
+                updateItemQty(qty);
+            });
+
+            function updateItemQty(newQty) {
+                // استخراج مقدار قبلی برای نقطه شروع انیمیشن
+                const oldQty = parseInt(item.dataset.qty || "1", 10);
+                
+                // آپدیت دیتا اتریبیوت و مقدار ظاهری
+                item.dataset.qty = newQty;
+                if (qtyText) qtyText.textContent = newQty;
+                
+                // محاسبه قیمت قدیم و جدید و اعمال انیمیشن
+                if (checkbox && priceDisplay) {
+                    const category = checkbox.dataset.category;
+                    const plan = checkbox.dataset.plan;
+                    const unitPrice = basePricesUSD?.[category]?.[plan];
+                    
+                    if (typeof unitPrice === 'number') {
+                        const rate = exchangeRates[currentCurrencyCode] || 1;
+                        const oldPrice = Math.round(unitPrice * oldQty * rate);
+                        const newPrice = Math.round(unitPrice * newQty * rate);
+                        
+                        // فراخوانی تابع انیمیشن جایگزین تغییر مستقیم متن شد
+                        animateValue(priceDisplay, oldPrice, newPrice, 400, currentCurrencyCode);
+                    }
+                }
+                
+                // بروزرسانی فاکتور در صورت انتخاب بودن تیک
+                if (checkbox && checkbox.checked) {
+                    checkbox.dispatchEvent(new Event("change"));
+                }
+            }
+        }
     });
 
     // مدیریت هاور بخش‌ها

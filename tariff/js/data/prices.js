@@ -1,10 +1,12 @@
 export const basePricesUSD = {
   SEO: {
+
     STD_BSC_KW: 50,
     STD_BSC_ONPAGE: 100,
     STD_BSC_TECH: 70,
     STD_BSC_CONTENT: 250,
     STD_BSC_REPORT: 30,
+
     STD_PRO_KW: 90,
     STD_PRO_ONPAGE: 180,
     STD_PRO_TECH: 120,
@@ -12,6 +14,7 @@ export const basePricesUSD = {
     STD_PRO_OFFPAGE: 80,
     STD_PRO_PR: 70,
     STD_PRO_REPORT: 40,
+
     STD_PRM_KW: 150,
     STD_PRM_ONPAGE: 300,
     STD_PRM_TECH: 250,
@@ -19,24 +22,28 @@ export const basePricesUSD = {
     STD_PRM_OUTREACH: 150,
     STD_PRM_PR: 250,
     STD_PRM_CONSULTING: 100,
+
     CST_BSC_KW: 300,
     CST_BSC_CRAWL: 500,
     CST_BSC_TECH: 400,
     CST_BSC_CONTENT: 700,
     CST_BSC_OFFPAGE: 400,
     CST_BSC_REPORT: 200,
+
     CST_PRO_KW: 500,
     CST_PRO_ONPAGE: 800,
     CST_PRO_TECH: 600,
     CST_PRO_TEAM: 1000,
     CST_PRO_DIGITAL_PR: 800,
     CST_PRO_CRO: 300,
+
     CST_PRM_STRATEGY: 800,
     CST_PRM_REVERSE: 1000,
     CST_PRM_TECH_LEAD: 1200,
     CST_PRM_CONTENT: 1500,
     CST_PRM_DIGITAL_PR: 1000,
     CST_PRM_CONSULTING: 500,
+
     ADD_ARTICLE_EXTRA: 30,
     ADD_PR_EXTRA: 150,
     ADD_CORE_WEB_VITALS: 200,
@@ -50,6 +57,81 @@ export const basePricesUSD = {
     ADD_RANK_TRACKING: 80,
     ADD_VIP_SUPPORT: 100
   },
-  uiux: { landing: 250, dashboard: 800 },
-  frontend: { static: 100, spa: 600 }
+  
+  
+  WEBDESIGN: {
+
+    WPS_PRS_HST: 25,
+    WPS_PRS_DES: 140,
+    WPS_PRS_RPS: 40,
+    WPS_PRS_FRM: 20,
+    WPS_PRS_SEC: 25,
+    WPS_PRS_SUP: 25,
+
+    WPS_BUS_HST: 35,
+    WPS_BUS_DES: 270,
+    WPS_BUS_RPS: 50,
+    WPS_BUS_FRM: 35,
+    WPS_BUS_SEC: 45,
+    WPS_BUS_SPD: 40,
+    WPS_BUS_SUP: 40,
+
+    WPS_ECO_HST: 50,
+    WPS_ECO_DES: 320,
+    WPS_ECO_RPS: 60,
+    WPS_ECO_WOO: 90,
+    WPS_ECO_PRD: 60,
+    WPS_ECO_PAY: 40,
+    WPS_ECO_SHP: 45,
+    WPS_ECO_SEC: 60,
+    WPS_ECO_SPD: 60,
+    WPS_ECO_SUP: 50,
+
+    STS_PRS_HST: 25,
+    STS_PRS_DES: 430,
+    STS_PRS_RPS: 120,
+    STS_PRS_FRM: 90,
+    STS_PRS_SPD: 120,
+    STS_PRS_SUP: 90,
+
+    STS_BUS_HST: 35,
+    STS_BUS_DES: 820,
+    STS_BUS_RPS: 180,
+    STS_BUS_ANM: 160,
+    STS_BUS_FRM: 110,
+    STS_BUS_SPD: 180,
+    STS_BUS_SUP: 150,
+
+    STS_PRM_HST: 50,
+    STS_PRM_DES: 1420,
+    STS_PRM_RPS: 240,
+    STS_PRM_ANM: 350,
+    STS_PRM_FRM: 200,
+    STS_PRM_SPD: 300,
+    STS_PRM_SUP: 325,
+
+    ADD_DOM_COM: 15,
+    ADD_PGX_WPS: 25,
+    ADD_PGX_STS: 150,
+    ADD_FRM_STD: 30,
+    ADD_FRM_STS: 60,
+    ADD_SEC_ADV: 80,
+    ADD_SPD_PRO: 90,
+    ADD_MUL: 120,
+    ADD_CRM: 150,
+    ADD_PRD: 3,
+    ADD_PAY: 40,
+    ADD_SHP: 60,
+    ADD_TAX: 50,
+
+    SUP_WPS_PRS: 20,
+    SUP_WPS_BUS: 35,
+    SUP_WPS_ECO: 55,
+    SUP_STS_PRS: 35,
+    SUP_STS_BUS: 60,
+    SUP_STS_PRM : 90,
+  },
+  
+  
+    frontend: { static: 100, spa: 600 }
 };

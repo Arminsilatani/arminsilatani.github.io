@@ -1,5 +1,5 @@
 /* ========================================= */
-PRICING PAGE
+/* PRICING PAGE */
 /* ========================================= */
 
 /* ::::::::::::::::::::::::::::::::::::::: GLOBAL BASE STYLES ::::::::::::::::::::::::::::::::::::::: */
@@ -325,6 +325,60 @@ SUB-SERVICES (LIST OF ITEMS)
     letter-spacing: 0.5px;
 }
 
+/* گروه کردن عنوان و دکمه‌ها کنار هم */
+.service-title-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* استایل کانتینر دکمه‌ها و حالت مخفی پیش‌فرض */
+.qty-control-minimal {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+}
+
+
+label:has(input[type="checkbox"]:checked) + .qty-control-minimal {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+/* استایل مدرن و هماهنگ دکمه‌های + و - */
+.qty-control-minimal .qty-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    color: #a0a0a0;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    padding: 0;
+}
+
+/* حالت هاور (قرار گرفتن موس روی دکمه) */
+.qty-control-minimal .qty-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #F5F5F5;
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+
 /* ------------------------------------------------------------------
 GROUPED SERVICES BOX
 --------------------------------------------------------------------- */
@@ -470,7 +524,6 @@ INVOICE ITEM ROWS
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     width: 100%;
     box-sizing: border-box;
-    overflow: hidden;
     opacity: 0;
     will-change: transform, opacity, max-height;
     gap: 2px;

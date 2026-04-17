@@ -3,7 +3,7 @@ export const countryCurrency = {
     TR: "TRY",
     DE: "EUR",
     IT: "EUR",
-    IR: "TOMAN",
+    IR: "IRR",
 
     AE: "AED",
     SA: "SAR",

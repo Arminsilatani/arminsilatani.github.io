@@ -5,5 +5,5 @@ export const currencyPolicy = {
     fa: { mode: "fixed", currency: "IRR" },
 
     en: { mode: "detect", fallback: "USD" },
-    ar: { mode: "detect", fallback: "USD" }
+    ar: { mode: "detect", fallback: "AED" }
 };
