@@ -323,6 +323,8 @@ SUB-SERVICES (LIST OF ITEMS)
     color: #f5f5f5;
     font-size: 1rem;
     letter-spacing: 0.5px;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 /* گروه کردن عنوان و دکمه‌ها کنار هم */
@@ -344,8 +346,7 @@ SUB-SERVICES (LIST OF ITEMS)
     transition: all 0.3s ease;
 }
 
-
-label:has(input[type="checkbox"]:checked) + .qty-control-minimal {
+label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -356,13 +357,13 @@ label:has(input[type="checkbox"]:checked) + .qty-control-minimal {
 .qty-control-minimal .qty-btn {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 6px;
+    border-radius: 50px;
     color: #a0a0a0;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     cursor: pointer;
-    width: 26px;
-    height: 26px;
+    width: 18px;
+    height: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -648,4 +649,152 @@ INVOICE ITEM ROWS
         transform: translateY(-15px);
         border-color: transparent;
     }
+}
+
+/* ==================================================
+   SERVICE DESC (Accordion Effect)
+================================================== */
+
+/* ✅ override flex behavior only for desc layout */
+.sub-item {
+    flex-wrap: wrap;
+    row-gap: 0;
+}
+
+/* ✅ keep top row layout intact */
+.sub-item > .price-display,
+.sub-item > .service-title-group {
+    flex: 0 0 auto;
+}
+
+/* ✅ Description Base Styles */
+.sub-item > .service-desc {
+    flex: 0 0 100%;
+    width: 100%;
+    box-sizing: border-box;
+    margin-inline-start: 0;
+    
+    /* افکت‌های مشابه صفحه نقشه سایت */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 14px;
+    padding: 0 20px 0 14px;
+    margin-top: 0;
+    
+    background: rgba(78,205,196,0.08);
+    border-inline-start: 3px solid #4ECDC4;
+    border-radius: 3px;
+    
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #d8fdfb;
+    
+    /* ترانزیشن‌های نرم */
+    transition:
+        max-height 0.55s cubic-bezier(.4,0,.2,1),
+        opacity 0.45s ease,
+        padding 0.45s ease,
+        margin-top 0.3s ease;
+}
+
+/* ✅ Open State Styles */
+.sub-item.desc-open > .service-desc {
+    max-height: 220px; /* یا مقداری که برای بلندترین متن شما کافی باشد */
+    opacity: 1;
+    padding: 12px 14px;
+    padding: 10px 20px 10px 14px; 
+    margin-top: 10px; /* فاصله از المان‌های بالا */
+}
+
+.sub-item label,
+[class*="-checkbox-label"],
+[class*="-checkbox-checked-label"] {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;  /* ✅ این باید روی label باشه */
+    text-align: right;
+}
+
+/* ✅ span داخل label هم باید nowrap باشه */
+[class*="-checkbox-label"] span,
+[class*="-checkbox-checked-label"] span,
+.green-checkbox-checked-label,
+.green-checkbox-label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    flex-shrink: 1;
+}
+
+
+.service-desc {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0 12px; /* در حالت بسته پدینگ بالا و پایین صفر است */
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.04); /* یک پس‌زمینه خیلی ملایم برای کادر */
+    color: #cbd5e1;
+    font-size: 0.85rem;
+    line-height: 1.8;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.service-title-group:hover ~ .service-desc {
+    max-height: 250px; 
+    opacity: 1;
+    margin-top: 12px;    /* فاصله از بیرون (بالا) */
+    margin-bottom: 12px; /* فاصله از بیرون (پایین) */
+    padding: 12px;       /* فاصله داخلی متن از حاشیه باکس */
+}
+
+/* اختیاری: برای اینکه ماوس کاربر شکل مناسبی (نشانگر راهنما) بگیرد */
+.service-title-group {
+    cursor: help;
+}
+
+/* --- استایل باکس توضیحات دوم (تم زرد) --- */
+.service-desc.desc-yellow {
+    /* استفاده از رنگ FFE76D با شفافیت 10 درصد برای پس‌زمینه */
+    background-color: rgba(255, 231, 109, 0.1); 
+    /* یک خط رنگی برای زیبایی و تاکید در سمت راست (راست‌چین) */
+    border-right: 3px solid #FFE76D; 
+    color: #fdf6cc; /* کمی روشن‌تر کردن متن برای خوانایی بهتر در تم تیره */
+}
+
+/* ==================================================
+   FIX FOR QTY NUMBER & TEXT ALIGNMENT
+================================================== */
+
+/* ۱. جلوگیری از فشرده شدن عدد و ایجاد فاصله با متن */
+.qty-text {
+    flex-shrink: 0;
+    margin-left: 6px; /* فاصله بین عدد ۱ و متن */
+    display: inline-block;
+}
+
+/* ۲. اصلاح شده: قرار دادن کادر انیمیشن در همان خط و جلوگیری از محو شدن عرض آن */
+[class*="-checkbox-label"] .sliding-text-container,
+[class*="-checkbox-checked-label"] .sliding-text-container {
+    display: inline-flex;
+    align-items: center;
+    flex: 1 1 auto; /* تغییر از 0% به auto تا عرض آن صفر نشود */
+    min-width: 0;
+    width: 100%;    /* اطمینان از پر کردن فضا */
+}
+
+
+/* ۳. اطمینان از اینکه خود لیبل فرزندانش را در یک خط نگه می‌دارد */
+[class*="-checkbox-label"],
+[class*="-checkbox-checked-label"] {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap !important; /* جلوگیری قطعی از رفتن به خط بعد */
 }
