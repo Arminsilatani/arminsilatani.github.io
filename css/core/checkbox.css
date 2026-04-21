@@ -543,3 +543,89 @@ RED CHECKBOX (NON-INTERACTIVE)
     cursor: default !important;
     pointer-events: none !important;
 }
+
+/* ================================
+   CONTAINER & LABEL LAYOUT
+   ================================ */
+
+.green-checkbox-container,
+.green-checkbox-checked-container,
+.yellow-checkbox-container,
+.yellow-checkbox-checked-container,
+.white-checkbox-container,
+.white-checkbox-checked-container {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+[class*="-checkbox-label"],
+[class*="-checkbox-checked-label"] {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: right;
+    flex-wrap: nowrap !important;
+}
+
+[class*="-checkbox-label"] span,
+[class*="-checkbox-checked-label"] span,
+.green-checkbox-checked-label,
+.green-checkbox-label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    flex-shrink: 1;
+}
+
+[class*="-checkbox-label"] .sliding-text-container,
+[class*="-checkbox-checked-label"] .sliding-text-container {
+    display: inline-flex;
+    align-items: center;
+    flex: 1 1 auto;
+    min-width: 0;
+    width: 100%;
+}
+
+/* =========================================
+   ✅ FIX FOR AUTO SLIDING TEXT (V2)
+   ========================================= */
+
+/* 1. جلوگیری از فشرده‌سازی و سه‌نقطه شدن متن‌ها */
+[class*="-checkbox-label"] span,
+[class*="-checkbox-checked-label"] span,
+.green-checkbox-checked-label,
+.green-checkbox-label {
+    overflow: visible !important;
+    text-overflow: clip !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+}
+
+/* 2. اجبار به حفظ ساختار تک‌خطی (جلوگیری از دو خطی شدن آیکون و متن) */
+.scrolling-text-inner,
+.sliding-text {
+    display: inline-flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+    width: max-content !important;
+}
+
+/* 3. اعمال انیمیشن حرکت */
+.sliding-text {
+    animation: slideText 5s linear infinite alternate !important;
+}
+
+/* 4. پنهان کردن بیرون‌زدگی در والد */
+[class*="-checkbox-label"],
+[class*="-checkbox-checked-label"],
+.invoice-item .item-name {
+    overflow: hidden !important;
+    flex-wrap: nowrap !important;
+    display: flex !important;
+}

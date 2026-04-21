@@ -18,11 +18,12 @@ body {
 }
 
 .scrolling-text-inner {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 8px;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important; /* مهم: جلوگیری از کوچک شدن المان */
+    width: max-content; /* اجازه می‌دهد عرض المان به اندازه متن داخلی بزرگ شود */
 }
-
 
 /* ------------------------------------------------------------------
 CURRENCY SELECTOR
@@ -56,7 +57,7 @@ CURRENCY SELECTOR
 }
 
 /* ------------------------------------------------------------------
-TABS CONTAINER
+TABS CONTAINER & PACKAGE TABS
 --------------------------------------------------------------------- */
 .tabs-container {
     display: flex;
@@ -84,7 +85,7 @@ TABS CONTAINER
 }
 
 /* ------------------------------------------------------------------
-PRICING TABS
+PRICING TABS (GENERAL / SPECIALIST)
 --------------------------------------------------------------------- */
 .pricing-tab {
     background: none;
@@ -94,12 +95,12 @@ PRICING TABS
     font-weight: 400;
     cursor: pointer;
     color: #9a9a9a;
-    transition: transform .35s cubic-bezier(.4,0,.2,1), color .25s ease, opacity .25s ease;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), color 0.25s ease, opacity 0.25s ease;
 }
 
 .pricing-tab.moving {
     transform: translateX(-15px);
-    opacity: .7;
+    opacity: 0.7;
 }
 
 .pricing-tab.general:hover,
@@ -117,12 +118,12 @@ PRICING TABS
     border: none;
     font-family: inherit;
     padding: 5px 0;
-    font-size: .9rem;
+    font-size: 0.9rem;
     font-weight: 400;
     cursor: pointer;
     color: #9a9a9a;
     position: relative;
-    transition: color .25s ease;
+    transition: color 0.25s ease;
 }
 
 .package-tab:hover {
@@ -143,7 +144,7 @@ PRICING TABS
     background: var(--tab-color, #4ECDC4);
     transform: scaleX(0);
     transform-origin: center;
-    transition: transform .3s cubic-bezier(.4,0,.2,1);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ------------------------------------------------------------------
@@ -200,12 +201,12 @@ LAYOUT WRAPPERS
         border-width 0.3s ease 0.4s,
         width 0.3s ease 0.4s,
         top 0.3s ease 0.7s,
-        border-color 0.45s cubic-bezier(.4,0,.2,1),
-        box-shadow 0.45s cubic-bezier(.4,0,.2,1);
+        border-color 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ------------------------------------------------------------------
-ACCORDION (CARD OPEN/CLOSE)
+ACCORDION (CARD OPEN / CLOSE)
 --------------------------------------------------------------------- */
 .service-card {
     display: grid;
@@ -246,7 +247,7 @@ ACCORDION (CARD OPEN/CLOSE)
         border-width 0.3s ease 0.3s,
         border-radius 0.3s ease 0.3s,
         height 0.4s ease 0.6s,
-        border-color 0.45s cubic-bezier(.4,0,.2,1) 0.3s;
+        border-color 0.45s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }
 
 .service-section.active .service-card {
@@ -300,7 +301,7 @@ PIN BUTTON
 }
 
 /* ------------------------------------------------------------------
-SUB-SERVICES (LIST OF ITEMS)
+SUB‑SERVICES (LIST OF ITEMS)
 --------------------------------------------------------------------- */
 .sub-services {
     padding: 0 40px 24px;
@@ -311,12 +312,19 @@ SUB-SERVICES (LIST OF ITEMS)
     justify-content: space-between;
     align-items: center;
     flex-direction: row-reverse;
+    flex-wrap: wrap;
+    row-gap: 0;
     padding: 14px 0;
     gap: 24px;
 }
 
 .sub-item:not([style*="display: none"]) {
-    border-bottom: 1px dashed rgba(255,255,255,0.15);
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+}
+
+.sub-item > .price-display,
+.sub-item > .service-title-group {
+    flex: 0 0 auto;
 }
 
 .price-display {
@@ -327,14 +335,13 @@ SUB-SERVICES (LIST OF ITEMS)
     white-space: nowrap;
 }
 
-/* گروه کردن عنوان و دکمه‌ها کنار هم */
 .service-title-group {
     display: flex;
     align-items: center;
     gap: 12px;
+    cursor: help;
 }
 
-/* استایل کانتینر دکمه‌ها و حالت مخفی پیش‌فرض */
 .qty-control-minimal {
     display: flex;
     align-items: center;
@@ -353,7 +360,6 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     transform: translateX(0);
 }
 
-/* استایل مدرن و هماهنگ دکمه‌های + و - */
 .qty-control-minimal .qty-btn {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -371,7 +377,6 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     padding: 0;
 }
 
-/* حالت هاور (قرار گرفتن موس روی دکمه) */
 .qty-control-minimal .qty-btn:hover {
     background: rgba(255, 255, 255, 0.15);
     color: #F5F5F5;
@@ -379,16 +384,15 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     transform: scale(1.05);
 }
 
-
 /* ------------------------------------------------------------------
 GROUPED SERVICES BOX
 --------------------------------------------------------------------- */
 .sub-group-box {
-    border: 1px solid rgba(78,205,196,0.6);
+    border: 1px solid rgba(78, 205, 196, 0.6);
     border-radius: 12px;
     padding: 14px 18px;
     margin: 12px 0 18px 0;
-    background: rgba(22,22,22,0.96);
+    background: rgba(22, 22, 22, 0.96);
 }
 
 .sub-group-box .sub-item {
@@ -402,7 +406,7 @@ GROUPED SERVICES BOX
 }
 
 .grouped-services-box {
-    border: 1px dashed rgba(255,255,255,0.1);
+    border: 1px dashed rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     margin-bottom: 24px;
     margin-right: -16px;
@@ -449,39 +453,6 @@ FINAL INVOICE SECTION
     box-sizing: border-box;
 }
 
-.green-checkbox-container,
-.green-checkbox-checked-container,
-.yellow-checkbox-container,
-.yellow-checkbox-checked-container,
-.white-checkbox-container,
-.white-checkbox-checked-container {
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-}
-
-.sub-item label,
-[class*="-checkbox-label"],
-[class*="-checkbox-checked-label"] {
-    display: flex;
-    align-items: center;
-    flex: 1 1 auto;
-    min-width: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    text-align: right;
-}
-
-.invoice-item .item-name {
-    display: flex;
-    align-items: center;
-    flex: 1 1 auto;
-    min-width: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    text-align: right;
-}
-
 /* ------------------------------------------------------------------
 INVOICE HEADER
 --------------------------------------------------------------------- */
@@ -508,7 +479,7 @@ INVOICE HEADER
 }
 
 /* ------------------------------------------------------------------
-INVOICE ITEM ROWS
+INVOICE ITEM ROWS & ANIMATIONS
 --------------------------------------------------------------------- */
 #invoice-items-list {
     padding: 0;
@@ -531,13 +502,6 @@ INVOICE ITEM ROWS
     direction: rtl;
 }
 
-.invoice-item .sliding-text-container {
-    flex: 1 1 auto;
-    min-width: 0;
-    display: flex;
-    justify-content: flex-start;
-}
-
 .invoice-item:last-child {
     border-bottom: none;
 }
@@ -547,6 +511,13 @@ INVOICE ITEM ROWS
     padding-bottom: 15px;
     opacity: 1;
     overflow: visible;
+}
+
+.invoice-item .sliding-text-container {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .invoice-item .scrolling-text-inner {
@@ -595,6 +566,14 @@ INVOICE ITEM ROWS
     display: none !important;
 }
 
+.invoice-item.entering {
+    animation: slideDownItem 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.invoice-item.leaving {
+    animation: slideUpItem 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
 @keyframes pulseColorNeon {
     0%, 100% {
         background-color: #7a7a7a;
@@ -606,14 +585,6 @@ INVOICE ITEM ROWS
         filter: drop-shadow(0 0 4px var(--c-on));
         opacity: 1;
     }
-}
-
-.invoice-item.entering {
-    animation: slideDownItem 0.45s cubic-bezier(0.2,0.8,0.2,1) forwards;
-}
-
-.invoice-item.leaving {
-    animation: slideUpItem 0.4s cubic-bezier(0.2,0.8,0.2,1) forwards;
 }
 
 @keyframes slideDownItem {
@@ -651,95 +622,47 @@ INVOICE ITEM ROWS
     }
 }
 
-/* ==================================================
-   SERVICE DESC (Accordion Effect)
-================================================== */
-
-/* ✅ override flex behavior only for desc layout */
-.sub-item {
-    flex-wrap: wrap;
-    row-gap: 0;
-}
-
-/* ✅ keep top row layout intact */
-.sub-item > .price-display,
-.sub-item > .service-title-group {
-    flex: 0 0 auto;
-}
-
-/* ✅ Description Base Styles */
+/* ------------------------------------------------------------------
+SERVICE DESCRIPTION (ACCORDION EFFECT)
+--------------------------------------------------------------------- */
 .sub-item > .service-desc {
     flex: 0 0 100%;
     width: 100%;
     box-sizing: border-box;
     margin-inline-start: 0;
-    
-    /* افکت‌های مشابه صفحه نقشه سایت */
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    padding: 0 14px;
     padding: 0 20px 0 14px;
     margin-top: 0;
-    
-    background: rgba(78,205,196,0.08);
+    background: rgba(78, 205, 196, 0.08);
     border-inline-start: 3px solid #4ECDC4;
     border-radius: 3px;
-    
     font-size: 0.9rem;
     line-height: 1.8;
     color: #d8fdfb;
-    
-    /* ترانزیشن‌های نرم */
     transition:
-        max-height 0.55s cubic-bezier(.4,0,.2,1),
+        max-height 0.55s cubic-bezier(0.4, 0, 0.2, 1),
         opacity 0.45s ease,
         padding 0.45s ease,
         margin-top 0.3s ease;
 }
 
-/* ✅ Open State Styles */
 .sub-item.desc-open > .service-desc {
-    max-height: 220px; /* یا مقداری که برای بلندترین متن شما کافی باشد */
+    max-height: 220px;
     opacity: 1;
-    padding: 12px 14px;
-    padding: 10px 20px 10px 14px; 
-    margin-top: 10px; /* فاصله از المان‌های بالا */
+    padding: 10px 20px 10px 14px;
+    margin-top: 10px;
 }
-
-.sub-item label,
-[class*="-checkbox-label"],
-[class*="-checkbox-checked-label"] {
-    display: flex;
-    align-items: center;
-    flex: 1 1 auto;
-    min-width: 0;
-    overflow: hidden;
-    white-space: nowrap;  /* ✅ این باید روی label باشه */
-    text-align: right;
-}
-
-/* ✅ span داخل label هم باید nowrap باشه */
-[class*="-checkbox-label"] span,
-[class*="-checkbox-checked-label"] span,
-.green-checkbox-checked-label,
-.green-checkbox-label {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    min-width: 0;
-    flex-shrink: 1;
-}
-
 
 .service-desc {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
     margin: 0;
-    padding: 0 12px; /* در حالت بسته پدینگ بالا و پایین صفر است */
+    padding: 0 12px;
     border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.04); /* یک پس‌زمینه خیلی ملایم برای کادر */
+    background-color: rgba(255, 255, 255, 0.04);
     color: #cbd5e1;
     font-size: 0.85rem;
     line-height: 1.8;
@@ -747,54 +670,44 @@ INVOICE ITEM ROWS
     box-sizing: border-box;
 }
 
-.service-title-group:hover ~ .service-desc {
-    max-height: 250px; 
-    opacity: 1;
-    margin-top: 12px;    /* فاصله از بیرون (بالا) */
-    margin-bottom: 12px; /* فاصله از بیرون (پایین) */
-    padding: 12px;       /* فاصله داخلی متن از حاشیه باکس */
-}
-
-/* اختیاری: برای اینکه ماوس کاربر شکل مناسبی (نشانگر راهنما) بگیرد */
-.service-title-group {
-    cursor: help;
-}
-
-/* --- استایل باکس توضیحات دوم (تم زرد) --- */
 .service-desc.desc-yellow {
-    /* استفاده از رنگ FFE76D با شفافیت 10 درصد برای پس‌زمینه */
-    background-color: rgba(255, 231, 109, 0.1); 
-    /* یک خط رنگی برای زیبایی و تاکید در سمت راست (راست‌چین) */
-    border-right: 3px solid #FFE76D; 
-    color: #fdf6cc; /* کمی روشن‌تر کردن متن برای خوانایی بهتر در تم تیره */
+    background-color: rgba(255, 231, 109, 0.1);
+    border-right: 3px solid #FFE76D;
+    color: #fdf6cc;
 }
 
-/* ==================================================
-   FIX FOR QTY NUMBER & TEXT ALIGNMENT
-================================================== */
-
-/* ۱. جلوگیری از فشرده شدن عدد و ایجاد فاصله با متن */
-.qty-text {
-    flex-shrink: 0;
-    margin-left: 6px; /* فاصله بین عدد ۱ و متن */
-    display: inline-block;
+/* Hover interactions to reveal service description */
+.sub-item label:hover ~ .service-desc,
+.service-title-group:hover ~ .service-desc {
+    max-height: 250px;
+    opacity: 1;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 12px;
 }
 
-/* ۲. اصلاح شده: قرار دادن کادر انیمیشن در همان خط و جلوگیری از محو شدن عرض آن */
-[class*="-checkbox-label"] .sliding-text-container,
-[class*="-checkbox-checked-label"] .sliding-text-container {
-    display: inline-flex;
-    align-items: center;
-    flex: 1 1 auto; /* تغییر از 0% به auto تا عرض آن صفر نشود */
-    min-width: 0;
-    width: 100%;    /* اطمینان از پر کردن فضا */
-}
-
-
-/* ۳. اطمینان از اینکه خود لیبل فرزندانش را در یک خط نگه می‌دارد */
-[class*="-checkbox-label"],
-[class*="-checkbox-checked-label"] {
+/* ------------------------------------------------------------------
+ALIGNMENT FIXES & UTILITIES
+--------------------------------------------------------------------- */
+.sub-item label {
     display: flex;
     align-items: center;
-    flex-wrap: nowrap !important; /* جلوگیری قطعی از رفتن به خط بعد */
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.invoice-item .item-name {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: right;
+}
+
+.qty-text {
+    flex-shrink: 0;
+    margin-left: 6px;
+    display: inline-block;
 }
