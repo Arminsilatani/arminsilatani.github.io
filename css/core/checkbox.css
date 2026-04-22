@@ -482,15 +482,15 @@ RED CHECKBOX (NON-INTERACTIVE)
    GREEN (سبز)
    ================================ */
 .green-checkbox-checked-container {
-    cursor: default !important;
+    cursor: default !;
 }
 
 .green-checkbox-checked {
-    cursor: pointer !important;
+    cursor: pointer;
 }
 
 .green-checkbox-checked-label {
-    cursor: pointer !important;
+    cursor: pointer;
 }
 
 
@@ -498,15 +498,15 @@ RED CHECKBOX (NON-INTERACTIVE)
    YELLOW (زرد)
    ================================ */
 .yellow-checkbox-checked-container {
-    cursor: default !important;
+    cursor: default;
 }
 
 .yellow-checkbox-checked {
-    cursor: pointer !important;
+    cursor: pointer;
 }
 
 .yellow-checkbox-checked-label {
-    cursor: pointer !important;
+    cursor: pointer;
 }
 
 
@@ -514,15 +514,15 @@ RED CHECKBOX (NON-INTERACTIVE)
    WHITE (سفید)
    ================================ */
 .white-checkbox-container {
-    cursor: default !important;
+    cursor: default;
 }
 
 .white-checkbox {
-    cursor: pointer !important;
+    cursor: pointer;
 }
 
 .white-checkbox-label {
-    cursor: pointer !important;
+    cursor: pointer;
 }
 
 
@@ -530,18 +530,18 @@ RED CHECKBOX (NON-INTERACTIVE)
    RED (قرمز – عمداً غیرفعال)
    ================================ */
 .red-checkbox-container {
-    cursor: default !important;
-    pointer-events: none !important;
+    cursor: default;
+    pointer-events: none;
 }
 
 .red-checkbox {
-    cursor: default !important;
-    pointer-events: none !important;
+    cursor: default;
+    pointer-events: none;
 }
 
 .red-checkbox-label {
-    cursor: default !important;
-    pointer-events: none !important;
+    cursor: default;
+    pointer-events: none;
 }
 
 /* ================================
@@ -568,7 +568,7 @@ RED CHECKBOX (NON-INTERACTIVE)
     overflow: hidden;
     white-space: nowrap;
     text-align: right;
-    flex-wrap: nowrap !important;
+    flex-wrap: nowrap;
 }
 
 [class*="-checkbox-label"] span,
@@ -600,32 +600,32 @@ RED CHECKBOX (NON-INTERACTIVE)
 [class*="-checkbox-checked-label"] span,
 .green-checkbox-checked-label,
 .green-checkbox-label {
-    overflow: visible !important;
-    text-overflow: clip !important;
-    flex-shrink: 0 !important;
-    white-space: nowrap !important;
+    overflow: visible;
+    text-overflow: clip;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 /* 2. اجبار به حفظ ساختار تک‌خطی (جلوگیری از دو خطی شدن آیکون و متن) */
 .scrolling-text-inner,
 .sliding-text {
-    display: inline-flex !important;
-    align-items: center !important;
-    flex-wrap: nowrap !important;
-    white-space: nowrap !important;
-    width: max-content !important;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    width: max-content;
 }
 
 /* 3. اعمال انیمیشن حرکت */
 .sliding-text {
-    animation: slideText 5s linear infinite alternate !important;
+    animation: slideText 5s linear infinite alternate;
 }
 
 /* 4. پنهان کردن بیرون‌زدگی در والد */
 [class*="-checkbox-label"],
 [class*="-checkbox-checked-label"],
 .invoice-item .item-name {
-    overflow: hidden !important;
-    flex-wrap: nowrap !important;
-    display: flex !important;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    display: flex;
 }

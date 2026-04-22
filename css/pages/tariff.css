@@ -1,7 +1,3 @@
-/* ========================================= */
-/* PRICING PAGE */
-/* ========================================= */
-
 /* ::::::::::::::::::::::::::::::::::::::: GLOBAL BASE STYLES ::::::::::::::::::::::::::::::::::::::: */
 body {
     background: #0b0b0b;
@@ -21,9 +17,13 @@ body {
     display: inline-flex;
     align-items: center;
     white-space: nowrap !important;
-    flex-shrink: 0 !important; /* مهم: جلوگیری از کوچک شدن المان */
-    width: max-content; /* اجازه می‌دهد عرض المان به اندازه متن داخلی بزرگ شود */
+    flex-shrink: 0 !important;
+    width: max-content;
 }
+
+/* ========================================= */
+/* PRICING PAGE */
+/* ========================================= */
 
 /* ------------------------------------------------------------------
 CURRENCY SELECTOR
@@ -297,7 +297,7 @@ PIN BUTTON
 }
 
 .service-section.pinned .pin-btn {
-    color: #4ECDC4;
+    color: #F5F5F5;
 }
 
 /* ------------------------------------------------------------------
@@ -309,13 +309,13 @@ SUB‑SERVICES (LIST OF ITEMS)
 
 .sub-item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 14px 0;
     flex-wrap: wrap;
     row-gap: 0;
-    padding: 14px 0;
-    gap: 24px;
 }
 
 .sub-item:not([style*="display: none"]) {
@@ -623,70 +623,6 @@ INVOICE ITEM ROWS & ANIMATIONS
 }
 
 /* ------------------------------------------------------------------
-SERVICE DESCRIPTION (ACCORDION EFFECT)
---------------------------------------------------------------------- */
-.sub-item > .service-desc {
-    flex: 0 0 100%;
-    width: 100%;
-    box-sizing: border-box;
-    margin-inline-start: 0;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    padding: 0 20px 0 14px;
-    margin-top: 0;
-    background: rgba(78, 205, 196, 0.08);
-    border-inline-start: 3px solid #4ECDC4;
-    border-radius: 3px;
-    font-size: 0.9rem;
-    line-height: 1.8;
-    color: #d8fdfb;
-    transition:
-        max-height 0.55s cubic-bezier(0.4, 0, 0.2, 1),
-        opacity 0.45s ease,
-        padding 0.45s ease,
-        margin-top 0.3s ease;
-}
-
-.sub-item.desc-open > .service-desc {
-    max-height: 220px;
-    opacity: 1;
-    padding: 10px 20px 10px 14px;
-    margin-top: 10px;
-}
-
-.service-desc {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    margin: 0;
-    padding: 0 12px;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.04);
-    color: #cbd5e1;
-    font-size: 0.85rem;
-    line-height: 1.8;
-    transition: all 0.3s ease;
-    box-sizing: border-box;
-}
-
-.service-desc.desc-yellow {
-    background-color: rgba(255, 231, 109, 0.1);
-    border-right: 3px solid #FFE76D;
-    color: #fdf6cc;
-}
-
-/* Hover interactions to reveal service description */
-.sub-item label:hover ~ .service-desc,
-.service-title-group:hover ~ .service-desc {
-    max-height: 250px;
-    opacity: 1;
-    margin-top: 12px;
-    margin-bottom: 12px;
-    padding: 12px;
-}
-
-/* ------------------------------------------------------------------
 ALIGNMENT FIXES & UTILITIES
 --------------------------------------------------------------------- */
 .sub-item label {
@@ -710,4 +646,65 @@ ALIGNMENT FIXES & UTILITIES
     flex-shrink: 0;
     margin-left: 6px;
     display: inline-block;
+}
+
+.sub-item .price-display {
+    flex-shrink: 0;
+    white-space: nowrap;
+    color: #f5f5f5;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.sub-item .qty-control-minimal {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+    margin-right: auto;
+    margin-left: 8px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+}
+
+.sub-item label {
+    display: flex;
+    align-items: center;
+    flex: 0 1 auto;
+    min-width: 0;
+    margin: 0;
+}
+
+label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+.qty-control-minimal .qty-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #a0a0a0;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    padding: 0;
+}
+
+.qty-control-minimal .qty-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #F5F5F5;
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
 }

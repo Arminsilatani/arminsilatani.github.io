@@ -1,7 +1,9 @@
+/* ::::::::::::::::::::::::::::::::::::::: MOBILE STYLES (max-width: 768px) ::::::::::::::::::::::::::::::::::::::: */
 @media (max-width: 768px) {
+
   /* Container settings */
   .pricing-wrapper {
-    padding: 20px 10px 40px; 
+    padding: 20px 10px 40px;
     margin-bottom: 30px;
     box-sizing: border-box;
     overflow-x: hidden;
@@ -19,15 +21,15 @@
     border-radius: 16px;
     width: 100%;
     box-sizing: border-box;
-    background: transparent; 
+    background: transparent;
   }
 
   .service-header {
     display: flex;
-    align-items: center; 
+    align-items: center;
     padding-right: 36px;
-    padding-left: 15px;  
-    min-height: 46px; 
+    padding-left: 15px;
+    min-height: 46px;
     width: 100%;
     box-sizing: border-box;
   }
@@ -36,54 +38,53 @@
   .service-dot {
     position: absolute;
     width: 14px;
-    height: 14px; 
+    height: 14px;
     border-radius: 50%;
-    right: 12px; 
-    top: 23px; 
-    transform: translateY(-50%); 
+    right: 12px;
+    top: 23px;
+    transform: translateY(-50%);
     opacity: 0.8;
     transition: height 0.25s ease 0s, border-radius 0.25s ease 0s, width 0.25s ease 0.25s, right 0.15s ease 0.5s, top 0.2s ease 0.65s, transform 0.2s ease 0.65s;
   }
 
   .service-section.active .service-dot {
-    top: 46px;     
-    right: 0;      
+    top: 46px;
+    right: 0;
     transform: translateY(0);
-    width: 100%;   
-    height: calc(100% - 46px); 
+    width: 100%;
+    height: calc(100% - 46px);
     border-radius: 16px;
     border-width: 1px;
-    border-style: solid; 
+    border-style: solid;
     box-sizing: border-box;
     transition: top 0.2s ease 0s, transform 0.2s ease 0s, right 0.15s ease 0.2s, width 0.25s ease 0.35s, height 0.25s ease 0.6s, border-radius 0.25s ease 0.6s;
   }
 
   /* Tab design */
-  .service-content { 
-    width: 100%; 
-    box-sizing: border-box; 
+  .service-content {
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .tabs-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between; 
-    flex-wrap: nowrap; 
+    justify-content: space-between;
+    flex-wrap: nowrap;
     padding: 5px;
     box-sizing: border-box;
     width: 100%;
     height: 42px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
-    overflow-x: auto; 
-    -webkit-overflow-scrolling: touch; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    align-items: center;
     overflow-y: hidden;
   }
-  
-  .tabs-container::-webkit-scrollbar { 
-    display: none; 
+
+  .tabs-container::-webkit-scrollbar {
+    display: none;
   }
 
   .tabs-container::after {
@@ -92,58 +93,62 @@
     width: 1px;
     height: 16px;
     background-color: rgba(255, 255, 255, 0.2);
-    order: 2; 
-    margin: 0 auto; 
+    order: 2;
+    margin: 0 auto;
     flex-shrink: 0;
   }
 
   .package-tabs {
-    order: 1; 
+    order: 1;
     display: flex;
     align-items: center;
     gap: 10px;
-    flex-shrink: 0; 
+    flex-shrink: 0;
   }
-  .package-tabs::after { 
-    display: none; 
+
+  .package-tabs::after {
+    display: none;
   }
 
   .pricing-tabs {
-    order: 3; 
+    order: 3;
     display: flex;
     align-items: center;
-    gap: 4px; 
-    flex-shrink: 0; 
-  }
-  .pricing-tabs::after, 
-  .pricing-tabs::before { 
-    display: none; 
+    gap: 4px;
+    flex-shrink: 0;
   }
 
-  .pricing-tab, 
+  .pricing-tabs::after,
+  .pricing-tabs::before {
+    display: none;
+  }
+
+  .pricing-tab,
   .package-tab {
-    flex: 0 0 auto; 
-    white-space: nowrap; 
+    flex: 0 0 auto;
+    white-space: nowrap;
     font-size: 0.85rem;
-    padding: 6px 6px; 
+    padding: 6px 6px;
     border-radius: 8px;
     transition: all 0.2s ease;
   }
 
   /* Final cost estimation */
-  #final-invoice-section { 
-    margin: 12px 0 0; 
-    padding: 0; 
-    width: 100%; 
-    box-sizing: border-box; 
+  #final-invoice-section {
+    margin: 12px 0 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
   }
-  #final-invoice-section .service-card { 
-    padding: 16px 14px; 
-    box-sizing: border-box; 
+
+  #final-invoice-section .service-card {
+    padding: 16px 14px;
+    box-sizing: border-box;
   }
-  #final-invoice-section h3 { 
-    font-size: 1.5rem; 
-    margin-bottom: .6rem; 
+
+  #final-invoice-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
   }
 
   /* Service box fixes */
@@ -163,62 +168,33 @@
   .sub-item {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
     gap: 10px;
     width: 100%;
     box-sizing: border-box;
-    padding: 14px 0; 
-    border-bottom: 1px dashed rgba(255, 255, 255, 0.08); 
+    padding: 14px 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
   }
-  .sub-item:last-child { 
-    border-bottom: none; 
+
+  .sub-item:last-child {
+    border-bottom: none;
   }
 
   /* Pin button and price */
-  .pin-btn { 
-    top: 14px; 
-    left: 14px; 
+  .pin-btn {
+    top: 14px;
+    left: 14px;
   }
-  
+
   .price-display {
-    flex-shrink: 0; 
-    font-size: 0.8rem; 
+    flex-shrink: 0;
+    font-size: 0.8rem;
     font-weight: 500;
-    color: #94a3b8; 
+    color: #94a3b8;
     white-space: nowrap;
-    background: rgba(255, 255, 255, 0.03); 
+    background: rgba(255, 255, 255, 0.03);
     padding: 4px 8px;
     border-radius: 6px;
-  }
-
-  .green-checkbox-container,
-  .green-checkbox-checked-container,
-  .yellow-checkbox-container {
-    max-width: 100%; /* حذف محدودیت ۶۵ درصد */
-    flex: 1 1 0%;    /* پر کردن فضای باقیمانده بدون بیرون‌زدگی */
-    min-width: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* تضمین چینش از راست */
-  }
-
-  .sub-item label,
-  .green-checkbox-label,
-  .green-checkbox-checked-label,
-  .yellow-checkbox-label {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* جلوگیری از برش خوردن متن از سمت راست */
-    flex: 1 1 0%;
-    min-width: 0;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    font-size: 14px; /* کمی کوچکتر برای جا شدن بهتر در موبایل */
-    font-weight: 400;
-    color: #e2e8f0;
-    direction: rtl;
   }
 
   /* Icon sizing */
@@ -229,6 +205,7 @@
     flex: 0 0 auto;
   }
 
+  /* Scrolling text container */
   .scrolling-text-inner {
     display: inline-flex;
     align-items: center;
@@ -238,7 +215,6 @@
     direction: rtl;
   }
 
-  /* Hide manual line breaks */
   .scrolling-text-inner br {
     display: none;
   }
@@ -248,26 +224,27 @@
     animation: slideTextInside 8s linear infinite;
   }
 
+  /* Invoice item layout */
   .invoice-item {
     display: flex;
-    flex-wrap: nowrap; 
+    flex-wrap: nowrap;
     align-items: center;
-    justify-content: space-between; /* هل دادن قیمت به انتها */
+    justify-content: space-between;
     width: 100%;
     overflow: hidden;
-    gap: 10px; /* فاصله تضمینی بین متن و قیمت */
+    gap: 10px;
     box-sizing: border-box;
     padding-right: 7px;
   }
 
-    .invoice-item::before {
+  .invoice-item::before {
     margin-left: 1px;
     width: 5px;
     height: 5px;
   }
 
   .invoice-item .sliding-text-container {
-    display: block; /* یک بلاک ساده که فقط اسکرول را پنهان می‌کند */
+    display: block;
     width: 100%;
     overflow: hidden;
   }
@@ -275,7 +252,7 @@
   .sliding-text-container {
     display: inline-flex !important;
     align-items: center;
-    justify-content: flex-start; /* هل دادن متن به سمت راست برای جلوگیری از مخفی شدن حروف اول */
+    justify-content: flex-start;
     flex: 1 1 0%;
     min-width: 0;
     direction: rtl;
@@ -288,55 +265,51 @@
     white-space: nowrap;
   }
 
-
   .invoice-item .scrolling-text-inner {
     display: inline-flex;
     align-items: center;
-    width: max-content; 
-    max-width: none; /* خنثی کردن هرگونه محدودیت عرضی از استایل‌های عمومی */
-    min-width: 100%; /* اطمینان از اینکه حداقل به اندازه کادر والد است */
-    overflow: visible; /* حدس درست شما: اجازه دادن به بیرون‌زدگی محتوا در این لایه */
+    width: max-content;
+    max-width: none;
+    min-width: 100%;
+    overflow: visible;
     white-space: nowrap;
     will-change: transform;
   }
 
-
   .invoice-item .item-price {
-    flex: 0 0 auto; /* این عنصر هرگز فشرده نمی‌شود */
+    flex: 0 0 auto;
     white-space: nowrap;
-    font-size: 0.85rem; /* یا هر سایزی که مد نظر دارید */
+    font-size: 0.85rem;
     font-weight: normal;
-    direction: rtl; /* برای جلوگیری از پرش نماد تومان */
+    direction: rtl;
   }
-  
+
   .invoice-item .item-name {
-    flex: 1 1 0%; 
-    min-width: 0; 
-    width: 0; /* کلید نهایی: مجبور کردن مرورگر به نادیده گرفتن عرض محتوا */
-    display: block; /* حذف flex برای جلوگیری از رفتارهای زنجیره‌ای */
+    flex: 1 1 0%;
+    min-width: 0;
+    width: 0;
+    display: block;
     overflow: hidden;
     margin: 0;
     padding: 0;
   }
 
-
   /* Final invoice padding adjustment */
   #final-invoice-section .service-card {
-    padding: 20px 15px; 
+    padding: 20px 15px;
   }
-  
 }
 
-/* ::::::::::::::::::::::::::::::::::::::: ANIMATIONS ::::::::::::::::::::::::::::::::::::::: */
+/* ::::::::::::::::::::::::::::::::::::::: KEYFRAMES ::::::::::::::::::::::::::::::::::::::: */
 @keyframes slideTextInside {
-  0%, 15% { 
-    transform: translateX(0); 
+  0%, 15% {
+    transform: translateX(0);
   }
-  45%, 55% { 
-    transform: translateX(calc(var(--overflow-amount) + 16px)); 
+  45%, 55% {
+    transform: translateX(calc(var(--overflow-amount) + 16px));
   }
-  85%, 100% { 
-    transform: translateX(0); 
+  85%, 100% {
+    transform: translateX(0);
   }
 }
 
@@ -346,77 +319,65 @@
     transition: none;
   }
 }
-  /* ==================================================
-     اصلاح چیدمان موبایل: یک‌خطی بودن عنوان و قیمت، و رفتن توضیحات به خط بعد (بدون important)
-  ================================================== */
 
-  /* کادر اصلی: اجازه شکستن خط به آن می‌دهیم تا توضیحات پایین برود */
-  .sub-item {
-    display: flex;
-    flex-wrap: wrap; 
-    align-items: center;
-    justify-content: space-between; 
-    gap: 10px;
-    padding: 14px 0;
-    width: 100%;
-    box-sizing: border-box;
-    border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
-  }
+/* ::::::::::::::::::::::::::::::::::::::: ADDITIONAL MOBILE LAYOUT FIXES (GLOBAL) ::::::::::::::::::::::::::::::::::::::: */
+/* These rules are not wrapped in a media query; they apply to all viewports unless overridden. */
+.sub-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 0;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+}
 
-  /* گروه عنوان و چک باکس: پر کردن فضای خالی تا رسیدن به قیمت */
-  .sub-item label,
-  .green-checkbox-container,
-  .yellow-checkbox-container {
-    display: flex;
-    align-items: center;
-    flex: 1 1 0%;
-    min-width: 0;
-    margin: 0;
-  }
+.sub-item label,
+.green-checkbox-container,
+.yellow-checkbox-container {
+  display: flex;
+  align-items: center;
+  flex: 1 1 0%;
+  min-width: 0;
+  margin: 0;
+}
 
-  .service-title-group {
-    display: flex;
-    align-items: center;
-    flex: 1 1 0%;
-    min-width: 0;
-    overflow: hidden;
-  }
+.service-title-group {
+  display: flex;
+  align-items: center;
+  flex: 1 1 0%;
+  min-width: 0;
+  overflow: hidden;
+}
 
-  /* قیمت: اندازه ثابت خود را حفظ کند و با margin-right: auto به سمت چپ هل داده شود */
-  .price-display {
-    flex: 0 0 auto;
-    white-space: nowrap;
-    margin-right: auto; 
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: #94a3b8;
-    background: rgba(255, 255, 255, 0.03);
-    padding: 4px 8px;
-    border-radius: 6px;
-  }
+.price-display {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  margin-right: auto;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
 
-  /* توضیحات: گرفتن عرض کامل برای رفتن به خط دوم */
-  .service-desc {
-    flex: 0 0 100%;
-    width: 100%;
-    margin-top: 10px;
-  }
+.sliding-text-container {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  direction: rtl;
+  text-align: right;
+  line-height: normal;
+}
 
-  /* حل مشکل برش خوردن متن راست‌چین در موبایل (تبدیل به block) */
-  .sliding-text-container {
-    display: block;
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    direction: rtl;
-    text-align: right;
-    line-height: normal; /* برای جلوگیری از به هم ریختن ارتفاع */
-  }
-
-  .scrolling-text-inner {
-    display: inline-block;
-    white-space: nowrap;
-    direction: rtl;
-    vertical-align: middle;
-    will-change: transform;
-  }
+.scrolling-text-inner {
+  display: inline-block;
+  white-space: nowrap;
+  direction: rtl;
+  vertical-align: middle;
+  will-change: transform;
+}
