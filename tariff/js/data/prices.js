@@ -140,5 +140,82 @@ export const basePricesUSD = {
   },
   
   
+  UIUX: {
+      
+    STD_BAS_ANL: 100,
+    STD_BAS_WRF: 200,
+    STD_BAS_UID: 300,
+    STD_BAS_STY: 100,
+    STD_BAS_REV: 50,
+    STD_BAS_DEL: 50,
+
+    STD_PRO_RES: 250,
+    STD_PRO_ARC: 200,
+    STD_PRO_WRF: 350,
+    STD_PRO_UID: 600,
+    STD_PRO_STY: 150,
+    STD_PRO_RSP: 150,
+    STD_PRO_REV: 100,
+
+    STD_PRM_RES: 400,
+    STD_PRM_ARC: 300,
+    STD_PRM_WRF: 500,
+    STD_PRM_UID: 1200,
+    STD_PRM_DSY: 400,
+    STD_PRM_RSP: 250,
+    STD_PRM_PRT: 300,
+    STD_PRM_REV: 150,
+
+    ADV_BAS_ANL: 150,
+    ADV_BAS_WRF: 300,
+    ADV_BAS_UID: 500,
+    ADV_BAS_STY: 150,
+    ADV_BAS_REV: 50,
+    ADV_BAS_DEL: 50,
+
+    ADV_PRO_RES: 350,
+    ADV_PRO_ARC: 300,
+    ADV_PRO_WRF: 450,
+    ADV_PRO_UID: 1000,
+    ADV_PRO_STY: 250,
+    ADV_PRO_STA: 250,
+    ADV_PRO_REV: 200,
+
+    ADV_PRM_RES: 600,
+    ADV_PRM_ARC: 450,
+    ADV_PRM_WRF: 700,
+    ADV_PRM_UID: 1800,
+    ADV_PRM_DSY: 600,
+    ADV_PRM_MIC: 400,
+    ADV_PRM_PRT: 600,
+    ADV_PRM_REV: 350,
+
+    ADD_RES_CMP: 200,
+    ADD_RES_UST: 400,
+    ADD_DES_PGW: 80,
+    ADD_DES_PGM: 120,
+    ADD_DES_ICN: 250,
+    ADD_DES_ILL: 150,
+    ADD_DES_DRK: 400,
+    ADD_PRT_ADV: 500,
+    ADD_PRT_MIC: 200,
+    ADD_DOC_HND: 300,
+    ADD_DOC_DEV: 250,
+    ADD_DOC_VID: 200,
+    ADD_SUP_MO1: 300,
+    ADD_SUP_REV: 100
+  
+  },
+
+
+    frontend: { static: 100, spa: 600 },
+
+
+    frontend: { static: 100, spa: 600 },
+
+
+    frontend: { static: 100, spa: 600 },
+
+
     frontend: { static: 100, spa: 600 }
 };

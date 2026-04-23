@@ -1,9 +1,11 @@
-/*
-  Author: Armin Silatani
-  Version: 2.3 (Dynamic Columns Fix)
-*/
+/* =========================================
+FOOTER COMPONENT (v2.3 – Dynamic Columns Fix)
+========================================= */
 
 class FooterComponent extends HTMLElement {
+  /* ------------------------------------------------------------------
+  CONSTRUCTOR
+  --------------------------------------------------------------------- */
   constructor() {
     super();
     const shadow = this.attachShadow({ mode: "open" });
@@ -58,8 +60,8 @@ class FooterComponent extends HTMLElement {
           width: 100%;
           height: 100%;
           display: block;
-            overflow-x: hidden !important;
-  max-width: 100%;
+          overflow-x: hidden !important;
+          max-width: 100%;
         }
 
         .footer-extra {
@@ -80,12 +82,12 @@ class FooterComponent extends HTMLElement {
           direction: rtl;
         }
 
-        /* ۳ ستونه وقتی ارز فعال باشد */
+        /* Three columns when currency is active */
         .footer-inner.three-col {
           grid-template-columns: repeat(3, 1fr);
         }
 
-        /* ۲ ستونه وسط وقتی ارز غیرفعال باشد */
+        /* Two centered columns when currency is disabled */
         .footer-inner.two-col {
           grid-template-columns: repeat(2, 1fr);
           justify-items: center;
@@ -170,57 +172,56 @@ class FooterComponent extends HTMLElement {
           border-top: 1px solid rgba(0,0,0,0.06);
         }
 
-/* MOBILE */
-@media (max-width: 768px) {
+        /* MOBILE */
+        @media (max-width: 768px) {
 
-  .footer-divider {
-    top: -100px;
-    height: 100px;
-  }
+          .footer-divider {
+            top: -100px;
+            height: 100px;
+          }
 
-  .footer-inner {
-    grid-template-columns: 1fr !important;
-    text-align: center;
-    gap: 40px;
-  }
+          .footer-inner {
+            grid-template-columns: 1fr !important;
+            text-align: center;
+            gap: 40px;
+          }
 
-  .column {
-    align-items: center;
-  }
+          .column {
+            align-items: center;
+          }
 
-  /* ارتباط با من */
-  .contact-column {
-    text-align: center;
-    align-items: center;
-  }
+          /* Contact column */
+          .contact-column {
+            text-align: center;
+            align-items: center;
+          }
 
-  .contact-column .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
+          .contact-column .contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+          }
 
-  .contact-column .contact a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-  }
+          .contact-column .contact a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+          }
 
-  .contact-column .contact i {
-    margin-left: -15px;
-    margin-right: 0;
-  }
+          .contact-column .contact i {
+            margin-left: -15px;
+            margin-right: 0;
+          }
 
-  /* شبکه اجتماعی */
-  .contact-column .social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
+          /* Social icons */
+          .contact-column .social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
 
         #currency-section {
           display: none;
@@ -250,7 +251,7 @@ class FooterComponent extends HTMLElement {
               </ul>
             </div>
 
-           <div class="column contact-column">
+            <div class="column contact-column">
               <h2>ارتباط با من</h2>
               <div class="contact">
                 <a href="tel:+989125759466"><i class="fa-solid fa-phone"></i>09125759466</a>
@@ -275,6 +276,9 @@ class FooterComponent extends HTMLElement {
     `;
   }
 
+  /* ------------------------------------------------------------------
+  CONNECTED CALLBACK
+  --------------------------------------------------------------------- */
   connectedCallback() {
     const inner = this.shadowRoot.querySelector("#footer-inner");
 
