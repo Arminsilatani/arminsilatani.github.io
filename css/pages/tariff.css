@@ -1,3 +1,7 @@
+/* ========================================= */
+/* PRICING PAGE */
+/* ========================================= */
+
 /* ::::::::::::::::::::::::::::::::::::::: GLOBAL BASE STYLES ::::::::::::::::::::::::::::::::::::::: */
 body {
     background: #0b0b0b;
@@ -14,17 +18,15 @@ body {
 }
 
 .scrolling-text-inner {
-    display: inline-flex;
-    align-items: center;
-    white-space: nowrap !important;
-    flex-shrink: 0 !important;
-    width: max-content;
+    display: inline-block;       /* مهم برای محاسبه دقیق scrollWidth */
+    white-space: nowrap;
+    width: auto;
+    max-width: none;
+    will-change: transform;
 }
-
-/* ========================================= */
-/* PRICING PAGE */
-/* ========================================= */
-
+.sliding-text {
+    animation: slideText 6s linear infinite alternate;
+}
 /* ------------------------------------------------------------------
 CURRENCY SELECTOR
 --------------------------------------------------------------------- */
@@ -307,17 +309,6 @@ SUB‑SERVICES (LIST OF ITEMS)
     padding: 0 40px 24px;
 }
 
-.sub-item {
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-    gap: 0;
-    padding: 14px 0;
-    flex-wrap: wrap;
-    row-gap: 0;
-}
-
 .sub-item:not([style*="display: none"]) {
     border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
 }
@@ -396,9 +387,9 @@ GROUPED SERVICES BOX
 }
 
 .sub-group-box .sub-item {
-    border-bottom: none !important;
-    margin-bottom: 8px !important;
-    padding: 0 !important;
+    border-bottom: none;
+    margin-bottom: 8px;
+    padding: 0;
 }
 
 .sub-group-box:empty {
@@ -417,14 +408,14 @@ GROUPED SERVICES BOX
 
 .grouped-services-box .sub-item {
     border-bottom: none !important;
-    padding-bottom: 0px !important;
-    margin-bottom: 8px !important;
-    padding-right: 0px !important;
-    padding-left: 0px !important;
+    padding-bottom: 0px;
+    margin-bottom: 4px;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
 .grouped-services-box .sub-item:last-child {
-    margin-bottom: 4px !important;
+    margin-bottom: 4px;
 }
 
 /* ------------------------------------------------------------------
@@ -516,14 +507,26 @@ INVOICE ITEM ROWS & ANIMATIONS
 .invoice-item .sliding-text-container {
     flex: 1 1 auto;
     min-width: 0;
+    overflow: hidden;
     display: flex;
     justify-content: flex-start;
 }
 
 .invoice-item .scrolling-text-inner {
-    max-width: 100%;
-    min-width: 0;
-    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    width: auto;
+    max-width: none;
+    will-change: transform;
+}
+
+@keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.invoice-item .scrolling-text-inner.animate {
+    animation: marquee 8s linear infinite;
 }
 
 .invoice-item .item-name .scrolling-text-inner {
@@ -551,19 +554,19 @@ INVOICE ITEM ROWS & ANIMATIONS
 }
 
 .invoice-item.bullet-yellow::before {
-    --c-on: #FFE76D !important;
+    --c-on: #FFE76D;
 }
 
 .invoice-item.bullet-green::before {
-    --c-on: #4ECDC4 !important;
+    --c-on: #4ECDC4;
 }
 
 .invoice-item.bullet-white::before {
-    --c-on: #f5f5f5 !important;
+    --c-on: #f5f5f5;
 }
 
 .item-name::before {
-    display: none !important;
+    display: none;
 }
 
 .invoice-item.entering {
@@ -625,11 +628,24 @@ INVOICE ITEM ROWS & ANIMATIONS
 /* ------------------------------------------------------------------
 ALIGNMENT FIXES & UTILITIES
 --------------------------------------------------------------------- */
+.sub-item {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 14px 0;
+    flex-wrap: nowrap;
+}
+
 .sub-item label {
     display: flex;
     align-items: center;
-    flex: 1 1 auto;
+    flex: 0 1 auto;
     min-width: 0;
+    margin: 0;
+    order: 3;
+    margin-left: auto;
 }
 
 .invoice-item .item-name {
@@ -652,7 +668,7 @@ ALIGNMENT FIXES & UTILITIES
     flex-shrink: 0;
     white-space: nowrap;
     color: #f5f5f5;
-    font-size: 1rem;
+    font-size: 0.8rem;
     letter-spacing: 0.5px;
 }
 
@@ -670,41 +686,7 @@ ALIGNMENT FIXES & UTILITIES
     transition: all 0.3s ease;
 }
 
-.sub-item label {
-    display: flex;
-    align-items: center;
-    flex: 0 1 auto;
-    min-width: 0;
+.sub-item > .qty-control-minimal {
+    order: 2;
     margin: 0;
-}
-
-label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: translateX(0);
-}
-
-.qty-control-minimal .qty-btn {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 50px;
-    color: #a0a0a0;
-    font-size: 14px;
-    font-weight: 400;
-    cursor: pointer;
-    width: 18px;
-    height: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease;
-    padding: 0;
-}
-
-.qty-control-minimal .qty-btn:hover {
-    background: rgba(255, 255, 255, 0.15);
-    color: #F5F5F5;
-    border-color: rgba(255, 255, 255, 0.3);
-    transform: scale(1.05);
 }
