@@ -384,8 +384,59 @@ export const basePricesUSD = {
     },
 
 
-    frontend: { static: 100, spa: 600 },
+  GRAPHIC: {
+    STD_BAS_LOG: 180,
+    STD_BAS_CTL: 200,
+    STD_BAS_CRD: 80,
+    STD_BAS_CNT: 70,
+    STD_BAS_LTR: 60,
 
+    STD_STR_LOG: 153,
+    STD_STR_CRD: 68,
+    STD_STR_LTR: 51,
 
-    frontend: { static: 100, spa: 600 }
+    STD_OFF_LOG: 126,
+    STD_OFF_CRD: 56,
+    STD_OFF_LTR: 42,
+    STD_OFF_CTL: 140,
+    STD_OFF_CNT: 49,
+
+    CUS_BAS_LOG: 350,
+    CUS_BAS_CRD: 150,
+    CUS_BAS_LTR: 120,
+    CUS_BAS_CTL: 400,
+    CUS_BAS_CNT: 100,
+
+    CUS_STR_LOG: 297.5,
+    CUS_STR_CRD: 127.5,
+    CUS_STR_LTR: 102,
+
+    CUS_OFF_LOG: 245,
+    CUS_OFF_CRD: 105,
+    CUS_OFF_LTR: 84,
+    CUS_OFF_CTL: 280,
+    CUS_OFF_CNT: 70,
+
+    ADD_REV_STD: 20,
+    ADD_SRC_STD: 25,
+    ADD_EXP_BAS_SIM: 40,
+    ADD_PNT_BAS: 30,
+    ADD_EXP_STR_SIM: 60,
+    ADD_PNT_STR: 35,
+    ADD_EXP_OFF_SIM: 90,
+    ADD_PNT_OFF: 40,
+    ADD_CTL_EXT: 40,
+    ADD_EXP_BAS_ADV: 80,
+    ADD_PNT_PRO_BAS: 50,
+    ADD_SRC_CUS: 40,
+    ADD_REV_CUS: 35,
+    ADD_MOC_BSC: 20,
+    ADD_EXP_STR_ADV: 120,
+    ADD_PNT_PRO_STR: 60,
+    ADD_EXP_OFF_ADV: 180,
+    ADD_PNT_PRO_OFF: 70,
+    ADD_MOC_PRO: 30
+
+  }
+
 };
