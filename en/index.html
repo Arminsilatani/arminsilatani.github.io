@@ -17,7 +17,7 @@ Version: 1.0.0
     <link rel="stylesheet" href="../css/main.css">
 
     <!-- ::::::::::::::::::::::::::::::::::::::::: SEO META ::::::::::::::::::::::::::::::::::::::::: -->
-    <title>Armin Silatani⚡Digital Marketing Expert</title>
+    <title>Armin Silatani ⚡ Digital Marketing Expert</title>
     <meta name="description" content="Professional digital marketing services: custom website design, proven SEO strategies, and Google Ads management by an experienced freelancer. Click for free consultation">
     <meta name="robots" content="noindex, nofollow">
     
@@ -27,8 +27,8 @@ Version: 1.0.0
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://arminsilatani.com/en/">
     <meta property="og:locale" content="en_US">
-    <meta property="og:image" content="https://arminsilatani.com/images/arminsilatani/HeroLogo.webp">
-    <meta property="og:image:alt" content="Armin Silatani - Digital Marketing Expert">
+    <meta property="og:image" content="https://arminsilatani.com/images/arminsilatani/FeaturedImage.webp">
+    <meta property="og:image:alt" content="Man working on a laptop sitting on a bean bag Chair with a small dog beside him.">
     
     <!-- ::::::::::::::::::::::::::::::::::::::: CANONICAL ::::::::::::::::::::::::::::::::::::::: -->
     <link rel="canonical" href="https://arminsilatani.com/en/">
@@ -44,65 +44,139 @@ Version: 1.0.0
 
     <!-- ::::::::::::::::::::::::::::::::::::::::: STRUCTURED DATA ::::::::::::::::::::::::::::::::::::::::: -->
     
-        <!-- WebPage -->
-    <script type="application/ld+json">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "datePublished": "2026-03-29",
-        "dateModified": "2026-03-29"
-    }
-    </script>
-    
-    <!-- Professional Service -->
-    <script type="application/ld+json">
+      "@type": "WebSite",
+      "@id": "#website",
+      "url": "https://arminsilatani.com/en/",
+      "name": "Armin Silatani",
+      "description": "Armin Silatani ⚡ Digital Marketing Expert",
+      "inLanguage": "en"
+    },
     {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Armin Silatani",
-        "image": "https://arminsilatani.com/images/arminsilatani/HeroLogo.webp",
-        "@id": "https://arminsilatani.com/en/#person",
-        "url": "https://arminsilatani.com/en/",
-        "telephone": "+989125759466",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Tehran",
-            "addressCountry": "IR"
+      "@type": "WebPage",
+      "@id": "#homepage",
+      "url": "https://arminsilatani.com/en/",
+      "name": "Armin Silatani ⚡ Digital Marketing Expert",
+      "isPartOf": { "@id": "#website" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://arminsilatani.com/images/arminsilatani/FeaturedImage.webp",
+        "width": "1080",
+        "height": "1080"
+      },
+      "mainContentOfPage": { "@id": "#main-content" },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": "h1, .intro"
+      },
+      "significantLink": [
+        "https://arminsilatani.com/en/services/",
+        "https://arminsilatani.com/en/about/",
+        "https://arminsilatani.com/en/contact/",
+        "https://arminsilatani.com/en/blog/"
+      ],
+      "relatedLink": [
+        "https://arminsilatani.com/en/portfolio/",
+        "https://arminsilatani.com/en/tariff/"
+      ]
+    },
+    {
+      "@type": "WebPageElement",
+      "@id": "#main-content",
+      "cssSelector": "#main-content",
+      "description": "About Armin Silatani, Digital Marketing Expert"
+    },
+    {
+      "@type": "Person",
+      "@id": "#person",
+      "name": "Armin Silatani",
+      "jobTitle": "Digital Marketing Expert",
+      "url": "https://arminsilatani.com/en/",
+      "image": "https://arminsilatani.com/images/arminsilatani/FeaturedImage.webp",
+      "sameAs": [
+        "https://www.linkedin.com/in/arminsilatani/",
+        "https://github.com/Arminsilatani",
+        "https://www.instagram.com/arminsilatani"
+      ],
+      "description": "Armin Silatani, web designer and SEO specialist with experience in designing e-commerce, corporate, and personal websites.",
+      "knowsLanguage": ["fa", "en", "ar", "tr", "de", "it"]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "#professional-service",
+      "name": "Armin Silatani, Digital Marketing Expert",
+      "url": "https://arminsilatani.com/en/",
+      "image": "https://arminsilatani.com/images/arminsilatani/FeaturedImage.webp",
+      "telephone": "+989125759466",
+      "email": "contact@arminsilatani.com",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Iran"
+      },
+      "provider": { "@id": "#person" },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+989125759466",
+          "availableLanguage": ["fa", "en", "ar", "tr", "de", "it"]
         },
-        "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Saturday", "Sunday"],
-            "opens": "09:00",
-            "closes": "18:00"
+        {
+          "@type": "ContactPoint",
+          "contactType": "WhatsApp",
+          "url": "https://wa.me/+989125759466"
+        }
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": { "@id": "#service-design" }
         },
-        "sameAs": [
-            "https://www.linkedin.com/in/arminsilatani/",
-            "https://github.com/Arminsilatani",
-            "https://www.instagram.com/arminsilatani",
-            "https://wa.me/+989125759466",
-            "https://t.me/ArminSilatani"
-        ],
-        "description": " Specialized SEO services, web design, and growth strategies by Armin Silatani."
-    }
-    </script>
-    
-    <!-- Person -->
-    <script type="application/ld+json">
+        {
+          "@type": "Offer",
+          "itemOffered": { "@id": "#service-seo" }
+        }
+      ]
+    },
     {
-        "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "#service-design",
+      "name": "Custom Web Design",
+      "provider": { "@id": "#professional-service" },
+      "description": "Design of responsive, corporate, e-commerce, and personal websites using the latest technologies.",
+      "serviceType": "Web Design"
+    },
+    {
+      "@type": "Service",
+      "@id": "#service-seo",
+      "name": "Search Engine Optimization (SEO)",
+      "provider": { "@id": "#professional-service" },
+      "description": "Keyword research, on-page and off-page SEO, and improving Google rankings.",
+      "serviceType": "SEO"
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": { "@id": "#professional-service" },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
         "@type": "Person",
-        "name": "Armin Silatani",
-        "jobTitle": "Digital Marketing Expert",
-        "url": "https://arminsilatani.com/en/",
-        "sameAs": [
-            "https://www.linkedin.com/in/arminsilatani/",
-            "https://github.com/Arminsilatani",
-            "https://www.instagram.com/arminsilatani",
-            "https://wa.me/+989125759466",
-            "https://t.me/ArminSilatani"
-        ]
+        "name": "Mahmoud Safari"
+      },
+      "datePublished": "2023-11-15",
+      "reviewBody": "I spent months working with what looked like a big agency, and honestly just wasted time. Since starting the SEO project with Armin, everything's changed."
     }
-    </script>
+  ]
+}
+</script>
 
 </head>
 <body>
@@ -122,13 +196,13 @@ Version: 1.0.0
             <language-component></language-component>
 
             <div class="hero-left">
-                <img src="../images/arminsilatani/HeroSloganEN.webp" alt="Slogan – آرمین سیلاطانی">
+                <img src="../images/arminsilatani/HeroSloganEN.webp" alt="Hand-drawn red text asking: Ready to HIT #1 on Google?">
             </div>
 
             <div class="hero-right">
                 <div class="blob-wrapper">
                     <div class="blob"></div>
-                    <img class="hero-img" src="../images/arminsilatani/HeroLogo.webp" alt="لوگوی آرمین سیلاطانی">
+                    <img class="hero-img" src="../images/arminsilatani/HeroLogo.webp" alt="Cartoon illustration of a man in a gray hoodie.">
                 </div>
             </div>
 
@@ -167,7 +241,7 @@ Version: 1.0.0
             </div>
 
             <div class="about-image">
-                <img src="../images/arminsilatani/AboutPicture.webp" alt="تصویر آرمین سیلاطانی">
+                <img src="../images/arminsilatani/AboutPicture.webp" alt="Man working on a laptop sitting on a bean bag Chair with a small dog beside him.">
             </div>
 
         </div>
@@ -181,7 +255,7 @@ Version: 1.0.0
 
         <div class="service-item service-main">
             <div class="service-header">
-                <img src="../images/arminsilatani/ServicesSloganEN.webp" alt="Services" class="service-image-top">
+                <img src="../images/arminsilatani/ServicesSloganEN.webp" alt="Handwritten turquoise text: What I DO" class="service-image-top">
             </div>
             <div class="service-text">
                 <p>
@@ -196,21 +270,21 @@ Version: 1.0.0
 
         <div class="service-item service-box-1 tv-static-container">
             <a href="#/">
-                <img src="../images/arminsilatani/ServicesWebDesignSloganEN.webp" alt="Web Design" class="service-image-bottom">
+                <img src="../images/arminsilatani/ServicesWebDesignSloganEN.webp" alt="Handwritten turquoise text: Web Design" class="service-image-bottom">
             </a>
             <div class="tv-noise"></div>
         </div>
 
         <div class="service-item service-box-2 tv-static-container">
             <a href="#/">
-                <img src="../images/arminsilatani/ServicesSEOSloganEN.webp" alt="SEO Services" class="service-image-bottom">
+                <img src="../images/arminsilatani/ServicesSEOSloganEN.webp" alt="Handwritten turquoise text: SEO Services" class="service-image-bottom">
             </a>
             <div class="tv-noise"></div>
         </div>
 
         <div class="service-item service-box-3 tv-static-container">
             <a href="#/">
-                <img src="../images/arminsilatani/ServicesAdsSloganEN.webp" alt="Google Ads" class="service-image-bottom">
+                <img src="../images/arminsilatani/ServicesAdsSloganEN.webp" alt="Handwritten turquoise text: Google Ads" class="service-image-bottom">
             </a>
             <div class="tv-noise"></div>
         </div>
@@ -231,7 +305,7 @@ Version: 1.0.0
  
     <section class="testimonials-section">
         <div class="testimonials-placeholder">
-            <img src="../images/arminsilatani/TestimonialSloganEN.webp" alt="Customer Testimonials">
+            <img src="../images/arminsilatani/TestimonialSloganEN.webp" alt="Handwritten turquoise text: What My Clients Say">
         </div>
     </section><div class="testimonials-container">
         <div class="column"><div class="testimonials" id="column1"></div></div>
@@ -268,7 +342,8 @@ Version: 1.0.0
                 name: "Mahmoud Safari",
                 role: "Director, Farhang Registration Institute",
                 content: "I spent months working with what looked like a big agency, and honestly just wasted time. Since starting the SEO project with Armin, everything's changed.",
-                image: "../images/arminsilatani/TestimonialMahmoodsafariOld.webp"
+                image: "../images/arminsilatani/TestimonialMahmoodsafariOld.webp",
+                alt: "Photo of a man wearing a dark shirt in a nighttime setting."
             },
             {
                 name: "آناهیتا درنیانی",

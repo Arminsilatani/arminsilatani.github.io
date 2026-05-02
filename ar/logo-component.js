@@ -18,6 +18,7 @@ class LogoComponent extends HTMLElement {
     this.logosPerRow = 11;
     this.totalRows = 6;
     this.centerImg = "../images/logo-component/LogoComponentSloganAR.webp";
+    this.centerImgAlt = "نص جرافيكي عملاء وثقوا بي بتصميم بخط اليد";
 
     /* Logo List */
     this.logoList = [

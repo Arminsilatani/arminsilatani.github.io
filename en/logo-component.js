@@ -18,6 +18,7 @@ class LogoComponent extends HTMLElement {
     this.logosPerRow = 11;
     this.totalRows = 6;
     this.centerImg = "../images/logo-component/LogoComponentSloganEN.webp";
+    this.centerImgAlt = "Hand-drawn graphic text: Who I've Worked With";
 
     /* Logo List */
     this.logoList = [

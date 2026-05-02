@@ -28,9 +28,9 @@ Version: 1.0.0
     <meta property="og:description" content="خدمات سيو متقدمة، تصميم مواقع احترافية وإدارة حملات Google Ads. استشارة مجانية الآن.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://arminsilatani.com/ar/">
-    <meta property="og:locale" content="ar_AR">
-    <meta property="og:image" content="https://arminsilatani.com/images/arminsilatani/HeroLogo.webp">
-    <meta property="og:image:alt" content="Armin Silatani - Digital Marketing Expert">
+    <meta property="og:locale" content="ar">
+    <meta property="og:image" content="https://arminsilatani.com/images/arminsilatani/FeaturedImage.webp">
+    <meta property="og:image:alt" content="رجل یعمل على حاسوب محمول جالساً على کرسي بین باج وبجانبه کلبه الصغیر">
 
 <!-- ::::::::::::::::::::::::::::::::::::::: CANONICAL ::::::::::::::::::::::::::::::::::::::: -->
     <link rel="canonical" href="https://arminsilatani.com/ar/">
@@ -45,73 +45,155 @@ Version: 1.0.0
     <link rel="alternate" hreflang="x-default" href="https://arminsilatani.com/en/">
 
 <!-- ::::::::::::::::::::::::::::::::::::::: STRUCTURED DATA ::::::::::::::::::::::::::::::::::::::: -->
-    
-    <!-- WebPage -->
-    <script type="application/ld+json">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "datePublished": "2026-03-29",
-        "dateModified": "2026-03-29"
-    }
-    </script>
-
-    <!-- Professional Service -->
-    <script type="application/ld+json">
+      "@type": "WebSite",
+      "@id": "#website",
+      "url": "https://arminsilatani.com/ar/",
+      "name": "آرمین سیلاطانی",
+      "description": "آرمین سیلاطانی ⚡ خبير التسويق الرقمي",
+      "inLanguage": "ar"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "#homepage",
+      "url": "https://arminsilatani.com/ar/",
+      "name": "آرمین سیلاطانی ⚡ خبير التسويق الرقمي",
+      "isPartOf": {
+        "@id": "#website"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://arminsilatani.com/images/arminsilatani/FeaturedImage.webp",
+        "width": "1080",
+        "height": "1080"
+      },
+      "mainContentOfPage": {
+        "@id": "#main-content"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": "h1, .intro"
+      },
+      "significantLink": [
+        "https://arminsilatani.com/ar/services/",
+        "https://arminsilatani.com/ar/about/",
+        "https://arminsilatani.com/ar/contact/",
+        "https://arminsilatani.com/ar/blog/"
+      ],
+      "relatedLink": [
+        "https://arminsilatani.com/ar/portfolio/",
+        "https://arminsilatani.com/ar/tariff/"
+      ]
+    },
+    {
+      "@type": "WebPageElement",
+      "@id": "#main-content",
+      "cssSelector": "#main-content",
+      "description": "نبذة عن آرمين سيلاطاني، خبير التسويق الرقمي"
+    },
+    {
+      "@type": "Person",
+      "@id": "#person",
+      "name": "آرمین سیلاطانی",
+      "jobTitle": "خبير التسويق الرقمي",
+      "url": "https://arminsilatani.com/ar/",
+      "image": "https://arminsilatani.com/images/arminsilatani/FeaturedImage.webp",
+      "sameAs": [
+        "https://www.linkedin.com/in/arminsilatani/",
+        "https://github.com/Arminsilatani",
+        "https://www.instagram.com/arminsilatani"
+      ],
+      "description": "آرمين سيلاطاني، مصمم مواقع وخبير سيو ذو خبرة في تصميم المواقع التجارية والشركات والمواقع الشخصية"
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "#professional-service",
+      "name": "آرمين سيلاطاني، خبير التسويق الرقمي",
+      "url": "https://arminsilatani.com/ar/",
+      "image": "https://arminsilatani.com/images/arminsilatani/FeaturedImage.webp",
+      "telephone": "+989125759466",
+      "email": "contact@arminsilatani.com",
+      "areaServed": {
+        "@type": "Country",
+        "name": "إيران"
+      },
+      "provider": {
+        "@id": "#person"
+      },
+      "contactPoint": [
         {
-          "@context": "https://schema.org",
-          "@type": "ProfessionalService",
-          "name": "آرمین سيلاطاني",
-          "image": "https://arminsilatani.com/images/arminsilatani/HeroLogo.webp",
-          "@id": "https://arminsilatani.com/#person",
-          "url": "https://arminsilatani.com",
+          "@type": "ContactPoint",
+          "contactType": "customer service",
           "telephone": "+989125759466",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Tehran",
-            "addressCountry": "IR"
-          },
-          "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Saturday",
-              "Sunday"
-            ],
-            "opens": "09:00",
-            "closes": "18:00"
-          },
-          "sameAs": [
-            "https://www.linkedin.com/in/arminsilatani/",
-            "https://github.com/Arminsilatani",
-            "https://www.instagram.com/arminsilatani",
-            "https://wa.me/+989125759466",
-            "https://t.me/ArminSilatani"
-          ],
-          "description": "خدمات سيو متخصصة، تصميم مواقع واستراتيجيات نمو رقمي من آرمين سيلاطاني."
-        }
-    </script>
-
-    <!-- Person -->
-    <script type="application/ld+json">
+          "availableLanguage": "العربية"
+        },
         {
-          "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "آرمین سيلاطاني",
-          "jobTitle": "خبير التسويق الرقمي",
-          "url": "https://arminsilatani.com/",
-          "sameAs": [
-            "https://www.linkedin.com/in/arminsilatani/",
-            "https://github.com/Arminsilatani",
-            "https://www.instagram.com/arminsilatani",
-            "https://wa.me/+989125759466",
-            "https://t.me/ArminSilatani"
-          ]
+          "@type": "ContactPoint",
+          "contactType": "WhatsApp",
+          "url": "https://wa.me/+989125759466"
         }
-    </script>
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@id": "#service-design"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@id": "#service-seo"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "#service-design",
+      "name": "تصميم مواقع مخصص",
+      "provider": {
+        "@id": "#professional-service"
+      },
+      "description": "تصميم مواقع متجاوبة، شركات، متاجر إلكترونية ومواقع شخصية بأحدث التقنيات.",
+      "serviceType": "تصميم المواقع"
+    },
+    {
+      "@type": "Service",
+      "@id": "#service-seo",
+      "name": "تحسين محركات البحث (SEO)",
+      "provider": {
+        "@id": "#professional-service"
+      },
+      "description": "بحث عن الكلمات المفتاحية، سيو داخلي وخارجي، زيادة الترتيب في غوغل.",
+      "serviceType": "سيو"
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": {
+        "@id": "#professional-service"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "محمود صفري"
+      },
+      "datePublished": "2023-11-15",
+      "reviewBody": "فترة طويلة وأنا مسلم شغل الموقع والسيو لشركتي لمكتب كبير بالاسم بس، والنتيجة؟ ضيعت وقت كثير. لكن من يوم ما بدأنا مشروع السيو مع الأستاذ سيلاطاني، الوضع انقلب 180 درجة."
+    }
+  ]
+}
+</script>
 
 </head>
 
@@ -134,7 +216,7 @@ Version: 1.0.0
 
         <div class="hero-left">
             <img src="../images/arminsilatani/HeroSloganAR.webp"
-                 alt="Slogan – آرمین سیلاطانی">
+                 alt="نص جرافيكي لعبارة -هل أنت مستعد لتجربة المركز الأول في جوجل؟- بتصميم بخط اليد ولون أحمر">
         </div>
 
         <div class="hero-right">
@@ -144,7 +226,7 @@ Version: 1.0.0
 
                 <img class="hero-img"
                      src="../images/arminsilatani/HeroLogo.webp"
-                     alt="لوگوی آرمین سیلاطانی">
+                     alt="رسم کارتونی لرجل یرتدي هودي رمادي">
             </div>
 
         </div>
@@ -200,7 +282,7 @@ Version: 1.0.0
         <div class="about-image">
 
             <img src="../images/arminsilatani/AboutPicture.webp"
-                 alt="تصویر آرمین سیلاطانی">
+                 alt="رجل یعمل على حاسوب محمول جالساً على کرسي بین باج وبجانبه کلبه الصغیر">
 
         </div>
 
@@ -219,7 +301,7 @@ Version: 1.0.0
         <div class="service-header">
 
             <img src="../images/arminsilatani/ServicesSloganAR.webp"
-                 alt="خدمات من"
+                 alt="نص جرافيكي لعبارة ما أقدمه بتصميم بخط اليد ولون فيروزي"
                  class="service-image-top">
 
         </div>
@@ -242,7 +324,7 @@ Version: 1.0.0
     <div class="service-item service-box-1 tv-static-container">
         <a href="#/">
             <img src="../images/arminsilatani/ServicesWebDesignSloganAR.webp"
-                 alt="طراحی سایت"
+                 alt="نص جرافيكي لعبارة تصميم المواقع بتصميم بخط اليد ولون فيروزي"
                  class="service-image-bottom">
         </a>
         <div class="tv-noise"></div>
@@ -251,7 +333,7 @@ Version: 1.0.0
     <div class="service-item service-box-2 tv-static-container">
         <a href="#/">
             <img src="../images/arminsilatani/ServicesSEOSloganAR.webp"
-                 alt="سئو سایت"
+                 alt="نص جرافيكي لعبارة خدمات السیو بتصميم بخط اليد ولون فيروزي"
                  class="service-image-bottom">
         </a>
         <div class="tv-noise"></div>
@@ -260,7 +342,7 @@ Version: 1.0.0
     <div class="service-item service-box-3 tv-static-container">
         <a href="#/">
             <img src="../images/arminsilatani/ServicesAdsSloganAR.webp"
-                 alt="گوگل ادز"
+                 alt="نص جرافيكي لعبارة أعلانات جوجل بتصميم بخط اليد ولون فيروزي"
                  class="service-image-bottom">
         </a>
         <div class="tv-noise"></div>
@@ -284,7 +366,7 @@ Version: 1.0.0
 
     <div class="testimonials-placeholder">
         <img src="../images/arminsilatani/TestimonialSloganAR.webp"
-             alt="Customer Testimonials">
+             alt="نص جرافيكي لعبارة شهادات عملاء حققوا نتائج حقیقة بتصميم بخط اليد ولون فيروزي">
     </div>
 
 </section>
@@ -334,7 +416,8 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "محمود صفري",
             role: "مدير مؤسسة تسجيل فرهنگ",
             content: "فترة طويلة وأنا مسلم شغل الموقع والسيو لشركتي لمكتب كبير بالاسم بس، والنتيجة؟ ضيعت وقت كثير. لكن من يوم ما بدأنا مشروع السيو مع الأستاذ سيلاطاني، الوضع انقلب 180 درجة.",
-            image: "../images/arminsilatani/TestimonialMahmoodsafariOld.webp"
+            image: "../images/arminsilatani/TestimonialMahmoodsafariOld.webp",
+            alt: "صورة لرجل یرتدي قمیصاً داکناً في مشهد لیلي"
         },
         {
             name: "آناهیتا درنیانی",
