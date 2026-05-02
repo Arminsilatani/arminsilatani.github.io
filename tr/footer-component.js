@@ -1,16 +1,18 @@
 /*
-  Author: Armin Silatani
-  Date: 2026-03-29
-  Version: 1.0.0
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-02
+  *  Version: 1.1.0
+  ****************************************************
 */
 
-class FooterComponent extends HTMLElement {
+/* =========================== FOOTER COMPONENT ============================ */
 
+class FooterComponent extends HTMLElement {
+  /* ------------------------- CONSTRUCTOR ------------------------- */
   constructor() {
     super();
-
     const shadow = this.attachShadow({ mode: "open" });
-
     const color = this.getAttribute("color") || "#4ECDC4";
     const shadowColor = this.getAttribute("shadow-color") || "rgba(0,0,0,0.75)";
 
@@ -30,95 +32,106 @@ class FooterComponent extends HTMLElement {
     `;
 
     shadow.innerHTML = `
-      <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        media="print"
-        onload="this.media='all'">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
       <style>
+        /* :::::::::::::::::::::::::: FOOTER STYLES :::::::::::::::::::::::::: */
+
         :host {
           display: block;
           width: 100%;
-          margin-top: -115px;
           background: #0d0d0d;
           box-sizing: border-box;
+          overflow: visible;
         }
 
-        /* ::::::::::::::::::::::::::::::::::::::: DIVIDER ::::::::::::::::::::::::::::::::::::::: */
+        .footer-wrapper {
+          width: 100%;
+          background: #0d0d0d;
+          overflow: visible;
+          position: relative;
+        }
 
         .footer-divider {
-          position: relative;
+          position: absolute;
+          top: -160px;
+          left: 0;
           width: 100%;
           height: 160px;
           z-index: 2;
+          pointer-events: none;
         }
 
         .divider-svg {
           width: 100%;
           height: 100%;
           display: block;
+          overflow-x: hidden !important;
+          max-width: 100%;
         }
-
-        /* ::::::::::::::::::::::::::::::::::::::: FOOTER BODY ::::::::::::::::::::::::::::::::::::::: */
 
         .footer-extra {
           width: 100%;
           background: ${color};
           color: #0d0d0d;
-          padding: 50px 20px 90px;
+          padding: 90px 0px 90px;
           display: flex;
           justify-content: center;
-          box-sizing: border-box;
         }
 
         .footer-inner {
           width: 100%;
-          max-width: 950px;
-          display: flex;
-          justify-content: center;
-          align-items: flex-start;
-          gap: 160px;
-          flex-wrap: wrap;
+          max-width: 1100px;
+          display: grid;
+          gap: 60px;
+          align-items: start;
+          direction: ltr;
+        }
+
+        /* Three columns when currency is active */
+        .footer-inner.three-col {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        /* Two centered columns when currency is disabled */
+        .footer-inner.two-col {
+          grid-template-columns: repeat(2, 1fr);
+          justify-items: center;
         }
 
         .column {
           display: flex;
           flex-direction: column;
-          gap: 15px;
+          gap: 10px;
         }
 
         h2 {
           margin: 0;
           font-size: 1.4rem;
           font-weight: 900;
+          margin-bottom: 5px;
         }
-
-        /* ::::::::::::::::::::::::::::::::::::::: MENU ::::::::::::::::::::::::::::::::::::::: */
 
         .menu {
           list-style: none;
-          margin: 0;
           padding: 0;
+          margin: 0;
           display: flex;
-          gap: 22px;
+          gap: 30px;
+          row-gap: 10px;
+          flex-wrap: wrap;
         }
 
         .menu a {
           color: inherit;
           text-decoration: none;
+          font-weight: 400;
           transition: color .25s;
         }
 
         .menu a:hover {
           color: #f5f5f5;
         }
-
-        .menu a.active {
-          color: #f5f5f5;
-          font-weight: 700;
-        }
-
-        /* ::::::::::::::::::::::::::::::::::::::: CONTACT ::::::::::::::::::::::::::::::::::::::: */
 
         .contact {
           display: flex;
@@ -132,15 +145,10 @@ class FooterComponent extends HTMLElement {
           transition: color .25s;
         }
 
-        .contact a:hover {
-          color: #f5f5f5;
-        }
-
         .contact i {
-          margin-right: 8px;
+          margin-left: 8px;
+          width: 20px;
         }
-
-        /* ::::::::::::::::::::::::::::::::::::::: SOCIAL ::::::::::::::::::::::::::::::::::::::: */
 
         .social {
           display: flex;
@@ -154,107 +162,142 @@ class FooterComponent extends HTMLElement {
           transition: color .25s;
         }
 
-        .social a:hover {
-          color: #f5f5f5;
+        /* COPYRIGHT */
+        .copyright {
+          width: 100%;
+          background: ${color};
+          color: #0d0d0d;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding: 20px 10px;
+          font-size: .75rem;
+          font-weight: 400;
+          box-sizing: border-box;
+          border-top: 1px solid rgba(0,0,0,0.06);
         }
 
-        /* ::::::::::::::::::::::::::::::::::::::: MOBILE ::::::::::::::::::::::::::::::::::::::: */
-
+        /* MOBILE */
         @media (max-width: 768px) {
+
+          .footer-divider {
+            top: -100px;
+            height: 100px;
+          }
+
           .footer-inner {
-            flex-direction: column;
-            align-items: center;
+            grid-template-columns: 1fr !important;
             text-align: center;
-            gap: 50px;
+            gap: 40px;
           }
 
           .column {
             align-items: center;
           }
 
-          .contact {
+          /* Contact column */
+          .contact-column {
+            text-align: center;
             align-items: center;
           }
 
-          .social {
+          .contact-column .contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
+            width: 100%;
           }
 
-          .menu {
+          .contact-column .contact a {
+            display: inline-flex;
             justify-content: center;
-            flex-wrap: wrap;
+            align-items: center;
           }
+
+          .contact-column .contact i {
+            margin-left: -15px;
+            margin-right: 0;
+          }
+
+          /* Social icons */
+          .contact-column .social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+
+        #currency-section {
+          display: none;
         }
       </style>
 
-      <div class="footer-divider">
-        ${svg}
-      </div>
+      <div class="footer-wrapper">
 
-      <footer class="footer-extra">
-        <div class="footer-inner">
+        <div class="footer-divider">${svg}</div>
 
-          <div class="column">
-            <div class="contact">
-              <a href="tel:+989125759466">
-                <i class="fa-solid fa-phone"></i>
-                +989125759466
-              </a>
-              <a href="mailto:contact@arminsilatani.com">
-                <i class="fa-solid fa-envelope"></i>
-                contact[at]arminsilatani.com
-              </a>
+        <footer class="footer-extra">
+          <div class="footer-inner" id="footer-inner">
+
+            <div class="column" id="currency-section">
+              <h2>Para Birimi Seç</h2>
+              <div id="currency-container"></div>
             </div>
 
-            <div class="social">
-              <a href="https://www.linkedin.com/in/arminsilatani/" target="_blank" rel="noopener">
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-              <a href="https://github.com/Arminsilatani" target="_blank" rel="noopener">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a href="https://www.instagram.com/arminsilatani" target="_blank" rel="noopener">
-                <i class="fa-brands fa-instagram"></i>
-              </a>
-              <a href="https://wa.me/+989125759466" target="_blank" rel="noopener">
-                <i class="fa-brands fa-whatsapp"></i>
-              </a>
-              <a href="https://t.me/ArminSilatani" target="_blank" rel="noopener">
-                <i class="fa-brands fa-telegram"></i>
-              </a>
+            <div class="column">
+              <h2>Faydalı Linkler</h2>
+              <ul class="menu">
+                <li><a href="/#/">Giriş</a></li>
+                <li><a href="/#/">Blog</a></li>
+                <li><a href="/#/">Araçlar</a></li>
+                <li><a href="/tr/sitemap/">Site Haritası</a></li>
+                <li><a href="/#/">CV İndir</a></li>
+              </ul>
             </div>
-          </div>
 
-          <div class="column">
-            <h2>Faydalı Linkler</h2>
-            <ul class="menu">
-              <li><a href="/login">Giriş</a></li>
-              <li><a href="/blog">Blog</a></li>
-              <li><a href="/tr/sitemap">Site Haritası</a></li>
-              <li><a href="/resume.pdf">CV İndir</a></li>
-            </ul>
-          </div>
+            <div class="column contact-column">
+              <h2>İletişim</h2>
+              <div class="contact">
+                <a href="tel:+989125759466"><i class="fa-solid fa-phone"></i>09125759466</a>
+                <a href="mailto:contact@arminsilatani.com"><i class="fa-solid fa-envelope"></i>contact[at]arminsilatani.com</a>
+              </div>
+              <div class="social">
+                <a href="https://www.linkedin.com/in/arminsilatani/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Arminsilatani" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/arminsilatani" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://t.me/ArminSilatani" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+              </div>
+            </div>
 
+          </div>
+        </footer>
+
+        <div class="copyright">
+          Tüm hakları saklıdır.. Ama takip edecek mecalim yok, lütfen siz kendiniz riayet edin.
         </div>
-      </footer>
+
+      </div>
     `;
-
-    this.setActiveLink(shadow);
   }
 
-  setActiveLink(shadow) {
-    const links = shadow.querySelectorAll(".menu a");
-    const currentPath = window.location.pathname;
+  /* ------------------------- CONNECTED CALLBACK ------------------------- */
+  connectedCallback() {
+    const inner = this.shadowRoot.querySelector("#footer-inner");
 
-    links.forEach(link => {
-      const linkPath = new URL(link.href).pathname;
+    if (this.hasAttribute("currency")) {
+      const section = this.shadowRoot.querySelector("#currency-section");
+      const container = this.shadowRoot.querySelector("#currency-container");
+      section.style.display = "flex";
+      inner.classList.add("three-col");
 
-      if (currentPath === linkPath || currentPath.startsWith(linkPath + "/")) {
-        link.classList.add("active");
-      }
-    });
+      const selector = document.createElement("currency-selector");
+      container.appendChild(selector);
+    } else {
+      inner.classList.add("two-col");
+    }
   }
-
 }
 
 customElements.define("footer-component", FooterComponent);

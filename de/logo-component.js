@@ -1,25 +1,28 @@
 /*
-  Author: Armin Silatani
-  Date: 2026-03-29
-  Version: 1.0.0
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-02
+  *  Version: 1.1.0
+  ****************************************************
 */
 
-/* ========================================================================================================
-   LOGO COMPONENT - Custom Web Component for Animated Partner Logos
-   ======================================================================================================== */
+/* =========================== LOGO COMPONENT ============================ */
+/* ::::::::::::::::::::::::::::: CUSTOM ELEMENT DEFINITION ::::::::::::::::::::::::::::: */
 
 class LogoComponent extends HTMLElement {
 
+  /* ------------------------- CONSTRUCTOR & CONFIG ------------------------- */
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
 
-    /* Configuration */
+    // Layout & content configuration
     this.logosPerRow = 11;
     this.totalRows = 6;
     this.centerImg = "../images/logo-component/LogoComponentSloganDE.webp";
+    this.centerImgAlt = "Handgezeichneter Text: Die mich gewählt haben";
 
-    /* Logo List */
+    // Complete logo list – each row picks a random subset
     this.logoList = [
       "../images/logo-component/AlvandtasisatLogoOld.webp",
       "../images/logo-component/HevaapsLogoOld.webp",
@@ -70,6 +73,7 @@ class LogoComponent extends HTMLElement {
     ];
   }
 
+  /* ------------------------- LIFECYCLE: RENDER ------------------------- */
   connectedCallback() {
     this.render();
   }
@@ -78,147 +82,147 @@ class LogoComponent extends HTMLElement {
     const template = document.createElement('template');
     template.innerHTML = `
       <style>
-      :host {
-        display: block;
-        font-family: sans-serif;
-      }
-
-      .partners-section {
-        width: 100%;
-        padding: 60px 0;
-        position: relative;
-        overflow: hidden;
-        direction: ltr;
-      }
-
-      .marquee-container {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        width: 100%;
-        position: relative;
-        z-index: 0;
-      }
-
-      .marquee-row {
-        display: flex;
-        white-space: nowrap;
-        width: 100%;
-      }
-
-      .marquee {
-        display: flex;
-        gap: 35px;
-        padding: 4px 0;
-        animation-duration: 15s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-        will-change: transform;
-      }
-
-      .marquee-right {
-        animation-name: scrollRight;
-      }
-
-      .marquee-left {
-        animation-name: scrollLeft;
-      }
-
-      .marquee-item {
-        flex: 0 0 auto;
-        width: 120px;
-        height: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 35px;
-        flex-shrink: 0;
-        opacity: 0.6;
-        transition: opacity 0.3s;
-      }
-
-      .marquee-item:nth-child(11n) {
-        margin-right: 0;
-      }
-
-      .marquee-item img {
-        max-width: 100%;
-        max-height: 100%;
-        width: auto;
-        height: auto;
-        object-fit: contain;
-        opacity: 0.6;
-        filter: blur(18px);
-        transform: scale(1.05);
-        transition: filter 0.6s ease, transform 0.6s ease, opacity 0.3s;
-      }
-
-      .marquee-item img.blurup-loaded {
-        filter: blur(0);
-        transform: scale(1);
-      }
-
-      .marquee-item img:hover {
-        opacity: 1;
-      }
-
-      .center-image {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        width: 50%;
-        max-width: 90vw;
-        max-height: 36vw;
-        overflow: hidden;
-        pointer-events: none;
-      }
-
-      .center-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        filter: blur(18px) drop-shadow(0 3px 4px rgba(0,0,0,0.4));
-        transform: scale(1.05);
-        transition: filter 0.6s ease, transform 0.6s ease;
-      }
-
-      .center-image img.blurup-loaded {
-        filter: drop-shadow(0 3px 4px rgba(0,0,0,0.4));
-        transform: scale(1);
-      }
-
-      @keyframes scrollRight {
-        0% { transform: translateX(-50%); }
-        100% { transform: translateX(0); }
-      }
-
-      @keyframes scrollLeft {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-      }
-
-      @media (max-width: 1100px) {
-        .partners-section {
-          padding: 30px 0;
+        :host {
+          display: block;
+          font-family: sans-serif;
         }
 
-        .center-image {
-          width: 95vw;
-          height: calc(95vw * 0.4);
+        .partners-section {
+          width: 100%;
+          padding: 60px 0;
+          position: relative;
+          overflow: hidden;
+          direction: ltr;
+        }
+
+        .marquee-container {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          width: 100%;
+          position: relative;
+          z-index: 0;
+        }
+
+        .marquee-row {
+          display: flex;
+          white-space: nowrap;
+          width: 100%;
+        }
+
+        .marquee {
+          display: flex;
+          gap: 35px;
+          padding: 4px 0;
+          animation-duration: 15s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+          will-change: transform;
+        }
+
+        .marquee-right {
+          animation-name: scrollRight;
+        }
+
+        .marquee-left {
+          animation-name: scrollLeft;
         }
 
         .marquee-item {
+          flex: 0 0 auto;
           width: 120px;
           height: 70px;
-          margin-right: 25px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 35px;
+          flex-shrink: 0;
+          opacity: 0.6;
+          transition: opacity 0.3s;
         }
 
         .marquee-item:nth-child(11n) {
           margin-right: 0;
         }
-      }
+
+        .marquee-item img {
+          max-width: 100%;
+          max-height: 100%;
+          width: auto;
+          height: auto;
+          object-fit: contain;
+          opacity: 0.6;
+          filter: blur(18px);
+          transform: scale(1.05);
+          transition: filter 0.6s ease, transform 0.6s ease, opacity 0.3s;
+        }
+
+        .marquee-item img.blurup-loaded {
+          filter: blur(0);
+          transform: scale(1);
+        }
+
+        .marquee-item img:hover {
+          opacity: 1;
+        }
+
+        .center-image {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+          width: 50%;
+          max-width: 90vw;
+          max-height: 36vw;
+          overflow: hidden;
+          pointer-events: none;
+        }
+
+        .center-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          filter: blur(18px) drop-shadow(0 3px 4px rgba(0,0,0,0.4));
+          transform: scale(1.05);
+          transition: filter 0.6s ease, transform 0.6s ease;
+        }
+
+        .center-image img.blurup-loaded {
+          filter: drop-shadow(0 3px 4px rgba(0,0,0,0.4));
+          transform: scale(1);
+        }
+
+        @keyframes scrollRight {
+          0% { transform: translateX(-50%); }
+          100% { transform: translateX(0); }
+        }
+
+        @keyframes scrollLeft {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+
+        @media (max-width: 1100px) {
+          .partners-section {
+            padding: 30px 0;
+          }
+
+          .center-image {
+            width: 95vw;
+            height: calc(95vw * 0.4);
+          }
+
+          .marquee-item {
+            width: 120px;
+            height: 70px;
+            margin-right: 25px;
+          }
+
+          .marquee-item:nth-child(11n) {
+            margin-right: 0;
+          }
+        }
       </style>
 
       <section class="partners-section">
@@ -226,7 +230,7 @@ class LogoComponent extends HTMLElement {
         <div class="center-image">
           <img
             src="${this.centerImg}"
-            alt="Those who chose me"
+            alt="${this.centerImgAlt}"
             data-blurup="true"
             loading="eager"
             fetchpriority="high"
@@ -239,6 +243,7 @@ class LogoComponent extends HTMLElement {
 
     const container = this.shadowRoot.getElementById('marqueeContainer');
 
+    // Generate marquee rows
     for (let i = 0; i < this.totalRows; i++) {
       const rowLogos = this.shuffleArray([...this.logoList]).slice(0, this.logosPerRow);
       const direction = i % 2 === 0 ? 'right' : 'left';
@@ -246,9 +251,15 @@ class LogoComponent extends HTMLElement {
       container.appendChild(row);
     }
 
+    // Start blur‑up observation for all images
     this.initBlurEngine();
   }
 
+  /* ------------------------- HELPERS ------------------------- */
+
+  /**
+   * Fisher‑Yates shuffle – returns a new array.
+   */
   shuffleArray(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -257,6 +268,12 @@ class LogoComponent extends HTMLElement {
     return arr;
   }
 
+  /**
+   * Builds a single marquee row with duplicated logos for seamless animation.
+   * @param {string[]} logos – unique logos for this row
+   * @param {string} direction – 'right' or 'left'
+   * @returns {HTMLDivElement}
+   */
   createMarqueeRow(logos, direction) {
     const rowDiv = document.createElement('div');
     rowDiv.className = 'marquee-row';
@@ -264,6 +281,7 @@ class LogoComponent extends HTMLElement {
     const marqueeDiv = document.createElement('div');
     marqueeDiv.className = `marquee marquee-${direction}`;
 
+    // Duplicate the logo set so the animation loops without gaps
     const repeatedLogos = [...logos, ...logos];
 
     repeatedLogos.forEach(src => {
@@ -285,6 +303,9 @@ class LogoComponent extends HTMLElement {
     return rowDiv;
   }
 
+  /**
+   * IntersectionObserver that removes the initial blur once an image enters the viewport.
+   */
   initBlurEngine() {
     const images = this.shadowRoot.querySelectorAll('img[data-blurup]');
 
@@ -313,6 +334,7 @@ class LogoComponent extends HTMLElement {
   }
 }
 
+// Register the custom element (if not already defined)
 if (!customElements.get('logo-component')) {
   customElements.define('logo-component', LogoComponent);
 }

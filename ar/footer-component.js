@@ -1,11 +1,15 @@
-/* =========================================
-FOOTER COMPONENT (v2.3 – Dynamic Columns Fix)
-========================================= */
+/*
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-02
+  *  Version: 1.1.0
+  ****************************************************
+*/
+
+/* =========================== FOOTER COMPONENT (v2.3 – Dynamic Columns Fix) ============================ */
 
 class FooterComponent extends HTMLElement {
-  /* ------------------------------------------------------------------
-  CONSTRUCTOR
-  --------------------------------------------------------------------- */
+  /* ------------------------- CONSTRUCTOR ------------------------- */
   constructor() {
     super();
     const shadow = this.attachShadow({ mode: "open" });
@@ -276,9 +280,7 @@ class FooterComponent extends HTMLElement {
     `;
   }
 
-  /* ------------------------------------------------------------------
-  CONNECTED CALLBACK
-  --------------------------------------------------------------------- */
+  /* ------------------------- CONNECTED CALLBACK ------------------------- */
   connectedCallback() {
     const inner = this.shadowRoot.querySelector("#footer-inner");
 

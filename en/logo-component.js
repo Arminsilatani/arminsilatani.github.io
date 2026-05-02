@@ -1,26 +1,27 @@
 /*
-  Author: Armin Silatani
-  Date: 2026-03-29
-  Version: 1.0.0
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-02
+  *  Version: 1.1.0
+  ****************************************************
 */
 
-/* ========================================================================================================
-   LOGO COMPONENT - Custom Web Component for Animated Partner Logos
-   ======================================================================================================== */
+/* =========================== LOGO COMPONENT ============================ */
 
 class LogoComponent extends HTMLElement {
+
+  /* ------------------------- CONSTRUCTOR ------------------------- */
 
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
 
-    /* Configuration */
+    // Configuration
     this.logosPerRow = 11;
     this.totalRows = 6;
     this.centerImg = "../images/logo-component/LogoComponentSloganEN.webp";
-    this.centerImgAlt = "Hand-drawn graphic text: Who I've Worked With";
 
-    /* Logo List */
+    // Partner logo URLs
     this.logoList = [
       "../images/logo-component/AlvandtasisatLogoOld.webp",
       "../images/logo-component/HevaapsLogoOld.webp",
@@ -71,9 +72,13 @@ class LogoComponent extends HTMLElement {
     ];
   }
 
+  /* ------------------------- LIFECYCLE ------------------------- */
+
   connectedCallback() {
     this.render();
   }
+
+  /* ------------------------- RENDER ------------------------- */
 
   render() {
     const template = document.createElement('template');
@@ -238,8 +243,8 @@ class LogoComponent extends HTMLElement {
 
     this.shadowRoot.appendChild(template.content.cloneNode(true));
 
+    // Build the marquee rows
     const container = this.shadowRoot.getElementById('marqueeContainer');
-
     for (let i = 0; i < this.totalRows; i++) {
       const rowLogos = this.shuffleArray([...this.logoList]).slice(0, this.logosPerRow);
       const direction = i % 2 === 0 ? 'right' : 'left';
@@ -247,8 +252,11 @@ class LogoComponent extends HTMLElement {
       container.appendChild(row);
     }
 
+    // Start the blur‑up reveal
     this.initBlurEngine();
   }
+
+  /* ------------------------- HELPERS ------------------------- */
 
   shuffleArray(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
@@ -265,6 +273,7 @@ class LogoComponent extends HTMLElement {
     const marqueeDiv = document.createElement('div');
     marqueeDiv.className = `marquee marquee-${direction}`;
 
+    // Duplicate logos for seamless looping
     const repeatedLogos = [...logos, ...logos];
 
     repeatedLogos.forEach(src => {
@@ -313,6 +322,8 @@ class LogoComponent extends HTMLElement {
     images.forEach(img => observer.observe(img));
   }
 }
+
+/* ------------------------- REGISTRATION ------------------------- */
 
 if (!customElements.get('logo-component')) {
   customElements.define('logo-component', LogoComponent);

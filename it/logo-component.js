@@ -1,15 +1,14 @@
 /*
-  Author: Armin Silatani
-  Date: 2026-03-29
-  Version: 1.0.0
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-02
+  *  Version: 1.1.0
+  ****************************************************
 */
 
-/* ========================================================================================================
-   LOGO COMPONENT - Custom Web Component for Animated Partner Logos
-   ======================================================================================================== */
+/* =========================== LOGO COMPONENT ============================ */
 
 class LogoComponent extends HTMLElement {
-
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
@@ -18,6 +17,7 @@ class LogoComponent extends HTMLElement {
     this.logosPerRow = 11;
     this.totalRows = 6;
     this.centerImg = "../images/logo-component/LogoComponentSloganIT.webp";
+    this.centerImgAlt = "Scritta grafica Si sono fidati di me con calligrafia manuale";
 
     /* Logo List */
     this.logoList = [

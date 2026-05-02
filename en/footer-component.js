@@ -1,11 +1,16 @@
-/* =========================================
-FOOTER COMPONENT (v2.3 – Dynamic Columns Fix)
-========================================= */
+/*
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-02
+  *  Version: 1.1.0
+  ****************************************************
+*/
 
+/* =========================== FOOTER COMPONENT ============================ */
+
+/* :::::::::::::::::::::::::: FOOTER COMPONENT CLASS :::::::::::::::::::::::::: */
 class FooterComponent extends HTMLElement {
-  /* ------------------------------------------------------------------
-  CONSTRUCTOR
-  --------------------------------------------------------------------- */
+  /* ------------------------- CONSTRUCTOR ------------------------- */
   constructor() {
     super();
     const shadow = this.attachShadow({ mode: "open" });
@@ -27,10 +32,12 @@ class FooterComponent extends HTMLElement {
       </svg>
     `;
 
+    /* :::::::::::::::::: BUILD SHADOW DOM :::::::::::::::::: */
     shadow.innerHTML = `
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
       <style>
+        /* ------------------------- HOST & WRAPPER ------------------------- */
         :host {
           display: block;
           width: 100%;
@@ -46,6 +53,7 @@ class FooterComponent extends HTMLElement {
           position: relative;
         }
 
+        /* ------------------------- DIVIDER ------------------------- */
         .footer-divider {
           position: absolute;
           top: -160px;
@@ -64,6 +72,7 @@ class FooterComponent extends HTMLElement {
           max-width: 100%;
         }
 
+        /* ------------------------- MAIN CONTENT ------------------------- */
         .footer-extra {
           width: 100%;
           background: ${color};
@@ -156,7 +165,7 @@ class FooterComponent extends HTMLElement {
           transition: color .25s;
         }
 
-        /* COPYRIGHT */
+        /* ------------------------- COPYRIGHT ------------------------- */
         .copyright {
           width: 100%;
           background: ${color};
@@ -172,9 +181,8 @@ class FooterComponent extends HTMLElement {
           border-top: 1px solid rgba(0,0,0,0.06);
         }
 
-        /* MOBILE */
+        /* ------------------------- MOBILE ------------------------- */
         @media (max-width: 768px) {
-
           .footer-divider {
             top: -100px;
             height: 100px;
@@ -229,12 +237,10 @@ class FooterComponent extends HTMLElement {
       </style>
 
       <div class="footer-wrapper">
-
         <div class="footer-divider">${svg}</div>
 
         <footer class="footer-extra">
           <div class="footer-inner" id="footer-inner">
-
             <div class="column" id="currency-section">
               <h2>Currency</h2>
               <div id="currency-container"></div>
@@ -264,21 +270,17 @@ class FooterComponent extends HTMLElement {
                 <a href="https://t.me/ArminSilatani" target="_blank"><i class="fa-brands fa-telegram"></i></a>
               </div>
             </div>
-
           </div>
         </footer>
 
         <div class="copyright">
           All rights reserved. I can't be bothered to sue, so please play fair.
         </div>
-
       </div>
     `;
   }
 
-  /* ------------------------------------------------------------------
-  CONNECTED CALLBACK
-  --------------------------------------------------------------------- */
+  /* ------------------------- CONNECTED CALLBACK ------------------------- */
   connectedCallback() {
     const inner = this.shadowRoot.querySelector("#footer-inner");
 
@@ -296,4 +298,5 @@ class FooterComponent extends HTMLElement {
   }
 }
 
+/* ------------------------- DEFINE CUSTOM ELEMENT ------------------------- */
 customElements.define("footer-component", FooterComponent);

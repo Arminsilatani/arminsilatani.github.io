@@ -1,26 +1,26 @@
 /*
-  Author: Armin Silatani
-  Date: 2026-03-29
-  Version: 1.0.0
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-02
+  *  Version: 1.1.0
+  ****************************************************
 */
 
-/* ========================================================================================================
-   LOGO COMPONENT - Custom Web Component for Animated Partner Logos
-   ======================================================================================================== */
+/* =========================== LOGO COMPONENT ============================ */
 
 class LogoComponent extends HTMLElement {
-
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
 
-    /* Configuration */
+    // Number of logos per marquee row and total rows
     this.logosPerRow = 11;
     this.totalRows = 6;
+    // Center slogan image
     this.centerImg = "images/logo-component/LogoComponentSlogan.webp";
     this.centerImgAlt = "نوشته گرافیکی «آن‌ها که انتخابم کردند» با طراحی دست‌نویس";
 
-    /* Logo List */
+    // Client logo list
     this.logoList = [
       "images/logo-component/AlvandtasisatLogoOld.webp",
       "images/logo-component/HevaapsLogoOld.webp",
@@ -79,147 +79,147 @@ class LogoComponent extends HTMLElement {
     const template = document.createElement('template');
     template.innerHTML = `
       <style>
-      :host {
-        display: block;
-        font-family: sans-serif;
-      }
-
-      .partners-section {
-        width: 100%;
-        padding: 60px 0;
-        position: relative;
-        overflow: hidden;
-        direction: ltr;
-      }
-
-      .marquee-container {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        width: 100%;
-        position: relative;
-        z-index: 0;
-      }
-
-      .marquee-row {
-        display: flex;
-        white-space: nowrap;
-        width: 100%;
-      }
-
-      .marquee {
-        display: flex;
-        gap: 35px;
-        padding: 4px 0;
-        animation-duration: 15s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-        will-change: transform;
-      }
-
-      .marquee-right {
-        animation-name: scrollRight;
-      }
-
-      .marquee-left {
-        animation-name: scrollLeft;
-      }
-
-      .marquee-item {
-        flex: 0 0 auto;
-        width: 120px;
-        height: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 35px;
-        flex-shrink: 0;
-        opacity: 0.6;
-        transition: opacity 0.3s;
-      }
-
-      .marquee-item:nth-child(11n) {
-        margin-right: 0;
-      }
-
-      .marquee-item img {
-        max-width: 100%;
-        max-height: 100%;
-        width: auto;
-        height: auto;
-        object-fit: contain;
-        opacity: 0.6;
-        filter: blur(18px);
-        transform: scale(1.05);
-        transition: filter 0.6s ease, transform 0.6s ease, opacity 0.3s;
-      }
-
-      .marquee-item img.blurup-loaded {
-        filter: blur(0);
-        transform: scale(1);
-      }
-
-      .marquee-item img:hover {
-        opacity: 1;
-      }
-
-      .center-image {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        width: 50%;
-        max-width: 90vw;
-        max-height: 36vw;
-        overflow: hidden;
-        pointer-events: none;
-      }
-
-      .center-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        filter: blur(18px) drop-shadow(0 3px 4px rgba(0,0,0,0.4));
-        transform: scale(1.05);
-        transition: filter 0.6s ease, transform 0.6s ease;
-      }
-
-      .center-image img.blurup-loaded {
-        filter: drop-shadow(0 3px 4px rgba(0,0,0,0.4));
-        transform: scale(1);
-      }
-
-      @keyframes scrollRight {
-        0% { transform: translateX(-50%); }
-        100% { transform: translateX(0); }
-      }
-
-      @keyframes scrollLeft {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-      }
-
-      @media (max-width: 1100px) {
-        .partners-section {
-          padding: 30px 0;
+        :host {
+          display: block;
+          font-family: sans-serif;
         }
 
-        .center-image {
-          width: 95vw;
-          height: calc(95vw * 0.4);
+        .partners-section {
+          width: 100%;
+          padding: 60px 0;
+          position: relative;
+          overflow: hidden;
+          direction: ltr;
+        }
+
+        .marquee-container {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          width: 100%;
+          position: relative;
+          z-index: 0;
+        }
+
+        .marquee-row {
+          display: flex;
+          white-space: nowrap;
+          width: 100%;
+        }
+
+        .marquee {
+          display: flex;
+          gap: 35px;
+          padding: 4px 0;
+          animation-duration: 15s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+          will-change: transform;
+        }
+
+        .marquee-right {
+          animation-name: scrollRight;
+        }
+
+        .marquee-left {
+          animation-name: scrollLeft;
         }
 
         .marquee-item {
+          flex: 0 0 auto;
           width: 120px;
           height: 70px;
-          margin-right: 25px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 35px;
+          flex-shrink: 0;
+          opacity: 0.6;
+          transition: opacity 0.3s;
         }
 
         .marquee-item:nth-child(11n) {
           margin-right: 0;
         }
-      }
+
+        .marquee-item img {
+          max-width: 100%;
+          max-height: 100%;
+          width: auto;
+          height: auto;
+          object-fit: contain;
+          opacity: 0.6;
+          filter: blur(18px);
+          transform: scale(1.05);
+          transition: filter 0.6s ease, transform 0.6s ease, opacity 0.3s;
+        }
+
+        .marquee-item img.blurup-loaded {
+          filter: blur(0);
+          transform: scale(1);
+        }
+
+        .marquee-item img:hover {
+          opacity: 1;
+        }
+
+        .center-image {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+          width: 50%;
+          max-width: 90vw;
+          max-height: 36vw;
+          overflow: hidden;
+          pointer-events: none;
+        }
+
+        .center-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          filter: blur(18px) drop-shadow(0 3px 4px rgba(0,0,0,0.4));
+          transform: scale(1.05);
+          transition: filter 0.6s ease, transform 0.6s ease;
+        }
+
+        .center-image img.blurup-loaded {
+          filter: drop-shadow(0 3px 4px rgba(0,0,0,0.4));
+          transform: scale(1);
+        }
+
+        @keyframes scrollRight {
+          0%   { transform: translateX(-50%); }
+          100% { transform: translateX(0); }
+        }
+
+        @keyframes scrollLeft {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+
+        @media (max-width: 1100px) {
+          .partners-section {
+            padding: 30px 0;
+          }
+
+          .center-image {
+            width: 95vw;
+            height: calc(95vw * 0.4);
+          }
+
+          .marquee-item {
+            width: 120px;
+            height: 70px;
+            margin-right: 25px;
+          }
+
+          .marquee-item:nth-child(11n) {
+            margin-right: 0;
+          }
+        }
       </style>
 
       <section class="partners-section">
@@ -250,6 +250,7 @@ class LogoComponent extends HTMLElement {
     this.initBlurEngine();
   }
 
+  // Fisher‑Yates shuffle
   shuffleArray(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -258,6 +259,7 @@ class LogoComponent extends HTMLElement {
     return arr;
   }
 
+  // Build one marquee row with duplicated logos for seamless scrolling
   createMarqueeRow(logos, direction) {
     const rowDiv = document.createElement('div');
     rowDiv.className = 'marquee-row';
@@ -286,6 +288,7 @@ class LogoComponent extends HTMLElement {
     return rowDiv;
   }
 
+  // Progressive blur removal when images become visible
   initBlurEngine() {
     const images = this.shadowRoot.querySelectorAll('img[data-blurup]');
 

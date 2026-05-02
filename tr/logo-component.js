@@ -1,25 +1,23 @@
 /*
-  Author: Armin Silatani
-  Date: 2026-03-29
-  Version: 1.0.0
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-02
+  *  Version: 1.1.0
+  ****************************************************
 */
 
-/* ========================================================================================================
-   LOGO COMPONENT - Custom Web Component for Animated Partner Logos
-   ======================================================================================================== */
+/* =========================== LOGO COMPONENT ============================ */
 
 class LogoComponent extends HTMLElement {
-
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
 
-    /* Configuration */
+    /* ------------------------- CONFIGURATION & DATA ------------------------- */
     this.logosPerRow = 11;
-    this.totalRows = 6;
-    this.centerImg = "../images/logo-component/LogoComponentSloganTR.webp";
+    this.totalRows   = 6;
+    this.centerImg   = "../images/logo-component/LogoComponentSloganTR.webp";
 
-    /* Logo List */
     this.logoList = [
       "../images/logo-component/AlvandtasisatLogoOld.webp",
       "../images/logo-component/HevaapsLogoOld.webp",
@@ -74,6 +72,7 @@ class LogoComponent extends HTMLElement {
     this.render();
   }
 
+  /* ------------------------- RENDER & BUILD UI ------------------------- */
   render() {
     const template = document.createElement('template');
     template.innerHTML = `
@@ -190,12 +189,12 @@ class LogoComponent extends HTMLElement {
       }
 
       @keyframes scrollRight {
-        0% { transform: translateX(-50%); }
+        0%   { transform: translateX(-50%); }
         100% { transform: translateX(0); }
       }
 
       @keyframes scrollLeft {
-        0% { transform: translateX(0); }
+        0%   { transform: translateX(0); }
         100% { transform: translateX(-50%); }
       }
 
@@ -249,6 +248,7 @@ class LogoComponent extends HTMLElement {
     this.initBlurEngine();
   }
 
+  /* ------------------------- HELPERS ------------------------- */
   shuffleArray(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));

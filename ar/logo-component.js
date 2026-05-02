@@ -1,7 +1,9 @@
 /*
-  Author: Armin Silatani
-  Date: 2026-03-29
-  Version: 1.0.0
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-02
+  *  Version: 1.1.0
+  ****************************************************
 */
 
 /* ========================================================================================================
@@ -10,17 +12,16 @@
 
 class LogoComponent extends HTMLElement {
 
+  /* ------------------------- CONFIGURATION ------------------------- */
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
 
-    /* Configuration */
     this.logosPerRow = 11;
     this.totalRows = 6;
     this.centerImg = "../images/logo-component/LogoComponentSloganAR.webp";
     this.centerImgAlt = "نص جرافيكي عملاء وثقوا بي بتصميم بخط اليد";
 
-    /* Logo List */
     this.logoList = [
       "../images/logo-component/AlvandtasisatLogoOld.webp",
       "../images/logo-component/HevaapsLogoOld.webp",
@@ -71,10 +72,12 @@ class LogoComponent extends HTMLElement {
     ];
   }
 
+  /* ------------------------- LIFECYCLE ------------------------- */
   connectedCallback() {
     this.render();
   }
 
+  /* ------------------------- RENDER ------------------------- */
   render() {
     const template = document.createElement('template');
     template.innerHTML = `
@@ -250,6 +253,7 @@ class LogoComponent extends HTMLElement {
     this.initBlurEngine();
   }
 
+  /* ------------------------- HELPER: SHUFFLE ARRAY ------------------------- */
   shuffleArray(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -258,6 +262,7 @@ class LogoComponent extends HTMLElement {
     return arr;
   }
 
+  /* ------------------------- HELPER: CREATE MARQUEE ROW ------------------------- */
   createMarqueeRow(logos, direction) {
     const rowDiv = document.createElement('div');
     rowDiv.className = 'marquee-row';
@@ -286,6 +291,7 @@ class LogoComponent extends HTMLElement {
     return rowDiv;
   }
 
+  /* ------------------------- BLUR-UP ENGINE ------------------------- */
   initBlurEngine() {
     const images = this.shadowRoot.querySelectorAll('img[data-blurup]');
 
@@ -314,6 +320,7 @@ class LogoComponent extends HTMLElement {
   }
 }
 
+/* :::::::::::::::::::::::::: CUSTOM ELEMENT REGISTRATION :::::::::::::::::::::::::: */
 if (!customElements.get('logo-component')) {
   customElements.define('logo-component', LogoComponent);
 }
