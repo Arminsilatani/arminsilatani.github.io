@@ -18,6 +18,7 @@ class LogoComponent extends HTMLElement {
     this.logosPerRow = 11;
     this.totalRows = 6;
     this.centerImg = "images/logo-component/LogoComponentSlogan.webp";
+    this.centerImgAlt = "نوشته گرافیکی «آن‌ها که انتخابم کردند» با طراحی دست‌نویس";
 
     /* Logo List */
     this.logoList = [

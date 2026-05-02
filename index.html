@@ -28,8 +28,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://arminsilatani.com/">
     <meta property="og:locale" content="fa_IR">
-    <meta property="og:image" content="images/arminsilatani/HeroLogo.webp">
-    <meta property="og:image:alt" content="Armin Silatani - Digital Marketing Expert">
+    <meta property="og:image" content="https://arminsilatani.com/images/arminsilatani/FeaturedImage.webp">
+    <meta property="og:image:alt" content="مردی در حال کار با لپ‌تاپ روی مبل شنی کنار سگ کوچک">
 
     <!-- ::::::::::::::::::::::::::::::::::::::: CANONICAL ::::::::::::::::::::::::::::::::::::::: -->
     <link rel="canonical" href="https://arminsilatani.com/">
@@ -45,65 +45,138 @@
 
     <!-- ::::::::::::::::::::::::::::::::::::::: STRUCTURED DATA ::::::::::::::::::::::::::::::::::::::: -->
     
-    <!-- WebPage -->
-    <script type="application/ld+json">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "datePublished": "2023-01-18",
-        "dateModified": "2026-03-29"
-    }
-    </script>
-
-    <!-- Professional Service -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "آرمین سیلاطانی",
-      "image": "https://arminsilatani.com/images/arminsilatani/HeroLogo.webp",
-      "@id": "https://arminsilatani.com/#person",
+      "@type": "WebSite",
+      "@id": "#website",
       "url": "https://arminsilatani.com/",
-      "telephone": "+989125759466",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Tehran",
-        "addressCountry": "IR"
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Saturday","Sunday"],
-        "opens": "09:00",
-        "closes": "18:00"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/in/arminsilatani/",
-        "https://github.com/Arminsilatani",
-        "https://www.instagram.com/arminsilatani",
-        "https://wa.me/+989125759466",
-        "https://t.me/ArminSilatani"
-      ],
-      "description": "ارائه خدمات تخصصی سئو، طراحی سایت و استراتژی‌های رشد وب‌سایت توسط آرمین سیلاطانی."
-    }
-    </script>
-    
-    <!-- Person -->
-    <script type="application/ld+json">
+      "name": "آرمین سیلاطانی",
+      "description": "آرمین سیلاطانی ⚡ کارشناس دیجیتال مارکتینگ",
+      "inLanguage": "fa"
+    },
     {
-      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "#homepage",
+      "url": "https://arminsilatani.com/",
+      "name": "آرمین سیلاطانی ⚡ کارشناس دیجیتال مارکتینگ",
+      "isPartOf": { "@id": "#website" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://arminsilatani.com/images/arminsilatani/FeaturedImage.webp",
+        "width": "1080",
+        "height": "1080"
+      },
+      "mainContentOfPage": { "@id": "#main-content" },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": "h1, .intro"
+      },
+      "significantLink": [
+        "https://arminsilatani.com/services/",
+        "https://arminsilatani.com/about/",
+        "https://arminsilatani.com/contact/",
+        "https://arminsilatani.com/blog/"
+      ],
+      "relatedLink": [
+        "https://arminsilatani.com/portfolio/",
+        "https://arminsilatani.com/tariff/"
+      ]
+    },
+    {
+      "@type": "WebPageElement",
+      "@id": "#main-content",
+      "cssSelector": "#main-content",
+      "description": "درباره آرمین سیلاطانی، کارشناس دیجیتال مارکتینگ"
+    },
+    {
       "@type": "Person",
+      "@id": "#person",
       "name": "آرمین سیلاطانی",
       "jobTitle": "کارشناس دیجیتال مارکتینگ",
-      "url": "https://arminsilatani.com",
+      "url": "https://arminsilatani.com/",
+      "image": "https://arminsilatani.com/images/arminsilatani/FeaturedImage.webp",
       "sameAs": [
         "https://www.linkedin.com/in/arminsilatani/",
         "https://github.com/Arminsilatani",
-        "https://www.instagram.com/arminsilatani",
-        "https://wa.me/+989125759466",
-        "https://t.me/ArminSilatani"
+        "https://www.instagram.com/arminsilatani"
+      ],
+      "description": "آرمین سیلاطانی، طراحی سایت و کارشناس سئو با تجربه در طراحی سایت‌های فروشگاهی، شرکتی و شخصی"
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "#professional-service",
+      "name": "آرمین سیلاطانی، کارشناس دیجیتال مارکتینگ",
+      "url": "https://arminsilatani.com/",
+      "image": "https://arminsilatani.com/images/arminsilatani/FeaturedImage.webp",
+      "telephone": "+989125759466",
+      "email": "contact@arminsilatani.com",
+      "areaServed": {
+        "@type": "Country",
+        "name": "ایران"
+      },
+      "provider": { "@id": "#person" },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+989125759466",
+          "availableLanguage": "Persian"
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "WhatsApp",
+          "url": "https://wa.me/+989125759466"
+        }
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": { "@id": "#service-design" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@id": "#service-seo" }
+        }
       ]
+    },
+    {
+      "@type": "Service",
+      "@id": "#service-design",
+      "name": "طراحی وب اختصاصی",
+      "provider": { "@id": "#professional-service" },
+      "description": "طراحی سایت‌های واکنش‌گرا، شرکتی، فروشگاهی و شخصی با جدیدترین تکنولوژی‌ها.",
+      "serviceType": "طراحی وب"
+    },
+    {
+      "@type": "Service",
+      "@id": "#service-seo",
+      "name": "بهینه‌سازی برای موتورهای جستجو (SEO)",
+      "provider": { "@id": "#professional-service" },
+      "description": "تحقیق کلمات کلیدی، سئو داخلی و خارجی، افزایش رتبه در گوگل.",
+      "serviceType": "سئو"
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": { "@id": "#professional-service" },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "محمود صفری"
+      },
+      "datePublished": "2023-11-15",
+      "reviewBody": "مدتی بود که کارهای سایت و سئو شرکتم را به یک مجموعه در ظاهر بزرگ سپرده بودم که تنها زمان زیادی را از دست دادم. ولی از زمانی که با آقای سیلاطانی پروژه سئو سایت را استارت زدیم شرایط بسیار عوض شد."
     }
-    </script>
+  ]
+}
+</script>
 
 </head>
 
@@ -125,16 +198,15 @@
         <div class="hero-container">
             <language-component></language-component>
             <div class="hero-left">
-                <img src="images/arminsilatani/HeroSlogan.webp" alt="Slogan – آرمین سیلاطانی">
+                <img src="images/arminsilatani/HeroSlogan.webp" alt="نوشته گرافیکی عبارت «آیا آماده‌اید رتبه اول گوگل را تجربه کنید؟» با طراحی دست‌نویس و رنگ قرمز">
             </div>
 
             <div class="hero-right">
                 <div class="blob-wrapper">
                     <div class="blob"></div>
-                    <img class="hero-img" src="images/arminsilatani/HeroLogo.webp" alt="لوگوی آرمین سیلاطانی">
+                    <img class="hero-img" src="images/arminsilatani/HeroLogo.webp" alt="تصویر کارتونی مردی با هودی خاکستری">
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -155,7 +227,7 @@
 <!-- ABOUT SECTION -->
 <!-- ------------------------------------------------------------------ -->
 
-<section class="about-section">
+<section class="about-section" id="main-content">
 
     <div class="container-1300">
         <div class="about-container">
@@ -174,7 +246,7 @@
             </div>
 
             <div class="about-image">
-                <img src="images/arminsilatani/AboutPicture.webp" alt="تصویر آرمین سیلاطانی">
+                <img src="images/arminsilatani/AboutPicture.webp" alt="مردی در حال کار با لپ‌تاپ روی مبل شنی کنار سگ کوچک">
             </div>
 
         </div>
@@ -190,7 +262,7 @@
 
     <div class="service-item service-main">
         <div class="service-header">
-            <img src="images/arminsilatani/ServicesSlogan.webp" alt="خدمات من" class="service-image-top"></div>
+            <img src="images/arminsilatani/ServicesSlogan.webp" alt="نوشته گرافیکی عبارت «خدمات من» با طراحی دست‌نویس و رنگ فیروزه‌ای" class="service-image-top"></div>
         <div class="service-text">
             <p>
                 سایت شما باید دیده شود و من کمک می‌کنم این اتفاق بیفتد، با خدمات سئو، طراحی رابط کاربری، و
@@ -204,21 +276,21 @@
 
     <div class="service-item service-box-1 tv-static-container">
         <a href="#/">
-            <img src="images/arminsilatani/ServicesWebDesignSlogan.webp" alt="طراحی سایت" class="service-image-bottom">
+            <img src="images/arminsilatani/ServicesWebDesignSlogan.webp" alt="نوشته گرافیکی عبارت «طراحی سایت» با طراحی دست‌نویس و رنگ فیروزه‌ای" class="service-image-bottom">
         </a>
         <div class="tv-noise"></div>
     </div>
 
     <div class="service-item service-box-2 tv-static-container">
         <a href="#/">
-            <img src="images/arminsilatani/ServicesSEOSlogan.webp" alt="سئو سایت" class="service-image-bottom">
+            <img src="images/arminsilatani/ServicesSEOSlogan.webp" alt="نوشته گرافیکی عبارت «سئو سایت» با طراحی دست‌نویس و رنگ فیروزه‌ای" class="service-image-bottom">
         </a>
         <div class="tv-noise"></div>
     </div>
 
     <div class="service-item service-box-3 tv-static-container">
         <a href="#/">
-            <img src="images/arminsilatani/ServicesAdsSlogan.webp" alt="گوگل ادز" class="service-image-bottom">
+            <img src="images/arminsilatani/ServicesAdsSlogan.webp" alt="نوشته گرافیکی عبارت «گوگل ادز» با طراحی دست‌نویس و رنگ فیروزه‌ای" class="service-image-bottom">
         </a>
         <div class="tv-noise"></div>
     </div>
@@ -239,7 +311,7 @@
 
 <section class="testimonials-section">
     <div class="testimonials-placeholder">
-        <img src="images/arminsilatani/TestimonialSlogan.webp" alt="Customer Testimonials">
+        <img src="images/arminsilatani/TestimonialSlogan.webp" alt="نوشته گرافیکی عبارت «صدای مشتریان من» با طراحی دست‌نویس و رنگ فیروزه‌ای">
     </div>
 </section>
 
@@ -284,7 +356,8 @@ document.addEventListener('DOMContentLoaded', function () {
             name: "محمود صفری",
             role: "مدیر موسسه ثبت فرهنگ",
             content: "مدتی بود که کارهای سایت و سئو شرکتم را به یک مجموعه در ظاهر بزرگ سپرده بودم که تنها زمان زیادی را از دست دادم. ولی از زمانی که با آقای سیلاطانی پروژه سئو سایت را استارت زدیم شرایط بسیار عوض شد.",
-            image: "images/arminsilatani/TestimonialMahmoodsafariOld.webp"
+            image: "images/arminsilatani/TestimonialMahmoodsafariOld.webp",
+            alt: "عکس مردی با پیراهن تیره در محیط شب"
         },
         {
             name: "آناهیتا درنیانی",
