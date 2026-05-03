@@ -50,48 +50,103 @@
     <!-- Site Navigation -->
     <script type="application/ld+json">
 {
- "@context": "https://schema.org",
- "@type": "SiteNavigationElement",
- "name": [
-  "صفحه اصلی",
-  "خدمات",
-  "خدمات سئو",
-  "گوگل ادز",
-  "طراحی سایت",
-  "طراحی سایت فروشگاهی",
-  "خدمات شبکه‌های اجتماعی",
-  "تولید محتوا",
-  "طراحی گرافیک",
-  "طراحی رابط کاربری",
-  "درباره من",
-  "تماس با من"
- ],
- "url": [
-  "https://arminsilatani.com/",
-  "https://arminsilatani.com/services/",
-  "https://arminsilatani.com/services/seo/",
-  "https://arminsilatani.com/services/google-ads/",
-  "https://arminsilatani.com/services/web-design/",
-  "https://arminsilatani.com/services/online-shop/",
-  "https://arminsilatani.com/services/social-media/",
-  "https://arminsilatani.com/services/copy-writing/",
-  "https://arminsilatani.com/services/graphic-design/",
-  "https://arminsilatani.com/services/uiux-design/",
-  "https://arminsilatani.com/about/",
-  "https://arminsilatani.com/contact/"
- ]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://arminsilatani.com/#website",
+      "url": "https://arminsilatani.com/",
+      "name": "آرمین سیلاطانی - متخصص دیجیتال مارکتینگ",
+      "description": "آرمین سیلاطانی، متخصص دیجیتال مارکتینگ با بیش از 5 سال تجربه در زمینه سئو، تبلیغات آنلاین و استراتژی‌های بازاریابی دیجیتال",
+      "inLanguage": ["fa", "en", "ar", "tr", "de", "it"],
+      "publisher": {
+        "@id": "https://arminsilatani.com/#person"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://arminsilatani.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://arminsilatani.com/sitemap/#webpage",
+      "url": "https://arminsilatani.com/sitemap/",
+      "name": "نقشه سایت - آرمین سیلاطانی",
+      "description": "نقشه کامل سایت آرمین سیلاطانی شامل تمام صفحات، خدمات، مقالات و ابزارها",
+      "inLanguage": "fa",
+      "isPartOf": {
+        "@id": "https://arminsilatani.com/#website"
+      },
+      "about": {
+        "@id": "https://arminsilatani.com/#person"
+      },
+      "datePublished": "2020-01-01",
+      "dateModified": "2026-05-03",
+      "breadcrumb": {
+        "@id": "https://arminsilatani.com/sitemap/#breadcrumb"
+      },
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": ["https://arminsilatani.com/sitemap/"]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://arminsilatani.com/sitemap/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "خانه",
+          "item": "https://arminsilatani.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "نقشه سایت",
+          "item": "https://arminsilatani.com/sitemap/"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://arminsilatani.com/#person",
+      "name": "آرمین سیلاطانی",
+      "alternateName": "Armin Silatani",
+      "url": "https://arminsilatani.com/",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://arminsilatani.com/images/favicon.png",
+        "caption": "آرمین سیلاطانی - متخصص دیجیتال مارکتینگ"
+      },
+      "jobTitle": "متخصص دیجیتال مارکتینگ",
+      "description": "آرمین سیلاطانی، متخصص دیجیتال مارکتینگ با بیش از 5 سال تجربه در زمینه سئو، تبلیغات آنلاین و استراتژی‌های بازاریابی دیجیتال",
+      "email": "contact@arminsilatani.com",
+      "telephone": "+989125759466",
+      "foundingDate": "2020",
+      "sameAs": [
+        "https://www.linkedin.com/in/arminsilatani/",
+        "https://github.com/arminsilatani",
+        "https://www.instagram.com/arminsilatani/",
+        "https://t.me/arminsilatani",
+        "https://wa.me/989125759466"
+      ],
+      "knowsAbout": [
+        "Digital Marketing",
+        "SEO",
+        "Content Marketing",
+        "Social Media Marketing",
+        "Online Advertising"
+      ],
+      "mainEntityOfPage": {
+        "@type": "ProfilePage",
+        "@id": "https://arminsilatani.com/about/"
+      }
+    }
+  ]
 }
-</script>
 
-    <!-- Website Schema -->
-    <script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebSite",
- "name": "Armin Silatani",
- "url": "https://arminsilatani.com/",
- "inLanguage": "fa"
-}
 </script>
 
 </head>
@@ -175,7 +230,7 @@
                     <li>
                         <div class="link-row">
                             <a href="/">صفحه اصلی</a>
-                            <span class="last-update">آخرین بروزرسانی: 9 فروردین 1404</span>
+                            <span class="last-update">آخرین بروزرسانی: 13 اردیبهشت 1405</span>
                         </div>
 
                         <div class="hover-desc">
@@ -187,7 +242,7 @@
                                         <li>
                         <div class="link-row">
                             <a href="/about/">درباره من</a>
-                            <span class="last-update">آخرین بروزرسانی: 11 فروردین 1404</span>
+                            <span class="last-update">آخرین بروزرسانی: 11 فروردین 1405</span>
                         </div>
 
                         <div class="hover-desc">

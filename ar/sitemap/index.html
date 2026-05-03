@@ -51,48 +51,89 @@
     <!-- Site Navigation -->
     <script type="application/ld+json">
 {
- "@context": "https://schema.org",
- "@type": "SiteNavigationElement",
- "name": [
-  "الصفحة الرئيسية",
-  "الخدمات",
-  "خدمات السیو",
-  "إعلانات جوجل",
-  "تصميم المواقع",
-  "تصميم المتاجر الإلكترونية",
-  "إدارة وسائل التواصل الاجتماعي",
-  "إنشاء المحتوى",
-  "التصميم الجرافيكي",
-  "تصميم واجهة المستخدم",
-  "من أنا",
-  "تواصل معي"
- ],
- "url": [
-  "https://arminsilatani.com/ar/",
-  "https://arminsilatani.com/ar/services/",
-  "https://arminsilatani.com/ar/services/seo/",
-  "https://arminsilatani.com/ar/services/google-ads/",
-  "https://arminsilatani.com/ar/services/web-design/",
-  "https://arminsilatani.com/ar/services/online-shop/",
-  "https://arminsilatani.com/ar/services/social-media/",
-  "https://arminsilatani.com/ar/services/copy-writing/",
-  "https://arminsilatani.com/ar/services/graphic-design/",
-  "https://arminsilatani.com/ar/services/uiux-design/",
-  "https://arminsilatani.com/ar/about/",
-  "https://arminsilatani.com/ar/contact/"
- ]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://arminsilatani.com/#website",
+      "url": "https://arminsilatani.com/",
+      "name": "أرمين سيلاطاني - متخصص التسويق الرقمي",
+      "description": "أرمين سيلاطاني، متخصص في التسويق الرقمي مع أكثر من 5 سنوات من الخبرة في تحسين محركات البحث والإعلانات الإلكترونية واستراتيجيات التسويق الرقمي.",
+      "inLanguage": ["fa", "en", "ar", "tr", "de", "it"],
+      "publisher": { "@id": "https://arminsilatani.com/#person" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://arminsilatani.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://arminsilatani.com/ar/sitemap/#webpage",
+      "url": "https://arminsilatani.com/ar/sitemap/",
+      "name": "خريطة الموقع - أرمين سيلاطاني",
+      "description": "خريطة موقع أرمين سيلاطاني الكاملة تشمل جميع الصفحات والخدمات والمقالات والأدوات.",
+      "inLanguage": "ar",
+      "isPartOf": { "@id": "https://arminsilatani.com/#website" },
+      "about": { "@id": "https://arminsilatani.com/#person" },
+      "datePublished": "2020-01-01",
+      "dateModified": "2026-05-03",
+      "breadcrumb": { "@id": "https://arminsilatani.com/ar/sitemap/#breadcrumb" },
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": ["https://arminsilatani.com/ar/sitemap/"]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://arminsilatani.com/ar/sitemap/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://arminsilatani.com/ar/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "خريطة الموقع",
+          "item": "https://arminsilatani.com/ar/sitemap/"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://arminsilatani.com/#person",
+      "name": "أرمين سيلاطاني",
+      "alternateName": "Armin Silatani",
+      "url": "https://arminsilatani.com/",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://arminsilatani.com/images/favicon.png",
+        "caption": "أرمين سيلاطاني - متخصص التسويق الرقمي"
+      },
+      "jobTitle": "متخصص التسويق الرقمي",
+      "description": "أرمين سيلاطاني، متخصص في التسويق الرقمي مع أكثر من 5 سنوات من الخبرة في تحسين محركات البحث والإعلانات الإلكترونية واستراتيجيات التسويق الرقمي.",
+      "email": "contact@arminsilatani.com",
+      "telephone": "+989125759466",
+      "foundingDate": "2020",
+      "sameAs": [
+        "https://www.linkedin.com/in/arminsilatani/",
+        "https://github.com/arminsilatani",
+        "https://www.instagram.com/arminsilatani/",
+        "https://t.me/arminsilatani",
+        "https://wa.me/989125759466"
+      ],
+      "knowsAbout": ["Digital Marketing", "SEO", "Content Marketing", "Social Media Marketing", "Online Advertising"],
+      "mainEntityOfPage": {
+        "@type": "ProfilePage",
+        "@id": "https://arminsilatani.com/ar/about/"
+      }
+    }
+  ]
 }
-</script>
 
-    <!-- Website Schema -->
-    <script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebSite",
- "name": "آرمین سيلطاني",
- "url": "https://arminsilatani.com/ar/",
- "inLanguage": "ar"
-}
 </script>
 
 </head>

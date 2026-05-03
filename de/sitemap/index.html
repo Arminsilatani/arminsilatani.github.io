@@ -49,49 +49,90 @@
 
     <!-- Site Navigation -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-        "@context": "https://schema.org",
-        "@type": "SiteNavigationElement",
-        "name": [
-        "Startseite",
-        "Leistungen",
-        "SEO Dienstleistungen",
-        "Google Ads",
-        "Webdesign",
-        "Onlineshop erstellen",
-        "Social Media Marketing",
-        "Content Erstellung",
-        "Grafikdesign",
-        "UI Design",
-        "Über mich",
-        "Kontakt"
-        ],
-        "url": [
-        "https://arminsilatani.com/de/",
-        "https://arminsilatani.com/de/services/",
-        "https://arminsilatani.com/de/services/seo/",
-        "https://arminsilatani.com/de/services/google-ads/",
-        "https://arminsilatani.com/de/services/web-design/",
-        "https://arminsilatani.com/de/services/online-shop/",
-        "https://arminsilatani.com/de/services/social-media/",
-        "https://arminsilatani.com/de/services/copy-writing/",
-        "https://arminsilatani.com/de/services/graphic-design/",
-        "https://arminsilatani.com/de/services/uiux-design/",
-        "https://arminsilatani.com/de/about/",
-        "https://arminsilatani.com/de/contact/"
-        ]
+      "@type": "WebSite",
+      "@id": "https://arminsilatani.com/#website",
+      "url": "https://arminsilatani.com/",
+      "name": "Armin Silatani - Digital Marketing Spezialist",
+      "description": "Armin Silatani, ein Digital Marketing Spezialist mit über 5 Jahren Erfahrung in SEO, Online-Werbung und digitalen Marketingstrategien.",
+      "inLanguage": ["fa", "en", "ar", "tr", "de", "it"],
+      "publisher": { "@id": "https://arminsilatani.com/#person" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://arminsilatani.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://arminsilatani.com/de/sitemap/#webpage",
+      "url": "https://arminsilatani.com/de/sitemap/",
+      "name": "Sitemap - Armin Silatani",
+      "description": "Vollständige Sitemap der Website von Armin Silatani mit allen Seiten, Dienstleistungen, Artikeln und Tools.",
+      "inLanguage": "de",
+      "isPartOf": { "@id": "https://arminsilatani.com/#website" },
+      "about": { "@id": "https://arminsilatani.com/#person" },
+      "datePublished": "2020-01-01",
+      "dateModified": "2026-05-03",
+      "breadcrumb": { "@id": "https://arminsilatani.com/de/sitemap/#breadcrumb" },
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": ["https://arminsilatani.com/de/sitemap/"]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://arminsilatani.com/de/sitemap/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://arminsilatani.com/de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Sitemap",
+          "item": "https://arminsilatani.com/de/sitemap/"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://arminsilatani.com/#person",
+      "name": "Armin Silatani",
+      "alternateName": "آرمین سیلاطانی",
+      "url": "https://arminsilatani.com/",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://arminsilatani.com/images/favicon.png",
+        "caption": "Armin Silatani - Digital Marketing Spezialist"
+      },
+      "jobTitle": "Digital Marketing Spezialist",
+      "description": "Armin Silatani, ein Digital Marketing Spezialist mit über 5 Jahren Erfahrung in SEO, Online-Werbung und digitalen Marketingstrategien.",
+      "email": "contact@arminsilatani.com",
+      "telephone": "+989125759466",
+      "foundingDate": "2020",
+      "sameAs": [
+        "https://www.linkedin.com/in/arminsilatani/",
+        "https://github.com/arminsilatani",
+        "https://www.instagram.com/arminsilatani/",
+        "https://t.me/arminsilatani",
+        "https://wa.me/989125759466"
+      ],
+      "knowsAbout": ["Digital Marketing", "SEO", "Content Marketing", "Social Media Marketing", "Online Advertising"],
+      "mainEntityOfPage": {
+        "@type": "ProfilePage",
+        "@id": "https://arminsilatani.com/de/about/"
+      }
     }
-</script>
+  ]
+}
 
-    <!-- Website Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Armin Silatani",
-        "url": "https://arminsilatani.com/de/",
-        "inLanguage": "de"
-    }
 </script>
 
 </head>
