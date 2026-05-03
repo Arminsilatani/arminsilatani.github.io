@@ -1,384 +1,303 @@
 <!--
-  Author: Armin Silatani
-  Date: 2026-03-30
-  Version: 1.0.0
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-03
+  *  Version: 1.0.1
+  ****************************************************
 -->
 
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
 <head>
+  <!-- :::::::::::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::::::::::: -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: META TAGS ::::::::::::::::::::::::::::::::::::::: -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- :::::::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::::::: -->
+  <link rel="icon" type="image/png" href="../../images/favicon.png">
+  <link rel="stylesheet" href="../../css/main.css">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: FAVICON & STYLES ::::::::::::::::::::::::::::::::::::::: -->
-    <link rel="icon" type="image/png" href="../../images/favicon.png">
-    <link rel="stylesheet" href="../../css/main.css">
-
-
-    <!-- ::::::::::::::::::::::::::::::::::::::: SEO META ::::::::::::::::::::::::::::::::::::::: -->
-    <title>خريطة موقع آرمين سيلاطاني⚡اكتشف جميع صفحات الموقع بسهولة</title>
-    <meta name="description"
+  <!-- :::::::::::::::::::::::::::::::::: SEO META :::::::::::::::::::::::::::::::::: -->
+  <title>خريطة موقع آرمين سيلاطاني⚡اكتشف جميع صفحات الموقع بسهولة</title>
+  <meta name="description"
         content="خريطة موقع أرمين سيلطاني تعرض فهرسًا متكاملًا لكل صفحات الموقع، لتسهيل وصول الزوار ومحركات البحث إلى مختلف أقسامه بسرعة.">
-    <meta name="robots" content="noindex, nofollow">
+  <meta name="robots" content="noindex, nofollow">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: OPEN GRAPH ::::::::::::::::::::::::::::::::::::::: -->
-    <meta property="og:title" content="خريطة موقع آرمين سيلاطاني">
-    <meta property="og:description" content="استكشف خريطة موقع آرمين سيلاطاني للوصول إلى جميع صفحات الموقع والخدمات والمقالات والموارد بسهولة.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://arminsilatani.com/ar/sitemap/">
-    <meta property="og:locale" content="ar_AR">
-    <meta property="og:image" content="https://arminsilatani.com/images/arminsilatani/HeroLogo.webp">
-    <meta property="og:image:alt" content="خريطة موقع أرمين سيلتاني">
+  <!-- ::::::::::::::::::::::::::::::: OPEN GRAPH ::::::::::::::::::::::::::::::: -->
+  <meta property="og:title" content="خريطة موقع آرمين سيلاطاني">
+  <meta property="og:description" content="استكشف خريطة موقع آرمين سيلاطاني للوصول إلى جميع صفحات الموقع والخدمات والمقالات والموارد بسهولة.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arminsilatani.com/ar/sitemap/">
+  <meta property="og:locale" content="ar_AR">
+  <meta property="og:image" content="https://arminsilatani.com/images/arminsilatani/HeroLogo.webp">
+  <meta property="og:image:alt" content="خريطة موقع أرمين سيلتاني">
 
+  <!-- ::::::::::::::::::::::::::::::: CANONICAL ::::::::::::::::::::::::::::::: -->
+  <link rel="canonical" href="https://arminsilatani.com/ar/sitemap/">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: CANONICAL ::::::::::::::::::::::::::::::::::::::: -->
-    <link rel="canonical" href="https://arminsilatani.com/ar/sitemap/">
+  <!-- ::::::::::::::::::::::::::::::: HREFLANG ::::::::::::::::::::::::::::::: -->
+  <link rel="alternate" hreflang="fa" href="https://arminsilatani.com/sitemap/">
+  <link rel="alternate" hreflang="en" href="https://arminsilatani.com/en/sitemap/">
+  <link rel="alternate" hreflang="ar" href="https://arminsilatani.com/ar/sitemap/">
+  <link rel="alternate" hreflang="tr" href="https://arminsilatani.com/tr/sitemap/">
+  <link rel="alternate" hreflang="de" href="https://arminsilatani.com/de/sitemap/">
+  <link rel="alternate" hreflang="it" href="https://arminsilatani.com/it/sitemap/">
+  <link rel="alternate" hreflang="x-default" href="https://arminsilatani.com/en/sitemap/">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: HREFLANG ::::::::::::::::::::::::::::::::::::::: -->
-    <link rel="alternate" hreflang="fa" href="https://arminsilatani.com/sitemap/">
-    <link rel="alternate" hreflang="en" href="https://arminsilatani.com/en/sitemap/">
-    <link rel="alternate" hreflang="ar" href="https://arminsilatani.com/ar/sitemap/">
-    <link rel="alternate" hreflang="tr" href="https://arminsilatani.com/tr/sitemap/">
-    <link rel="alternate" hreflang="de" href="https://arminsilatani.com/de/sitemap/">
-    <link rel="alternate" hreflang="it" href="https://arminsilatani.com/it/sitemap/">
-    <link rel="alternate" hreflang="x-default" href="https://arminsilatani.com/en/sitemap/">
-
-    <!-- ::::::::::::::::::::::::::::::::::::::: STRUCTURED DATA ::::::::::::::::::::::::::::::::::::::: -->
-
-    <!-- Site Navigation -->
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
+  <!-- :::::::::::::::::::::::::::: STRUCTURED DATA :::::::::::::::::::::::::::: -->
+  <script type="application/ld+json">
     {
-      "@type": "WebSite",
-      "@id": "https://arminsilatani.com/#website",
-      "url": "https://arminsilatani.com/",
-      "name": "أرمين سيلاطاني - متخصص التسويق الرقمي",
-      "description": "أرمين سيلاطاني، متخصص في التسويق الرقمي مع أكثر من 5 سنوات من الخبرة في تحسين محركات البحث والإعلانات الإلكترونية واستراتيجيات التسويق الرقمي.",
-      "inLanguage": ["fa", "en", "ar", "tr", "de", "it"],
-      "publisher": { "@id": "https://arminsilatani.com/#person" },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://arminsilatani.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    },
-    {
-      "@type": "CollectionPage",
-      "@id": "https://arminsilatani.com/ar/sitemap/#webpage",
-      "url": "https://arminsilatani.com/ar/sitemap/",
-      "name": "خريطة الموقع - أرمين سيلاطاني",
-      "description": "خريطة موقع أرمين سيلاطاني الكاملة تشمل جميع الصفحات والخدمات والمقالات والأدوات.",
-      "inLanguage": "ar",
-      "isPartOf": { "@id": "https://arminsilatani.com/#website" },
-      "about": { "@id": "https://arminsilatani.com/#person" },
-      "datePublished": "2020-01-01",
-      "dateModified": "2026-05-03",
-      "breadcrumb": { "@id": "https://arminsilatani.com/ar/sitemap/#breadcrumb" },
-      "potentialAction": {
-        "@type": "ReadAction",
-        "target": ["https://arminsilatani.com/ar/sitemap/"]
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://arminsilatani.com/ar/sitemap/#breadcrumb",
-      "itemListElement": [
+      "@context": "https://schema.org",
+      "@graph": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "الرئيسية",
-          "item": "https://arminsilatani.com/ar/"
+          "@type": "WebSite",
+          "@id": "https://arminsilatani.com/#website",
+          "url": "https://arminsilatani.com/",
+          "name": "أرمين سيلاطاني - متخصص التسويق الرقمي",
+          "description": "أرمين سيلاطاني، متخصص في التسويق الرقمي مع أكثر من 5 سنوات من الخبرة في تحسين محركات البحث والإعلانات الإلكترونية واستراتيجيات التسويق الرقمي.",
+          "inLanguage": ["fa", "en", "ar", "tr", "de", "it"],
+          "publisher": { "@id": "https://arminsilatani.com/#person" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://arminsilatani.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "خريطة الموقع",
-          "item": "https://arminsilatani.com/ar/sitemap/"
+          "@type": "CollectionPage",
+          "@id": "https://arminsilatani.com/ar/sitemap/#webpage",
+          "url": "https://arminsilatani.com/ar/sitemap/",
+          "name": "خريطة الموقع - أرمين سيلاطاني",
+          "description": "خريطة موقع أرمين سيلاطاني الكاملة تشمل جميع الصفحات والخدمات والمقالات والأدوات.",
+          "inLanguage": "ar",
+          "isPartOf": { "@id": "https://arminsilatani.com/#website" },
+          "about": { "@id": "https://arminsilatani.com/#person" },
+          "datePublished": "2020-01-01",
+          "dateModified": "2026-05-03",
+          "breadcrumb": { "@id": "https://arminsilatani.com/ar/sitemap/#breadcrumb" },
+          "potentialAction": {
+            "@type": "ReadAction",
+            "target": ["https://arminsilatani.com/ar/sitemap/"]
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://arminsilatani.com/ar/sitemap/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "الرئيسية",
+              "item": "https://arminsilatani.com/ar/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "خريطة الموقع",
+              "item": "https://arminsilatani.com/ar/sitemap/"
+            }
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://arminsilatani.com/#person",
+          "name": "أرمين سيلاطاني",
+          "alternateName": "Armin Silatani",
+          "url": "https://arminsilatani.com/",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://arminsilatani.com/images/favicon.png",
+            "caption": "أرمين سيلاطاني - متخصص التسويق الرقمي"
+          },
+          "jobTitle": "متخصص التسويق الرقمي",
+          "description": "أرمين سيلاطاني، متخصص في التسويق الرقمي مع أكثر من 5 سنوات من الخبرة في تحسين محركات البحث والإعلانات الإلكترونية واستراتيجيات التسويق الرقمي.",
+          "email": "contact@arminsilatani.com",
+          "telephone": "+989125759466",
+          "foundingDate": "2020",
+          "sameAs": [
+            "https://www.linkedin.com/in/arminsilatani/",
+            "https://github.com/arminsilatani",
+            "https://www.instagram.com/arminsilatani/",
+            "https://t.me/arminsilatani",
+            "https://wa.me/989125759466"
+          ],
+          "knowsAbout": ["Digital Marketing", "SEO", "Content Marketing", "Social Media Marketing", "Online Advertising"],
+          "mainEntityOfPage": {
+            "@type": "ProfilePage",
+            "@id": "https://arminsilatani.com/ar/about/"
+          }
         }
       ]
-    },
-    {
-      "@type": "Person",
-      "@id": "https://arminsilatani.com/#person",
-      "name": "أرمين سيلاطاني",
-      "alternateName": "Armin Silatani",
-      "url": "https://arminsilatani.com/",
-      "image": {
-        "@type": "ImageObject",
-        "url": "https://arminsilatani.com/images/favicon.png",
-        "caption": "أرمين سيلاطاني - متخصص التسويق الرقمي"
-      },
-      "jobTitle": "متخصص التسويق الرقمي",
-      "description": "أرمين سيلاطاني، متخصص في التسويق الرقمي مع أكثر من 5 سنوات من الخبرة في تحسين محركات البحث والإعلانات الإلكترونية واستراتيجيات التسويق الرقمي.",
-      "email": "contact@arminsilatani.com",
-      "telephone": "+989125759466",
-      "foundingDate": "2020",
-      "sameAs": [
-        "https://www.linkedin.com/in/arminsilatani/",
-        "https://github.com/arminsilatani",
-        "https://www.instagram.com/arminsilatani/",
-        "https://t.me/arminsilatani",
-        "https://wa.me/989125759466"
-      ],
-      "knowsAbout": ["Digital Marketing", "SEO", "Content Marketing", "Social Media Marketing", "Online Advertising"],
-      "mainEntityOfPage": {
-        "@type": "ProfilePage",
-        "@id": "https://arminsilatani.com/ar/about/"
-      }
     }
-  ]
-}
-
-</script>
-
+  </script>
 </head>
 
 <body>
+  <!-- =========================== SITEMAP PAGE ============================ -->
 
-<!-- ========================================= -->
-<!-- HEADER -->
-<!-- ========================================= -->
+  <!-- ------------------------- HEADER ------------------------- -->
+  <header-component></header-component>
 
-<header-component></header-component><main class="has-footer-gap">
+  <main class="has-footer-gap">
 
-
-<!-- ------------------------------------------------------------------ -->
-<!-- HERO SECTION -->
-<!-- ------------------------------------------------------------------ -->
-
-<section class="hero-section">
-
-    <div class="hero-container">
-
+    <!-- ------------------------- HERO SECTION ------------------------- -->
+    <section class="hero-section">
+      <div class="hero-container">
         <language-component></language-component>
-
         <div class="hero-title">
-            <h1>خريطة الموقع</h1>
+          <h1>خريطة الموقع</h1>
         </div>
+      </div>
 
-    </div>
-
-    <div class="pro-divider">
-
+      <div class="pro-divider">
         <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
-
-            <defs>
-                <filter id="dividerShadow" x="0" y="-30%" width="100%" height="150%">
-                    <feDropShadow dx="0" dy="-8" stdDeviation="12" flood-color="rgba(0,0,0,0.55)" />
-                </filter>
-            </defs>
-
-            <path
-                filter="url(#dividerShadow)"
-                fill="#0d0d0d"
-                d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
-            />
-
+          <defs>
+            <filter id="dividerShadow" x="0" y="-30%" width="100%" height="150%">
+              <feDropShadow dx="0" dy="-8" stdDeviation="12" flood-color="rgba(0,0,0,0.55)" />
+            </filter>
+          </defs>
+          <path
+            filter="url(#dividerShadow)"
+            fill="#0d0d0d"
+            d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
+          />
         </svg>
+      </div>
 
-    </div>
-    <div class="fake-terminal-breadcrumb">
+      <div class="fake-terminal-breadcrumb">
         <div class="fake-terminal-inner">
+          <span class="cmd-prefix">$</span>
+          <span class="command">open</span>
+          <span id="terminalPath"></span>
+          <span class="cursor"></span>
+        </div>
+      </div>
+    </section>
 
-            <span class="cmd-prefix">$</span>
-            <span class="command">open</span>
-
-            <span id="terminalPath"></span>
-
-            <span class="cursor"></span>
-
-    </div>
-</section>
-
-<!-- ------------------------------------------------------------------ -->
-<!-- SITEMAP SECTION -->
-<!-- ------------------------------------------------------------------ -->
-
-<section class="sitemap-section">
-
-    <div class="container-1080">
+    <!-- ------------------------- SITEMAP SECTION ------------------------- -->
+    <section class="sitemap-section">
+      <div class="container-1080">
 
         <!-- Main Pages -->
-
         <div class="sitemap-grid">
-
-            <div class="sitemap-card">
-
-                <div class="card-title">
-                    <h2>الصفحات الرئيسية</h2>
-                </div>
-
-                <ul class="sitemap-list">
-
-                    <li>
-                        <div class="link-row">
-                            <a href="/ar/">الصفحة الرئيسية</a>
-                            <span class="last-update">آخر تحديث: 9 شوال 1447</span>
-                        
-                        </div>
-                        <div class="hover-desc">
-                        من هنا يمكنك الوصول إلى الصفحة الرئيسية لموقع آرمين سيلاطاني.  
-                        وهي نقطة البداية للتعرّف على خدمات تحسين محركات البحث وتصميم المواقع والتسويق الرقمي.
-                    </div>
-                </li>
-
-                    <li>
-                        <div class="link-row">
-                            <a href="/ar/about/">من أنا</a>
-                            <span class="last-update">آخر تحديث: 13 شوال 1447</span>
-                        
-                        </div>
-                        <div class="hover-desc">
-                        في هذه الصفحة أشارك قصة حياتي من الطفولة حتى اليوم: الهجرة، العمل في مدن أوروبية مختلفة، التجارب الصعبة، البدايات الجديدة، والدخول الجاد إلى عالم تحسين محركات البحث (SEO). رحلة واقعية مليئة بالتجارب والتطور المهني.
-                    </div>
-                </li>
-
-                </ul>
-
+          <div class="sitemap-card">
+            <div class="card-title">
+              <h2>الصفحات الرئيسية</h2>
             </div>
-
+            <ul class="sitemap-list">
+              <li>
+                <div class="link-row">
+                  <a href="/ar/">الصفحة الرئيسية</a>
+                  <span class="last-update">آخر تحديث: 9 شوال 1447</span>
+                </div>
+                <div class="hover-desc">
+                  من هنا يمكنك الوصول إلى الصفحة الرئيسية لموقع آرمين سيلاطاني.  
+                  وهي نقطة البداية للتعرّف على خدمات تحسين محركات البحث وتصميم المواقع والتسويق الرقمي.
+                </div>
+              </li>
+              <li>
+                <div class="link-row">
+                  <a href="/ar/about/">من أنا</a>
+                  <span class="last-update">آخر تحديث: 13 شوال 1447</span>
+                </div>
+                <div class="hover-desc">
+                  في هذه الصفحة أشارك قصة حياتي من الطفولة حتى اليوم: الهجرة، العمل في مدن أوروبية مختلفة، التجارب الصعبة، البدايات الجديدة، والدخول الجاد إلى عالم تحسين محركات البحث (SEO). رحلة واقعية مليئة بالتجارب والتطور المهني.
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <!-- Services -->
-
         <div class="sitemap-grid">
-
-            <div class="sitemap-card">
-
-                <div class="card-title">
-                    <h2>الخدمات</h2>
-                </div>
-
-                <ul class="sitemap-list">
-
-                    
-
-                </ul>
-
+          <div class="sitemap-card">
+            <div class="card-title">
+              <h2>الخدمات</h2>
             </div>
-
+            <ul class="sitemap-list">
+            </ul>
+          </div>
         </div>
 
         <!-- Articles -->
-
         <div class="sitemap-grid">
-
-            <div class="sitemap-card">
-
-                <div class="card-title">
-                    <h2>المقالات</h2>
-                </div>
-
-                <ul class="sitemap-list">
-
-                    
-
-                </ul>
-
+          <div class="sitemap-card">
+            <div class="card-title">
+              <h2>المقالات</h2>
             </div>
-
+            <ul class="sitemap-list">
+            </ul>
+          </div>
         </div>
 
-    </div>
+      </div>
+    </section>
 
-</section>
+  </main>
 
-<!-- ========================================= -->
-<!-- FOOTER -->
-<!-- ========================================= -->
+  <!-- ------------------------- FOOTER ------------------------- -->
+  <footer-component></footer-component>
 
-</main><footer-component></footer-component>
+  <!-- :::::::::::::::::::::::::::: TERMINAL BREADCRUMB :::::::::::::::::::::::::::: -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const container = document.getElementById("terminalPath");
+      const domain = window.location.hostname;
+      const parts = window.location.pathname.split("/").filter(Boolean);
 
+      const paths = [];
+      let fullPath = "";
 
-<!-- ::::::::::::::::::::::::::::::::::::::: BREADCRUMP SCRIPT ::::::::::::::::::::::::::::::::::::::: -->
+      paths.push({
+        name: domain,
+        url: "/"
+      });
 
-    <script>
+      parts.forEach(part => {
+        fullPath += "/" + part;
+        paths.push({
+          name: part,
+          url: fullPath
+        });
+      });
 
-    document.addEventListener("DOMContentLoaded",function(){
+      let textIndex = 0;
+      let charIndex = 0;
 
-    const container = document.getElementById("terminalPath");
+      function typeSegment() {
+        if (textIndex >= paths.length) return;
+        const segment = paths[textIndex];
+        const link = document.createElement("a");
+        link.href = segment.url;
+        container.appendChild(link);
 
-    const domain = window.location.hostname;
+        function typeChar() {
+          if (charIndex < segment.name.length) {
+            link.textContent += segment.name.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeChar, 40);
+          } else {
+            charIndex = 0;
+            textIndex++;
+            if (textIndex < paths.length) {
+              container.appendChild(document.createTextNode("/"));
+            }
+            setTimeout(typeSegment, 100);
+          }
+        }
 
-    const parts = window.location.pathname.split("/").filter(Boolean);
+        typeChar();
+      }
 
-    let paths = [];
-    let fullPath = "";
-
-    paths.push({
-    name:domain,
-    url:"/"
+      typeSegment();
     });
+  </script>
 
-    parts.forEach(part=>{
-    fullPath += "/" + part;
-
-    paths.push({
-    name:part,
-    url:fullPath
-    });
-
-    });
-
-    let textIndex = 0;
-    let charIndex = 0;
-
-    function typeSegment(){
-
-    if(textIndex >= paths.length) return;
-
-    let segment = paths[textIndex];
-
-    let link = document.createElement("a");
-    link.href = segment.url;
-
-    container.appendChild(link);
-
-    function typeChar(){
-
-    if(charIndex < segment.name.length){
-
-    link.textContent += segment.name.charAt(charIndex);
-    charIndex++;
-
-    setTimeout(typeChar,40);
-
-    }else{
-
-    charIndex=0;
-    textIndex++;
-
-    if(textIndex < paths.length){
-
-    container.appendChild(document.createTextNode("/"));
-    }
-
-    setTimeout(typeSegment,100);
-
-    }
-
-    }
-
-    typeChar();
-
-    }
-
-    typeSegment();
-
-    });
-
-    </script>
-    
-<!-- ::::::::::::::::::::::::::::::::::::::: COMPONENT SCRIPTS ::::::::::::::::::::::::::::::::::::::: -->
-
-<script type="module" src="../header-component.js"></script>
-<script src="../language-component.js"></script>
-<script type="module" src="../footer-component.js"></script>
-
+  <!-- :::::::::::::::::::::::::::: COMPONENT SCRIPTS :::::::::::::::::::::::::::: -->
+  <script type="module" src="../header-component.js"></script>
+  <script src="../language-component.js"></script>
+  <script type="module" src="../footer-component.js"></script>
 </body>
+
 </html>
