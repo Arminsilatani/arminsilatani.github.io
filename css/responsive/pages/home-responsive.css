@@ -111,3 +111,31 @@ vertical-align:middle;
 }
 
 }
+@media (max-width: 768px) {
+  .about-section {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .about-container {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .about-image {
+    width: 70%;
+    max-width: 280px;
+  }
+
+  .about-text {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-image {
+    width: 80%;
+    max-width: 240px;
+  }
+}
