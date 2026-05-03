@@ -1,41 +1,44 @@
 <!--
-Author: Armin Silatani
-Date: 2026-04-01
-Version: 1.0.0
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-03
+  *  Version: 1.0.1
+  ****************************************************
 -->
+
+<!-- =========================== ABOUT PAGE ============================ -->
 
 <!DOCTYPE html>
 <html lang="tr" dir="ltr">
 
 <head>
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: META TAGS ::::::::::::::::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::::::::::: -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: FAVICON & STYLES ::::::::::::::::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::::::::::: -->
     <link rel="icon" type="image/png" href="../../images/favicon.png">
     <link rel="stylesheet" href="../../css/main.css">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: SEO META ::::::::::::::::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::::::::::: SEO META :::::::::::::::::::::::::::::::::: -->
     <title>Armin Silatani Hakkında ⚡ Benim Hikayem</title>
     <meta name="description"
-        content="Armin Silatani’nin kişisel yolculuğu: başlangıç yıllarından SEO ve web tasarım dünyasına adım atışına kadar uzanan profesyonel hikayesi.">
+        content="Armin Silatani'nin kişisel yolculuğu: başlangıç yıllarından SEO ve web tasarım dünyasına adım atışına kadar uzanan profesyonel hikayesi.">
     <meta name="robots" content="noindex, nofollow">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: OPEN GRAPH ::::::::::::::::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::::::::::: -->
     <meta property="og:title" content="Armin Silatani Hakkında">
-    <meta property="og:description" content="Armin Silatani’nin kişisel yolculuğu: başlangıç yıllarından SEO ve web tasarım dünyasına adım atışına kadar uzanan profesyonel hikayesi.">
+    <meta property="og:description"
+        content="Armin Silatani'nin kişisel yolculuğu: başlangıç yıllarından SEO ve web tasarım dünyasına adım atışına kadar uzanan profesyonel hikayesi.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://arminsilatani.com/tr/about/">
     <meta property="og:locale" content="tr_TR">
     <meta property="og:image" content="https://arminsilatani.com/images/arminsilatani/HeroLogo.webp">
     <meta property="og:image:alt" content="Armin Silatani">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: CANONICAL ::::::::::::::::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::::::::::: CANONICAL & HREFLANG :::::::::::::::::::::::::::::::::: -->
     <link rel="canonical" href="https://arminsilatani.com/tr/about/">
-
-    <!-- ::::::::::::::::::::::::::::::::::::::: HREFLANG ::::::::::::::::::::::::::::::::::::::: -->
     <link rel="alternate" hreflang="fa" href="https://arminsilatani.com/about/">
     <link rel="alternate" hreflang="en" href="https://arminsilatani.com/en/about/">
     <link rel="alternate" hreflang="ar" href="https://arminsilatani.com/ar/about/">
@@ -44,414 +47,398 @@ Version: 1.0.0
     <link rel="alternate" hreflang="it" href="https://arminsilatani.com/it/about/">
     <link rel="alternate" hreflang="x-default" href="https://arminsilatani.com/en/about/">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: STRUCTURED DATA ::::::::::::::::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::::::::::: STRUCTURED DATA :::::::::::::::::::::::::::::::::: -->
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
     {
-      "@type": "WebSite",
-      "@id": "https://arminsilatani.com/tr/#website",
-      "url": "https://arminsilatani.com/tr/",
-      "name": "Armin Silatani - Dijital Pazarlama Uzmanı",
-      "description": "Web sitesi tasarımı, profesyonel SEO hizmetleri ve Google Ads reklamcılığı — Armin Silatani tarafından sunulmaktadır. Ücretsiz danışmanlık",
-      "inLanguage": "tr-TR",
-      "publisher": {
-        "@id": "https://arminsilatani.com/tr/#person"
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://arminsilatani.com/tr/search?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
-    },
-    {
-      "@type": "AboutPage",
-      "@id": "https://arminsilatani.com/tr/about/#webpage",
-      "url": "https://arminsilatani.com/tr/about/",
-      "name": "Hakkımda - Armin Silatani",
-      "description": "SEO, Google Ads ve web tasarımı konusunda deneyimli dijital pazarlama uzmanı Armin Silatani ile tanışın",
-      "inLanguage": "tr-TR",
-      "isPartOf": {
-        "@id": "https://arminsilatani.com/tr/#website"
-      },
-      "about": {
-        "@id": "https://arminsilatani.com/tr/#person"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "@id": "https://arminsilatani.com/tr/about/#primaryimage",
-        "url": "https://arminsilatani.com/images/favicon.png",
-        "contentUrl": "https://arminsilatani.com/images/favicon.png"
-      },
-      "image": {
-        "@id": "https://arminsilatani.com/tr/about/#primaryimage"
-      },
-      "datePublished": "2024-04-10T00:00:00+03:30",
-      "dateModified": "2026-05-03T00:00:00+03:30",
-      "breadcrumb": {
-        "@id": "https://arminsilatani.com/tr/about/#breadcrumb"
-      },
-      "potentialAction": {
-        "@type": "ReadAction",
-        "target": ["https://arminsilatani.com/tr/about/"]
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://arminsilatani.com/tr/about/#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Ana Sayfa",
-          "item": "https://arminsilatani.com/tr/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Hakkımda",
-          "item": "https://arminsilatani.com/tr/about/"
-        }
-      ]
-    },
-    {
-      "@type": "Person",
-      "@id": "https://arminsilatani.com/tr/#person",
-      "name": "Armin Silatani",
-      "url": "https://arminsilatani.com/tr/",
-      "image": {
-        "@type": "ImageObject",
-        "url": "https://arminsilatani.com/images/favicon.png",
-        "contentUrl": "https://arminsilatani.com/images/favicon.png"
-      },
-      "jobTitle": "Dijital Pazarlama Uzmanı",
-      "description": "SEO, Google Ads ve web tasarımı konusunda uzmanlığa sahip dijital pazarlama uzmanı",
-      "email": "contact@arminsilatani.com",
-      "telephone": "+989125759466",
-      "sameAs": [
-        "https://www.linkedin.com/in/arminsilatani/",
-        "https://github.com/arminsilatani",
-        "https://www.instagram.com/arminsilatani/",
-        "https://t.me/arminsilatani",
-        "https://wa.me/989125759466"
-      ],
-      "knowsAbout": [
-        "SEO",
-        "Digital Marketing",
-        "Google Ads",
-        "Web Design",
-        "Content Marketing"
-      ],
-      "mainEntityOfPage": {
-        "@id": "https://arminsilatani.com/tr/about/#webpage"
-      }
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://arminsilatani.com/tr/#website",
+                "url": "https://arminsilatani.com/tr/",
+                "name": "Armin Silatani - Dijital Pazarlama Uzmanı",
+                "description": "Web sitesi tasarımı, profesyonel SEO hizmetleri ve Google Ads reklamcılığı — Armin Silatani tarafından sunulmaktadır. Ücretsiz danışmanlık",
+                "inLanguage": "tr-TR",
+                "publisher": {
+                    "@id": "https://arminsilatani.com/tr/#person"
+                },
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "https://arminsilatani.com/tr/search?q={search_term_string}"
+                    },
+                    "query-input": "required name=search_term_string"
+                }
+            },
+            {
+                "@type": "AboutPage",
+                "@id": "https://arminsilatani.com/tr/about/#webpage",
+                "url": "https://arminsilatani.com/tr/about/",
+                "name": "Hakkımda - Armin Silatani",
+                "description": "SEO, Google Ads ve web tasarımı konusunda deneyimli dijital pazarlama uzmanı Armin Silatani ile tanışın",
+                "inLanguage": "tr-TR",
+                "isPartOf": {
+                    "@id": "https://arminsilatani.com/tr/#website"
+                },
+                "about": {
+                    "@id": "https://arminsilatani.com/tr/#person"
+                },
+                "primaryImageOfPage": {
+                    "@type": "ImageObject",
+                    "@id": "https://arminsilatani.com/tr/about/#primaryimage",
+                    "url": "https://arminsilatani.com/images/favicon.png",
+                    "contentUrl": "https://arminsilatani.com/images/favicon.png"
+                },
+                "image": {
+                    "@id": "https://arminsilatani.com/tr/about/#primaryimage"
+                },
+                "datePublished": "2024-04-10T00:00:00+03:30",
+                "dateModified": "2026-05-03T00:00:00+03:30",
+                "breadcrumb": {
+                    "@id": "https://arminsilatani.com/tr/about/#breadcrumb"
+                },
+                "potentialAction": {
+                    "@type": "ReadAction",
+                    "target": ["https://arminsilatani.com/tr/about/"]
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://arminsilatani.com/tr/about/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Ana Sayfa",
+                        "item": "https://arminsilatani.com/tr/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Hakkımda",
+                        "item": "https://arminsilatani.com/tr/about/"
+                    }
+                ]
+            },
+            {
+                "@type": "Person",
+                "@id": "https://arminsilatani.com/tr/#person",
+                "name": "Armin Silatani",
+                "url": "https://arminsilatani.com/tr/",
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "https://arminsilatani.com/images/favicon.png",
+                    "contentUrl": "https://arminsilatani.com/images/favicon.png"
+                },
+                "jobTitle": "Dijital Pazarlama Uzmanı",
+                "description": "SEO, Google Ads ve web tasarımı konusunda uzmanlığa sahip dijital pazarlama uzmanı",
+                "email": "contact@arminsilatani.com",
+                "telephone": "+989125759466",
+                "sameAs": [
+                    "https://www.linkedin.com/in/arminsilatani/",
+                    "https://github.com/arminsilatani",
+                    "https://www.instagram.com/arminsilatani/",
+                    "https://t.me/arminsilatani",
+                    "https://wa.me/989125759466"
+                ],
+                "knowsAbout": [
+                    "SEO",
+                    "Digital Marketing",
+                    "Google Ads",
+                    "Web Design",
+                    "Content Marketing"
+                ],
+                "mainEntityOfPage": {
+                    "@id": "https://arminsilatani.com/tr/about/#webpage"
+                }
+            }
+        ]
     }
-  ]
-}
-
-</script>
+    </script>
 
 </head>
 
 <body>
 
-<!-- ========================================= -->
-<!-- HEADER -->
-<!-- ========================================= -->
+    <!-- ------------------------- HEADER ------------------------- -->
+    <header-component></header-component>
 
-<header-component></header-component><main class="has-footer-gap">
+    <main class="has-footer-gap">
 
-<!-- ------------------------------------------------------------------ -->
-<!-- HERO SECTION -->
-<!-- ------------------------------------------------------------------ -->
-<section class="hero-section">
+        <!-- ------------------------- HERO SECTION ------------------------- -->
+        <section class="hero-section">
 
-    <div class="hero-container">
+            <div class="hero-container">
 
-        <language-component></language-component>
+                <language-component></language-component>
 
-        <div class="hero-title">
-            <h1>Hakkımda</h1>
-        </div>
+                <div class="hero-title">
+                    <h1>Hakkımda</h1>
+                </div>
 
-    </div>
-
-    <div class="pro-divider">
-        <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
-
-            <defs>
-                <filter id="dividerShadow" x="0" y="-30%" width="100%" height="150%">
-                    <feDropShadow dx="0" dy="-8" stdDeviation="12" flood-color="rgba(0,0,0,0.55)" />
-                </filter>
-            </defs>
-
-            <path
-                filter="url(#dividerShadow)"
-                fill="#0d0d0d"
-                d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
-            />
-
-        </svg>
-    </div>
-    <div class="fake-terminal-breadcrumb">
-        <div class="fake-terminal-inner">
-
-            <span class="cmd-prefix">$</span>
-            <span class="command">open</span>
-
-            <span id="terminalPath"></span>
-
-            <span class="cursor"></span>
-
-    </div>
-</section>
-
-<!-- ------------------------------------------------------------------ -->
-<!-- ABOUT ME SECTION -->
-<!-- ------------------------------------------------------------------ -->
-<div id="timeline-container" class="story-container"></div>
-
-<!-- ========================================= -->
-<!-- FOOTER -->
-<!-- ========================================= -->
-</main><footer-component></footer-component>
-
-<!-- ::::::::::::::::::::::::::::::::::::::: COMPONENT SCRIPTS ::::::::::::::::::::::::::::::::::::::: -->
-<script type="module" src="../header-component.js"></script>
-<script src="../language-component.js"></script>
-<script type="module" src="../footer-component.js"></script>
-
-<!-- ::::::::::::::::::::::::::::::::::::::: PAGE SCRIPT ::::::::::::::::::::::::::::::::::::::: -->
-<script>
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    /* ------------------------------------------------------------------
-    TIMELINE DATA
-    --------------------------------------------------------------------- */
-
-    const timelineData = {
-
-        1989:{context:"Kasra Hastanesi",title:"Hayatımın Başlangıcı",text:"Ben 21 Mart 1989 tarihinde İran’ın Tahran şehrinde doğdum. O yıllarda hayatımın bilgisayarlar ve internet etrafında şekilleneceğini bilmem mümkün değildi. Sıradan bir çocuktum. Ama birkaç yıl sonra, bir klavyenin başında saatlerce oturup tuşların ardındaki dünyayı merak eden birine dönüşecektim."},
-
-        2003:{context:"İlk Bilgisayarım",title:"Merak Ciddileşiyor",text:"Ortaokuldayken, 14 yaşımda ilk bilgisayarımı aldım. Çoğu insan için sıradan bir aletti; benim içinse bambaşka bir kapıydı. Kurcalamaya başladım, denedim, bozdum, tekrar denedim. Ekranın arkasında nasıl bir dünya olduğunu anlamaya çalışıyordum."},
-
-        2012:{context:"Göç",title:"Avrupa’ya Doğru",text:"İran’dan 2012’de ayrıldım. O günlerde önümde nasıl bir yol açılacağını net olarak bilmiyordum. Bildiğim tek şey, bunun kısa süreli bir deneyim olmayacağı ve hayatımın önemli bir bölümünü etkileyeceğiydi."},
-
-        2013:{context:"Roma, İtalya",title:"Sanat, Mimari ve Disiplin",text:"Roma’da yaşamaya başladım. Guglielmo Marconi Üniversitesi’nde IT okudum ama zamanımın büyük kısmı çalışarak geçiyordu. Tur rehberliği yaptım; neredeyse tüm İtalya’yı dolaştım. Farklı şehirler, farklı insanlar… Roma benim için sadece yaşadığım yer değil, her köşesi ayrı bir hikâye anlatan bir şehirdi."},
-
-        2015:{context:"Kopenhag, Danimarka",title:"İskandinav Soğuğu",text:"Kopenhag’da birkaç ay yaşadım. Amacım orada kalıcı olabilmekti. Olmadı. Oturum izni alamadım. Zor bir dönemdi ama bana şunu öğretti: Her plan, her zaman planladığımız gibi ilerlemiyor."},
-
-        2016:{context:"Aachen, Almanya",title:"Düzen ve Detay",text:"Bir süre Aachen’da yaşadım. Almanya bana tek bir şeyi çok net gösterdi: düzen. Günlük yaşamda, iş yapış şeklinde, en küçük detaylarda bile. Bu bakış açısı, yıllar sonra bile iş yaklaşımımı etkilemeye devam etti."},
-
-        2017:{context:"Cenova, İtalya",title:"Suraya Restoranı",text:"Cenova’da Suraya adında bir İran restoranı açtım. Keyifli ama zorlu bir deneyimdi. Ne yazık ki işler istediğim gibi gitmedi ve ciddi bir maddi kayıp yaşadım. Yine de o dönem öğrendiklerim, sonraki yıllarda iş yönetiminde bana fazlasıyla katkı sağladı."},
-
-        2018:{context:"İran’a Dönüş",title:"Ailenin Yanında",text:"Babamı kaybettikten sonra annemin yanında olmak için İran’a dönmeye karar verdim. Bazı kararlar uzun uzun açıklanmaz. Sadece doğru zamanın geldiğini hissedersiniz."},
-
-        2019:{context:"SEO ile Tanışma",title:"Armağan Tescil Projesi",text:"2019’da bir arkadaşım bana bir teklif sundu. Web siteleri ve SEO süreçleriyle ilgilenmemi istedi. O günlerde SEO’nun ne olduğunu bile tam olarak bilmiyordum. Ama kabul ettim. Öğrenmeye başladım. Projenin adı Zabt Armaghan’dı."},
-
-        2020:{context:"Yoğun Öğrenme Süreci",title:"Her Gün Aynı Tempo",text:"SEO’ya girdikten sonra işin içine tamamen çekildim. Sabah çalışıyor, akşam çalışıyor, gece ertesi günü düşünüyordum. Sürekli okuyordum, deniyordum, analiz yapıyordum. Hatalar da oldu. Zamanla bu süreç ana mesleğim haline geldi."},
-
-        2021:{context:"Reşt, İran",title:"Pandemi Günleri",text:"Pandemi başladığında Tahran’dan bir süre uzaklaştım ve Reşt’e gittim. Şehrin havası, doğası ve sakinliği o zorlu dönemi daha dengeli geçirmemi sağladı. Aynı zamanda işime daha iyi odaklandım."},
-
-        2022:{context:"Daha Fazla Proje",title:"Profesyonel Dönem",text:"Zamanla daha fazla SEO ve web tasarım projesi gelmeye başladı. Her site farklı bir problemdi. Kimi zaman analiz, kimi zaman içerik stratejisi, kimi zaman teknik yapı. Bu çeşitlilik, işi benim için hâlâ canlı tutuyor."},
-
-        2023:{context:"Kariyer Odağı",title:"Gerçek Büyüme",text:"Kısa vadeli sonuçlar yerine, sürdürülebilir büyümeyi hedefleyen markalarla çalışmayı tercih etmeye başladım. Doğru strateji uygulandığında, sonuçlar zaten kendini gösteriyor."},
-
-        2026:{context:"Tahran, İran",title:"Zor Zamanlarda",text:"Şu anda Tahran’da yaşıyorum. Bölgedeki çatışmalar ve internet kesintileri birçok online işi durma noktasına getirdi. Ben de bu beklenmedik arayı, uzun süredir aklımda olan bir şeye ayırdım: Kişisel sitemi sıfırdan yeniden yazmak. WordPress’ten çıkarak saf HTML’e geçtim. Daha sade, daha hızlı ve tamamen kontrol edilebilir bir yapı kurmak istedim. Benim için bu da, beklenmedik bir duraksamayı üretken bir fırsata çevirmenin bir yolu oldu."}
-
-    };
-
-    /* ------------------------------------------------------------------
-    BUILD TIMELINE HTML
-    --------------------------------------------------------------------- */
-
-    const container = document.getElementById("timeline-container");
-
-    Object.keys(timelineData).forEach(year => {
-
-        const data = timelineData[year];
-
-        const block = document.createElement("div");
-        block.className = "story-block";
-
-        block.innerHTML = `
-            <div class="content-date">
-                <div class="step-year">${year}</div>
             </div>
-            <div class="content-text">
-                <span class="step-context">${data.context || ""}</span>
-                <h2 class="step-title">${data.title}</h2>
-                <p class="step-text">${data.text}</p>
+
+            <div class="pro-divider">
+                <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
+
+                    <defs>
+                        <filter id="dividerShadow" x="0" y="-30%" width="100%" height="150%">
+                            <feDropShadow dx="0" dy="-8" stdDeviation="12" flood-color="rgba(0,0,0,0.55)" />
+                        </filter>
+                    </defs>
+
+                    <path
+                        filter="url(#dividerShadow)"
+                        fill="#0d0d0d"
+                        d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
+                    />
+
+                </svg>
             </div>
-        `;
 
-        container.appendChild(block);
+            <div class="fake-terminal-breadcrumb">
+                <div class="fake-terminal-inner">
+                    <span class="cmd-prefix">$</span>
+                    <span class="command">open</span>
+                    <span id="terminalPath"></span>
+                    <span class="cursor"></span>
+                </div>
+            </div>
 
-    });
+        </section>
 
-    /* ------------------------------------------------------------------
-    SCROLL ANIMATION
-    --------------------------------------------------------------------- */
+        <!-- ------------------------- TIMELINE SECTION ------------------------- -->
+        <div id="timeline-container" class="story-container"></div>
 
-    const storyBlocks = document.querySelectorAll(".story-block");
+    </main>
 
-    function updateScrollAnimation(){
+    <!-- ------------------------- FOOTER ------------------------- -->
+    <footer-component></footer-component>
 
-        const windowCenter = window.innerHeight / 2;
-        const maxDistance = window.innerHeight / 2;
+    <!-- :::::::::::::::::::::::::::::::::: COMPONENT SCRIPTS :::::::::::::::::::::::::::::::::: -->
+    <script type="module" src="../header-component.js"></script>
+    <script src="../language-component.js"></script>
+    <script type="module" src="../footer-component.js"></script>
 
-        storyBlocks.forEach(block => {
+    <!-- :::::::::::::::::::::::::::::::::: PAGE INITIALIZATION :::::::::::::::::::::::::::::::::: -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
 
-            const rect = block.getBoundingClientRect();
-            const blockCenter = rect.top + (rect.height / 2);
-            const distanceFromCenter = Math.abs(windowCenter - blockCenter);
+        /* ======================================================================
+           TIMELINE DATA
+           ====================================================================== */
 
-            let progress = 1 - (distanceFromCenter / maxDistance);
-            progress = Math.max(0, Math.min(1, progress));
-
-            const textContent = block.querySelector(".content-text");
-            if(textContent){
-                textContent.style.setProperty("--progress", progress);
+        const timelineData = {
+            1989: {
+                context: "Kasra Hastanesi",
+                title: "Hayatımın Başlangıcı",
+                text: "Ben 21 Mart 1989 tarihinde İran'ın Tahran şehrinde doğdum. O yıllarda hayatımın bilgisayarlar ve internet etrafında şekilleneceğini bilmem mümkün değildi. Sıradan bir çocuktum. Ama birkaç yıl sonra, bir klavyenin başında saatlerce oturup tuşların ardındaki dünyayı merak eden birine dönüşecektim."
+            },
+            2003: {
+                context: "İlk Bilgisayarım",
+                title: "Merak Ciddileşiyor",
+                text: "Ortaokuldayken, 14 yaşımda ilk bilgisayarımı aldım. Çoğu insan için sıradan bir aletti; benim içinse bambaşka bir kapıydı. Kurcalamaya başladım, denedim, bozdum, tekrar denedim. Ekranın arkasında nasıl bir dünya olduğunu anlamaya çalışıyordum."
+            },
+            2012: {
+                context: "Göç",
+                title: "Avrupa'ya Doğru",
+                text: "İran'dan 2012'de ayrıldım. O günlerde önümde nasıl bir yol açılacağını net olarak bilmiyordum. Bildiğim tek şey, bunun kısa süreli bir deneyim olmayacağı ve hayatımın önemli bir bölümünü etkileyeceğiydi."
+            },
+            2013: {
+                context: "Roma, İtalya",
+                title: "Sanat, Mimari ve Disiplin",
+                text: "Roma'da yaşamaya başladım. Guglielmo Marconi Üniversitesi'nde IT okudum ama zamanımın büyük kısmı çalışarak geçiyordu. Tur rehberliği yaptım; neredeyse tüm İtalya'yı dolaştım. Farklı şehirler, farklı insanlar… Roma benim için sadece yaşadığım yer değil, her köşesi ayrı bir hikâye anlatan bir şehirdi."
+            },
+            2015: {
+                context: "Kopenhag, Danimarka",
+                title: "İskandinav Soğuğu",
+                text: "Kopenhag'da birkaç ay yaşadım. Amacım orada kalıcı olabilmekti. Olmadı. Oturum izni alamadım. Zor bir dönemdi ama bana şunu öğretti: Her plan, her zaman planladığımız gibi ilerlemiyor."
+            },
+            2016: {
+                context: "Aachen, Almanya",
+                title: "Düzen ve Detay",
+                text: "Bir süre Aachen'da yaşadım. Almanya bana tek bir şeyi çok net gösterdi: düzen. Günlük yaşamda, iş yapış şeklinde, en küçük detaylarda bile. Bu bakış açısı, yıllar sonra bile iş yaklaşımımı etkilemeye devam etti."
+            },
+            2017: {
+                context: "Cenova, İtalya",
+                title: "Suraya Restoranı",
+                text: "Cenova'da Suraya adında bir İran restoranı açtım. Keyifli ama zorlu bir deneyimdi. Ne yazık ki işler istediğim gibi gitmedi ve ciddi bir maddi kayıp yaşadım. Yine de o dönem öğrendiklerim, sonraki yıllarda iş yönetiminde bana fazlasıyla katkı sağladı."
+            },
+            2018: {
+                context: "İran'a Dönüş",
+                title: "Ailenin Yanında",
+                text: "Babamı kaybettikten sonra annemin yanında olmak için İran'a dönmeye karar verdim. Bazı kararlar uzun uzun açıklanmaz. Sadece doğru zamanın geldiğini hissedersiniz."
+            },
+            2019: {
+                context: "SEO ile Tanışma",
+                title: "Armağan Tescil Projesi",
+                text: "2019'da bir arkadaşım bana bir teklif sundu. Web siteleri ve SEO süreçleriyle ilgilenmemi istedi. O günlerde SEO'nun ne olduğunu bile tam olarak bilmiyordum. Ama kabul ettim. Öğrenmeye başladım. Projenin adı Zabt Armaghan'dı."
+            },
+            2020: {
+                context: "Yoğun Öğrenme Süreci",
+                title: "Her Gün Aynı Tempo",
+                text: "SEO'ya girdikten sonra işin içine tamamen çekildim. Sabah çalışıyor, akşam çalışıyor, gece ertesi günü düşünüyordum. Sürekli okuyordum, deniyordum, analiz yapıyordum. Hatalar da oldu. Zamanla bu süreç ana mesleğim haline geldi."
+            },
+            2021: {
+                context: "Reşt, İran",
+                title: "Pandemi Günleri",
+                text: "Pandemi başladığında Tahran'dan bir süre uzaklaştım ve Reşt'e gittim. Şehrin havası, doğası ve sakinliği o zorlu dönemi daha dengeli geçirmemi sağladı. Aynı zamanda işime daha iyi odaklandım."
+            },
+            2022: {
+                context: "Daha Fazla Proje",
+                title: "Profesyonel Dönem",
+                text: "Zamanla daha fazla SEO ve web tasarım projesi gelmeye başladı. Her site farklı bir problemdi. Kimi zaman analiz, kimi zaman içerik stratejisi, kimi zaman teknik yapı. Bu çeşitlilik, işi benim için hâlâ canlı tutuyor."
+            },
+            2023: {
+                context: "Kariyer Odağı",
+                title: "Gerçek Büyüme",
+                text: "Kısa vadeli sonuçlar yerine, sürdürülebilir büyümeyi hedefleyen markalarla çalışmayı tercih etmeye başladım. Doğru strateji uygulandığında, sonuçlar zaten kendini gösteriyor."
+            },
+            2026: {
+                context: "Tahran, İran",
+                title: "Zor Zamanlarda",
+                text: "Şu anda Tahran'da yaşıyorum. Bölgedeki çatışmalar ve internet kesintileri birçok online işi durma noktasına getirdi. Ben de bu beklenmedik arayı, uzun süredir aklımda olan bir şeye ayırdım: Kişisel sitemi sıfırdan yeniden yazmak. WordPress'ten çıkarak saf HTML'e geçtim. Daha sade, daha hızlı ve tamamen kontrol edilebilir bir yapı kurmak istedim. Benim için bu da, beklenmedik bir duraksamayı üretken bir fırsata çevirmenin bir yolu oldu."
             }
+        };
 
-            const dateElement = block.querySelector(".step-year");
-            if(dateElement){
+        /* ======================================================================
+           BUILD TIMELINE HTML
+           ====================================================================== */
 
-                dateElement.style.setProperty("--progress", progress);
+        const timelineContainer = document.getElementById("timeline-container");
 
-                const scrollOffset = (windowCenter - blockCenter) * 1.5;
-                dateElement.style.setProperty("--date-scroll-offset", `${scrollOffset}px`);
-            }
+        Object.keys(timelineData).forEach(function (year) {
+            const data = timelineData[year];
+            const block = document.createElement("div");
+            block.className = "story-block";
 
-            if(progress > 0.85){
-                block.classList.add("active");
-            }else{
-                block.classList.remove("active");
-            }
+            block.innerHTML =
+                '<div class="content-date">' +
+                    '<div class="step-year">' + year + '</div>' +
+                '</div>' +
+                '<div class="content-text">' +
+                    '<span class="step-context">' + (data.context || "") + '</span>' +
+                    '<h2 class="step-title">' + data.title + '</h2>' +
+                    '<p class="step-text">' + data.text + '</p>' +
+                '</div>';
 
+            timelineContainer.appendChild(block);
         });
 
-    }
+        /* ======================================================================
+           SCROLL ANIMATION — TIMELINE
+           ====================================================================== */
 
+        const storyBlocks = document.querySelectorAll(".story-block");
 
+        function updateScrollAnimation() {
+            const windowCenter = window.innerHeight / 2;
+            const maxDistance = window.innerHeight / 2;
 
-    /* ------------------------------------------------------------------
-    SCROLL PERFORMANCE OPTIMIZATION
-    --------------------------------------------------------------------- */
+            storyBlocks.forEach(function (block) {
+                const rect = block.getBoundingClientRect();
+                const blockCenter = rect.top + (rect.height / 2);
+                const distanceFromCenter = Math.abs(windowCenter - blockCenter);
 
-    let isScrolling = false;
+                let progress = 1 - (distanceFromCenter / maxDistance);
+                progress = Math.max(0, Math.min(1, progress));
 
-    window.addEventListener("scroll", () => {
+                const textContent = block.querySelector(".content-text");
+                if (textContent) {
+                    textContent.style.setProperty("--progress", progress);
+                }
 
-        if(!isScrolling){
+                const dateElement = block.querySelector(".step-year");
+                if (dateElement) {
+                    dateElement.style.setProperty("--progress", progress);
+                    const scrollOffset = (windowCenter - blockCenter) * 1.5;
+                    dateElement.style.setProperty("--date-scroll-offset", scrollOffset + "px");
+                }
 
-            window.requestAnimationFrame(() => {
-
-                updateScrollAnimation();
-                isScrolling = false;
-
+                if (progress > 0.85) {
+                    block.classList.add("active");
+                } else {
+                    block.classList.remove("active");
+                }
             });
-
-            isScrolling = true;
         }
 
+        /* Scroll performance: throttle with requestAnimationFrame */
+        let isScrolling = false;
+
+        window.addEventListener("scroll", function () {
+            if (!isScrolling) {
+                window.requestAnimationFrame(function () {
+                    updateScrollAnimation();
+                    isScrolling = false;
+                });
+                isScrolling = true;
+            }
+        });
+
+        /* Initialize animation state */
+        updateScrollAnimation();
+
+        /* ======================================================================
+           BREADCRUMB TYPING ANIMATION
+           ====================================================================== */
+
+        const terminalPath = document.getElementById("terminalPath");
+        const domain = window.location.hostname;
+        const pathParts = window.location.pathname.split("/").filter(Boolean);
+
+        const paths = [];
+        let fullPath = "";
+
+        paths.push({
+            name: domain,
+            url: "/"
+        });
+
+        pathParts.forEach(function (part) {
+            fullPath += "/" + part;
+            paths.push({
+                name: part,
+                url: fullPath
+            });
+        });
+
+        let textIndex = 0;
+        let charIndex = 0;
+
+        function typeSegment() {
+            if (textIndex >= paths.length) return;
+
+            const segment = paths[textIndex];
+            const link = document.createElement("a");
+            link.href = segment.url;
+            terminalPath.appendChild(link);
+
+            function typeChar() {
+                if (charIndex < segment.name.length) {
+                    link.textContent += segment.name.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeChar, 40);
+                } else {
+                    charIndex = 0;
+                    textIndex++;
+
+                    if (textIndex < paths.length) {
+                        terminalPath.appendChild(document.createTextNode("/"));
+                    }
+
+                    setTimeout(typeSegment, 100);
+                }
+            }
+
+            typeChar();
+        }
+
+        typeSegment();
+
     });
-
-
-    /* ------------------------------------------------------------------
-    INITIAL STATE
-    --------------------------------------------------------------------- */
-
-    updateScrollAnimation();
-
-}); 
-    /* ------------------------------------------------------------------
-    BREADCRUMP SCRIPT
-    --------------------------------------------------------------------- */
     </script>
-
-    <script>
-
-    document.addEventListener("DOMContentLoaded",function(){
-
-    const container = document.getElementById("terminalPath");
-
-    const domain = window.location.hostname;
-
-    const parts = window.location.pathname.split("/").filter(Boolean);
-
-    let paths = [];
-    let fullPath = "";
-
-    paths.push({
-    name:domain,
-    url:"/"
-    });
-
-    parts.forEach(part=>{
-    fullPath += "/" + part;
-
-    paths.push({
-    name:part,
-    url:fullPath
-    });
-
-    });
-
-    let textIndex = 0;
-    let charIndex = 0;
-
-    function typeSegment(){
-
-    if(textIndex >= paths.length) return;
-
-    let segment = paths[textIndex];
-
-    let link = document.createElement("a");
-    link.href = segment.url;
-
-    container.appendChild(link);
-
-    function typeChar(){
-
-    if(charIndex < segment.name.length){
-
-    link.textContent += segment.name.charAt(charIndex);
-    charIndex++;
-
-    setTimeout(typeChar,40);
-
-    }else{
-
-    charIndex=0;
-    textIndex++;
-
-    if(textIndex < paths.length){
-
-    container.appendChild(document.createTextNode("/"));
-    }
-
-    setTimeout(typeSegment,100);
-
-    }
-
-    }
-
-    typeChar();
-
-    }
-
-    typeSegment();
-
-    });
-
-    </script>
-
 
 </body>
 </html>

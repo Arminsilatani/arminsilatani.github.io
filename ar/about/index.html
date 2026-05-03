@@ -1,463 +1,374 @@
 <!--
-Author: Armin Silatani
-Date: 2026-04-01
-Version: 1.0.0
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-03
+  *  Version: 1.0.1
+  ****************************************************
 -->
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
+  <!-- ::::::::::::::::::::::::::::::::::::::: META TAGS ::::::::::::::::::::::::::::::::::::::: -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: META TAGS ::::::::::::::::::::::::::::::::::::::: -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ::::::::::::::::::::::::::::::::::::::: FAVICON & STYLES ::::::::::::::::::::::::::::::::::::::: -->
+  <link rel="icon" type="image/png" href="../../images/favicon.png">
+  <link rel="stylesheet" href="../../css/main.css">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: FAVICON & STYLES ::::::::::::::::::::::::::::::::::::::: -->
-    <link rel="icon" type="image/png" href="../../images/favicon.png">
-    <link rel="stylesheet" href="../../css/main.css">
+  <!-- ::::::::::::::::::::::::::::::::::::::: SEO META ::::::::::::::::::::::::::::::::::::::: -->
+  <title>عن آرمین سیلاطاني ⚡ قصتي</title>
+  <meta name="description" content="في هذه الصفحة أشارك قصة حياتي من الطفولة حتى اليوم: الهجرة، العمل في مدن أوروبية مختلفة، التجارب الصعبة، البدايات الجديدة، والدخول الجاد إلى عالم تحسين محركات البحث (SEO). رحلة واقعية مليئة بالتجارب والتطور المهني.">
+  <meta name="robots" content="noindex, nofollow">
 
+  <!-- ::::::::::::::::::::::::::::::::::::::: OPEN GRAPH ::::::::::::::::::::::::::::::::::::::: -->
+  <meta property="og:title" content="عن آرمین سیلاطاني">
+  <meta property="og:description" content="في هذه الصفحة أشارك قصة حياتي من الطفولة حتى اليوم: الهجرة، العمل في مدن أوروبية مختلفة، التجارب الصعبة، البدايات الجديدة، والدخول الجاد إلى عالم تحسين محركات البحث (SEO). رحلة واقعية مليئة بالتجارب والتطور المهني.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arminsilatani.com/ar/about/">
+  <meta property="og:locale" content="ar_AR">
+  <meta property="og:image" content="https://arminsilatani.com/images/arminsilatani/HeroLogo.webp">
+  <meta property="og:image:alt" content="Armin Silatani">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: SEO META ::::::::::::::::::::::::::::::::::::::: -->
-    <title>عن آرمین سیلاطاني ⚡ قصتي</title>
-    <meta name="description"
-        content="في هذه الصفحة أشارك قصة حياتي من الطفولة حتى اليوم: الهجرة، العمل في مدن أوروبية مختلفة، التجارب الصعبة، البدايات الجديدة، والدخول الجاد إلى عالم تحسين محركات البحث (SEO). رحلة واقعية مليئة بالتجارب والتطور المهني.">
-    <meta name="robots" content="noindex, nofollow">
+  <!-- ::::::::::::::::::::::::::::::::::::::: CANONICAL ::::::::::::::::::::::::::::::::::::::: -->
+  <link rel="canonical" href="https://arminsilatani.com/ar/about/">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: OPEN GRAPH ::::::::::::::::::::::::::::::::::::::: -->
-    <meta property="og:title" content="عن آرمين سيلاطاني">
-    <meta property="og:description" content="في هذه الصفحة أشارك قصة حياتي من الطفولة حتى اليوم: الهجرة، العمل في مدن أوروبية مختلفة، التجارب الصعبة، البدايات الجديدة، والدخول الجاد إلى عالم تحسين محركات البحث (SEO). رحلة واقعية مليئة بالتجارب والتطور المهني.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://arminsilatani.com/ar/about/">
-    <meta property="og:locale" content="ar_AR">
-    <meta property="og:image" content="https://arminsilatani.com/images/arminsilatani/HeroLogo.webp">
-    <meta property="og:image:alt" content="Armin Silatani">
+  <!-- ::::::::::::::::::::::::::::::::::::::: HREFLANG ::::::::::::::::::::::::::::::::::::::: -->
+  <link rel="alternate" hreflang="fa" href="https://arminsilatani.com/about/">
+  <link rel="alternate" hreflang="en" href="https://arminsilatani.com/en/about/">
+  <link rel="alternate" hreflang="ar" href="https://arminsilatani.com/ar/about/">
+  <link rel="alternate" hreflang="tr" href="https://arminsilatani.com/tr/about/">
+  <link rel="alternate" hreflang="de" href="https://arminsilatani.com/de/about/">
+  <link rel="alternate" hreflang="it" href="https://arminsilatani.com/it/about/">
+  <link rel="alternate" hreflang="x-default" href="https://arminsilatani.com/en/about/">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: CANONICAL ::::::::::::::::::::::::::::::::::::::: -->
-    <link rel="canonical" href="https://arminsilatani.com/ar/about/">
-
-    <!-- ::::::::::::::::::::::::::::::::::::::: HREFLANG ::::::::::::::::::::::::::::::::::::::: -->
-    <link rel="alternate" hreflang="fa" href="https://arminsilatani.com/about/">
-    <link rel="alternate" hreflang="en" href="https://arminsilatani.com/en/about/">
-    <link rel="alternate" hreflang="ar" href="https://arminsilatani.com/ar/about/">
-    <link rel="alternate" hreflang="tr" href="https://arminsilatani.com/tr/about/">
-    <link rel="alternate" hreflang="de" href="https://arminsilatani.com/de/about/">
-    <link rel="alternate" hreflang="it" href="https://arminsilatani.com/it/about/">
-    <link rel="alternate" hreflang="x-default" href="https://arminsilatani.com/en/about/">
-
-    <!-- ::::::::::::::::::::::::::::::::::::::: STRUCTURED DATA ::::::::::::::::::::::::::::::::::::::: -->
-    <script type="application/ld+json">
- {
-  "@context": "https://schema.org",
-  "@graph": [
+  <!-- ::::::::::::::::::::::::::::::::::::::: STRUCTURED DATA ::::::::::::::::::::::::::::::::::::::: -->
+  <script type="application/ld+json">
     {
-      "@type": "WebSite",
-      "@id": "https://arminsilatani.com/ar/#website",
-      "url": "https://arminsilatani.com/ar/",
-      "name": "أرمين سيلاتاني - أخصائي التسويق الرقمي",
-      "description": "تصميم المواقع، خدمات تحسين محركات البحث الاحترافية وإعلانات جوجل — يقدمها أرمين سيلاتاني. استشارة مجانية",
-      "inLanguage": "ar",
-      "publisher": {
-        "@id": "https://arminsilatani.com/ar/#person"
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://arminsilatani.com/ar/search?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
-    },
-    {
-      "@type": "AboutPage",
-      "@id": "https://arminsilatani.com/ar/about/#webpage",
-      "url": "https://arminsilatani.com/ar/about/",
-      "name": "عني - أرمين سيلاتاني",
-      "description": "تعرف على أرمين سيلاتاني، أخصائي التسويق الرقمي ذو الخبرة في تحسين محركات البحث وإعلانات جوجل وتصميم المواقع",
-      "inLanguage": "ar",
-      "isPartOf": {
-        "@id": "https://arminsilatani.com/ar/#website"
-      },
-      "about": {
-        "@id": "https://arminsilatani.com/ar/#person"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "@id": "https://arminsilatani.com/ar/about/#primaryimage",
-        "url": "https://arminsilatani.com/images/favicon.png",
-        "contentUrl": "https://arminsilatani.com/images/favicon.png"
-      },
-      "image": {
-        "@id": "https://arminsilatani.com/ar/about/#primaryimage"
-      },
-      "datePublished": "2024-04-10T00:00:00+03:30",
-      "dateModified": "2026-05-03T00:00:00+03:30",
-      "breadcrumb": {
-        "@id": "https://arminsilatani.com/ar/about/#breadcrumb"
-      },
-      "potentialAction": {
-        "@type": "ReadAction",
-        "target": ["https://arminsilatani.com/ar/about/"]
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://arminsilatani.com/ar/about/#breadcrumb",
-      "itemListElement": [
+      "@context": "https://schema.org",
+      "@graph": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "الرئيسية",
-          "item": "https://arminsilatani.com/ar/"
+          "@type": "WebSite",
+          "@id": "https://arminsilatani.com/ar/#website",
+          "url": "https://arminsilatani.com/ar/",
+          "name": "أرمين سيلاتاني - أخصائي التسويق الرقمي",
+          "description": "تصميم المواقع، خدمات تحسين محركات البحث الاحترافية وإعلانات جوجل — يقدمها أرمين سيلاتاني. استشارة مجانية",
+          "inLanguage": "ar",
+          "publisher": {
+            "@id": "https://arminsilatani.com/ar/#person"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://arminsilatani.com/ar/search?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "عني",
-          "item": "https://arminsilatani.com/ar/about/"
+          "@type": "AboutPage",
+          "@id": "https://arminsilatani.com/ar/about/#webpage",
+          "url": "https://arminsilatani.com/ar/about/",
+          "name": "عني - أرمين سيلاتاني",
+          "description": "تعرف على أرمين سيلاتاني، أخصائي التسويق الرقمي ذو الخبرة في تحسين محركات البحث وإعلانات جوجل وتصميم المواقع",
+          "inLanguage": "ar",
+          "isPartOf": {
+            "@id": "https://arminsilatani.com/ar/#website"
+          },
+          "about": {
+            "@id": "https://arminsilatani.com/ar/#person"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "@id": "https://arminsilatani.com/ar/about/#primaryimage",
+            "url": "https://arminsilatani.com/images/favicon.png",
+            "contentUrl": "https://arminsilatani.com/images/favicon.png"
+          },
+          "image": {
+            "@id": "https://arminsilatani.com/ar/about/#primaryimage"
+          },
+          "datePublished": "2024-04-10T00:00:00+03:30",
+          "dateModified": "2026-05-03T00:00:00+03:30",
+          "breadcrumb": {
+            "@id": "https://arminsilatani.com/ar/about/#breadcrumb"
+          },
+          "potentialAction": {
+            "@type": "ReadAction",
+            "target": ["https://arminsilatani.com/ar/about/"]
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://arminsilatani.com/ar/about/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "الرئيسية",
+              "item": "https://arminsilatani.com/ar/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "عني",
+              "item": "https://arminsilatani.com/ar/about/"
+            }
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://arminsilatani.com/ar/#person",
+          "name": "أرمين سيلاتاني",
+          "url": "https://arminsilatani.com/ar/",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://arminsilatani.com/images/favicon.png",
+            "contentUrl": "https://arminsilatani.com/images/favicon.png"
+          },
+          "jobTitle": "أخصائي التسويق الرقمي",
+          "description": "أخصائي التسويق الرقمي مع خبرة في تحسين محركات البحث وإعلانات جوجل وتصميم المواقع",
+          "email": "contact@arminsilatani.com",
+          "telephone": "+989125759466",
+          "sameAs": [
+            "https://www.linkedin.com/in/arminsilatani/",
+            "https://github.com/arminsilatani",
+            "https://www.instagram.com/arminsilatani/",
+            "https://t.me/arminsilatani",
+            "https://wa.me/989125759466"
+          ],
+          "knowsAbout": [
+            "SEO",
+            "Digital Marketing",
+            "Google Ads",
+            "Web Design",
+            "Content Marketing"
+          ],
+          "mainEntityOfPage": {
+            "@id": "https://arminsilatani.com/ar/about/#webpage"
+          }
         }
       ]
-    },
-    {
-      "@type": "Person",
-      "@id": "https://arminsilatani.com/ar/#person",
-      "name": "أرمين سيلاتاني",
-      "url": "https://arminsilatani.com/ar/",
-      "image": {
-        "@type": "ImageObject",
-        "url": "https://arminsilatani.com/images/favicon.png",
-        "contentUrl": "https://arminsilatani.com/images/favicon.png"
-      },
-      "jobTitle": "أخصائي التسويق الرقمي",
-      "description": "أخصائي التسويق الرقمي مع خبرة في تحسين محركات البحث وإعلانات جوجل وتصميم المواقع",
-      "email": "contact@arminsilatani.com",
-      "telephone": "+989125759466",
-      "sameAs": [
-        "https://www.linkedin.com/in/arminsilatani/",
-        "https://github.com/arminsilatani",
-        "https://www.instagram.com/arminsilatani/",
-        "https://t.me/arminsilatani",
-        "https://wa.me/989125759466"
-      ],
-      "knowsAbout": [
-        "SEO",
-        "Digital Marketing",
-        "Google Ads",
-        "Web Design",
-        "Content Marketing"
-      ],
-      "mainEntityOfPage": {
-        "@id": "https://arminsilatani.com/ar/about/#webpage"
-      }
     }
-  ]
-}
-
-</script>
-
+  </script>
 </head>
 
 <body>
 
-<!-- ========================================= -->
-<!-- HEADER -->
-<!-- ========================================= -->
+  <!-- =========================== HEADER COMPONENT ============================ -->
+  <header-component></header-component>
 
-<header-component></header-component><main class="has-footer-gap">
+  <main class="has-footer-gap">
 
-
-<!-- ------------------------------------------------------------------ -->
-<!-- HERO SECTION -->
-<!-- ------------------------------------------------------------------ -->
-<section class="hero-section">
-
-    <div class="hero-container">
-
+    <!-- ------------------------- HERO SECTION ------------------------- -->
+    <section class="hero-section">
+      <div class="hero-container">
         <language-component></language-component>
-
         <div class="hero-title">
-            <h1>من أنا</h1>
+          <h1>من أنا</h1>
         </div>
+      </div>
 
-    </div>
-
-    <div class="pro-divider">
+      <div class="pro-divider">
         <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
-
-            <defs>
-                <filter id="dividerShadow" x="0" y="-30%" width="100%" height="150%">
-                    <feDropShadow dx="0" dy="-8" stdDeviation="12" flood-color="rgba(0,0,0,0.55)" />
-                </filter>
-            </defs>
-
-            <path
-                filter="url(#dividerShadow)"
-                fill="#0d0d0d"
-                d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
-            />
-
+          <defs>
+            <filter id="dividerShadow" x="0" y="-30%" width="100%" height="150%">
+              <feDropShadow dx="0" dy="-8" stdDeviation="12" flood-color="rgba(0,0,0,0.55)" />
+            </filter>
+          </defs>
+          <path
+            filter="url(#dividerShadow)"
+            fill="#0d0d0d"
+            d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
+          />
         </svg>
-    </div>
-    <div class="fake-terminal-breadcrumb">
+      </div>
+
+      <div class="fake-terminal-breadcrumb">
         <div class="fake-terminal-inner">
+          <span class="cmd-prefix">$</span>
+          <span class="command">open</span>
+          <span id="terminalPath"></span>
+          <span class="cursor"></span>
+        </div>
+      </div>
+    </section>
 
-            <span class="cmd-prefix">$</span>
-            <span class="command">open</span>
+    <!-- ------------------------- ABOUT ME SECTION ------------------------- -->
+    <div id="timeline-container" class="story-container"></div>
 
-            <span id="terminalPath"></span>
+  </main>
 
-            <span class="cursor"></span>
+  <!-- =========================== FOOTER COMPONENT ============================ -->
+  <footer-component></footer-component>
 
-    </div>
-</section>
+  <!-- ::::::::::::::::::::::::::::::::::::::: COMPONENT SCRIPTS ::::::::::::::::::::::::::::::::::::::: -->
+  <script type="module" src="../header-component.js"></script>
+  <script src="../language-component.js"></script>
+  <script type="module" src="../footer-component.js"></script>
 
+  <!-- ::::::::::::::::::::::::::::::::::::::: PAGE SCRIPT ::::::::::::::::::::::::::::::::::::::: -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
 
-<!-- ------------------------------------------------------------------ -->
-<!-- ABOUT ME SECTION -->
-<!-- ------------------------------------------------------------------ -->
-<div id="timeline-container" class="story-container"></div>
+      /* ------------------------------------------------------------------
+         TIMELINE DATA
+      --------------------------------------------------------------------- */
+      const timelineData = {
+        1409: { context: "مستشفى كسری", title: "البداية", text: "وُلدتُ في 14 شعبان 1409 في طهران، إيران. في ذلك الوقت لم أكن أعرف طبعاً أن الحاسوب والإنترنت سيصبحان جزءاً كبيراً من حياتي. كنت مجرد طفل عادي، لكن بعد سنوات قليلة وجدت نفسي أجلس أمام لوحة المفاتيح لساعات، أتأمل أزرارها وأحاول فهم العالم الذي يقف خلف الشاشة." },
+        1424: { context: "أول حاسوب", title: "بداية الفضول الحقيقي", text: "في السنة الثانية من المرحلة المتوسطة، عندما كان عمري أربعة عشر عاماً، اشتريت أول حاسوب لي. بالنسبة لكثيرين كان مجرد جهاز عادي، لكن بالنسبة لي كان شيئاً مختلفاً. بدأت أستخدمه باستمرار، أجرب أشياء جديدة، وأكتشف شيئاً فشيئاً ما الذي يوجد خلف هذه الشاشة." },
+        1433: { context: "الهجرة", title: "الانتقال إلى أوروبا", text: "في عام 1433 غادرت إيران. لم أكن أعرف تماماً ما الذي ينتظرني، لكنني كنت متأكداً أن هذه الرحلة لن تكون مجرد تجربة قصيرة، بل مرحلة قد تشكّل سنوات من حياتي." },
+        1434: { context: "روما – إيطاليا", title: "الفن والعمارة", text: "كانت روما أول مدينة أعيش فيها. درست تقنية المعلومات في جامعة غولييلمو ماركوني، لكن جزءاً كبيراً من وقتي كان يذهب للعمل. عملت مرشداً سياحياً وتنقلت بين مدن كثيرة في إيطاليا. هذا العمل أتاح لي رؤية أماكن مختلفة والتعرف على أشخاص كثر. بالنسبة لي، لم تكن روما مجرد مدينة للسكن؛ بل مدينة يحمل كل شارع فيها قصة." },
+        1436: { context: "كوبنهاغن – الدنمارك", title: "برد الشمال", text: "عشت عدة أشهر في كوبنهاغن. كان هدفي تطوير عملي والبقاء هناك، لكنني في النهاية لم أتمكن من الحصول على الإقامة. لم تكن تجربة سهلة، لكنها جعلتني أفهم أن الخطط لا تسير دائماً كما نتوقع." },
+        1437: { context: "آخن – ألمانيا", title: "النظام والدقة", text: "عشت فترة في مدينة آخن. أكثر ما لفت انتباهي في ألمانيا كان النظام؛ في حياة الناس اليومية، في طريقة العمل، وحتى في التفاصيل الصغيرة. هذه التجربة أثرت لاحقاً في نظرتي للعمل وإدارة المشاريع." },
+        1438: { context: "جنوة – إيطاليا", title: "مطعم «ثريا»", text: "في جنوة افتتحت مطعماً إيرانياً باسم «ثريا». كانت تجربة مثيرة، لكنها في النهاية لم تسر كما كنت آمل، وخسرت جزءاً كبيراً من رأس المال. رغم ذلك، تعلمت خلال تلك الفترة دروساً مهمة في الإدارة واتخاذ القرار، وما زلت أستفيد منها حتى اليوم." },
+        1439: { context: "العودة إلى إيران", title: "قرب العائلة", text: "بعد وفاة والدي قررت العودة إلى إيران لأكون بجانب والدتي. بعض القرارات لا تحتاج إلى شرح طويل؛ ببساطة تدرك أن الوقت قد حان لتغيير الطريق." },
+        1440: { context: "بداية العمل في SEO", title: "مشروع تسجيل أرمغان", text: "في عام 1440 اقترح عليّ أحد الأصدقاء فكرة غيّرت مساري المهني بالكامل. طلب مني إدارة موقع شركتهم والعمل على تحسين ظهوره في محركات البحث. في ذلك الوقت لم أكن أعرف الكثير عن السيو، لكنني وافقت وبدأت أتعلم. كان اسم المشروع تسجيل ارمغان." },
+        1441: { context: "مرحلة التعلم الجاد", title: "عمل يومي مستمر", text: "عندما دخلت عالم SEO، انجذبت إليه بسرعة. كنت أعمل من الصباح حتى الليل، وأفكر في مهام اليوم التالي قبل النوم. أقرأ مقالات، أجرب، أراجع المواقع، وأخطئ كثيراً. ومع الوقت أصبح هذا المجال هو مساري المهني الرئيسي." },
+        1442: { context: "رشت – إيران", title: "فترة الجائحة", text: "عندما بدأت جائحة كورونا فضّلت الابتعاد قليلاً عن طهران. انتقلت إلى رشت، وهي مدينة لها دائماً طابع خاص بالنسبة لي. الطقس والطبيعة والهدوء هناك ساعدوني على تجاوز تلك الفترة الصعبة والعمل بتركيز أكبر." },
+        1443: { context: "العمل بشكل أكثر احترافية", title: "مشاريع أكثر", text: "مع الوقت بدأت المشاريع تزداد. كل موقع كان يحمل تحدياً مختلفاً؛ أحياناً في التحليل، وأحياناً في استراتيجية المحتوى، وأحياناً في البنية التقنية. هذا التنوع جعل العمل في السيو مجالاً يتطلب تعلماً مستمراً." },
+        1444: { context: "المسار المهني", title: "التركيز على النمو الحقيقي", text: "مع مرور الوقت فضّلت العمل مع شركات تبحث عن نمو حقيقي، لا مجرد تغييرات مؤقتة في الموقع. عندما تُبنى الاستراتيجية بشكل صحيح، تظهر النتائج من تلقاء نفسها." },
+        1447: { context: "طهران – إيران", title: "خلال فترة الحرب", text: "أعيش حالياً في طهران. ومع الظروف الحالية والحرب الدائرة بين الولايات المتحدة وإسرائيل وإيران، إضافة إلى انقطاعات الإنترنت، توقفت كثير من الأعمال الرقمية مؤقتاً. استغليت هذا التوقف لأعمل على فكرة كانت تراودني منذ مدة: إعادة كتابة موقعي الشخصي وتحويله من ووردبريس إلى HTML خالص، حتى أحصل على بنية أبسط وسرعة أعلى وتحكم كامل بالموقع. مثل كثير من محطات حياتي، تحوّل هذا التوقف المفاجئ إلى فرصة لبناء شيء جديد." }
+      };
 
-<!-- ========================================= -->
-<!-- FOOTER -->
-<!-- ========================================= -->
+      /* ------------------------------------------------------------------
+         BUILD TIMELINE HTML
+      --------------------------------------------------------------------- */
+      const container = document.getElementById("timeline-container");
 
-</main><footer-component></footer-component>
-
-<!-- ::::::::::::::::::::::::::::::::::::::: COMPONENT SCRIPTS ::::::::::::::::::::::::::::::::::::::: -->
-<script type="module" src="../header-component.js"></script>
-<script src="../language-component.js"></script>
-<script type="module" src="../footer-component.js"></script>
-
-<!-- ::::::::::::::::::::::::::::::::::::::: PAGE SCRIPT ::::::::::::::::::::::::::::::::::::::: -->
-<script>
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    /* ------------------------------------------------------------------
-    TIMELINE DATA
-    --------------------------------------------------------------------- */
-
-    const timelineData = {
-
-        1409:{context:"مستشفى كسری",title:"البداية",text:"وُلدتُ في 14 شعبان 1409 في طهران، إيران. في ذلك الوقت لم أكن أعرف طبعاً أن الحاسوب والإنترنت سيصبحان جزءاً كبيراً من حياتي. كنت مجرد طفل عادي، لكن بعد سنوات قليلة وجدت نفسي أجلس أمام لوحة المفاتيح لساعات، أتأمل أزرارها وأحاول فهم العالم الذي يقف خلف الشاشة."},
-
-        1424:{context:"أول حاسوب",title:"بداية الفضول الحقيقي",text:"في السنة الثانية من المرحلة المتوسطة، عندما كان عمري أربعة عشر عاماً، اشتريت أول حاسوب لي. بالنسبة لكثيرين كان مجرد جهاز عادي، لكن بالنسبة لي كان شيئاً مختلفاً. بدأت أستخدمه باستمرار، أجرب أشياء جديدة، وأكتشف شيئاً فشيئاً ما الذي يوجد خلف هذه الشاشة."},
-
-        1433:{context:"الهجرة",title:"الانتقال إلى أوروبا",text:"في عام 1433 غادرت إيران. لم أكن أعرف تماماً ما الذي ينتظرني، لكنني كنت متأكداً أن هذه الرحلة لن تكون مجرد تجربة قصيرة، بل مرحلة قد تشكّل سنوات من حياتي."},
-
-        1434:{context:"روما – إيطاليا",title:"الفن والعمارة",text:"كانت روما أول مدينة أعيش فيها. درست تقنية المعلومات في جامعة غولييلمو ماركوني، لكن جزءاً كبيراً من وقتي كان يذهب للعمل. عملت مرشداً سياحياً وتنقلت بين مدن كثيرة في إيطاليا. هذا العمل أتاح لي رؤية أماكن مختلفة والتعرف على أشخاص كثر. بالنسبة لي، لم تكن روما مجرد مدينة للسكن؛ بل مدينة يحمل كل شارع فيها قصة."},
-
-        1436:{context:"كوبنهاغن – الدنمارك",title:"برد الشمال",text:"عشت عدة أشهر في كوبنهاغن. كان هدفي تطوير عملي والبقاء هناك، لكنني في النهاية لم أتمكن من الحصول على الإقامة. لم تكن تجربة سهلة، لكنها جعلتني أفهم أن الخطط لا تسير دائماً كما نتوقع."},
-
-        1437:{context:"آخن – ألمانيا",title:"النظام والدقة",text:"عشت فترة في مدينة آخن. أكثر ما لفت انتباهي في ألمانيا كان النظام؛ في حياة الناس اليومية، في طريقة العمل، وحتى في التفاصيل الصغيرة. هذه التجربة أثرت لاحقاً في نظرتي للعمل وإدارة المشاريع."},
-
-        1438:{context:"جنوة – إيطاليا",title:"مطعم «ثريا»",text:"في جنوة افتتحت مطعماً إيرانياً باسم «ثريا». كانت تجربة مثيرة، لكنها في النهاية لم تسر كما كنت آمل، وخسرت جزءاً كبيراً من رأس المال. رغم ذلك، تعلمت خلال تلك الفترة دروساً مهمة في الإدارة واتخاذ القرار، وما زلت أستفيد منها حتى اليوم."},
-
-        1439:{context:"العودة إلى إيران",title:"قرب العائلة",text:"بعد وفاة والدي قررت العودة إلى إيران لأكون بجانب والدتي. بعض القرارات لا تحتاج إلى شرح طويل؛ ببساطة تدرك أن الوقت قد حان لتغيير الطريق."},
-
-        1440:{context:"بداية العمل في SEO",title:"مشروع تسجيل أرمغان",text:"في عام 1440 اقترح عليّ أحد الأصدقاء فكرة غيّرت مساري المهني بالكامل. طلب مني إدارة موقع شركتهم والعمل على تحسين ظهوره في محركات البحث. في ذلك الوقت لم أكن أعرف الكثير عن السيو، لكنني وافقت وبدأت أتعلم. كان اسم المشروع تسجيل ارمغان."},
-
-        1441:{context:"مرحلة التعلم الجاد",title:"عمل يومي مستمر",text:"عندما دخلت عالم SEO، انجذبت إليه بسرعة. كنت أعمل من الصباح حتى الليل، وأفكر في مهام اليوم التالي قبل النوم. أقرأ مقالات، أجرب، أراجع المواقع، وأخطئ كثيراً. ومع الوقت أصبح هذا المجال هو مساري المهني الرئيسي."},
-
-        1442:{context:"رشت – إيران",title:"فترة الجائحة",text:"عندما بدأت جائحة كورونا فضّلت الابتعاد قليلاً عن طهران. انتقلت إلى رشت، وهي مدينة لها دائماً طابع خاص بالنسبة لي. الطقس والطبيعة والهدوء هناك ساعدوني على تجاوز تلك الفترة الصعبة والعمل بتركيز أكبر."},
-
-        1443:{context:"العمل بشكل أكثر احترافية",title:"مشاريع أكثر",text:"مع الوقت بدأت المشاريع تزداد. كل موقع كان يحمل تحدياً مختلفاً؛ أحياناً في التحليل، وأحياناً في استراتيجية المحتوى، وأحياناً في البنية التقنية. هذا التنوع جعل العمل في السيو مجالاً يتطلب تعلماً مستمراً."},
-
-        1444:{context:"المسار المهني",title:"التركيز على النمو الحقيقي",text:"مع مرور الوقت فضّلت العمل مع شركات تبحث عن نمو حقيقي، لا مجرد تغييرات مؤقتة في الموقع. عندما تُبنى الاستراتيجية بشكل صحيح، تظهر النتائج من تلقاء نفسها."},
-
-        1447:{context:"طهران – إيران",title:"خلال فترة الحرب",text:"أعيش حالياً في طهران. ومع الظروف الحالية والحرب الدائرة بين الولايات المتحدة وإسرائيل وإيران، إضافة إلى انقطاعات الإنترنت، توقفت كثير من الأعمال الرقمية مؤقتاً. استغليت هذا التوقف لأعمل على فكرة كانت تراودني منذ مدة: إعادة كتابة موقعي الشخصي وتحويله من ووردبريس إلى HTML خالص، حتى أحصل على بنية أبسط وسرعة أعلى وتحكم كامل بالموقع. مثل كثير من محطات حياتي، تحوّل هذا التوقف المفاجئ إلى فرصة لبناء شيء جديد."}
-
-    };
-
-    /* ------------------------------------------------------------------
-    BUILD TIMELINE HTML
-    --------------------------------------------------------------------- */
-
-    const container = document.getElementById("timeline-container");
-
-    Object.keys(timelineData).forEach(year => {
-
+      Object.keys(timelineData).forEach(year => {
         const data = timelineData[year];
-
         const block = document.createElement("div");
         block.className = "story-block";
 
         block.innerHTML = `
-            <div class="content-date">
-                <div class="step-year">${year}</div>
-            </div>
-            <div class="content-text">
-                <span class="step-context">${data.context || ""}</span>
-                <h2 class="step-title">${data.title}</h2>
-                <p class="step-text">${data.text}</p>
-            </div>
+          <div class="content-date">
+            <div class="step-year">${year}</div>
+          </div>
+          <div class="content-text">
+            <span class="step-context">${data.context || ""}</span>
+            <h2 class="step-title">${data.title}</h2>
+            <p class="step-text">${data.text}</p>
+          </div>
         `;
 
         container.appendChild(block);
+      });
 
-    });
+      /* ------------------------------------------------------------------
+         SCROLL ANIMATION
+      --------------------------------------------------------------------- */
+      const storyBlocks = document.querySelectorAll(".story-block");
 
-
-
-    /* ------------------------------------------------------------------
-    SCROLL ANIMATION
-    --------------------------------------------------------------------- */
-
-    const storyBlocks = document.querySelectorAll(".story-block");
-
-    function updateScrollAnimation(){
-
+      function updateScrollAnimation() {
         const windowCenter = window.innerHeight / 2;
         const maxDistance = window.innerHeight / 2;
 
         storyBlocks.forEach(block => {
+          const rect = block.getBoundingClientRect();
+          const blockCenter = rect.top + (rect.height / 2);
+          const distanceFromCenter = Math.abs(windowCenter - blockCenter);
 
-            const rect = block.getBoundingClientRect();
-            const blockCenter = rect.top + (rect.height / 2);
-            const distanceFromCenter = Math.abs(windowCenter - blockCenter);
+          let progress = 1 - (distanceFromCenter / maxDistance);
+          progress = Math.max(0, Math.min(1, progress));
 
-            let progress = 1 - (distanceFromCenter / maxDistance);
-            progress = Math.max(0, Math.min(1, progress));
+          const textContent = block.querySelector(".content-text");
+          if (textContent) {
+            textContent.style.setProperty("--progress", progress);
+          }
 
-            const textContent = block.querySelector(".content-text");
-            if(textContent){
-                textContent.style.setProperty("--progress", progress);
-            }
+          const dateElement = block.querySelector(".step-year");
+          if (dateElement) {
+            dateElement.style.setProperty("--progress", progress);
+            const scrollOffset = (windowCenter - blockCenter) * 1.5;
+            dateElement.style.setProperty("--date-scroll-offset", `${scrollOffset}px`);
+          }
 
-            const dateElement = block.querySelector(".step-year");
-            if(dateElement){
-
-                dateElement.style.setProperty("--progress", progress);
-
-                const scrollOffset = (windowCenter - blockCenter) * 1.5;
-                dateElement.style.setProperty("--date-scroll-offset", `${scrollOffset}px`);
-            }
-
-            if(progress > 0.85){
-                block.classList.add("active");
-            }else{
-                block.classList.remove("active");
-            }
-
+          if (progress > 0.85) {
+            block.classList.add("active");
+          } else {
+            block.classList.remove("active");
+          }
         });
+      }
 
-    }
+      /* ------------------------------------------------------------------
+         SCROLL PERFORMANCE OPTIMIZATION
+      --------------------------------------------------------------------- */
+      let isScrolling = false;
 
+      window.addEventListener("scroll", () => {
+        if (!isScrolling) {
+          window.requestAnimationFrame(() => {
+            updateScrollAnimation();
+            isScrolling = false;
+          });
+          isScrolling = true;
+        }
+      });
 
+      /* ------------------------------------------------------------------
+         INITIAL STATE
+      --------------------------------------------------------------------- */
+      updateScrollAnimation();
+    });
+  </script>
 
-    /* ------------------------------------------------------------------
-    SCROLL PERFORMANCE OPTIMIZATION
-    --------------------------------------------------------------------- */
+  <!-- ------------------------- BREADCRUMB SCRIPT ------------------------- -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const container = document.getElementById("terminalPath");
+      const domain = window.location.hostname;
+      const parts = window.location.pathname.split("/").filter(Boolean);
 
-    let isScrolling = false;
+      let paths = [];
+      let fullPath = "";
 
-    window.addEventListener("scroll", () => {
+      paths.push({
+        name: domain,
+        url: "/"
+      });
 
-        if(!isScrolling){
+      parts.forEach(part => {
+        fullPath += "/" + part;
+        paths.push({
+          name: part,
+          url: fullPath
+        });
+      });
 
-            window.requestAnimationFrame(() => {
+      let textIndex = 0;
+      let charIndex = 0;
 
-                updateScrollAnimation();
-                isScrolling = false;
+      function typeSegment() {
+        if (textIndex >= paths.length) return;
 
-            });
+        let segment = paths[textIndex];
+        let link = document.createElement("a");
+        link.href = segment.url;
+        container.appendChild(link);
 
-            isScrolling = true;
+        function typeChar() {
+          if (charIndex < segment.name.length) {
+            link.textContent += segment.name.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeChar, 40);
+          } else {
+            charIndex = 0;
+            textIndex++;
+            if (textIndex < paths.length) {
+              container.appendChild(document.createTextNode("/"));
+            }
+            setTimeout(typeSegment, 100);
+          }
         }
 
+        typeChar();
+      }
+
+      typeSegment();
     });
-
-
-    /* ------------------------------------------------------------------
-    INITIAL STATE
-    --------------------------------------------------------------------- */
-
-    updateScrollAnimation();
-
-}); 
-    /* ------------------------------------------------------------------
-    BREADCRUMP SCRIPT
-    --------------------------------------------------------------------- */
-    </script>
-
-    <script>
-
-    document.addEventListener("DOMContentLoaded",function(){
-
-    const container = document.getElementById("terminalPath");
-
-    const domain = window.location.hostname;
-
-    const parts = window.location.pathname.split("/").filter(Boolean);
-
-    let paths = [];
-    let fullPath = "";
-
-    paths.push({
-    name:domain,
-    url:"/"
-    });
-
-    parts.forEach(part=>{
-    fullPath += "/" + part;
-
-    paths.push({
-    name:part,
-    url:fullPath
-    });
-
-    });
-
-    let textIndex = 0;
-    let charIndex = 0;
-
-    function typeSegment(){
-
-    if(textIndex >= paths.length) return;
-
-    let segment = paths[textIndex];
-
-    let link = document.createElement("a");
-    link.href = segment.url;
-
-    container.appendChild(link);
-
-    function typeChar(){
-
-    if(charIndex < segment.name.length){
-
-    link.textContent += segment.name.charAt(charIndex);
-    charIndex++;
-
-    setTimeout(typeChar,40);
-
-    }else{
-
-    charIndex=0;
-    textIndex++;
-
-    if(textIndex < paths.length){
-
-    container.appendChild(document.createTextNode("/"));
-    }
-
-    setTimeout(typeSegment,100);
-
-    }
-
-    }
-
-    typeChar();
-
-    }
-
-    typeSegment();
-
-    });
-
-    </script>
-
+  </script>
 
 </body>
 </html>
