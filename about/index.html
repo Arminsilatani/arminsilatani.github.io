@@ -1,14 +1,16 @@
 <!--
-Author: Armin Silatani
-Date: 2026-04-01
-Version: 1.0.0
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-03
+  *  Version: 1.0.1
+  ****************************************************
 -->
 
+<!-- =========================== ABOUT PAGE ============================ -->
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 
 <head>
-
     <!-- ::::::::::::::::::::::::::::::::::::::: META TAGS ::::::::::::::::::::::::::::::::::::::: -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,17 +27,16 @@ Version: 1.0.0
 
     <!-- ::::::::::::::::::::::::::::::::::::::: OPEN GRAPH ::::::::::::::::::::::::::::::::::::::: -->
     <meta property="og:title" content="درباره آرمین سیلاطانی">
-    <meta property="og:description" content="در این صفحه داستان زندگی من را از کودکی تا امروز می‌خوانید؛ مهاجرت، کار در شهرهای مختلف اروپا، شکست‌ها، شروع دوباره و ورود جدی به دنیای سئو. یک مسیر واقعی و پرجزئیات از رشد شخصی و حرفه‌ای.">
+    <meta property="og:description"
+        content="در این صفحه داستان زندگی من را از کودکی تا امروز می‌خوانید؛ مهاجرت، کار در شهرهای مختلف اروپا، شکست‌ها، شروع دوباره و ورود جدی به دنیای سئو. یک مسیر واقعی و پرجزئیات از رشد شخصی و حرفه‌ای.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://arminsilatani.com/about/">
     <meta property="og:locale" content="fa_IR">
     <meta property="og:image" content="https://arminsilatani.com/images/arminsilatani/HeroLogo.webp">
     <meta property="og:image:alt" content="آرمین سیلاطانی">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: CANONICAL ::::::::::::::::::::::::::::::::::::::: -->
+    <!-- ::::::::::::::::::::::::::::::::::::::: CANONICAL & HREFLANG ::::::::::::::::::::::::::::::::::::::: -->
     <link rel="canonical" href="https://arminsilatani.com/about/">
-
-    <!-- ::::::::::::::::::::::::::::::::::::::: HREFLANG ::::::::::::::::::::::::::::::::::::::: -->
     <link rel="alternate" hreflang="fa" href="https://arminsilatani.com/about/">
     <link rel="alternate" hreflang="en" href="https://arminsilatani.com/en/about/">
     <link rel="alternate" hreflang="ar" href="https://arminsilatani.com/ar/about/">
@@ -46,372 +47,318 @@ Version: 1.0.0
 
     <!-- ::::::::::::::::::::::::::::::::::::::: STRUCTURED DATA ::::::::::::::::::::::::::::::::::::::: -->
     <script type="application/ld+json">
-  "@context": "https://schema.org",
-  "@graph":[
-    {
-      "@type":"WebSite",
-      "@id":"https://arminsilatani.com/#website",
-      "url":"https://arminsilatani.com/",
-      "name":"Armin Silatani",
-      "inLanguage":"fa",
-      "publisher":{
-        "@id":"https://arminsilatani.com/#person"
-      },
-    {
-      "@type":"Person",
-      "@id":"https://arminsilatani.com/#person",
-      "name":"Armin Silatani",
-      "url":"https://arminsilatani.com/",
-      "image":"https://arminsilatani.com/images/arminsilatani/HeroLogo.webp",
-      "jobTitle":"SEO Specialist & Web Designer",
-      "description":"SEO specialist and web designer focusing on technical SEO, website performance and search engine optimization.",
-      "sameAs":[
-        "https://www.linkedin.com/in/arminsilatani/",
-        "https://github.com/Arminsilatani",
-        "https://www.instagram.com/arminsilatani",
-        "https://wa.me/+989125759466",
-        "https://t.me/ArminSilatani"
-      ]
-    },
-    {
-      "@type":"AboutPage",
-      "@id":"https://arminsilatani.com/about/#webpage",
-      "url":"https://arminsilatani.com/about/",
-      "name":"درباره آرمین سیلاطانی",
-      "description":"داستان مسیر زندگی و تجربه‌های حرفه‌ای آرمین سیلاطانی در طراحی سایت و سئو.",
-      "inLanguage":"fa",
-      "datePublished":"2023-01-18",
-      "dateModified":"2026-04-01",
-      "isPartOf":{
-        "@id":"https://arminsilatani.com/#website"
-      },
-      "about":{
-        "@id":"https://arminsilatani.com/#person"
-      }
-    },
-    {
-      "@type":"BreadcrumbList",
-      "@id":"https://arminsilatani.com/about/#breadcrumb",
-      "itemListElement":[
         {
-          "@type":"ListItem",
-          "position":1,
-          "name":"خانه",
-          "item":"https://arminsilatani.com/"
-        },
-        {
-          "@type":"ListItem",
-          "position":2,
-          "name":"درباره من",
-          "item":"https://arminsilatani.com/about/"
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "WebSite",
+                    "@id": "https://arminsilatani.com/#website",
+                    "url": "https://arminsilatani.com/",
+                    "name": "آرمین سیلاطانی - کارشناس دیجیتال مارکتینگ",
+                    "description": "طراحی سایت، خدمات سئو حرفه‌ای و تبلیغات گوگل ادز — ارائه توسط آرمین سیلاطانی. مشاوره رایگان",
+                    "inLanguage": "fa-IR",
+                    "publisher": { "@id": "https://arminsilatani.com/#person" },
+                    "potentialAction": {
+                        "@type": "SearchAction",
+                        "target": {
+                            "@type": "EntryPoint",
+                            "urlTemplate": "https://arminsilatani.com/search?q={search_term_string}"
+                        },
+                        "query-input": "required name=search_term_string"
+                    }
+                },
+                {
+                    "@type": "AboutPage",
+                    "@id": "https://arminsilatani.com/about/#webpage",
+                    "url": "https://arminsilatani.com/about/",
+                    "name": "درباره من - آرمین سیلاطانی",
+                    "description": "آشنایی با آرمین سیلاطانی، متخصص بازاریابی دیجیتال با تجربه در سئو، تبلیغات گوگل و طراحی سایت",
+                    "inLanguage": "fa-IR",
+                    "isPartOf": { "@id": "https://arminsilatani.com/#website" },
+                    "about": { "@id": "https://arminsilatani.com/#person" },
+                    "primaryImageOfPage": {
+                        "@type": "ImageObject",
+                        "@id": "https://arminsilatani.com/about/#primaryimage",
+                        "url": "https://arminsilatani.com/images/favicon.png",
+                        "contentUrl": "https://arminsilatani.com/images/favicon.png"
+                    },
+                    "image": { "@id": "https://arminsilatani.com/about/#primaryimage" },
+                    "datePublished": "2024-04-10T00:00:00+03:30",
+                    "dateModified": "2026-05-03T00:00:00+03:30",
+                    "breadcrumb": { "@id": "https://arminsilatani.com/about/#breadcrumb" },
+                    "potentialAction": {
+                        "@type": "ReadAction",
+                        "target": ["https://arminsilatani.com/about/"]
+                    }
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "@id": "https://arminsilatani.com/about/#breadcrumb",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "خانه",
+                            "item": "https://arminsilatani.com/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "درباره من",
+                            "item": "https://arminsilatani.com/about/"
+                        }
+                    ]
+                },
+                {
+                    "@type": "Person",
+                    "@id": "https://arminsilatani.com/#person",
+                    "name": "آرمین سیلاطانی",
+                    "url": "https://arminsilatani.com/",
+                    "image": {
+                        "@type": "ImageObject",
+                        "url": "https://arminsilatani.com/images/favicon.png",
+                        "contentUrl": "https://arminsilatani.com/images/favicon.png"
+                    },
+                    "jobTitle": "کارشناس دیجیتال مارکتینگ",
+                    "description": "کارشناس دیجیتال مارکتینگ با تخصص در سئو، تبلیغات گوگل ادز و طراحی سایت",
+                    "email": "contact@arminsilatani.com",
+                    "telephone": "+989125759466",
+                    "sameAs": [
+                        "https://www.linkedin.com/in/arminsilatani/",
+                        "https://github.com/arminsilatani",
+                        "https://www.instagram.com/arminsilatani/",
+                        "https://t.me/arminsilatani",
+                        "https://wa.me/989125759466"
+                    ],
+                    "knowsAbout": [
+                        "SEO",
+                        "Digital Marketing",
+                        "Google Ads",
+                        "Web Design",
+                        "Content Marketing"
+                    ],
+                    "mainEntityOfPage": { "@id": "https://arminsilatani.com/about/#webpage" }
+                }
+            ]
         }
-      ]
-    }
-  ]
-}
-</script>
-
+    </script>
 </head>
 
 <body>
 
-<!-- ========================================= -->
-<!-- HEADER -->
-<!-- ========================================= -->
+    <!-- ------------------------- HEADER ------------------------- -->
+    <header-component></header-component>
 
-<header-component></header-component><main class="has-footer-gap">
+    <main class="has-footer-gap">
 
+        <!-- ------------------------- HERO SECTION ------------------------- -->
+        <section class="hero-section">
 
-<!-- ------------------------------------------------------------------ -->
-<!-- HERO SECTION -->
-<!-- ------------------------------------------------------------------ -->
-<section class="hero-section">
+            <div class="hero-container">
 
-    <div class="hero-container">
+                <language-component></language-component>
 
-        <language-component></language-component>
+                <div class="hero-title">
+                    <h1>درباره من</h1>
+                </div>
 
-        <div class="hero-title">
-            <h1>درباره من</h1>
-        </div>
-
-    </div>
-
-    <div class="pro-divider">
-        <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
-
-            <defs>
-                <filter id="dividerShadow" x="0" y="-30%" width="100%" height="150%">
-                    <feDropShadow dx="0" dy="-8" stdDeviation="12" flood-color="rgba(0,0,0,0.55)" />
-                </filter>
-            </defs>
-
-            <path
-                filter="url(#dividerShadow)"
-                fill="#0d0d0d"
-                d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
-            />
-
-        </svg>
-</div>
-    <div class="fake-terminal-breadcrumb">
-        <div class="fake-terminal-inner">
-
-            <span class="cmd-prefix">$</span>
-            <span class="command">open</span>
-
-            <span id="terminalPath"></span>
-
-            <span class="cursor"></span>
-
-    </div>
-
-</div>
-
-</section>
-
-<!-- ------------------------------------------------------------------ -->
-<!-- ABOUT ME SECTION -->
-<!-- ------------------------------------------------------------------ -->
-<div id="timeline-container" class="story-container"></div>
-
-<!-- ========================================= -->
-<!-- FOOTER -->
-<!-- ========================================= -->
-
-</main><footer-component></footer-component>
-
-<!-- ::::::::::::::::::::::::::::::::::::::: COMPONENT SCRIPTS ::::::::::::::::::::::::::::::::::::::: -->
-<script type="module" src="../header-component.js"></script>
-<script src="../language-component.js"></script>
-<script type="module" src="../footer-component.js"></script>
-
-<!-- ::::::::::::::::::::::::::::::::::::::: PAGE SCRIPT ::::::::::::::::::::::::::::::::::::::: -->
-<script>
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    /* ------------------------------------------------------------------
-    TIMELINE DATA
-    --------------------------------------------------------------------- */
-
-    const timelineData = {
-
-        1368:{context:"بیمارستان کسری",title:"شروع زندگی",text:"من اول فروردین ۱۳۶۸ به دنیا آمدم. آن زمان طبیعتاً نمی‌دانستم قرار است بخش بزرگی از زندگی‌ام با کامپیوتر و اینترنت گره بخورد. فقط یک کودک معمولی بودم که چند سال بعد قرار بود به یک کیبورد خیره شود و ساعت‌ها به دکمه‌هایش فکر کند."},
-
-        1382:{context:"اولین کامپیوتر",title:"شروع کنجکاوی جدی",text:"سال دوم راهنمایی، وقتی ۱۴ سالم بود، اولین کامپیوترم را خریدم. برای خیلی‌ها شاید یک وسیله عادی بود، اما برای من چیزی فراتر از یک دستگاه بود. کم‌کم شروع کردم با آن کار کردن، چیزهای مختلف را امتحان کردن و فهمیدن اینکه پشت این صفحه و این دکمه‌ها چه دنیایی قرار دارد."},
-
-        1391:{context:"مهاجرت",title:"حرکت به اروپا",text:"سال ۱۳۹۱ از ایران رفتم. آن موقع هنوز دقیق نمی‌دانستم قرار است چه مسیری جلویم باز شود، اما می‌دانستم این سفر فقط یک تجربه کوتاه نیست و احتمالاً قرار است چند سال از زندگی‌ام را شکل بدهد."},
-
-        1392:{context:"رم، ایتالیا",title:"هنر، معماری و ساختار",text:"رم اولین شهری بود که در آن زندگی کردم. در دانشگاه جولیلمو مارکونی رشته IT خواندم، اما بخش زیادی از زمانم صرف کار می‌شد. تور لیدر بودم و تقریباً در سراسر ایتالیا کار می‌کردم. همین کار باعث شد شهرهای مختلف را ببینم و با آدم‌های زیادی آشنا شوم. رم برای من فقط محل زندگی نبود؛ شهری بود که هر خیابانش یک داستان داشت."},
-
-        1394:{context:"کپنهاگ، دانمارک",title:"سرمای اسکاندیناوی",text:"چند ماهی هم در کپنهاگ زندگی کردم. هدفم این بود که کارهایم را جلو ببرم و بتوانم آنجا بمانم، اما در نهایت موفق نشدم اقامت بگیرم. تجربه ساده‌ای نبود، ولی همانجا فهمیدم گاهی برنامه‌ها دقیقاً آنطور که فکر می‌کنیم جلو نمی‌روند."},
-
-        1395:{context:"آخن، آلمان",title:"نظم و دقت",text:"مدتی در آخن زندگی کردم. فضای آلمان برای من یک چیز را خیلی پررنگ نشان داد: نظم. در سبک زندگی مردم، در کار کردن، و حتی در جزئیات روزمره. همین تجربه بعدها در نگاه من به کار و پروژه‌ها تأثیر زیادی گذاشت."},
-
-        1396:{context:"جنووا، ایتالیا",title:"رستوران ثریا",text:"در جنووا یک رستوران ایرانی به نام ثریا راه‌اندازی کردم. تجربه جذابی بود، اما در نهایت آنطور که باید پیش نرفت و بخش زیادی از سرمایه‌ام را از دست دادم. با این حال همان دوره چیزهایی یاد گرفتم که بعدها در مدیریت کار و تصمیم‌گیری‌ها خیلی به دردم خورد."},
-
-        1397:{context:"بازگشت به ایران",title:"کنار خانواده",text:"بعد از رفتن پدرم تصمیم گرفتم به ایران برگردم تا کنار مادر باشم. گاهی بعضی تصمیم‌ها خیلی توضیح نمی‌خواهد. فقط می‌فهمی که وقتش رسیده مسیرت عوض شود."},
-
-        1398:{context:"شروع سئو",title:"پروژه ثبت ارمغان",text:"سال ۱۳۹۸ یکی از دوستانم پیشنهادی داد که مسیر کاری من را کاملاً تغییر داد. گفت سایت و سئوی مجموعه‌شان را انجام بدهم. آن زمان حتی دقیق نمی‌دانستم سئو چیست، اما قبول کردم و شروع کردم یاد گرفتن. اسم پروژه «ثبت ارمغان» بود."},
-
-        1399:{context:"یادگیری جدی",title:"کار هر روزه",text:"وقتی وارد سئو شدم، خیلی سریع درگیرش شدم. صبح تا شب کار می‌کردم و شب‌ها به کارهای فردا فکر می‌کردم. مدام مقاله می‌خواندم، تست می‌کردم، سایت‌ها را بررسی می‌کردم و اشتباه می‌کردم. همین روند کم‌کم تبدیل شد به مسیر اصلی کاری من."},
-
-        1400:{context:"رشت، ایران",title:"دوران پاندمی",text:"وقتی کرونا شروع شد، ترجیح دادم مدتی از تهران دور باشم. رفتم رشت؛ شهری که همیشه برای من حال و هوای خاصی داشته. آب‌وهوا، فضای شهر و طبیعتش باعث شد آن دوره سخت را آرام‌تر بگذرانم و تمرکز بیشتری روی کارم داشته باشم."},
-
-        1401:{context:"کار حرفه‌ای‌تر",title:"پروژه‌های بیشتر",text:"کم‌کم پروژه‌های بیشتری وارد کارم شد. هر سایت یک مسئله جدید بود؛ گاهی تحلیل، گاهی استراتژی محتوا، گاهی ساختار فنی. همین تنوع باعث شد سئو برای من تبدیل به کاری شود که همیشه چیزی برای یاد گرفتن دارد."},
-
-        1402:{context:"مسیر کاری",title:"تمرکز روی رشد واقعی",text:"به مرور ترجیح دادم بیشتر با کسب‌وکارهایی کار کنم که دنبال رشد واقعی هستند، نه فقط چند تغییر کوتاه‌مدت در سایت. وقتی استراتژی درست اجرا شود، نتیجه خودش را نشان می‌دهد."},
-
-        1405:{context:"تهران، ایران",title:"در زمان جنگ",text:"الان در تهران زندگی می‌کنم. با توجه به جنگی که این روزها بین آمریکا، اسرائیل و ایران جریان دارد و قطعی اینترنت، بسیاری از کارهای آنلاین فعلاً متوقف شده‌اند. از این وقفه ناخواسته استفاده کردم تا روی چیزی کار کنم که مدت‌ها در ذهنم بود؛ بازنویسی سایت شخصی‌ام و تبدیل آن از وردپرس به HTML خالص، تا ساختار ساده‌تر، سرعت بیشتر و کنترل کامل‌تری روی آن داشته باشم. این هم مثل خیلی از بخش‌های دیگر مسیر کاری من، تبدیل یک توقف ناگهانی به فرصتی برای ساختن چیزی جدید است."}
-
-    };
-
-
-    /* ------------------------------------------------------------------
-    BUILD TIMELINE HTML
-    --------------------------------------------------------------------- */
-
-    const container = document.getElementById("timeline-container");
-
-    Object.keys(timelineData).forEach(year => {
-
-        const data = timelineData[year];
-
-        const block = document.createElement("div");
-        block.className = "story-block";
-
-        block.innerHTML = `
-            <div class="content-date">
-                <div class="step-year">${year}</div>
             </div>
-            <div class="content-text">
-                <span class="step-context">${data.context || ""}</span>
-                <h2 class="step-title">${data.title}</h2>
-                <p class="step-text">${data.text}</p>
+
+            <div class="pro-divider">
+                <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
+                    <defs>
+                        <filter id="dividerShadow" x="0" y="-30%" width="100%" height="150%">
+                            <feDropShadow dx="0" dy="-8" stdDeviation="12" flood-color="rgba(0,0,0,0.55)" />
+                        </filter>
+                    </defs>
+                    <path
+                        filter="url(#dividerShadow)"
+                        fill="#0d0d0d"
+                        d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
+                    />
+                </svg>
             </div>
-        `;
 
-        container.appendChild(block);
+            <div class="fake-terminal-breadcrumb">
+                <div class="fake-terminal-inner">
+                    <span class="cmd-prefix">$</span>
+                    <span class="command">open</span>
+                    <span id="terminalPath"></span>
+                    <span class="cursor"></span>
+                </div>
+            </div>
 
-    });
+        </section>
 
-    /* ------------------------------------------------------------------
-    SCROLL ANIMATION
-    --------------------------------------------------------------------- */
+        <!-- ------------------------- TIMELINE SECTION ------------------------- -->
+        <div id="timeline-container" class="story-container"></div>
 
-    const storyBlocks = document.querySelectorAll(".story-block");
+    </main>
 
-    function updateScrollAnimation(){
+    <!-- ------------------------- FOOTER ------------------------- -->
+    <footer-component></footer-component>
 
-        const windowCenter = window.innerHeight / 2;
-        const maxDistance = window.innerHeight / 2;
+    <!-- ::::::::::::::::::::::::::::::::::::::: COMPONENT SCRIPTS ::::::::::::::::::::::::::::::::::::::: -->
+    <script type="module" src="../header-component.js"></script>
+    <script src="../language-component.js"></script>
+    <script type="module" src="../footer-component.js"></script>
 
-        storyBlocks.forEach(block => {
+    <!-- ::::::::::::::::::::::::::::::::::::::: PAGE SCRIPTS ::::::::::::::::::::::::::::::::::::::: -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
 
-            const rect = block.getBoundingClientRect();
-            const blockCenter = rect.top + (rect.height / 2);
-            const distanceFromCenter = Math.abs(windowCenter - blockCenter);
+            /* ---------------------------------------------------------------
+            TIMELINE DATA
+            --------------------------------------------------------------- */
+            const timelineData = {
+                1368: { context: "بیمارستان کسری", title: "شروع زندگی", text: "من اول فروردین ۱۳۶۸ به دنیا آمدم. آن زمان طبیعتاً نمی‌دانستم قرار است بخش بزرگی از زندگی‌ام با کامپیوتر و اینترنت گره بخورد. فقط یک کودک معمولی بودم که چند سال بعد قرار بود به یک کیبورد خیره شود و ساعت‌ها به دکمه‌هایش فکر کند." },
+                1382: { context: "اولین کامپیوتر", title: "شروع کنجکاوی جدی", text: "سال دوم راهنمایی، وقتی ۱۴ سالم بود، اولین کامپیوترم را خریدم. برای خیلی‌ها شاید یک وسیله عادی بود، اما برای من چیزی فراتر از یک دستگاه بود. کم‌کم شروع کردم با آن کار کردن، چیزهای مختلف را امتحان کردن و فهمیدن اینکه پشت این صفحه و این دکمه‌ها چه دنیایی قرار دارد." },
+                1391: { context: "مهاجرت", title: "حرکت به اروپا", text: "سال ۱۳۹۱ از ایران رفتم. آن موقع هنوز دقیق نمی‌دانستم قرار است چه مسیری جلویم باز شود، اما می‌دانستم این سفر فقط یک تجربه کوتاه نیست و احتمالاً قرار است چند سال از زندگی‌ام را شکل بدهد." },
+                1392: { context: "رم، ایتالیا", title: "هنر، معماری و ساختار", text: "رم اولین شهری بود که در آن زندگی کردم. در دانشگاه جولیلمو مارکونی رشته IT خواندم، اما بخش زیادی از زمانم صرف کار می‌شد. تور لیدر بودم و تقریباً در سراسر ایتالیا کار می‌کردم. همین کار باعث شد شهرهای مختلف را ببینم و با آدم‌های زیادی آشنا شوم. رم برای من فقط محل زندگی نبود؛ شهری بود که هر خیابانش یک داستان داشت." },
+                1394: { context: "کپنهاگ، دانمارک", title: "سرمای اسکاندیناوی", text: "چند ماهی هم در کپنهاگ زندگی کردم. هدفم این بود که کارهایم را جلو ببرم و بتوانم آنجا بمانم، اما در نهایت موفق نشدم اقامت بگیرم. تجربه ساده‌ای نبود، ولی همانجا فهمیدم گاهی برنامه‌ها دقیقاً آنطور که فکر می‌کنیم جلو نمی‌روند." },
+                1395: { context: "آخن، آلمان", title: "نظم و دقت", text: "مدتی در آخن زندگی کردم. فضای آلمان برای من یک چیز را خیلی پررنگ نشان داد: نظم. در سبک زندگی مردم، در کار کردن، و حتی در جزئیات روزمره. همین تجربه بعدها در نگاه من به کار و پروژه‌ها تأثیر زیادی گذاشت." },
+                1396: { context: "جنووا، ایتالیا", title: "رستوران ثریا", text: "در جنووا یک رستوران ایرانی به نام ثریا راه‌اندازی کردم. تجربه جذابی بود، اما در نهایت آنطور که باید پیش نرفت و بخش زیادی از سرمایه‌ام را از دست دادم. با این حال همان دوره چیزهایی یاد گرفتم که بعدها در مدیریت کار و تصمیم‌گیری‌ها خیلی به دردم خورد." },
+                1397: { context: "بازگشت به ایران", title: "کنار خانواده", text: "بعد از رفتن پدرم تصمیم گرفتم به ایران برگردم تا کنار مادر باشم. گاهی بعضی تصمیم‌ها خیلی توضیح نمی‌خواهد. فقط می‌فهمی که وقتش رسیده مسیرت عوض شود." },
+                1398: { context: "شروع سئو", title: "پروژه ثبت ارمغان", text: "سال ۱۳۹۸ یکی از دوستانم پیشنهادی داد که مسیر کاری من را کاملاً تغییر داد. گفت سایت و سئوی مجموعه‌شان را انجام بدهم. آن زمان حتی دقیق نمی‌دانستم سئو چیست، اما قبول کردم و شروع کردم یاد گرفتن. اسم پروژه «ثبت ارمغان» بود." },
+                1399: { context: "یادگیری جدی", title: "کار هر روزه", text: "وقتی وارد سئو شدم، خیلی سریع درگیرش شدم. صبح تا شب کار می‌کردم و شب‌ها به کارهای فردا فکر می‌کردم. مدام مقاله می‌خواندم، تست می‌کردم، سایت‌ها را بررسی می‌کردم و اشتباه می‌کردم. همین روند کم‌کم تبدیل شد به مسیر اصلی کاری من." },
+                1400: { context: "رشت، ایران", title: "دوران پاندمی", text: "وقتی کرونا شروع شد، ترجیح دادم مدتی از تهران دور باشم. رفتم رشت؛ شهری که همیشه برای من حال و هوای خاصی داشته. آب‌وهوا، فضای شهر و طبیعتش باعث شد آن دوره سخت را آرام‌تر بگذرانم و تمرکز بیشتری روی کارم داشته باشم." },
+                1401: { context: "کار حرفه‌ای‌تر", title: "پروژه‌های بیشتر", text: "کم‌کم پروژه‌های بیشتری وارد کارم شد. هر سایت یک مسئله جدید بود؛ گاهی تحلیل، گاهی استراتژی محتوا، گاهی ساختار فنی. همین تنوع باعث شد سئو برای من تبدیل به کاری شود که همیشه چیزی برای یاد گرفتن دارد." },
+                1402: { context: "مسیر کاری", title: "تمرکز روی رشد واقعی", text: "به مرور ترجیح دادم بیشتر با کسب‌وکارهایی کار کنم که دنبال رشد واقعی هستند، نه فقط چند تغییر کوتاه‌مدت در سایت. وقتی استراتژی درست اجرا شود، نتیجه خودش را نشان می‌دهد." },
+                1405: { context: "تهران، ایران", title: "در زمان جنگ", text: "الان در تهران زندگی می‌کنم. با توجه به جنگی که این روزها بین آمریکا، اسرائیل و ایران جریان دارد و قطعی اینترنت، بسیاری از کارهای آنلاین فعلاً متوقف شده‌اند. از این وقفه ناخواسته استفاده کردم تا روی چیزی کار کنم که مدت‌ها در ذهنم بود؛ بازنویسی سایت شخصی‌ام و تبدیل آن از وردپرس به HTML خالص، تا ساختار ساده‌تر، سرعت بیشتر و کنترل کامل‌تری روی آن داشته باشم. این هم مثل خیلی از بخش‌های دیگر مسیر کاری من، تبدیل یک توقف ناگهانی به فرصتی برای ساختن چیزی جدید است." }
+            };
 
-            let progress = 1 - (distanceFromCenter / maxDistance);
-            progress = Math.max(0, Math.min(1, progress));
+            /* ---------------------------------------------------------------
+            BUILD TIMELINE HTML
+            --------------------------------------------------------------- */
+            const container = document.getElementById("timeline-container");
 
-            const textContent = block.querySelector(".content-text");
-            if(textContent){
-                textContent.style.setProperty("--progress", progress);
-            }
+            Object.keys(timelineData).forEach(year => {
+                const data = timelineData[year];
+                const block = document.createElement("div");
+                block.className = "story-block";
 
-            const dateElement = block.querySelector(".step-year");
-            if(dateElement){
+                block.innerHTML = `
+                    <div class="content-date">
+                        <div class="step-year">${year}</div>
+                    </div>
+                    <div class="content-text">
+                        <span class="step-context">${data.context || ""}</span>
+                        <h2 class="step-title">${data.title}</h2>
+                        <p class="step-text">${data.text}</p>
+                    </div>
+                `;
 
-                dateElement.style.setProperty("--progress", progress);
-
-                const scrollOffset = (windowCenter - blockCenter) * 1.5;
-                dateElement.style.setProperty("--date-scroll-offset", `${scrollOffset}px`);
-            }
-
-            if(progress > 0.85){
-                block.classList.add("active");
-            }else{
-                block.classList.remove("active");
-            }
-
-        });
-
-    }
-
-    /* ------------------------------------------------------------------
-    SCROLL PERFORMANCE OPTIMIZATION
-    --------------------------------------------------------------------- */
-
-    let isScrolling = false;
-
-    window.addEventListener("scroll", () => {
-
-        if(!isScrolling){
-
-            window.requestAnimationFrame(() => {
-
-                updateScrollAnimation();
-                isScrolling = false;
-
+                container.appendChild(block);
             });
 
-            isScrolling = true;
-        }
+            /* ---------------------------------------------------------------
+            SCROLL ANIMATION
+            --------------------------------------------------------------- */
+            const storyBlocks = document.querySelectorAll(".story-block");
 
-    });
+            function updateScrollAnimation() {
+                const windowCenter = window.innerHeight / 2;
+                const maxDistance = window.innerHeight / 2;
 
-    /* ------------------------------------------------------------------
-    INITIAL STATE
-    --------------------------------------------------------------------- */
+                storyBlocks.forEach(block => {
+                    const rect = block.getBoundingClientRect();
+                    const blockCenter = rect.top + (rect.height / 2);
+                    const distanceFromCenter = Math.abs(windowCenter - blockCenter);
 
-    updateScrollAnimation();
+                    let progress = 1 - (distanceFromCenter / maxDistance);
+                    progress = Math.max(0, Math.min(1, progress));
 
-    });
-    
-    /* ------------------------------------------------------------------
-    BREADCRUMP SCRIPT
-    --------------------------------------------------------------------- */
+                    const textContent = block.querySelector(".content-text");
+                    if (textContent) {
+                        textContent.style.setProperty("--progress", progress);
+                    }
+
+                    const dateElement = block.querySelector(".step-year");
+                    if (dateElement) {
+                        dateElement.style.setProperty("--progress", progress);
+                        const scrollOffset = (windowCenter - blockCenter) * 1.5;
+                        dateElement.style.setProperty("--date-scroll-offset", `${scrollOffset}px`);
+                    }
+
+                    if (progress > 0.85) {
+                        block.classList.add("active");
+                    } else {
+                        block.classList.remove("active");
+                    }
+                });
+            }
+
+            /* ---------------------------------------------------------------
+            SCROLL PERFORMANCE (rAF THROTTLE)
+            --------------------------------------------------------------- */
+            let isScrolling = false;
+
+            window.addEventListener("scroll", () => {
+                if (!isScrolling) {
+                    window.requestAnimationFrame(() => {
+                        updateScrollAnimation();
+                        isScrolling = false;
+                    });
+                    isScrolling = true;
+                }
+            });
+
+            /* ---------------------------------------------------------------
+            INITIAL STATE
+            --------------------------------------------------------------- */
+            updateScrollAnimation();
+
+            /* ---------------------------------------------------------------
+            BREADCRUMB TYPING ANIMATION
+            --------------------------------------------------------------- */
+            const terminalPath = document.getElementById("terminalPath");
+            const domain = window.location.hostname;
+            const pathParts = window.location.pathname.split("/").filter(Boolean);
+
+            const paths = [];
+            let fullPath = "";
+
+            paths.push({ name: domain, url: "/" });
+
+            pathParts.forEach(part => {
+                fullPath += "/" + part;
+                paths.push({ name: part, url: fullPath });
+            });
+
+            let textIndex = 0;
+            let charIndex = 0;
+
+            function typeSegment() {
+                if (textIndex >= paths.length) return;
+
+                const segment = paths[textIndex];
+                const link = document.createElement("a");
+                link.href = segment.url;
+                terminalPath.appendChild(link);
+
+                function typeChar() {
+                    if (charIndex < segment.name.length) {
+                        link.textContent += segment.name.charAt(charIndex);
+                        charIndex++;
+                        setTimeout(typeChar, 40);
+                    } else {
+                        charIndex = 0;
+                        textIndex++;
+
+                        if (textIndex < paths.length) {
+                            terminalPath.appendChild(document.createTextNode("/"));
+                        }
+
+                        setTimeout(typeSegment, 100);
+                    }
+                }
+
+                typeChar();
+            }
+
+            typeSegment();
+        });
     </script>
-
-    <script>
-
-    document.addEventListener("DOMContentLoaded",function(){
-
-    const container = document.getElementById("terminalPath");
-
-    const domain = window.location.hostname;
-
-    const parts = window.location.pathname.split("/").filter(Boolean);
-
-    let paths = [];
-    let fullPath = "";
-
-    paths.push({
-    name:domain,
-    url:"/"
-    });
-
-    parts.forEach(part=>{
-    fullPath += "/" + part;
-
-    paths.push({
-    name:part,
-    url:fullPath
-    });
-
-    });
-
-    let textIndex = 0;
-    let charIndex = 0;
-
-    function typeSegment(){
-
-    if(textIndex >= paths.length) return;
-
-    let segment = paths[textIndex];
-
-    let link = document.createElement("a");
-    link.href = segment.url;
-
-    container.appendChild(link);
-
-    function typeChar(){
-
-    if(charIndex < segment.name.length){
-
-    link.textContent += segment.name.charAt(charIndex);
-    charIndex++;
-
-    setTimeout(typeChar,40);
-
-    }else{
-
-    charIndex=0;
-    textIndex++;
-
-    if(textIndex < paths.length){
-
-    container.appendChild(document.createTextNode("/"));
-    }
-
-    setTimeout(typeSegment,100);
-
-    }
-
-    }
-
-    typeChar();
-
-    }
-
-    typeSegment();
-
-    });
-
-    </script>
-
 
 </body>
 </html>

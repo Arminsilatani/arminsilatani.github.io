@@ -47,69 +47,113 @@ Version: 1.0.0
 
     <!-- ::::::::::::::::::::::::::::::::::::::: STRUCTURED DATA ::::::::::::::::::::::::::::::::::::::: -->
     <script type="application/ld+json">
+ {
   "@context": "https://schema.org",
-  "@graph":[
+  "@graph": [
     {
-    "@type":"WebSite",
-    "@id":"https://arminsilatani.com/ar/#website",
-    "url":"https://arminsilatani.com/ar/",
-    "name":"آرمين سيلاطاني",
-    "inLanguage":"ar",
-    "publisher":{
-        "@id":"https://arminsilatani.com/ar/#person"
-    }
-    },
-    {
-      "@type":"Person",
-      "@id":"https://arminsilatani.com/ar/#person",
-      "name":"عن آرمين سيلاطاني",
-      "url":"https://arminsilatani.com/ar/",
-      "image":"https://arminsilatani.com/images/arminsilatani/HeroLogo.webp",
-      "jobTitle":"متخصص تحسين محركات البحث ومصمم مواقع",
-      "description":"قصتي الشخصية: من الطفولة والهجرة في أوروبا إلى العمل في مجالات مختلفة ثم دخولي عالم تحسين محركات البحث وتطوير المواقع.",
-      "sameAs":[
-        "https://www.linkedin.com/in/arminsilatani/",
-        "https://github.com/Arminsilatani",
-        "https://www.instagram.com/arminsilatani",
-        "https://wa.me/989125759466",
-        "https://t.me/ArminSilatani"
-      ]
-    },
-    {
-      "@type":"AboutPage",
-      "@id":"https://arminsilatani.com/ar/about/#webpage",
-      "url":"https://arminsilatani.com/ar/about/",
-      "name":"Über Armin Silatani",
-      "description":"Discover my story: from childhood to migration across Europe, different jobs, failures, and eventually entering the world of SEO and digital growth.",
-      "inLanguage":"ar",
-      "datePublished":"2026-04-01",
-      "dateModified":"2026-04-01",
-      "isPartOf":{
-        "@id":"https://arminsilatani.com/ar/#website"
+      "@type": "WebSite",
+      "@id": "https://arminsilatani.com/ar/#website",
+      "url": "https://arminsilatani.com/ar/",
+      "name": "أرمين سيلاتاني - أخصائي التسويق الرقمي",
+      "description": "تصميم المواقع، خدمات تحسين محركات البحث الاحترافية وإعلانات جوجل — يقدمها أرمين سيلاتاني. استشارة مجانية",
+      "inLanguage": "ar",
+      "publisher": {
+        "@id": "https://arminsilatani.com/ar/#person"
       },
-      "about":{
-        "@id":"https://arminsilatani.com/ar/#person"
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://arminsilatani.com/ar/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
       }
     },
     {
-      "@type":"BreadcrumbList",
-      "@id":"https://arminsilatani.com/ar/about/#breadcrumb",
-      "itemListElement":[
+      "@type": "AboutPage",
+      "@id": "https://arminsilatani.com/ar/about/#webpage",
+      "url": "https://arminsilatani.com/ar/about/",
+      "name": "عني - أرمين سيلاتاني",
+      "description": "تعرف على أرمين سيلاتاني، أخصائي التسويق الرقمي ذو الخبرة في تحسين محركات البحث وإعلانات جوجل وتصميم المواقع",
+      "inLanguage": "ar",
+      "isPartOf": {
+        "@id": "https://arminsilatani.com/ar/#website"
+      },
+      "about": {
+        "@id": "https://arminsilatani.com/ar/#person"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "@id": "https://arminsilatani.com/ar/about/#primaryimage",
+        "url": "https://arminsilatani.com/images/favicon.png",
+        "contentUrl": "https://arminsilatani.com/images/favicon.png"
+      },
+      "image": {
+        "@id": "https://arminsilatani.com/ar/about/#primaryimage"
+      },
+      "datePublished": "2024-04-10T00:00:00+03:30",
+      "dateModified": "2026-05-03T00:00:00+03:30",
+      "breadcrumb": {
+        "@id": "https://arminsilatani.com/ar/about/#breadcrumb"
+      },
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": ["https://arminsilatani.com/ar/about/"]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://arminsilatani.com/ar/about/#breadcrumb",
+      "itemListElement": [
         {
-          "@type":"ListItem",
-          "position":1,
-          "name":"الرئيسية",
-          "item":"https://arminsilatani.com/ar/"
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://arminsilatani.com/ar/"
         },
         {
-          "@type":"ListItem",
-          "position":2,
-          "name":"من أنا",
-          "item":"https://arminsilatani.com/ar/about/"
+          "@type": "ListItem",
+          "position": 2,
+          "name": "عني",
+          "item": "https://arminsilatani.com/ar/about/"
         }
       ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://arminsilatani.com/ar/#person",
+      "name": "أرمين سيلاتاني",
+      "url": "https://arminsilatani.com/ar/",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://arminsilatani.com/images/favicon.png",
+        "contentUrl": "https://arminsilatani.com/images/favicon.png"
+      },
+      "jobTitle": "أخصائي التسويق الرقمي",
+      "description": "أخصائي التسويق الرقمي مع خبرة في تحسين محركات البحث وإعلانات جوجل وتصميم المواقع",
+      "email": "contact@arminsilatani.com",
+      "telephone": "+989125759466",
+      "sameAs": [
+        "https://www.linkedin.com/in/arminsilatani/",
+        "https://github.com/arminsilatani",
+        "https://www.instagram.com/arminsilatani/",
+        "https://t.me/arminsilatani",
+        "https://wa.me/989125759466"
+      ],
+      "knowsAbout": [
+        "SEO",
+        "Digital Marketing",
+        "Google Ads",
+        "Web Design",
+        "Content Marketing"
+      ],
+      "mainEntityOfPage": {
+        "@id": "https://arminsilatani.com/ar/about/#webpage"
+      }
     }
   ]
+}
+
 </script>
 
 </head>
