@@ -1,12 +1,22 @@
-// js/utils/currency-selector.js
+/*
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-05
+  *  Version: 1.0.0
+  ****************************************************
+*/
+
 import { currencyPolicy } from "../config/currency-policy.js";
 
+/* =========================== CURRENCY SELECTOR WEB COMPONENT ============================ */
+
 class CurrencySelector extends HTMLElement {
+    /* --------------------- CONSTRUCTOR --------------------- */
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
-        
-        // نقشه‌ راهنمای نام‌های فارسی (اختیاری - اگه دوست داشتی کد ارز نمایش داده نشه)
+
+        // Optional mapping for Persian display names (to hide currency code)
         this.currencyLabels = {
             "IRR": "تومان",
             "USD": "دلار",
@@ -16,32 +26,32 @@ class CurrencySelector extends HTMLElement {
         };
     }
 
+    /* --------------------- LIFECYCLE --------------------- */
     connectedCallback() {
         this.render();
     }
 
-    // منطق استخراج ارزهای یکتا از پالیسی
+    /* --------------------- UTILITIES --------------------- */
     getUniqueCurrencies() {
         const allCurrencies = Object.values(currencyPolicy).map(p => p.currency || p.fallback);
-        // حذف تکراری‌ها با Set
+        // Remove duplicates
         return [...new Set(allCurrencies)];
     }
 
-render() {
-    let currencies = this.getUniqueCurrencies();
-    const saved = localStorage.getItem("selectedCurrency") || "TOMAN";
+    /* --------------------- RENDER & LOGIC --------------------- */
+    render() {
+        let currencies = this.getUniqueCurrencies();
+        const saved = localStorage.getItem("selectedCurrency") || "TOMAN";
 
-    // --- منطق جابجایی جایگاه تومان و دلار برای تعادل بصری ---
-    const irrIndex = currencies.indexOf("IRR");
-    const usdIndex = currencies.indexOf("USD");
+        // Swap IRR and USD positions for visual balance
+        const irrIndex = currencies.indexOf("IRR");
+        const usdIndex = currencies.indexOf("USD");
 
-    if (irrIndex !== -1 && usdIndex !== -1) {
-        // جابجایی مقدار در آرایه
-        [currencies[irrIndex], currencies[usdIndex]] = [currencies[usdIndex], currencies[irrIndex]];
-    }
-    // --------------------------------------------------
+        if (irrIndex !== -1 && usdIndex !== -1) {
+            [currencies[irrIndex], currencies[usdIndex]] = [currencies[usdIndex], currencies[irrIndex]];
+        }
 
-    this.shadowRoot.innerHTML = `
+        this.shadowRoot.innerHTML = `
 <style>
     :host { display: block; width: 100%; direction: rtl; }
     ul {
@@ -92,10 +102,8 @@ li {
     </ul>
     `;
 
-    this.setupListeners();
-}
-
-
+        this.setupListeners();
+    }
 
     setupListeners() {
         this.shadowRoot.querySelectorAll("li").forEach(li => {
@@ -103,11 +111,11 @@ li {
                 const currency = li.getAttribute("data-code");
                 localStorage.setItem("selectedCurrency", currency);
 
-                // آپدیت ظاهری سریع
+                // Fast visual update
                 this.shadowRoot.querySelector("li.active")?.classList.remove("active");
                 li.classList.add("active");
 
-                // انتشار رویداد برای تغییر قیمت‌ها
+                // Dispatch event to update prices across the app
                 window.dispatchEvent(
                     new CustomEvent("currency-change", {
                         detail: { currency },

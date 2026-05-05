@@ -1,6 +1,17 @@
-export const basePricesUSD = {
-  SEO: {
+/*
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-05
+  *  Version: 1.0.0
+  ****************************************************
+*/
 
+/* =========================== BASE PRICES CONFIGURATION ============================ */
+
+export const basePricesUSD = {
+  /* ------------------------------ SEO ------------------------------ */
+  SEO: {
+    // Standard Basic
     STD_BAS_KEY: 50,
     STD_BAS_CON: 200,
     STD_BAS_BKL: 80,
@@ -9,6 +20,7 @@ export const basePricesUSD = {
     STD_BAS_REP: 30,
     STD_BAS_SUP: 27,
 
+    // Standard Pro
     STD_PRO_KEY: 100,
     STD_PRO_CMP: 80,
     STD_PRO_CON: 375,
@@ -18,6 +30,7 @@ export const basePricesUSD = {
     STD_PRO_REP: 50,
     STD_PRO_SUP: 52,
 
+    // Standard Premium
     STD_PRM_KEY: 180,
     STD_PRM_CMP: 140,
     STD_PRM_CON: 500,
@@ -27,6 +40,7 @@ export const basePricesUSD = {
     STD_PRM_REP: 80,
     STD_PRM_SUP: 87,
 
+    // Advanced Basic
     ADV_BAS_KEY: 120,
     ADV_BAS_CMP: 100,
     ADV_BAS_CON: 375,
@@ -36,6 +50,7 @@ export const basePricesUSD = {
     ADV_BAS_REP: 50,
     ADV_BAS_SUP: 62,
 
+    // Advanced Pro
     ADV_PRO_KEY: 200,
     ADV_PRO_CMP: 160,
     ADV_PRO_CON: 550,
@@ -45,6 +60,7 @@ export const basePricesUSD = {
     ADV_PRO_REP: 80,
     ADV_PRO_SUP: 97,
 
+    // Advanced Premium
     ADV_PRM_KEY: 280,
     ADV_PRM_CMP: 220,
     ADV_PRM_CON: 750,
@@ -54,19 +70,19 @@ export const basePricesUSD = {
     ADV_PRM_REP: 120,
     ADV_PRM_SUP: 127,
 
+    /* ::::::::::::::::::::::::: ADD-ONS ::::::::::::::::::::::::: */
     ADD_CON_UNT: 25,
     ADD_BKL_UNT: 50,
     ADD_RPR_STD: 100,
     ADD_RPR_PRM: 200,
-    ADV_PRM_SUP: 127,
     ADD_KEY_UNT: 50,
     ADD_ACC_STD: 250,
     ADD_ACC_ADV: 450,
   },
-  
-  
-  WEBDESIGN: {
 
+  /* --------------------------- WEBDESIGN ---------------------------- */
+  WEBDESIGN: {
+    // WordPress Preset
     WPS_PRS_HST: 25,
     WPS_PRS_DES: 140,
     WPS_PRS_RPS: 40,
@@ -74,6 +90,7 @@ export const basePricesUSD = {
     WPS_PRS_SEC: 25,
     WPS_PRS_SUP: 25,
 
+    // WordPress Business
     WPS_BUS_HST: 35,
     WPS_BUS_DES: 270,
     WPS_BUS_RPS: 50,
@@ -82,6 +99,7 @@ export const basePricesUSD = {
     WPS_BUS_SPD: 40,
     WPS_BUS_SUP: 40,
 
+    // WordPress Ecommerce
     WPS_ECO_HST: 50,
     WPS_ECO_DES: 320,
     WPS_ECO_RPS: 60,
@@ -93,6 +111,7 @@ export const basePricesUSD = {
     WPS_ECO_SPD: 60,
     WPS_ECO_SUP: 50,
 
+    // Static Preset
     STS_PRS_HST: 25,
     STS_PRS_DES: 430,
     STS_PRS_RPS: 120,
@@ -100,6 +119,7 @@ export const basePricesUSD = {
     STS_PRS_SPD: 120,
     STS_PRS_SUP: 90,
 
+    // Static Business
     STS_BUS_HST: 35,
     STS_BUS_DES: 820,
     STS_BUS_RPS: 180,
@@ -108,6 +128,7 @@ export const basePricesUSD = {
     STS_BUS_SPD: 180,
     STS_BUS_SUP: 150,
 
+    // Static Premium
     STS_PRM_HST: 50,
     STS_PRM_DES: 1420,
     STS_PRM_RPS: 240,
@@ -116,6 +137,7 @@ export const basePricesUSD = {
     STS_PRM_SPD: 300,
     STS_PRM_SUP: 325,
 
+    /* ::::::::::::::::::::::::: ADD-ONS ::::::::::::::::::::::::: */
     ADD_DOM_COM: 15,
     ADD_PGX_WPS: 25,
     ADD_PGX_STS: 150,
@@ -131,17 +153,18 @@ export const basePricesUSD = {
     ADD_TAX: 50,
     ADD_HST: 20,
 
+    /* :::::::::::::::::::::::: SUPPORT :::::::::::::::::::::::: */
     SUP_WPS_PRS: 20,
     SUP_WPS_BUS: 35,
     SUP_WPS_ECO: 55,
     SUP_STS_PRS: 35,
     SUP_STS_BUS: 60,
-    SUP_STS_PRM : 90
+    SUP_STS_PRM: 90,
   },
-  
-  
+
+  /* ----------------------------- UI/UX ------------------------------ */
   UIUX: {
-      
+    // Standard Basic
     STD_BAS_ANL: 100,
     STD_BAS_WRF: 200,
     STD_BAS_UID: 300,
@@ -149,6 +172,7 @@ export const basePricesUSD = {
     STD_BAS_REV: 50,
     STD_BAS_DEL: 50,
 
+    // Standard Pro
     STD_PRO_RES: 250,
     STD_PRO_ARC: 200,
     STD_PRO_WRF: 350,
@@ -157,6 +181,7 @@ export const basePricesUSD = {
     STD_PRO_RSP: 150,
     STD_PRO_REV: 100,
 
+    // Standard Premium
     STD_PRM_RES: 400,
     STD_PRM_ARC: 300,
     STD_PRM_WRF: 500,
@@ -166,6 +191,7 @@ export const basePricesUSD = {
     STD_PRM_PRT: 300,
     STD_PRM_REV: 150,
 
+    // Advanced Basic
     ADV_BAS_ANL: 150,
     ADV_BAS_WRF: 300,
     ADV_BAS_UID: 500,
@@ -173,6 +199,7 @@ export const basePricesUSD = {
     ADV_BAS_REV: 50,
     ADV_BAS_DEL: 50,
 
+    // Advanced Pro
     ADV_PRO_RES: 350,
     ADV_PRO_ARC: 300,
     ADV_PRO_WRF: 450,
@@ -181,6 +208,7 @@ export const basePricesUSD = {
     ADV_PRO_STA: 250,
     ADV_PRO_REV: 200,
 
+    // Advanced Premium
     ADV_PRM_RES: 600,
     ADV_PRM_ARC: 450,
     ADV_PRM_WRF: 700,
@@ -190,6 +218,7 @@ export const basePricesUSD = {
     ADV_PRM_PRT: 600,
     ADV_PRM_REV: 350,
 
+    /* ::::::::::::::::::::::::: ADD-ONS ::::::::::::::::::::::::: */
     ADD_RES_CMP: 200,
     ADD_RES_UST: 400,
     ADD_DES_PGW: 80,
@@ -203,13 +232,12 @@ export const basePricesUSD = {
     ADD_DOC_DEV: 250,
     ADD_DOC_VID: 200,
     ADD_SUP_MO1: 300,
-    ADD_SUP_REV: 100
-  
+    ADD_SUP_REV: 100,
   },
 
-
+  /* ------------------------------ ADS ------------------------------ */
   ADS: {
-      
+    // Standard Basic
     STD_BAS_SET: 50,
     STD_BAS_KWR: 45,
     STD_BAS_MGT: 80,
@@ -218,6 +246,7 @@ export const basePricesUSD = {
     STD_BAS_RPT: 25,
     STD_BAS_SUP: 25,
 
+    // Standard Pro
     STD_PRO_SET: 90,
     STD_PRO_KWR: 85,
     STD_PRO_MGT: 150,
@@ -228,6 +257,7 @@ export const basePricesUSD = {
     STD_PRO_ABT: 35,
     STD_PRO_SUP: 70,
 
+    // Standard Premium
     STD_PRM_SET: 150,
     STD_PRM_KWR: 180,
     STD_PRM_MGT: 300,
@@ -240,6 +270,7 @@ export const basePricesUSD = {
     STD_PRM_CSL: 100,
     STD_PRM_SUP: 130,
 
+    // Advanced Basic
     ADV_BAS_SET: 120,
     ADV_BAS_KWR: 140,
     ADV_BAS_MGT: 220,
@@ -251,6 +282,7 @@ export const basePricesUSD = {
     ADV_BAS_BID: 80,
     ADV_BAS_SUP: 70,
 
+    // Advanced Pro
     ADV_PRO_SET: 240,
     ADV_PRO_KWR: 280,
     ADV_PRO_MGT: 420,
@@ -264,6 +296,7 @@ export const basePricesUSD = {
     ADV_PRO_ACM: 180,
     ADV_PRO_SUP: 200,
 
+    // Advanced Premium
     ADV_PRM_SET: 450,
     ADV_PRM_KWR: 550,
     ADV_PRM_MGT: 800,
@@ -279,18 +312,19 @@ export const basePricesUSD = {
     ADV_PRM_CSL: 120,
     ADV_PRM_SUP: 280,
 
+    /* ::::::::::::::::::::::::: ADD-ONS ::::::::::::::::::::::::: */
     ADD_BNR_EXT: 16,
     ADD_SHP_SET: 195,
     ADD_CVR_ANL: 95,
     ADD_TRK_ADV: 130,
     ADD_RPT_CST: 65,
     ADD_MOB_OPT: 95,
-    ADD_CRS_MGT: 195
-
+    ADD_CRS_MGT: 195,
   },
 
-
+  /* ---------------------------- SOCIAL ----------------------------- */
   SOCIAL: {
+    // Standard Basic
     STD_BAS_STR: 70,
     STD_BAS_ANL: 50,
     STD_BAS_PST: 80,
@@ -299,6 +333,7 @@ export const basePricesUSD = {
     STD_BAS_SCH: 40,
     STD_BAS_REP: 60,
 
+    // Standard Pro
     STD_PRO_STR: 120,
     STD_PRO_AUD: 90,
     STD_PRO_GRP: 150,
@@ -306,7 +341,8 @@ export const basePricesUSD = {
     STD_PRO_OPT: 80,
     STD_PRO_REP: 70,
     STD_PRO_CON: 50,
-    
+
+    // Standard Premium
     STD_PRM_STR: 180,
     STD_PRM_SEO: 140,
     STD_PRM_THM: 160,
@@ -316,6 +352,7 @@ export const basePricesUSD = {
     STD_PRM_CON: 120,
     STD_PRM_PUB: 100,
 
+    // Advanced Basic
     ADV_BAS_STR: 150,
     ADV_BAS_ANL: 120,
     ADV_BAS_PST: 240,
@@ -324,6 +361,7 @@ export const basePricesUSD = {
     ADV_BAS_MGT: 100,
     ADV_BAS_REP: 50,
 
+    // Advanced Pro
     ADV_PRO_STR: 280,
     ADV_PRO_AUD: 200,
     ADV_PRO_GRP: 320,
@@ -332,6 +370,7 @@ export const basePricesUSD = {
     ADV_PRO_ENG: 180,
     ADV_PRO_REP: 150,
 
+    // Advanced Premium
     ADV_PRM_STR: 400,
     ADV_PRM_SEO: 320,
     ADV_PRM_THM: 360,
@@ -341,6 +380,8 @@ export const basePricesUSD = {
     ADV_PRM_REP: 340,
     ADV_PRM_CON: 360,
 
+    /* ::::::::::::::::::::::::: ADD-ONS ::::::::::::::::::::::::: */
+    // Instagram
     ADD_IGP_PST: 12,
     ADD_IGP_STO: 15,
     ADD_IGP_RLS: 25,
@@ -354,6 +395,7 @@ export const basePricesUSD = {
     ADD_IGM_MEN: 80,
     ADD_IGM_GRW: 120,
 
+    // LinkedIn
     ADD_LIP_GRP: 18,
     ADD_LIP_WRT: 25,
     ADD_LIP_ART: 50,
@@ -367,6 +409,7 @@ export const basePricesUSD = {
     ADD_LIM_OUT: 150,
     ADD_LIM_PAG: 200,
 
+    // YouTube
     ADD_YTP_THM: 45,
     ADD_YTP_SCR: 60,
     ADD_YTP_EDS: 150,
@@ -379,44 +422,50 @@ export const basePricesUSD = {
     ADD_YTM_CMT: 100,
     ADD_YTM_MON: 250,
     ADD_YTM_ADS: 200,
-    ADD_YTM_ANL: 120
+    ADD_YTM_ANL: 120,
+  },
 
-    },
-
-
+  /* --------------------------- GRAPHIC ----------------------------- */
   GRAPHIC: {
+    // Standard Basic
     STD_BAS_LOG: 180,
     STD_BAS_CTL: 200,
     STD_BAS_CRD: 80,
     STD_BAS_CNT: 70,
     STD_BAS_LTR: 60,
 
+    // Standard Starter
     STD_STR_LOG: 153,
     STD_STR_CRD: 68,
     STD_STR_LTR: 51,
 
+    // Standard Offer
     STD_OFF_LOG: 126,
     STD_OFF_CRD: 56,
     STD_OFF_LTR: 42,
     STD_OFF_CTL: 140,
     STD_OFF_CNT: 49,
 
+    // Custom Basic
     CUS_BAS_LOG: 350,
     CUS_BAS_CRD: 150,
     CUS_BAS_LTR: 120,
     CUS_BAS_CTL: 400,
     CUS_BAS_CNT: 100,
 
+    // Custom Starter
     CUS_STR_LOG: 297.5,
     CUS_STR_CRD: 127.5,
     CUS_STR_LTR: 102,
 
+    // Custom Offer
     CUS_OFF_LOG: 245,
     CUS_OFF_CRD: 105,
     CUS_OFF_LTR: 84,
     CUS_OFF_CTL: 280,
     CUS_OFF_CNT: 70,
 
+    /* ::::::::::::::::::::::::: ADD-ONS ::::::::::::::::::::::::: */
     ADD_REV_STD: 20,
     ADD_SRC_STD: 25,
     ADD_EXP_BAS_SIM: 40,
@@ -435,8 +484,6 @@ export const basePricesUSD = {
     ADD_PNT_PRO_STR: 60,
     ADD_EXP_OFF_ADV: 180,
     ADD_PNT_PRO_OFF: 70,
-    ADD_MOC_PRO: 30
-
-  }
-
+    ADD_MOC_PRO: 30,
+  },
 };
