@@ -1,10 +1,12 @@
 /*
-  Author: Armin Silatani
-  Date: 2026-03-29 (Updated: 2026-04-02)
-  Version: 1.3.3 (Custom Domain, Smooth Glass & Multi-directional Feathered Edges)
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-04-02
+  *  Version: 1.0.0
+  ****************************************************
 */
 
-/* ::::::::::::::::::::::::::::::::::::::: LANGUAGE COMPONENT ::::::::::::::::::::::::::::::::::::::: */
+/* =========================== LANGUAGE COMPONENT =========================== */
 
 class LanguageComponent extends HTMLElement {
   constructor() {
@@ -12,7 +14,7 @@ class LanguageComponent extends HTMLElement {
 
     const shadow = this.attachShadow({ mode: 'open' });
 
-    /* Styles */
+    /* ------------------------- STYLES ------------------------- */
     const style = document.createElement('style');
     style.textContent = `
       .language-container {
@@ -28,7 +30,7 @@ class LanguageComponent extends HTMLElement {
         touch-action: manipulation;
         direction: rtl;
         padding-right: 10px;
-        -webkit-tap-highlight-color: transparent; 
+        -webkit-tap-highlight-color: transparent;
       }
 
       .language {
@@ -39,57 +41,55 @@ class LanguageComponent extends HTMLElement {
       }
 
       .language-dropdown {
-        /* ============================================================== */
-        /* تنظیمات میزان محوشدگی لبه‌های شیشه (میتوانید مقادیر را تغییر دهید) */
-        --fade-l: 65px;  /* مقدار محوشدگی سمت چپ */
-        --fade-r: 30px;  /* مقدار محوشدگی سمت راست */
-        --fade-b: 30px;  /* مقدار محوشدگی پایین */
-        /* ============================================================== */
+        /* Customizable edge-fade variables for the glass effect */
+        --fade-l: 65px;  /* left fade amount */
+        --fade-r: 30px;  /* right fade amount */
+        --fade-b: 30px;  /* bottom fade amount */
 
         display: none;
         position: absolute;
         top: 100%;
-        
-        /* شیفت دادن منو به سمت راست برای خنثی کردن پدینگ، تا متن‌ها با کلمه 'فارسی |' تراز بمانند */
+
+        /* Shift menu to the right to compensate padding, keeping items aligned with 'فارسی |' */
         right: calc(10px - var(--fade-r));
-        
+
         flex-direction: column;
         background: linear-gradient(to bottom, rgba(245, 245, 245, 0.04) 0%, rgba(245, 245, 245, 0) 100%);
-        
+
         opacity: 0;
-        backdrop-filter: blur(0px); 
+        backdrop-filter: blur(0px);
         -webkit-backdrop-filter: blur(0px);
-        
-        /* 
-          ایجاد ماسک‌های افقی و عمودی و ترکیب آن‌ها
-          - لایه اول (افقی): چپ و راست را محو می‌کند
-          - لایه دوم (عمودی): فقط پایین را محو می‌کند (بالا ثابت می‌ماند)
+
+        /*
+          Create horizontal and vertical masks and combine them:
+          - First layer (horizontal): fade left and right
+          - Second layer (vertical): fade only the bottom (top remains solid)
         */
-        -webkit-mask-image: 
+        -webkit-mask-image:
           linear-gradient(to right, transparent 0%, black var(--fade-l), black calc(100% - var(--fade-r)), transparent 100%),
           linear-gradient(to bottom, black 0%, black calc(100% - var(--fade-b)), transparent 100%);
-        -webkit-mask-composite: source-in; /* ادغام ماسک‌ها در کروم و سافاری */
-        
-        mask-image: 
+        -webkit-mask-composite: source-in;
+
+        mask-image:
           linear-gradient(to right, transparent 0%, black var(--fade-l), black calc(100% - var(--fade-r)), transparent 100%),
           linear-gradient(to bottom, black 0%, black calc(100% - var(--fade-b)), transparent 100%);
-        mask-composite: intersect; /* ادغام ماسک‌ها در مرورگرهای استاندارد */
-        
-        /* ایجاد فضای امن با Padding تا متن لینک‌ها وارد ناحیه محوشدگی نشوند و واضح بمانند */
+        mask-composite: intersect;
+
+        /* Padding to keep link text away from the faded edges */
         padding-left: 10px;
         padding-right: var(--fade-r);
         padding-bottom: var(--fade-b);
 
-        box-shadow: none; 
+        box-shadow: none;
         border: none;
-        border-radius: 8px; 
+        border-radius: 8px;
         z-index: 20;
         direction: rtl;
-        
-        /* اطمینان از عرض کافی برای نمایش متن‌ها در وسط ناحیه شفاف */
-        min-width: 140px; 
+
+        /* Ensure enough width for text in the clear zone */
+        min-width: 140px;
         overflow: hidden;
-        
+
         transition: opacity 0.4s ease, backdrop-filter 0.4s ease, -webkit-backdrop-filter 0.4s ease;
       }
 
@@ -101,7 +101,7 @@ class LanguageComponent extends HTMLElement {
 
       .language-dropdown-item {
         display: block;
-        padding: 12px 15px; 
+        padding: 12px 15px;
         margin: 0;
         color: #54595f;
         text-decoration: none;
@@ -111,7 +111,7 @@ class LanguageComponent extends HTMLElement {
         opacity: 0;
       }
 
-      .language-dropdown-item:hover, 
+      .language-dropdown-item:hover,
       .language-dropdown-item:active {
         color: #0d0d0d;
       }
@@ -134,8 +134,7 @@ class LanguageComponent extends HTMLElement {
     `;
     shadow.appendChild(style);
 
-
-    /* DOM Structure */
+    /* ------------------------- DOM STRUCTURE ------------------------- */
     const container = document.createElement('div');
     container.className = 'language-container';
 
@@ -149,7 +148,7 @@ class LanguageComponent extends HTMLElement {
     dropdown.className = 'language-dropdown';
     dropdown.setAttribute('role', 'menu');
 
-    /* Language Configuration */
+    /* ------------------------- LANGUAGE CONFIGURATION ------------------------- */
     const languages = [
       { name: 'فارسی', url: '/', hreflang: 'fa' },
       { name: 'English', url: '/en/', hreflang: 'en' },
@@ -158,7 +157,7 @@ class LanguageComponent extends HTMLElement {
       { name: 'Italiano', url: '/it/', hreflang: 'it' },
     ];
 
-    /* Extract Current Path */
+    /* ------- Path extraction to build correct localized URLs ------- */
     let currentPath = window.location.pathname;
 
     const localRepoName = '/arminsilatani.github.io';
@@ -181,7 +180,7 @@ class LanguageComponent extends HTMLElement {
     const pageName = currentPath;
     const searchAndHash = window.location.search + window.location.hash;
 
-    /* Generate Language Links */
+    /* Generate language links */
     languages.forEach((lang, index) => {
       const link = document.createElement('a');
       link.className = 'language-dropdown-item';
@@ -209,7 +208,7 @@ class LanguageComponent extends HTMLElement {
     container.appendChild(dropdown);
     shadow.appendChild(container);
 
-    /* Dropdown Controls */
+    /* ------------------------- DROPDOWN CONTROLS ------------------------- */
     const showDropdown = () => {
       dropdown.style.display = 'flex';
       requestAnimationFrame(() => dropdown.classList.add('open'));
@@ -228,6 +227,7 @@ class LanguageComponent extends HTMLElement {
       dropdown.classList.contains('open') ? hideDropdown() : showDropdown();
     };
 
+    /* Event listeners */
     container.addEventListener('mouseenter', showDropdown);
     container.addEventListener('mouseleave', e => {
       if (!container.contains(e.relatedTarget)) hideDropdown();
@@ -243,6 +243,7 @@ class LanguageComponent extends HTMLElement {
   }
 }
 
+/* ------------------------- REGISTER CUSTOM ELEMENT ------------------------- */
 if (!customElements.get('language-component')) {
   customElements.define('language-component', LanguageComponent);
 }

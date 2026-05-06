@@ -1,8 +1,12 @@
 /*
-  Author: Armin Silatani
-  Date: 2026-03-29
-  Version: 1.0.0
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-06
+  *  Version: 1.0.1
+  ****************************************************
 */
+
+/* =========================== HEADER COMPONENT ============================ */
 
 class HeaderComponent extends HTMLElement {
   constructor() {
@@ -10,10 +14,12 @@ class HeaderComponent extends HTMLElement {
 
     const shadow = this.attachShadow({ mode: "open" });
 
-    /* ::::::::::::::::::::::::::::::::::::::: STYLES ::::::::::::::::::::::::::::::::::::::: */
+    /* ------------------------- STYLES ------------------------- */
 
     const style = document.createElement("style");
-    style.textContent = `.container {
+    style.textContent = `
+
+      .container {
         position: fixed;
         top: 0;
         left: 0;
@@ -183,11 +189,11 @@ class HeaderComponent extends HTMLElement {
         transform-origin: right center;
         transition: opacity .25s;
       }
-        .sidebar a.active {
+
+      .sidebar a.active {
         color: #4ECDC4 !important;
         opacity: 1;
       }
-
 
       /* ::::::::::::::::::::::::::::::::::::::: MOBILE ::::::::::::::::::::::::::::::::::::::: */
 
@@ -211,7 +217,7 @@ class HeaderComponent extends HTMLElement {
       }
     `;
 
-    /* ::::::::::::::::::::::::::::::::::::::: DOM STRUCTURE ::::::::::::::::::::::::::::::::::::::: */
+    /* ------------------------- DOM STRUCTURE ------------------------- */
 
     const container = document.createElement("div");
     container.className = "container";
@@ -264,14 +270,14 @@ class HeaderComponent extends HTMLElement {
       <a href="#/">الخدمات</a>
       <a href="/ar/about/">من أنا</a>
       <a href="#/">تواصل معي</a>
-      <a href="#/">الأسعار</a>
+      <a href="/ar/tariff/">الأسعار</a>
       <a href="#/">أعمالي</a>
     `;
 
     wrapper.append(lineBox, menu);
     overlayDark.appendChild(wrapper);
 
-    /* ::::::::::::::::::::::::::::::::::::::: TOGGLE LOGIC ::::::::::::::::::::::::::::::::::::::: */
+    /* ------------------------- EVENT LISTENERS & LOGIC ------------------------- */
 
     let animating = false;
 
@@ -296,7 +302,7 @@ class HeaderComponent extends HTMLElement {
       toggleTrack.classList.toggle("active");
     });
 
-    /* ::::::::::::::::::::::::::::::::::::::: ANIMATION ENGINE ::::::::::::::::::::::::::::::::::::::: */
+    /* ------------------------- ANIMATION ENGINE ------------------------- */
 
     const links = [...menu.querySelectorAll("a")];
     const currentUrl = window.location.pathname;
@@ -335,8 +341,7 @@ class HeaderComponent extends HTMLElement {
       requestAnimationFrame(animate);
     }
 
-
-    /* ::::::::::::::::::::::::::::::::::::::: HOVER EFFECTS ::::::::::::::::::::::::::::::::::::::: */
+    /* ------------------------- HOVER EFFECTS ------------------------- */
 
     links.forEach((link, i) => {
       link.addEventListener("mouseenter", () => {
@@ -356,7 +361,7 @@ class HeaderComponent extends HTMLElement {
       targetY = 192;
     });
 
-    /* ::::::::::::::::::::::::::::::::::::::: MOUNT ::::::::::::::::::::::::::::::::::::::: */
+    /* ------------------------- MOUNT ------------------------- */
 
     shadow.append(style, container, overlay, overlayDark);
   }
