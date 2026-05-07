@@ -1,7 +1,14 @@
-/* =========================================
-   TESTIMONIALS SECTION
-========================================= */
+/*
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-07
+  *  Version: 1.0.0
+  ****************************************************
+*/
 
+/* =========================== TESTIMONIALS STYLES ============================ */
+
+/* ------------------------- TESTIMONIALS SECTION ------------------------- */
 .testimonials-section {
     background: #0D0D0D;
     text-align: center;
@@ -9,52 +16,36 @@
 
 .testimonials-section .title {
     position: relative;
-
     margin: 25px 0;
-
     font-size: 30px;
     font-weight: 900;
-
     text-transform: uppercase;
 }
 
 .testimonials-section .title::after {
     content: "";
-
     position: absolute;
-
     bottom: -16px;
     left: 50%;
-
     width: 80px;
     height: 2px;
-
     background: #1a1a1a;
-
     transform: translateX(-50%);
 }
 
-/* =========================================
-   TESTIMONIALS LAYOUT
-========================================= */
-
+/* ------------------------- TESTIMONIALS LAYOUT ------------------------- */
 .testimonials-container {
     display: flex;
-
     gap: 25px;
-
     width: 70%;
     max-width: 2400px;
-
     height: 520px;
-
     margin-inline: auto;
 }
 
 .column {
     height: 100%;
     overflow: hidden;
-
     mask-image: linear-gradient(
         to bottom,
         transparent 0%,
@@ -67,9 +58,7 @@
 .testimonials {
     display: flex;
     flex-direction: column;
-
     gap: 25px;
-
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
@@ -78,31 +67,23 @@
     animation-play-state: paused;
 }
 
-/* =========================================
-   TESTIMONIAL CARD
-========================================= */
-
+/* ------------------------- TESTIMONIAL CARD ------------------------- */
 .card {
     background: #f5f5f5;
-
     padding: 25px;
-
     border-radius: 15px;
 }
 
 .card .profile {
     display: flex;
     align-items: center;
-
     gap: 10px;
-
     margin-bottom: 16px;
 }
 
 .card .profile img {
     width: 48px;
     height: 48px;
-
     border-radius: 50%;
     object-fit: cover;
 }
@@ -115,22 +96,16 @@
 .card .profile .role {
     font-size: 14px;
     color: #666;
-
     line-height: 1.2;
 }
 
 .card .content {
     color: #444;
-
     line-height: 1.5;
-
     text-align: justify;
 }
 
-/* =========================================
-   TESTIMONIAL ANIMATIONS
-========================================= */
-
+/* ------------------------- TESTIMONIAL ANIMATIONS ------------------------- */
 .column:nth-child(1) .testimonials {
     animation-name: scrollUp;
     animation-duration: 23s;
@@ -156,16 +131,11 @@
     to   { transform: translateY(0); }
 }
 
-/* =========================================
-   TESTIMONIAL PLACEHOLDER
-========================================= */
-
+/* ------------------------- TESTIMONIAL PLACEHOLDER ------------------------- */
 .testimonials-placeholder {
     display: flex;
-
     justify-content: center;
     align-items: center;
-
     margin-top: 24px;
 }
 

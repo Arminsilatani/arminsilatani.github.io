@@ -1,6 +1,12 @@
-/* =========================================
-   PAGE: ABOUT / STORY
-========================================= */
+/*
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-07
+  *  Version: 1.0.0
+  ****************************************************
+*/
+
+/* =========================== ABOUT / STORY PAGE ============================ */
 
 .story-container {
     background-color: #0D0D0D;
@@ -10,11 +16,9 @@
     overflow: hidden;
 }
 
-/* =========================================
-   Direction Handling (RTL / LTR)
-========================================= */
+/* ------------------------- Direction Handling (RTL / LTR) ------------------------- */
 
-/* -------- RTL -------- */
+/* ------------------------------ RTL ------------------------------ */
 
 html[dir="rtl"] .story-container {
     direction: rtl;
@@ -30,7 +34,7 @@ html[dir="rtl"] .content-date {
     justify-content: flex-end;
 }
 
-/* -------- LTR -------- */
+/* ------------------------------ LTR ------------------------------ */
 
 html[dir="ltr"] .story-container {
     direction: ltr;
@@ -47,9 +51,7 @@ html[dir="ltr"] .content-date {
     padding-inline-start: 20px;
 }
 
-/* =========================================
-   Shared Layout
-========================================= */
+/* ------------------------- Shared Layout ------------------------- */
 
 .story-block {
     display: flex;
@@ -73,27 +75,21 @@ html[dir="ltr"] .content-date {
     flex: 0 0 66.66%;
     max-width: 66.66%;
     box-sizing: border-box;
-
     transform: scale(calc(0.4 + (0.6 * var(--progress, 0))));
     opacity: calc(0.1 + (0.9 * var(--progress, 0)));
 }
 
-/* =========================================
-   Year (Timeline Marker)
-========================================= */
+/* ------------------------- Year (Timeline Marker) ------------------------- */
 
 .step-year {
     font-size: clamp(2.5rem, 5vw, 4.5rem);
     font-weight: 900;
-
     direction: ltr;
     unicode-bidi: isolate;
     white-space: nowrap;
-
     color: #54595f;
     transform-origin: center center;
     transition: color 0.3s ease;
-
     transform:
         translateY(var(--date-scroll-offset, 0px))
         rotate(90deg)
@@ -105,8 +101,7 @@ html[dir="ltr"] .content-date {
     color: #f5f5f5;
 }
 
-/* -------- LTR Rotation Fix -------- */
-
+/* LTR rotation override */
 html[dir="ltr"] .step-year {
     transform:
         translateY(var(--date-scroll-offset, 0px))
@@ -115,9 +110,7 @@ html[dir="ltr"] .step-year {
     text-align: right;
 }
 
-/* =========================================
-   Text Elements
-========================================= */
+/* ------------------------- Text Elements ------------------------- */
 
 .step-context {
     display: block;

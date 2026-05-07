@@ -1,16 +1,20 @@
-/* ::::::::::::::::::::::::::::::::::::::: UI CHECKBOX SYSTEM - NEON STYLE ::::::::::::::::::::::::::::::::::::::: */
+/*
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-07
+  *  Version: 1.0.0
+  ****************************************************
+*/
 
-/* ------------------------------------------------------------------
-   BASE ANIMATIONS
---------------------------------------------------------------------- */
+/* =========================== UI CHECKBOX SYSTEM - NEON STYLE ============================ */
+
+/* ------------------------- BASE ANIMATIONS ------------------------- */
 @keyframes pulseNeon {
   0%, 100% { opacity: 0; }
   50% { opacity: 0.75; }
 }
 
-/* ------------------------------------------------------------------
-   COMMON CHECKBOX STYLES (all variants)
---------------------------------------------------------------------- */
+/* ------------------------- COMMON CHECKBOX STYLES ------------------------- */
 .green-checkbox,
 .green-checkbox-checked,
 .yellow-checkbox,
@@ -30,7 +34,7 @@
   background-color: transparent;
 
   --c-base: #7a7a7a;
-  --c-on: #4ECDC4; /* default, will be overridden per variant */
+  --c-on: #4ECDC4; /* default, overridden per variant */
 
   --base: radial-gradient(circle, var(--c-base) 40%, transparent 65%);
   --on: radial-gradient(circle, var(--c-on) 40%, transparent 65%);
@@ -109,16 +113,12 @@
   animation: pulseNeon 1.5s infinite ease-in-out;
 }
 
-/* ------------------------------------------------------------------
-   GREEN CHECKBOX (interactive, unchecked default)
---------------------------------------------------------------------- */
+/* ------------------------- GREEN CHECKBOX (interactive, unchecked default) ------------------------- */
 .green-checkbox {
   --c-on: #4ECDC4;
 }
 
-/* ------------------------------------------------------------------
-   GREEN CHECKBOX – CHECKED VARIANT (always shows pulse)
---------------------------------------------------------------------- */
+/* ------------------------- GREEN CHECKBOX – CHECKED VARIANT (always shows pulse) ------------------------- */
 .green-checkbox-checked {
   --c-on: #4ECDC4;
 }
@@ -128,16 +128,12 @@
   opacity: 0.75;
 }
 
-/* ------------------------------------------------------------------
-   YELLOW CHECKBOX (interactive, unchecked default)
---------------------------------------------------------------------- */
+/* ------------------------- YELLOW CHECKBOX (interactive, unchecked default) ------------------------- */
 .yellow-checkbox {
   --c-on: #ffe76d;
 }
 
-/* ------------------------------------------------------------------
-   YELLOW CHECKBOX – CHECKED VARIANT (always shows pulse)
---------------------------------------------------------------------- */
+/* ------------------------- YELLOW CHECKBOX – CHECKED VARIANT (always shows pulse) ------------------------- */
 .yellow-checkbox-checked {
   --c-on: #ffe76d;
 }
@@ -147,16 +143,12 @@
   opacity: 0.75;
 }
 
-/* ------------------------------------------------------------------
-   WHITE CHECKBOX (interactive, unchecked default)
---------------------------------------------------------------------- */
+/* ------------------------- WHITE CHECKBOX (interactive, unchecked default) ------------------------- */
 .white-checkbox {
   --c-on: #f5f5f5;
 }
 
-/* ------------------------------------------------------------------
-   RED CHECKBOX (non‑interactive, always pulsing)
---------------------------------------------------------------------- */
+/* ------------------------- RED CHECKBOX (non‑interactive, always pulsing) ------------------------- */
 .red-checkbox {
   --c-on: #ff6b6b;
   cursor: default;
@@ -168,9 +160,7 @@
   opacity: 0.75;
 }
 
-/* ------------------------------------------------------------------
-   CONTAINER & LABEL LAYOUT (shared across all variants)
---------------------------------------------------------------------- */
+/* ------------------------- CONTAINER & LABEL LAYOUT ------------------------- */
 .green-checkbox-container,
 .green-checkbox-checked-container,
 .yellow-checkbox-container,
@@ -216,9 +206,7 @@
   width: 100%;
 }
 
-/* ------------------------------------------------------------------
-   FIX FOR AUTO SLIDING TEXT (preserve original behaviour)
---------------------------------------------------------------------- */
+/* ------------------------- FIX FOR AUTO SLIDING TEXT ------------------------- */
 [class*="-checkbox-label"] span,
 [class*="-checkbox-checked-label"] span,
 .green-checkbox-checked-label,
@@ -246,9 +234,7 @@
   display: flex;
 }
 
-/* ------------------------------------------------------------------
-   CURSOR BEHAVIOUR PER VARIANT
---------------------------------------------------------------------- */
+/* ------------------------- CURSOR BEHAVIOUR PER VARIANT ------------------------- */
 .green-checkbox-checked-container { cursor: default !; }
 .green-checkbox-checked,
 .green-checkbox-checked-label { cursor: pointer; }
@@ -267,4 +253,3 @@
   cursor: default;
   pointer-events: none;
 }
-

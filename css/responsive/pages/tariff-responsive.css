@@ -1,4 +1,14 @@
-/* ::::::::::::::::::::::::::::::::::::::: MOBILE STYLES (max-width: 768px) ::::::::::::::::::::::::::::::::::::::: */
+/*
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-07
+  *  Version: 1.0.0
+  ****************************************************
+*/
+
+/* =========================== PRICING PAGE STYLES ============================ */
+
+/* ------------------------- MOBILE STYLES (max-width: 768px) ------------------------- */
 @media (max-width: 768px) {
 
   /* Container settings */
@@ -300,7 +310,7 @@
   }
 }
 
-/* ::::::::::::::::::::::::::::::::::::::: KEYFRAMES ::::::::::::::::::::::::::::::::::::::: */
+/* ------------------------- KEYFRAMES ------------------------- */
 @keyframes slideTextInside {
   0%, 15% {
     transform: translateX(0);
@@ -313,15 +323,14 @@
   }
 }
 
-/* ::::::::::::::::::::::::::::::::::::::: ACCESSIBILITY ::::::::::::::::::::::::::::::::::::::: */
+/* ------------------------- ACCESSIBILITY ------------------------- */
 @media (prefers-reduced-motion: reduce) {
   img[data-blurup="true"] {
     transition: none;
   }
 }
 
-/* ::::::::::::::::::::::::::::::::::::::: ADDITIONAL MOBILE LAYOUT FIXES (GLOBAL) ::::::::::::::::::::::::::::::::::::::: */
-/* These rules are not wrapped in a media query; they apply to all viewports unless overridden. */
+/* ------------------------- GLOBAL LAYOUT FIXES (APPLIES TO ALL VIEWPORTS) ------------------------- */
 .sub-item {
   display: flex;
   flex-wrap: wrap;

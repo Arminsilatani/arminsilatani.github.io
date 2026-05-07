@@ -1,76 +1,79 @@
-/* =========================================================
-ABOUT PAGE RESPONSIVE
-========================================================= */
+/*
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-07
+  *  Version: 1.0.0
+  ****************************************************
+*/
 
-@media (max-width:768px){
+/* =========================== ABOUT PAGE RESPONSIVE ============================ */
 
-.about-section{
-height:auto;
-padding:60px 0;
-}
+@media (max-width: 768px) {
+    .about-section {
+        height: auto;
+        padding: 60px 0;
+    }
 
-.about-container{
-flex-direction:column-reverse;
-justify-content:center;
-align-items:center;
-gap:30px;
-width:100%;
-}
+    .about-container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+    }
 
-.about-image{
-display:none;
-}
+    .about-image {
+        display: none;
+    }
 
-.about-text{
-max-width:90%;
-}
+    .about-text {
+        max-width: 90%;
+    }
 
-.about-text h1{
-font-size:32px;
-text-align:center;
-text-align-last:center;
-width:100%;
-}
+    .about-text h1 {
+        font-size: 32px;
+        text-align: center;
+        text-align-last: center;
+        width: 100%;
+    }
 
-.btn-large{
-width:100%;
-max-width:90%;
-margin:20px auto 0;
-}
+    .btn-large {
+        width: 100%;
+        max-width: 90%;
+        margin: 20px auto 0;
+    }
 
-/* TIMELINE */
+    /* ------------------------- TIMELINE ------------------------- */
+    .story-block {
+        margin: 3vh auto;
+    }
 
-.story-block{
-margin:3vh auto;
-}
+    .content-date {
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding-left: 0.5rem;
+    }
 
-.content-date{
-flex:0 0 25%;
-max-width:25%;
-padding-left:0.5rem;
-}
+    .content-text {
+        flex: 0 0 75%;
+        max-width: 75%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 
-.content-text{
-flex:0 0 75%;
-max-width:75%;
-padding-left:2rem;
-padding-right:2rem;
-}
+    .step-context {
+        font-size: 0.8rem;
+    }
 
-.step-context{
-font-size:0.8rem;
-}
+    .step-year {
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+    }
 
-.step-year{
-font-size:clamp(1.8rem,4vw,2.5rem);
-}
+    .step-title {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+    }
 
-.step-title{
-font-size:clamp(1.5rem,4vw,2rem);
-}
-
-.step-text{
-font-size:clamp(1rem,2.5vw,1.3rem);
-}
-
+    .step-text {
+        font-size: clamp(1rem, 2.5vw, 1.3rem);
+    }
 }

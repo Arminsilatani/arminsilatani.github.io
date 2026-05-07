@@ -1,8 +1,14 @@
-/* ========================================= */
-/* PRICING PAGE */
-/* ========================================= */
+/*
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-07
+  *  Version: 1.0.0
+  ****************************************************
+*/
 
-/* ::::::::::::::::::::::::::::::::::::::: GLOBAL BASE STYLES ::::::::::::::::::::::::::::::::::::::: */
+/* =========================== PRICING PAGE ============================ */
+
+/* ------------------------- GLOBAL BASE STYLES ------------------------- */
 body {
     background: #0b0b0b;
     color: #f5f5f5;
@@ -18,18 +24,18 @@ body {
 }
 
 .scrolling-text-inner {
-    display: inline-block;       /* مهم برای محاسبه دقیق scrollWidth */
+    display: inline-block;
     white-space: nowrap;
     width: auto;
     max-width: none;
     will-change: transform;
 }
+
 .sliding-text {
     animation: slideText 6s linear infinite alternate;
 }
-/* ------------------------------------------------------------------
-CURRENCY SELECTOR
---------------------------------------------------------------------- */
+
+/* ------------------------- CURRENCY SELECTOR ------------------------- */
 .currency-selector {
     padding: 40px 40px 0;
     display: flex;
@@ -58,9 +64,7 @@ CURRENCY SELECTOR
     border-color: #4ECDC4;
 }
 
-/* ------------------------------------------------------------------
-TABS CONTAINER & PACKAGE TABS
---------------------------------------------------------------------- */
+/* ------------------------- TABS & PACKAGE TABS ------------------------- */
 .tabs-container {
     display: flex;
     justify-content: space-between;
@@ -86,9 +90,7 @@ TABS CONTAINER & PACKAGE TABS
     gap: 25px;
 }
 
-/* ------------------------------------------------------------------
-PRICING TABS (GENERAL / SPECIALIST)
---------------------------------------------------------------------- */
+/* ------------------------- PRICING TAB BUTTONS ------------------------- */
 .pricing-tab {
     background: none;
     border: none;
@@ -115,6 +117,7 @@ PRICING TABS (GENERAL / SPECIALIST)
     color: #FFE76D;
 }
 
+/* ------------------------- PACKAGE TAB BUTTONS ------------------------- */
 .package-tab {
     background: none;
     border: none;
@@ -149,9 +152,7 @@ PRICING TABS (GENERAL / SPECIALIST)
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ------------------------------------------------------------------
-LAYOUT WRAPPERS
---------------------------------------------------------------------- */
+/* ------------------------- PRICING WRAPPER & SERVICE SECTIONS ------------------------- */
 .pricing-wrapper {
     padding: 0 50px;
     margin-top: 40px;
@@ -186,6 +187,7 @@ LAYOUT WRAPPERS
     z-index: 2;
 }
 
+/* ------------------------- SERVICE DOT (ACCORDION INDICATOR) ------------------------- */
 .service-dot {
     position: absolute;
     right: 0;
@@ -207,9 +209,7 @@ LAYOUT WRAPPERS
         box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ------------------------------------------------------------------
-ACCORDION (CARD OPEN / CLOSE)
---------------------------------------------------------------------- */
+/* ------------------------- ACCORDION (CARD OPEN / CLOSE) ------------------------- */
 .service-card {
     display: grid;
     grid-template-rows: 0fr;
@@ -234,6 +234,7 @@ ACCORDION (CARD OPEN / CLOSE)
     font-size: 0.95rem;
 }
 
+/* Active state: expand the dot and reveal card content */
 .service-section.active .service-dot {
     top: 45px;
     width: 100%;
@@ -262,9 +263,7 @@ ACCORDION (CARD OPEN / CLOSE)
     transition: opacity 0.3s ease 0.7s;
 }
 
-/* ------------------------------------------------------------------
-PIN BUTTON
---------------------------------------------------------------------- */
+/* ------------------------- PIN BUTTON ------------------------- */
 .pin-btn {
     position: absolute;
     left: 15px;
@@ -302,11 +301,19 @@ PIN BUTTON
     color: #F5F5F5;
 }
 
-/* ------------------------------------------------------------------
-SUB‑SERVICES (LIST OF ITEMS)
---------------------------------------------------------------------- */
+/* ------------------------- SUB-SERVICES & ITEMS ------------------------- */
 .sub-services {
     padding: 0 40px 24px;
+}
+
+.sub-item {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 14px 0;
+    flex-wrap: nowrap;
 }
 
 .sub-item:not([style*="display: none"]) {
@@ -316,6 +323,24 @@ SUB‑SERVICES (LIST OF ITEMS)
 .sub-item > .price-display,
 .sub-item > .service-title-group {
     flex: 0 0 auto;
+}
+
+.sub-item label {
+    display: flex;
+    align-items: center;
+    flex: 0 1 auto;
+    min-width: 0;
+    margin: 0;
+    order: 3;
+    margin-left: auto;
+}
+
+.sub-item .price-display {
+    flex-shrink: 0;
+    white-space: nowrap;
+    color: #f5f5f5;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
 }
 
 .price-display {
@@ -333,6 +358,7 @@ SUB‑SERVICES (LIST OF ITEMS)
     cursor: help;
 }
 
+/* Quantity control inside sub-items */
 .qty-control-minimal {
     display: flex;
     align-items: center;
@@ -349,6 +375,25 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     visibility: visible;
     pointer-events: auto;
     transform: translateX(0);
+}
+
+.sub-item .qty-control-minimal {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+    margin-right: auto;
+    margin-left: 8px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+}
+
+.sub-item > .qty-control-minimal {
+    order: 2;
+    margin: 0;
 }
 
 .qty-control-minimal .qty-btn {
@@ -375,9 +420,14 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     transform: scale(1.05);
 }
 
-/* ------------------------------------------------------------------
-GROUPED SERVICES BOX
---------------------------------------------------------------------- */
+/* Quantity text inline */
+.qty-text {
+    flex-shrink: 0;
+    margin-left: 6px;
+    display: inline-block;
+}
+
+/* ------------------------- GROUPED SERVICES BOX ------------------------- */
 .sub-group-box {
     border: 1px solid rgba(78, 205, 196, 0.6);
     border-radius: 12px;
@@ -418,9 +468,7 @@ GROUPED SERVICES BOX
     margin-bottom: 4px;
 }
 
-/* ------------------------------------------------------------------
-FINAL INVOICE SECTION
---------------------------------------------------------------------- */
+/* ------------------------- FINAL INVOICE SECTION ------------------------- */
 #final-invoice-section {
     margin-top: 60px;
     visibility: hidden;
@@ -444,9 +492,7 @@ FINAL INVOICE SECTION
     box-sizing: border-box;
 }
 
-/* ------------------------------------------------------------------
-INVOICE HEADER
---------------------------------------------------------------------- */
+/* ------------------------- INVOICE HEADER ------------------------- */
 .invoice-header {
     display: flex;
     justify-content: space-between;
@@ -469,9 +515,7 @@ INVOICE HEADER
     color: #4ECDC4;
 }
 
-/* ------------------------------------------------------------------
-INVOICE ITEM ROWS & ANIMATIONS
---------------------------------------------------------------------- */
+/* ------------------------- INVOICE ITEMS LIST ------------------------- */
 #invoice-items-list {
     padding: 0;
     margin: 0;
@@ -520,13 +564,15 @@ INVOICE ITEM ROWS & ANIMATIONS
     will-change: transform;
 }
 
-@keyframes marquee {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-.invoice-item .scrolling-text-inner.animate {
-    animation: marquee 8s linear infinite;
+/* Item name styling (ensures RTL alignment) */
+.invoice-item .item-name {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: right;
 }
 
 .invoice-item .item-name .scrolling-text-inner {
@@ -541,6 +587,7 @@ INVOICE ITEM ROWS & ANIMATIONS
     direction: rtl;
 }
 
+/* Bullet dot before each invoice item */
 .invoice-item::before {
     content: "";
     display: block;
@@ -569,12 +616,23 @@ INVOICE ITEM ROWS & ANIMATIONS
     display: none;
 }
 
+/* Add/remove item animations */
 .invoice-item.entering {
     animation: slideDownItem 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
 .invoice-item.leaving {
     animation: slideUpItem 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* ------------------------- ANIMATIONS ------------------------- */
+@keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.invoice-item .scrolling-text-inner.animate {
+    animation: marquee 8s linear infinite;
 }
 
 @keyframes pulseColorNeon {
@@ -623,70 +681,4 @@ INVOICE ITEM ROWS & ANIMATIONS
         transform: translateY(-15px);
         border-color: transparent;
     }
-}
-
-/* ------------------------------------------------------------------
-ALIGNMENT FIXES & UTILITIES
---------------------------------------------------------------------- */
-.sub-item {
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-    gap: 12px;
-    padding: 14px 0;
-    flex-wrap: nowrap;
-}
-
-.sub-item label {
-    display: flex;
-    align-items: center;
-    flex: 0 1 auto;
-    min-width: 0;
-    margin: 0;
-    order: 3;
-    margin-left: auto;
-}
-
-.invoice-item .item-name {
-    display: flex;
-    align-items: center;
-    flex: 1 1 auto;
-    min-width: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    text-align: right;
-}
-
-.qty-text {
-    flex-shrink: 0;
-    margin-left: 6px;
-    display: inline-block;
-}
-
-.sub-item .price-display {
-    flex-shrink: 0;
-    white-space: nowrap;
-    color: #f5f5f5;
-    font-size: 0.8rem;
-    letter-spacing: 0.5px;
-}
-
-.sub-item .qty-control-minimal {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    flex-shrink: 0;
-    margin-right: auto;
-    margin-left: 8px;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transform: translateX(10px);
-    transition: all 0.3s ease;
-}
-
-.sub-item > .qty-control-minimal {
-    order: 2;
-    margin: 0;
 }

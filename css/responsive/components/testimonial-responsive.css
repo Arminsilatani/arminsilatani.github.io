@@ -1,43 +1,46 @@
-/* =========================================================
-TESTIMONIAL COMPONENT RESPONSIVE
-========================================================= */
+/*
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-07
+  *  Version: 1.0.0
+  ****************************************************
+*/
 
-@media (max-width:1400px){
+/* =========================== TESTIMONIALS COMPONENT RESPONSIVE ============================ */
 
-.testimonials-container{
-max-width:95%;
+/* ------------------------- MAX-WIDTH 1400PX ------------------------- */
+@media (max-width: 1400px) {
+  .testimonials-container {
+    max-width: 95%;
+  }
 }
 
+/* ------------------------- MAX-WIDTH 768PX ------------------------- */
+@media (max-width: 768px) {
+  .testimonials-placeholder img {
+    max-width: 80%;
+  }
+
+  .testimonials-container {
+    width: 90%;
+    padding: 10px;
+    gap: 10px;
+    height: 80vh;
+  }
+
+  .testimonials-container .column {
+    display: none;
+  }
+
+  .testimonials-container .column:first-child {
+    display: block;
+  }
 }
 
-@media (max-width:768px){
-
-.testimonials-placeholder img{
-max-width:80%;
-}
-
-.testimonials-container{
-width:90%;
-padding:10px;
-gap:10px;
-height:80vh;
-}
-
-.testimonials-container .column{
-display:none;
-}
-
-.testimonials-container .column:first-child{
-display:block;
-}
-
-}
-
-@media (max-width:640px){
-
-.testimonials-container{
-padding:4px;
-gap:4px;
-}
-
+/* ------------------------- MAX-WIDTH 640PX ------------------------- */
+@media (max-width: 640px) {
+  .testimonials-container {
+    padding: 4px;
+    gap: 4px;
+  }
 }

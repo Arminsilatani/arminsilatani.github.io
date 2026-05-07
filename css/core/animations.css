@@ -1,10 +1,16 @@
-/* =========================================
-   CORE: GLOBAL ANIMATIONS
-========================================= */
+/*
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-07
+  *  Version: 1.0.0
+  ****************************************************
+*/
+
+/* =========================== GLOBAL ANIMATIONS ============================ */
 
 @keyframes blink {
     0%, 50%, 100% { opacity: 1; }
-    25%, 75% { opacity: 0; }
+    25%, 75%      { opacity: 0; }
 }
 
 @keyframes blobMorph {
@@ -32,19 +38,14 @@
     to   { transform: translateY(0); }
 }
 
-
 @keyframes slideTextInside {
-
-0%,15%{
-transform:translateX(0);
-}
-
-45%,55%{
-transform:translateX(calc(var(--overflow-amount) + 16px));
-}
-
-85%,100%{
-transform:translateX(0);
-}
-
+    0%, 15% {
+        transform: translateX(0);
+    }
+    45%, 55% {
+        transform: translateX(calc(var(--overflow-amount) + 16px));
+    }
+    85%, 100% {
+        transform: translateX(0);
+    }
 }

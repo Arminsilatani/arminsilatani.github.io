@@ -1,23 +1,26 @@
 /*
-Author: Armin Silatani
-Responsive Core Base
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-07
+  *  Version: 1.0.0
+  ****************************************************
 */
 
-@media (max-width:768px){
+/* =========================== RESPONSIVE CORE BASE ============================ */
 
-html[lang="fa"],
-html[lang="fa"] body{
-direction:rtl;
-text-align:justify;
-text-align-last:right;
+/* ------------------------- RTL DIRECTION ADJUSTMENTS ------------------------- */
+@media (max-width: 768px) {
+  html[lang="fa"],
+  html[lang="fa"] body {
+    direction: rtl;
+    text-align: justify;
+    text-align-last: right;
+  }
 }
 
-}
-
-@media (prefers-reduced-motion: reduce){
-
-img[data-blurup="true"]{
-transition:none !important;
-}
-
+/* ------------------------- PREFERS-REDUCED-MOTION ------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  img[data-blurup="true"] {
+    transition: none !important;
+  }
 }

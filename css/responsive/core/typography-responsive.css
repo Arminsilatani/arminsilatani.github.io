@@ -1,12 +1,14 @@
 /*
-Author: Armin Silatani
-File: responsive-typography.css
-Purpose: Adaptive typography for mobile & tablet
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-07
+  *  Version: 1.0.0
+  ****************************************************
 */
 
-/* ===============================
-   HEADINGS SIZE SCALE
-=============================== */
+/* =========================== RESPONSIVE TYPOGRAPHY ============================ */
+
+/* ------------------------- HEADINGS SIZE SCALE (TABLET) ------------------------- */
 @media (max-width: 1024px) {
   h1 {
     font-size: clamp(2.2rem, 5vw, 2.8rem);
@@ -19,6 +21,7 @@ Purpose: Adaptive typography for mobile & tablet
   }
 }
 
+/* ------------------------- HEADINGS & BODY (MOBILE) ------------------------- */
 @media (max-width: 768px) {
   h1 {
     font-size: clamp(1.8rem, 6vw, 2.3rem);
@@ -31,15 +34,15 @@ Purpose: Adaptive typography for mobile & tablet
   h3 {
     font-size: clamp(1.2rem, 4vw, 1.7rem);
   }
-  p, li, span {
+  p,
+  li,
+  span {
     font-size: clamp(0.9rem, 2.8vw, 1rem);
     line-height: 1.6;
   }
 }
 
-/* ===============================
-   SMALL MOBILE — Tight Space
-=============================== */
+/* ------------------------- SMALL MOBILE (TIGHT SPACE) ------------------------- */
 @media (max-width: 480px) {
   h1 {
     font-size: 1.6rem;
@@ -51,7 +54,7 @@ Purpose: Adaptive typography for mobile & tablet
     font-size: 1.1rem;
   }
   p {
-    font-size: 1.0rem;
+    font-size: 1rem;
     line-height: 1.5;
   }
 }
