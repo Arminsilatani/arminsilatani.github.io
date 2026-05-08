@@ -274,7 +274,7 @@ class FooterComponent extends HTMLElement {
         </footer>
 
         <div class="copyright">
-          All rights reserved. I can't be bothered to sue, so please play fair.
+          All rights reserved.. but I’m not in the mood to chase anyone.Please just respect it on your own.
         </div>
       </div>
     `;

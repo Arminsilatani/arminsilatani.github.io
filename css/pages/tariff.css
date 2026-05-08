@@ -1,8 +1,8 @@
 /*
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-07
-  *  Version: 1.0.0
+  *  Date: 2026-05-08
+  *  Version: 1.1.0
   ****************************************************
 */
 
@@ -335,20 +335,17 @@ body {
     margin-left: auto;
 }
 
-.sub-item .price-display {
-    flex-shrink: 0;
-    white-space: nowrap;
-    color: #f5f5f5;
-    font-size: 0.8rem;
-    letter-spacing: 0.5px;
-}
-
+/* Base price display */
 .price-display {
     color: #f5f5f5;
     font-size: 1rem;
     letter-spacing: 0.5px;
     flex-shrink: 0;
     white-space: nowrap;
+}
+
+.sub-item .price-display {
+    font-size: 0.8rem;
 }
 
 .service-title-group {
@@ -358,7 +355,7 @@ body {
     cursor: help;
 }
 
-/* Quantity control inside sub-items */
+/* ------------------------- QUANTITY CONTROL ------------------------- */
 .qty-control-minimal {
     display: flex;
     align-items: center;
@@ -378,17 +375,9 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
 }
 
 .sub-item .qty-control-minimal {
-    display: flex;
-    align-items: center;
-    gap: 6px;
     flex-shrink: 0;
     margin-right: auto;
     margin-left: 8px;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transform: translateX(10px);
-    transition: all 0.3s ease;
 }
 
 .sub-item > .qty-control-minimal {
@@ -420,7 +409,6 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     transform: scale(1.05);
 }
 
-/* Quantity text inline */
 .qty-text {
     flex-shrink: 0;
     margin-left: 6px;
@@ -564,7 +552,6 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     will-change: transform;
 }
 
-/* Item name styling (ensures RTL alignment) */
 .invoice-item .item-name {
     display: flex;
     align-items: center;
@@ -587,7 +574,7 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     direction: rtl;
 }
 
-/* Bullet dot before each invoice item */
+/* Bullet dot */
 .invoice-item::before {
     content: "";
     display: block;
@@ -681,4 +668,69 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
         transform: translateY(-15px);
         border-color: transparent;
     }
+}
+
+/* ------------------------- LTR (LEFT-TO-RIGHT) OVERRIDES ------------------------- */
+/* These overrides apply only when dir="ltr" is set on the <html> or <body> element. */
+/* No base RTL styles are modified. */
+
+[dir="ltr"] .pin-btn {
+    left: auto;
+    right: 15px;
+}
+
+[dir="ltr"] .service-dot {
+    right: auto;
+    left: 0;
+}
+[dir="ltr"] .service-section.active .service-dot {
+    right: auto;
+    left: 0;
+}
+
+[dir="ltr"] .service-header {
+    padding-right: 0;
+    padding-left: 40px;
+}
+
+[dir="ltr"] .sub-item {
+    flex-direction: row;
+}
+[dir="ltr"] .price-display {
+    order: 2;
+    margin-left: auto;
+    margin-right: 0;
+}
+[dir="ltr"] .sub-item label {
+    order: 0;
+    margin-left: 0;
+    margin-right: 0;
+    flex: 0 1 auto;
+}
+[dir="ltr"] .sub-item > .qty-control-minimal {
+    order: 1;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+[dir="ltr"] .invoice-item {
+    direction: ltr;
+}
+[dir="ltr"] .invoice-item .item-name {
+    text-align: left;
+}
+[dir="ltr"] .invoice-item .item-price {
+    text-align: right;
+    direction: ltr;
+}
+[dir="ltr"] .invoice-item::before {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+[dir="ltr"] .tabs-container {
+    flex-direction: row;
+}
+[dir="ltr"] .pricing-tabs {
+    flex-direction: row;
 }
