@@ -2,13 +2,13 @@
   ****************************************************
   *  Author: Armin Silatani
   *  Date: 2026-05-08
-  *  Version: 1.1.0
+  *  Version: 1.0.0
   ****************************************************
 */
 
 /* =========================== PRICING PAGE ============================ */
 
-/* ------------------------- GLOBAL BASE STYLES ------------------------- */
+/* :::::::::::::::::::::::::: GLOBAL BASE STYLES :::::::::::::::::::::::::: */
 body {
     background: #0b0b0b;
     color: #f5f5f5;
@@ -152,13 +152,14 @@ body {
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ------------------------- PRICING WRAPPER & SERVICE SECTIONS ------------------------- */
+/* ------------------------- PRICING WRAPPER ------------------------- */
 .pricing-wrapper {
     padding: 0 50px;
     margin-top: 40px;
     font-family: var(--font-family, inherit);
 }
 
+/* ------------------------- SERVICE SECTIONS & ACCORDION ------------------------- */
 .service-section {
     margin-bottom: 40px;
     position: relative;
@@ -209,7 +210,6 @@ body {
         box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ------------------------- ACCORDION (CARD OPEN / CLOSE) ------------------------- */
 .service-card {
     display: grid;
     grid-template-rows: 0fr;
@@ -234,7 +234,7 @@ body {
     font-size: 0.95rem;
 }
 
-/* Active state: expand the dot and reveal card content */
+/* Active accordion states */
 .service-section.active .service-dot {
     top: 45px;
     width: 100%;
@@ -335,7 +335,7 @@ body {
     margin-left: auto;
 }
 
-/* Base price display */
+/* ------------------------- PRICE DISPLAY ------------------------- */
 .price-display {
     color: #f5f5f5;
     font-size: 1rem;
@@ -536,6 +536,7 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     overflow: visible;
 }
 
+/* Invoice item name and price */
 .invoice-item .sliding-text-container {
     flex: 1 1 auto;
     min-width: 0;
@@ -544,12 +545,10 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     justify-content: flex-start;
 }
 
-.invoice-item .scrolling-text-inner {
-    display: inline-block;
-    white-space: nowrap;
-    width: auto;
-    max-width: none;
-    will-change: transform;
+/* Note: .scrolling-text-inner base styles apply globally.
+   Only animation override is kept here. */
+.invoice-item .scrolling-text-inner.animate {
+    animation: marquee 8s linear infinite;
 }
 
 .invoice-item .item-name {
@@ -574,7 +573,7 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     direction: rtl;
 }
 
-/* Bullet dot */
+/* Bullet dot base */
 .invoice-item::before {
     content: "";
     display: block;
@@ -599,11 +598,7 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     --c-on: #f5f5f5;
 }
 
-.item-name::before {
-    display: none;
-}
-
-/* Add/remove item animations */
+/* Item enter / leave animations */
 .invoice-item.entering {
     animation: slideDownItem 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
@@ -616,10 +611,6 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
 @keyframes marquee {
     0%   { transform: translateX(0); }
     100% { transform: translateX(-50%); }
-}
-
-.invoice-item .scrolling-text-inner.animate {
-    animation: marquee 8s linear infinite;
 }
 
 @keyframes pulseColorNeon {
@@ -670,9 +661,8 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     }
 }
 
-/* ------------------------- LTR (LEFT-TO-RIGHT) OVERRIDES ------------------------- */
-/* These overrides apply only when dir="ltr" is set on the <html> or <body> element. */
-/* No base RTL styles are modified. */
+/* ------------------------- LTR OVERRIDES ------------------------- */
+/* General LTR mirroring (applied when dir="ltr" on container) */
 
 [dir="ltr"] .pin-btn {
     left: auto;
@@ -733,4 +723,23 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
 }
 [dir="ltr"] .pricing-tabs {
     flex-direction: row;
+}
+
+/* Additional LTR fine‑tuning for English text + specific class combinations */
+html[dir="ltr"] .yellow-checkbox-checked-label .qty-text {
+    margin-right: 6px;
+}
+
+html[dir="ltr"] .sub-item label.white-checkbox-container {
+    order: 1;
+}
+
+html[dir="ltr"] .sub-item .qty-control-minimal {
+    order: 2;
+    margin-left: 6px;
+}
+
+html[dir="ltr"] .sub-item .price-display {
+    order: 3;
+    margin-left: auto;
 }

@@ -1,17 +1,7 @@
-/*
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-05-07
-  *  Version: 1.0.0
-  ****************************************************
-*/
-
-/* =========================== PRICING PAGE STYLES ============================ */
-
 /* ------------------------- MOBILE STYLES (max-width: 768px) ------------------------- */
 @media (max-width: 768px) {
 
-  /* Container settings */
+  /* ====== Layout Containers ====== */
   .pricing-wrapper {
     padding: 20px 10px 40px;
     margin-bottom: 30px;
@@ -19,21 +9,40 @@
     overflow-x: hidden;
   }
 
+  .service-section,
+  .service-content,
+  .service-card,
+  #final-invoice-section {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   .service-section {
     max-width: 100%;
-    width: 100%;
     display: block;
-    box-sizing: border-box;
   }
 
   .service-card {
     margin: 0;
     border-radius: 16px;
-    width: 100%;
-    box-sizing: border-box;
     background: transparent;
   }
 
+  #final-invoice-section {
+    margin: 12px 0 0;
+    padding: 0;
+  }
+
+  #final-invoice-section .service-card {
+    padding: 20px 15px;
+  }
+
+  #final-invoice-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+  }
+
+  /* ====== Header ====== */
   .service-header {
     display: flex;
     align-items: center;
@@ -44,7 +53,7 @@
     box-sizing: border-box;
   }
 
-  /* Green dot animation */
+  /* ====== Green Dot Animation ====== */
   .service-dot {
     position: absolute;
     width: 14px;
@@ -70,12 +79,7 @@
     transition: top 0.2s ease 0s, transform 0.2s ease 0s, right 0.15s ease 0.2s, width 0.25s ease 0.35s, height 0.25s ease 0.6s, border-radius 0.25s ease 0.6s;
   }
 
-  /* Tab design */
-  .service-content {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
+  /* ====== Tabs ====== */
   .tabs-container {
     display: flex;
     flex-direction: row;
@@ -88,14 +92,11 @@
     height: 42px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     overflow-x: auto;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    overflow-y: hidden;
   }
-
-  .tabs-container::-webkit-scrollbar {
-    display: none;
-  }
+  .tabs-container::-webkit-scrollbar { display: none; }
 
   .tabs-container::after {
     content: "";
@@ -108,30 +109,19 @@
     flex-shrink: 0;
   }
 
-  .package-tabs {
-    order: 1;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
-  }
-
-  .package-tabs::after {
-    display: none;
-  }
-
+  .package-tabs,
   .pricing-tabs {
-    order: 3;
     display: flex;
     align-items: center;
-    gap: 4px;
     flex-shrink: 0;
   }
 
+  .package-tabs { order: 1; gap: 10px; }
+  .pricing-tabs { order: 3; gap: 4px; }
+
+  .package-tabs::after,
   .pricing-tabs::after,
-  .pricing-tabs::before {
-    display: none;
-  }
+  .pricing-tabs::before { display: none; }
 
   .pricing-tab,
   .package-tab {
@@ -143,28 +133,10 @@
     transition: all 0.2s ease;
   }
 
-  /* Final cost estimation */
-  #final-invoice-section {
-    margin: 12px 0 0;
-    padding: 0;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  #final-invoice-section .service-card {
-    padding: 16px 14px;
-    box-sizing: border-box;
-  }
-
-  #final-invoice-section h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.6rem;
-  }
-
-  /* Service box fixes */
+  /* ====== Services List ====== */
   .grouped-services-box {
-    margin-right: 0px;
-    margin-left: 0px;
+    margin-right: 0;
+    margin-left: 0;
     padding: 12px 10px;
   }
 
@@ -186,15 +158,10 @@
     border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
   }
 
-  .sub-item:last-child {
-    border-bottom: none;
-  }
+  .sub-item:last-child { border-bottom: none; }
 
-  /* Pin button and price */
-  .pin-btn {
-    top: 14px;
-    left: 20px;
-  }
+  /* ====== Pin Button & Price ====== */
+  .pin-btn { top: 14px; left: 20px; }
 
   .price-display {
     flex-shrink: 0;
@@ -207,7 +174,7 @@
     border-radius: 6px;
   }
 
-  /* Icon sizing */
+  /* ====== Icons ====== */
   .green-checkbox,
   .green-checkbox-checked,
   .yellow-checkbox,
@@ -215,7 +182,7 @@
     flex: 0 0 auto;
   }
 
-  /* Scrolling text container */
+  /* ====== Sliding Text ====== */
   .scrolling-text-inner {
     display: inline-flex;
     align-items: center;
@@ -224,17 +191,10 @@
     will-change: transform;
     direction: rtl;
   }
+  .scrolling-text-inner br { display: none; }
+  .sliding-text { animation: slideTextInside 8s linear infinite; }
 
-  .scrolling-text-inner br {
-    display: none;
-  }
-
-  /* Text animation */
-  .sliding-text {
-    animation: slideTextInside 8s linear infinite;
-  }
-
-  /* Invoice item layout */
+  /* ====== Invoice Item ====== */
   .invoice-item {
     display: flex;
     flex-wrap: nowrap;
@@ -304,89 +264,22 @@
     padding: 0;
   }
 
-  /* Final invoice padding adjustment */
-  #final-invoice-section .service-card {
-    padding: 20px 15px;
+  /* ====== Fix: prevent wrapping & keep sliding text (MOBILE) ====== */
+  .sub-item { flex-wrap: nowrap !important; }
+
+  .sub-item label.white-checkbox-container {
+    flex: 1 1 auto;
+    min-width: 0;
   }
-}
 
-/* ------------------------- KEYFRAMES ------------------------- */
-@keyframes slideTextInside {
-  0%, 15% {
-    transform: translateX(0);
+  .sub-item .sliding-text-container {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
   }
-  45%, 55% {
-    transform: translateX(calc(var(--overflow-amount) + 16px));
+
+  .sub-item .scrolling-text-inner {
+    display: inline-block;
+    white-space: nowrap;
   }
-  85%, 100% {
-    transform: translateX(0);
-  }
-}
-
-/* ------------------------- ACCESSIBILITY ------------------------- */
-@media (prefers-reduced-motion: reduce) {
-  img[data-blurup="true"] {
-    transition: none;
-  }
-}
-
-/* ------------------------- GLOBAL LAYOUT FIXES (APPLIES TO ALL VIEWPORTS) ------------------------- */
-.sub-item {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 14px 0;
-  width: 100%;
-  box-sizing: border-box;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
-}
-
-.sub-item label,
-.green-checkbox-container,
-.yellow-checkbox-container {
-  display: flex;
-  align-items: center;
-  flex: 1 1 0%;
-  min-width: 0;
-  margin: 0;
-}
-
-.service-title-group {
-  display: flex;
-  align-items: center;
-  flex: 1 1 0%;
-  min-width: 0;
-  overflow: hidden;
-}
-
-.price-display {
-  flex: 0 0 auto;
-  white-space: nowrap;
-  margin-right: auto;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: #94a3b8;
-  background: rgba(255, 255, 255, 0.03);
-  padding: 4px 8px;
-  border-radius: 6px;
-}
-
-.sliding-text-container {
-  display: block;
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  direction: rtl;
-  text-align: right;
-  line-height: normal;
-}
-
-.scrolling-text-inner {
-  display: inline-block;
-  white-space: nowrap;
-  direction: rtl;
-  vertical-align: middle;
-  will-change: transform;
 }
