@@ -2,7 +2,7 @@
   ****************************************************
   *  Author: Armin Silatani
   *  Date: 2026-05-08
-  *  Version: 1.0.0
+  *  Version: 1.1.0
   ****************************************************
 */
 
@@ -234,7 +234,7 @@ body {
     font-size: 0.95rem;
 }
 
-/* Active accordion states */
+/* ------------------------- ACCORDION ACTIVE STATES ------------------------- */
 .service-section.active .service-dot {
     top: 45px;
     width: 100%;
@@ -267,7 +267,7 @@ body {
 .pin-btn {
     position: absolute;
     left: 15px;
-    top: 15px;
+    top: 9px;
     background: transparent;
     border: none;
     color: #54595f;
@@ -536,7 +536,6 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     overflow: visible;
 }
 
-/* Invoice item name and price */
 .invoice-item .sliding-text-container {
     flex: 1 1 auto;
     min-width: 0;
@@ -545,8 +544,6 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     justify-content: flex-start;
 }
 
-/* Note: .scrolling-text-inner base styles apply globally.
-   Only animation override is kept here. */
 .invoice-item .scrolling-text-inner.animate {
     animation: marquee 8s linear infinite;
 }
@@ -573,7 +570,6 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     direction: rtl;
 }
 
-/* Bullet dot base */
 .invoice-item::before {
     content: "";
     display: block;
@@ -598,7 +594,6 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     --c-on: #f5f5f5;
 }
 
-/* Item enter / leave animations */
 .invoice-item.entering {
     animation: slideDownItem 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
@@ -662,7 +657,6 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
 }
 
 /* ------------------------- LTR OVERRIDES ------------------------- */
-/* General LTR mirroring (applied when dir="ltr" on container) */
 
 [dir="ltr"] .pin-btn {
     left: auto;
@@ -673,6 +667,7 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     right: auto;
     left: 0;
 }
+
 [dir="ltr"] .service-section.active .service-dot {
     right: auto;
     left: 0;
@@ -686,17 +681,20 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
 [dir="ltr"] .sub-item {
     flex-direction: row;
 }
+
 [dir="ltr"] .price-display {
     order: 2;
     margin-left: auto;
     margin-right: 0;
 }
+
 [dir="ltr"] .sub-item label {
     order: 0;
     margin-left: 0;
     margin-right: 0;
     flex: 0 1 auto;
 }
+
 [dir="ltr"] .sub-item > .qty-control-minimal {
     order: 1;
     margin-left: auto;
@@ -706,13 +704,16 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
 [dir="ltr"] .invoice-item {
     direction: ltr;
 }
+
 [dir="ltr"] .invoice-item .item-name {
     text-align: left;
 }
+
 [dir="ltr"] .invoice-item .item-price {
     text-align: right;
     direction: ltr;
 }
+
 [dir="ltr"] .invoice-item::before {
     margin-left: 0;
     margin-right: 10px;
@@ -721,6 +722,7 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
 [dir="ltr"] .tabs-container {
     flex-direction: row;
 }
+
 [dir="ltr"] .pricing-tabs {
     flex-direction: row;
 }
@@ -742,4 +744,35 @@ html[dir="ltr"] .sub-item .qty-control-minimal {
 html[dir="ltr"] .sub-item .price-display {
     order: 3;
     margin-left: auto;
+}
+
+/* Wrapper containing both tab groups */
+html[dir="ltr"] .tabs-header,
+html[dir="ltr"] .pricing-header,
+html[dir="ltr"] .invoice-top-row {
+  display: flex !important;
+  flex-direction: row-reverse !important; /* swap the two groups */
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100%;
+}
+
+/* Standard/Pro group moves to the right side */
+html[dir="ltr"] .pricing-tabs {
+  order: 2 !important;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Starter/Business/Enterprise group moves to the left side */
+html[dir="ltr"] .package-tabs {
+  order: 1 !important;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Only in LTR: reverse the order of service tabs */
+html[dir="ltr"] .pricing-tabs {
+  display: flex !important;
+  flex-direction: row-reverse !important;
 }

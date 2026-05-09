@@ -1,7 +1,15 @@
-/* ------------------------- MOBILE STYLES (max-width: 768px) ------------------------- */
+/*
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-09
+  *  Version: 1.1.1
+  ****************************************************
+*/
+
+/* ------------------------ MOBILE STYLES (max-width: 768px) ------------------------ */
 @media (max-width: 768px) {
 
-  /* ====== Layout Containers ====== */
+  /* ------------------------ Layout Containers ------------------------ */
   .pricing-wrapper {
     padding: 20px 10px 40px;
     margin-bottom: 30px;
@@ -42,7 +50,7 @@
     margin-bottom: 0.6rem;
   }
 
-  /* ====== Header ====== */
+  /* ------------------------ Header ------------------------ */
   .service-header {
     display: flex;
     align-items: center;
@@ -53,7 +61,7 @@
     box-sizing: border-box;
   }
 
-  /* ====== Green Dot Animation ====== */
+  /* ------------------------ Green Dot Animation ------------------------ */
   .service-dot {
     position: absolute;
     width: 14px;
@@ -63,7 +71,12 @@
     top: 23px;
     transform: translateY(-50%);
     opacity: 0.8;
-    transition: height 0.25s ease 0s, border-radius 0.25s ease 0s, width 0.25s ease 0.25s, right 0.15s ease 0.5s, top 0.2s ease 0.65s, transform 0.2s ease 0.65s;
+    transition: height 0.25s ease 0s,
+                border-radius 0.25s ease 0s,
+                width 0.25s ease 0.25s,
+                right 0.15s ease 0.5s,
+                top 0.2s ease 0.65s,
+                transform 0.2s ease 0.65s;
   }
 
   .service-section.active .service-dot {
@@ -76,10 +89,15 @@
     border-width: 1px;
     border-style: solid;
     box-sizing: border-box;
-    transition: top 0.2s ease 0s, transform 0.2s ease 0s, right 0.15s ease 0.2s, width 0.25s ease 0.35s, height 0.25s ease 0.6s, border-radius 0.25s ease 0.6s;
+    transition: top 0.2s ease 0s,
+                transform 0.2s ease 0s,
+                right 0.15s ease 0.2s,
+                width 0.25s ease 0.35s,
+                height 0.25s ease 0.6s,
+                border-radius 0.25s ease 0.6s;
   }
 
-  /* ====== Tabs ====== */
+  /* ------------------------ Tabs ------------------------ */
   .tabs-container {
     display: flex;
     flex-direction: row;
@@ -96,7 +114,10 @@
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
-  .tabs-container::-webkit-scrollbar { display: none; }
+
+  .tabs-container::-webkit-scrollbar {
+    display: none;
+  }
 
   .tabs-container::after {
     content: "";
@@ -116,12 +137,21 @@
     flex-shrink: 0;
   }
 
-  .package-tabs { order: 1; gap: 10px; }
-  .pricing-tabs { order: 3; gap: 4px; }
+  .package-tabs {
+    order: 1;
+    gap: 10px;
+  }
+
+  .pricing-tabs {
+    order: 3;
+    gap: 4px;
+  }
 
   .package-tabs::after,
   .pricing-tabs::after,
-  .pricing-tabs::before { display: none; }
+  .pricing-tabs::before {
+    display: none;
+  }
 
   .pricing-tab,
   .package-tab {
@@ -133,7 +163,7 @@
     transition: all 0.2s ease;
   }
 
-  /* ====== Services List ====== */
+  /* ------------------------ Services List ------------------------ */
   .grouped-services-box {
     margin-right: 0;
     margin-left: 0;
@@ -158,10 +188,15 @@
     border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
   }
 
-  .sub-item:last-child { border-bottom: none; }
+  .sub-item:last-child {
+    border-bottom: none;
+  }
 
-  /* ====== Pin Button & Price ====== */
-  .pin-btn { top: 14px; left: 20px; }
+  /* ------------------------ Pin Button & Price ------------------------ */
+  .pin-btn {
+    top: 9px;
+    left: 20px;
+  }
 
   .price-display {
     flex-shrink: 0;
@@ -174,7 +209,7 @@
     border-radius: 6px;
   }
 
-  /* ====== Icons ====== */
+  /* ------------------------ Icons ------------------------ */
   .green-checkbox,
   .green-checkbox-checked,
   .yellow-checkbox,
@@ -182,7 +217,7 @@
     flex: 0 0 auto;
   }
 
-  /* ====== Sliding Text ====== */
+  /* ------------------------ Sliding Text ------------------------ */
   .scrolling-text-inner {
     display: inline-flex;
     align-items: center;
@@ -191,10 +226,16 @@
     will-change: transform;
     direction: rtl;
   }
-  .scrolling-text-inner br { display: none; }
-  .sliding-text { animation: slideTextInside 8s linear infinite; }
 
-  /* ====== Invoice Item ====== */
+  .scrolling-text-inner br {
+    display: none;
+  }
+
+  .sliding-text {
+    animation: slideTextInside 8s linear infinite;
+  }
+
+  /* ------------------------ Invoice Item ------------------------ */
   .invoice-item {
     display: flex;
     flex-wrap: nowrap;
@@ -264,8 +305,10 @@
     padding: 0;
   }
 
-  /* ====== Fix: prevent wrapping & keep sliding text (MOBILE) ====== */
-  .sub-item { flex-wrap: nowrap !important; }
+  /* ------------------------ Fix: Prevent Wrapping & Keep Sliding Text (MOBILE) ------------------------ */
+  .sub-item {
+    flex-wrap: nowrap !important;
+  }
 
   .sub-item label.white-checkbox-container {
     flex: 1 1 auto;
@@ -281,5 +324,49 @@
   .sub-item .scrolling-text-inner {
     display: inline-block;
     white-space: nowrap;
+  }
+
+  /* ------------------------ LTR Sliding Direction Fix ------------------------ */
+  /* Force proper LTR text flow in mobile */
+  html[dir="ltr"] .sliding-text-container,
+  html[dir="ltr"] .invoice-item .sliding-text-container {
+    direction: ltr !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
+  }
+
+  html[dir="ltr"] .scrolling-text-inner,
+  html[dir="ltr"] .invoice-item .scrolling-text-inner {
+    direction: ltr !important;
+    text-align: left !important;
+  }
+
+  /* Dedicated LTR animation (reverse of RTL behavior) */
+  html[dir="ltr"] .sliding-text {
+    animation-name: slideTextInsideLTR !important;
+    animation-duration: 8s !important;
+    animation-timing-function: linear !important;
+    animation-iteration-count: infinite !important;
+  }
+
+  /* Keep row geometry stable in LTR */
+  html[dir="ltr"] .sub-item {
+    flex-direction: row !important;
+  }
+
+  /* LTR keyframes: move toward right side hidden part instead of left empty side */
+  @keyframes slideTextInsideLTR {
+    0%,
+    15% {
+      transform: translateX(0);
+    }
+    45%,
+    55% {
+      transform: translateX(calc(-1 * (var(--overflow-amount, 80px) + 16px)));
+    }
+    85%,
+    100% {
+      transform: translateX(0);
+    }
   }
 }
