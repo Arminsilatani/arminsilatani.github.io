@@ -1,8 +1,8 @@
 /*
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-02
-  *  Version: 1.1.0
+  *  Date: 2026-05-11
+  *  Version: 1.1.1
   ****************************************************
 */
 
@@ -171,16 +171,19 @@ class FooterComponent extends HTMLElement {
           justify-content: center;
           align-items: center;
           text-align: center;
-          padding: 20px 10px;
+          padding: 10px;
           font-size: .75rem;
           font-weight: 400;
           box-sizing: border-box;
           border-top: 1px solid rgba(0,0,0,0.06);
         }
 
-        /* MOBILE */
-        @media (max-width: 768px) {
+        #currency-section {
+          display: none;
+        }
 
+        /* ------------------------- MOBILE STYLES ------------------------- */
+        @media (max-width: 768px) {
           .footer-divider {
             top: -100px;
             height: 100px;
@@ -196,7 +199,27 @@ class FooterComponent extends HTMLElement {
             align-items: center;
           }
 
-          /* Contact column */
+          .menu {
+            justify-content: center;
+          }
+
+          .copyright {
+            display: block;
+            text-align: center;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+          }
+
+          .copyright p.copyright-text {
+            display: inline-block;
+            margin: 0 auto;
+            text-align: center;
+            text-align-last: center; /* ensures second line also centers */
+            max-width: 100%;
+            box-sizing: border-box;
+          }
+
           .contact-column {
             text-align: center;
             align-items: center;
@@ -221,26 +244,19 @@ class FooterComponent extends HTMLElement {
             margin-right: 0;
           }
 
-          /* Social icons */
           .contact-column .social {
             display: flex;
             justify-content: center;
             align-items: center;
           }
         }
-
-        #currency-section {
-          display: none;
-        }
       </style>
 
       <div class="footer-wrapper">
-
         <div class="footer-divider">${svg}</div>
 
         <footer class="footer-extra">
           <div class="footer-inner" id="footer-inner">
-
             <div class="column" id="currency-section">
               <h2>انتخاب ارز</h2>
               <div id="currency-container"></div>
@@ -270,14 +286,12 @@ class FooterComponent extends HTMLElement {
                 <a href="https://t.me/ArminSilatani" target="_blank"><i class="fa-brands fa-telegram"></i></a>
               </div>
             </div>
-
           </div>
         </footer>
 
         <div class="copyright">
-          تمام حقوق محفوظ است.. ولی حال پیگیری ندارم، لطفاً خودتون رعایت کنید.
+          <p class="copyright-text">تمام حقوق محفوظ است.. ولی حال پیگیری ندارم، لطفاً خودتون رعایت کنید.</p>
         </div>
-
       </div>
     `;
   }

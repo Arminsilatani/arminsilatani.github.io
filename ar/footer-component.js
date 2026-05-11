@@ -1,8 +1,8 @@
 /*
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-06
-  *  Version: 1.2.0
+  *  Date: 2026-05-11
+  *  Version: 1.2.1
   ****************************************************
 */
 
@@ -169,7 +169,7 @@ class FooterComponent extends HTMLElement {
           justify-content: center;
           align-items: center;
           text-align: center;
-          padding: 20px 10px;
+          padding: 10px;
           font-size: .75rem;
           font-weight: 400;
           box-sizing: border-box;
@@ -194,7 +194,28 @@ class FooterComponent extends HTMLElement {
             align-items: center;
           }
 
-          /* Contact column */
+          .menu {
+            justify-content: center; 
+          }
+
+          /* --- Final solution for centering the copyright --- */
+          .copyright {
+            display: block;
+            text-align: center;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+          }
+
+          .copyright p.copyright-text {
+            display: inline-block;
+            margin: 0 auto;
+            text-align: center;
+            text-align-last: center; /* makes the second line centered as well */
+            max-width: 100%;
+            box-sizing: border-box;
+          }
+
           .contact-column {
             text-align: center;
             align-items: center;
@@ -219,7 +240,6 @@ class FooterComponent extends HTMLElement {
             margin-right: 0;
           }
 
-          /* Social icons */
           .contact-column .social {
             display: flex;
             justify-content: center;
@@ -273,7 +293,7 @@ class FooterComponent extends HTMLElement {
         </footer>
 
         <div class="copyright">
-          جميع الحقوق محفوظة… بس ما عندنا نفس نرفع قضايا، فالله يرضى عليكم التزموا 
+          <p class="copyright-text">جميع الحقوق محفوظة… بس ما عندنا نفس نرفع قضايا، فالله يرضى عليكم التزموا</p> 
         </div>
 
       </div>

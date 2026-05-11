@@ -1,8 +1,8 @@
 /*
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-02
-  *  Version: 1.1.0
+  *  Date: 2026-05-11
+  *  Version: 1.1.1
   ****************************************************
 */
 
@@ -171,7 +171,7 @@ class FooterComponent extends HTMLElement {
           justify-content: center;
           align-items: center;
           text-align: center;
-          padding: 20px 10px;
+          padding: 10px;
           font-size: .75rem;
           font-weight: 400;
           box-sizing: border-box;
@@ -196,7 +196,28 @@ class FooterComponent extends HTMLElement {
             align-items: center;
           }
 
-          /* Contact column */
+          .menu {
+            justify-content: center; 
+          }
+
+          /* Final fix for centering copyright on mobile */
+          .copyright {
+            display: block;
+            text-align: center;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+          }
+
+          .copyright p.copyright-text {
+            display: inline-block;
+            margin: 0 auto;
+            text-align: center;
+            text-align-last: center; /* Ensures second line also centers */
+            max-width: 100%;
+            box-sizing: border-box;
+          }
+
           .contact-column {
             text-align: center;
             align-items: center;
@@ -221,7 +242,6 @@ class FooterComponent extends HTMLElement {
             margin-right: 0;
           }
 
-          /* Social icons */
           .contact-column .social {
             display: flex;
             justify-content: center;
@@ -275,7 +295,7 @@ class FooterComponent extends HTMLElement {
         </footer>
 
         <div class="copyright">
-          Tüm hakları saklıdır.. Ama takip edecek mecalim yok, lütfen siz kendiniz riayet edin.
+          <p class="copyright-text">Tüm hakları saklıdır.. Ama takip edecek mecalim yok, lütfen siz kendiniz riayet edin.</p>
         </div>
 
       </div>

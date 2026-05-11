@@ -1,8 +1,8 @@
 /*
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-06
-  *  Version: 1.0.0
+  *  Date: 2026-05-11
+  *  Version: 1.1.0
   ****************************************************
 */
 
@@ -34,6 +34,14 @@ export const currencyLabels = {
     en: {
         IRR: "Toman",
         USD: "Dollar",
+        EUR: "Euro",
+        AED: "Dirham",
+        TRY: "Lira"
+    },
+
+    it: {
+        IRR: "Toman",
+        USD: "Dollaro",
         EUR: "Euro",
         AED: "Dirham",
         TRY: "Lira"

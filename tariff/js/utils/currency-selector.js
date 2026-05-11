@@ -1,8 +1,8 @@
 /*
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-05
-  *  Version: 2.0.0 (Locale-aware)
+  *  Date: 2026-05-11
+  *  Version: 2.0.1
   ****************************************************
 */
 
@@ -31,19 +31,22 @@ class CurrencySelector extends HTMLElement {
     render() {
         let currencies = this.getUniqueCurrencies();
 
-        /* saved currency from localStorage */
+        // saved currency from localStorage
         const saved = localStorage.getItem("selectedCurrency") || "TOMAN";
 
-        /* detect page language */
+        // detect page language
         const lang = document.documentElement.lang?.split("-")[0] || "fa";
 
-        /* choose correct translation list */
+        // detect page direction
+        const dir = document.documentElement.dir || "rtl";
+        this.setAttribute("data-dir", dir);
+
+        // choose correct translation list
         const labels = currencyLabels[lang] || currencyLabels["fa"];
 
-        /* your existing IRR/USD swap logic */
+        // Swap IRR and USD positions for display order (IRR last)
         const irrIndex = currencies.indexOf("IRR");
         const usdIndex = currencies.indexOf("USD");
-
         if (irrIndex !== -1 && usdIndex !== -1) {
             [currencies[irrIndex], currencies[usdIndex]] =
             [currencies[usdIndex], currencies[irrIndex]];
@@ -52,15 +55,25 @@ class CurrencySelector extends HTMLElement {
         /* ---------------- HTML + STYLE ---------------- */
         this.shadowRoot.innerHTML = `
 <style>
-    :host { display: block; width: 100%; direction: rtl; }
-    ul {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        text-align: center;
+    :host {
+        display: block;
+        width: 100%;
     }
+
+    :host([data-dir="ltr"]) { direction: ltr; }
+    :host([data-dir="rtl"]) { direction: rtl; }
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* ۳ ستون */
+    column-gap: 18px;   /* فاصله افقی (در صورت نیاز بیشتر کن) */
+    row-gap: 4px;       /* فاصله عمودی کم */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-items: start;
+    text-align: start;
+}
 
     li {
         cursor: pointer;

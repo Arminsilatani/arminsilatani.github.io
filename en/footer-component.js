@@ -1,8 +1,8 @@
 /*
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-02
-  *  Version: 1.1.0
+  *  Date: 2026-05-11
+  *  Version: 1.1.1
   ****************************************************
 */
 
@@ -32,7 +32,7 @@ class FooterComponent extends HTMLElement {
       </svg>
     `;
 
-    /* :::::::::::::::::: BUILD SHADOW DOM :::::::::::::::::: */
+    /* ------------------------- BUILD SHADOW DOM ------------------------- */
     shadow.innerHTML = `
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -174,7 +174,7 @@ class FooterComponent extends HTMLElement {
           justify-content: center;
           align-items: center;
           text-align: center;
-          padding: 20px 10px;
+          padding: 10px;
           font-size: .75rem;
           font-weight: 400;
           box-sizing: border-box;
@@ -183,6 +183,7 @@ class FooterComponent extends HTMLElement {
 
         /* ------------------------- MOBILE ------------------------- */
         @media (max-width: 768px) {
+
           .footer-divider {
             top: -100px;
             height: 100px;
@@ -198,7 +199,28 @@ class FooterComponent extends HTMLElement {
             align-items: center;
           }
 
-          /* Contact column */
+          .menu {
+            justify-content: center; 
+          }
+
+          /* Center copyright text on mobile */
+          .copyright {
+            display: block;
+            text-align: center;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+          }
+
+          .copyright p.copyright-text {
+            display: inline-block;
+            margin: 0 auto;
+            text-align: center;
+            text-align-last: center; /* Ensures multi-line centering */
+            max-width: 100%;
+            box-sizing: border-box;
+          }
+
           .contact-column {
             text-align: center;
             align-items: center;
@@ -223,7 +245,6 @@ class FooterComponent extends HTMLElement {
             margin-right: 0;
           }
 
-          /* Social icons */
           .contact-column .social {
             display: flex;
             justify-content: center;
@@ -274,7 +295,7 @@ class FooterComponent extends HTMLElement {
         </footer>
 
         <div class="copyright">
-          All rights reserved.. but I’m not in the mood to chase anyone.Please just respect it on your own.
+          <p class="copyright-text">All rights reserved.. but I’m not in the mood to chase anyone.Please just respect it on your own.</p>
         </div>
       </div>
     `;
