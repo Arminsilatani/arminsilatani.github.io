@@ -259,7 +259,7 @@ class HeaderComponent extends HTMLElement {constructor() {
       <a href="/it/#">Servizi</a>
       <a href="/arminsilatani.github.io/it/about/">Chi Sono</a>
       <a href="/it/#">Contattami</a>
-      <a href="/it/#">Tariffe</a>
+      <a href="/it/tariff/">Prezzi</a>
       <a href="/it/#">Portfolio</a>
     `;
 

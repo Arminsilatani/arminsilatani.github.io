@@ -1,15 +1,15 @@
 /*
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-09
-  *  Version: 1.1.1
+  *  Date: 2026-05-10
+  *  Version: 1.1.2
   ****************************************************
 */
 
-/* ------------------------ MOBILE STYLES (max-width: 768px) ------------------------ */
+/* =========================== MOBILE STYLES (max-width: 768px) ============================ */
 @media (max-width: 768px) {
 
-  /* ------------------------ Layout Containers ------------------------ */
+  /* ------------------------- Layout Containers ------------------------- */
   .pricing-wrapper {
     padding: 20px 10px 40px;
     margin-bottom: 30px;
@@ -50,7 +50,7 @@
     margin-bottom: 0.6rem;
   }
 
-  /* ------------------------ Header ------------------------ */
+  /* ------------------------- Header ------------------------- */
   .service-header {
     display: flex;
     align-items: center;
@@ -61,7 +61,7 @@
     box-sizing: border-box;
   }
 
-  /* ------------------------ Green Dot Animation ------------------------ */
+  /* ------------------------- Green Dot Animation ------------------------- */
   .service-dot {
     position: absolute;
     width: 14px;
@@ -97,7 +97,7 @@
                 border-radius 0.25s ease 0.6s;
   }
 
-  /* ------------------------ Tabs ------------------------ */
+  /* ------------------------- Tabs ------------------------- */
   .tabs-container {
     display: flex;
     flex-direction: row;
@@ -163,7 +163,7 @@
     transition: all 0.2s ease;
   }
 
-  /* ------------------------ Services List ------------------------ */
+  /* ------------------------- Services List ------------------------- */
   .grouped-services-box {
     margin-right: 0;
     margin-left: 0;
@@ -192,7 +192,7 @@
     border-bottom: none;
   }
 
-  /* ------------------------ Pin Button & Price ------------------------ */
+  /* ------------------------- Pin Button & Price ------------------------- */
   .pin-btn {
     top: 9px;
     left: 20px;
@@ -209,7 +209,7 @@
     border-radius: 6px;
   }
 
-  /* ------------------------ Icons ------------------------ */
+  /* ------------------------- Icons ------------------------- */
   .green-checkbox,
   .green-checkbox-checked,
   .yellow-checkbox,
@@ -217,7 +217,7 @@
     flex: 0 0 auto;
   }
 
-  /* ------------------------ Sliding Text ------------------------ */
+  /* ------------------------- Sliding Text ------------------------- */
   .scrolling-text-inner {
     display: inline-flex;
     align-items: center;
@@ -235,7 +235,7 @@
     animation: slideTextInside 8s linear infinite;
   }
 
-  /* ------------------------ Invoice Item ------------------------ */
+  /* ------------------------- Invoice Item ------------------------- */
   .invoice-item {
     display: flex;
     flex-wrap: nowrap;
@@ -305,7 +305,7 @@
     padding: 0;
   }
 
-  /* ------------------------ Fix: Prevent Wrapping & Keep Sliding Text (MOBILE) ------------------------ */
+  /* ------------------------- Fix: Prevent Wrapping & Keep Sliding Text (Mobile) ------------------------- */
   .sub-item {
     flex-wrap: nowrap !important;
   }
@@ -326,8 +326,7 @@
     white-space: nowrap;
   }
 
-  /* ------------------------ LTR Sliding Direction Fix ------------------------ */
-  /* Force proper LTR text flow in mobile */
+  /* ------------------------- LTR Sliding Direction Fix ------------------------- */
   html[dir="ltr"] .sliding-text-container,
   html[dir="ltr"] .invoice-item .sliding-text-container {
     direction: ltr !important;
@@ -341,7 +340,6 @@
     text-align: left !important;
   }
 
-  /* Dedicated LTR animation (reverse of RTL behavior) */
   html[dir="ltr"] .sliding-text {
     animation-name: slideTextInsideLTR !important;
     animation-duration: 8s !important;
@@ -349,12 +347,27 @@
     animation-iteration-count: infinite !important;
   }
 
-  /* Keep row geometry stable in LTR */
   html[dir="ltr"] .sub-item {
     flex-direction: row !important;
   }
 
-  /* LTR keyframes: move toward right side hidden part instead of left empty side */
+  html[dir="ltr"] .tabs-container {
+    flex-direction: row !important;
+  }
+
+  html[dir="ltr"] .package-tabs {
+    order: 1 !important;
+  }
+
+  html[dir="ltr"] .tabs-container::after {
+    order: 2 !important;
+    margin: 0 10px !important;
+  }
+
+  html[dir="ltr"] .pricing-tabs {
+    order: 3 !important;
+  }
+
   @keyframes slideTextInsideLTR {
     0%,
     15% {

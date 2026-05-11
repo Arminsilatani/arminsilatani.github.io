@@ -1,8 +1,8 @@
 /*
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-08
-  *  Version: 1.1.0
+  *  Date: 2026-05-11
+  *  Version: 1.1.1
   ****************************************************
 */
 
@@ -775,4 +775,9 @@ html[dir="ltr"] .package-tabs {
 html[dir="ltr"] .pricing-tabs {
   display: flex !important;
   flex-direction: row-reverse !important;
+}
+
+html[dir="ltr"] .qty-text{
+  margin-left: 0 !important;
+  margin-right: 6px !important;
 }
