@@ -23,6 +23,14 @@ export const currencyLabels = {
         TRY: "لیر"
     },
 
+    en: {
+        IRR: "Toman",
+        USD: "Dollar",
+        EUR: "Euro",
+        AED: "Dirham",
+        TRY: "Lira"
+    },
+
     ar: {
         IRR: "تومان",
         USD: "دولار",
@@ -31,7 +39,15 @@ export const currencyLabels = {
         TRY: "ليرة"
     },
 
-    en: {
+    tr: {
+        IRR: "Tümen",
+        USD: "Dolar",
+        EUR: "Euro",
+        AED: "Dirhem",
+        TRY: "Lira"
+    },
+
+    de: {
         IRR: "Toman",
         USD: "Dollar",
         EUR: "Euro",
@@ -45,13 +61,6 @@ export const currencyLabels = {
         EUR: "Euro",
         AED: "Dirham",
         TRY: "Lira"
-    },
-
-    de: {
-        IRR: "Toman",
-        USD: "Dollar",
-        EUR: "Euro",
-        AED: "Dirham",
-        TRY: "Lira"
     }
+
 };

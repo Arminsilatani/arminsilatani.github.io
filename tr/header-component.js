@@ -259,7 +259,7 @@ class HeaderComponent extends HTMLElement {constructor() {
       <a href="/tr/#">Hizmetler</a>
       <a href="/tr/about/">Hakkımda</a>
       <a href="/tr/#">İletişim</a>
-      <a href="/tr/#">Fiyatlar</a>
+      <a href="/tr/tariff/">Fiyatlar</a>
       <a href="/tr/#">Portfolyo</a>
     `;
 

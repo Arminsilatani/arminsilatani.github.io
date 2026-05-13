@@ -1,8 +1,8 @@
 /*
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-11
-  *  Version: 1.1.4
+  *  Date: 2026-05-13
+  *  Version: 1.2.0
   ****************************************************
 */
 
@@ -280,7 +280,7 @@ class FooterComponent extends HTMLElement {
             <div class="column contact-column">
               <h2>Contattami</h2>
               <div class="contact">
-                <a href="tel:+989125759466"><i class="fa-solid fa-phone"></i>09125759466</a>
+                <a href="tel:+989125759466"><i class="fa-solid fa-phone"></i>+989125759466</a>
                 <a href="mailto:contact@arminsilatani.com"><i class="fa-solid fa-envelope"></i>contact[at]arminsilatani.com</a>
               </div>
               <div class="social">

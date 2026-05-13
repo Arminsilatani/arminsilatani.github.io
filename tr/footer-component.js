@@ -1,8 +1,8 @@
 /*
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-11
-  *  Version: 1.1.1
+  *  Date: 2026-05-13
+  *  Version: 1.2.0
   ****************************************************
 */
 
@@ -280,7 +280,7 @@ class FooterComponent extends HTMLElement {
             <div class="column contact-column">
               <h2>İletişim</h2>
               <div class="contact">
-                <a href="tel:+989125759466"><i class="fa-solid fa-phone"></i>09125759466</a>
+                <a href="tel:+989125759466"><i class="fa-solid fa-phone"></i>+989125759466</a>
                 <a href="mailto:contact@arminsilatani.com"><i class="fa-solid fa-envelope"></i>contact[at]arminsilatani.com</a>
               </div>
               <div class="social">
@@ -295,7 +295,7 @@ class FooterComponent extends HTMLElement {
         </footer>
 
         <div class="copyright">
-          <p class="copyright-text">Tüm hakları saklıdır.. Ama takip edecek mecalim yok, lütfen siz kendiniz riayet edin.</p>
+          <p class="copyright-text">Tüm hakları saklıdır… Takip edecek enerjim yok, lütfen siz uyun</p>
         </div>
 
       </div>
