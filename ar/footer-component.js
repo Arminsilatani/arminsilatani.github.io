@@ -1,8 +1,8 @@
 /*
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-11
-  *  Version: 1.2.1
+  *  Date: 2026-05-14
+  *  Version: 1.2.2
   ****************************************************
 */
 
@@ -208,7 +208,7 @@ class FooterComponent extends HTMLElement {
           }
 
           .copyright p.copyright-text {
-            display: inline-block;
+            display: block;
             margin: 0 auto;
             text-align: center;
             text-align-last: center; /* makes the second line centered as well */

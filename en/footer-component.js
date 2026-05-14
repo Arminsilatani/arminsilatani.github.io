@@ -1,8 +1,8 @@
 /*
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-13
-  *  Version: 1.2.0
+  *  Date: 2026-05-14
+  *  Version: 1.2.1
   ****************************************************
 */
 
@@ -213,7 +213,7 @@ class FooterComponent extends HTMLElement {
           }
 
           .copyright p.copyright-text {
-            display: inline-block;
+            display: block;
             margin: 0 auto;
             text-align: center;
             text-align-last: center; /* Ensures multi-line centering */
