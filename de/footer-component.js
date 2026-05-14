@@ -266,7 +266,7 @@ class FooterComponent extends HTMLElement {
               <ul class="menu">
                 <li><a href="/#/">Anmelden</a></li>
                 <li><a href="/#/">Blog</a></li>
-                <li><a href="/#/">Tools</a></li>
+                <li><a href="https://tools.arminsilatani.com/" target="_blank" rel="noopener noreferrer">Tools</a></li>
                 <li><a href="/de/sitemap/">Sitemap</a></li>
                 <li><a href="/#/">Lebenslauf herunterladen</a></li>
               </ul>

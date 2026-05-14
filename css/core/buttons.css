@@ -1,8 +1,8 @@
 /*
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-07
-  *  Version: 1.0.0
+  *  Date: 2026-05-14
+  *  Version: 1.0.1
   ****************************************************
 */
 
@@ -36,6 +36,8 @@
     cursor: pointer;
 
     transition: 0.25s ease;
+
+    font-family: inherit;
 }
 
 .btn-dark:hover {

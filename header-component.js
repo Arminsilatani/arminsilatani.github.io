@@ -1,8 +1,12 @@
 /*
-  Author: Armin Silatani
-  Date: 2026-03-29
-  Version: 1.0.0
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-14
+  *  Version: 1.1.0
+  ****************************************************
 */
+
+/* =========================== HEADER COMPONENT ============================ */
 
 class HeaderComponent extends HTMLElement {
   constructor() {
@@ -10,10 +14,11 @@ class HeaderComponent extends HTMLElement {
 
     const shadow = this.attachShadow({ mode: "open" });
 
-    /* ::::::::::::::::::::::::::::::::::::::: STYLES ::::::::::::::::::::::::::::::::::::::: */
+    /* :::::::::::::::::::::::::: STYLES :::::::::::::::::::::::::: */
 
     const style = document.createElement("style");
-    style.textContent = `.container {
+    style.textContent = `
+      .container {
         position: fixed;
         top: 0;
         left: 0;
@@ -30,8 +35,7 @@ class HeaderComponent extends HTMLElement {
         box-sizing: border-box;
       }
 
-      /* ::::::::::::::::::::::::::::::::::::::: TOGGLE TRACK ::::::::::::::::::::::::::::::::::::::: */
-
+      /* :::::::::::::::::::::::::: TOGGLE TRACK :::::::::::::::::::::::::: */
       .toggle-track {
         position: absolute;
         top: 50%;
@@ -51,8 +55,7 @@ class HeaderComponent extends HTMLElement {
         background: rgba(255, 107, 107, .3);
       }
 
-      /* ::::::::::::::::::::::::::::::::::::::: TOGGLE BUTTON ::::::::::::::::::::::::::::::::::::::: */
-
+      /* :::::::::::::::::::::::::: TOGGLE BUTTON :::::::::::::::::::::::::: */
       .button {
         position: absolute;
         top: 50%;
@@ -94,8 +97,7 @@ class HeaderComponent extends HTMLElement {
         transform: translate(-50%, -50%) rotate(180deg);
       }
 
-      /* ::::::::::::::::::::::::::::::::::::::: OVERLAYS ::::::::::::::::::::::::::::::::::::::: */
-
+      /* :::::::::::::::::::::::::: OVERLAYS :::::::::::::::::::::::::: */
       .overlay,
       .overlay-dark {
         position: fixed;
@@ -126,8 +128,7 @@ class HeaderComponent extends HTMLElement {
         transition: left .3s cubic-bezier(.19, .22, .59, .9);
       }
 
-      /* ::::::::::::::::::::::::::::::::::::::: MENU WRAPPER ::::::::::::::::::::::::::::::::::::::: */
-
+      /* :::::::::::::::::::::::::: MENU WRAPPER :::::::::::::::::::::::::: */
       .menu-wrapper {
         position: absolute;
         top: 50%;
@@ -158,8 +159,7 @@ class HeaderComponent extends HTMLElement {
         filter: drop-shadow(0 0 14px rgba(255, 255, 255, 1));
       }
 
-      /* ::::::::::::::::::::::::::::::::::::::: SIDEBAR ::::::::::::::::::::::::::::::::::::::: */
-
+      /* :::::::::::::::::::::::::: SIDEBAR :::::::::::::::::::::::::: */
       .sidebar {
         display: flex;
         flex-direction: column;
@@ -185,12 +185,11 @@ class HeaderComponent extends HTMLElement {
       }
 
       .sidebar a.active {
-      color: #4ECDC4 !important;
-      opacity: 1;
-    }
+        color: #4ECDC4 !important;
+        opacity: 1;
+      }
 
-      /* ::::::::::::::::::::::::::::::::::::::: MOBILE ::::::::::::::::::::::::::::::::::::::: */
-
+      /* :::::::::::::::::::::::::: MOBILE :::::::::::::::::::::::::: */
       @media (max-width: 768px) {
         .menu-wrapper {
           gap: 28px;
@@ -211,7 +210,7 @@ class HeaderComponent extends HTMLElement {
       }
     `;
 
-    /* ::::::::::::::::::::::::::::::::::::::: DOM STRUCTURE ::::::::::::::::::::::::::::::::::::::: */
+    /* :::::::::::::::::::::::::: DOM STRUCTURE :::::::::::::::::::::::::: */
 
     const container = document.createElement("div");
     container.className = "container";
@@ -263,7 +262,7 @@ class HeaderComponent extends HTMLElement {
       <a href="/">صفحه اصلی</a>
       <a href="/#">خدمات</a>
       <a href="/about/">درباره من</a>
-      <a href="/#">تماس با من</a>
+      <a href="/contact/">تماس با من</a>
       <a href="/tariff/">تعرفه‌ها</a>
       <a href="/#">نمونه کارها</a>
     `;
@@ -271,7 +270,7 @@ class HeaderComponent extends HTMLElement {
     wrapper.append(lineBox, menu);
     overlayDark.appendChild(wrapper);
 
-    /* ::::::::::::::::::::::::::::::::::::::: TOGGLE LOGIC ::::::::::::::::::::::::::::::::::::::: */
+    /* :::::::::::::::::::::::::: TOGGLE LOGIC :::::::::::::::::::::::::: */
 
     let animating = false;
 
@@ -296,14 +295,13 @@ class HeaderComponent extends HTMLElement {
       toggleTrack.classList.toggle("active");
     });
 
-    /* ::::::::::::::::::::::::::::::::::::::: ANIMATION ENGINE ::::::::::::::::::::::::::::::::::::::: */
+    /* :::::::::::::::::::::::::: ANIMATION ENGINE :::::::::::::::::::::::::: */
 
     const links = [...menu.querySelectorAll("a")];
     const currentUrl = window.location.pathname;
 
     links.forEach(link => {
       const linkPath = new URL(link.href).pathname;
-
       if (linkPath === currentUrl) {
         link.classList.add("active");
       }
@@ -329,13 +327,12 @@ class HeaderComponent extends HTMLElement {
       });
 
       currentY = lerp(currentY, targetY, 0.12);
-
       path.setAttribute("d", `M 20 0 Q ${20 - 18} ${currentY} 20 384`);
 
       requestAnimationFrame(animate);
     }
 
-    /* ::::::::::::::::::::::::::::::::::::::: HOVER EFFECTS ::::::::::::::::::::::::::::::::::::::: */
+    /* :::::::::::::::::::::::::: HOVER EFFECTS :::::::::::::::::::::::::: */
 
     links.forEach((link, i) => {
       link.addEventListener("mouseenter", () => {
@@ -355,7 +352,7 @@ class HeaderComponent extends HTMLElement {
       targetY = 192;
     });
 
-    /* ::::::::::::::::::::::::::::::::::::::: MOUNT ::::::::::::::::::::::::::::::::::::::: */
+    /* :::::::::::::::::::::::::: MOUNT :::::::::::::::::::::::::: */
 
     shadow.append(style, container, overlay, overlayDark);
   }

@@ -1,8 +1,8 @@
 /*
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-07
-  *  Version: 1.0.0
+  *  Date: 2026-05-14
+  *  Version: 1.1.0
   ****************************************************
 */
 
@@ -28,6 +28,7 @@
 @import url('pages/home.css');
 @import url('pages/sitemap.css');
 @import url('pages/tariff.css');
+@import url('pages/contact.css');
 
 /* ------------------------- RESPONSIVE COMPONENTS ------------------------- */
 @import url('responsive/components/breadcrumb-responsive.css');
@@ -41,3 +42,4 @@
 @import url('responsive/pages/about-responsive.css');
 @import url('responsive/pages/home-responsive.css');
 @import url('responsive/pages/tariff-responsive.css');
+@import url('responsive/pages/contact-responsive.css');
