@@ -1,0 +1,29 @@
+/* ---------- Page Enter ---------- */
+.page {
+  opacity: 0;
+  filter: blur(14px);
+  transform: translateY(8px);
+  transition: opacity 500ms ease, filter 500ms ease, transform 500ms ease;
+}
+
+.page.is-loaded {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+/* ---------- Page Exit ---------- */
+.page.is-leaving {
+  opacity: 0;
+  filter: blur(12px);
+  transform: translateY(-6px);
+}
+
+/* احترام به تنظیمات کاربر */
+@media (prefers-reduced-motion: reduce) {
+  .page {
+    transition: none;
+    filter: none;
+    transform: none;
+  }
+}
