@@ -10,6 +10,7 @@
 
 /* ------------------------- COMPONENTS ------------------------- */
 @import url('components/breadcrumb.css');
+@import url('components/faq.css');
 @import url('components/testimonial.css');
 
 /* ------------------------- CORE ------------------------- */
@@ -18,6 +19,7 @@
 @import url('core/buttons.css');
 @import url('core/checkbox.css');
 @import url('core/containers.css');
+
 @import url('core/fonts.css');
 @import url('core/images.css');
 @import url('core/links.css');

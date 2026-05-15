@@ -40,6 +40,15 @@
     font-family: inherit;
 }
 
+.contact-form-wrapper .btn-dark {
+  width: 100%;
+  max-width: none;
+  margin: 20px 0 0;
+  display: block;
+  box-sizing: border-box;
+}
+
+
 .btn-dark:hover {
     background: #4ECDC4;
     color: #0D0D0D;
