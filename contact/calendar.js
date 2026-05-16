@@ -13,7 +13,8 @@
 
     // Manually blocked dates in YYYY-MM-DD format
     const MANUAL_UNAVAILABLE_DATES = new Set([
-        // '2026-05-20',
+       '2026-05-16',
+       '2026-05-19'
     ]);
 
     // Nowruz extended mode: false = 1-4 Farvardin, true = 1-13 Farvardin
