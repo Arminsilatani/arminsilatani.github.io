@@ -1,68 +1,230 @@
-/* =========================== RESPONSIVE OVERRIDES ============================ */
+/*
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-16
+  *  Version: 0.0.0
+  ****************************************************
+*/
 
-/* Process responsive overrides */
-@media (max-width: 992px) {
-    #process {
-        --open-content-maxw: 68%;
-    }
+/* =========================== RESPONSIVE ============================ */
+@media (max-width: 768px) {
+
+  /* ------------------------- GENERAL ------------------------- */
+  .container,
+  .container-1080,
+  .container-1300 {
+    padding: 0 18px;
+  }
+
+  .section {
+    padding: 48px 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  /* ------------------------- CONTACT GRID ------------------------- */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contact-info {
+    gap: 12px;
+  }
+
+  .contact-form-wrapper {
+    padding: 24px 20px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 12px 14px;
+  }
+
+  .social-dots {
+    justify-content: center;
+  }
+
+  /* ------------------------- PROCESS (Vertical Accordion) ------------------------- */
+  #process .process-grid {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #process .process-box {
+    height: 80px;                  /* Fixed height when closed */
+    flex: none;
+    width: 100%;
+    transition: height 0.45s ease, box-shadow 0.35s ease;
+    overflow: visible;
+  }
+
+  #process .process-box.is-open {
+    height: 420px;                  /* Taller to show full content */
+    flex: none;
+  }
+
+  /* Reset positions for closed state */
+  #process .process-box:not(.is-open)::before {
+    left: 0;                      /* Move line to the left */
+    right: auto;                  /* Free right */
+    top: 50%;
+    width: var(--closed-line-height);
+    height: 1px;
+    transform: translateY(-50%);
+  }
+
+  #process .process-box:not(.is-open) .process-box__meta {
+    position: absolute;
+    right: -130px;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    padding-right: 6px;           /* Soft distance from green line */
+
+    /* Key change: use flex-direction row instead of row-reverse */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;    /* Push everything to the right */
+    align-items: center;
+    gap: 6px;
+  }
+
+  #process .process-box:not(.is-open) .process-box__step {
+    writing-mode: vertical-rl;    /* Vertical number */
+    text-orientation: mixed;
+    font-weight: bold;
+    font-size: 1.3rem;
+    order: 2;                     /* Place number to the right (green line side) */
+  }
+
+  #process .process-box:not(.is-open) .process-box__vtitle {
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 0.9rem;
+
+    /* Show full title */
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: unset;
+    max-width: max-content;
+
+    direction: rtl;
+    text-align: right;
+    order: 1;                     /* Title to the left of number */
+  }
+
+  /* Open state positions for mobile */
+  #process .process-box.is-open::before {
+    display: none;
+  }
+
+  #process .process-box.is-open .process-box__meta {
+    top: 20px;
+    right: var(--process-pad-x);
+    left: auto;
+    transform: none;
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  #process .process-box.is-open .process-box__content {
+    top: auto;
+    bottom: 24px;
+    right: var(--process-pad-x);
+    max-width: 80%;
+  }
+
+  #process .process-box.is-open .process-box__title {
+    font-size: 1.1rem;
+  }
+
+  #process .process-box.is-open .process-box__title::after {
+    width: 35px;
+    right: -20px;
+    top: 12px;
+  }
+
+  /* Background image stays absolute */
+  #process .process-box__media img {
+    object-position: center 30%;
+  }
+
+  /* ------------------------- AVAILABILITY ------------------------- */
+  .avail-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .avail-card {
+    padding: 24px 20px;
+  }
+
+  .timezone-clock {
+    font-size: 2.6rem;
+  }
+
+  /* ------------------------- MINI CALENDAR ------------------------- */
+  .mini-week {
+    padding: 4px 2px;
+    gap: 4px;
+  }
+
+  .mini-week__day {
+    width: 44px;
+    padding: 6px 2px 4px;
+  }
+
+  .mini-week__day-name {
+    font-size: 0.6rem;
+  }
+
+  .mini-week__day-date {
+    font-size: 0.8rem;
+  }
+
+  .mini-week__month-separator {
+    font-size: 0.55rem;
+    padding: 0 4px;
+  }
+
+  /* ------------------------- FAQ ------------------------- */
+  .faq-question {
+    font-size: 0.9rem;
+    padding: 14px 10px;
+    font-weight: 400;
+  }
+
+  .faq-answer {
+    font-size: 0.85rem;
+  }
 }
 
-@media (max-width: 768px) {
-    #process {
-        --process-box-h: 280px;
-        --open-step-top: 150px;
-        --open-content-top: 178px;
-        --open-content-maxw: 74%;
-        --closed-line-height: 22px;
-    }
+/* ------------------------- EXTRA SMALL (Narrow mobiles) ------------------------- */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
 
-    #process .process-grid {
-        gap: 10px;
-    }
+  #process .process-box {
+    height: 80px;
+  }
 
-    #process .process-box__title {
-        font-size: 0.95rem;
-    }
+  #process .process-box.is-open {
+    height: 380px;
+  }
 
-    #process .process-box__desc {
-        font-size: 0.8rem;
-        line-height: 1.7;
-    }
-}
+  #process .process-box.is-open .process-box__content {
+    max-width: 90%;
+  }
 
-/* Availability & Timezone responsive */
-@media (max-width: 768px) {
-    .avail-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
+  .contact-form-wrapper {
+    padding: 18px 14px;
+  }
 
-    .avail-card {
-        padding: 22px 16px;
-    }
-
-    .timezone-clock {
-        font-size: 2.5rem;
-    }
-
-    .mini-week__day {
-        width: 42px;
-        padding: 6px 2px 5px;
-    }
-
-    .mini-week__day-date {
-        font-size: 0.78rem;
-    }
-
-    .mini-week__day-name {
-        font-size: 0.58rem;
-    }
-
-    .legend-row {
-        gap: 10px;
-    }
-
-    .legend-item {
-        font-size: 0.65rem;
-    }
+  .form-group label {
+    font-size: 0.7rem;
+  }
 }

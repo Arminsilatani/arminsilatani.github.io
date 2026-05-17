@@ -457,11 +457,14 @@ a.contact-info__value:hover {
 
     transition: all 0.3s ease;
 }
-
+#process .process-box:not(.is-open) .process-box__step {
+    font-weight: bold;
+    font-size: 1.3rem;
+    }
 #process .process-box:not(.is-open)::before {
     top: 0;
     left: 50%;
-    width: 1px;
+    width: 2px;
     height: var(--closed-line-height);
     transform: translateX(-50%);
 }
