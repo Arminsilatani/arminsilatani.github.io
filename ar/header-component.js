@@ -269,7 +269,7 @@ class HeaderComponent extends HTMLElement {
       <a href="/ar/">الرئيسية</a>
       <a href="#/">الخدمات</a>
       <a href="/ar/about/">من أنا</a>
-      <a href="#/">تواصل معي</a>
+      <a href="/ar/contact/">تواصل معي</a>
       <a href="/ar/tariff/">الأسعار</a>
       <a href="#/">أعمالي</a>
     `;
