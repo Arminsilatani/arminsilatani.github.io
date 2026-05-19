@@ -267,11 +267,10 @@ a.contact-info__value:hover {
 }
 
 .form-group--focused label {
-    color: var(--accent) !important;
+    color: var(--accent);
 }
 
 .submit-btn--sent {
-    background: #2ecc71 !important;
     pointer-events: none;
 }
 
@@ -281,7 +280,7 @@ a.contact-info__value:hover {
     --process-gap: 14px;
     --process-pad-x: 18px;
 
-    --open-step-top: 250px;
+    --open-step-top: 15px;
     --open-content-top: 280px;
     --open-content-maxw: 60%;
 
@@ -357,18 +356,29 @@ a.contact-info__value:hover {
     transform: scale(1);
 }
 
+/* گرادیانت پیش‌فرض برای RTL (راست‌چین) */
 #process .process-box.is-open .process-box__media::after {
     content: '';
     position: absolute;
     inset: 0;
     background: linear-gradient(
-        to top,
-        rgba(0,0,0,0.75) 0%,
-        rgba(0,0,0,0.45) 35%,
-        rgba(0,0,0,0.0) 70%
+        to top left,                     /* از پایین راست به بالا چپ */
+        rgba(0,0,0,0.92) 0%,             /* تیرگی بیشتر در پایین راست */
+        rgba(0,0,0,0.55) 35%,
+        rgba(0,0,0,0.05) 70%
     );
     z-index: 1;
     pointer-events: none;
+}
+
+/* بازنویسی برای زبان‌های چپ‌چین (LTR) */
+[dir="ltr"] #process .process-box.is-open .process-box__media::after {
+    background: linear-gradient(
+        to top right,                    /* از پایین چپ به بالا راست */
+        rgba(0,0,0,0.92) 0%,
+        rgba(0,0,0,0.55) 35%,
+        rgba(0,0,0,0.05) 70%
+    );
 }
 
 #process .process-box__meta,
@@ -526,6 +536,32 @@ a.contact-info__value:hover {
     height: 1px;
     background: var(--accent-line);
 }
+
+/* ===== اصلاح جهت برای زبان‌های چپ‌به‌راست (آلمانی، ایتالیایی و...) ===== */
+[dir="ltr"] #process .process-box.is-open .process-box__meta {
+    right: auto;
+    left: var(--process-pad-x);
+    align-items: flex-start;      /* محتوا به چپ بچسبه */
+    text-align: left;
+}
+
+[dir="ltr"] #process .process-box.is-open .process-box__content {
+    right: auto;
+    left: calc(var(--process-pad-x) - 8px);
+    text-align: left;
+}
+
+[dir="ltr"] #process .process-box.is-open .process-box__title {
+    padding-right: 0;
+    padding-left: calc(var(--open-line-width) + -5px);
+}
+
+[dir="ltr"] #process .process-box.is-open .process-box__title::after {
+    right: auto;
+    left: -15px;
+    top: 10px;
+}
+
 
 /* ------------------------- AVAILABILITY & TIMEZONE ------------------------- */
 #availability .section-eyebrow {
