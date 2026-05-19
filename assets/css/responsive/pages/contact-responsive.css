@@ -54,7 +54,7 @@
   }
 
   #process .process-box {
-    height: 80px;                  /* Fixed height when closed */
+    height: 80px;
     flex: none;
     width: 100%;
     transition: height 0.45s ease, box-shadow 0.35s ease;
@@ -62,14 +62,14 @@
   }
 
   #process .process-box.is-open {
-    height: 420px;                  /* Taller to show full content */
+    height: 420px;
     flex: none;
   }
 
   /* Reset positions for closed state */
   #process .process-box:not(.is-open)::before {
-    left: 0;                      /* Move line to the left */
-    right: auto;                  /* Free right */
+    left: 0;
+    right: auto;
     top: 50%;
     width: var(--closed-line-height);
     height: 1px;
@@ -82,23 +82,32 @@
     top: 0;
     bottom: 0;
     height: 100%;
-    padding-right: 6px;           /* Soft distance from green line */
+    padding-right: 6px;
 
     /* Key change: use flex-direction row instead of row-reverse */
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;    /* Push everything to the right */
+    justify-content: flex-end;
     align-items: center;
     gap: 6px;
   }
 
+  [dir="ltr"] #process .process-box:not(.is-open) .process-box__meta {
+    right: -150px;   /* مقدار کمتر = فاصله کمتر از سمت راست */
+}
+
   #process .process-box:not(.is-open) .process-box__step {
-    writing-mode: vertical-rl;    /* Vertical number */
+    writing-mode: vertical-rl;
     text-orientation: mixed;
     font-weight: bold;
     font-size: 1.3rem;
-    order: 2;                     /* Place number to the right (green line side) */
+    order: 2;
   }
+
+  [dir="ltr"] #process .process-box:not(.is-open) .process-box__step {
+    font-size: 0.9rem;   /* کمی کوچک‌تر (قبلاً 1.3rem بود) */
+    transform: rotate(180deg);
+}
 
   #process .process-box:not(.is-open) .process-box__vtitle {
     writing-mode: horizontal-tb;
@@ -113,7 +122,7 @@
 
     direction: rtl;
     text-align: right;
-    order: 1;                     /* Title to the left of number */
+    order: 1;
   }
 
   /* Open state positions for mobile */
@@ -151,6 +160,10 @@
   #process .process-box__media img {
     object-position: center 30%;
   }
+  [dir="ltr"] #process .process-box:not(.is-open)::before {
+    left: auto;
+    right: 0;
+}
 
   /* ------------------------- AVAILABILITY ------------------------- */
   .avail-grid {

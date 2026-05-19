@@ -2,7 +2,7 @@
   ****************************************************
   *  Author: Armin Silatani
   *  Date: 2026-05-07
-  *  Version: 1.0.0
+  *  Version: 1.0.1
   ****************************************************
 */
 
@@ -10,11 +10,22 @@
 
 /* ------------------------- FONT-FACE DEFINITIONS ------------------------- */
 
+/* ltr */
+
 @font-face {
     font-family: 'KalamehEn';
     src: url('../../fonts/KalamehWeb-Regular.woff2') format('woff2'),
          url('../../fonts/KalamehWeb-Regular.woff') format('woff');
     font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KalamehEn';
+    src: url('../../fonts/KalamehWeb-Bold.woff2') format('woff2'),
+         url('../../fonts/KalamehWeb-Bold.woff') format('woff');
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
@@ -28,11 +39,23 @@
     font-display: swap;
 }
 
+
+/* rtl */
+
 @font-face {
     font-family: 'KalamehFaNum';
     src: url('../../fonts/KalamehWebFaNum-Regular.woff2') format('woff2'),
          url('../../fonts/KalamehWebFaNum-Regular.woff') format('woff');
     font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KalamehFaNum';
+    src: url('../../fonts/KalamehWebFaNum-Bold.woff2') format('woff2'),
+         url('../../fonts/KalamehWebFaNum-Bold.woff') format('woff');
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }

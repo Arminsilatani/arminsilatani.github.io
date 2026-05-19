@@ -1,12 +1,12 @@
 /*
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-15
+  *  Date: 2026-05-19
   *  Version: 0.2.0
   ****************************************************
 */
 
-/* =========================== CONTACT PAGE SPECIFIC STYLES ============================ */
+/* =========================== CONTACT PAGE STYLES ============================ */
 
 /* :::::::::::::::::::::::::: CSS VARIABLES :::::::::::::::::::::::::: */
 :root {
@@ -161,7 +161,7 @@ a.contact-info__value:hover {
     height: auto;
 }
 
-/* Social Links */
+/* ------------------------- SOCIAL LINKS ------------------------- */
 .social-dots {
     display: flex;
     gap: 10px;
@@ -197,7 +197,7 @@ a.contact-info__value:hover {
     display: block;
 }
 
-/* Form Wrapper */
+/* ------------------------- FORM WRAPPER ------------------------- */
 .contact-form-wrapper {
     background: transparent;
     border: 1px solid var(--border);
@@ -232,7 +232,7 @@ a.contact-info__value:hover {
 .form-group label {
     display: block;
     font-size: 0.78rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-muted);
     margin-bottom: 6px;
     letter-spacing: 0.03em;
@@ -274,7 +274,7 @@ a.contact-info__value:hover {
     pointer-events: none;
 }
 
-/* ------------------------- PROCESS ------------------------- */
+/* ------------------------- PROCESS SECTION ------------------------- */
 #process {
     --process-box-h: 400px;
     --process-gap: 14px;
@@ -356,14 +356,14 @@ a.contact-info__value:hover {
     transform: scale(1);
 }
 
-/* گرادیانت پیش‌فرض برای RTL (راست‌چین) */
+/* Default gradient for RTL (right-to-left) */
 #process .process-box.is-open .process-box__media::after {
     content: '';
     position: absolute;
     inset: 0;
     background: linear-gradient(
-        to top left,                     /* از پایین راست به بالا چپ */
-        rgba(0,0,0,0.92) 0%,             /* تیرگی بیشتر در پایین راست */
+        to top left,
+        rgba(0,0,0,0.92) 0%,
         rgba(0,0,0,0.55) 35%,
         rgba(0,0,0,0.05) 70%
     );
@@ -371,10 +371,10 @@ a.contact-info__value:hover {
     pointer-events: none;
 }
 
-/* بازنویسی برای زبان‌های چپ‌چین (LTR) */
+/* Override for LTR languages (left-to-right) */
 [dir="ltr"] #process .process-box.is-open .process-box__media::after {
     background: linear-gradient(
-        to top right,                    /* از پایین چپ به بالا راست */
+        to top right,
         rgba(0,0,0,0.92) 0%,
         rgba(0,0,0,0.55) 35%,
         rgba(0,0,0,0.05) 70%
@@ -467,10 +467,12 @@ a.contact-info__value:hover {
 
     transition: all 0.3s ease;
 }
+
 #process .process-box:not(.is-open) .process-box__step {
     font-weight: bold;
     font-size: 1.3rem;
-    }
+}
+
 #process .process-box:not(.is-open)::before {
     top: 0;
     left: 50%;
@@ -537,11 +539,11 @@ a.contact-info__value:hover {
     background: var(--accent-line);
 }
 
-/* ===== اصلاح جهت برای زبان‌های چپ‌به‌راست (آلمانی، ایتالیایی و...) ===== */
+/* Direction fix for LTR languages */
 [dir="ltr"] #process .process-box.is-open .process-box__meta {
     right: auto;
     left: var(--process-pad-x);
-    align-items: flex-start;      /* محتوا به چپ بچسبه */
+    align-items: flex-start;
     text-align: left;
 }
 
@@ -561,7 +563,6 @@ a.contact-info__value:hover {
     left: -15px;
     top: 10px;
 }
-
 
 /* ------------------------- AVAILABILITY & TIMEZONE ------------------------- */
 #availability .section-eyebrow {
@@ -716,7 +717,7 @@ a.contact-info__value:hover {
     line-height: 1.2;
 }
 
-/* Day dot base (merged single definition) */
+/* Day dot base */
 .mini-week__day-dot {
     width: 5px;
     height: 5px;

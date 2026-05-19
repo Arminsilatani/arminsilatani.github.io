@@ -307,6 +307,7 @@ Lavorando fianco a fianco con imprenditori e aziende, ho visto quanto un progett
 <!-- ::::::::::::::::::::::::: COMPONENT SCRIPTS ::::::::::::::::::::::::: -->
 
 <script type="module" src="header-component.js"></script>
+<script src="/assets/css/components/blurup.js"></script>
 <script src="language-component.js"></script>
 <script src="logo-component.js" defer></script>
 <script type="module" src="footer-component.js"></script>
@@ -402,67 +403,6 @@ document.addEventListener('DOMContentLoaded', function () {
     fillColumn('column2');
     fillColumn('column3');
 });
-</script>
-
-<!-- ::::::::::::::::::::: BLUR-UP IMAGE LOADING :::::::::::::::::::::: -->
-
-<script>
-(function () {
-    const BLUR_PIXELS = 12;
-    const DURATION_MS = 500;
-    const OBSERVER_OPTIONS = {
-        root: null,
-        rootMargin: '200px 0px',
-        threshold: 0
-    };
-
-    const images = document.querySelectorAll('img');
-
-    images.forEach(img => {
-        img.style.setProperty('--blurup-blur', BLUR_PIXELS + 'px');
-        img.style.setProperty('--blurup-dur', DURATION_MS + 'ms');
-
-        if (img.closest('.hero-section')) {
-            img.setAttribute('loading', 'eager');
-            img.setAttribute('data-blurup', 'true');
-        } else if (!img.hasAttribute('data-no-blurup')) {
-            img.setAttribute('loading', 'lazy');
-            img.setAttribute('data-blurup', 'true');
-            img.setAttribute('data-blurup-observe', 'true');
-        }
-    });
-
-    const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting && entry.intersectionRatio <= 0) return;
-
-            const img = entry.target;
-            const finish = () => {
-                img.classList.add('blurup-loaded');
-                obs.unobserve(img);
-            };
-
-            if (img.complete && img.naturalWidth > 0) {
-                finish();
-                return;
-            }
-
-            img.addEventListener('load', finish, { once: true });
-            img.addEventListener('error', finish, { once: true });
-        });
-    }, OBSERVER_OPTIONS);
-
-    document.querySelectorAll('[data-blurup-observe="true"]').forEach(img => observer.observe(img));
-
-    document.querySelectorAll('[data-blurup="true"][loading="eager"]').forEach(img => {
-        if (img.complete) {
-            img.classList.add('blurup-loaded');
-        } else {
-            img.addEventListener('load', () => img.classList.add('blurup-loaded'), { once: true });
-            img.addEventListener('error', () => img.classList.add('blurup-loaded'), { once: true });
-        }
-    });
-})();
 </script>
 
 </body>

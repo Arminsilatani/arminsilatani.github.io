@@ -200,7 +200,9 @@
 
     <!-- ::::::::::::::::::::::::::::::::::::::: COMPONENT SCRIPTS ::::::::::::::::::::::::::::::::::::::: -->
     <script type="module" src="../header-component.js"></script>
+    <script src="/assets/css/components/blurup.js"></script>
     <script src="../language-component.js"></script>
+    <script src="/assets/css/components/breadcrumb.js"></script>
     <script type="module" src="../footer-component.js"></script>
 
     <!-- ::::::::::::::::::::::::::::::::::::::: PAGE SCRIPTS ::::::::::::::::::::::::::::::::::::::: -->
@@ -307,57 +309,7 @@
             INITIAL STATE
             --------------------------------------------------------------- */
             updateScrollAnimation();
-
-            /* ---------------------------------------------------------------
-            BREADCRUMB TYPING ANIMATION
-            --------------------------------------------------------------- */
-            const terminalPath = document.getElementById("terminalPath");
-            const domain = window.location.hostname;
-            const pathParts = window.location.pathname.split("/").filter(Boolean);
-
-            const paths = [];
-            let fullPath = "";
-
-            paths.push({ name: domain, url: "/" });
-
-            pathParts.forEach(part => {
-                fullPath += "/" + part;
-                paths.push({ name: part, url: fullPath });
-            });
-
-            let textIndex = 0;
-            let charIndex = 0;
-
-            function typeSegment() {
-                if (textIndex >= paths.length) return;
-
-                const segment = paths[textIndex];
-                const link = document.createElement("a");
-                link.href = segment.url;
-                terminalPath.appendChild(link);
-
-                function typeChar() {
-                    if (charIndex < segment.name.length) {
-                        link.textContent += segment.name.charAt(charIndex);
-                        charIndex++;
-                        setTimeout(typeChar, 40);
-                    } else {
-                        charIndex = 0;
-                        textIndex++;
-
-                        if (textIndex < paths.length) {
-                            terminalPath.appendChild(document.createTextNode("/"));
-                        }
-
-                        setTimeout(typeSegment, 100);
-                    }
-                }
-
-                typeChar();
-            }
-
-            typeSegment();
-        });
+    }); 
     </script>
 
 </body>
