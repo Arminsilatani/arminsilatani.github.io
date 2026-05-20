@@ -67,7 +67,7 @@ body::before {
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--accent);
-    margin-bottom: 0px;
+    margin-bottom: 18px;
     opacity: 0.85;
 }
 
@@ -287,11 +287,6 @@ a.contact-info__value:hover {
     --accent-line: #4ECDC4;
     --closed-line-height: 20px;
     --open-line-width: 30px;
-}
-
-#process .section-eyebrow {
-    display: block;
-    margin-bottom: 8px;
 }
 
 #process .section-title {
@@ -565,9 +560,6 @@ a.contact-info__value:hover {
 }
 
 /* ------------------------- AVAILABILITY & TIMEZONE ------------------------- */
-#availability .section-eyebrow {
-    margin-bottom: 10px;
-}
 
 #availability .section-title {
     margin-top: 0;
@@ -832,9 +824,6 @@ a.contact-info__value:hover {
 }
 
 /* ------------------------- FAQ ------------------------- */
-#faq .section-eyebrow {
-    margin-bottom: 2px;
-}
 
 #faq .section-title {
     margin-top: 0;

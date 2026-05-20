@@ -258,7 +258,7 @@ class HeaderComponent extends HTMLElement {constructor() {
       <a href="/en/">Home</a>
       <a href="#/">Services</a>
       <a href="/en/about/">About Me</a>
-      <a href="#/">Contact Me</a>
+      <a href="/en/contact/">Contact Me</a>
       <a href="/en/tariff/">Pricing</a>
       <a href="#/">Portfolio</a>
     `;

@@ -85,6 +85,10 @@ class FooterComponent extends HTMLElement {
           direction: ltr;
         }
 
+        .menu a:hover {
+          color: #f5f5f5;
+        }
+
         /* Three columns when currency is active */
         .footer-inner.three-col {
           grid-template-columns: repeat(3, 1fr);
@@ -191,6 +195,7 @@ class FooterComponent extends HTMLElement {
         #currency-section {
           display: none;
         }
+          
         /* ------------------------- MOBILE STYLES ------------------------- */
         @media (max-width: 768px) {
           .footer-divider {
