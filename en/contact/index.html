@@ -1,12 +1,12 @@
 <!--
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-17
-  *  Version: 0.3.0
+  *  Date: 2026-05-19
+  *  Version: 0.0.0
   ****************************************************
 -->
 <!DOCTYPE html>
-<html lang="de" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,7 +42,132 @@
 <body>
 
     <!-- :::::::::::::::::::::::::: STRUCTURED DATA (JSON-LD) :::::::::::::::::::::::::: -->
-
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "WebSite",
+                    "@id": "https://arminsilatani.com/#website",
+                    "url": "https://arminsilatani.com/",
+                    "name": "آرمین سیلاطانی | Armin Silatani",
+                    "description": "طراحی سایت، خدمات سئو حرفه‌ای و تبلیغات گوگل ادز — ارائه توسط آرمین سیلاطانی. مشاوره رایگان",
+                    "publisher": {
+                        "@id": "https://arminsilatani.com/#person"
+                    },
+                    "inLanguage": "fa"
+                },
+                {
+                    "@type": "Person",
+                    "@id": "https://arminsilatani.com/#person",
+                    "name": "آرمین سیلاطانی",
+                    "alternateName": "Armin Silatani",
+                    "jobTitle": "Digital Marketing Specialist",
+                    "image": "https://arminsilatani.com/assets/images/favicon.png",
+                    "url": "https://arminsilatani.com/",
+                    "email": "contact@arminsilatani.com",
+                    "telephone": "+989125759466",
+                    "sameAs": [
+                        "https://www.linkedin.com/in/arminsilatani/",
+                        "https://github.com/ArminSilatani",
+                        "https://www.instagram.com/arminsilatani",
+                        "https://t.me/ArminSilatani",
+                        "https://wa.me/+989125759466"
+                    ],
+                    "contactPoint": {
+                        "@type": "ContactPoint",
+                        "telephone": "+989125759466",
+                        "contactType": "customer service",
+                        "email": "contact@arminsilatani.com",
+                        "availableLanguage": ["Persian", "English"]
+                    }
+                },
+                {
+                    "@type": ["ContactPage", "FAQPage"],
+                    "@id": "https://arminsilatani.com/contact/#webpage",
+                    "url": "https://arminsilatani.com/contact/",
+                    "name": "تماس با من - آرمین سیلاطانی",
+                    "isPartOf": {
+                        "@id": "https://arminsilatani.com/#website"
+                    },
+                    "about": {
+                        "@id": "https://arminsilatani.com/#person"
+                    },
+                    "breadcrumb": {
+                        "@id": "https://arminsilatani.com/contact/#breadcrumb"
+                    },
+                    "inLanguage": "fa",
+                    "sameAs": [
+                        "https://arminsilatani.com/en/contact/",
+                        "https://arminsilatani.com/ar/contact/",
+                        "https://arminsilatani.com/tr/contact/",
+                        "https://arminsilatani.com/de/contact/",
+                        "https://arminsilatani.com/it/contact/"
+                    ],
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "چطور می‌تونیم پروژه‌مون رو شروع کنیم؟",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "بعد از اینکه از طریق فرم یا پیام‌رسان‌ها باهام در ارتباط بودید و اطلاعات اولیه رو گرفتیم، یک جلسه کوتاه آنلاین ست می‌کنیم تا نیازها رو دقیق‌تر بررسی کنیم."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "هزینه انجام پروژه‌ها چقدره؟",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "هزینه بستگی به ابعاد پروژه و نیازهای شما داره. بعد از صحبت‌های اولیه، یک پیش‌فاکتور دقیق براتون ارسال میشه."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "چقدر طول میکشه تا پروژه‌ام آماده بشه؟",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "زمان انجام کار هم کاملاً بستگی به پیچیدگی پروژه داره. معمولاً بین ۲ تا ۴ هفته زمان می‌بره، اما زمان دقیق رو تو پروپوزال بهتون اعلام می‌کنم."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "آیا بعد از اتمام پروژه پشتیبانی هم دارید؟",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "بله حتماً! همه پروژه‌ها دارای یک ماه پشتیبانی رایگان هستند و بعد از اون می‌تونیم قرارداد پشتیبانی بلندمدت داشته باشیم."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "شرایط پرداخت به چه صورته؟",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "پرداخت‌ها معمولاً در دو یا سه مرحله انجام میشه؛ ۵۰٪ پیش‌پرداخت برای شروع کار و مابقی براساس پیشرفت پروژه."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "@id": "https://arminsilatani.com/contact/#breadcrumb",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "خانه",
+                            "item": "https://arminsilatani.com/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "تماس با من",
+                            "item": "https://arminsilatani.com/contact/"
+                        }
+                    ]
+                }
+            ]
+        }
+    </script>
 
     <!-- =========================== CONTACT PAGE ============================ -->
 
@@ -56,7 +181,7 @@
             <div class="hero-container">
                 <language-component></language-component>
                 <div class="hero-title">
-                    <h1>Kontakt</h1>
+                    <h1>Contact Me</h1>
                 </div>
             </div>
 
@@ -93,16 +218,16 @@
                             <img src="/assets/images/arminsilatani/contact/FeaturedImage.webp" alt="تصویر شاخص تماس" class="contact-info__image">
                         </div>
                         <div class="contact-info__card">
-                            <div class="contact-info__label">E-Mail</div>
+                            <div class="contact-info__label">Email</div>
                             <a href="mailto:hello@example.com" class="contact-info__value">contact@arminsilatani.com</a>
                         </div>
                         <div class="contact-info__card">
-                            <div class="contact-info__label">Telefon / Telegram / WhatsApp</div>
+                            <div class="contact-info__label">Phone / Telegram / WhatsApp</div>
                             <a href="tel:+989123456789" class="contact-info__value">+989125759466</a>
                         </div>
                         <div class="contact-info__card">
-                            <div class="contact-info__label">Antwortzeit</div>
-                            <span class="contact-info__value">In der Regel innerhalb von 2 bis 24 Stunden</span>
+                            <div class="contact-info__label">Response Time</div>
+                            <span class="contact-info__value">Usually within 2–24 hours</span>
                         </div>
                         <div class="social-dots">
                             <a href="https://t.me/ArminSilatani" class="social-dot" title="تلگرام" aria-label="تلگرام">
@@ -143,22 +268,22 @@
                     <div class="contact-form-wrapper">
                         <form id="contactForm" novalidate>
                             <div class="form-group">
-                                <label for="name">Ihr Name</label>
-                                <input type="text" id="name" placeholder="z. B. Angela Merkel" required>
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" placeholder="e.g. Jon Snow" required>
                             </div>
                             <div class="form-group">
-                                <label for="email">E-Mail</label>
+                                <label for="email">Email</label>
                                 <input type="email" id="email" placeholder="hello@example.com" required>
                             </div>
                             <div class="form-group">
-                                <label for="subject">Betreff</label>
-                                <input type="text" id="subject" placeholder="Webdesign, Branding, Beratung ...">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" placeholder="Website design, branding, consultation…">
                             </div>
                             <div class="form-group">
-                                <label for="message">Ihre Nachricht</label>
-                                <textarea id="message" placeholder="Erzählen Sie mir von Ihrem Projekt: Budget, Deadline und alles, was Sie für wichtig halten." required></textarea>
+                                <label for="message">Your Message</label>
+                                <textarea id="message" placeholder="Tell me about your project… budget, deadline, and anything else you think is important." required></textarea>
                             </div>
-                            <button type="submit" class="btn-dark contact-submit-btn" id="submitBtn">Nachricht senden</button>
+                            <button type="submit" class="btn-dark contact-submit-btn" id="submitBtn">Send Message</button>
                         </form>
                     </div>
                 </div>
@@ -168,94 +293,94 @@
         <!-- ------------------------- PROCESS STEPS ------------------------- -->
         <section class="section" id="process">
             <div class="container-1080">
-                <span class="section-eyebrow">So arbeiten wir zusammen</span>
-                <h2 class="section-title">Wie wir zusammenarbeiten</h2>
-                <p class="section-subtitle">Ein klarer, einfacher Weg – vom ersten Kontakt bis zur finalen Lieferung</p>
+                <span class="section-eyebrow">The Process</span>
+                <h2 class="section-title">How We Work Together</h2>
+                <p class="section-subtitle">A clear, straightforward path from first contact to final delivery</p>
             </div>
             <div class="container-1300">
                 <div class="process-grid" id="processGrid">
 
                     <article class="process-box is-open">
                         <div class="process-box__meta">
-                            <span class="process-box__step">Erstens</span>
-                            <span class="process-box__vtitle">Erstgespräch</span>
+                            <span class="process-box__step">First</span>
+                            <span class="process-box__vtitle">Initial Conversation</span>
                         </div>
                         <div class="process-box__media">
                             <img src="/assets/images/arminsilatani/contact/ProcessFirst.webp" alt="گفتگوی اولیه">
                         </div>
                         <div class="process-box__content">
-                            <h3 class="process-box__title">Erstgespräch</h3>
-                            <p class="process-box__desc">Wir sprechen miteinander, lernen Ihre Anforderungen und Projektziele kennen und besprechen erste Ideen.</p>
+                            <h3 class="process-box__title">Initial Conversation</h3>
+                            <p class="process-box__desc">We talk, understand your project needs and goals, and explore initial ideas.</p>
                         </div>
                     </article>
 
                     <article class="process-box">
                         <div class="process-box__meta">
-                            <span class="process-box__step">Zweitens</span>
-                            <span class="process-box__vtitle">Briefing</span>
+                            <span class="process-box__step">Second</span>
+                            <span class="process-box__vtitle">Brief Gathering</span>
                         </div>
                         <div class="process-box__media">
                             <img src="/assets/images/arminsilatani/contact/ProcessSecond.webp" alt="جمع‌آوری بریف">
                         </div>
                         <div class="process-box__content">
-                            <h3 class="process-box__title">Briefing</h3>
-                            <p class="process-box__desc">Leistungsumfang, Zielgruppe, Wettbewerber, Referenzbeispiele und Einschränkungen werden definiert und die Briefing-Checkliste wird gemeinsam ausgefüllt.</p>
+                            <h3 class="process-box__title">Brief Gathering</h3>
+                            <p class="process-box__desc">Scope, audience, competitors, references, and constraints are defined, and the brief checklist is completed.</p>
                         </div>
                     </article>
 
                     <article class="process-box">
                         <div class="process-box__meta">
-                            <span class="process-box__step">Drittens</span>
-                            <span class="process-box__vtitle">Angebot & Zeitplan</span>
+                            <span class="process-box__step">Third</span>
+                            <span class="process-box__vtitle">Proposal & Timeline</span>
                         </div>
                         <div class="process-box__media">
                             <img src="/assets/images/arminsilatani/contact/ProcessThird.webp" alt="پروپوزال و زمان‌بندی">
                         </div>
                         <div class="process-box__content">
-                            <h3 class="process-box__title">Angebot & Zeitplan</h3>
-                            <p class="process-box__desc">Sie erhalten ein transparentes Angebot mit Scope, Deadlines, Lieferumfang und Kosten. Nach Ihrer Freigabe starten wir die Umsetzung.</p>
+                            <h3 class="process-box__title">Proposal & Timeline</h3>
+                            <p class="process-box__desc">A clear proposal including scope, deadlines, deliverables, and cost is sent; once approved, we move into execution.</p>
                         </div>
                     </article>
 
                     <article class="process-box">
                         <div class="process-box__meta">
-                            <span class="process-box__step">Viertens</span>
-                            <span class="process-box__vtitle">Vertrag & Anzahlung</span>
+                            <span class="process-box__step">Fourth</span>
+                            <span class="process-box__vtitle">Contract & Deposit</span>
                         </div>
                         <div class="process-box__media">
                             <img src="/assets/images/arminsilatani/contact/ProcessFourth.webp" alt="قرارداد و پیش‌پرداخت">
                         </div>
                         <div class="process-box__content">
-                            <h3 class="process-box__title">Vertrag & Anzahlung</h3>
-                            <p class="process-box__desc">Konditionen, Nutzungsrechte, Änderungsumfang und Zeitplan werden im Vertrag festgehalten. Mit der Anzahlung beginnt die Projektarbeit.</p>
+                            <h3 class="process-box__title">Contract & Deposit</h3>
+                            <p class="process-box__desc">Terms, ownership, revision scope, and timeline are documented in the contract, and the project kicks off with a deposit.</p>
                         </div>
                     </article>
 
                     <article class="process-box">
                         <div class="process-box__meta">
-                            <span class="process-box__step">Fünftens</span>
-                            <span class="process-box__vtitle">Design/Entwicklung & Feedback</span>
+                            <span class="process-box__step">Fifth</span>
+                            <span class="process-box__vtitle">Design/Development & Feedback</span>
                         </div>
                         <div class="process-box__media">
                             <img src="/assets/images/arminsilatani/contact/ProcessFifth.webp" alt="طراحی/توسعه و بازخورد">
                         </div>
                         <div class="process-box__content">
-                            <h3 class="process-box__title">Design/Entwicklung</h3>
-                            <p class="process-box__desc">Die Arbeit erfolgt modular. Sie sehen regelmäßig Demos, und Feedback wird zügig eingearbeitet – bis das Ergebnis perfekt passt.</p>
+                            <h3 class="process-box__title">Design/Development</h3>
+                            <p class="process-box__desc">Work progresses in modules; you see regular demos, and feedback is quickly implemented to reach the ideal outcome.</p>
                         </div>
                     </article>
 
                     <article class="process-box">
                         <div class="process-box__meta">
-                            <span class="process-box__step">Sechstens</span>
-                            <span class="process-box__vtitle">Finale Lieferung</span>
+                            <span class="process-box__step">Sixth</span>
+                            <span class="process-box__vtitle">Final Delivery</span>
                         </div>
                         <div class="process-box__media">
                             <img src="/assets/images/arminsilatani/contact/ProcessSixth.webp" alt="تحویل نهایی و پشتیبانی">
                         </div>
                         <div class="process-box__content">
-                            <h3 class="process-box__title">Finale Lieferung & Support</h3>
-                            <p class="process-box__desc">Finale Lieferung inklusive Dokumentation; bis zu 90 Tage kostenfreier Support für Stabilität und Ihre vollste Zufriedenheit.</p>
+                            <h3 class="process-box__title">Final Delivery & Support</h3>
+                            <p class="process-box__desc">Final delivery + documentation; up to 90 days of free support to ensure stability and complete satisfaction.</p>
                         </div>
                     </article>
 
@@ -266,9 +391,9 @@
         <!-- ------------------------- AVAILABILITY & TIMEZONE ------------------------- -->
         <section class="section" id="availability">
             <div class="container">
-                <span class="section-eyebrow">Status & Zeitzone</span>
-                <h2 class="section-title">Verfügbarkeit & Zeitzone</h2>
-                <p class="section-subtitle">Werfen Sie vor Ihrer Kontaktaufnahme gern einen Blick auf meinen aktuellen Status.</p>
+                <span class="section-eyebrow">Status & Availability</span>
+                <h2 class="section-title">Availability & Time Zone</h2>
+                <p class="section-subtitle">Check my status before reaching out</p>
 
                 <div class="avail-grid">
 
@@ -277,7 +402,7 @@
                             <span class="status-dot" id="statusDot"></span>
                             <span class="status-text" id="statusText">در دسترس برای پروژه‌های جدید</span>
                         </div>
-                        <p class="status-detail">Kapazität: 2 freie Projektplätze in diesem Monat</p>
+                        <p class="status-detail">Capacity: 2 project slots available this month</p>
 
                         <div class="mini-week-wrapper" id="miniWeekWrapper">
                             <div class="mini-week" id="miniWeek">
@@ -285,15 +410,15 @@
                         </div>
 
                         <div class="legend-row">
-                            <span class="legend-item"><span class="legend-dot legend-dot--green"></span> Verfügbar</span>
-                            <span class="legend-item"><span class="legend-dot legend-dot--yellow"></span> Wochenende/Feiertag</span>
-                            <span class="legend-item"><span class="legend-dot legend-dot--red"></span> Reserviert</span>
+                            <span class="legend-item"><span class="legend-dot legend-dot--green"></span> Available</span>
+                            <span class="legend-item"><span class="legend-dot legend-dot--yellow"></span> Off/Weekend</span>
+                            <span class="legend-item"><span class="legend-dot legend-dot--red"></span> Booked</span>
                         </div>
                     </div>
 
                     <div class="avail-card">
                         <div class="avail-card__header">
-                            <span class="status-text">Ortszeit</span>
+                            <span class="status-text">Time Zone</span>
                         </div>
                         <div class="timezone-display">
                             <div class="timezone-clock" id="liveClock">--:--</div>
@@ -301,7 +426,7 @@
                             <span class="timezone-offset">UTC +۳:۳۰</span>
                         </div>
                         <p class="status-detail" style="text-align:center;margin-top:12px;">
-                            Arbeitszeiten: 9–17 Uhr (IRST)
+                            Working hours: 9 AM – 5 PM (IRST)
                         </p>
                     </div>
                 </div>
@@ -311,53 +436,53 @@
         <!-- ------------------------- FAQ ACCORDION ------------------------- -->
         <section class="section" id="faq">
             <div class="container">
-                <span class="section-eyebrow">Häufig gestellte Fragen</span>
-                <h2 class="section-title">Alles, was Sie vielleicht fragen möchten</h2>
-                <p class="section-subtitle">Antworten auf die häufigsten Fragen finden Sie hier.</p>
+                <span class="section-eyebrow">Frequently Asked Questions</span>
+                <h2 class="section-title">Everything you might want to know</h2>
+                <p class="section-subtitle">Common questions answered here</p>
                 <div class="faq-list">
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
-                            <span>Wie lange dauert es, bis Sie auf meine Nachricht antworten?</span>
+                            <span>How long does it take for you to reply to my message?</span>
                             <span class="faq-icon">+</span>
                         </button>
                         <div class="faq-answer-wrapper">
-                            <div class="faq-answer">Sie bekommen innerhalb von 2 bis 24 Stunden eine Antwort von mir. Meistens deutlich schneller – nur bei hohem Arbeitsaufkommen kann es mal etwas länger dauern. Mir ist ein schneller, präziser Austausch wichtig, denn ich weiß, Ihre Zeit ist wertvoll.</div>
+                            <div class="faq-answer">I’ll get back to you within 2–24 hours. Usually much sooner, but sometimes workload picks up. It’s important to me to stay responsive and accurate, because I know your time is valuable.</div>
                         </div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
-                            <span>Wie erreiche ich Sie am besten?</span>
+                            <span>What’s the best way to reach you?</span>
                             <span class="faq-icon">+</span>
                         </button>
                         <div class="faq-answer-wrapper">
-                            <div class="faq-answer">Da bin ich ganz offen: Nutzen Sie das Formular auf dieser Seite, schreiben Sie eine E-Mail, rufen Sie an oder kontaktieren Sie mich per Telegram oder WhatsApp. Ganz so, wie es für Sie am einfachsten ist.</div>
+                            <div class="faq-answer">No restrictions. Fill out the form on this page, send an email, call, or message me on Telegram or WhatsApp—whatever works best for you.</div>
                         </div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
-                            <span>Zu welchen Zeiten sind Sie für die Kommunikation erreichbar?</span>
+                            <span>What are your working hours for responding?</span>
                             <span class="faq-icon">+</span>
                         </button>
                         <div class="faq-answer-wrapper">
-                            <div class="faq-answer">An Werktagen beantworte ich Nachrichten und Anrufe von 9 bis 17 Uhr. Wenn Sie sich außerhalb Irans befinden, orientieren Sie sich bitte an der iranischen Ortszeit, die auf dieser Seite angezeigt wird.</div>
+                            <div class="faq-answer">I respond to messages and calls weekdays from 9 AM to 5 PM. If you’re outside Iran, please note the local Iran time displayed on this page.</div>
                         </div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
-                            <span>Muss ich meine Preisanfrage über diese Seite stellen?</span>
+                            <span>Should I use this page to request a quote for my project?</span>
                             <span class="faq-icon">+</span>
                         </button>
                         <div class="faq-answer-wrapper">
-                            <div class="faq-answer">Alle Preise sind transparent und vollständig auf meiner Seite „Preise“ aufgeführt. Schauen Sie am besten zuerst dort vorbei. Falls Sie danach ein individuelles Angebot wünschen, schicken Sie mir einfach von dieser Seite aus eine Nachricht.</div>
+                            <div class="faq-answer">I’ve listed clear, detailed pricing on the “Pricing” page. Check there first, then if you need a custom quote, send a message from this page.</div>
                         </div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
-                            <span>Was passiert, nachdem ich eine Nachricht oder das Formular abgeschickt habe?</span>
+                            <span>What happens after I send a message or form?</span>
                             <span class="faq-icon">+</span>
                         </button>
                         <div class="faq-answer-wrapper">
-                            <div class="faq-answer">Ich sichte Ihre Anfrage und vereinbare ein kurzes Gespräch mit Ihnen, um Ihren Bedarf wirklich zu verstehen. Transparenz steht für mich von Anfang an an erster Stelle.</div>
+                            <div class="faq-answer">I’ll review your request and schedule a quick conversation to understand your needs precisely. Transparency from the very first step is crucial.</div>
                         </div>
                     </div>
                 </div>
@@ -374,13 +499,13 @@
     <script src="/assets/css/components/blurup.js"></script>
     <script src="../language-component.js"></script>
     <script src="/assets/css/components/breadcrumb.js"></script>
-    <script src="../../contact/calendar.js"></script>
+    <script src="/contact/calendar.js"></script>
     <script src="/assets/css/components/faq.js"></script>
     <script type="module" src="../footer-component.js"></script>
 
     <!-- :::::::::::::::::::::::::: PAGE SCRIPTS :::::::::::::::::::::::::: -->
     <script>
-        
+
         (function () {
 
             /* ----------------- Live Clock (IRST) ----------------- */
@@ -427,27 +552,27 @@
                         submitBtn.style.animation = "none";
                         submitBtn.offsetHeight; // Force reflow
                         submitBtn.style.animation = "shake 0.5s ease";
-                        submitBtn.textContent = "Bitte füllen Sie die Pflichtfelder aus";
+                        submitBtn.textContent = "Please fill in the required fields";
                         setTimeout(function () {
-                            submitBtn.textContent = "Nachricht senden";
+                            submitBtn.textContent = "Send Message";
                             submitBtn.style.animation = "";
                         }, 2000);
                         return;
                     }
 
                     // Simulate form submission
-                    submitBtn.textContent = "Wird gesendet…";
+                    submitBtn.textContent = "Sending…";
                     submitBtn.disabled = true;
                     submitBtn.style.opacity = "0.8";
 
                     setTimeout(function () {
-                        submitBtn.textContent = "✓ Ihre Nachricht wurde erfolgreich gesendet";
+                        submitBtn.textContent = "✓ Message sent successfully";
                         submitBtn.classList.add("submit-btn--sent");
                         submitBtn.style.opacity = "1";
                         form.reset();
 
                         setTimeout(function () {
-                            submitBtn.textContent = "Nachricht senden";
+                            submitBtn.textContent = "Send Message";
                             submitBtn.classList.remove("submit-btn--sent");
                             submitBtn.disabled = false;
                         }, 3500);

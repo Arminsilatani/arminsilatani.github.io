@@ -1,7 +1,7 @@
 <!--
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-17
+  *  Date: 2026-05-19
   *  Version: 0.3.0
   ****************************************************
 -->
@@ -269,7 +269,7 @@
                         <form id="contactForm" novalidate>
                             <div class="form-group">
                                 <label for="name">نام شما</label>
-                                <input type="text" id="name" placeholder="مثلاً: آریا محمدی" required>
+                                <input type="text" id="name" placeholder="مثلاً علی دایی" required>
                             </div>
                             <div class="form-group">
                                 <label for="email">ایمیل</label>
@@ -397,7 +397,6 @@
 
                 <div class="avail-grid">
 
-                    <!-- کارت اول: وضعیت در دسترس بودن + تقویم ۶۰ روزه -->
                     <div class="avail-card">
                         <div class="avail-card__header">
                             <span class="status-dot" id="statusDot"></span>
@@ -405,10 +404,8 @@
                         </div>
                         <p class="status-detail">ظرفیت: ۲ جای خالی برای پروژه در این ماه</p>
 
-                        <!-- تقویم اسلایدر درگی بدون فلش -->
                         <div class="mini-week-wrapper" id="miniWeekWrapper">
                             <div class="mini-week" id="miniWeek">
-                                <!-- روزها با JS پر می‌شوند -->
                             </div>
                         </div>
 
@@ -419,7 +416,6 @@
                         </div>
                     </div>
 
-                    <!-- کارت دوم: تایم‌زون -->
                     <div class="avail-card">
                         <div class="avail-card__header">
                             <span class="status-text">موقعیت زمانی</span>
@@ -510,14 +506,6 @@
     <!-- :::::::::::::::::::::::::: PAGE SCRIPTS :::::::::::::::::::::::::: -->
     <script>
 
-        /* ------------------------------------------------------------------
-           MAIN INTERACTIVE FEATURES
-           - Live clock (IRST)
-           - Mini week calendar
-           - Availability status indicator
-           - Contact form validation & submission
-           - Process box hover/click expansion
-           ------------------------------------------------------------------ */
         (function () {
 
             /* ----------------- Live Clock (IRST) ----------------- */
