@@ -256,7 +256,7 @@ class HeaderComponent extends HTMLElement {constructor() {
     menu.className = "sidebar";
     menu.innerHTML = `
       <a href="/en/">Home</a>
-      <a href="#/">Services</a>
+      <a href="/en/services/">Services</a>
       <a href="/en/about/">About Me</a>
       <a href="/en/contact/">Contact Me</a>
       <a href="/en/tariff/">Pricing</a>

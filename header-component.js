@@ -260,7 +260,7 @@ class HeaderComponent extends HTMLElement {
     menu.className = "sidebar";
     menu.innerHTML = `
       <a href="/">صفحه اصلی</a>
-      <a href="/#">خدمات</a>
+      <a href="/services/">خدمات</a>
       <a href="/about/">درباره من</a>
       <a href="/contact/">تماس با من</a>
       <a href="/tariff/">تعرفه‌ها</a>
