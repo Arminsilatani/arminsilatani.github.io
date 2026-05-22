@@ -345,7 +345,7 @@ class FooterComponent extends HTMLElement {
         </footer>
 
         <div class="copyright">
-          <p class="copyright-text">تمام حقوق محفوظ است.. ولی حال پیگیری ندارم، لطفاً خودتون رعایت کنید.</p>
+          <p class="copyright-text">© جميع الحقوق محفوظة.. بس مالي خلق للمتابعة، أمانةً انتبهوا لنفسكم.</p>
         </div>
       </div>
     `;
