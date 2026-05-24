@@ -1,8 +1,8 @@
 <!--
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-17
-  *  Version: 0.2.0
+  *  Date: 2026-05-24
+  *  Version: 0.2.1
   ****************************************************
 -->
 <!-- =========================== ABOUT PAGE ============================ -->
@@ -10,21 +10,24 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <!-- ::::::::::::::::::::::::::::::::::::::: META TAGS ::::::::::::::::::::::::::::::::::::::: -->
+
+    <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: FAVICON & STYLES ::::::::::::::::::::::::::::::::::::::: -->
-    <link rel="icon" type="image/png" href="../../assets/images/favicon.png">
-    <link rel="stylesheet" href="../../assets/css/main.css">
-
-    <!-- ::::::::::::::::::::::::::::::::::::::: SEO META ::::::::::::::::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: SEO META :::::::::::::::::::::::::: -->
     <title>About me and professional journey | Armin Silatani</title>
-    <meta name="description"
-        content="You can read a detailed timeline covering personal background, transitions across European cities, and the shift towards digital marketing services.">
+    <meta name="description" content="You can read a detailed timeline covering personal background, transitions across European cities, and the shift towards digital marketing services.">
     <meta name="robots" content="noindex, nofollow">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: OPEN GRAPH ::::::::::::::::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icon-32.png">
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
     <meta property="og:title" content="Personal background and career path Armin Silatani">
     <meta property="og:description" content="Summary of career milestones from restaurant management to specialized SEO services.">
     <meta property="og:type" content="website">
@@ -33,10 +36,14 @@
     <meta property="og:image" content="https://arminsilatani.com/assets/images/arminsilatani/about/FeaturedImage.webp">
     <meta property="og:image:alt" content="organizing books on a home office desk with a small dog">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: CANONICAL ::::::::::::::::::::::::::::::::::::::: -->
-    <link rel="canonical" href="https://arminsilatani.com/en/about/">
+    <!-- :::::::::::::::::::::::::: TWITTER CARD :::::::::::::::::::::::::: -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Personal background and career path Armin Silatani">
+    <meta name="twitter:description" content="Summary of career milestones from restaurant management to specialized SEO services.">
+    <meta name="twitter:image" content="https://arminsilatani.com/assets/images/arminsilatani/about/FeaturedImage.webp">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: HREFLANG ::::::::::::::::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: CANONICAL & HREFLANG :::::::::::::::::::::::::: -->
+    <link rel="canonical" href="https://arminsilatani.com/en/about/">
     <link rel="alternate" hreflang="fa" href="https://arminsilatani.com/about/">
     <link rel="alternate" hreflang="en" href="https://arminsilatani.com/en/about/">
     <link rel="alternate" hreflang="ar" href="https://arminsilatani.com/ar/about/">
@@ -45,115 +52,116 @@
     <link rel="alternate" hreflang="it" href="https://arminsilatani.com/it/about/">
     <link rel="alternate" hreflang="x-default" href="https://arminsilatani.com/en/about/">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: STRUCTURED DATA ::::::::::::::::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: SCHEMA :::::::::::::::::::::::::: -->
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@graph": [
-                {
-                    "@type": "WebSite",
-                    "@id": "https://arminsilatani.com/en/#website",
-                    "url": "https://arminsilatani.com/en/",
-                    "name": "Armin Silatani - Digital Marketing Specialist",
-                    "description": "Website design, professional SEO services, and Google Ads advertising — provided by Armin Silatani. Free consultation",
-                    "inLanguage": "en-US",
-                    "publisher": {
-                        "@id": "https://arminsilatani.com/en/#person"
-                    },
-                    "potentialAction": {
-                        "@type": "SearchAction",
-                        "target": {
-                            "@type": "EntryPoint",
-                            "urlTemplate": "https://arminsilatani.com/en/search?q={search_term_string}"
-                        },
-                        "query-input": "required name=search_term_string"
-                    }
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://arminsilatani.com/en/#website",
+                "url": "https://arminsilatani.com/en/",
+                "name": "Armin Silatani - Digital Marketing Specialist",
+                "description": "Website design, professional SEO services, and Google Ads advertising — provided by Armin Silatani. Free consultation",
+                "inLanguage": "en-US",
+                "publisher": {
+                    "@id": "https://arminsilatani.com/en/#person"
                 },
-                {
-                    "@type": "AboutPage",
-                    "@id": "https://arminsilatani.com/en/about/#webpage",
-                    "url": "https://arminsilatani.com/en/about/",
-                    "name": "About Me - Armin Silatani",
-                    "description": "Get to know Armin Silatani, a digital marketing specialist with experience in SEO, Google Ads, and web design",
-                    "inLanguage": "en-US",
-                    "isPartOf": {
-                        "@id": "https://arminsilatani.com/en/#website"
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "https://arminsilatani.com/en/search?q={search_term_string}"
                     },
-                    "about": {
-                        "@id": "https://arminsilatani.com/en/#person"
-                    },
-                    "primaryImageOfPage": {
-                        "@type": "ImageObject",
-                        "@id": "https://arminsilatani.com/en/about/#primaryimage",
-                        "url": "https://arminsilatani.com/assets/images/favicon.png",
-                        "contentUrl": "https://arminsilatani.com/assets/images/favicon.png"
-                    },
-                    "image": {
-                        "@id": "https://arminsilatani.com/en/about/#primaryimage"
-                    },
-                    "datePublished": "2024-04-10T00:00:00+03:30",
-                    "dateModified": "2026-05-03T00:00:00+03:30",
-                    "breadcrumb": {
-                        "@id": "https://arminsilatani.com/en/about/#breadcrumb"
-                    },
-                    "potentialAction": {
-                        "@type": "ReadAction",
-                        "target": ["https://arminsilatani.com/en/about/"]
-                    }
-                },
-                {
-                    "@type": "BreadcrumbList",
-                    "@id": "https://arminsilatani.com/en/about/#breadcrumb",
-                    "itemListElement": [
-                        {
-                            "@type": "ListItem",
-                            "position": 1,
-                            "name": "Home",
-                            "item": "https://arminsilatani.com/en/"
-                        },
-                        {
-                            "@type": "ListItem",
-                            "position": 2,
-                            "name": "About Me",
-                            "item": "https://arminsilatani.com/en/about/"
-                        }
-                    ]
-                },
-                {
-                    "@type": "Person",
-                    "@id": "https://arminsilatani.com/en/#person",
-                    "name": "Armin Silatani",
-                    "url": "https://arminsilatani.com/en/",
-                    "image": {
-                        "@type": "ImageObject",
-                        "url": "https://arminsilatani.com/assets/images/favicon.png",
-                        "contentUrl": "https://arminsilatani.com/assets/images/favicon.png"
-                    },
-                    "jobTitle": "Digital Marketing Specialist",
-                    "description": "Digital marketing specialist with expertise in SEO, Google Ads, and web design",
-                    "email": "contact@arminsilatani.com",
-                    "telephone": "+989125759466",
-                    "sameAs": [
-                        "https://www.linkedin.com/in/arminsilatani/",
-                        "https://github.com/arminsilatani",
-                        "https://www.instagram.com/arminsilatani/",
-                        "https://t.me/arminsilatani",
-                        "https://wa.me/989125759466"
-                    ],
-                    "knowsAbout": [
-                        "SEO",
-                        "Digital Marketing",
-                        "Google Ads",
-                        "Web Design",
-                        "Content Marketing"
-                    ],
-                    "mainEntityOfPage": {
-                        "@id": "https://arminsilatani.com/en/about/#webpage"
-                    }
+                    "query-input": "required name=search_term_string"
                 }
-            ]
-        }
+            },
+            {
+                "@type": "AboutPage",
+                "@id": "https://arminsilatani.com/en/about/#webpage",
+                "url": "https://arminsilatani.com/en/about/",
+                "name": "About Me - Armin Silatani",
+                "description": "Get to know Armin Silatani, a digital marketing specialist with experience in SEO, Google Ads, and web design",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                    "@id": "https://arminsilatani.com/en/#website"
+                },
+                "about": {
+                    "@id": "https://arminsilatani.com/en/#person"
+                },
+                "primaryImageOfPage": {
+                    "@type": "ImageObject",
+                    "@id": "https://arminsilatani.com/en/about/#primaryimage",
+                    "url": "https://arminsilatani.com/assets/images/favicon.png",
+                    "contentUrl": "https://arminsilatani.com/assets/images/favicon.png"
+                },
+                "image": {
+                    "@id": "https://arminsilatani.com/en/about/#primaryimage"
+                },
+                "datePublished": "2024-04-10T00:00:00+03:30",
+                "dateModified": "2026-05-03T00:00:00+03:30",
+                "breadcrumb": {
+                    "@id": "https://arminsilatani.com/en/about/#breadcrumb"
+                },
+                "potentialAction": {
+                    "@type": "ReadAction",
+                    "target": ["https://arminsilatani.com/en/about/"]
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://arminsilatani.com/en/about/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://arminsilatani.com/en/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "About Me",
+                        "item": "https://arminsilatani.com/en/about/"
+                    }
+                ]
+            },
+            {
+                "@type": "Person",
+                "@id": "https://arminsilatani.com/en/#person",
+                "name": "Armin Silatani",
+                "url": "https://arminsilatani.com/en/",
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "https://arminsilatani.com/assets/images/favicon.png",
+                    "contentUrl": "https://arminsilatani.com/assets/images/favicon.png"
+                },
+                "jobTitle": "Digital Marketing Specialist",
+                "description": "Digital marketing specialist with expertise in SEO, Google Ads, and web design",
+                "email": "contact@arminsilatani.com",
+                "telephone": "+989125759466",
+                "sameAs": [
+                    "https://www.linkedin.com/in/arminsilatani/",
+                    "https://github.com/arminsilatani",
+                    "https://www.instagram.com/arminsilatani/",
+                    "https://t.me/arminsilatani",
+                    "https://wa.me/989125759466"
+                ],
+                "knowsAbout": [
+                    "SEO",
+                    "Digital Marketing",
+                    "Google Ads",
+                    "Web Design",
+                    "Content Marketing"
+                ],
+                "mainEntityOfPage": {
+                    "@id": "https://arminsilatani.com/en/about/#webpage"
+                }
+            }
+        ]
+    }
     </script>
+
 </head>
 
 <body>
