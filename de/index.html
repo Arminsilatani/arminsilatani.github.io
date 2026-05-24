@@ -1,27 +1,31 @@
 <!--
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-14
-  *  Version: 1.2.0
+  *  Date: 2026-05-24
+  *  Version: 0.2.1
   ****************************************************
 -->
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
 <head>
-  <!-- ::::::::::::::::::::::::::::::::::::::: META TAGS ::::::::::::::::::::::::::::::::::::::: -->
+
+  <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ::::::::::::::::::::::::::::::::::::::: FAVICON & STYLES ::::::::::::::::::::::::::::::::::::::: -->
-  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
-  <link rel="stylesheet" href="../../assets/css/main.css">
-
-  <!-- ::::::::::::::::::::::::::::::::::::::: SEO META ::::::::::::::::::::::::::::::::::::::: -->
+  <!-- :::::::::::::::::::::::::: SEO META :::::::::::::::::::::::::: -->
   <title>Armin Silatani | Digital Marketing Experte</title>
   <meta name="description" content="Informationen über die professionellen Dienstleistungen zur Website-Entwicklung und die angewandten Methoden von Armin Silatani stehen bereit.">
   <meta name="robots" content="noindex, nofollow">
 
-  <!-- ::::::::::::::::::::::::::::::::::::::: OPEN GRAPH ::::::::::::::::::::::::::::::::::::::: -->
+  <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icon-32.png">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
   <meta property="og:title" content="Armin Silatani">
   <meta property="og:description" content="Die Fachkenntnisse und angebotenen Dienste von Armin Silatani.">
   <meta property="og:type" content="website">
@@ -30,10 +34,14 @@
   <meta property="og:image" content="https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp">
   <meta property="og:image:alt" content="Mann, der auf einem Sitzsack an einem Laptop arbeitet, neben ihm ein kleiner Hund.">
 
-  <!-- ::::::::::::::::::::::::::::::::::::::: CANONICAL ::::::::::::::::::::::::::::::::::::::: -->
-  <link rel="canonical" href="https://arminsilatani.com/de/">
+  <!-- :::::::::::::::::::::::::: TWITTER CARD :::::::::::::::::::::::::: -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Armin Silatani">
+  <meta name="twitter:description" content="Die Fachkenntnisse und angebotenen Dienste von Armin Silatani.">
+  <meta name="twitter:image" content="https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp">
 
-  <!-- ::::::::::::::::::::::::::::::::::::::: HREFLANG ::::::::::::::::::::::::::::::::::::::: -->
+  <!-- :::::::::::::::::::::::::: CANONICAL & HREFLANG :::::::::::::::::::::::::: -->
+  <link rel="canonical" href="https://arminsilatani.com/de/">
   <link rel="alternate" hreflang="fa" href="https://arminsilatani.com/">
   <link rel="alternate" hreflang="en" href="https://arminsilatani.com/en/">
   <link rel="alternate" hreflang="ar" href="https://arminsilatani.com/ar/">
@@ -42,146 +50,129 @@
   <link rel="alternate" hreflang="it" href="https://arminsilatani.com/it/">
   <link rel="alternate" hreflang="x-default" href="https://arminsilatani.com/en/">
 
-  <!-- ::::::::::::::::::::::::::::::::::::::: STRUCTURED DATA (combined) ::::::::::::::::::::::::::::::::::::::: -->
+  <!-- :::::::::::::::::::::::::: SCHEMA :::::::::::::::::::::::::: -->
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": "#website",
-          "url": "https://arminsilatani.com/de/",
-          "name": "Armin Silatani ⚡ Experte für digitales Marketing",
-          "description": "Armin Silatani ⚡ Experte für digitales Marketing",
-          "inLanguage": "en"
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "#website",
+        "url": "https://arminsilatani.com/de/",
+        "name": "Armin Silatani ⚡ Experte für digitales Marketing",
+        "description": "Armin Silatani ⚡ Experte für digitales Marketing",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "#homepage",
+        "url": "https://arminsilatani.com/de/",
+        "name": "Armin Silatani ⚡ Experte für digitales Marketing",
+        "isPartOf": { "@id": "#website" },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp",
+          "width": 1080,
+          "height": 1080
         },
-        {
-          "@type": "WebPage",
-          "@id": "#homepage",
-          "url": "https://arminsilatani.com/de/",
-          "name": "Armin Silatani ⚡ Experte für digitales Marketing",
-          "isPartOf": { "@id": "#website" },
-          "primaryImageOfPage": {
-            "@type": "ImageObject",
-            "url": "https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp",
-            "width": "1080",
-            "height": "1080"
+        "mainContentOfPage": { "@id": "#main-content" },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": "h1, .intro"
+        },
+        "significantLink": [
+          "https://arminsilatani.com/de/services/",
+          "https://arminsilatani.com/de/about/",
+          "https://arminsilatani.com/de/contact/",
+          "https://arminsilatani.com/de/blog/"
+        ],
+        "relatedLink": [
+          "https://arminsilatani.com/de/portfolio/",
+          "https://arminsilatani.com/de/tariff/"
+        ]
+      },
+      {
+        "@type": "WebPageElement",
+        "@id": "#main-content",
+        "cssSelector": "#main-content",
+        "description": "Über Armin Silatani, Experte für digitales Marketing"
+      },
+      {
+        "@type": "Person",
+        "@id": "#person",
+        "name": "Armin Silatani",
+        "jobTitle": "Experte für digitales Marketing",
+        "url": "https://arminsilatani.com/de/",
+        "image": "https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp",
+        "sameAs": [
+          "https://www.linkedin.com/in/arminsilatani/",
+          "https://github.com/Arminsilatani",
+          "https://www.instagram.com/arminsilatani"
+        ],
+        "description": "Armin Silatani, Webdesigner und SEO-Spezialist mit Erfahrung in der Gestaltung von E-Commerce-, Unternehmens- und persönlichen Websites.",
+        "knowsLanguage": ["fa", "en", "ar", "tr", "de", "it"]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "#professional-service",
+        "name": "Armin Silatani, Experte für digitales Marketing",
+        "url": "https://arminsilatani.com/de/",
+        "image": "https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp",
+        "telephone": "+989125759466",
+        "email": "contact@arminsilatani.com",
+        "areaServed": { "@type": "Country", "name": "Iran" },
+        "provider": { "@id": "#person" },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "Kundenservice",
+            "telephone": "+989125759466",
+            "availableLanguage": ["fa", "en", "ar", "tr", "de", "it"]
           },
-          "mainContentOfPage": { "@id": "#main-content" },
-          "speakable": {
-            "@type": "SpeakableSpecification",
-            "cssSelector": "h1, .intro"
-          },
-          "significantLink": [
-            "https://arminsilatani.com/de/services/",
-            "https://arminsilatani.com/de/about/",
-            "https://arminsilatani.com/de/contact/",
-            "https://arminsilatani.com/de/blog/"
-          ],
-          "relatedLink": [
-            "https://arminsilatani.com/de/portfolio/",
-            "https://arminsilatani.com/de/tariff/"
-          ]
+          {
+            "@type": "ContactPoint",
+            "contactType": "WhatsApp",
+            "url": "https://wa.me/+989125759466"
+          }
+        ],
+        "makesOffer": [
+          { "@type": "Offer", "itemOffered": { "@id": "#service-design" } },
+          { "@type": "Offer", "itemOffered": { "@id": "#service-seo" } }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "#service-design",
+        "name": "Individuelles Webdesign",
+        "provider": { "@id": "#professional-service" },
+        "description": "Gestaltung von responsiven, Unternehmens-, E-Commerce- und persönlichen Websites unter Verwendung der neuesten Technologien.",
+        "serviceType": "Webdesign"
+      },
+      {
+        "@type": "Service",
+        "@id": "#service-seo",
+        "name": "Suchmaschinenoptimierung (SEO)",
+        "provider": { "@id": "#professional-service" },
+        "description": "Keyword-Recherche, On-Page- und Off-Page-SEO und Verbesserung der Google-Rankings.",
+        "serviceType": "SEO"
+      },
+      {
+        "@type": "Review",
+        "itemReviewed": { "@id": "#professional-service" },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1"
         },
-        {
-          "@type": "WebPageElement",
-          "@id": "#main-content",
-          "cssSelector": "#main-content",
-          "description": "Über Armin Silatani, Experte für digitales Marketing"
-        },
-        {
-          "@type": "Person",
-          "@id": "#person",
-          "name": "Armin Silatani",
-          "jobTitle": "Experte für digitales Marketing",
-          "url": "https://arminsilatani.com/de/",
-          "image": "https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp",
-          "sameAs": [
-            "https://www.linkedin.com/in/arminsilatani/",
-            "https://github.com/Arminsilatani",
-            "https://www.instagram.com/arminsilatani"
-          ],
-          "description": "Armin Silatani, Webdesigner und SEO-Spezialist mit Erfahrung in der Gestaltung von E-Commerce-, Unternehmens- und persönlichen Websites.",
-          "knowsLanguage": ["fa", "en", "ar", "tr", "de", "it"]
-        },
-        {
-          "@type": "ProfessionalService",
-          "@id": "#professional-service",
-          "name": "Armin Silatani, Experte für digitales Marketing",
-          "url": "https://arminsilatani.com/de/",
-          "image": "https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp",
-          "telephone": "+989125759466",
-          "email": "contact@arminsilatani.com",
-          "areaServed": { "@type": "Country", "name": "Iran" },
-          "provider": { "@id": "#person" },
-          "contactPoint": [
-            {
-              "@type": "ContactPoint",
-              "contactType": "Kundenservice",
-              "telephone": "+989125759466",
-              "availableLanguage": ["fa", "en", "ar", "tr", "de", "it"]
-            },
-            {
-              "@type": "ContactPoint",
-              "contactType": "WhatsApp",
-              "url": "https://wa.me/+989125759466"
-            }
-          ],
-          "makesOffer": [
-            { "@type": "Offer", "itemOffered": { "@id": "#service-design" } },
-            { "@type": "Offer", "itemOffered": { "@id": "#service-seo" } }
-          ]
-        },
-        {
-          "@type": "Service",
-          "@id": "#service-design",
-          "name": "Individuelles Webdesign",
-          "provider": { "@id": "#professional-service" },
-          "description": "Gestaltung von responsiven, Unternehmens-, E-Commerce- und persönlichen Websites unter Verwendung der neuesten Technologien.",
-          "serviceType": "Webdesign"
-        },
-        {
-          "@type": "Service",
-          "@id": "#service-seo",
-          "name": "Suchmaschinenoptimierung (SEO)",
-          "provider": { "@id": "#professional-service" },
-          "description": "Keyword-Recherche, On-Page- und Off-Page-SEO und Verbesserung der Google-Rankings.",
-          "serviceType": "SEO"
-        },
-        {
-          "@type": "Review",
-          "itemReviewed": { "@id": "#professional-service" },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "author": { "@type": "Person", "name": "Mahmoud Safari" },
-          "datePublished": "2023-11-15",
-          "reviewBody": "Ich hatte die Website- und SEO-Betreuung meines Unternehmens längere Zeit an eine vermeintlich große Agentur ausgelagert – das hat mich nur Zeit gekostet. Seit ich mit Herrn Silatani am SEO-Projekt arbeite, hat sich die Situation komplett gedreht."
-        }
-      ]
-    }
+        "author": { "@type": "Person", "name": "Mahmoud Safari" },
+        "datePublished": "2023-11-15",
+        "reviewBody": "Ich hatte die Website- und SEO-Betreuung meines Unternehmens längere Zeit an eine vermeintlich große Agentur ausgelagert – das hat mich nur Zeit gekostet. Seit ich mit Herrn Silatani am SEO-Projekt arbeite, hat sich die Situation komplett gedreht."
+      }
+    ]
+  }
   </script>
 
-  <!-- ::::::::::::::::::::::::::::::::::::::: STRUCTURED DATA - PERSON ::::::::::::::::::::::::::::::::::::::: -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Armin Silatani",
-      "jobTitle": "Digital Marketing Experte",
-      "url": "https://arminsilatani.com/de/",
-      "sameAs": [
-        "https://www.linkedin.com/in/arminsilatani/",
-        "https://github.com/Arminsilatani",
-        "https://www.instagram.com/arminsilatani",
-        "https://wa.me/+989125759466",
-        "https://t.me/ArminSilatani"
-      ]
-    }
-  </script>
 </head>
 
 <body>

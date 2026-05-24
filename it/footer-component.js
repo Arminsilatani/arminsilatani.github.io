@@ -349,7 +349,7 @@ class FooterComponent extends HTMLElement {
         </footer>
 
         <div class="copyright">
-          <p class="copyright-text">Alle Rechte vorbehalten … aber ich habe ehrlich gesagt keine Lust, das zu verfolgen. Bitte seid einfach fair.</p>
+          <p class="copyright-text">© Tutti i diritti riservati... ma non ho sbatti di far causa, quindi fate i bravi.</p>
         </div>
       </div>
     `;

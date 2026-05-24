@@ -1,8 +1,8 @@
 /*
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-14
-  *  Version: 1.2.2
+  *  Date: 2026-05-23
+  *  Version: 1.2.1
   ****************************************************
 */
 
@@ -345,7 +345,7 @@ class FooterComponent extends HTMLElement {
         </footer>
 
         <div class="copyright">
-          <p class="copyright-text">© جميع الحقوق محفوظة.. بس مالي خلق للمتابعة، أمانةً انتبهوا لنفسكم.</p>
+          <p class="copyright-text">© الحقوق كلها لي... بس أنا كسول وما بطارد، لو سمحتوا خليكم بأخلاقكم.</p>
         </div>
       </div>
     `;

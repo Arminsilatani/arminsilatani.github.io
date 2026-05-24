@@ -1,24 +1,28 @@
 <!--
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-20
-  *  Version: 0.3.0
+  *  Date: 2026-05-24
+  *  Version: 0.3.1
   ****************************************************
 -->
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
 <head>
+    <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
-    <link rel="icon" type="image/png" href="../../assets/images/favicon.png">
-    <link rel="stylesheet" href="../../assets/css/main.css">
 
     <!-- :::::::::::::::::::::::::: SEO META :::::::::::::::::::::::::: -->
     <title>Kontakt und aktuelle Verfügbarkeit | Armin Silatani</title>
     <meta name="description" content="Diese Seite stellt Ihnen alle nötigen Informationen zur Kontaktaufnahme bereit und zeigt den zeitlichen Ablauf sowie die Phasen der Projektentwicklung.">
     <meta name="robots" content="noindex, nofollow">
+
+    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icon-32.png">
+    <link rel="stylesheet" href="../../assets/css/main.css">
 
     <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
     <meta property="og:title" content="Kontaktseite und Arbeitsprozess Armin Silatani">
@@ -28,6 +32,12 @@
     <meta property="og:locale" content="de_DE">
     <meta property="og:image" content="https://arminsilatani.com/assets/images/arminsilatani/contact/FeaturedImage.webp">
     <meta property="og:image:alt" content="Mann mit blauer Kappe telefoniert mit kleinem Hund im Pullover">
+
+    <!-- :::::::::::::::::::::::::: TWITTER CARD :::::::::::::::::::::::::: -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kontaktseite und Arbeitsprozess Armin Silatani">
+    <meta name="twitter:description" content="Auf dieser Seite sind die Kontaktdaten und der Projektverlauf aufgeführt.">
+    <meta name="twitter:image" content="https://arminsilatani.com/assets/images/arminsilatani/contact/FeaturedImage.webp">
 
     <!-- :::::::::::::::::::::::::: CANONICAL & HREFLANG :::::::::::::::::::::::::: -->
     <link rel="canonical" href="https://arminsilatani.com/de/contact/">
@@ -39,129 +49,129 @@
     <link rel="alternate" hreflang="it" href="https://arminsilatani.com/it/contact/">
     <link rel="alternate" hreflang="x-default" href="https://arminsilatani.com/en/contact/">
 
-    <!-- :::::::::::::::::::::::::: STRUCTURED DATA (JSON-LD) :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: SCHEMA :::::::::::::::::::::::::: -->
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
     {
-      "@type": "Person",
-      "@id": "https://arminsilatani.com/#person",
-      "name": "Armin Silatani",
-      "jobTitle": "Digital Marketing Specialist",
-      "url": "https://arminsilatani.com/",
-      "image": {
-        "@type": "ImageObject",
-        "url": "https://arminsilatani.com/images/favicon.png"
-      },
-      "email": "contact@arminsilatani.com",
-      "telephone": "+989125759466",
-      "sameAs": [
-        "https://www.linkedin.com/in/arminsilatani/",
-        "https://github.com/Arminsilatani",
-        "https://www.instagram.com/arminsilatani",
-        "https://t.me/ArminSilatani",
-        "https://wa.me/+989125759466"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+989125759466",
-        "contactType": "customer service",
-        "email": "contact@arminsilatani.com",
-        "availableLanguage": ["Persian", "English", "German", "Arabic", "Turkish", "Italian"]
-      }
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://arminsilatani.com/#website",
-      "url": "https://arminsilatani.com/",
-      "name": "Armin Silatani",
-      "description": "Webdesign, professionelle SEO-Dienstleistungen und Google Ads-Werbung — angeboten von Armin Silatani. Kostenlose Beratung.",
-      "publisher": {
-        "@id": "https://arminsilatani.com/#person"
-      },
-      "inLanguage": "de"
-    },
-    {
-      "@type": ["ContactPage", "FAQPage"],
-      "@id": "https://arminsilatani.com/de/contact/#webpage",
-      "url": "https://arminsilatani.com/de/contact/",
-      "name": "Kontakt | Armin Silatani",
-      "isPartOf": {
-        "@id": "https://arminsilatani.com/#website"
-      },
-      "about": {
-        "@id": "https://arminsilatani.com/#person"
-      },
-      "inLanguage": "de",
-      "breadcrumb": {
-        "@id": "https://arminsilatani.com/de/contact/#breadcrumb"
-      },
-      "mainEntity": [
+      "@context": "https://schema.org",
+      "@graph": [
         {
-          "@type": "Question",
-          "name": "Wie lange dauert es, bis Sie auf meine Nachricht antworten?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sie bekommen innerhalb von 2 bis 24 Stunden eine Antwort von mir. Meistens deutlich schneller – nur bei hohem Arbeitsaufkommen kann es mal etwas länger dauern. Mir ist ein schneller, präziser Austausch wichtig, denn ich weiß, Ihre Zeit ist wertvoll."
+          "@type": "Person",
+          "@id": "https://arminsilatani.com/#person",
+          "name": "Armin Silatani",
+          "jobTitle": "Digital Marketing Specialist",
+          "url": "https://arminsilatani.com/",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://arminsilatani.com/assets/images/favicon.png"
+          },
+          "email": "contact@arminsilatani.com",
+          "telephone": "+989125759466",
+          "sameAs": [
+            "https://www.linkedin.com/in/arminsilatani/",
+            "https://github.com/Arminsilatani",
+            "https://www.instagram.com/arminsilatani",
+            "https://t.me/ArminSilatani",
+            "https://wa.me/+989125759466"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+989125759466",
+            "contactType": "customer service",
+            "email": "contact@arminsilatani.com",
+            "availableLanguage": ["Persian", "English", "German", "Arabic", "Turkish", "Italian"]
           }
         },
         {
-          "@type": "Question",
-          "name": "Wie erreiche ich Sie am besten?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Da bin ich ganz offen: Nutzen Sie das Formular auf dieser Seite, schreiben Sie eine E-Mail, rufen Sie an oder kontaktieren Sie mich per Telegram oder WhatsApp. Ganz so, wie es für Sie am einfachsten ist."
-          }
+          "@type": "WebSite",
+          "@id": "https://arminsilatani.com/#website",
+          "url": "https://arminsilatani.com/",
+          "name": "Armin Silatani",
+          "description": "Webdesign, professionelle SEO-Dienstleistungen und Google Ads-Werbung — angeboten von Armin Silatani. Kostenlose Beratung.",
+          "publisher": {
+            "@id": "https://arminsilatani.com/#person"
+          },
+          "inLanguage": "de"
         },
         {
-          "@type": "Question",
-          "name": "Zu welchen Zeiten sind Sie für die Kommunikation erreichbar?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "An Werktagen beantworte ich Nachrichten und Anrufe von 9 bis 17 Uhr. Wenn Sie sich außerhalb Irans befinden, orientieren Sie sich bitte an der iranischen Ortszeit, die auf dieser Seite angezeigt wird."
-          }
+          "@type": ["ContactPage", "FAQPage"],
+          "@id": "https://arminsilatani.com/de/contact/#webpage",
+          "url": "https://arminsilatani.com/de/contact/",
+          "name": "Kontakt | Armin Silatani",
+          "isPartOf": {
+            "@id": "https://arminsilatani.com/#website"
+          },
+          "about": {
+            "@id": "https://arminsilatani.com/#person"
+          },
+          "inLanguage": "de",
+          "breadcrumb": {
+            "@id": "https://arminsilatani.com/de/contact/#breadcrumb"
+          },
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Wie lange dauert es, bis Sie auf meine Nachricht antworten?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sie bekommen innerhalb von 2 bis 24 Stunden eine Antwort von mir. Meistens deutlich schneller – nur bei hohem Arbeitsaufkommen kann es mal etwas länger dauern. Mir ist ein schneller, präziser Austausch wichtig, denn ich weiß, Ihre Zeit ist wertvoll."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Wie erreiche ich Sie am besten?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Da bin ich ganz offen: Nutzen Sie das Formular auf dieser Seite, schreiben Sie eine E-Mail, rufen Sie an oder kontaktieren Sie mich per Telegram oder WhatsApp. Ganz so, wie es für Sie am einfachsten ist."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Zu welchen Zeiten sind Sie für die Kommunikation erreichbar?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "An Werktagen beantworte ich Nachrichten und Anrufe von 9 bis 17 Uhr. Wenn Sie sich außerhalb Irans befinden, orientieren Sie sich bitte an der iranischen Ortszeit, die auf dieser Seite angezeigt wird."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Muss ich meine Preisanfrage über diese Seite stellen?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Alle Preise sind transparent und vollständig auf meiner Seite „Preise“ aufgeführt. Schauen Sie am besten zuerst dort vorbei. Falls Sie danach ein individuelles Angebot wünschen, schicken Sie mir einfach von dieser Seite aus eine Nachricht."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Was passiert, nachdem ich eine Nachricht oder das Formular abgeschickt habe?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ich sichte Ihre Anfrage und vereinbare ein kurzes Gespräch mit Ihnen, um Ihren Bedarf wirklich zu verstehen. Transparenz steht für mich von Anfang an an erster Stelle."
+              }
+            }
+          ]
         },
         {
-          "@type": "Question",
-          "name": "Muss ich meine Preisanfrage über diese Seite stellen?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Alle Preise sind transparent und vollständig auf meiner Seite „Preise“ aufgeführt. Schauen Sie am besten zuerst dort vorbei. Falls Sie danach ein individuelles Angebot wünschen, schicken Sie mir einfach von dieser Seite aus eine Nachricht."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Was passiert, nachdem ich eine Nachricht oder das Formular abgeschickt habe?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ich sichte Ihre Anfrage und vereinbare ein kurzes Gespräch mit Ihnen, um Ihren Bedarf wirklich zu verstehen. Transparenz steht für mich von Anfang an an erster Stelle."
-          }
-        }
-      ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://arminsilatani.com/de/contact/#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Startseite",
-          "item": "https://arminsilatani.com/de/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Kontakt",
-          "item": "https://arminsilatani.com/de/contact/"
+          "@type": "BreadcrumbList",
+          "@id": "https://arminsilatani.com/de/contact/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Startseite",
+              "item": "https://arminsilatani.com/de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Kontakt",
+              "item": "https://arminsilatani.com/de/contact/"
+            }
+          ]
         }
       ]
     }
-  ]
-}
     </script>
-    
+
 </head>
 <body>
 

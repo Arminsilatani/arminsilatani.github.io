@@ -1,7 +1,9 @@
 /*
-Author: Armin Silatani
-Date: 2026-03-29
-Version: 1.0.0
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-23
+  *  Version: 1.3.0
+  ****************************************************
 */
 
 class HeaderComponent extends HTMLElement {constructor() {
@@ -260,7 +262,7 @@ class HeaderComponent extends HTMLElement {constructor() {
       <a href="/de/about/">Über Mich</a>
       <a href="/de/contact/">Kontakt</a>
       <a href="/de/tariff/">Preise</a>
-      <a href="#/">Referenzen</a>
+      <a href="/de/">Referenzen</a>
     `;
 
     wrapper.appendChild(lineBox);

@@ -1,8 +1,8 @@
 /*
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-14
-  *  Version: 1.2.1
+  *  Date: 2026-05-23
+  *  Version: 1.2.2
   ****************************************************
 */
 
@@ -349,7 +349,7 @@ class FooterComponent extends HTMLElement {
         </footer>
 
         <div class="copyright">
-          <p class="copyright-text">Alle Rechte vorbehalten … aber ich habe ehrlich gesagt keine Lust, das zu verfolgen. Bitte seid einfach fair.</p>
+          <p class="copyright-text">© Alle Rechte vorbehalten … aber ich habe ehrlich gesagt keine Lust, das zu verfolgen. Bitte seid einfach fair.</p>
         </div>
       </div>
     `;
