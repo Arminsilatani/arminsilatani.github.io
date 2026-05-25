@@ -1,32 +1,34 @@
 <!--
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-17
-  *  Version: 0.2.0
+  *  Date: 2026-05-25
+  *  Version: 0.2.1
   ****************************************************
 -->
-
 <!-- =========================== SITEMAP PAGE ============================ -->
 <!DOCTYPE html>
 <html lang="it" dir="ltr">
 
 <head>
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: META TAGS ::::::::::::::::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: FAVICON & STYLES ::::::::::::::::::::::::::::::::::::::: -->
-    <link rel="icon" type="image/png" href="../../assets/images/favicon.png">
-    <link rel="stylesheet" href="../../assets/css/main.css">
-
-    <!-- ::::::::::::::::::::::::::::::::::::::: SEO META ::::::::::::::::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: SEO META :::::::::::::::::::::::::: -->
     <title>Mappa del sito e indici dei contenuti | Armin Silatani</title>
     <meta name="description"
-        content="Sitemap con tutte le pagine del sito e le rispettive date di aggiornamento. Un elenco chiaro per orientarsi all’interno del portale.">
+        content="Sitemap con tutte le pagine del sito e le rispettive date di aggiornamento. Un elenco chiaro per orientarsi all'interno del portale.">
     <meta name="robots" content="noindex, nofollow">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: OPEN GRAPH ::::::::::::::::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icon-32.png">
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
     <meta property="og:title" content="Sitemap del sito web Armin Silatani">
     <meta property="og:description"
         content="Elenco completo delle pagine e delle sezioni del sito.">
@@ -36,10 +38,14 @@
     <meta property="og:image" content="https://arminsilatani.com/assets/images/arminsilatani/sitemap/FeaturedImage.webp">
     <meta property="og:image:alt" content="Pianificazione dei contenuti con post-it nello spazio di lavoro">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: CANONICAL ::::::::::::::::::::::::::::::::::::::: -->
-    <link rel="canonical" href="https://arminsilatani.com/it/sitemap/">
+    <!-- :::::::::::::::::::::::::: TWITTER CARD :::::::::::::::::::::::::: -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sitemap del sito web Armin Silatani">
+    <meta name="twitter:description" content="Elenco completo delle pagine e delle sezioni del sito.">
+    <meta name="twitter:image" content="https://arminsilatani.com/assets/images/arminsilatani/sitemap/FeaturedImage.webp">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: HREFLANG ::::::::::::::::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: CANONICAL & HREFLANG :::::::::::::::::::::::::: -->
+    <link rel="canonical" href="https://arminsilatani.com/it/sitemap/">
     <link rel="alternate" hreflang="fa" href="https://arminsilatani.com/sitemap/">
     <link rel="alternate" hreflang="en" href="https://arminsilatani.com/en/sitemap/">
     <link rel="alternate" hreflang="ar" href="https://arminsilatani.com/ar/sitemap/">
@@ -48,92 +54,91 @@
     <link rel="alternate" hreflang="it" href="https://arminsilatani.com/it/sitemap/">
     <link rel="alternate" hreflang="x-default" href="https://arminsilatani.com/en/sitemap/">
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: STRUCTURED DATA ::::::::::::::::::::::::::::::::::::::: -->
-    <!-- Site Navigation -->
+    <!-- :::::::::::::::::::::::::: SCHEMA :::::::::::::::::::::::::: -->
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@graph": [
-                {
-                    "@type": "WebSite",
-                    "@id": "https://arminsilatani.com/#website",
-                    "url": "https://arminsilatani.com/",
-                    "name": "Armin Silatani - Specialista di Marketing Digitale",
-                    "description": "Armin Silatani, uno Specialista di Marketing Digitale con oltre 5 anni di esperienza in SEO, pubblicità online e strategie di marketing digitale.",
-                    "inLanguage": ["fa", "en", "ar", "tr", "de", "it"],
-                    "publisher": { "@id": "https://arminsilatani.com/#person" },
-                    "potentialAction": {
-                        "@type": "SearchAction",
-                        "target": "https://arminsilatani.com/search?q={search_term_string}",
-                        "query-input": "required name=search_term_string"
-                    }
-                },
-                {
-                    "@type": "CollectionPage",
-                    "@id": "https://arminsilatani.com/it/sitemap/#webpage",
-                    "url": "https://arminsilatani.com/it/sitemap/",
-                    "name": "Mappa del Sito - Armin Silatani",
-                    "description": "Mappa completa del sito di Armin Silatani con tutte le pagine, i servizi, gli articoli e gli strumenti.",
-                    "inLanguage": "it",
-                    "isPartOf": { "@id": "https://arminsilatani.com/#website" },
-                    "about": { "@id": "https://arminsilatani.com/#person" },
-                    "datePublished": "2020-01-01",
-                    "dateModified": "2026-05-03",
-                    "breadcrumb": { "@id": "https://arminsilatani.com/it/sitemap/#breadcrumb" },
-                    "potentialAction": {
-                        "@type": "ReadAction",
-                        "target": ["https://arminsilatani.com/it/sitemap/"]
-                    }
-                },
-                {
-                    "@type": "BreadcrumbList",
-                    "@id": "https://arminsilatani.com/it/sitemap/#breadcrumb",
-                    "itemListElement": [
-                        {
-                            "@type": "ListItem",
-                            "position": 1,
-                            "name": "Home",
-                            "item": "https://arminsilatani.com/it/"
-                        },
-                        {
-                            "@type": "ListItem",
-                            "position": 2,
-                            "name": "Mappa del Sito",
-                            "item": "https://arminsilatani.com/it/sitemap/"
-                        }
-                    ]
-                },
-                {
-                    "@type": "Person",
-                    "@id": "https://arminsilatani.com/#person",
-                    "name": "Armin Silatani",
-                    "alternateName": "آرمین سیلاطانی",
-                    "url": "https://arminsilatani.com/",
-                    "image": {
-                        "@type": "ImageObject",
-                        "url": "https://arminsilatani.com/assets/images/favicon.png",
-                        "caption": "Armin Silatani - Specialista di Marketing Digitale"
-                    },
-                    "jobTitle": "Specialista di Marketing Digitale",
-                    "description": "Armin Silatani, uno Specialista di Marketing Digitale con oltre 5 anni di esperienza in SEO, pubblicità online e strategie di marketing digitale.",
-                    "email": "contact@arminsilatani.com",
-                    "telephone": "+989125759466",
-                    "foundingDate": "2020",
-                    "sameAs": [
-                        "https://www.linkedin.com/in/arminsilatani/",
-                        "https://github.com/arminsilatani",
-                        "https://www.instagram.com/arminsilatani/",
-                        "https://t.me/arminsilatani",
-                        "https://wa.me/989125759466"
-                    ],
-                    "knowsAbout": ["Digital Marketing", "SEO", "Content Marketing", "Social Media Marketing", "Online Advertising"],
-                    "mainEntityOfPage": {
-                        "@type": "ProfilePage",
-                        "@id": "https://arminsilatani.com/it/about/"
-                    }
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://arminsilatani.com/#website",
+                "url": "https://arminsilatani.com/",
+                "name": "Armin Silatani - Specialista di Marketing Digitale",
+                "description": "Armin Silatani, uno Specialista di Marketing Digitale con oltre 5 anni di esperienza in SEO, pubblicità online e strategie di marketing digitale.",
+                "inLanguage": ["fa", "en", "ar", "tr", "de", "it"],
+                "publisher": { "@id": "https://arminsilatani.com/#person" },
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://arminsilatani.com/search?q={search_term_string}",
+                    "query-input": "required name=search_term_string"
                 }
-            ]
-        }
+            },
+            {
+                "@type": "CollectionPage",
+                "@id": "https://arminsilatani.com/it/sitemap/#webpage",
+                "url": "https://arminsilatani.com/it/sitemap/",
+                "name": "Mappa del Sito - Armin Silatani",
+                "description": "Mappa completa del sito di Armin Silatani con tutte le pagine, i servizi, gli articoli e gli strumenti.",
+                "inLanguage": "it",
+                "isPartOf": { "@id": "https://arminsilatani.com/#website" },
+                "about": { "@id": "https://arminsilatani.com/#person" },
+                "datePublished": "2020-01-01",
+                "dateModified": "2026-05-03",
+                "breadcrumb": { "@id": "https://arminsilatani.com/it/sitemap/#breadcrumb" },
+                "potentialAction": {
+                    "@type": "ReadAction",
+                    "target": ["https://arminsilatani.com/it/sitemap/"]
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://arminsilatani.com/it/sitemap/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://arminsilatani.com/it/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Mappa del Sito",
+                        "item": "https://arminsilatani.com/it/sitemap/"
+                    }
+                ]
+            },
+            {
+                "@type": "Person",
+                "@id": "https://arminsilatani.com/#person",
+                "name": "Armin Silatani",
+                "alternateName": "آرمین سیلاطانی",
+                "url": "https://arminsilatani.com/",
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "https://arminsilatani.com/assets/images/favicon.png",
+                    "caption": "Armin Silatani - Specialista di Marketing Digitale"
+                },
+                "jobTitle": "Specialista di Marketing Digitale",
+                "description": "Armin Silatani, uno Specialista di Marketing Digitale con oltre 5 anni di esperienza in SEO, pubblicità online e strategie di marketing digitale.",
+                "email": "contact@arminsilatani.com",
+                "telephone": "+989125759466",
+                "foundingDate": "2020",
+                "sameAs": [
+                    "https://www.linkedin.com/in/arminsilatani/",
+                    "https://github.com/arminsilatani",
+                    "https://www.instagram.com/arminsilatani/",
+                    "https://t.me/arminsilatani",
+                    "https://wa.me/989125759466"
+                ],
+                "knowsAbout": ["Digital Marketing", "SEO", "Content Marketing", "Social Media Marketing", "Online Advertising"],
+                "mainEntityOfPage": {
+                    "@type": "ProfilePage",
+                    "@id": "https://arminsilatani.com/it/about/"
+                }
+            }
+        ]
+    }
     </script>
 
 </head>
@@ -239,6 +244,17 @@
 
                                 <div class="hover-desc">
                                     Scopri la mia storia: dall'infanzia alla migrazione in Europa, dal lavoro in diverse città fino all'ingresso nel mondo della SEO. Un percorso reale fatto di esperienze, errori, ripartenze e crescita professionale nel web.
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="link-row">
+                                    <a href="/it/services/">Servizi</a>
+                                    <span class="last-update">Ultimo aggiornamento: 25 Maggio 2026</span>
+                                </div>
+
+                                <div class="hover-desc">
+                                    Leggendo questa pagina, vi familiarizzerete con la struttura dei servizi di digital marketing offerti per le varie aziende.
                                 </div>
                             </li>
 

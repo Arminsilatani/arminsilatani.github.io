@@ -1,44 +1,51 @@
 <!--
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-17
-  *  Version: 0.3.0
+  *  Date: 2026-05-25
+  *  Version: 0.3.1
   ****************************************************
 -->
-
 <!DOCTYPE html>
 <html lang="tr" dir="ltr">
-
 <head>
-
     <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
-    <link rel="icon" type="image/png" href="../../assets/images/favicon.png">
-    <link rel="stylesheet" href="../../assets/css/main.css">
-
     <!-- :::::::::::::::::::::::::: SEO META :::::::::::::::::::::::::: -->
     <title>Site Haritası ve Sayfa Listesi | Armin Silatani</title>
     <meta name="description"
-        content="Web sitesinin tüm sayfalarının kategorilere ayrılmış bir listesi. Ana sayfa, hakkımda, fiyatlar, hizmetler, blog ve iletişim bilgilerine bu sayfadan ulaşabilirsiniz.">
+          content="Web sitesinin tüm sayfalarının kategorilere ayrılmış bir listesi. Ana sayfa, hakkımda, fiyatlar, hizmetler, blog ve iletişim bilgilerine bu sayfadan ulaşabilirsiniz.">
     <meta name="robots" content="noindex, nofollow">
+
+    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icon-32.png">
+    <link rel="stylesheet" href="../../assets/css/main.css">
 
     <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
     <meta property="og:title" content="Web sitesinin tam sayfa listesi Armin Silatani">
     <meta property="og:description"
-        content="Kategorilere ayrılmış site haritası ve tüm sayfaların eksiksiz bir görünümü.">
+          content="Kategorilere ayrılmış site haritası ve tüm sayfaların eksiksiz bir görünümü.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://arminsilatani.com/tr/sitemap/">
     <meta property="og:locale" content="tr_TR">
-    <meta property="og:image" content="https://arminsilatani.com/assets/images/arminsilatani/sitemap/FeaturedImage.webp">
+    <meta property="og:image"
+          content="https://arminsilatani.com/assets/images/arminsilatani/sitemap/FeaturedImage.webp">
     <meta property="og:image:alt" content="Çalışma alanında post-it notlarla içerik planlaması">
 
-    <!-- :::::::::::::::::::::::::: CANONICAL :::::::::::::::::::::::::: -->
-    <link rel="canonical" href="https://arminsilatani.com/tr/sitemap/">
+    <!-- :::::::::::::::::::::::::: TWITTER CARD :::::::::::::::::::::::::: -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Web sitesinin tam sayfa listesi Armin Silatani">
+    <meta name="twitter:description"
+          content="Kategorilere ayrılmış site haritası ve tüm sayfaların eksiksiz bir görünümü.">
+    <meta name="twitter:image"
+          content="https://arminsilatani.com/assets/images/arminsilatani/sitemap/FeaturedImage.webp">
 
-    <!-- :::::::::::::::::::::::::: HREFLANG :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: CANONICAL & HREFLANG :::::::::::::::::::::::::: -->
+    <link rel="canonical" href="https://arminsilatani.com/tr/sitemap/">
     <link rel="alternate" hreflang="fa" href="https://arminsilatani.com/sitemap/">
     <link rel="alternate" hreflang="en" href="https://arminsilatani.com/en/sitemap/">
     <link rel="alternate" hreflang="ar" href="https://arminsilatani.com/ar/sitemap/">
@@ -47,93 +54,92 @@
     <link rel="alternate" hreflang="it" href="https://arminsilatani.com/it/sitemap/">
     <link rel="alternate" hreflang="x-default" href="https://arminsilatani.com/en/sitemap/">
 
-    <!-- :::::::::::::::::::::::::: STRUCTURED DATA :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: SCHEMA :::::::::::::::::::::::::: -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "WebSite",
-                "@id": "https://arminsilatani.com/#website",
-                "url": "https://arminsilatani.com/",
-                "name": "Armin Silatani - Dijital Pazarlama Uzmanı",
-                "description": "Armin Silatani, SEO, çevrimiçi reklamcılık ve dijital pazarlama stratejileri alanında 5 yılı aşkın deneyime sahip bir Dijital Pazarlama Uzmanıdır.",
-                "inLanguage": ["fa", "en", "ar", "tr", "de", "it"],
-                "publisher": { "@id": "https://arminsilatani.com/#person" },
-                "potentialAction": {
-                    "@type": "SearchAction",
-                    "target": "https://arminsilatani.com/search?q={search_term_string}",
-                    "query-input": "required name=search_term_string"
-                }
-            },
-            {
-                "@type": "CollectionPage",
-                "@id": "https://arminsilatani.com/tr/sitemap/#webpage",
-                "url": "https://arminsilatani.com/tr/sitemap/",
-                "name": "Site Haritası - Armin Silatani",
-                "description": "Armin Silatani'nin web sitesinin tüm sayfaları, hizmetleri, makaleleri ve araçları içeren eksiksiz site haritası.",
-                "inLanguage": "tr",
-                "isPartOf": { "@id": "https://arminsilatani.com/#website" },
-                "about": { "@id": "https://arminsilatani.com/#person" },
-                "datePublished": "2020-01-01",
-                "dateModified": "2026-05-03",
-                "breadcrumb": { "@id": "https://arminsilatani.com/tr/sitemap/#breadcrumb" },
-                "potentialAction": {
-                    "@type": "ReadAction",
-                    "target": ["https://arminsilatani.com/tr/sitemap/"]
-                }
-            },
-            {
-                "@type": "BreadcrumbList",
-                "@id": "https://arminsilatani.com/tr/sitemap/#breadcrumb",
-                "itemListElement": [
-                    {
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "Ana Sayfa",
-                        "item": "https://arminsilatani.com/tr/"
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "Site Haritası",
-                        "item": "https://arminsilatani.com/tr/sitemap/"
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "WebSite",
+                    "@id": "https://arminsilatani.com/#website",
+                    "url": "https://arminsilatani.com/",
+                    "name": "Armin Silatani - Dijital Pazarlama Uzmanı",
+                    "description": "Armin Silatani, SEO, çevrimiçi reklamcılık ve dijital pazarlama stratejileri alanında 5 yılı aşkın deneyime sahip bir Dijital Pazarlama Uzmanıdır.",
+                    "inLanguage": ["fa", "en", "ar", "tr", "de", "it"],
+                    "publisher": { "@id": "https://arminsilatani.com/#person" },
+                    "potentialAction": {
+                        "@type": "SearchAction",
+                        "target": "https://arminsilatani.com/search?q={search_term_string}",
+                        "query-input": "required name=search_term_string"
                     }
-                ]
-            },
-            {
-                "@type": "Person",
-                "@id": "https://arminsilatani.com/#person",
-                "name": "Armin Silatani",
-                "alternateName": "آرمین سیلاطانی",
-                "url": "https://arminsilatani.com/",
-                "image": {
-                    "@type": "ImageObject",
-                    "url": "https://arminsilatani.com/assets/images/favicon.png",
-                    "caption": "Armin Silatani - Dijital Pazarlama Uzmanı"
                 },
-                "jobTitle": "Dijital Pazarlama Uzmanı",
-                "description": "Armin Silatani, SEO, çevrimiçi reklamcılık ve dijital pazarlama stratejileri alanında 5 yılı aşkın deneyime sahip bir Dijital Pazarlama Uzmanıdır.",
-                "email": "contact@arminsilatani.com",
-                "telephone": "+989125759466",
-                "foundingDate": "2020",
-                "sameAs": [
-                    "https://www.linkedin.com/in/arminsilatani/",
-                    "https://github.com/arminsilatani",
-                    "https://www.instagram.com/arminsilatani/",
-                    "https://t.me/arminsilatani",
-                    "https://wa.me/989125759466"
-                ],
-                "knowsAbout": ["Digital Marketing", "SEO", "Content Marketing", "Social Media Marketing", "Online Advertising"],
-                "mainEntityOfPage": {
-                    "@type": "ProfilePage",
-                    "@id": "https://arminsilatani.com/tr/about/"
+                {
+                    "@type": "CollectionPage",
+                    "@id": "https://arminsilatani.com/tr/sitemap/#webpage",
+                    "url": "https://arminsilatani.com/tr/sitemap/",
+                    "name": "Site Haritası - Armin Silatani",
+                    "description": "Armin Silatani'nin web sitesinin tüm sayfaları, hizmetleri, makaleleri ve araçları içeren eksiksiz site haritası.",
+                    "inLanguage": "tr",
+                    "isPartOf": { "@id": "https://arminsilatani.com/#website" },
+                    "about": { "@id": "https://arminsilatani.com/#person" },
+                    "datePublished": "2020-01-01",
+                    "dateModified": "2026-05-03",
+                    "breadcrumb": { "@id": "https://arminsilatani.com/tr/sitemap/#breadcrumb" },
+                    "potentialAction": {
+                        "@type": "ReadAction",
+                        "target": ["https://arminsilatani.com/tr/sitemap/"]
+                    }
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "@id": "https://arminsilatani.com/tr/sitemap/#breadcrumb",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Ana Sayfa",
+                            "item": "https://arminsilatani.com/tr/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Site Haritası",
+                            "item": "https://arminsilatani.com/tr/sitemap/"
+                        }
+                    ]
+                },
+                {
+                    "@type": "Person",
+                    "@id": "https://arminsilatani.com/#person",
+                    "name": "Armin Silatani",
+                    "alternateName": "Armin Silatani",
+                    "url": "https://arminsilatani.com/",
+                    "image": {
+                        "@type": "ImageObject",
+                        "url": "https://arminsilatani.com/assets/images/favicon.png",
+                        "caption": "Armin Silatani - Dijital Pazarlama Uzmanı"
+                    },
+                    "jobTitle": "Dijital Pazarlama Uzmanı",
+                    "description": "Armin Silatani, SEO, çevrimiçi reklamcılık ve dijital pazarlama stratejileri alanında 5 yılı aşkın deneyime sahip bir Dijital Pazarlama Uzmanıdır.",
+                    "email": "contact@arminsilatani.com",
+                    "telephone": "+989125759466",
+                    "foundingDate": "2020",
+                    "sameAs": [
+                        "https://www.linkedin.com/in/arminsilatani/",
+                        "https://github.com/arminsilatani",
+                        "https://www.instagram.com/arminsilatani/",
+                        "https://t.me/arminsilatani",
+                        "https://wa.me/989125759466"
+                    ],
+                    "knowsAbout": ["Digital Marketing", "SEO", "Content Marketing", "Social Media Marketing", "Online Advertising"],
+                    "mainEntityOfPage": {
+                        "@type": "ProfilePage",
+                        "@id": "https://arminsilatani.com/tr/about/"
+                    }
                 }
-            }
-        ]
-    }
+            ]
+        }
     </script>
-
 </head>
 
 <body>
@@ -237,6 +243,17 @@
 
                                 <div class="hover-desc">
                                     Bu sayfada Armin Silatani'nin 1998 yılından günümüze kadar olan deneyimlerini, eğitimini ve çalışmalarını görebilirsiniz.
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="link-row">
+                                    <a href="/tr/services/">Hizmetler</a>
+                                    <span class="last-update">Son Güncelleme: 25 Mayıs 2026</span>
+                                </div>
+
+                                <div class="hover-desc">
+                                    Web sitenizin ihtiyaçlarına yönelik SEO, Google Ads ve mağaza tasarımı gibi dijital pazarlama hizmetlerinin detaylarına bu sayfadan ulaşabilirsiniz.
                                 </div>
                             </li>
 

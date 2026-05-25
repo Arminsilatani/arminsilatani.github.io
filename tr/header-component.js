@@ -1,7 +1,7 @@
 /*
 Author: Armin Silatani
-Date: 2026-03-29
-Version: 1.0.0
+Date: 2026-03-25
+Version: 1.0.1
 */
 
 class HeaderComponent extends HTMLElement {constructor() {
@@ -258,7 +258,7 @@ class HeaderComponent extends HTMLElement {constructor() {
       <a href="/tr/">Ana Sayfa</a>
       <a href="/tr/services/">Hizmetler</a>
       <a href="/tr/about/">Hakkımda</a>
-      <a href="/tr/#">İletişim</a>
+      <a href="/tr/contact/">İletişim</a>
       <a href="/tr/tariff/">Fiyatlar</a>
       <a href="/tr/#">Portfolyo</a>
     `;

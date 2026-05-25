@@ -1,183 +1,189 @@
 <!--
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-14
-  *  Version: 1.2.0
+  *  Date: 2026-05-25
+  *  Version: 0.3.0
   ****************************************************
 -->
 <!DOCTYPE html>
 <html lang="tr" dir="ltr">
 <head>
+    <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ::::::::::::::::::::::::::::::::::::::::: META TAGS ::::::::::::::::::::::::::::::::::::::::: -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icon-32.png">
+    <link rel="stylesheet" href="../assets/css/main.css">
 
-  <!-- ::::::::::::::::::::::::::::::::::::::: FAVICON & STYLES ::::::::::::::::::::::::::::::::::::::: -->
-  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
-  <link rel="stylesheet" href="../../assets/css/main.css">
-  
-  <!-- ::::::::::::::::::::::::::::::::::::::::: SEO META ::::::::::::::::::::::::::::::::::::::::: -->
-  <title>Armin Silatani | Dijital Pazarlama Uzmanı</title>
-  <meta name="description" content="Kişisel web sitesinin ana sayfasında Armin Silatani'nin hizmetleri, referansları, müşteri yorumları ve iletişim bilgileri eksiksiz bir şekilde bulunmaktadır.">
-  <meta name="robots" content="noindex, nofollow">
+    <!-- :::::::::::::::::::::::::: SEO META :::::::::::::::::::::::::: -->
+    <title>Armin Silatani | Dijital Pazarlama Uzmanı</title>
+    <meta name="description" content="Kişisel web sitesinin ana sayfasında Armin Silatani'nin hizmetleri, referansları, müşteri yorumları ve iletişim bilgileri eksiksiz bir şekilde bulunmaktadır.">
+    <meta name="robots" content="noindex, nofollow">
 
-  <!-- ::::::::::::::::::::::::::::::::::::::: OPEN GRAPH ::::::::::::::::::::::::::::::::::::::: -->
-  <meta property="og:title" content="Armin Silatani">
-  <meta property="og:description" content="Armin Silatani'nin web sitesi ana sayfası ve hizmetlerinin tanıtımı.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://arminsilatani.com/tr/">
-  <meta property="og:locale" content="tr_TR">
-  <meta property="og:image" content="https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp">
-  <meta property="og:image:alt" content="Bean bag üzerinde dizüstü bilgisayarla çalışan adam ve yanındaki küçük köpek.">
+    <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
+    <meta property="og:title" content="Armin Silatani">
+    <meta property="og:description" content="Armin Silatani'nin web sitesi ana sayfası ve hizmetlerinin tanıtımı.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arminsilatani.com/tr/">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:image" content="https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp">
+    <meta property="og:image:alt" content="Bean bag üzerinde dizüstü bilgisayarla çalışan adam ve yanındaki küçük köpek.">
 
-  <!-- ::::::::::::::::::::::::::::::::::::::: CANONICAL ::::::::::::::::::::::::::::::::::::::: -->
-  <link rel="canonical" href="https://arminsilatani.com/tr/">
+    <!-- :::::::::::::::::::::::::: TWITTER CARD :::::::::::::::::::::::::: -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Armin Silatani">
+    <meta name="twitter:description" content="Armin Silatani'nin web sitesi ana sayfası ve hizmetlerinin tanıtımı.">
+    <meta name="twitter:image" content="https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp">
 
-  <!-- ::::::::::::::::::::::::::::::::::::::::: HREFLANG ::::::::::::::::::::::::::::::::::::::::: -->
-  <link rel="alternate" hreflang="fa"        href="https://arminsilatani.com/">
-  <link rel="alternate" hreflang="en"        href="https://arminsilatani.com/en/">
-  <link rel="alternate" hreflang="ar"        href="https://arminsilatani.com/ar/">
-  <link rel="alternate" hreflang="tr"        href="https://arminsilatani.com/tr/">
-  <link rel="alternate" hreflang="de"        href="https://arminsilatani.com/de/">
-  <link rel="alternate" hreflang="it"        href="https://arminsilatani.com/it/">
-  <link rel="alternate" hreflang="x-default" href="https://arminsilatani.com/en/">
+    <!-- :::::::::::::::::::::::::: CANONICAL & HREFLANG :::::::::::::::::::::::::: -->
+    <link rel="canonical" href="https://arminsilatani.com/tr/">
+    <link rel="alternate" hreflang="fa"        href="https://arminsilatani.com/">
+    <link rel="alternate" hreflang="en"        href="https://arminsilatani.com/en/">
+    <link rel="alternate" hreflang="ar"        href="https://arminsilatani.com/ar/">
+    <link rel="alternate" hreflang="tr"        href="https://arminsilatani.com/tr/">
+    <link rel="alternate" hreflang="de"        href="https://arminsilatani.com/de/">
+    <link rel="alternate" hreflang="it"        href="https://arminsilatani.com/it/">
+    <link rel="alternate" hreflang="x-default" href="https://arminsilatani.com/en/">
 
-  <!-- :::::::::::::::::::::::::::::::::::: STRUCTURED DATA ::::::::::::::::::::::::::::::::::::: -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
+    <!-- :::::::::::::::::::::::::: SCHEMA :::::::::::::::::::::::::: -->
+    <script type="application/ld+json">
     {
-      "@type": "WebSite",
-      "@id": "#website",
-      "url": "https://arminsilatani.com/tr/",
-      "name": "Armin Silatani",
-      "description": "Armin Silatani ⚡ Dijital Pazarlama Uzmanı",
-      "inLanguage": "tr"
-    },
-    {
-      "@type": "WebPage",
-      "@id": "#homepage",
-      "url": "https://arminsilatani.com/tr/",
-      "name": "Armin Silatani ⚡ Dijital Pazarlama Uzmanı",
-      "isPartOf": { "@id": "#website" },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp",
-        "width": "1080",
-        "height": "1080"
-      },
-      "mainContentOfPage": { "@id": "#main-content" },
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": "h1, .intro"
-      },
-      "significantLink": [
-        "https://arminsilatani.com/tr/services/",
-        "https://arminsilatani.com/tr/about/",
-        "https://arminsilatani.com/tr/contact/",
-        "https://arminsilatani.com/tr/blog/"
-      ],
-      "relatedLink": [
-        "https://arminsilatani.com/tr/portfolio/",
-        "https://arminsilatani.com/tr/tariff/"
-      ]
-    },
-    {
-      "@type": "WebPageElement",
-      "@id": "#main-content",
-      "cssSelector": "#main-content",
-      "description": "Armin Silatani, dijital pazarlama uzmanı hakkında"
-    },
-    {
-      "@type": "Person",
-      "@id": "#person",
-      "name": "Armin Silatani",
-      "jobTitle": "Dijital Pazarlama Uzmanı",
-      "url": "https://arminsilatani.com/tr/",
-      "image": "https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp",
-      "sameAs": [
-        "https://www.linkedin.com/in/arminsilatani/",
-        "https://github.com/Arminsilatani",
-        "https://www.instagram.com/arminsilatani"
-      ],
-      "description": "Armin Silatani; e-ticaret, kurumsal ve kişisel web sitesi tasarımında deneyimli web tasarım ve SEO uzmanı"
-    },
-    {
-      "@type": "ProfessionalService",
-      "@id": "#professional-service",
-      "name": "Armin Silatani, Dijital Pazarlama Uzmanı",
-      "url": "https://arminsilatani.com/tr/",
-      "image": "https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp",
-      "telephone": "+989125759466",
-      "email": "contact@arminsilatani.com",
-      "areaServed": {
-        "@type": "Country",
-        "name": "İran"
-      },
-      "provider": { "@id": "#person" },
-      "contactPoint": [
+      "@context": "https://schema.org",
+      "@graph": [
         {
-          "@type": "ContactPoint",
-          "contactType": "customer service",
+          "@type": "WebSite",
+          "@id": "#website",
+          "url": "https://arminsilatani.com/tr/",
+          "name": "Armin Silatani",
+          "description": "Armin Silatani ⚡ Dijital Pazarlama Uzmanı",
+          "inLanguage": "tr"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "#homepage",
+          "url": "https://arminsilatani.com/tr/",
+          "name": "Armin Silatani ⚡ Dijital Pazarlama Uzmanı",
+          "isPartOf": { "@id": "#website" },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp",
+            "width": "1080",
+            "height": "1080"
+          },
+          "mainContentOfPage": { "@id": "#main-content" },
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": "h1, .intro"
+          },
+          "significantLink": [
+            "https://arminsilatani.com/tr/services/",
+            "https://arminsilatani.com/tr/about/",
+            "https://arminsilatani.com/tr/contact/",
+            "https://arminsilatani.com/tr/blog/"
+          ],
+          "relatedLink": [
+            "https://arminsilatani.com/tr/portfolio/",
+            "https://arminsilatani.com/tr/tariff/"
+          ]
+        },
+        {
+          "@type": "WebPageElement",
+          "@id": "#main-content",
+          "cssSelector": "#main-content",
+          "description": "Armin Silatani, dijital pazarlama uzmanı hakkında"
+        },
+        {
+          "@type": "Person",
+          "@id": "#person",
+          "name": "Armin Silatani",
+          "jobTitle": "Dijital Pazarlama Uzmanı",
+          "url": "https://arminsilatani.com/tr/",
+          "image": "https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp",
+          "sameAs": [
+            "https://www.linkedin.com/in/arminsilatani/",
+            "https://github.com/Arminsilatani",
+            "https://www.instagram.com/arminsilatani"
+          ],
+          "description": "Armin Silatani; e-ticaret, kurumsal ve kişisel web sitesi tasarımında deneyimli web tasarım ve SEO uzmanı"
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "#professional-service",
+          "name": "Armin Silatani, Dijital Pazarlama Uzmanı",
+          "url": "https://arminsilatani.com/tr/",
+          "image": "https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp",
           "telephone": "+989125759466",
-          "availableLanguage": "Farsça"
+          "email": "contact@arminsilatani.com",
+          "areaServed": {
+            "@type": "Country",
+            "name": "İran"
+          },
+          "provider": { "@id": "#person" },
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "contactType": "customer service",
+              "telephone": "+989125759466",
+              "availableLanguage": "Farsça"
+            },
+            {
+              "@type": "ContactPoint",
+              "contactType": "WhatsApp",
+              "url": "https://wa.me/+989125759466"
+            }
+          ],
+          "makesOffer": [
+            {
+              "@type": "Offer",
+              "itemOffered": { "@id": "#service-design" }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@id": "#service-seo" }
+            }
+          ]
         },
         {
-          "@type": "ContactPoint",
-          "contactType": "WhatsApp",
-          "url": "https://wa.me/+989125759466"
-        }
-      ],
-      "makesOffer": [
-        {
-          "@type": "Offer",
-          "itemOffered": { "@id": "#service-design" }
+          "@type": "Service",
+          "@id": "#service-design",
+          "name": "Özel Web Tasarım",
+          "provider": { "@id": "#professional-service" },
+          "description": "Responsive, kurumsal, e-ticaret ve kişisel web siteleri en yeni teknolojilerle tasarlanır.",
+          "serviceType": "Web Tasarım"
         },
         {
-          "@type": "Offer",
-          "itemOffered": { "@id": "#service-seo" }
+          "@type": "Service",
+          "@id": "#service-seo",
+          "name": "Arama Motoru Optimizasyonu (SEO)",
+          "provider": { "@id": "#professional-service" },
+          "description": "Anahtar kelime araştırması, site içi ve site dışı SEO, Google sıralamasında yükselme.",
+          "serviceType": "SEO"
+        },
+        {
+          "@type": "Review",
+          "itemReviewed": { "@id": "#professional-service" },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Mahmud Safari"
+          },
+          "datePublished": "2023-11-15",
+          "reviewBody": "Bir süredir şirketimin web sitesi ve SEO işlerini görünüşte büyük bir ajansa emanet etmiştim ama sonuç sadece boşa harcanan zaman oldu. Ancak Sayın Silatani ile SEO projesine başladığımızdan beri her şey değişti."
         }
       ]
-    },
-    {
-      "@type": "Service",
-      "@id": "#service-design",
-      "name": "Özel Web Tasarım",
-      "provider": { "@id": "#professional-service" },
-      "description": "Responsive, kurumsal, e-ticaret ve kişisel web siteleri en yeni teknolojilerle tasarlanır.",
-      "serviceType": "Web Tasarım"
-    },
-    {
-      "@type": "Service",
-      "@id": "#service-seo",
-      "name": "Arama Motoru Optimizasyonu (SEO)",
-      "provider": { "@id": "#professional-service" },
-      "description": "Anahtar kelime araştırması, site içi ve site dışı SEO, Google sıralamasında yükselme.",
-      "serviceType": "SEO"
-    },
-    {
-      "@type": "Review",
-      "itemReviewed": { "@id": "#professional-service" },
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Mahmud Safari"
-      },
-      "datePublished": "2023-11-15",
-      "reviewBody": "Bir süredir şirketimin web sitesi ve SEO işlerini görünüşte büyük bir ajansa emanet etmiştim ama sonuç sadece boşa harcanan zaman oldu. Ancak Sayın Silatani ile SEO projesine başladığımızdan beri her şey değişti."
     }
-  ]
-}
-  </script>
-
+    </script>
 </head>
+
 <body>
 
 <!-- =========================== HOME PAGE ============================ -->
@@ -270,7 +276,7 @@
         <p>
           Siteniz görünür olmalı ve ben tam da bunu sağlıyorum. SEO, kullanıcı deneyimi tasarımı ve gerçek işletmeler için geliştirilmiş stratejilerle çalışıyorum. Dijital varlığınız sadece bir vitrin değil, güçlü bir büyüme aracı olsun. Gelin, gerçekten fark yaratan bir proje üzerinde birlikte çalışalım.
         </p>
-        <a href="#/" target="_blank" rel="nofollow" class="btn-dark">
+        <a href="/tr/services/" target="_blank" rel="nofollow" class="btn-dark">
           Hizmetler
         </a>
       </div>
