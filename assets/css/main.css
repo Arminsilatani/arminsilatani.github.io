@@ -32,6 +32,7 @@
 @import url('pages/services.css');
 @import url('pages/tariff.css');
 @import url('pages/sitemap.css');
+@import url('pages/portfolio.css');
 
 /* ------------------------- RESPONSIVE COMPONENTS ------------------------- */
 @import url('responsive/components/breadcrumb-responsive.css');
