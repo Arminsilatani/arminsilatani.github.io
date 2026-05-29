@@ -260,9 +260,7 @@ function initGraphicHover() {
   });
 }
 
-/* -----------------------------------
-   Expandable Lists
------------------------------------ */
+/* ------------------------- EXPANDABLE LISTS (نمایش ۵تایی + SaaS + FLIP) ------------------------- */
 function initExpandableLists() {
   const buttons = document.querySelectorAll("[data-toggle-list]");
 
@@ -273,7 +271,7 @@ function initExpandableLists() {
     const list = section.querySelector("[data-expandable-list]");
     if (!list) return;
 
-    const extraItems = list.querySelectorAll(".extra-item");
+    const extraItems = Array.from(list.querySelectorAll(".extra-item"));
     const label = button.querySelector("span");
 
     if (!extraItems.length) {
@@ -281,61 +279,102 @@ function initExpandableLists() {
       return;
     }
 
-    let expanded = false;
+    // حالت اولیه: همهٔ آیتم‌های اضافی مخفی هستند
+    let visibleCount = 0;
+    const batchSize = 5;
 
     button.addEventListener("click", () => {
-      expanded = !expanded;
+      // تعداد آیتم‌هایی که هنوز مخفی‌اند
+      const remaining = extraItems.length - visibleCount;
+      if (remaining <= 0) return;
 
-      if (expanded) {
-        extraItems.forEach((item, index) => {
-          item.classList.add("is-visible");
+      // تعیین تعداد آیتم‌هایی که این بار نمایش داده می‌شوند
+      const itemsToShow = Math.min(batchSize, remaining);
+      const batchItems = extraItems.slice(visibleCount, visibleCount + itemsToShow);
 
-          if (typeof gsap !== "undefined") {
-            gsap.fromTo(
-              item,
-              { opacity: 0, y: 18 },
-              {
-                opacity: 1,
-                y: 0,
-                duration: 0.5,
-                delay: index * 0.04,
-                ease: "power2.out"
-              }
-            );
-          }
-        });
+      // ۱. ذخیره موقعیت فعلی دکمه (برای FLIP)
+      const btnRect = button.getBoundingClientRect();
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const initialTop = btnRect.top + scrollTop;
 
-        if (label) label.textContent = "نمایش کمتر";
-      } else {
-        if (typeof gsap !== "undefined") {
-          gsap.to(extraItems, {
-            opacity: 0,
-            y: 18,
-            duration: 0.28,
-            stagger: 0.03,
-            ease: "power2.in",
-            onComplete: () => {
-              extraItems.forEach((item) => {
-                item.classList.remove("is-visible");
-                item.style.opacity = "";
-                item.style.transform = "";
-              });
-            }
+      // ۲. نمایش آیتم‌های این دسته
+      batchItems.forEach((item) => {
+        item.classList.add("is-visible");
+      });
+
+      visibleCount += itemsToShow;
+
+      // ۳. انیمیشن FLIP برای جابجایی نرم دکمه
+      requestAnimationFrame(() => {
+        const newBtnRect = button.getBoundingClientRect();
+        const newTop = newBtnRect.top + (window.pageYOffset || document.documentElement.scrollTop);
+        const deltaY = initialTop - newTop;
+
+        if (Math.abs(deltaY) > 0.5) {
+          gsap.set(button, { y: -deltaY });
+          gsap.to(button, {
+            y: 0,
+            duration: 0.55,
+            ease: "power3.out"
           });
-        } else {
-          extraItems.forEach((item) => item.classList.remove("is-visible"));
         }
 
-        if (label) label.textContent = "نمایش بیشتر";
-      }
+        // ۴. انیمیشن SaaS برای آیتم‌های تازه
+        if (typeof gsap !== "undefined") {
+          batchItems.forEach((item, index) => {
+            gsap.set(item, {
+              opacity: 0,
+              y: 30,
+              scale: 0.96,
+              filter: "blur(4px)"
+            });
+            gsap.to(item, {
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              filter: "blur(0px)",
+              duration: 0.65,
+              delay: index * 0.06,
+              ease: "power3.out",
+              onComplete: () => {
+                // پس از آخرین آیتم، ScrollTrigger را به‌روز کن
+                if (index === batchItems.length - 1 && typeof ScrollTrigger !== "undefined") {
+                  ScrollTrigger.refresh();
+                }
+              }
+            });
+          });
+        }
 
+        // ۵. به‌روزرسانی متن دکمه و محو شدن در صورت نمایش همه
+        if (label) {
+          const left = extraItems.length - visibleCount;
+          if (left > 0) {
+            label.textContent = `نمایش بیشتر (${left} باقی‌مانده)`;
+          } else {
+            // محو کردن دکمه وقتی همه نمایش داده شدند
+            if (typeof gsap !== "undefined") {
+              gsap.to(button, {
+                opacity: 0,
+                duration: 0.3,
+                onComplete: () => {
+                  button.style.display = "none";
+                }
+              });
+            } else {
+              button.style.display = "none";
+            }
+          }
+        }
+      });
+
+      // به‌روزرسانی ScrollTrigger
       if (typeof ScrollTrigger !== "undefined") {
-        setTimeout(() => ScrollTrigger.refresh(), 350);
+        setTimeout(() => ScrollTrigger.refresh(), 400);
       }
     });
   });
 }
-
 /* -----------------------------------
    Magnetic CTA Buttons
 ----------------------------------- */

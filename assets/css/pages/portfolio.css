@@ -1,34 +1,39 @@
+/*
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-29
+  *  Version: 0.0.0
+  ****************************************************
+*/
+
+/* =========================== PORTFOLIO STYLES ============================ */
+
+/* ------------------------- CSS VARIABLES ------------------------- */
 :root {
   --bg: #0d0d0d;
   --bg-soft: #111318;
   --bg-card: rgba(255, 255, 255, 0.04);
   --bg-card-hover: rgba(255, 255, 255, 0.07);
-
   --border: rgba(255, 255, 255, 0.08);
   --border-strong: rgba(255, 255, 255, 0.14);
-
   --text: #f5f7fb;
   --text-soft: rgba(245, 247, 251, 0.74);
   --text-muted: rgba(245, 247, 251, 0.48);
-
   --accent: #4ecdc4;
   --accent-soft: rgba(78, 205, 196, 0.14);
   --accent-soft-2: rgba(78, 205, 196, 0.08);
   --accent-border: rgba(78, 205, 196, 0.35);
-
   --seo: var(--accent);
   --web: var(--accent);
   --graphic: var(--accent);
-
   --shadow: 0 20px 80px rgba(0, 0, 0, 0.35);
-
   --radius-lg: 28px;
   --radius-md: 20px;
   --radius-sm: 14px;
-
   --container: 1280px;
 }
 
+/* ------------------------- RESET & BASE ------------------------- */
 *,
 *::before,
 *::after {
@@ -58,6 +63,7 @@ button {
   font: inherit;
 }
 
+/* ------------------------- UTILITY CLASSES ------------------------- */
 .container {
   width: min(100% - 32px, var(--container));
   margin-inline: auto;
@@ -72,7 +78,7 @@ button {
   margin: 0 0 14px;
   color: var(--accent);
   font-size: 12px;
-  font-weight: 800;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.16em;
   opacity: 0.98;
@@ -98,8 +104,7 @@ button {
   margin-bottom: 42px;
 }
 
-/* Intro */
-
+/* ------------------------- INTRO SECTION ------------------------- */
 .portfolio-intro__grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -150,17 +155,6 @@ button {
   transition: width 0.35s ease;
 }
 
-.quick-link:hover {
-  color: #0d0d0d;
-  background: var(--accent);
-  border-color: var(--accent);
-  box-shadow:
-    0 0 10px 5px rgba(78, 205, 196, 0.8),
-    0 0 20px 10px rgba(78, 205, 196, 0.6),
-    0 0 30px 15px rgba(78, 205, 196, 0.4);
-  transform: translateY(-2px);
-}
-
 .quick-link:hover::before {
   opacity: 0;
 }
@@ -169,8 +163,7 @@ button {
   width: 58px;
 }
 
-/* Category Cards */
-
+/* ------------------------- CATEGORY CARDS ------------------------- */
 .categories-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -278,8 +271,7 @@ button {
   transform: translateX(-6px);
 }
 
-/* Expandable List */
-
+/* ------------------------- EXPANDABLE LIST ------------------------- */
 .extra-item {
   display: none;
 }
@@ -288,12 +280,11 @@ button {
   display: grid;
 }
 
-/* Portfolio List */
-
+/* ------------------------- PORTFOLIO LIST ------------------------- */
 .portfolio-list {
   display: grid;
   gap: 14px;
-  margin-top: 32px;
+  margin-top: 0;   /* ← تغییر اصلی: قبلاً 32px بود */
 }
 
 .portfolio-row {
@@ -375,8 +366,6 @@ button {
     color 0.35s ease;
 }
 
-/* Luxury Editorial Year */
-
 .portfolio-row__year {
   flex-shrink: 0;
   display: inline-flex;
@@ -387,7 +376,6 @@ button {
   height: auto;
   margin: 0;
   padding: 0;
-
   color: rgba(255, 255, 255, 0.42);
   font-size: 0.78rem;
   font-weight: 500;
@@ -395,14 +383,12 @@ button {
   letter-spacing: 0.32em;
   text-transform: uppercase;
   font-variant-numeric: tabular-nums;
-
   background: transparent !important;
   border: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
-
   transition:
     color 0.35s ease,
     transform 0.35s ease,
@@ -503,24 +489,11 @@ button {
   transform: scaleX(1);
 }
 
-/* Buttons */
-
-.show-more-btn {
-  padding: 14px 26px;
-  color: var(--text);
-  cursor: pointer;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  transition:
-    background 0.35s ease,
-    border-color 0.35s ease,
-    transform 0.35s ease,
-    color 0.35s ease,
-    box-shadow 0.35s ease;
-}
-
-.show-more-btn:hover {
+/* ------------------------- SHARED HOVER GLOW ------------------------- */
+/* glow نئونی فقط برای quick-link, primary-btn, secondary-btn */
+.quick-link:hover,
+.primary-btn:hover,
+.secondary-btn:hover {
   color: #0d0d0d;
   background: var(--accent);
   border-color: var(--accent);
@@ -531,8 +504,28 @@ button {
   transform: translateY(-2px);
 }
 
-/* Graphic Cards */
+/* ------------------------- BUTTONS ------------------------- */
+.show-more-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0;
+  color: var(--text-soft);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: color 0.35s ease;
+  outline: none;
+}
 
+.show-more-btn:hover {
+  color: var(--accent);
+}
+
+/* ------------------------- GRAPHIC CARDS ------------------------- */
 .graphic-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -595,8 +588,7 @@ button {
   transform: translateY(-6px);
 }
 
-/* CTA */
-
+/* ------------------------- CTA BOX ------------------------- */
 .cta-box {
   position: relative;
   padding: 52px 32px;
@@ -655,20 +647,7 @@ button {
   background: rgba(255, 255, 255, 0.03);
 }
 
-.primary-btn:hover,
-.secondary-btn:hover {
-  color: #0d0d0d;
-  background: var(--accent);
-  border-color: var(--accent);
-  box-shadow:
-    0 0 10px 5px rgba(78, 205, 196, 0.8),
-    0 0 20px 10px rgba(78, 205, 196, 0.6),
-    0 0 30px 15px rgba(78, 205, 196, 0.4);
-  transform: translateY(-2px);
-}
-
-/* Motion Helpers */
-
+/* ------------------------- MOTION HELPERS ------------------------- */
 .split-title .word {
   display: inline-block;
   will-change: transform, opacity;
@@ -692,8 +671,27 @@ button {
   opacity: 0;
 }
 
-/* Responsive */
+/* ------------------------- LIST WRAPPER (SMART GAP) ------------------------- */
+.list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;          /* دقیقاً برابر gap بین portfolio-rowها */
+}
 
+.list-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;   /* gap در list-wrapper فاصله را تأمین می‌کند */
+}
+
+/* کاهش padding-bottom سکشن‌های لیست برای نچسبیدن دکمه به پایین صفحه */
+.portfolio-list-section {
+  padding-bottom: 60px;
+}
+.extra-item:not(.is-visible) {
+  display: none !important;
+}
+/* ------------------------- RESPONSIVE ------------------------- */
 @media (max-width: 1100px) {
   .portfolio-intro__grid,
   .categories-grid {
@@ -783,3 +781,4 @@ button {
     padding: 36px 22px;
   }
 }
+
