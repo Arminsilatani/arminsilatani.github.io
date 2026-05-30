@@ -1,8 +1,8 @@
 /*
   ****************************************************
   *  Author: Armin Silatani
-  *  Date: 2026-05-14
-  *  Version: 1.1.0
+  *  Date: 2026-05-30
+  *  Version: 1.2.0
   ****************************************************
 */
 
@@ -264,7 +264,7 @@ class HeaderComponent extends HTMLElement {
       <a href="/about/">درباره من</a>
       <a href="/contact/">تماس با من</a>
       <a href="/tariff/">تعرفه‌ها</a>
-      <a href="/#">نمونه کارها</a>
+      <a href="/portfolio/">نمونه کارها</a>
     `;
 
     wrapper.append(lineBox, menu);
