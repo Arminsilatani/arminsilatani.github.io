@@ -183,6 +183,10 @@
           ]
         }
     </script>
+
+    <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -222,8 +226,8 @@
         <section class="about-section" id="main-content">
             <div class="container-1300">
                 <div class="about-container">
-                    <div class="about-text">
-                        <h1>آرمین سیلاطانی</h1>
+                    <div class="about-text reveal-up">
+                        <h1 class="split-title">آرمین سیلاطانی</h1>
                         <p>
                             سلام، آرمین سیلاطانی هستم.
                             کارم اینه که پتانسیل واقعی اینترنت رو برای کسب‌وکارتون فعال کنم. یه سایت خوب با سئوی درست
@@ -243,7 +247,7 @@
 
         <!-- ------------------------- SERVICES SECTION ------------------------- -->
         <section class="services-section">
-            <div class="service-item service-main">
+            <div class="service-item service-main reveal-up">
                 <div class="service-header">
                     <img src="assets/images/arminsilatani/ServicesSlogan.webp" alt="نوشته گرافیکی عبارت «خدمات من» با طراحی دست‌نویس و رنگ فیروزه‌ای" class="service-image-top">
                 </div>
@@ -257,19 +261,19 @@
                     <a href="/services/" target="_blank" rel="nofollow" class="btn-dark">خدمات</a>
                 </div>
             </div>
-            <div class="service-item service-box-1 tv-static-container">
+            <div class="service-item service-box-1 tv-static-container reveal-up">
                 <a href="#/">
                     <img src="assets/images/arminsilatani/ServicesWebDesignSlogan.webp" alt="نوشته گرافیکی عبارت «طراحی سایت» با طراحی دست‌نویس و رنگ فیروزه‌ای" class="service-image-bottom">
                 </a>
                 <div class="tv-noise"></div>
             </div>
-            <div class="service-item service-box-2 tv-static-container">
+            <div class="service-item service-box-2 tv-static-container reveal-up">
                 <a href="#/">
                     <img src="assets/images/arminsilatani/ServicesSEOSlogan.webp" alt="نوشته گرافیکی عبارت «سئو سایت» با طراحی دست‌نویس و رنگ فیروزه‌ای" class="service-image-bottom">
                 </a>
                 <div class="tv-noise"></div>
             </div>
-            <div class="service-item service-box-3 tv-static-container">
+            <div class="service-item service-box-3 tv-static-container reveal-up">
                 <a href="#/">
                     <img src="assets/images/arminsilatani/ServicesAdsSlogan.webp" alt="نوشته گرافیکی عبارت «گوگل ادز» با طراحی دست‌نویس و رنگ فیروزه‌ای" class="service-image-bottom">
                 </a>
@@ -278,13 +282,13 @@
         </section>
 
         <!-- ------------------------- PARTNERS SECTION ------------------------- -->
-        <section class="partners-section">
+        <section class="partners-section reveal-up">
             <logo-component></logo-component>
         </section>
 
         <!-- ------------------------- TESTIMONIALS SECTION ------------------------- -->
         <section class="testimonials-section">
-            <div class="testimonials-placeholder">
+            <div class="testimonials-placeholder reveal-up">
                 <img src="assets/images/arminsilatani/TestimonialSlogan.webp" alt="نوشته گرافیکی عبارت «صدای مشتریان من» با طراحی دست‌نویس و رنگ فیروزه‌ای">
             </div>
         </section>
@@ -394,5 +398,7 @@
         });
     </script>
 
+    <!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
+    <script src="/assets/css/components/animations.js"></script>
 </body>
 </html>

@@ -184,6 +184,9 @@
   }
   </script>
 
+  <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -228,8 +231,8 @@
 
 <section class="about-section">
     <div class="about-container">
-        <div class="about-text">
-            <h1>Armin Silatani</h1>
+        <div class="about-text reveal-up">
+            <h1 class="split-title">Armin Silatani</h1>
             <p>Ciao, sono Armin Silatani. Mi occupo di trasformare Internet in un vantaggio concreto per la tua attività. Un sito costruito con criterio e una SEO fatta come si deve possono portarti nuovi clienti, aumentare le vendite e cambiare il modo in cui il tuo business cresce, ma solo se eseguiti con la giusta competenza.
 
 Lavorando fianco a fianco con imprenditori e aziende, ho visto quanto un progetto digitale mirato, dalla struttura tecnica al design, possa fare la differenza tra un sito che esiste e uno che vende. Quella differenza, la costruiamo insieme.</p>
@@ -245,7 +248,7 @@ Lavorando fianco a fianco con imprenditori e aziende, ho visto quanto un progett
 <!-- -------------------------- SERVICES SECTION -------------------------- -->
 
 <section class="services-section">
-    <div class="service-item service-main">
+    <div class="service-item service-main reveal-up">
         <div class="service-header">
             <img src="../assets/images/arminsilatani/ServicesSloganIT.webp" alt="Scritta grafica Cosa Faccio con calligrafia manuale color turchese" class="service-image-top">
         </div>
@@ -256,21 +259,21 @@ Lavorando fianco a fianco con imprenditori e aziende, ho visto quanto un progett
         </div>
     </div>
 
-    <div class="service-item service-box-1 tv-static-container">
+    <div class="service-item service-box-1 tv-static-container reveal-up">
         <a href="#/">
             <img src="../assets/images/arminsilatani/ServicesWebDesignSloganIT.webp" alt="Scritta grafica Progettazione Siti Web scritta a mano" class="service-image-bottom">
         </a>
         <div class="tv-noise"></div>
     </div>
 
-    <div class="service-item service-box-2 tv-static-container">
+    <div class="service-item service-box-2 tv-static-container reveal-up">
         <a href="#/">
             <img src="../assets/images/arminsilatani/ServicesSEOSloganIT.webp" alt="Scritta grafica Servizi SEO scritta a mano" class="service-image-bottom">
         </a>
         <div class="tv-noise"></div>
     </div>
 
-    <div class="service-item service-box-3 tv-static-container">
+    <div class="service-item service-box-3 tv-static-container reveal-up">
         <a href="#/">
             <img src="../assets/images/arminsilatani/ServicesAdsSloganIT.webp" alt="Scritta grafica Google Ads scritta a mano" class="service-image-bottom">
         </a>
@@ -280,14 +283,14 @@ Lavorando fianco a fianco con imprenditori e aziende, ho visto quanto un progett
 
 <!-- -------------------------- PARTNERS SECTION -------------------------- -->
 
-<section class="partners-section">
+<section class="partners-section reveal-up">
     <logo-component></logo-component>
 </section>
 
 <!-- ----------------------- TESTIMONIALS SECTION ------------------------- -->
 
 <section class="testimonials-section">
-    <div class="testimonials-placeholder">
+    <div class="testimonials-placeholder reveal-up">
         <img src="../assets/images/arminsilatani/TestimonialSloganIT.webp" alt="Scritta grafica cosa dicono di me scritta a mano">
     </div>
 </section>
@@ -410,5 +413,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
+<!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
+<script src="/assets/css/components/animations.js"></script>
 </body>
 </html>

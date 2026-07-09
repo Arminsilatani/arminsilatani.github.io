@@ -152,6 +152,10 @@
       ]
     }
   </script>
+
+  <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -164,7 +168,7 @@
       <div class="hero-container">
         <language-component></language-component>
         <div class="hero-title">
-          <h1>نقشه سایت</h1>
+          <h1 class="split-title">نقشه سایت</h1>
         </div>
       </div>
       <div class="pro-divider">
@@ -196,7 +200,7 @@
       <div class="container-1080">
         <!-- Main Pages Card -->
         <div class="sitemap-grid">
-          <div class="sitemap-card">
+          <div class="sitemap-card reveal-up">
             <div class="card-title">
               <h2>صفحات اصلی</h2>
             </div>
@@ -258,7 +262,7 @@
 
         <!-- Services Card -->
         <div class="sitemap-grid">
-          <div class="sitemap-card">
+          <div class="sitemap-card reveal-up">
             <div class="card-title">
               <h2>خدمات</h2>
             </div>
@@ -270,7 +274,7 @@
 
         <!-- Articles Card -->
         <div class="sitemap-grid">
-          <div class="sitemap-card">
+          <div class="sitemap-card reveal-up">
             <div class="card-title">
               <h2>مقالات</h2>
             </div>
@@ -292,5 +296,8 @@
   <script src="../language-component.js"></script>
   <script src="/assets/css/components/breadcrumb.js"></script>
   <script type="module" src="../footer-component.js"></script>
+
+  <!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
+  <script src="/assets/css/components/animations.js"></script>
 </body>
 </html>

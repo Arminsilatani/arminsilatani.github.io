@@ -182,6 +182,10 @@
       ]
     }
     </script>
+
+    <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -198,7 +202,7 @@
             <div class="hero-container">
                 <language-component></language-component>
                 <div class="hero-title">
-                    <h1>İletişim</h1>
+                    <h1 class="split-title">İletişim</h1>
                 </div>
             </div>
 
@@ -231,22 +235,22 @@
 
                     <!-- Info Side -->
                     <div class="contact-info">
-                        <div class="contact-info__card contact-info__card--featured">
+                        <div class="contact-info__card contact-info__card--featured reveal-up">
                             <img src="/assets/images/arminsilatani/contact/FeaturedImage.webp" alt="Mavi şapkalı adam küçük bir köpekle telefonda konuşuyor" class="contact-info__image">
                         </div>
-                        <div class="contact-info__card">
+                        <div class="contact-info__card reveal-up">
                             <div class="contact-info__label">E-posta</div>
                             <a href="mailto:hello@example.com" class="contact-info__value">contact@arminsilatani.com</a>
                         </div>
-                        <div class="contact-info__card">
+                        <div class="contact-info__card reveal-up">
                             <div class="contact-info__label">Telefon / Telegram / WhatsApp</div>
                             <a href="tel:+989123456789" class="contact-info__value">09125759466</a>
                         </div>
-                        <div class="contact-info__card">
+                        <div class="contact-info__card reveal-up">
                             <div class="contact-info__label">Yanıt Süresi</div>
                             <span class="contact-info__value">Genellikle 2-24 saat arası</span>
                         </div>
-                        <div class="social-dots">
+                        <div class="social-dots reveal-up">
                             <a href="https://t.me/ArminSilatani" class="social-dot">
                                 <!-- Telegram -->
                                 <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -282,7 +286,7 @@
                     </div>
 
                     <!-- Form Side -->
-                    <div class="contact-form-wrapper">
+                    <div class="contact-form-wrapper reveal-up">
                         <form id="contactForm" novalidate>
                             <div class="form-group">
                                 <label for="name">Adınız</label>
@@ -315,9 +319,9 @@
                 <p class="section-subtitle">İlk iletişimden nihai teslimata kadar net ve basit bir yol haritası</p>
             </div>
             <div class="container-1300">
-                <div class="process-grid" id="processGrid">
+                <div class="process-grid categories-grid" id="processGrid">
 
-                    <article class="process-box is-open">
+                    <article class="process-box reveal-card is-open">
                         <div class="process-box__meta">
                             <span class="process-box__step">Birinci</span>
                             <span class="process-box__vtitle">İlk Görüşme</span>
@@ -331,7 +335,7 @@
                         </div>
                     </article>
 
-                    <article class="process-box">
+                    <article class="process-box reveal-card">
                         <div class="process-box__meta">
                             <span class="process-box__step">İkinci</span>
                             <span class="process-box__vtitle">Brief Toplama</span>
@@ -345,7 +349,7 @@
                         </div>
                     </article>
 
-                    <article class="process-box">
+                    <article class="process-box reveal-card">
                         <div class="process-box__meta">
                             <span class="process-box__step">Üçüncü</span>
                             <span class="process-box__vtitle">Teklif ve Zaman Planı</span>
@@ -359,7 +363,7 @@
                         </div>
                     </article>
 
-                    <article class="process-box">
+                    <article class="process-box reveal-card">
                         <div class="process-box__meta">
                             <span class="process-box__step">Dördüncü</span>
                             <span class="process-box__vtitle">Sözleşme ve Ön Ödeme</span>
@@ -373,7 +377,7 @@
                         </div>
                     </article>
 
-                    <article class="process-box">
+                    <article class="process-box reveal-card">
                         <div class="process-box__meta">
                             <span class="process-box__step">Beşinci</span>
                             <span class="process-box__vtitle">Tasarım/Geliştirme ve Geri Bildirim</span>
@@ -387,7 +391,7 @@
                         </div>
                     </article>
 
-                    <article class="process-box">
+                    <article class="process-box reveal-card">
                         <div class="process-box__meta">
                             <span class="process-box__step">Altıncı</span>
                             <span class="process-box__vtitle">Nihai Teslimat ve Destek</span>
@@ -414,7 +418,7 @@
 
                 <div class="avail-grid">
 
-                    <div class="avail-card">
+                    <div class="avail-card reveal-up">
                         <div class="avail-card__header">
                             <span class="status-dot" id="statusDot"></span>
                             <span class="status-text" id="statusText">در دسترس برای پروژه‌های جدید</span>
@@ -433,7 +437,7 @@
                         </div>
                     </div>
 
-                    <div class="avail-card">
+                    <div class="avail-card reveal-up">
                         <div class="avail-card__header">
                             <span class="status-text">Zaman Konumu</span>
                         </div>
@@ -457,7 +461,7 @@
                 <h2 class="section-title">Aklınıza gelebilecek her şey</h2>
                 <p class="section-subtitle">En çok sorulan soruların cevaplarını buraya bıraktım</p>
                 <div class="faq-list">
-                    <div class="faq-item">
+                    <div class="faq-item reveal-up">
                         <button class="faq-question" aria-expanded="false">
                             <span>Mesajıma ne kadar sürede yanıt verirsiniz?</span>
                             <span class="faq-icon">+</span>
@@ -466,7 +470,7 @@
                             <div class="faq-answer">2-24 saat içinde yanıt veriyorum. Genelde çok daha erken cevap veriyorum ama bazen iş yoğunluğu artabiliyor. Sizinle hızlı ve doğru iletişimde olmak benim için önemli, çünkü zamanınızın değerli olduğunu biliyorum.</div>
                         </div>
                     </div>
-                    <div class="faq-item">
+                    <div class="faq-item reveal-up">
                         <button class="faq-question" aria-expanded="false">
                             <span>Sizinle iletişim kurmanın en iyi yolu nedir?</span>
                             <span class="faq-icon">+</span>
@@ -475,7 +479,7 @@
                             <div class="faq-answer">Hiçbir kısıtlamam yok. Bu sayfadaki formu doldurun, e-posta gönderin, arayın ya da Telegram ve WhatsApp’tan mesaj atın. Hangisi sizin için daha rahatsa.</div>
                         </div>
                     </div>
-                    <div class="faq-item">
+                    <div class="faq-item reveal-up">
                         <button class="faq-question" aria-expanded="false">
                             <span>Yanıt vermek için çalışma saatleriniz nasıl?</span>
                             <span class="faq-icon">+</span>
@@ -484,7 +488,7 @@
                             <div class="faq-answer">İş günlerinde 09:00-17:00 arası mesajlara ve aramalara yanıt veriyorum. İran dışındaysanız, bu sayfada gösterilen İran yerel saatine mutlaka dikkat edin.</div>
                         </div>
                     </div>
-                    <div class="faq-item">
+                    <div class="faq-item reveal-up">
                         <button class="faq-question" aria-expanded="false">
                             <span>Projem için fiyat teklifi almak için bu sayfadan mı işlem yapmalıyım?</span>
                             <span class="faq-icon">+</span>
@@ -493,7 +497,7 @@
                             <div class="faq-answer">Fiyatları net ve eksiksiz bir şekilde “Fiyatlar” sayfasına koydum. Önce oraya bakın, sonra özel bir teklif almanız gerekirse bu sayfadan mesaj gönderin.</div>
                         </div>
                     </div>
-                    <div class="faq-item">
+                    <div class="faq-item reveal-up">
                         <button class="faq-question" aria-expanded="false">
                             <span>Mesaj veya formu gönderdikten sonra ne olur?</span>
                             <span class="faq-icon">+</span>
@@ -638,5 +642,8 @@
             document.head.appendChild(shakeStyle);
         })();
     </script>
+
+    <!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
+    <script src="/assets/css/components/animations.js"></script>
 </body>
 </html>

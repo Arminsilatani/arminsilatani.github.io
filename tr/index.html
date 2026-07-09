@@ -182,6 +182,10 @@
       ]
     }
     </script>
+
+    <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -240,8 +244,8 @@
 
     <div class="about-container">
 
-      <div class="about-text">
-        <h1>Armin Silatani</h1>
+      <div class="about-text reveal-up">
+        <h1 class="split-title">Armin Silatani</h1>
         <p>
           Merhaba, ben Armin Silatani. İşletmeniz için internetin gerçek gücünü ortaya çıkarıyorum. Doğru SEO stratejisiyle desteklenen profesyonel bir web sitesi, yeni müşteriler kazandırır, satışları katlar ve işinizin dinamiklerini tamamen değiştirir, tabii ki işin ehli biri tarafından yapıldığında. Müşterilerimle yürüttüğüm projelerde, hedef odaklı tasarımın teknik optimizasyonla buluştuğunda sıradan bir web sitesini nasıl güçlü bir satış motoruna dönüştürdüğünü defalarca gördüm. Gelin, bu dönüşümü birlikte yaşayalım.
         </p>
@@ -263,7 +267,7 @@
   <!-- ------------------------- SERVICES SECTION ------------------------- -->
   <section class="services-section">
 
-    <div class="service-item service-main">
+    <div class="service-item service-main reveal-up">
 
       <div class="service-header">
         <img
@@ -283,7 +287,7 @@
 
     </div>
 
-    <div class="service-item service-box-1 tv-static-container">
+    <div class="service-item service-box-1 tv-static-container reveal-up">
       <a href="#/">
         <img
           src="../assets/images/arminsilatani/ServicesWebDesignSloganTR.webp"
@@ -293,7 +297,7 @@
       <div class="tv-noise"></div>
     </div>
 
-    <div class="service-item service-box-2 tv-static-container">
+    <div class="service-item service-box-2 tv-static-container reveal-up">
       <a href="#/">
         <img
           src="../assets/images/arminsilatani/ServicesSEOSloganTR.webp"
@@ -303,7 +307,7 @@
       <div class="tv-noise"></div>
     </div>
 
-    <div class="service-item service-box-3 tv-static-container">
+    <div class="service-item service-box-3 tv-static-container reveal-up">
       <a href="#/">
         <img
           src="../assets/images/arminsilatani/ServicesAdsSloganEN.webp"
@@ -316,14 +320,14 @@
   </section>
 
   <!-- ------------------------- PARTNERS SECTION ------------------------- -->
-  <section class="partners-section">
+  <section class="partners-section reveal-up">
     <logo-component></logo-component>
   </section>
 
   <!-- ------------------------- TESTIMONIALS SECTION ------------------------- -->
   <section class="testimonials-section">
 
-    <div class="testimonials-placeholder">
+    <div class="testimonials-placeholder reveal-up">
       <img
         src="../assets/images/arminsilatani/TestimonialSloganTR.webp"
         alt="El yazısı stilinde turkuaz renkli Sonuç Alanların Yorumları yazısı grafik görseli">
@@ -452,5 +456,7 @@
   });
 </script>
 
+<!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
+<script src="/assets/css/components/animations.js"></script>
 </body>
 </html>

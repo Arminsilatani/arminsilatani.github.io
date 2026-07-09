@@ -162,6 +162,9 @@
     }
     </script>
 
+    <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -179,7 +182,7 @@
                 <language-component></language-component>
 
                 <div class="hero-title">
-                    <h1>Chi Sono</h1>
+                    <h1 class="split-title">Chi Sono</h1>
                 </div>
 
             </div>
@@ -342,7 +345,7 @@
                 const data = timelineData[year];
 
                 const block = document.createElement("div");
-                block.className = "story-block";
+                block.className = "story-block reveal-up";
 
                 block.innerHTML =
                     '<div class="content-date">' +
@@ -434,5 +437,7 @@
         });
     </script>
 
+    <!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
+    <script src="/assets/css/components/animations.js"></script>
 </body>
 </html>

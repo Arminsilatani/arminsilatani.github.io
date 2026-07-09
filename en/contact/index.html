@@ -1,3 +1,4 @@
+```html
 <!--
   ****************************************************
   *  Author: Armin Silatani
@@ -149,6 +150,9 @@
     }
     </script>
 
+    <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -165,7 +169,7 @@
             <div class="hero-container">
                 <language-component></language-component>
                 <div class="hero-title">
-                    <h1>Contact Me</h1>
+                    <h1 class="split-title">Contact Me</h1>
                 </div>
             </div>
 
@@ -198,22 +202,22 @@
 
                     <!-- Info Side -->
                     <div class="contact-info">
-                        <div class="contact-info__card contact-info__card--featured">
+                        <div class="contact-info__card contact-info__card--featured reveal-up">
                             <img src="/assets/images/arminsilatani/contact/FeaturedImage.webp" alt="Man talking on phone with small dog in green sweater" class="contact-info__image">
                         </div>
-                        <div class="contact-info__card">
+                        <div class="contact-info__card reveal-up">
                             <div class="contact-info__label">Email</div>
                             <a href="mailto:hello@example.com" class="contact-info__value">contact@arminsilatani.com</a>
                         </div>
-                        <div class="contact-info__card">
+                        <div class="contact-info__card reveal-up">
                             <div class="contact-info__label">Phone / Telegram / WhatsApp</div>
                             <a href="tel:+989123456789" class="contact-info__value">+989125759466</a>
                         </div>
-                        <div class="contact-info__card">
+                        <div class="contact-info__card reveal-up">
                             <div class="contact-info__label">Response Time</div>
                             <span class="contact-info__value">Usually within 2–24 hours</span>
                         </div>
-                        <div class="social-dots">
+                        <div class="social-dots reveal-up">
                             <a href="https://t.me/ArminSilatani" class="social-dot" title="تلگرام" aria-label="تلگرام">
                                 <!-- Telegram -->
                                 <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -249,7 +253,7 @@
                     </div>
 
                     <!-- Form Side -->
-                    <div class="contact-form-wrapper">
+                    <div class="contact-form-wrapper reveal-up">
                         <form id="contactForm" novalidate>
                             <div class="form-group">
                                 <label for="name">Your Name</label>
@@ -282,9 +286,9 @@
                 <p class="section-subtitle">A clear, straightforward path from first contact to final delivery</p>
             </div>
             <div class="container-1300">
-                <div class="process-grid" id="processGrid">
+                <div class="process-grid categories-grid" id="processGrid">
 
-                    <article class="process-box is-open">
+                    <article class="process-box reveal-card is-open">
                         <div class="process-box__meta">
                             <span class="process-box__step">First</span>
                             <span class="process-box__vtitle">Initial Conversation</span>
@@ -298,7 +302,7 @@
                         </div>
                     </article>
 
-                    <article class="process-box">
+                    <article class="process-box reveal-card">
                         <div class="process-box__meta">
                             <span class="process-box__step">Second</span>
                             <span class="process-box__vtitle">Brief Gathering</span>
@@ -312,7 +316,7 @@
                         </div>
                     </article>
 
-                    <article class="process-box">
+                    <article class="process-box reveal-card">
                         <div class="process-box__meta">
                             <span class="process-box__step">Third</span>
                             <span class="process-box__vtitle">Proposal & Timeline</span>
@@ -326,7 +330,7 @@
                         </div>
                     </article>
 
-                    <article class="process-box">
+                    <article class="process-box reveal-card">
                         <div class="process-box__meta">
                             <span class="process-box__step">Fourth</span>
                             <span class="process-box__vtitle">Contract & Deposit</span>
@@ -340,7 +344,7 @@
                         </div>
                     </article>
 
-                    <article class="process-box">
+                    <article class="process-box reveal-card">
                         <div class="process-box__meta">
                             <span class="process-box__step">Fifth</span>
                             <span class="process-box__vtitle">Design/Development & Feedback</span>
@@ -354,7 +358,7 @@
                         </div>
                     </article>
 
-                    <article class="process-box">
+                    <article class="process-box reveal-card">
                         <div class="process-box__meta">
                             <span class="process-box__step">Sixth</span>
                             <span class="process-box__vtitle">Final Delivery</span>
@@ -381,7 +385,7 @@
 
                 <div class="avail-grid">
 
-                    <div class="avail-card">
+                    <div class="avail-card reveal-up">
                         <div class="avail-card__header">
                             <span class="status-dot" id="statusDot"></span>
                             <span class="status-text" id="statusText">در دسترس برای پروژه‌های جدید</span>
@@ -400,7 +404,7 @@
                         </div>
                     </div>
 
-                    <div class="avail-card">
+                    <div class="avail-card reveal-up">
                         <div class="avail-card__header">
                             <span class="status-text">Time Zone</span>
                         </div>
@@ -424,7 +428,7 @@
                 <h2 class="section-title">Everything you might want to know</h2>
                 <p class="section-subtitle">Common questions answered here</p>
                 <div class="faq-list">
-                    <div class="faq-item">
+                    <div class="faq-item reveal-up">
                         <button class="faq-question" aria-expanded="false">
                             <span>How long does it take for you to reply to my message?</span>
                             <span class="faq-icon">+</span>
@@ -433,7 +437,7 @@
                             <div class="faq-answer">I’ll get back to you within 2–24 hours. Usually much sooner, but sometimes workload picks up. It’s important to me to stay responsive and accurate, because I know your time is valuable.</div>
                         </div>
                     </div>
-                    <div class="faq-item">
+                    <div class="faq-item reveal-up">
                         <button class="faq-question" aria-expanded="false">
                             <span>What’s the best way to reach you?</span>
                             <span class="faq-icon">+</span>
@@ -442,7 +446,7 @@
                             <div class="faq-answer">No restrictions. Fill out the form on this page, send an email, call, or message me on Telegram or WhatsApp—whatever works best for you.</div>
                         </div>
                     </div>
-                    <div class="faq-item">
+                    <div class="faq-item reveal-up">
                         <button class="faq-question" aria-expanded="false">
                             <span>What are your working hours for responding?</span>
                             <span class="faq-icon">+</span>
@@ -451,7 +455,7 @@
                             <div class="faq-answer">I respond to messages and calls weekdays from 9 AM to 5 PM. If you’re outside Iran, please note the local Iran time displayed on this page.</div>
                         </div>
                     </div>
-                    <div class="faq-item">
+                    <div class="faq-item reveal-up">
                         <button class="faq-question" aria-expanded="false">
                             <span>Should I use this page to request a quote for my project?</span>
                             <span class="faq-icon">+</span>
@@ -460,7 +464,7 @@
                             <div class="faq-answer">I’ve listed clear, detailed pricing on the “Pricing” page. Check there first, then if you need a custom quote, send a message from this page.</div>
                         </div>
                     </div>
-                    <div class="faq-item">
+                    <div class="faq-item reveal-up">
                         <button class="faq-question" aria-expanded="false">
                             <span>What happens after I send a message or form?</span>
                             <span class="faq-icon">+</span>
@@ -604,5 +608,9 @@
             document.head.appendChild(shakeStyle);
         })();
     </script>
+
+    <!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
+    <script src="/assets/css/components/animations.js"></script>
 </body>
 </html>
+```

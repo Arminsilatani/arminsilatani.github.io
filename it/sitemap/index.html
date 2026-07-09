@@ -141,6 +141,9 @@
     }
     </script>
 
+    <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -158,7 +161,7 @@
                 <language-component></language-component>
 
                 <div class="hero-title">
-                    <h1>Mappa del Sito</h1>
+                    <h1 class="split-title">Mappa del Sito</h1>
                 </div>
 
             </div>
@@ -206,7 +209,7 @@
                 <!-- Main Pages -->
                 <div class="sitemap-grid">
 
-                    <div class="sitemap-card">
+                    <div class="sitemap-card reveal-up">
 
                         <div class="card-title">
                             <h2>Pagine Principali</h2>
@@ -278,7 +281,7 @@
                 <!-- Services -->
                 <div class="sitemap-grid">
 
-                    <div class="sitemap-card">
+                    <div class="sitemap-card reveal-up">
 
                         <div class="card-title">
                             <h2>Servizi</h2>
@@ -294,7 +297,7 @@
                 <!-- Articles -->
                 <div class="sitemap-grid">
 
-                    <div class="sitemap-card">
+                    <div class="sitemap-card reveal-up">
 
                         <div class="card-title">
                             <h2>Articoli</h2>
@@ -323,5 +326,7 @@
     <script src="/assets/css/components/breadcrumb.js"></script>
     <script type="module" src="../footer-component.js"></script>
 
+    <!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
+    <script src="/assets/css/components/animations.js"></script>
 </body>
 </html>
