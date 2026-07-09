@@ -109,12 +109,13 @@ button {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 32px;
-  align-items: end;
+  align-items: center;
 }
 
 .portfolio-intro__nav {
   display: grid;
   gap: 16px;
+  align-self: center;
 }
 
 .quick-link {
@@ -163,13 +164,18 @@ button {
   width: 58px;
 }
 
-/* ------------------------- CATEGORY CARDS ------------------------- */
+/* ===== شبکه ===== */
 .categories-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  grid-template-columns: 2fr 1fr;
+  gap: 0;
 }
 
+.seo-card {
+  margin-inline-end: 22px;          /* فاصله افقی بین دو کارت بالا */
+}
+
+/* ===== استایل عمومی کارت‌ها ===== */
 .category-card {
   position: relative;
   min-height: 320px;
@@ -178,13 +184,74 @@ button {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
   transition:
     transform 0.45s ease,
     border-color 0.45s ease,
     background 0.45s ease;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;    /* بالا چسبیده، وسط، پایین چسبیده */
 }
 
+/* ===== بخش‌های داخلی کارت ===== */
+.category-card__top,
+.category-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.category-number {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.category-badge {
+  padding: 10px 14px;
+  color: var(--accent);
+  font-size: 13px;
+  background: var(--accent-soft-2);
+  border: 1px solid var(--accent-border);
+  border-radius: 999px;
+}
+
+.category-card__body {
+  margin-top: 0;                    /* فاصله حذف شد */
+}
+
+.category-card__body h3 {
+  margin: 0 0 16px;
+  font-size: 28px;
+}
+
+.category-card__body p {
+  margin: 0;
+  color: var(--text-soft);
+  line-height: 2;
+}
+
+.category-card__footer {
+  margin-top: 0;                    /* فاصله حذف شد */
+  color: var(--text-soft);
+}
+
+/* ===== فلش (آینه‌ای + انیمیشن) ===== */
+.category-card__footer svg {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.35s ease;
+  transform: scaleX(-1);            /* آینه شدن برای RTL */
+}
+
+.category-card:hover .category-card__footer svg {
+  transform: scaleX(-1) translateX(-6px);  /* حرکت به چپ */
+}
+
+/* ===== گلو و hover ===== */
 .card-glow {
   position: absolute;
   width: 240px;
@@ -211,64 +278,16 @@ button {
   right: -60px;
 }
 
-.category-card__top,
-.category-card__footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.category-number {
-  color: rgba(255, 255, 255, 0.2);
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.category-badge {
-  padding: 10px 14px;
-  color: var(--accent);
-  font-size: 13px;
-  background: var(--accent-soft-2);
-  border: 1px solid var(--accent-border);
-  border-radius: 999px;
-}
-
-.category-card__body {
-  margin-top: 56px;
-}
-
-.category-card__body h3 {
-  margin: 0 0 16px;
-  font-size: 28px;
-}
-
-.category-card__body p {
-  margin: 0;
-  color: var(--text-soft);
-  line-height: 2;
-}
-
-.category-card__footer {
-  margin-top: 48px;
-  color: var(--text-soft);
-}
-
-.category-card__footer svg {
-  width: 22px;
-  height: 22px;
-  transition: transform 0.35s ease;
-}
-
 .category-card:hover {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
   border-color: var(--accent-border);
   transform: translateY(-8px);
 }
 
-.category-card:hover .category-card__footer svg {
-  transform: translateX(-6px);
+.categories-grid .category-graphic-card {
+  grid-column: 1 / -1;
+  margin-block-start: 22px;
+  min-height: 350px;               /* ارتفاع بیشتر */
 }
 
 /* ------------------------- EXPANDABLE LIST ------------------------- */
@@ -525,7 +544,7 @@ button {
   color: var(--accent);
 }
 
-/* ------------------------- GRAPHIC CARDS ------------------------- */
+/* ------------------------- GRAPHIC CARDS (شبیه‌سازی portfolio-row) ------------------------- */
 .graphic-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -545,6 +564,8 @@ button {
     transform 0.45s ease,
     border-color 0.45s ease,
     background 0.45s ease;
+  text-decoration: none;
+  color: inherit;
 }
 
 .graphic-card:nth-child(4),
@@ -552,40 +573,102 @@ button {
   grid-column: span 6;
 }
 
+/* حذف shine قبلی */
 .graphic-card__shine {
-  position: absolute;
-  top: 0;
-  right: -60%;
-  width: 45%;
-  height: 100%;
-  pointer-events: none;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
-  transform: skewX(-20deg);
+  display: none;
 }
 
+/* ===== نور شناور (glow) – در گوشهٔ راست ===== */
+.graphic-card::after {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  top: -100px;        /* نقطه شروع بیرون از کارت در بالا */
+  left: -100px;       /* نقطه شروع بیرون از کارت در چپ */
+  opacity: 0;
+  pointer-events: none;
+  background: rgba(78, 205, 196, 0.18);
+  border-radius: 50%;
+  filter: blur(50px);
+  transition:
+    opacity 0.45s ease,
+    top 0.45s ease,
+    left 0.45s ease;
+}
+
+/* ===== خط زیرین متحرک ===== */
+.graphic-card::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.45s ease;
+}
+
+/* ------------------------- محتوای داخلی ------------------------- */
 .graphic-card__index {
   display: inline-block;
   margin-bottom: 24px;
   color: var(--accent);
   font-size: 14px;
   font-weight: 700;
+  transition:
+    color 0.35s ease,
+    transform 0.35s ease;
 }
 
 .graphic-card h3 {
   margin: 0 0 14px;
   font-size: 24px;
+  transition:
+    color 0.35s ease,
+    transform 0.35s ease;
 }
 
 .graphic-card p {
   margin: 0;
   color: var(--text-soft);
   line-height: 2;
+  transition: color 0.35s ease;
 }
 
+/* ------------------------- حالت Hover (دقیقاً مثل portfolio-row) ------------------------- */
 .graphic-card:hover {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.03));
-  border-color: var(--accent-border);
-  transform: translateY(-6px);
+  background: rgba(78, 205, 196, 0.07);           /* پس‌زمینهٔ رنگی مشابه */
+  border-color: rgba(78, 205, 196, 0.35);
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.26),
+    inset 0 0 0 1px rgba(78, 205, 196, 0.08);
+  transform: translateY(-4px);
+}
+
+.graphic-card:hover::after {
+  top: 20px;          /* رسیدن به گوشهٔ بالا-چپ داخل کارت */
+  left: 200px;
+  opacity: 1;
+}
+
+.graphic-card:hover::before {
+  transform: scaleX(1);
+}
+
+.graphic-card:hover .graphic-card__index {
+  transform: translateX(-8px);          /* حرکت به چپ در RTL */
+  color: var(--accent);                 /* رنگ ثابت می‌ماند اما در صورت نیاز تغییر دهید */
+}
+
+.graphic-card:hover h3 {
+  transform: translateX(-8px);
+}
+
+.graphic-card:hover p {
+  color: var(--accent);                /* تغییر رنگ توضیح (مانند hint در portfolio-row) */
 }
 
 /* ------------------------- CTA BOX ------------------------- */
@@ -692,93 +775,3 @@ button {
   display: none !important;
 }
 /* ------------------------- RESPONSIVE ------------------------- */
-@media (max-width: 1100px) {
-  .portfolio-intro__grid,
-  .categories-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .graphic-card,
-  .graphic-card:nth-child(4),
-  .graphic-card:nth-child(5) {
-    grid-column: span 6;
-  }
-}
-
-@media (max-width: 768px) {
-  .section-dark {
-    padding: 72px 0;
-  }
-
-  .portfolio-row {
-    grid-template-columns: 64px 1fr;
-    gap: 14px;
-    min-height: 92px;
-    padding: 18px 16px;
-    border-radius: 20px;
-  }
-
-  .portfolio-row__top {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .portfolio-row__title {
-    font-size: 17px;
-    line-height: 1.6;
-  }
-
-  .portfolio-row__year {
-    font-size: 13px;
-    letter-spacing: 0.22em;
-  }
-
-  .portfolio-row__year::before {
-    width: 20px;
-  }
-
-  .portfolio-row:hover .portfolio-row__year::before {
-    width: 28px;
-  }
-
-  .portfolio-row__hint {
-    font-size: 12px;
-  }
-
-  .portfolio-row__glow {
-    width: 160px;
-    height: 160px;
-  }
-
-  .graphic-grid {
-    grid-template-columns: repeat(12, 1fr);
-  }
-
-  .graphic-card,
-  .graphic-card:nth-child(4),
-  .graphic-card:nth-child(5) {
-    grid-column: span 12;
-  }
-
-  .category-card {
-    min-height: auto;
-  }
-
-  .category-card__body {
-    margin-top: 32px;
-  }
-
-  .category-card__footer {
-    margin-top: 28px;
-  }
-
-  .section-desc {
-    line-height: 1.9;
-  }
-
-  .cta-box {
-    padding: 36px 22px;
-  }
-}
-
