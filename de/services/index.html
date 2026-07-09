@@ -7,6 +7,7 @@
 -->
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
+<head>
   <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -245,6 +246,10 @@
     ]
   }
   </script>
+
+  <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -257,7 +262,7 @@
       <div class="hero-container">
         <language-component></language-component>
         <div class="hero-title">
-          <h1>Digitale Marketing-Dienstleistungen</h1>
+          <h1 class="split-title">Digitale Marketing-Dienstleistungen</h1>
         </div>
       </div>
       <div class="pro-divider">
@@ -286,8 +291,8 @@
 
     <!-- ---------------------------------------- SERVICES SECTION ---------------------------------------- -->
     <div class="services-wrapper">
-      <div class="scroll-container" id="scrollContainer">
-        <div class="service-card" data-index="0" data-link="/services/seo">
+      <div class="scroll-container categories-grid" id="scrollContainer">
+        <div class="service-card reveal-card" data-index="0" data-link="/services/seo">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
             <polyline points="17 6 23 6 23 12"></polyline>
@@ -296,7 +301,7 @@
           <p class="card-desc">Ich finde die Keywords, die Ihnen Geld bringen, und schreibe Content, der kaufbereite Kunden direkt anspricht.</p>
         </div>
 
-        <div class="service-card" data-index="1" data-link="/services/web-design">
+        <div class="service-card reveal-card" data-index="1" data-link="/services/web-design">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
             <line x1="8" y1="21" x2="16" y2="21"></line>
@@ -306,7 +311,7 @@
           <p class="card-desc">Von der ersten Idee bis zur fertigen Website – ich übernehme alles. Sie bleiben entspannt, ich liefere pünktlich.</p>
         </div>
 
-        <div class="service-card" data-index="2" data-link="/services/ecommerce">
+        <div class="service-card reveal-card" data-index="2" data-link="/services/ecommerce">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="9" cy="21" r="1"></circle>
             <circle cx="20" cy="21" r="1"></circle>
@@ -316,7 +321,7 @@
           <p class="card-desc">Ihr Online-Shop wird so aufgebaut, dass Sie Produkte, Rabatte und Bestellungen genauso leicht verwalten wie Ihre Handy-Apps.</p>
         </div>
 
-        <div class="service-card" data-index="3" data-link="/services/google-ads">
+        <div class="service-card reveal-card" data-index="3" data-link="/services/google-ads">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
             <circle cx="12" cy="12" r="6"></circle>
@@ -326,7 +331,7 @@
           <p class="card-desc">Meine Google Ads-Kampagnen bringen echte Interessenten. Jeder Klick zählt – kein Cent wird verschwendet.</p>
         </div>
 
-        <div class="service-card" data-index="4" data-link="/services/graphics">
+        <div class="service-card reveal-card" data-index="4" data-link="/services/graphics">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
             <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
@@ -337,7 +342,7 @@
           <p class="card-desc">Meine Grafiken sehen nicht nur gut aus. Sie haben einen Job: Blicke fangen, Vertrauen schaffen, Verkäufe pushen.</p>
         </div>
 
-        <div class="service-card" data-index="5" data-link="/services/social-media">
+        <div class="service-card reveal-card" data-index="5" data-link="/services/social-media">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="18" cy="5" r="3"></circle>
             <circle cx="6" cy="12" r="3"></circle>
@@ -349,7 +354,7 @@
           <p class="card-desc">Mit den richtigen Hashtags und Trends sorge ich dafür, dass Ihr Content in der Explore-Seite landet und genau Ihre Leute erreicht.</p>
         </div>
 
-        <div class="service-card" data-index="6" data-link="/services/ui-ux">
+        <div class="service-card reveal-card" data-index="6" data-link="/services/ui-ux">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
             <polyline points="2 12 12 17 22 12"></polyline>
@@ -478,5 +483,8 @@
       }
     })();
   </script>
+
+  <!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
+  <script src="/assets/components/animations.js"></script>
 </body>
 </html>

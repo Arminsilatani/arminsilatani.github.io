@@ -176,6 +176,10 @@
             ]
         }
     </script>
+
+    <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -192,7 +196,7 @@
             <div class="hero-container">
                 <language-component></language-component>
                 <div class="hero-title">
-                    <h1>تماس با من</h1>
+                    <h1 class="split-title">تماس با من</h1>
                 </div>
             </div>
 
@@ -225,22 +229,22 @@
 
                     <!-- Info Side -->
                     <div class="contact-info">
-                        <div class="contact-info__card contact-info__card--featured">
+                        <div class="contact-info__card contact-info__card--featured reveal-up">
                             <img src="/assets/images/arminsilatani/contact/FeaturedImage.webp" alt="مرد با کلاه آبی در حال مکالمه تلفنی با سگ در آغوش" class="contact-info__image">
                         </div>
-                        <div class="contact-info__card">
+                        <div class="contact-info__card reveal-up">
                             <div class="contact-info__label">ایمیل</div>
                             <a href="mailto:hello@example.com" class="contact-info__value">contact@arminsilatani.com</a>
                         </div>
-                        <div class="contact-info__card">
+                        <div class="contact-info__card reveal-up">
                             <div class="contact-info__label">تلفن / تلگرام / واتس‌اپ</div>
                             <a href="tel:+989123456789" class="contact-info__value">09125759466</a>
                         </div>
-                        <div class="contact-info__card">
+                        <div class="contact-info__card reveal-up">
                             <div class="contact-info__label">زمان پاسخ‌دهی</div>
                             <span class="contact-info__value">معمولاً بین ۲ تا ۲۴ ساعت</span>
                         </div>
-                        <div class="social-dots">
+                        <div class="social-dots reveal-up">
                             <!-- Telegram -->
                             <a href="https://t.me/ArminSilatani" class="social-dot">
                                 <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -276,7 +280,7 @@
                     </div>
 
                     <!-- Form Side -->
-                    <div class="contact-form-wrapper">
+                    <div class="contact-form-wrapper reveal-up">
                         <form id="contactForm" novalidate>
                             <div class="form-group">
                                 <label for="name">نام شما</label>
@@ -309,9 +313,9 @@
                 <p class="section-subtitle">یک مسیر شفاف و ساده از اولین تماس تا تحویل نهایی</p>
             </div>
             <div class="container-1300">
-                <div class="process-grid" id="processGrid">
+                <div class="process-grid categories-grid" id="processGrid">
 
-                    <article class="process-box is-open">
+                    <article class="process-box reveal-card is-open">
                         <div class="process-box__meta">
                             <span class="process-box__step">اول</span>
                             <span class="process-box__vtitle">گفتگوی اولیه</span>
@@ -325,7 +329,7 @@
                         </div>
                     </article>
 
-                    <article class="process-box">
+                    <article class="process-box reveal-card">
                         <div class="process-box__meta">
                             <span class="process-box__step">دوم</span>
                             <span class="process-box__vtitle">جمع‌آوری بریف</span>
@@ -339,7 +343,7 @@
                         </div>
                     </article>
 
-                    <article class="process-box">
+                    <article class="process-box reveal-card">
                         <div class="process-box__meta">
                             <span class="process-box__step">سوم</span>
                             <span class="process-box__vtitle">پروپوزال و زمان‌بندی</span>
@@ -353,7 +357,7 @@
                         </div>
                     </article>
 
-                    <article class="process-box">
+                    <article class="process-box reveal-card">
                         <div class="process-box__meta">
                             <span class="process-box__step">چهارم</span>
                             <span class="process-box__vtitle">قرارداد و پیش‌پرداخت</span>
@@ -367,7 +371,7 @@
                         </div>
                     </article>
 
-                    <article class="process-box">
+                    <article class="process-box reveal-card">
                         <div class="process-box__meta">
                             <span class="process-box__step">پنجم</span>
                             <span class="process-box__vtitle">طراحی/توسعه</span>
@@ -381,7 +385,7 @@
                         </div>
                     </article>
 
-                    <article class="process-box">
+                    <article class="process-box reveal-card">
                         <div class="process-box__meta">
                             <span class="process-box__step">ششم</span>
                             <span class="process-box__vtitle">تحویل نهایی</span>
@@ -408,7 +412,7 @@
 
                 <div class="avail-grid">
 
-                    <div class="avail-card">
+                    <div class="avail-card reveal-up">
                         <div class="avail-card__header">
                             <span class="status-dot" id="statusDot"></span>
                             <span class="status-text" id="statusText">در دسترس برای پروژه‌های جدید</span>
@@ -426,7 +430,7 @@
                         </div>
                     </div>
 
-                    <div class="avail-card">
+                    <div class="avail-card reveal-up">
                         <div class="avail-card__header">
                             <span class="status-text">موقعیت زمانی</span>
                         </div>
@@ -450,7 +454,7 @@
                 <h2 class="section-title">هر چیزی که ممکنه بپرسی</h2>
                 <p class="section-subtitle">جواب سوالات پرتکرار رو اینجا گذاشتم</p>
                 <div class="faq-list">
-                    <div class="faq-item">
+                    <div class="faq-item reveal-up">
                         <button class="faq-question" aria-expanded="false">
                             <span>چه مدت طول می‌کشد تا به پیام من پاسخ دهید؟</span>
                             <span class="faq-icon">+</span>
@@ -459,7 +463,7 @@
                             <div class="faq-answer">بین ۲ تا ۲۴ ساعت جوابتون رو می‌دم. معمولاً خیلی زودتر هم پاسخ میدم، ولی گاهی حجم کار زیاد میشه. برام مهمه که سریع و دقیق باهاتون در ارتباط باشم، چون می‌دونم وقتتون ارزشمنده.</div>
                         </div>
                     </div>
-                    <div class="faq-item">
+                    <div class="faq-item reveal-up">
                         <button class="faq-question" aria-expanded="false">
                             <span>بهترین راه برای برقراری ارتباط با شما چیست؟</span>
                             <span class="faq-icon">+</span>
@@ -468,7 +472,7 @@
                             <div class="faq-answer">هیچ محدودیتی ندارم. فرم همین صفحه رو پر کنید، ایمیل بزنید، زنگ بزنید یا تو تلگرام و واتس‌اپ پیام بدید. هر کدوم براتون راحت‌تره.</div>
                         </div>
                     </div>
-                    <div class="faq-item">
+                    <div class="faq-item reveal-up">
                         <button class="faq-question" aria-expanded="false">
                             <span>ساعات کاری شما برای پاسخگویی به چه صورت است؟</span>
                             <span class="faq-icon">+</span>
@@ -477,7 +481,7 @@
                             <div class="faq-answer">روزهای کاری ۹ صبح تا ۵ عصر پاسخگوی پیام‌ها و تماس‌ها هستم. اگه خارج از ایران هستید، حتماً به ساعت محلی ایران که تو همین صفحه نمایش داده میشه توجه کنید.</div>
                         </div>
                     </div>
-                    <div class="faq-item">
+                    <div class="faq-item reveal-up">
                         <button class="faq-question" aria-expanded="false">
                             <span>برای استعلام قیمت پروژه‌ام باید از طریق همین صفحه اقدام کنم؟</span>
                             <span class="faq-icon">+</span>
@@ -486,7 +490,7 @@
                             <div class="faq-answer">قیمت‌ها رو شفاف و کامل تو صفحه «تعرفه‌ها» گذاشتم. اول اونجا رو ببینید، بعد اگه نیاز به برآورد اختصاصی داشتید از همین صفحه پیام بدید.</div>
                         </div>
                     </div>
-                    <div class="faq-item">
+                    <div class="faq-item reveal-up">
                         <button class="faq-question" aria-expanded="false">
                             <span>بعد از ارسال پیام یا فرم، چه اتفاقی می‌افتد؟</span>
                             <span class="faq-icon">+</span>
@@ -645,5 +649,8 @@
 
         })();
     </script>
+
+    <!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
+    <script src="/assets/components/animations.js"></script>
 </body>
 </html>

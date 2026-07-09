@@ -127,7 +127,7 @@
                     "@id": "https://arminsilatani.com/ar/contact/#image",
                     "contentUrl": "https://arminsilatani.com/images/contact.jpg",
                     "name": "تواصل مع آرمین سيلاطاني",
-                    "description": "تماس با آرمین سیلاطانی", <!-- LANG -->
+                    "description": "تماس با آرمین سیلاطانی",
                     "inLanguage": "ar"
                 },
                 {
@@ -180,6 +180,10 @@
             ]
         }
     </script>
+
+    <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -196,7 +200,7 @@
             <div class="hero-container">
                 <language-component></language-component>
                 <div class="hero-title">
-                    <h1>تواصل معي</h1>
+                    <h1 class="split-title">تواصل معي</h1>
                 </div>
             </div>
 
@@ -229,22 +233,22 @@
 
                     <!-- Info Side -->
                     <div class="contact-info">
-                        <div class="contact-info__card contact-info__card--featured">
+                        <div class="contact-info__card contact-info__card--featured reveal-up">
                             <img src="/assets/images/arminsilatani/contact/FeaturedImage.webp" alt="رجل يتحدث بالهاتف مع كلب صغير يرتدي سترة خضراء" class="contact-info__image">
                         </div>
-                        <div class="contact-info__card">
+                        <div class="contact-info__card reveal-up">
                             <div class="contact-info__label">البريد الإلكتروني</div>
                             <a href="mailto:hello@example.com" class="contact-info__value">contact@arminsilatani.com</a>
                         </div>
-                        <div class="contact-info__card">
+                        <div class="contact-info__card reveal-up">
                             <div class="contact-info__label">الهاتف / تيليجرام / واتساب</div>
                             <a href="tel:+989123456789" class="contact-info__value">00989125759466</a>
                         </div>
-                        <div class="contact-info__card">
+                        <div class="contact-info__card reveal-up">
                             <div class="contact-info__label">وقت الرد المعتاد</div>
                             <span class="contact-info__value">بين ساعتين و24 ساعة</span>
                         </div>
-                        <div class="social-dots">
+                        <div class="social-dots reveal-up">
                             <a href="https://t.me/ArminSilatani" class="social-dot">
                                 <!-- Telegram -->
                                 <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -280,7 +284,7 @@
                     </div>
 
                     <!-- Form Side -->
-                    <div class="contact-form-wrapper">
+                    <div class="contact-form-wrapper reveal-up">
                         <form id="contactForm" novalidate>
                             <div class="form-group">
                                 <label for="name">اسمك</label>
@@ -313,9 +317,9 @@
                 <p class="section-subtitle">مسار واضح ومباشر من أول تواصل حتى التسليم.</p>
             </div>
             <div class="container-1300">
-                <div class="process-grid" id="processGrid">
+                <div class="process-grid categories-grid" id="processGrid">
 
-                    <article class="process-box is-open">
+                    <article class="process-box reveal-card is-open">
                         <div class="process-box__meta">
                             <span class="process-box__step">الأول</span>
                             <span class="process-box__vtitle">مكالمة أولى</span>
@@ -329,7 +333,7 @@
                         </div>
                     </article>
 
-                    <article class="process-box">
+                    <article class="process-box reveal-card">
                         <div class="process-box__meta">
                             <span class="process-box__step">الثاني</span>
                             <span class="process-box__vtitle">تجميع موجز المشروع</span>
@@ -343,7 +347,7 @@
                         </div>
                     </article>
 
-                    <article class="process-box">
+                    <article class="process-box reveal-card">
                         <div class="process-box__meta">
                             <span class="process-box__step">الثالث</span>
                             <span class="process-box__vtitle">العرض والجدول الزمني</span>
@@ -357,7 +361,7 @@
                         </div>
                     </article>
 
-                    <article class="process-box">
+                    <article class="process-box reveal-card">
                         <div class="process-box__meta">
                             <span class="process-box__step">الرابع</span>
                             <span class="process-box__vtitle">العقد والدفعة الأولى</span>
@@ -371,7 +375,7 @@
                         </div>
                     </article>
 
-                    <article class="process-box">
+                    <article class="process-box reveal-card">
                         <div class="process-box__meta">
                             <span class="process-box__step">الخامس</span>
                             <span class="process-box__vtitle">التصميم والتطوير</span>
@@ -385,7 +389,7 @@
                         </div>
                     </article>
 
-                    <article class="process-box">
+                    <article class="process-box reveal-card">
                         <div class="process-box__meta">
                             <span class="process-box__step">السادس</span>
                             <span class="process-box__vtitle">التسليم والدعم</span>
@@ -412,7 +416,7 @@
 
                 <div class="avail-grid">
 
-                    <div class="avail-card">
+                    <div class="avail-card reveal-up">
                         <div class="avail-card__header">
                             <span class="status-dot" id="statusDot"></span>
                             <span class="status-text" id="statusText">در دسترس برای پروژه‌های جدید</span>
@@ -431,7 +435,7 @@
                         </div>
                     </div>
 
-                    <div class="avail-card">
+                    <div class="avail-card reveal-up">
                         <div class="avail-card__header">
                             <span class="status-text">الموقع الزمني</span>
                         </div>
@@ -455,7 +459,7 @@
                 <h2 class="section-title">كل ما قد تسأل عنه</h2>
                 <p class="section-subtitle">وضعت هنا إجابات الأسئلة المتكررة</p>
                 <div class="faq-list">
-                    <div class="faq-item">
+                    <div class="faq-item reveal-up">
                         <button class="faq-question" aria-expanded="false">
                             <span>كم من الوقت يستغرق الرد على رسالتي؟</span>
                             <span class="faq-icon">+</span>
@@ -464,7 +468,7 @@
                             <div class="faq-answer">غالباً ما تلقى ردّي خلال ساعتين إلى 24 ساعة، وأحياناً يكون الرد فورياً لو كنت متاحاً. أحرص دايم على التواصل السريع لأني أقدّر وقتك.</div>
                         </div>
                     </div>
-                    <div class="faq-item">
+                    <div class="faq-item reveal-up">
                         <button class="faq-question" aria-expanded="false">
                             <span>ما أفضل طريقة للتواصل معك؟</span>
                             <span class="faq-icon">+</span>
@@ -473,7 +477,7 @@
                             <div class="faq-answer">كل الطرق مفتوحة: تقدر تملأ النموذج هنا، تبعتلي إيميل، تتصل، أو تتواصل معاي عبر تيليجرام أو واتساب. اختر اللي يريحك.</div>
                         </div>
                     </div>
-                    <div class="faq-item">
+                    <div class="faq-item reveal-up">
                         <button class="faq-question" aria-expanded="false">
                             <span>ما هي ساعات عملك للرد؟</span>
                             <span class="faq-icon">+</span>
@@ -482,7 +486,7 @@
                             <div class="faq-answer">أيام العمل من 9 صباحاً لـ 5 مساءً (بتوقيت إيران) أكون متاح للردود والمكالمات. لو كنت برا إيران، راعي فارق التوقيت حسب ما هو موضح فوق.</div>
                         </div>
                     </div>
-                    <div class="faq-item">
+                    <div class="faq-item reveal-up">
                         <button class="faq-question" aria-expanded="false">
                             <span>هل يجب أن أطلب عرض سعر لمشروعي من خلال هذه الصفحة؟</span>
                             <span class="faq-icon">+</span>
@@ -491,7 +495,7 @@
                             <div class="faq-answer">شفافية الأسعار مهمة. تقدر تشوف الأسعار التقريبية في صفحة "الأسعار" أولاً. ولو تحتاج عرض مخصّص لمشروعك، تواصل معاي من هنا.</div>
                         </div>
                     </div>
-                    <div class="faq-item">
+                    <div class="faq-item reveal-up">
                         <button class="faq-question" aria-expanded="false">
                             <span>ماذا يحدث بعد إرسال الرسالة أو النموذج؟</span>
                             <span class="faq-icon">+</span>
@@ -634,5 +638,8 @@
             document.head.appendChild(shakeStyle);
         })();
     </script>
+
+    <!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
+    <script src="/assets/components/animations.js"></script>
 </body>
 </html>
