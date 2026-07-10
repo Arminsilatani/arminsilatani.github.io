@@ -1,9 +1,7 @@
 /*
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-05-29
-  *  Version: 0.0.0
-  ****************************************************
+  Author: Armin Silatani
+  Date: 2026-07-10
+  Version: 0.0.0
 */
 
 /* =========================== PORTFOLIO STYLES ============================ */
@@ -48,8 +46,11 @@ body.portfolio-page {
   margin: 0;
   color: var(--text);
   overflow-x: hidden;
-  background:
-    radial-gradient(circle at top right, rgba(78, 205, 196, 0.08), transparent 24%),
+  background: radial-gradient(
+      circle at top right,
+      rgba(78, 205, 196, 0.08),
+      transparent 24%
+    ),
     radial-gradient(circle at left center, rgba(78, 205, 196, 0.05), transparent 22%),
     var(--bg);
 }
@@ -130,12 +131,8 @@ button {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border);
   border-radius: 18px;
-  transition:
-    transform 0.35s ease,
-    border-color 0.35s ease,
-    background 0.35s ease,
-    color 0.35s ease,
-    box-shadow 0.35s ease;
+  transition: transform 0.35s ease, border-color 0.35s ease, background 0.35s ease,
+    color 0.35s ease, box-shadow 0.35s ease;
 }
 
 .quick-link::before {
@@ -143,7 +140,12 @@ button {
   position: absolute;
   inset: 0;
   opacity: 0;
-  background: linear-gradient(120deg, transparent, rgba(78, 205, 196, 0.06), transparent);
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(78, 205, 196, 0.06),
+    transparent
+  );
   transition: opacity 0.35s ease;
 }
 
@@ -164,7 +166,16 @@ button {
   width: 58px;
 }
 
-/* ===== شبکه ===== */
+.quick-link:hover {
+  color: #0d0d0d;
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 10px 5px rgba(78, 205, 196, 0.8),
+    0 0 20px 10px rgba(78, 205, 196, 0.6), 0 0 30px 15px rgba(78, 205, 196, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ------------------------- CATEGORIES GRID ------------------------- */
 .categories-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -175,26 +186,31 @@ button {
   margin-inline-end: 22px;
 }
 
-/* ===== استایل عمومی کارت‌ها ===== */
+.categories-grid .category-graphic-card {
+  grid-column: 1 / -1;
+  margin-block-start: 22px;
+  min-height: 350px;
+}
+
+/* ------------------------- CATEGORY CARD ------------------------- */
 .category-card {
   position: relative;
   min-height: 320px;
   padding: 24px;
   overflow: hidden;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.02)
+  );
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  transition:
-    transform 0.45s ease,
-    border-color 0.45s ease,
-    background 0.45s ease;
-
+  transition: transform 0.45s ease, border-color 0.45s ease, background 0.45s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-/* ===== بخش‌های داخلی کارت ===== */
 .category-card__top,
 .category-card__footer {
   display: flex;
@@ -239,7 +255,6 @@ button {
   color: var(--text-soft);
 }
 
-/* ===== فلش (آینه‌ای + انیمیشن) ===== */
 .category-card__footer svg {
   width: 22px;
   height: 22px;
@@ -251,7 +266,6 @@ button {
   transform: scaleX(-1) translateX(-6px);
 }
 
-/* ===== گلو و hover ===== */
 .card-glow {
   position: absolute;
   width: 240px;
@@ -279,24 +293,13 @@ button {
 }
 
 .category-card:hover {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.03)
+  );
   border-color: var(--accent-border);
   transform: translateY(-8px);
-}
-
-.categories-grid .category-graphic-card {
-  grid-column: 1 / -1;
-  margin-block-start: 22px;
-  min-height: 350px;
-}
-
-/* ------------------------- EXPANDABLE LIST ------------------------- */
-.extra-item {
-  display: none;
-}
-
-.extra-item.is-visible {
-  display: grid;
 }
 
 /* ------------------------- PORTFOLIO LIST ------------------------- */
@@ -320,10 +323,7 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 24px;
   backdrop-filter: blur(6px);
-  transition:
-    transform 0.4s ease,
-    border-color 0.4s ease,
-    background 0.4s ease,
+  transition: transform 0.4s ease, border-color 0.4s ease, background 0.4s ease,
     box-shadow 0.4s ease;
 }
 
@@ -380,9 +380,7 @@ button {
   font-size: 20px;
   font-weight: 600;
   line-height: 1.5;
-  transition:
-    transform 0.35s ease,
-    color 0.35s ease;
+  transition: transform 0.35s ease, color 0.35s ease;
 }
 
 .portfolio-row__year {
@@ -408,10 +406,7 @@ button {
   box-shadow: none !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
-  transition:
-    color 0.35s ease,
-    transform 0.35s ease,
-    opacity 0.35s ease;
+  transition: color 0.35s ease, transform 0.35s ease, opacity 0.35s ease;
 }
 
 .portfolio-row__year::before {
@@ -420,20 +415,14 @@ button {
   width: 28px;
   height: 1px;
   background: rgba(255, 255, 255, 0.18);
-  transition:
-    width 0.35s ease,
-    background 0.35s ease,
-    opacity 0.35s ease;
+  transition: width 0.35s ease, background 0.35s ease, opacity 0.35s ease;
 }
 
 .portfolio-row__hint {
   color: rgba(255, 255, 255, 0.42);
   font-size: 13px;
   font-weight: 500;
-  transition:
-    opacity 0.35s ease,
-    transform 0.35s ease,
-    color 0.35s ease;
+  transition: opacity 0.35s ease, transform 0.35s ease, color 0.35s ease;
 }
 
 .portfolio-row__glow {
@@ -448,9 +437,7 @@ button {
   border-radius: 50%;
   filter: blur(55px);
   transform: translateY(-50%);
-  transition:
-    opacity 0.45s ease,
-    right 0.45s ease;
+  transition: opacity 0.45s ease, right 0.45s ease;
 }
 
 .portfolio-row__line {
@@ -468,8 +455,7 @@ button {
 .portfolio-row:hover {
   background: rgba(78, 205, 196, 0.07);
   border-color: rgba(78, 205, 196, 0.35);
-  box-shadow:
-    0 14px 34px rgba(0, 0, 0, 0.26),
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.26),
     inset 0 0 0 1px rgba(78, 205, 196, 0.08);
   transform: translateY(-4px);
 }
@@ -508,43 +494,7 @@ button {
   transform: scaleX(1);
 }
 
-/* ------------------------- SHARED HOVER GLOW ------------------------- */
-/* glow نئونی فقط برای quick-link, primary-btn, secondary-btn */
-.quick-link:hover,
-.primary-btn:hover,
-.secondary-btn:hover {
-  color: #0d0d0d;
-  background: var(--accent);
-  border-color: var(--accent);
-  box-shadow:
-    0 0 10px 5px rgba(78, 205, 196, 0.8),
-    0 0 20px 10px rgba(78, 205, 196, 0.6),
-    0 0 30px 15px rgba(78, 205, 196, 0.4);
-  transform: translateY(-2px);
-}
-
-/* ------------------------- BUTTONS ------------------------- */
-.show-more-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 0;
-  color: var(--text-soft);
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  transition: color 0.35s ease;
-  outline: none;
-}
-
-.show-more-btn:hover {
-  color: var(--accent);
-}
-
-/* ------------------------- GRAPHIC CARDS (شبیه‌سازی portfolio-row) ------------------------- */
+/* ------------------------- GRAPHIC CARDS ------------------------- */
 .graphic-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -557,13 +507,14 @@ button {
   min-height: 260px;
   padding: 24px;
   overflow: hidden;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.02)
+  );
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  transition:
-    transform 0.45s ease,
-    border-color 0.45s ease,
-    background 0.45s ease;
+  transition: transform 0.45s ease, border-color 0.45s ease, background 0.45s ease;
   text-decoration: none;
   color: inherit;
 }
@@ -573,12 +524,6 @@ button {
   grid-column: span 6;
 }
 
-/* حذف shine قبلی */
-.graphic-card__shine {
-  display: none;
-}
-
-/* ===== نور شناور (glow) – در گوشهٔ راست ===== */
 .graphic-card::after {
   content: "";
   position: absolute;
@@ -591,13 +536,9 @@ button {
   background: rgba(78, 205, 196, 0.18);
   border-radius: 50%;
   filter: blur(50px);
-  transition:
-    opacity 0.45s ease,
-    top 0.45s ease,
-    left 0.45s ease;
+  transition: opacity 0.45s ease, top 0.45s ease, left 0.45s ease;
 }
 
-/* ===== خط زیرین متحرک ===== */
 .graphic-card::before {
   content: "";
   position: absolute;
@@ -611,24 +552,19 @@ button {
   transition: transform 0.45s ease;
 }
 
-/* ------------------------- محتوای داخلی ------------------------- */
 .graphic-card__index {
   display: inline-block;
   margin-bottom: 24px;
   color: var(--accent);
   font-size: 14px;
   font-weight: 700;
-  transition:
-    color 0.35s ease,
-    transform 0.35s ease;
+  transition: color 0.35s ease, transform 0.35s ease;
 }
 
 .graphic-card h3 {
   margin: 0 0 14px;
   font-size: 24px;
-  transition:
-    color 0.35s ease,
-    transform 0.35s ease;
+  transition: color 0.35s ease, transform 0.35s ease;
 }
 
 .graphic-card p {
@@ -638,12 +574,10 @@ button {
   transition: color 0.35s ease;
 }
 
-/* ------------------------- حالت Hover (دقیقاً مثل portfolio-row) ------------------------- */
 .graphic-card:hover {
   background: rgba(78, 205, 196, 0.07);
   border-color: rgba(78, 205, 196, 0.35);
-  box-shadow:
-    0 14px 34px rgba(0, 0, 0, 0.26),
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.26),
     inset 0 0 0 1px rgba(78, 205, 196, 0.08);
   transform: translateY(-4px);
 }
@@ -676,8 +610,11 @@ button {
   position: relative;
   padding: 52px 32px;
   overflow: hidden;
-  background:
-    radial-gradient(circle at top left, rgba(78, 205, 196, 0.12), transparent 28%),
+  background: radial-gradient(
+      circle at top left,
+      rgba(78, 205, 196, 0.12),
+      transparent 28%
+    ),
     radial-gradient(circle at bottom right, rgba(78, 205, 196, 0.1), transparent 25%),
     rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border);
@@ -710,13 +647,8 @@ button {
   padding: 14px 24px;
   border: 1px solid var(--border);
   border-radius: 999px;
-  transition:
-    transform 0.35s ease,
-    background 0.35s ease,
-    border-color 0.35s ease,
-    opacity 0.35s ease,
-    color 0.35s ease,
-    box-shadow 0.35s ease;
+  transition: transform 0.35s ease, background 0.35s ease, border-color 0.35s ease,
+    opacity 0.35s ease, color 0.35s ease, box-shadow 0.35s ease;
 }
 
 .primary-btn {
@@ -728,6 +660,67 @@ button {
 .secondary-btn {
   color: var(--text);
   background: rgba(255, 255, 255, 0.03);
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+  color: #0d0d0d;
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 10px 5px rgba(78, 205, 196, 0.8),
+    0 0 20px 10px rgba(78, 205, 196, 0.6), 0 0 30px 15px rgba(78, 205, 196, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ------------------------- BUTTONS ------------------------- */
+.show-more-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0;
+  color: var(--text-soft);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: color 0.35s ease;
+  outline: none;
+}
+
+.show-more-btn:hover {
+  color: var(--accent);
+}
+
+/* ------------------------- EXPANDABLE LIST ------------------------- */
+.extra-item {
+  display: none;
+}
+
+.extra-item.is-visible {
+  display: grid;
+}
+
+.extra-item:not(.is-visible) {
+  display: none !important;
+}
+
+/* ------------------------- LIST WRAPPER ------------------------- */
+.list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.list-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.portfolio-list-section {
+  padding-bottom: 60px;
 }
 
 /* ------------------------- MOTION HELPERS ------------------------- */
@@ -752,24 +745,4 @@ button {
 .js .reveal-card,
 .js .reveal-row {
   opacity: 0;
-}
-
-/* ------------------------- LIST WRAPPER (SMART GAP) ------------------------- */
-.list-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.list-action {
-  display: flex;
-  justify-content: center;
-  margin-top: 0;
-}
-
-.portfolio-list-section {
-  padding-bottom: 60px;
-}
-.extra-item:not(.is-visible) {
-  display: none !important;
 }

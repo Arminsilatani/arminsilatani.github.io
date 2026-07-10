@@ -1,12 +1,27 @@
+/*
+Author: Armin Silatani
+Date: 2026-07-10
+Version: 0.0.0
+*/
+
+/* ========================================================================== */
+/*                              DOCUMENT SETUP                                */
+/* ========================================================================== */
+
 document.documentElement.classList.add("js");
 
 if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-/* -----------------------------------
-   Split Titles - FA friendly
------------------------------------ */
+/* ========================================================================== */
+/*                           TEXT SPLITTING LOGIC                             */
+/* ========================================================================== */
+
+/**
+ * Splits title elements into individual words for animation.
+ * Each word is wrapped in a span to enable per-word animations.
+ */
 function splitTextTitles() {
   const titles = document.querySelectorAll(".split-title");
 
@@ -30,9 +45,14 @@ function splitTextTitles() {
   });
 }
 
-/* -----------------------------------
-   Reveal Animations
------------------------------------ */
+/* ========================================================================== */
+/*                         SCROLL REVEAL ANIMATIONS                           */
+/* ========================================================================== */
+
+/**
+ * Initializes scroll-triggered reveal animations for various elements.
+ * Uses GSAP and ScrollTrigger for smooth entrance effects.
+ */
 function initRevealAnimations() {
   if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
 
@@ -115,9 +135,14 @@ function initRevealAnimations() {
   });
 }
 
-/* -----------------------------------
-   Premium Project Row Hover
------------------------------------ */
+/* ========================================================================== */
+/*                      PORTFOLIO ROW HOVER EFFECTS                           */
+/* ========================================================================== */
+
+/**
+ * Adds premium hover interactions to portfolio rows.
+ * Animates glow, line, title, hint, and year elements on hover.
+ */
 function initProjectRowHover() {
   if (typeof gsap === "undefined") return;
 
@@ -170,15 +195,13 @@ function initProjectRowHover() {
         });
       }
 
-     if (year) {
-  gsap.to(year, {
-    x: -4,
-    duration: 0.3,
-    ease: "power2.out"
-  });
-}
-
-
+      if (year) {
+        gsap.to(year, {
+          x: -4,
+          duration: 0.3,
+          ease: "power2.out"
+        });
+      }
     });
 
     row.addEventListener("mouseleave", () => {
@@ -224,21 +247,23 @@ function initProjectRowHover() {
       }
 
       if (year) {
-  gsap.to(year, {
-    x: 0,
-    duration: 0.28,
-    ease: "power2.out"
-  });
-}
-
-
+        gsap.to(year, {
+          x: 0,
+          duration: 0.28,
+          ease: "power2.out"
+        });
+      }
     });
   });
 }
 
-/* -----------------------------------
-   Graphic Card Shine
------------------------------------ */
+/* ========================================================================== */
+/*                       GRAPHIC CARD SHINE EFFECT                            */
+/* ========================================================================== */
+
+/**
+ * Adds animated shine effect to graphic cards on hover.
+ */
 function initGraphicHover() {
   if (typeof gsap === "undefined") return;
 
@@ -260,7 +285,14 @@ function initGraphicHover() {
   });
 }
 
-/* ------------------------- EXPANDABLE LISTS (نمایش ۵تایی + SaaS + FLIP) ------------------------- */
+/* ========================================================================== */
+/*                         EXPANDABLE LIST SYSTEM                             */
+/* ========================================================================== */
+
+/**
+ * Manages expandable portfolio lists with batch reveal (5 items at a time).
+ * Uses FLIP animation for smooth button repositioning.
+ */
 function initExpandableLists() {
   const buttons = document.querySelectorAll("[data-toggle-list]");
 
@@ -279,32 +311,26 @@ function initExpandableLists() {
       return;
     }
 
-    // حالت اولیه: همهٔ آیتم‌های اضافی مخفی هستند
     let visibleCount = 0;
     const batchSize = 5;
 
     button.addEventListener("click", () => {
-      // تعداد آیتم‌هایی که هنوز مخفی‌اند
       const remaining = extraItems.length - visibleCount;
       if (remaining <= 0) return;
 
-      // تعیین تعداد آیتم‌هایی که این بار نمایش داده می‌شوند
       const itemsToShow = Math.min(batchSize, remaining);
       const batchItems = extraItems.slice(visibleCount, visibleCount + itemsToShow);
 
-      // ۱. ذخیره موقعیت فعلی دکمه (برای FLIP)
       const btnRect = button.getBoundingClientRect();
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const initialTop = btnRect.top + scrollTop;
 
-      // ۲. نمایش آیتم‌های این دسته
       batchItems.forEach((item) => {
         item.classList.add("is-visible");
       });
 
       visibleCount += itemsToShow;
 
-      // ۳. انیمیشن FLIP برای جابجایی نرم دکمه
       requestAnimationFrame(() => {
         const newBtnRect = button.getBoundingClientRect();
         const newTop = newBtnRect.top + (window.pageYOffset || document.documentElement.scrollTop);
@@ -319,7 +345,6 @@ function initExpandableLists() {
           });
         }
 
-        // ۴. انیمیشن SaaS برای آیتم‌های تازه
         if (typeof gsap !== "undefined") {
           batchItems.forEach((item, index) => {
             gsap.set(item, {
@@ -337,7 +362,6 @@ function initExpandableLists() {
               delay: index * 0.06,
               ease: "power3.out",
               onComplete: () => {
-                // پس از آخرین آیتم، ScrollTrigger را به‌روز کن
                 if (index === batchItems.length - 1 && typeof ScrollTrigger !== "undefined") {
                   ScrollTrigger.refresh();
                 }
@@ -346,13 +370,11 @@ function initExpandableLists() {
           });
         }
 
-        // ۵. به‌روزرسانی متن دکمه و محو شدن در صورت نمایش همه
         if (label) {
           const left = extraItems.length - visibleCount;
           if (left > 0) {
             label.textContent = `نمایش بیشتر (${left} باقی‌مانده)`;
           } else {
-            // محو کردن دکمه وقتی همه نمایش داده شدند
             if (typeof gsap !== "undefined") {
               gsap.to(button, {
                 opacity: 0,
@@ -368,16 +390,21 @@ function initExpandableLists() {
         }
       });
 
-      // به‌روزرسانی ScrollTrigger
       if (typeof ScrollTrigger !== "undefined") {
         setTimeout(() => ScrollTrigger.refresh(), 400);
       }
     });
   });
 }
-/* -----------------------------------
-   Magnetic CTA Buttons
------------------------------------ */
+
+/* ========================================================================== */
+/*                        MAGNETIC CTA BUTTON EFFECT                          */
+/* ========================================================================== */
+
+/**
+ * Creates magnetic follow effect on CTA buttons.
+ * Button subtly follows cursor movement within its bounds.
+ */
 function initMagneticButtons() {
   if (typeof gsap === "undefined") return;
 
@@ -406,9 +433,13 @@ function initMagneticButtons() {
   });
 }
 
-/* -----------------------------------
-   CTA Glow Pulse
------------------------------------ */
+/* ========================================================================== */
+/*                          CTA GLOW PULSE EFFECT                             */
+/* ========================================================================== */
+
+/**
+ * Adds infinite pulsing animation to CTA glow element.
+ */
 function initGlowPulse() {
   if (typeof gsap === "undefined") return;
 
@@ -426,9 +457,10 @@ function initGlowPulse() {
   });
 }
 
-/* -----------------------------------
-   Init
------------------------------------ */
+/* ========================================================================== */
+/*                            INITIALIZATION                                  */
+/* ========================================================================== */
+
 document.addEventListener("DOMContentLoaded", () => {
   splitTextTitles();
   initRevealAnimations();

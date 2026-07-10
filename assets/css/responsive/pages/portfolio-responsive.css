@@ -1,12 +1,17 @@
-/* ============================================
-   فقط یک اسکرین: موبایل نسخه صفحه نمونه کارها
-   شامل: Hero + سه کارت دسته‌بندی
-   بدون استفاده از !important
-   ============================================ */
+/*
+Author: Armin Silatani
+Date: 2026-07-10
+Version: 0.0.0
+*/
+
+/* ============================================================
+   PORTFOLIO PAGE — MOBILE STYLES (Single Breakpoint)
+   Hero + Intro + 3 Category Cards + Project List + Graphic Cards
+   ============================================================ */
 
 @media (max-width: 768px) {
 
-  /* -------- ۱. بخش قهرمان (Hero) -------- */
+  /* ------------------------- HERO SECTION ------------------------- */
   body.portfolio-page .hero-section {
     padding: 20px 0 30px;
   }
@@ -17,19 +22,20 @@
   }
 
   body.portfolio-page .fake-terminal-breadcrumb {
-  display: flex; /* یا block */
-  /* میتونید سایز فونت رو هم کوچک‌تر کنید */
-  font-size: 12px;
-  padding: 6px 12px;
-}
-body.portfolio-page .section-title.split-title .word {
-    font-size: 30px !important; /* یا هر سایز دیگه‌ای که میخواین */
+    display: flex;
+    font-size: 12px;
+    padding: 6px 12px;
   }
-  /* -------- ۲. بخش معرفی (Intro) -------- */
-body.portfolio-page .portfolio-intro__grid {
+
+  body.portfolio-page .section-title.split-title .word {
+    font-size: 30px !important;
+  }
+
+  /* ------------------------- INTRO SECTION ------------------------- */
+  body.portfolio-page .portfolio-intro__grid {
     display: flex;
     flex-direction: column;
-    gap: 40px; /* فاصله بین محتوا و دکمه‌ها */
+    gap: 40px;
   }
 
   body.portfolio-page .portfolio-intro__content {
@@ -37,8 +43,8 @@ body.portfolio-page .portfolio-intro__grid {
     text-align: center;
   }
 
-body.portfolio-page .portfolio-intro__nav {
-    order: 2; /* دوم: دکمه‌ها */
+  body.portfolio-page .portfolio-intro__nav {
+    order: 2;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -57,7 +63,7 @@ body.portfolio-page .portfolio-intro__nav {
     border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
   }
 
-body.portfolio-page .quick-link i {
+  body.portfolio-page .quick-link i {
     display: block;
     width: 30px;
     height: 1px;
@@ -67,11 +73,10 @@ body.portfolio-page .quick-link i {
   }
 
   body.portfolio-page .quick-link:hover i {
-  width: 40px;
-}
+    width: 40px;
+  }
 
-
-  /* -------- ۳. سه کارت دسته‌بندی -------- */
+  /* ------------------------- CATEGORY CARDS SECTION ------------------------- */
   body.portfolio-page .categories-grid {
     display: flex;
     flex-direction: column;
@@ -79,9 +84,9 @@ body.portfolio-page .quick-link i {
   }
 
   body.portfolio-page .category-card {
-  padding: 28px 20px; /* افزایش padding داخلی */
-  min-height: 260px; /* تنظیم حداقل ارتفاع */
-}
+    padding: 28px 20px;
+    min-height: 260px;
+  }
 
   body.portfolio-page .seo-card {
     margin-inline-end: 0;
@@ -94,15 +99,15 @@ body.portfolio-page .quick-link i {
   }
 
   body.portfolio-page .category-card__top {
-  margin-bottom: 16px; /* فاصله بیشتر بین شماره و عنوان */
-}
+    margin-bottom: 16px;
+  }
 
-body.portfolio-page .category-card__body {
-  flex: 1; /* بخش میانی رو کش بیار تا فضا پر بشه */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* محتوای بخش میانی وسط قرار بگیره */
-}
+  body.portfolio-page .category-card__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   body.portfolio-page .category-number {
     font-size: 32px;
@@ -133,7 +138,7 @@ body.portfolio-page .category-card__body {
     height: 18px;
   }
 
-  /* -------- ۴. تنظیمات کلی -------- */
+  /* ------------------------- GENERAL SETTINGS ------------------------- */
   body.portfolio-page .container {
     width: min(100% - 20px, 1280px);
   }
@@ -143,22 +148,23 @@ body.portfolio-page .category-card__body {
   }
 
   body.portfolio-page .section-title {
-  margin-top: 0 !important; /* حذف فاصله اضافی بالای تایتل */
-  margin-bottom: 0 !important; /* حذف فاصله زیر تایتل */
-}
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
 
   body.portfolio-page .section-desc {
-  margin-top: 8px !important; /* کاهش فاصله تایتل تا توضیح */
-}
+    margin-top: 8px !important;
+  }
 
   body.portfolio-page .eyebrow {
-  margin-bottom: 4px !important; /* کاهش فاصله ابرو تا تایتل */
-}
+    margin-bottom: 4px !important;
+  }
+
   body.portfolio-page .section-heading {
     margin-bottom: 28px;
   }
 
-  /* حذف افکت‌های اضافی */
+  /* Remove extra decorative effects */
   body.portfolio-page .card-glow {
     display: none;
   }
@@ -167,8 +173,8 @@ body.portfolio-page .category-card__body {
     transform: translateY(-3px);
   }
 
-  /* -------- کارت‌های لیست پروژه در موبایل -------- */
-body.portfolio-page .portfolio-row {
+  /* ------------------------- PROJECT LIST CARDS (MOBILE) ------------------------- */
+  body.portfolio-page .portfolio-row {
     display: flex;
     align-items: center;
     padding: 14px 18px;
@@ -179,15 +185,15 @@ body.portfolio-page .portfolio-row {
     min-height: auto;
   }
 
-/* wrapper عنوان و تاریخ رو حذف می‌کنیم تا فرزندانش مستقیماً در grid قرار بگیرن */
-body.portfolio-page .portfolio-row__top {
+  /* Title/date wrapper removed so children align directly in grid */
+  body.portfolio-page .portfolio-row__top {
     display: flex !important;
     align-items: center;
     gap: 12px;
     width: 100%;
   }
 
-body.portfolio-page .portfolio-row__year {
+  body.portfolio-page .portfolio-row__year {
     font-size: 0.7rem;
     color: rgba(255, 255, 255, 0.42);
     letter-spacing: 0.16em;
@@ -199,8 +205,8 @@ body.portfolio-page .portfolio-row__year {
     white-space: nowrap;
   }
 
-/* عنوان در ستون دوم (وسط) */
-body.portfolio-page .portfolio-row__title {
+  /* Title in second column (center) */
+  body.portfolio-page .portfolio-row__title {
     font-size: 19px;
     font-weight: 600;
     color: #f5f7fb;
@@ -208,8 +214,8 @@ body.portfolio-page .portfolio-row__title {
     flex: 1;
   }
 
-/* بخش محتوا (شامل عنوان و زیرنویس) در ستون دوم، ردیف دوم */
-body.portfolio-page .portfolio-row__content {
+  /* Content block (title + subtitle) in second column, second row */
+  body.portfolio-page .portfolio-row__content {
     display: flex !important;
     flex: 1;
     align-items: center;
@@ -217,22 +223,102 @@ body.portfolio-page .portfolio-row__content {
     width: 100%;
   }
 
-/* زیرنویس "مشاهده پروژه" */
-body.portfolio-page .portfolio-row__hint {
-  display: none;
-}
+  /* 'View project' subtitle */
+  body.portfolio-page .portfolio-row__hint {
+    display: none;
+  }
 
-/* شماره در ستون سوم (راست) */
-body.portfolio-page .portfolio-row__index {
-  display: none;
-}
+  /* Index number in third column (right) */
+  body.portfolio-page .portfolio-row__index {
+    display: none;
+  }
 
-/* حذف افکت‌های اضافی */
-body.portfolio-page .portfolio-row__glow {
-  display: none;
-}
+  /* Remove extra decorative effects */
+  body.portfolio-page .portfolio-row__glow {
+    display: none;
+  }
 
-body.portfolio-page .portfolio-row__line {
-  display: none;
-}
+  body.portfolio-page .portfolio-row__line {
+    display: none;
+  }
+
+  /* ------------------------- GRAPHIC CARDS SECTION ------------------------- */
+  body.portfolio-page .graphic-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  body.portfolio-page .graphic-card {
+    grid-column: auto !important;
+    min-height: auto;
+    padding: 20px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+    border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+    transition: all 0.35s ease;
+  }
+
+  body.portfolio-page .graphic-card__index {
+    font-size: 13px;
+    margin-bottom: 12px;
+    color: var(--accent);
+  }
+
+  body.portfolio-page .graphic-card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  body.portfolio-page .graphic-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-soft);
+  }
+
+  /* Remove extra decorative effects on mobile */
+  body.portfolio-page .graphic-card__shine {
+    display: none;
+  }
+
+  body.portfolio-page .graphic-card::after,
+  body.portfolio-page .graphic-card::before {
+    display: none;
+  }
+
+  body.portfolio-page .graphic-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(78, 205, 196, 0.35);
+  }
+
+  /* ------------------------- CTA ACTIONS SECTION ------------------------- */
+  body.portfolio-page .cta-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  body.portfolio-page .cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 15px;
+    border-radius: 999px;
+    text-align: center;
+  }
+
+  body.portfolio-page .primary-btn {
+    background: var(--accent);
+    color: #071010;
+    border: none;
+  }
+
+  body.portfolio-page .secondary-btn {
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
 }

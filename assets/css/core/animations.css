@@ -178,12 +178,6 @@
   border: 1px solid var(--border); border-radius: var(--radius-md);
   transition: transform 0.45s ease, border-color 0.45s ease;
 }
-.graphic-card__shine {
-  position: absolute; top: 0; right: -60%; width: 45%; height: 100%;
-  pointer-events: none;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
-  transform: skewX(-20deg);
-}
 .graphic-card:hover {
   transform: translateY(-6px); border-color: var(--accent-border);
 }
