@@ -172,7 +172,7 @@ button {
 }
 
 .seo-card {
-  margin-inline-end: 22px;          /* فاصله افقی بین دو کارت بالا */
+  margin-inline-end: 22px;
 }
 
 /* ===== استایل عمومی کارت‌ها ===== */
@@ -191,7 +191,7 @@ button {
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;    /* بالا چسبیده، وسط، پایین چسبیده */
+  justify-content: space-between;
 }
 
 /* ===== بخش‌های داخلی کارت ===== */
@@ -220,7 +220,7 @@ button {
 }
 
 .category-card__body {
-  margin-top: 0;                    /* فاصله حذف شد */
+  margin-top: 0;
 }
 
 .category-card__body h3 {
@@ -235,7 +235,7 @@ button {
 }
 
 .category-card__footer {
-  margin-top: 0;                    /* فاصله حذف شد */
+  margin-top: 0;
   color: var(--text-soft);
 }
 
@@ -244,11 +244,11 @@ button {
   width: 22px;
   height: 22px;
   transition: transform 0.35s ease;
-  transform: scaleX(-1);            /* آینه شدن برای RTL */
+  transform: scaleX(-1);
 }
 
 .category-card:hover .category-card__footer svg {
-  transform: scaleX(-1) translateX(-6px);  /* حرکت به چپ */
+  transform: scaleX(-1) translateX(-6px);
 }
 
 /* ===== گلو و hover ===== */
@@ -287,7 +287,7 @@ button {
 .categories-grid .category-graphic-card {
   grid-column: 1 / -1;
   margin-block-start: 22px;
-  min-height: 350px;               /* ارتفاع بیشتر */
+  min-height: 350px;
 }
 
 /* ------------------------- EXPANDABLE LIST ------------------------- */
@@ -303,7 +303,7 @@ button {
 .portfolio-list {
   display: grid;
   gap: 14px;
-  margin-top: 0;   /* ← تغییر اصلی: قبلاً 32px بود */
+  margin-top: 0;
 }
 
 .portfolio-row {
@@ -584,8 +584,8 @@ button {
   position: absolute;
   width: 240px;
   height: 240px;
-  top: -100px;        /* نقطه شروع بیرون از کارت در بالا */
-  left: -100px;       /* نقطه شروع بیرون از کارت در چپ */
+  top: -100px;
+  left: -100px;
   opacity: 0;
   pointer-events: none;
   background: rgba(78, 205, 196, 0.18);
@@ -640,7 +640,7 @@ button {
 
 /* ------------------------- حالت Hover (دقیقاً مثل portfolio-row) ------------------------- */
 .graphic-card:hover {
-  background: rgba(78, 205, 196, 0.07);           /* پس‌زمینهٔ رنگی مشابه */
+  background: rgba(78, 205, 196, 0.07);
   border-color: rgba(78, 205, 196, 0.35);
   box-shadow:
     0 14px 34px rgba(0, 0, 0, 0.26),
@@ -649,7 +649,7 @@ button {
 }
 
 .graphic-card:hover::after {
-  top: 20px;          /* رسیدن به گوشهٔ بالا-چپ داخل کارت */
+  top: 20px;
   left: 200px;
   opacity: 1;
 }
@@ -659,8 +659,8 @@ button {
 }
 
 .graphic-card:hover .graphic-card__index {
-  transform: translateX(-8px);          /* حرکت به چپ در RTL */
-  color: var(--accent);                 /* رنگ ثابت می‌ماند اما در صورت نیاز تغییر دهید */
+  transform: translateX(-8px);
+  color: var(--accent);
 }
 
 .graphic-card:hover h3 {
@@ -668,7 +668,7 @@ button {
 }
 
 .graphic-card:hover p {
-  color: var(--accent);                /* تغییر رنگ توضیح (مانند hint در portfolio-row) */
+  color: var(--accent);
 }
 
 /* ------------------------- CTA BOX ------------------------- */
@@ -758,20 +758,18 @@ button {
 .list-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 14px;          /* دقیقاً برابر gap بین portfolio-rowها */
+  gap: 14px;
 }
 
 .list-action {
   display: flex;
   justify-content: center;
-  margin-top: 0;   /* gap در list-wrapper فاصله را تأمین می‌کند */
+  margin-top: 0;
 }
 
-/* کاهش padding-bottom سکشن‌های لیست برای نچسبیدن دکمه به پایین صفحه */
 .portfolio-list-section {
   padding-bottom: 60px;
 }
 .extra-item:not(.is-visible) {
   display: none !important;
 }
-/* ------------------------- RESPONSIVE ------------------------- */

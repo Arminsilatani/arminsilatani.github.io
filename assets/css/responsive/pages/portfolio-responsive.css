@@ -1,0 +1,238 @@
+/* ============================================
+   فقط یک اسکرین: موبایل نسخه صفحه نمونه کارها
+   شامل: Hero + سه کارت دسته‌بندی
+   بدون استفاده از !important
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  /* -------- ۱. بخش قهرمان (Hero) -------- */
+  body.portfolio-page .hero-section {
+    padding: 20px 0 30px;
+  }
+
+  body.portfolio-page .hero-title h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  body.portfolio-page .fake-terminal-breadcrumb {
+  display: flex; /* یا block */
+  /* میتونید سایز فونت رو هم کوچک‌تر کنید */
+  font-size: 12px;
+  padding: 6px 12px;
+}
+body.portfolio-page .section-title.split-title .word {
+    font-size: 30px !important; /* یا هر سایز دیگه‌ای که میخواین */
+  }
+  /* -------- ۲. بخش معرفی (Intro) -------- */
+body.portfolio-page .portfolio-intro__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* فاصله بین محتوا و دکمه‌ها */
+  }
+
+  body.portfolio-page .portfolio-intro__content {
+    order: 1;
+    text-align: center;
+  }
+
+body.portfolio-page .portfolio-intro__nav {
+    order: 2; /* دوم: دکمه‌ها */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  body.portfolio-page .quick-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 14px 20px;
+    font-size: 15px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+  }
+
+body.portfolio-page .quick-link i {
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: currentColor;
+    transform-origin: right;
+    transition: width 0.35s ease;
+  }
+
+  body.portfolio-page .quick-link:hover i {
+  width: 40px;
+}
+
+
+  /* -------- ۳. سه کارت دسته‌بندی -------- */
+  body.portfolio-page .categories-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  body.portfolio-page .category-card {
+  padding: 28px 20px; /* افزایش padding داخلی */
+  min-height: 260px; /* تنظیم حداقل ارتفاع */
+}
+
+  body.portfolio-page .seo-card {
+    margin-inline-end: 0;
+  }
+
+  body.portfolio-page .categories-grid .category-graphic-card {
+    grid-column: auto;
+    margin-block-start: 0;
+    min-height: auto;
+  }
+
+  body.portfolio-page .category-card__top {
+  margin-bottom: 16px; /* فاصله بیشتر بین شماره و عنوان */
+}
+
+body.portfolio-page .category-card__body {
+  flex: 1; /* بخش میانی رو کش بیار تا فضا پر بشه */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* محتوای بخش میانی وسط قرار بگیره */
+}
+
+  body.portfolio-page .category-number {
+    font-size: 32px;
+  }
+
+  body.portfolio-page .category-badge {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+
+  body.portfolio-page .category-card__body h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  body.portfolio-page .category-card__body p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  body.portfolio-page .category-card__footer {
+    margin-top: 16px;
+    font-size: 14px;
+  }
+
+  body.portfolio-page .category-card__footer svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* -------- ۴. تنظیمات کلی -------- */
+  body.portfolio-page .container {
+    width: min(100% - 20px, 1280px);
+  }
+
+  body.portfolio-page .section-dark {
+    padding: 40px 0;
+  }
+
+  body.portfolio-page .section-title {
+  margin-top: 0 !important; /* حذف فاصله اضافی بالای تایتل */
+  margin-bottom: 0 !important; /* حذف فاصله زیر تایتل */
+}
+
+  body.portfolio-page .section-desc {
+  margin-top: 8px !important; /* کاهش فاصله تایتل تا توضیح */
+}
+
+  body.portfolio-page .eyebrow {
+  margin-bottom: 4px !important; /* کاهش فاصله ابرو تا تایتل */
+}
+  body.portfolio-page .section-heading {
+    margin-bottom: 28px;
+  }
+
+  /* حذف افکت‌های اضافی */
+  body.portfolio-page .card-glow {
+    display: none;
+  }
+
+  body.portfolio-page .category-card:hover {
+    transform: translateY(-3px);
+  }
+
+  /* -------- کارت‌های لیست پروژه در موبایل -------- */
+body.portfolio-page .portfolio-row {
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+    gap: 12px;
+    border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.025);
+    min-height: auto;
+  }
+
+/* wrapper عنوان و تاریخ رو حذف می‌کنیم تا فرزندانش مستقیماً در grid قرار بگیرن */
+body.portfolio-page .portfolio-row__top {
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+body.portfolio-page .portfolio-row__year {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.42);
+    letter-spacing: 0.16em;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+  }
+
+/* عنوان در ستون دوم (وسط) */
+body.portfolio-page .portfolio-row__title {
+    font-size: 19px;
+    font-weight: 600;
+    color: #f5f7fb;
+    margin: 0;
+    flex: 1;
+  }
+
+/* بخش محتوا (شامل عنوان و زیرنویس) در ستون دوم، ردیف دوم */
+body.portfolio-page .portfolio-row__content {
+    display: flex !important;
+    flex: 1;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+/* زیرنویس "مشاهده پروژه" */
+body.portfolio-page .portfolio-row__hint {
+  display: none;
+}
+
+/* شماره در ستون سوم (راست) */
+body.portfolio-page .portfolio-row__index {
+  display: none;
+}
+
+/* حذف افکت‌های اضافی */
+body.portfolio-page .portfolio-row__glow {
+  display: none;
+}
+
+body.portfolio-page .portfolio-row__line {
+  display: none;
+}
+}
