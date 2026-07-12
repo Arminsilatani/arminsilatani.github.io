@@ -175,63 +175,90 @@ Version: 0.0.0
 
   /* ------------------------- PROJECT LIST CARDS (MOBILE) ------------------------- */
   body.portfolio-page .portfolio-row {
-    display: flex;
-    align-items: center;
-    padding: 14px 18px;
-    gap: 12px;
-    border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.025);
-    min-height: auto;
-  }
+  display: flex;
+  align-items: center;
+  padding: 14px 12px;
+  gap: 8px;
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.025);
+  min-height: auto;
+  position: relative;
+}
 
-  /* Title/date wrapper removed so children align directly in grid */
-  body.portfolio-page .portfolio-row__top {
-    display: flex !important;
-    align-items: center;
-    gap: 12px;
-    width: 100%;
-  }
+body.portfolio-page .portfolio-row__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+}
 
-  body.portfolio-page .portfolio-row__year {
-    font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.42);
-    letter-spacing: 0.16em;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    white-space: nowrap;
-  }
+body.portfolio-page .portfolio-row__year {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.42);
+  letter-spacing: 0.12em;
+  margin: -20px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  position: relative;
+  top: 15px;
+}
 
-  /* Title in second column (center) */
-  body.portfolio-page .portfolio-row__title {
-    font-size: 19px;
-    font-weight: 600;
-    color: #f5f7fb;
-    margin: 0;
-    flex: 1;
-  }
+body.portfolio-page .portfolio-row__year::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.18);
+}
 
-  /* Content block (title + subtitle) in second column, second row */
-  body.portfolio-page .portfolio-row__content {
-    display: flex !important;
-    flex: 1;
-    align-items: center;
-    gap: 12px;
-    width: 100%;
-  }
+body.portfolio-page .portfolio-row__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #f5f7fb;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
-  /* 'View project' subtitle */
-  body.portfolio-page .portfolio-row__hint {
-    display: none;
-  }
+body.portfolio-page .portfolio-row__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  gap: 4px;
+  min-width: 0;
+}
 
-  /* Index number in third column (right) */
-  body.portfolio-page .portfolio-row__index {
-    display: none;
-  }
+body.portfolio-page .portfolio-row__hint {
+  display: block;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+body.portfolio-page .portfolio-row__glow,
+body.portfolio-page .portfolio-row__line {
+  display: none;
+}
+
+body.portfolio-page .portfolio-row__index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 1.1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
 
   /* Remove extra decorative effects */
   body.portfolio-page .portfolio-row__glow {
