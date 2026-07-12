@@ -271,7 +271,7 @@ class HeaderComponent extends HTMLElement {
       <a href="/ar/about/">من أنا</a>
       <a href="/ar/contact/">تواصل معي</a>
       <a href="/ar/tariff/">الأسعار</a>
-      <a href="#/">أعمالي</a>
+      <a href="/ar/portfolio/">أعمالي</a>
     `;
 
     wrapper.append(lineBox, menu);
