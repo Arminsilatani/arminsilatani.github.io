@@ -262,7 +262,7 @@ class HeaderComponent extends HTMLElement {constructor() {
       <a href="/de/about/">Über Mich</a>
       <a href="/de/contact/">Kontakt</a>
       <a href="/de/tariff/">Preise</a>
-      <a href="/de/">Referenzen</a>
+      <a href="/de/portfolio/">Referenzen</a>
     `;
 
     wrapper.appendChild(lineBox);
