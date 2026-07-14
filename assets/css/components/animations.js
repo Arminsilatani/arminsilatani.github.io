@@ -180,7 +180,7 @@ function initGraphicHover() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// 5. EXPANDABLE LISTS (SHOW MORE FUNCTIONALITY)
+// 5. EXPANDABLE LISTS (SHOW MORE)
 // ═══════════════════════════════════════════════════════════════════════════════
 
 function initExpandableLists() {
@@ -189,7 +189,6 @@ function initExpandableLists() {
     if (!list) return;
 
     const extraItems = Array.from(list.querySelectorAll(".extra-item"));
-    const label = button.querySelector("span");
 
     if (!extraItems.length) {
       button.style.display = "none";
@@ -240,17 +239,14 @@ function initExpandableLists() {
           });
         }
 
-        if (label) {
-          const left = extraItems.length - visibleCount;
-          label.textContent = left > 0 ? `نمایش بیشتر (${left} باقی‌مانده)` : "";
-
-          if (left === 0 && typeof gsap !== "undefined") {
+        if (visibleCount >= extraItems.length) {
+          if (typeof gsap !== "undefined") {
             gsap.to(button, {
               opacity: 0,
               duration: 0.3,
               onComplete: () => button.style.display = "none"
             });
-          } else if (left === 0) {
+          } else {
             button.style.display = "none";
           }
         }
