@@ -1,63 +1,51 @@
-/*
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-05-07
-  *  Version: 1.0.0
-  ****************************************************
-*/
-
-/* =========================== UI CHECKBOX SYSTEM - NEON STYLE ============================ */
-
-/* ------------------------- BASE ANIMATIONS ------------------------- */
+/* :::::::::::::::::::::::::: ANIMATIONS :::::::::::::::::::::::::: */
 @keyframes pulseNeon {
-  0%, 100% { opacity: 0; }
-  50% { opacity: 0.75; }
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.75;
+    }
 }
 
-/* ------------------------- COMMON CHECKBOX STYLES ------------------------- */
+/* :::::::::::::::::::::::::: CHECKBOX BASE STYLES :::::::::::::::::::::::::: */
 .green-checkbox,
 .green-checkbox-checked,
 .yellow-checkbox,
 .yellow-checkbox-checked,
 .white-checkbox,
 .red-checkbox {
-  appearance: none;
-  -webkit-appearance: none;
-
-  position: relative;
-  width: 24px;
-  height: 24px;
-  vertical-align: middle;
-  margin: 38;
-  border: none;
-  outline: none;
-  background-color: transparent;
-
-  --c-base: #7a7a7a;
-  --c-on: #4ECDC4; /* default, overridden per variant */
-
-  --base: radial-gradient(circle, var(--c-base) 40%, transparent 65%);
-  --on: radial-gradient(circle, var(--c-on) 40%, transparent 65%);
-
-  background-image:
-    var(--base), var(--base), var(--base),
-    var(--base), var(--base), var(--base),
-    var(--base), var(--base), var(--base);
-
-  background-size:
-    4px 4px, 4px 4px, 4px 4px,
-    4px 4px, 4px 4px, 4px 4px,
-    4px 4px, 4px 4px, 4px 4px;
-
-  background-position:
-    3px 3px, 9.5px 3px, 16px 3px,
-    3px 9.5px, 9.5px 9.5px, 16px 9.5px,
-    3px 16px, 9.5px 16px, 16px 16px;
-
-  background-repeat: no-repeat;
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin: 38;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    --c-base: #7A7A7A;
+    --c-on: #4ECDC4;
+    --base: radial-gradient(circle, var(--c-base) 40%, transparent 65%);
+    --on: radial-gradient(circle, var(--c-on) 40%, transparent 65%);
+    background-image:
+        var(--base), var(--base), var(--base),
+        var(--base), var(--base), var(--base),
+        var(--base), var(--base), var(--base);
+    background-size:
+        4px 4px, 4px 4px, 4px 4px,
+        4px 4px, 4px 4px, 4px 4px,
+        4px 4px, 4px 4px, 4px 4px;
+    background-position:
+        3px 3px, 9.5px 3px, 16px 3px,
+        3px 9.5px, 9.5px 9.5px, 16px 9.5px,
+        3px 16px, 9.5px 16px, 16px 16px;
+    background-repeat: no-repeat;
 }
 
-/* Pseudo‑elements common setup */
 .green-checkbox::before,
 .green-checkbox::after,
 .green-checkbox-checked::before,
@@ -70,32 +58,27 @@
 .white-checkbox::after,
 .red-checkbox::before,
 .red-checkbox::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background-image:
-    var(--on), var(--on), var(--on),
-    var(--on), var(--on), var(--on),
-    var(--on), var(--on), var(--on);
-
-  background-size: inherit;
-  background-position: inherit;
-  background-repeat: no-repeat;
-
-  pointer-events: none;
-  opacity: 0;
-
-  filter: drop-shadow(0 0 1.5px var(--c-on));
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        var(--on), var(--on), var(--on),
+        var(--on), var(--on), var(--on),
+        var(--on), var(--on), var(--on);
+    background-size: inherit;
+    background-position: inherit;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    opacity: 0;
+    filter: drop-shadow(0 0 1.5px var(--c-on));
 }
 
-/* Checked state common */
 .green-checkbox::before,
 .green-checkbox-checked::before,
 .yellow-checkbox::before,
 .yellow-checkbox-checked::before,
 .white-checkbox::before {
-  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .green-checkbox:checked::before,
@@ -103,64 +86,58 @@
 .yellow-checkbox:checked::before,
 .yellow-checkbox-checked:checked::before,
 .white-checkbox:checked::before {
-  opacity: 1;
+    opacity: 1;
 }
 
-/* Hover effect common (unchecked + interactive) */
 .green-checkbox:hover:not(:checked)::after,
 .yellow-checkbox:hover:not(:checked)::after,
 .white-checkbox:hover:not(:checked)::after {
-  animation: pulseNeon 1.5s infinite ease-in-out;
+    animation: pulseNeon 1.5s infinite ease-in-out;
 }
 
-/* ------------------------- GREEN CHECKBOX (interactive, unchecked default) ------------------------- */
+/* :::::::::::::::::::::::::: CHECKBOX VARIANTS :::::::::::::::::::::::::: */
 .green-checkbox {
-  --c-on: #4ECDC4;
+    --c-on: #4ECDC4;
 }
 
-/* ------------------------- GREEN CHECKBOX – CHECKED VARIANT (always shows pulse) ------------------------- */
 .green-checkbox-checked {
-  --c-on: #4ECDC4;
+    --c-on: #4ECDC4;
 }
 
 .green-checkbox-checked::after {
-  animation: pulseNeon 1.5s infinite ease-in-out;
-  opacity: 0.75;
+    animation: pulseNeon 1.5s infinite ease-in-out;
+    opacity: 0.75;
 }
 
-/* ------------------------- YELLOW CHECKBOX (interactive, unchecked default) ------------------------- */
 .yellow-checkbox {
-  --c-on: #ffe76d;
+    --c-on: #FFE76D;
 }
 
-/* ------------------------- YELLOW CHECKBOX – CHECKED VARIANT (always shows pulse) ------------------------- */
 .yellow-checkbox-checked {
-  --c-on: #ffe76d;
+    --c-on: #FFE76D;
 }
 
 .yellow-checkbox-checked::after {
-  animation: pulseNeon 1.5s infinite ease-in-out;
-  opacity: 0.75;
+    animation: pulseNeon 1.5s infinite ease-in-out;
+    opacity: 0.75;
 }
 
-/* ------------------------- WHITE CHECKBOX (interactive, unchecked default) ------------------------- */
 .white-checkbox {
-  --c-on: #f5f5f5;
+    --c-on: #F5F5F5;
 }
 
-/* ------------------------- RED CHECKBOX (non‑interactive, always pulsing) ------------------------- */
 .red-checkbox {
-  --c-on: #ff6b6b;
-  cursor: default;
-  pointer-events: none;
+    --c-on: #FF6B6B;
+    cursor: default;
+    pointer-events: none;
 }
 
 .red-checkbox::after {
-  animation: pulseNeon 1.5s infinite ease-in-out;
-  opacity: 0.75;
+    animation: pulseNeon 1.5s infinite ease-in-out;
+    opacity: 0.75;
 }
 
-/* ------------------------- CONTAINER & LABEL LAYOUT ------------------------- */
+/* :::::::::::::::::::::::::: CONTAINER AND LABEL LAYOUT :::::::::::::::::::::::::: */
 .green-checkbox-container,
 .green-checkbox-checked-container,
 .yellow-checkbox-container,
@@ -168,88 +145,102 @@
 .white-checkbox-container,
 .white-checkbox-checked-container,
 .red-checkbox-container {
-  display: flex;
-  align-items: center;
-  overflow: hidden;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 }
 
 [class*="-checkbox-label"],
 [class*="-checkbox-checked-label"] {
-  display: flex;
-  align-items: center;
-  flex: 1 1 auto;
-  min-width: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  text-align: right;
-  flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: right;
+    flex-wrap: nowrap;
 }
 
-/* Text overflow handling – keep original sliding behaviour */
 [class*="-checkbox-label"] span,
 [class*="-checkbox-checked-label"] span,
 .green-checkbox-checked-label,
 .green-checkbox-label {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  min-width: 0;
-  flex-shrink: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    flex-shrink: 1;
 }
 
 [class*="-checkbox-label"] .sliding-text-container,
 [class*="-checkbox-checked-label"] .sliding-text-container {
-  display: inline-flex;
-  align-items: center;
-  flex: 1 1 auto;
-  min-width: 0;
-  width: 100%;
+    display: inline-flex;
+    align-items: center;
+    flex: 1 1 auto;
+    min-width: 0;
+    width: 100%;
 }
 
-/* ------------------------- FIX FOR AUTO SLIDING TEXT ------------------------- */
+/* :::::::::::::::::::::::::: SLIDING TEXT :::::::::::::::::::::::::: */
 [class*="-checkbox-label"] span,
 [class*="-checkbox-checked-label"] span,
 .green-checkbox-checked-label,
 .green-checkbox-label {
-  flex-shrink: 0;
-  white-space: nowrap;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .scrolling-text-inner,
 .sliding-text {
-  align-items: center;
-  flex-wrap: nowrap;
-  white-space: nowrap;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .sliding-text {
-  animation: slideText 5s linear infinite alternate;
+    animation: slideText 5s linear infinite alternate;
 }
 
 [class*="-checkbox-label"],
 [class*="-checkbox-checked-label"],
 .invoice-item .item-name {
-  overflow: hidden;
-  flex-wrap: nowrap;
-  display: flex;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    display: flex;
 }
 
-/* ------------------------- CURSOR BEHAVIOUR PER VARIANT ------------------------- */
-.green-checkbox-checked-container { cursor: default !; }
+/* :::::::::::::::::::::::::: CURSOR BEHAVIOR :::::::::::::::::::::::::: */
+.green-checkbox-checked-container {
+    cursor: default !;
+}
+
 .green-checkbox-checked,
-.green-checkbox-checked-label { cursor: pointer; }
+.green-checkbox-checked-label {
+    cursor: pointer;
+}
 
-.yellow-checkbox-checked-container { cursor: default; }
+.yellow-checkbox-checked-container {
+    cursor: default;
+}
+
 .yellow-checkbox-checked,
-.yellow-checkbox-checked-label { cursor: pointer; }
+.yellow-checkbox-checked-label {
+    cursor: pointer;
+}
 
-.white-checkbox-container { cursor: default; }
+.white-checkbox-container {
+    cursor: default;
+}
+
 .white-checkbox,
-.white-checkbox-label { cursor: pointer; }
+.white-checkbox-label {
+    cursor: pointer;
+}
 
 .red-checkbox-container,
 .red-checkbox,
 .red-checkbox-label {
-  cursor: default;
-  pointer-events: none;
+    cursor: default;
+    pointer-events: none;
 }

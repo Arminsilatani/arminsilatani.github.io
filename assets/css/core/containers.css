@@ -1,15 +1,4 @@
-/*
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-05-07
-  *  Version: 1.0.0
-  ****************************************************
-*/
-
-/* =========================== STYLESHEET ============================ */
-
-/* ------------------------- CONTAINERS ------------------------- */
-/* Base container styles shared by all containers */
+/* :::::::::::::::::::::::::: CONTAINERS :::::::::::::::::::::::::: */
 .container-1080,
 .container-1300,
 .container-max {
@@ -19,7 +8,6 @@
     box-sizing: border-box;
 }
 
-/* Individual max‑width overrides */
 .container-1080 {
     max-width: 1080px;
 }

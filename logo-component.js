@@ -1,322 +1,327 @@
-/*
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-05-02
-  *  Version: 1.1.0
-  ****************************************************
-*/
-
-/* =========================== LOGO COMPONENT ============================ */
-
 class LogoComponent extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: 'open' });
+    constructor() {
+        super();
+        this.attachShadow({ mode: 'open' });
 
-    // Number of logos per marquee row and total rows
-    this.logosPerRow = 11;
-    this.totalRows = 6;
-    // Center slogan image
-    this.centerImg = "assets/images/logo-component/LogoComponentSlogan.webp";
-    this.centerImgAlt = "نوشته گرافیکی «آن‌ها که انتخابم کردند» با طراحی دست‌نویس";
+        /* :::::::::::::::::::::::::: CONFIGURATION :::::::::::::::::::::::::: */
+        this.logosPerRow = 11;
+        this.totalRows = 6;
+        this.centerImg = 'assets/images/logo-component/LogoComponentSlogan.webp';
+        this.centerImgAlt = 'نوشته گرافیکی «آن‌ها که انتخابم کردند» با طراحی دست‌نویس';
 
-    // Client logo list
-    this.logoList = [
-      "assets/images/logo-component/AlvandtasisatLogoOld.webp",
-      "assets/images/logo-component/HevaapsLogoOld.webp",
-      "assets/images/logo-component/AlzahravfxLogoOld.webp",
-      "assets/images/logo-component/ApakalaLogo.webp",
-      "assets/images/logo-component/ApasazehLogoOld.webp",
-      "assets/images/logo-component/AplusLogo.webp",
-      "assets/images/logo-component/ArmaghanLogo.webp",
-      "assets/images/logo-component/AvrinLogoOld.webp",
-      "assets/images/logo-component/AyeghbamaLogoOld.webp",
-      "assets/images/logo-component/BitatebLogo.webp",
-      "assets/images/logo-component/CadinuLogoOld.webp",
-      "assets/images/logo-component/DiacoLogoOld.webp",
-      "assets/images/logo-component/DorfaksazehLogo.webp",
-      "assets/images/logo-component/FaratoseeLogo.webp",
-      "assets/images/logo-component/FarhangLogo.webp",
-      "assets/images/logo-component/HampadigitalLogoOld.webp",
-      "assets/images/logo-component/IlsglobalLogoOld.webp",
-      "assets/images/logo-component/KashanestoreLogoOld.webp",
-      "assets/images/logo-component/KralhomeLogoOld.webp",
-      "assets/images/logo-component/LinexLogoOld.webp",
-      "assets/images/logo-component/MegalightLogoOld.webp",
-      "assets/images/logo-component/MehmandarLogoOld.webp",
-      "assets/images/logo-component/MehrnooshLogoOld.webp",
-      "assets/images/logo-component/NabiranLogoOld.webp",
-      "assets/images/logo-component/NiavaranLogo.webp",
-      "assets/images/logo-component/NickdigiLogo.webp",
-      "assets/images/logo-component/PardeoxinLogoOld.webp",
-      "assets/images/logo-component/PartbanLogo.webp",
-      "assets/images/logo-component/PayamavaLogoOld.webp",
-      "assets/images/logo-component/PayetakhtetalaLogo.webp",
-      "assets/images/logo-component/PermonmedLogoOld.webp",
-      "assets/images/logo-component/PtahvieLogo.webp",
-      "assets/images/logo-component/RabiLogoOld.webp",
-      "assets/images/logo-component/RossoLogoOld.webp",
-      "assets/images/logo-component/ShahabmarcoLogo.webp",
-      "assets/images/logo-component/ShahrekhabLogoOld.webp",
-      "assets/images/logo-component/ShahresabtLogo.webp",
-      "assets/images/logo-component/SholepishgamLogoOld.webp",
-      "assets/images/logo-component/SpantawebLogo.webp",
-      "assets/images/logo-component/TarhfaLogo.webp",
-      "assets/images/logo-component/TimartebLogo.webp",
-      "assets/images/logo-component/UromkaracaLogoOld.webp",
-      "assets/images/logo-component/VegimeatLogo.webp",
-      "assets/images/logo-component/ZrmrLogoOld.webp",
-      "assets/images/logo-component/IranpapernetLogo.webp",
-      "assets/images/logo-component/KaniraLogo.webp"
-    ];
-  }
-
-  connectedCallback() {
-    this.render();
-  }
-
-  render() {
-    const template = document.createElement('template');
-    template.innerHTML = `
-      <style>
-        :host {
-          display: block;
-          font-family: sans-serif;
-        }
-
-        .partners-section {
-          width: 100%;
-          padding: 60px 0;
-          position: relative;
-          overflow: hidden;
-          direction: ltr;
-        }
-
-        .marquee-container {
-          display: flex;
-          flex-direction: column;
-          gap: 8px;
-          width: 100%;
-          position: relative;
-          z-index: 0;
-        }
-
-        .marquee-row {
-          display: flex;
-          white-space: nowrap;
-          width: 100%;
-        }
-
-        .marquee {
-          display: flex;
-          gap: 35px;
-          padding: 4px 0;
-          animation-duration: 15s;
-          animation-timing-function: linear;
-          animation-iteration-count: infinite;
-          will-change: transform;
-        }
-
-        .marquee-right {
-          animation-name: scrollRight;
-        }
-
-        .marquee-left {
-          animation-name: scrollLeft;
-        }
-
-        .marquee-item {
-          flex: 0 0 auto;
-          width: 120px;
-          height: 70px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-right: 35px;
-          flex-shrink: 0;
-          opacity: 0.6;
-          transition: opacity 0.3s;
-        }
-
-        .marquee-item:nth-child(11n) {
-          margin-right: 0;
-        }
-
-        .marquee-item img {
-          max-width: 100%;
-          max-height: 100%;
-          width: auto;
-          height: auto;
-          object-fit: contain;
-          opacity: 0.6;
-          filter: blur(18px);
-          transform: scale(1.05);
-          transition: filter 0.6s ease, transform 0.6s ease, opacity 0.3s;
-        }
-
-        .marquee-item img.blurup-loaded {
-          filter: blur(0);
-          transform: scale(1);
-        }
-
-        .marquee-item img:hover {
-          opacity: 1;
-        }
-
-        .center-image {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          z-index: 1;
-          width: 50%;
-          max-width: 90vw;
-          max-height: 36vw;
-          overflow: hidden;
-          pointer-events: none;
-        }
-
-        .center-image img {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          filter: blur(18px) drop-shadow(0 3px 4px rgba(0,0,0,0.4));
-          transform: scale(1.05);
-          transition: filter 0.6s ease, transform 0.6s ease;
-        }
-
-        .center-image img.blurup-loaded {
-          filter: drop-shadow(0 3px 4px rgba(0,0,0,0.4));
-          transform: scale(1);
-        }
-
-        @keyframes scrollRight {
-          0%   { transform: translateX(-50%); }
-          100% { transform: translateX(0); }
-        }
-
-        @keyframes scrollLeft {
-          0%   { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-
-        @media (max-width: 1100px) {
-          .partners-section {
-            padding: 30px 0;
-          }
-
-          .center-image {
-            width: 95vw;
-            height: calc(95vw * 0.4);
-          }
-
-          .marquee-item {
-            width: 120px;
-            height: 70px;
-            margin-right: 25px;
-          }
-
-          .marquee-item:nth-child(11n) {
-            margin-right: 0;
-          }
-        }
-      </style>
-
-      <section class="partners-section">
-        <div class="marquee-container" id="marqueeContainer"></div>
-        <div class="center-image">
-          <img
-            src="${this.centerImg}"
-            alt="Those who chose me"
-            data-blurup="true"
-            loading="eager"
-            fetchpriority="high"
-          >
-        </div>
-      </section>
-    `;
-
-    this.shadowRoot.appendChild(template.content.cloneNode(true));
-
-    const container = this.shadowRoot.getElementById('marqueeContainer');
-
-    for (let i = 0; i < this.totalRows; i++) {
-      const rowLogos = this.shuffleArray([...this.logoList]).slice(0, this.logosPerRow);
-      const direction = i % 2 === 0 ? 'right' : 'left';
-      const row = this.createMarqueeRow(rowLogos, direction);
-      container.appendChild(row);
+        this.logoList = [
+            'assets/images/logo-component/AlvandtasisatLogoOld.webp',
+            'assets/images/logo-component/HevaapsLogoOld.webp',
+            'assets/images/logo-component/AlzahravfxLogoOld.webp',
+            'assets/images/logo-component/ApakalaLogo.webp',
+            'assets/images/logo-component/ApasazehLogoOld.webp',
+            'assets/images/logo-component/AplusLogo.webp',
+            'assets/images/logo-component/ArmaghanLogo.webp',
+            'assets/images/logo-component/AvrinLogoOld.webp',
+            'assets/images/logo-component/AyeghbamaLogoOld.webp',
+            'assets/images/logo-component/BitatebLogo.webp',
+            'assets/images/logo-component/CadinuLogoOld.webp',
+            'assets/images/logo-component/DiacoLogoOld.webp',
+            'assets/images/logo-component/DorfaksazehLogo.webp',
+            'assets/images/logo-component/FaratoseeLogo.webp',
+            'assets/images/logo-component/FarhangLogo.webp',
+            'assets/images/logo-component/HampadigitalLogoOld.webp',
+            'assets/images/logo-component/IlsglobalLogoOld.webp',
+            'assets/images/logo-component/KashanestoreLogoOld.webp',
+            'assets/images/logo-component/KralhomeLogoOld.webp',
+            'assets/images/logo-component/LinexLogoOld.webp',
+            'assets/images/logo-component/MegalightLogoOld.webp',
+            'assets/images/logo-component/MehmandarLogoOld.webp',
+            'assets/images/logo-component/MehrnooshLogoOld.webp',
+            'assets/images/logo-component/NabiranLogoOld.webp',
+            'assets/images/logo-component/NiavaranLogo.webp',
+            'assets/images/logo-component/NickdigiLogo.webp',
+            'assets/images/logo-component/PardeoxinLogoOld.webp',
+            'assets/images/logo-component/PartbanLogo.webp',
+            'assets/images/logo-component/PayamavaLogoOld.webp',
+            'assets/images/logo-component/PayetakhtetalaLogo.webp',
+            'assets/images/logo-component/PermonmedLogoOld.webp',
+            'assets/images/logo-component/PtahvieLogo.webp',
+            'assets/images/logo-component/RabiLogoOld.webp',
+            'assets/images/logo-component/RossoLogoOld.webp',
+            'assets/images/logo-component/ShahabmarcoLogo.webp',
+            'assets/images/logo-component/ShahrekhabLogoOld.webp',
+            'assets/images/logo-component/ShahresabtLogo.webp',
+            'assets/images/logo-component/SholepishgamLogoOld.webp',
+            'assets/images/logo-component/SpantawebLogo.webp',
+            'assets/images/logo-component/TarhfaLogo.webp',
+            'assets/images/logo-component/TimartebLogo.webp',
+            'assets/images/logo-component/UromkaracaLogoOld.webp',
+            'assets/images/logo-component/VegimeatLogo.webp',
+            'assets/images/logo-component/ZrmrLogoOld.webp',
+            'assets/images/logo-component/IranpapernetLogo.webp',
+            'assets/images/logo-component/KaniraLogo.webp'
+        ];
     }
 
-    this.initBlurEngine();
-  }
-
-  // Fisher‑Yates shuffle
-  shuffleArray(arr) {
-    for (let i = arr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [arr[i], arr[j]] = [arr[j], arr[i]];
+    connectedCallback() {
+        this.render();
     }
-    return arr;
-  }
 
-  // Build one marquee row with duplicated logos for seamless scrolling
-  createMarqueeRow(logos, direction) {
-    const rowDiv = document.createElement('div');
-    rowDiv.className = 'marquee-row';
+    render() {
+        const template = document.createElement('template');
 
-    const marqueeDiv = document.createElement('div');
-    marqueeDiv.className = `marquee marquee-${direction}`;
+        template.innerHTML = `
+            <style>
+                :host {
+                    display: block;
+                    font-family: sans-serif;
+                }
 
-    const repeatedLogos = [...logos, ...logos];
+                .partners-section {
+                    width: 100%;
+                    padding: 60px 0;
+                    position: relative;
+                    overflow: hidden;
+                    direction: ltr;
+                }
 
-    repeatedLogos.forEach(src => {
-      const itemDiv = document.createElement('div');
-      itemDiv.className = 'marquee-item';
+                .marquee-container {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    width: 100%;
+                    position: relative;
+                    z-index: 0;
+                }
 
-      const img = document.createElement('img');
-      img.src = src;
-      img.alt = `Logo of ${src.split('/').pop().replace('.webp', '')}`;
-      img.loading = 'lazy';
-      img.decoding = 'async';
-      img.setAttribute('data-blurup', 'true');
+                .marquee-row {
+                    display: flex;
+                    white-space: nowrap;
+                    width: 100%;
+                }
 
-      itemDiv.appendChild(img);
-      marqueeDiv.appendChild(itemDiv);
-    });
+                .marquee {
+                    display: flex;
+                    gap: 35px;
+                    padding: 4px 0;
+                    animation-duration: 15s;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                    will-change: transform;
+                }
 
-    rowDiv.appendChild(marqueeDiv);
-    return rowDiv;
-  }
+                .marquee-right {
+                    animation-name: scrollRight;
+                }
 
-  // Progressive blur removal when images become visible
-  initBlurEngine() {
-    const images = this.shadowRoot.querySelectorAll('img[data-blurup]');
+                .marquee-left {
+                    animation-name: scrollLeft;
+                }
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
+                .marquee-item {
+                    flex: 0 0 auto;
+                    width: 120px;
+                    height: 70px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 35px;
+                    flex-shrink: 0;
+                    opacity: 0.6;
+                    transition: opacity 0.3s;
+                }
 
-        const img = entry.target;
+                .marquee-item:nth-child(11n) {
+                    margin-right: 0;
+                }
 
-        if (img.complete) {
-          img.classList.add('blurup-loaded');
-        } else {
-          img.addEventListener('load', () => {
-            img.classList.add('blurup-loaded');
-          }, { once: true });
+                .marquee-item img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    width: auto;
+                    height: auto;
+                    object-fit: contain;
+                    opacity: 0.6;
+                    filter: blur(18px);
+                    transform: scale(1.05);
+                    transition: filter 0.6s ease, transform 0.6s ease, opacity 0.3s;
+                }
+
+                .marquee-item img.blurup-loaded {
+                    filter: blur(0);
+                    transform: scale(1);
+                }
+
+                .marquee-item img:hover {
+                    opacity: 1;
+                }
+
+                .center-image {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 1;
+                    width: 50%;
+                    max-width: 90vw;
+                    max-height: 36vw;
+                    overflow: hidden;
+                    pointer-events: none;
+                }
+
+                .center-image img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    filter: blur(18px) drop-shadow(0 3px 4px rgba(0,0,0,0.4));
+                    transform: scale(1.05);
+                    transition: filter 0.6s ease, transform 0.6s ease;
+                }
+
+                .center-image img.blurup-loaded {
+                    filter: drop-shadow(0 3px 4px rgba(0,0,0,0.4));
+                    transform: scale(1);
+                }
+
+                @keyframes scrollRight {
+                    0% {
+                        transform: translateX(-50%);
+                    }
+
+                    100% {
+                        transform: translateX(0);
+                    }
+                }
+
+                @keyframes scrollLeft {
+                    0% {
+                        transform: translateX(0);
+                    }
+
+                    100% {
+                        transform: translateX(-50%);
+                    }
+                }
+
+                @media (max-width: 1100px) {
+                    .partners-section {
+                        padding: 30px 0;
+                    }
+
+                    .center-image {
+                        width: 95vw;
+                        height: calc(95vw * 0.4);
+                    }
+
+                    .marquee-item {
+                        width: 120px;
+                        height: 70px;
+                        margin-right: 25px;
+                    }
+
+                    .marquee-item:nth-child(11n) {
+                        margin-right: 0;
+                    }
+                }
+            </style>
+
+            <section class="partners-section">
+                <div class="marquee-container" id="marqueeContainer"></div>
+                <div class="center-image">
+                    <img
+                        src="${this.centerImg}"
+                        alt="Those who chose me"
+                        data-blurup="true"
+                        loading="eager"
+                        fetchpriority="high"
+                    >
+                </div>
+            </section>
+        `;
+
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
+
+        const container = this.shadowRoot.getElementById('marqueeContainer');
+
+        for (let i = 0; i < this.totalRows; i++) {
+            const rowLogos = this.shuffleArray([...this.logoList]).slice(0, this.logosPerRow);
+            const direction = i % 2 === 0 ? 'right' : 'left';
+            const row = this.createMarqueeRow(rowLogos, direction);
+            container.appendChild(row);
         }
 
-        observer.unobserve(img);
-      });
-    }, {
-      rootMargin: '200px',
-      threshold: 0.01
-    });
+        this.initBlurEngine();
+    }
 
-    images.forEach(img => observer.observe(img));
-  }
+    /* :::::::::::::::::::::::::: HELPERS :::::::::::::::::::::::::: */
+    shuffleArray(arr) {
+        for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+
+        return arr;
+    }
+
+    createMarqueeRow(logos, direction) {
+        const rowDiv = document.createElement('div');
+        rowDiv.className = 'marquee-row';
+
+        const marqueeDiv = document.createElement('div');
+        marqueeDiv.className = `marquee marquee-${direction}`;
+
+        const repeatedLogos = [...logos, ...logos];
+
+        repeatedLogos.forEach((src) => {
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'marquee-item';
+
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = `Logo of ${src.split('/').pop().replace('.webp', '')}`;
+            img.loading = 'lazy';
+            img.decoding = 'async';
+            img.setAttribute('data-blurup', 'true');
+
+            itemDiv.appendChild(img);
+            marqueeDiv.appendChild(itemDiv);
+        });
+
+        rowDiv.appendChild(marqueeDiv);
+
+        return rowDiv;
+    }
+
+    initBlurEngine() {
+        const images = this.shadowRoot.querySelectorAll('img[data-blurup]');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                const img = entry.target;
+
+                if (img.complete) {
+                    img.classList.add('blurup-loaded');
+                } else {
+                    img.addEventListener(
+                        'load',
+                        () => {
+                            img.classList.add('blurup-loaded');
+                        },
+                        { once: true }
+                    );
+                }
+
+                observer.unobserve(img);
+            });
+        }, {
+            rootMargin: '200px',
+            threshold: 0.01
+        });
+
+        images.forEach((img) => observer.observe(img));
+    }
 }
 
 if (!customElements.get('logo-component')) {
-  customElements.define('logo-component', LogoComponent);
+    customElements.define('logo-component', LogoComponent);
 }

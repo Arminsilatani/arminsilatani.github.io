@@ -1,12 +1,4 @@
-/*
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-05-19
-  *  Version: 0.0.0
-  ****************************************************
-*/
-
-/* =========================== FAQ ACCORDION ============================ */
+/* :::::::::::::::::::::::::: FAQ ACCORDION :::::::::::::::::::::::::: */
 
 .faq-list {
     display: flex;
@@ -57,7 +49,8 @@
     color: var(--accent);
 }
 
-/* ------------------------- FAQ ICON (MINIMAL LINEAR) ------------------------- */
+/* :::::::::::::::::::::::::: FAQ ICON (MINIMAL LINEAR) :::::::::::::::::::::::::: */
+
 .faq-icon {
     flex-shrink: 0;
     width: 24px;
@@ -114,7 +107,8 @@
     color: var(--accent);
 }
 
-/* ------------------------- FAQ LTR SUPPORT ------------------------- */
+/* :::::::::::::::::::::::::: FAQ LTR SUPPORT :::::::::::::::::::::::::: */
+
 [dir="ltr"] .faq-question {
     text-align: left;
     justify-content: flex-start;
@@ -124,7 +118,8 @@
     margin-left: auto;
 }
 
-/* ------------------------- ANSWER PANEL ------------------------- */
+/* :::::::::::::::::::::::::: ANSWER PANEL :::::::::::::::::::::::::: */
+
 .faq-answer-wrapper {
     overflow: hidden;
     transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);

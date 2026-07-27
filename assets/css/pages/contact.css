@@ -1,20 +1,12 @@
-/*
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-05-19
-  *  Version: 0.2.0
-  ****************************************************
-*/
-
-/* =========================== CONTACT PAGE STYLES ============================ */
+/* :::::::::::::::::::::::::: CONTACT PAGE STYLES :::::::::::::::::::::::::: */
 
 /* :::::::::::::::::::::::::: CSS VARIABLES :::::::::::::::::::::::::: */
 :root {
-    --bg: #0d0d0d;
+    --bg: #0D0D0D;
     --bg-secondary: #141414;
-    --bg-card: #1a1a1a;
-    --text: #f5f5f5;
-    --text-muted: #a0a0a0;
+    --bg-card: #1A1A1A;
+    --text: #F5F5F5;
+    --text-muted: #A0A0A0;
     --accent: #4ECDC4;
     --accent-glow: rgba(78, 205, 196, 0.25);
     --accent-subtle: rgba(78, 205, 196, 0.08);
@@ -26,7 +18,7 @@
     --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ------------------------- BASE & TEXTURE ------------------------- */
+/* :::::::::::::::::::::::::: BASE & TEXTURE :::::::::::::::::::::::::: */
 body::before {
     content: '';
     position: fixed;
@@ -37,12 +29,12 @@ body::before {
     background-image:
         radial-gradient(circle at 20% 30%, #4ECDC4 0.5px, transparent 0.5px),
         radial-gradient(circle at 60% 70%, #4ECDC4 0.4px, transparent 0.4px),
-        radial-gradient(circle at 80% 20%, #f5f5f5 0.3px, transparent 0.3px);
+        radial-gradient(circle at 80% 20%, #F5F5F5 0.3px, transparent 0.3px);
     background-size: 60px 60px, 80px 80px, 50px 50px;
     background-position: 0 0, 20px 30px, 40px 10px;
 }
 
-/* ------------------------- LAYOUT: CONTAINER & SECTION ------------------------- */
+/* :::::::::::::::::::::::::: LAYOUT: CONTAINER & SECTION :::::::::::::::::::::::::: */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -87,7 +79,7 @@ body::before {
     max-width: 500px;
 }
 
-/* ------------------------- CONTACT FORM & INFO ------------------------- */
+/* :::::::::::::::::::::::::: CONTACT FORM & INFO :::::::::::::::::::::::::: */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1.78fr;
@@ -161,7 +153,7 @@ a.contact-info__value:hover {
     height: auto;
 }
 
-/* ------------------------- SOCIAL LINKS ------------------------- */
+/* :::::::::::::::::::::::::: SOCIAL LINKS :::::::::::::::::::::::::: */
 .social-dots {
     display: flex;
     gap: 10px;
@@ -197,7 +189,7 @@ a.contact-info__value:hover {
     display: block;
 }
 
-/* ------------------------- FORM WRAPPER ------------------------- */
+/* :::::::::::::::::::::::::: FORM WRAPPER :::::::::::::::::::::::::: */
 .contact-form-wrapper {
     background: transparent;
     border: 1px solid var(--border);
@@ -258,7 +250,7 @@ a.contact-info__value:hover {
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: var(--accent);
-    background: #1c1c1c;
+    background: #1C1C1C;
 }
 
 .form-group textarea {
@@ -274,7 +266,7 @@ a.contact-info__value:hover {
     pointer-events: none;
 }
 
-/* ------------------------- PROCESS SECTION ------------------------- */
+/* :::::::::::::::::::::::::: PROCESS SECTION :::::::::::::::::::::::::: */
 #process {
     --process-box-h: 400px;
     --process-gap: 14px;
@@ -402,7 +394,7 @@ a.contact-info__value:hover {
     font-size: 0.95rem;
     font-weight: 400;
     line-height: 2.2;
-    color: #f5f5f5;
+    color: #F5F5F5;
 }
 
 #process .process-box__vtitle {
@@ -412,7 +404,7 @@ a.contact-info__value:hover {
 
     font-weight: 400;
     font-size: 1.1rem;
-    color: #f5f5f5;
+    color: #F5F5F5;
     opacity: 0.92;
 }
 
@@ -421,7 +413,7 @@ a.contact-info__value:hover {
     right: var(--process-pad-x);
     max-width: var(--open-content-maxw);
 
-    color: #f5f5f5;
+    color: #F5F5F5;
     text-align: right;
 
     opacity: 0;
@@ -436,7 +428,7 @@ a.contact-info__value:hover {
     font-size: 1.2rem;
     font-weight: 900;
     line-height: 1.35;
-    color: #f5f5f5;
+    color: #F5F5F5;
 }
 
 #process .process-box__desc {
@@ -444,7 +436,7 @@ a.contact-info__value:hover {
 
     font-size: 0.85rem;
     line-height: 1.8;
-    color: #ddd;
+    color: #DDD;
 
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -559,8 +551,7 @@ a.contact-info__value:hover {
     top: 10px;
 }
 
-/* ------------------------- AVAILABILITY & TIMEZONE ------------------------- */
-
+/* :::::::::::::::::::::::::: AVAILABILITY & TIMEZONE :::::::::::::::::::::::::: */
 #availability .section-title {
     margin-top: 0;
 }
@@ -592,7 +583,7 @@ a.contact-info__value:hover {
     margin-bottom: 18px;
 }
 
-/* ------------------------- STATUS DOT (NEON) ------------------------- */
+/* :::::::::::::::::::::::::: STATUS DOT (NEON) :::::::::::::::::::::::::: */
 .status-dot {
     --c-on: #4ECDC4;
     width: 16px;
@@ -616,7 +607,7 @@ a.contact-info__value:hover {
 }
 
 .status-dot--busy {
-    --c-on: #ff6b6b;
+    --c-on: #FF6B6B;
 }
 
 .status-text {
@@ -631,7 +622,7 @@ a.contact-info__value:hover {
     margin-top: 4px;
 }
 
-/* ------------------------- 60-DAY CALENDAR SLIDER ------------------------- */
+/* :::::::::::::::::::::::::: 60-DAY CALENDAR SLIDER :::::::::::::::::::::::::: */
 .mini-week-wrapper {
     margin-top: 18px;
     overflow: hidden;
@@ -681,17 +672,17 @@ a.contact-info__value:hover {
 
 .mini-week__day--available {
     border-color: #4ECDC4;
-    background: #4ecdc515;
+    background: #4ECDC515;
 }
 
 .mini-week__day--partial {
-    border-color: #ffe76d;
-    background: #ffe76d18;
+    border-color: #FFE76D;
+    background: #FFE76D18;
 }
 
 .mini-week__day--busy {
-    border-color: #ff6b6b;
-    background: #ff6b6b15;
+    border-color: #FF6B6B;
+    background: #FF6B6B15;
 }
 
 .mini-week__day-name {
@@ -709,7 +700,6 @@ a.contact-info__value:hover {
     line-height: 1.2;
 }
 
-/* Day dot base */
 .mini-week__day-dot {
     width: 5px;
     height: 5px;
@@ -720,10 +710,9 @@ a.contact-info__value:hover {
 }
 
 .mini-week__day-dot--green  { background: #4ECDC4; }
-.mini-week__day-dot--yellow { background: #ffe76d; }
-.mini-week__day-dot--red    { background: #ff6b6b; }
+.mini-week__day-dot--yellow { background: #FFE76D; }
+.mini-week__day-dot--red    { background: #FF6B6B; }
 
-/* Neon glow on hover */
 .mini-week__day:hover .mini-week__day-dot {
     animation: pulseNeon 1.5s ease-in-out infinite;
 }
@@ -733,14 +722,13 @@ a.contact-info__value:hover {
 }
 
 .mini-week__day--partial:hover .mini-week__day-dot {
-    filter: drop-shadow(0 0 6px #ffe76d);
+    filter: drop-shadow(0 0 6px #FFE76D);
 }
 
 .mini-week__day--busy:hover .mini-week__day-dot {
-    filter: drop-shadow(0 0 6px #ff6b6b);
+    filter: drop-shadow(0 0 6px #FF6B6B);
 }
 
-/* Month separator inside slider */
 .mini-week__month-separator {
     flex-shrink: 0;
     display: flex;
@@ -759,7 +747,35 @@ a.contact-info__value:hover {
     margin: 0 4px;
 }
 
-/* ------------------------- LEGEND ------------------------- */
+#dayTooltip {
+    position: fixed;
+    z-index: 9999;
+    background: var(--bg-card);
+    border: 1px solid var(--border-active);
+    border-radius: var(--radius);
+    padding: 2px;
+    display: flex;
+    gap: 2px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    pointer-events: none; /* Allow mouse pass-through */
+}
+
+#dayTooltip .hour-block {
+    width: 3px;
+    height: 8px;
+    border-radius: 1px;
+    transition: background 0.2s;
+}
+
+.hour-block.free {
+    background: #4ECDC4; /* green */
+}
+
+.hour-block.busy {
+    background: #FF6B6B; /* red */
+}
+
+/* :::::::::::::::::::::::::: LEGEND :::::::::::::::::::::::::: */
 .legend-row {
     display: flex;
     gap: 16px;
@@ -784,10 +800,10 @@ a.contact-info__value:hover {
 }
 
 .legend-dot--green  { background: #4ECDC4; }
-.legend-dot--yellow { background: #ffe76d; }
-.legend-dot--red    { background: #ff6b6b; }
+.legend-dot--yellow { background: #FFE76D; }
+.legend-dot--red    { background: #FF6B6B; }
 
-/* ------------------------- TIMEZONE ------------------------- */
+/* :::::::::::::::::::::::::: TIMEZONE :::::::::::::::::::::::::: */
 .timezone-display {
     text-align: center;
     padding: 10px 0;
@@ -823,8 +839,32 @@ a.contact-info__value:hover {
     margin-top: 20px;
 }
 
-/* ------------------------- FAQ ------------------------- */
-
+/* :::::::::::::::::::::::::: FAQ :::::::::::::::::::::::::: */
 #faq .section-title {
     margin-top: 0;
+}
+
+/* :::::::::::::::::::::::::: DESKTOP OVERRIDE GUARANTEED :::::::::::::::::::::::::: */
+@media screen and (min-width: 769px) {
+    #process .process-grid {
+        flex-direction: row !important;
+        height: auto !important;
+    }
+
+    #process .process-box {
+        height: 400px !important;
+        min-height: 400px !important;
+        max-height: 400px !important;
+        flex: 1 1 0% !important;
+    }
+
+    #process .process-box.is-open {
+        flex: 3.5 1 0% !important;
+    }
+
+    /* Resetting positions to prevent layout break */
+    #process .process-box__meta,
+    #process .process-box__content {
+        position: absolute !important;
+    }
 }

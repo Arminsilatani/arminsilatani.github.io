@@ -1,243 +1,236 @@
-/*
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-05-16
-  *  Version: 0.0.0
-  ****************************************************
-*/
-
-/* =========================== RESPONSIVE ============================ */
+/* :::::::::::::::::::::::::: RESPONSIVE STYLES :::::::::::::::::::::::::: */
 @media (max-width: 768px) {
 
-  /* ------------------------- GENERAL ------------------------- */
-  .container,
-  .container-1080,
-  .container-1300 {
-    padding: 0 18px;
-  }
+    /* :::::::::::::::::::::::::: GENERAL :::::::::::::::::::::::::: */
+    .container,
+    .container-1080,
+    .container-1300 {
+        padding: 0 18px;
+    }
 
-  .section {
-    padding: 48px 0;
-  }
+    .section {
+        padding: 48px 0;
+    }
 
-  .section-title {
-    font-size: 1.8rem;
-  }
+    .section-title {
+        font-size: 1.8rem;
+    }
 
-  /* ------------------------- CONTACT GRID ------------------------- */
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
+    /* :::::::::::::::::::::::::: CONTACT GRID :::::::::::::::::::::::::: */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 
-  .contact-info {
-    gap: 12px;
-  }
+    .contact-info {
+        gap: 12px;
+    }
 
-  .contact-form-wrapper {
-    padding: 24px 20px;
-  }
+    .contact-form-wrapper {
+        padding: 24px 20px;
+    }
 
-  .form-group input,
-  .form-group textarea {
-    padding: 12px 14px;
-  }
+    .form-group input,
+    .form-group textarea {
+        padding: 12px 14px;
+    }
 
-  .social-dots {
-    justify-content: center;
-  }
+    .social-dots {
+        justify-content: center;
+    }
 
-  /* ------------------------- PROCESS (Vertical Accordion) ------------------------- */
-  #process .process-grid {
-    flex-direction: column;
-    height: auto;
-  }
+    /* :::::::::::::::::::::::::: PROCESS (VERTICAL ACCORDION) :::::::::::::::::::::::::: */
+    #process .process-grid {
+        flex-direction: column;
+        height: auto;
+    }
 
-  #process .process-box {
-    height: 80px;
-    flex: none;
-    width: 100%;
-    transition: height 0.45s ease, box-shadow 0.35s ease;
-    overflow: visible;
-  }
+    #process .process-box {
+        height: 80px;
+        flex: none;
+        width: 100%;
+        transition: height 0.45s ease, box-shadow 0.35s ease;
+        overflow: visible;
+    }
 
-  #process .process-box.is-open {
-    height: 420px;
-    flex: none;
-  }
+    #process .process-box.is-open {
+        height: 420px;
+        flex: none;
+    }
 
-  /* Reset positions for closed state */
-  #process .process-box:not(.is-open)::before {
-    left: 0;
-    right: auto;
-    top: 50%;
-    width: var(--closed-line-height);
-    height: 1px;
-    transform: translateY(-50%);
-  }
+    /* Reset positions for closed state */
+    #process .process-box:not(.is-open)::before {
+        left: 0;
+        right: auto;
+        top: 50%;
+        width: var(--closed-line-height);
+        height: 1px;
+        transform: translateY(-50%);
+    }
 
-  #process .process-box:not(.is-open) .process-box__meta {
-    position: absolute;
-    right: -130px;
-    top: 0;
-    bottom: 0;
-    height: 100%;
-    padding-right: 6px;
+    #process .process-box:not(.is-open) .process-box__meta {
+        position: absolute;
+        right: -130px;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        padding-right: 6px;
 
-    /* Key change: use flex-direction row instead of row-reverse */
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 6px;
-  }
+        /* Key change: use flex-direction row instead of row-reverse */
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 6px;
+    }
 
-  [dir="ltr"] #process .process-box:not(.is-open) .process-box__meta {
-    right: -150px;   /* مقدار کمتر = فاصله کمتر از سمت راست */
+    [dir="ltr"] #process .process-box:not(.is-open) .process-box__meta {
+        right: -150px;   /* Smaller value means less distance from the right */
+    }
+
+    #process .process-box:not(.is-open) .process-box__step {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        font-weight: bold;
+        font-size: 1.3rem;
+        order: 2;
+    }
+
+    [dir="ltr"] #process .process-box:not(.is-open) .process-box__step {
+        font-size: 0.9rem;   /* Slightly smaller (previously 1.3rem) */
+        transform: rotate(180deg);
+    }
+
+    #process .process-box:not(.is-open) .process-box__vtitle {
+        writing-mode: horizontal-tb;
+        transform: none;
+        font-size: 0.9rem;
+
+        /* Show full title */
+        white-space: nowrap;
+        overflow: visible;
+        text-overflow: unset;
+        max-width: max-content;
+
+        direction: rtl;
+        text-align: right;
+        order: 1;
+    }
+
+    /* Open state positions for mobile */
+    #process .process-box.is-open::before {
+        display: none;
+    }
+
+    #process .process-box.is-open .process-box__meta {
+        top: 20px;
+        right: var(--process-pad-x);
+        left: auto;
+        transform: none;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    #process .process-box.is-open .process-box__content {
+        top: auto;
+        bottom: 24px;
+        right: var(--process-pad-x);
+        max-width: 80%;
+    }
+
+    #process .process-box.is-open .process-box__title {
+        font-size: 1.1rem;
+    }
+
+    #process .process-box.is-open .process-box__title::after {
+        width: 35px;
+        right: -20px;
+        top: 12px;
+    }
+
+    /* Background image stays absolute */
+    #process .process-box__media img {
+        object-position: center 30%;
+    }
+
+    [dir="ltr"] #process .process-box:not(.is-open)::before {
+        left: auto;
+        right: 0;
+    }
+
+    /* :::::::::::::::::::::::::: AVAILABILITY :::::::::::::::::::::::::: */
+    .avail-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .avail-card {
+        padding: 24px 20px;
+    }
+
+    .timezone-clock {
+        font-size: 2.6rem;
+    }
+
+    /* :::::::::::::::::::::::::: MINI CALENDAR :::::::::::::::::::::::::: */
+    .mini-week {
+        padding: 4px 2px;
+        gap: 4px;
+    }
+
+    .mini-week__day {
+        width: 44px;
+        padding: 6px 2px 4px;
+    }
+
+    .mini-week__day-name {
+        font-size: 0.6rem;
+    }
+
+    .mini-week__day-date {
+        font-size: 0.8rem;
+    }
+
+    .mini-week__month-separator {
+        font-size: 0.55rem;
+        padding: 0 4px;
+    }
+
+    /* :::::::::::::::::::::::::: FAQ :::::::::::::::::::::::::: */
+    .faq-question {
+        font-size: 0.9rem;
+        padding: 14px 10px;
+        font-weight: 400;
+    }
+
+    .faq-answer {
+        font-size: 0.85rem;
+    }
 }
 
-  #process .process-box:not(.is-open) .process-box__step {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    font-weight: bold;
-    font-size: 1.3rem;
-    order: 2;
-  }
-
-  [dir="ltr"] #process .process-box:not(.is-open) .process-box__step {
-    font-size: 0.9rem;   /* کمی کوچک‌تر (قبلاً 1.3rem بود) */
-    transform: rotate(180deg);
-}
-
-  #process .process-box:not(.is-open) .process-box__vtitle {
-    writing-mode: horizontal-tb;
-    transform: none;
-    font-size: 0.9rem;
-
-    /* Show full title */
-    white-space: nowrap;
-    overflow: visible;
-    text-overflow: unset;
-    max-width: max-content;
-
-    direction: rtl;
-    text-align: right;
-    order: 1;
-  }
-
-  /* Open state positions for mobile */
-  #process .process-box.is-open::before {
-    display: none;
-  }
-
-  #process .process-box.is-open .process-box__meta {
-    top: 20px;
-    right: var(--process-pad-x);
-    left: auto;
-    transform: none;
-    align-items: flex-end;
-    text-align: right;
-  }
-
-  #process .process-box.is-open .process-box__content {
-    top: auto;
-    bottom: 24px;
-    right: var(--process-pad-x);
-    max-width: 80%;
-  }
-
-  #process .process-box.is-open .process-box__title {
-    font-size: 1.1rem;
-  }
-
-  #process .process-box.is-open .process-box__title::after {
-    width: 35px;
-    right: -20px;
-    top: 12px;
-  }
-
-  /* Background image stays absolute */
-  #process .process-box__media img {
-    object-position: center 30%;
-  }
-  [dir="ltr"] #process .process-box:not(.is-open)::before {
-    left: auto;
-    right: 0;
-}
-
-  /* ------------------------- AVAILABILITY ------------------------- */
-  .avail-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .avail-card {
-    padding: 24px 20px;
-  }
-
-  .timezone-clock {
-    font-size: 2.6rem;
-  }
-
-  /* ------------------------- MINI CALENDAR ------------------------- */
-  .mini-week {
-    padding: 4px 2px;
-    gap: 4px;
-  }
-
-  .mini-week__day {
-    width: 44px;
-    padding: 6px 2px 4px;
-  }
-
-  .mini-week__day-name {
-    font-size: 0.6rem;
-  }
-
-  .mini-week__day-date {
-    font-size: 0.8rem;
-  }
-
-  .mini-week__month-separator {
-    font-size: 0.55rem;
-    padding: 0 4px;
-  }
-
-  /* ------------------------- FAQ ------------------------- */
-  .faq-question {
-    font-size: 0.9rem;
-    padding: 14px 10px;
-    font-weight: 400;
-  }
-
-  .faq-answer {
-    font-size: 0.85rem;
-  }
-}
-
-/* ------------------------- EXTRA SMALL (Narrow mobiles) ------------------------- */
+/* :::::::::::::::::::::::::: EXTRA SMALL (NARROW MOBILES) :::::::::::::::::::::::::: */
 @media (max-width: 480px) {
-  .section-title {
-    font-size: 1.6rem;
-  }
+    .section-title {
+        font-size: 1.6rem;
+    }
 
-  #process .process-box {
-    height: 80px;
-  }
+    #process .process-box {
+        height: 80px;
+    }
 
-  #process .process-box.is-open {
-    height: 380px;
-  }
+    #process .process-box.is-open {
+        height: 380px;
+    }
 
-  #process .process-box.is-open .process-box__content {
-    max-width: 90%;
-  }
+    #process .process-box.is-open .process-box__content {
+        max-width: 90%;
+    }
 
-  .contact-form-wrapper {
-    padding: 18px 14px;
-  }
+    .contact-form-wrapper {
+        padding: 18px 14px;
+    }
 
-  .form-group label {
-    font-size: 0.7rem;
-  }
+    .form-group label {
+        font-size: 0.7rem;
+    }
 }

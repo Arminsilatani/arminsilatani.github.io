@@ -1,14 +1,4 @@
-/*
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2025-04-06
-  *  Version: 0.0.0
-  ****************************************************
-*/
-
-/* ================================= FAQ ACCORDION ================================= */
-// Attach click listeners to all FAQ question buttons, toggling the
-// corresponding answer with a smooth height animation.
+/* :::::::::::::::::::::::::: FAQ ACCORDION :::::::::::::::::::::::::: */
 
 document.querySelectorAll('.faq-question').forEach(button => {
     button.addEventListener('click', () => {

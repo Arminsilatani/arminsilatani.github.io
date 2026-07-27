@@ -1,137 +1,127 @@
-/*
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-05-07
-  *  Version: 1.0.0
-  ****************************************************
-*/
+/* :::::::::::::::::::::::::: RESPONSIVE STYLES :::::::::::::::::::::::::: */
 
-/* =========================== RESPONSIVE STYLES ============================ */
-
-/* ------------------------- MAX-WIDTH 768px ------------------------- */
 @media (max-width: 768px) {
-  /* ----- HERO ----- */
-  .hero-container {
-    flex-direction: column;
-    gap: 0;
-    direction: ltr;
-    align-items: center;
-  }
+    /* :::::::::::::::::::::::::: HERO :::::::::::::::::::::::::: */
+    .hero-container {
+        flex-direction: column;
+        gap: 0;
+        direction: ltr;
+        align-items: center;
+    }
 
-  .hero-left img {
-    max-width: 350px;
-  }
+    .hero-left img {
+        max-width: 350px;
+    }
 
-  .hero-img {
-    max-width: 250px;
-  }
+    .hero-img {
+        max-width: 250px;
+    }
 
-  .blob {
-    width: 210px;
-    height: 210px;
-  }
+    .blob {
+        width: 210px;
+        height: 210px;
+    }
 
-  /* ----- TERMINAL ----- */
-  .fake-terminal-breadcrumb {
-    padding: 10px 0;
-  }
+    /* :::::::::::::::::::::::::: TERMINAL :::::::::::::::::::::::::: */
+    .fake-terminal-breadcrumb {
+        padding: 10px 0;
+    }
 
-  .fake-terminal-inner {
-    width: 90%;
-    margin: 0 auto;
-    font-size: 14px;
-    flex-wrap: wrap;
-  }
+    .fake-terminal-inner {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 14px;
+        flex-wrap: wrap;
+    }
 
-  .cmd-prefix,
-  .command {
-    margin-right: 4px;
-  }
+    .cmd-prefix,
+    .command {
+        margin-right: 4px;
+    }
 
-  #terminalPath a {
-    word-break: break-all;
-  }
+    #terminalPath a {
+        word-break: break-all;
+    }
 
-  /* ----- SERVICES ----- */
-  .services-section {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 25px;
-    padding: 0 25px;
-    box-sizing: border-box;
-  }
+    /* :::::::::::::::::::::::::: SERVICES :::::::::::::::::::::::::: */
+    .services-section {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 25px;
+        padding: 0 25px;
+        box-sizing: border-box;
+    }
 
-  .service-item {
-    flex: 0 0 100%;
-    scroll-snap-align: start;
-  }
+    .service-item {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+    }
 
-  .service-item,
-  .service-main {
-    padding: 0 15px;
-  }
+    .service-item,
+    .service-main {
+        padding: 0 15px;
+    }
 
-  .service-main {
-    flex-direction: column;
-    align-items: center;
-  }
+    .service-main {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .service-text {
-    text-align: center;
-  }
+    .service-text {
+        text-align: center;
+    }
 
-  /* ----- ABOUT SECTION ----- */
-  .about-section {
-    height: auto;
-    padding: 40px 0;
-  }
+    /* :::::::::::::::::::::::::: ABOUT SECTION :::::::::::::::::::::::::: */
+    .about-section {
+        height: auto;
+        padding: 40px 0;
+    }
 
-  .about-container {
-    flex-direction: column;
-    gap: 25px;
-    text-align: center;
-  }
+    .about-container {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
 
-  .about-image {
-    width: 70%;
-    max-width: 280px;
-  }
+    .about-image {
+        width: 70%;
+        max-width: 280px;
+    }
 
-  .about-text {
-    max-width: 90%;
-  }
+    .about-text {
+        max-width: 90%;
+    }
 }
 
-/* ------------------------- MAX-WIDTH 480px ------------------------- */
 @media (max-width: 480px) {
-  .fake-terminal-breadcrumb {
-    padding: 8px 0;
-  }
+    .fake-terminal-breadcrumb {
+        padding: 8px 0;
+    }
 
-  .fake-terminal-inner {
-    font-size: 11px;
-    overflow: hidden;
-    white-space: normal;
-    word-wrap: break-word;
-    line-height: 1.5;
-  }
+    .fake-terminal-inner {
+        font-size: 11px;
+        overflow: hidden;
+        white-space: normal;
+        word-wrap: break-word;
+        line-height: 1.5;
+    }
 
-  #terminalPath {
-    display: inline;
-  }
+    #terminalPath {
+        display: inline;
+    }
 
-  .cursor {
-    display: inline-block;
-    width: 8px;
-    height: 14px;
-    margin-left: 4px;
-    vertical-align: middle;
-  }
+    .cursor {
+        display: inline-block;
+        width: 8px;
+        height: 14px;
+        margin-left: 4px;
+        vertical-align: middle;
+    }
 
-  .about-image {
-    width: 80%;
-    max-width: 240px;
-  }
+    .about-image {
+        width: 80%;
+        max-width: 240px;
+    }
 }

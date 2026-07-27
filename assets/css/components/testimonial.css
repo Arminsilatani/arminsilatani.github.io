@@ -1,14 +1,6 @@
-/*
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-05-07
-  *  Version: 1.0.0
-  ****************************************************
-*/
+/* :::::::::::::::::::::::::: TESTIMONIALS STYLES :::::::::::::::::::::::::: */
 
-/* =========================== TESTIMONIALS STYLES ============================ */
-
-/* ------------------------- TESTIMONIALS SECTION ------------------------- */
+/* :::::::::::::::::::::::::: TESTIMONIALS SECTION :::::::::::::::::::::::::: */
 .testimonials-section {
     background: #0D0D0D;
     text-align: center;
@@ -29,11 +21,11 @@
     left: 50%;
     width: 80px;
     height: 2px;
-    background: #1a1a1a;
+    background: #1A1A1A;
     transform: translateX(-50%);
 }
 
-/* ------------------------- TESTIMONIALS LAYOUT ------------------------- */
+/* :::::::::::::::::::::::::: TESTIMONIALS LAYOUT :::::::::::::::::::::::::: */
 .testimonials-container {
     display: flex;
     gap: 25px;
@@ -67,9 +59,9 @@
     animation-play-state: paused;
 }
 
-/* ------------------------- TESTIMONIAL CARD ------------------------- */
+/* :::::::::::::::::::::::::: TESTIMONIAL CARD :::::::::::::::::::::::::: */
 .card {
-    background: #f5f5f5;
+    background: #F5F5F5;
     padding: 25px;
     border-radius: 15px;
 }
@@ -90,7 +82,7 @@
 
 .card .profile .name {
     font-weight: 600;
-    color: #1a1a1a;
+    color: #1A1A1A;
 }
 
 .card .profile .role {
@@ -105,7 +97,7 @@
     text-align: justify;
 }
 
-/* ------------------------- TESTIMONIAL ANIMATIONS ------------------------- */
+/* :::::::::::::::::::::::::: TESTIMONIAL ANIMATIONS :::::::::::::::::::::::::: */
 .column:nth-child(1) .testimonials {
     animation-name: scrollUp;
     animation-duration: 23s;
@@ -122,16 +114,24 @@
 }
 
 @keyframes scrollUp {
-    from { transform: translateY(0); }
-    to   { transform: translateY(-50%); }
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-50%);
+    }
 }
 
 @keyframes scrollDown {
-    from { transform: translateY(-50%); }
-    to   { transform: translateY(0); }
+    from {
+        transform: translateY(-50%);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
-/* ------------------------- TESTIMONIAL PLACEHOLDER ------------------------- */
+/* :::::::::::::::::::::::::: TESTIMONIAL PLACEHOLDER :::::::::::::::::::::::::: */
 .testimonials-placeholder {
     display: flex;
     justify-content: center;

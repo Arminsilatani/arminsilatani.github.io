@@ -1,17 +1,9 @@
-/*
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-05-11
-  *  Version: 1.1.1
-  ****************************************************
-*/
-
-/* =========================== PRICING PAGE ============================ */
+/* :::::::::::::::::::::::::: PRICING PAGE :::::::::::::::::::::::::: */
 
 /* :::::::::::::::::::::::::: GLOBAL BASE STYLES :::::::::::::::::::::::::: */
 body {
-    background: #0b0b0b;
-    color: #f5f5f5;
+    background: #0B0B0B;
+    color: #F5F5F5;
     margin: 0;
     padding: 0;
 }
@@ -35,7 +27,7 @@ body {
     animation: slideText 6s linear infinite alternate;
 }
 
-/* ------------------------- CURRENCY SELECTOR ------------------------- */
+/* :::::::::::::::::::::::::: CURRENCY SELECTOR :::::::::::::::::::::::::: */
 .currency-selector {
     padding: 40px 40px 0;
     display: flex;
@@ -44,7 +36,7 @@ body {
 }
 
 .currency-selector label {
-    color: #a0a0a0;
+    color: #A0A0A0;
     font-size: 0.9rem;
 }
 
@@ -64,7 +56,7 @@ body {
     border-color: #4ECDC4;
 }
 
-/* ------------------------- TABS & PACKAGE TABS ------------------------- */
+/* :::::::::::::::::::::::::: TABS & PACKAGE TABS :::::::::::::::::::::::::: */
 .tabs-container {
     display: flex;
     justify-content: space-between;
@@ -90,7 +82,7 @@ body {
     gap: 25px;
 }
 
-/* ------------------------- PRICING TAB BUTTONS ------------------------- */
+/* :::::::::::::::::::::::::: PRICING TAB BUTTONS :::::::::::::::::::::::::: */
 .pricing-tab {
     background: none;
     border: none;
@@ -98,7 +90,7 @@ body {
     font-size: 0.95rem;
     font-weight: 400;
     cursor: pointer;
-    color: #9a9a9a;
+    color: #9A9A9A;
     transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), color 0.25s ease, opacity 0.25s ease;
 }
 
@@ -117,7 +109,7 @@ body {
     color: #FFE76D;
 }
 
-/* ------------------------- PACKAGE TAB BUTTONS ------------------------- */
+/* :::::::::::::::::::::::::: PACKAGE TAB BUTTONS :::::::::::::::::::::::::: */
 .package-tab {
     background: none;
     border: none;
@@ -126,13 +118,13 @@ body {
     font-size: 0.9rem;
     font-weight: 400;
     cursor: pointer;
-    color: #9a9a9a;
+    color: #9A9A9A;
     position: relative;
     transition: color 0.25s ease;
 }
 
 .package-tab:hover {
-    color: #f5f5f5;
+    color: #F5F5F5;
 }
 
 .package-tab.active {
@@ -152,14 +144,14 @@ body {
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ------------------------- PRICING WRAPPER ------------------------- */
+/* :::::::::::::::::::::::::: PRICING WRAPPER :::::::::::::::::::::::::: */
 .pricing-wrapper {
     padding: 0 50px;
     margin-top: 40px;
     font-family: var(--font-family, inherit);
 }
 
-/* ------------------------- SERVICE SECTIONS & ACCORDION ------------------------- */
+/* :::::::::::::::::::::::::: SERVICE SECTIONS & ACCORDION :::::::::::::::::::::::::: */
 .service-section {
     margin-bottom: 40px;
     position: relative;
@@ -188,7 +180,7 @@ body {
     z-index: 2;
 }
 
-/* ------------------------- SERVICE DOT (ACCORDION INDICATOR) ------------------------- */
+/* :::::::::::::::::::::::::: SERVICE DOT (ACCORDION INDICATOR) :::::::::::::::::::::::::: */
 .service-dot {
     position: absolute;
     right: 0;
@@ -230,11 +222,11 @@ body {
     padding: 24px 40px 10px;
     margin: 0;
     line-height: 1.8;
-    color: #a0a0a0;
+    color: #A0A0A0;
     font-size: 0.95rem;
 }
 
-/* ------------------------- ACCORDION ACTIVE STATES ------------------------- */
+/* :::::::::::::::::::::::::: ACCORDION ACTIVE STATES :::::::::::::::::::::::::: */
 .service-section.active .service-dot {
     top: 45px;
     width: 100%;
@@ -263,14 +255,14 @@ body {
     transition: opacity 0.3s ease 0.7s;
 }
 
-/* ------------------------- PIN BUTTON ------------------------- */
+/* :::::::::::::::::::::::::: PIN BUTTON :::::::::::::::::::::::::: */
 .pin-btn {
     position: absolute;
     left: 15px;
     top: 9px;
     background: transparent;
     border: none;
-    color: #54595f;
+    color: #54595F;
     width: 32px;
     height: 32px;
     cursor: pointer;
@@ -287,7 +279,7 @@ body {
 }
 
 .pin-btn:hover {
-    color: #f5f5f5;
+    color: #F5F5F5;
 }
 
 .service-section.active .pin-btn {
@@ -301,7 +293,7 @@ body {
     color: #F5F5F5;
 }
 
-/* ------------------------- SUB-SERVICES & ITEMS ------------------------- */
+/* :::::::::::::::::::::::::: SUB-SERVICES & ITEMS :::::::::::::::::::::::::: */
 .sub-services {
     padding: 0 40px 24px;
 }
@@ -335,9 +327,9 @@ body {
     margin-left: auto;
 }
 
-/* ------------------------- PRICE DISPLAY ------------------------- */
+/* :::::::::::::::::::::::::: PRICE DISPLAY :::::::::::::::::::::::::: */
 .price-display {
-    color: #f5f5f5;
+    color: #F5F5F5;
     font-size: 1rem;
     letter-spacing: 0.5px;
     flex-shrink: 0;
@@ -355,7 +347,7 @@ body {
     cursor: help;
 }
 
-/* ------------------------- QUANTITY CONTROL ------------------------- */
+/* :::::::::::::::::::::::::: QUANTITY CONTROL :::::::::::::::::::::::::: */
 .qty-control-minimal {
     display: flex;
     align-items: center;
@@ -389,7 +381,7 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 50px;
-    color: #a0a0a0;
+    color: #A0A0A0;
     font-size: 14px;
     font-weight: 400;
     cursor: pointer;
@@ -415,7 +407,7 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     display: inline-block;
 }
 
-/* ------------------------- GROUPED SERVICES BOX ------------------------- */
+/* :::::::::::::::::::::::::: GROUPED SERVICES BOX :::::::::::::::::::::::::: */
 .sub-group-box {
     border: 1px solid rgba(78, 205, 196, 0.6);
     border-radius: 12px;
@@ -456,7 +448,7 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     margin-bottom: 4px;
 }
 
-/* ------------------------- FINAL INVOICE SECTION ------------------------- */
+/* :::::::::::::::::::::::::: FINAL INVOICE SECTION :::::::::::::::::::::::::: */
 #final-invoice-section {
     margin-top: 60px;
     visibility: hidden;
@@ -480,7 +472,7 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     box-sizing: border-box;
 }
 
-/* ------------------------- INVOICE HEADER ------------------------- */
+/* :::::::::::::::::::::::::: INVOICE HEADER :::::::::::::::::::::::::: */
 .invoice-header {
     display: flex;
     justify-content: space-between;
@@ -494,7 +486,7 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     font-size: 1.4rem;
     margin: 0;
     font-weight: 600;
-    color: #f5f5f5;
+    color: #F5F5F5;
 }
 
 #invoice-total-amount {
@@ -503,7 +495,7 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     color: #4ECDC4;
 }
 
-/* ------------------------- INVOICE ITEMS LIST ------------------------- */
+/* :::::::::::::::::::::::::: INVOICE ITEMS LIST :::::::::::::::::::::::::: */
 #invoice-items-list {
     padding: 0;
     margin: 0;
@@ -591,7 +583,7 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
 }
 
 .invoice-item.bullet-white::before {
-    --c-on: #f5f5f5;
+    --c-on: #F5F5F5;
 }
 
 .invoice-item.entering {
@@ -602,7 +594,7 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     animation: slideUpItem 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
-/* ------------------------- ANIMATIONS ------------------------- */
+/* :::::::::::::::::::::::::: ANIMATIONS :::::::::::::::::::::::::: */
 @keyframes marquee {
     0%   { transform: translateX(0); }
     100% { transform: translateX(-50%); }
@@ -610,8 +602,8 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
 
 @keyframes pulseColorNeon {
     0%, 100% {
-        background-color: #7a7a7a;
-        filter: drop-shadow(0 0 1px #7a7a7a);
+        background-color: #7A7A7A;
+        filter: drop-shadow(0 0 1px #7A7A7A);
         opacity: 0.2;
     }
     50% {
@@ -656,7 +648,7 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     }
 }
 
-/* ------------------------- LTR OVERRIDES ------------------------- */
+/* :::::::::::::::::::::::::: LTR OVERRIDES :::::::::::::::::::::::::: */
 
 [dir="ltr"] .pin-btn {
     left: auto;
@@ -727,7 +719,6 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     flex-direction: row;
 }
 
-/* Additional LTR fine‑tuning for English text + specific class combinations */
 html[dir="ltr"] .yellow-checkbox-checked-label .qty-text {
     margin-right: 6px;
 }
@@ -746,38 +737,34 @@ html[dir="ltr"] .sub-item .price-display {
     margin-left: auto;
 }
 
-/* Wrapper containing both tab groups */
 html[dir="ltr"] .tabs-header,
 html[dir="ltr"] .pricing-header,
 html[dir="ltr"] .invoice-top-row {
-  display: flex !important;
-  flex-direction: row-reverse !important; /* swap the two groups */
-  justify-content: space-between !important;
-  align-items: center !important;
-  width: 100%;
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100%;
 }
 
-/* Standard/Pro group moves to the right side */
 html[dir="ltr"] .pricing-tabs {
-  order: 2 !important;
-  display: flex;
-  justify-content: flex-end;
+    order: 2 !important;
+    display: flex;
+    justify-content: flex-end;
 }
 
-/* Starter/Business/Enterprise group moves to the left side */
 html[dir="ltr"] .package-tabs {
-  order: 1 !important;
-  display: flex;
-  justify-content: flex-start;
+    order: 1 !important;
+    display: flex;
+    justify-content: flex-start;
 }
 
-/* Only in LTR: reverse the order of service tabs */
 html[dir="ltr"] .pricing-tabs {
-  display: flex !important;
-  flex-direction: row-reverse !important;
+    display: flex !important;
+    flex-direction: row-reverse !important;
 }
 
-html[dir="ltr"] .qty-text{
-  margin-left: 0 !important;
-  margin-right: 6px !important;
+html[dir="ltr"] .qty-text {
+    margin-left: 0 !important;
+    margin-right: 6px !important;
 }

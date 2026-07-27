@@ -1,21 +1,11 @@
-/*
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-05-28
-  *  Version: 1.0.2
-  ****************************************************
-*/
+/* :::::::::::::::::::::::::: TYPOGRAPHY & FONTS :::::::::::::::::::::::::: */
 
-/* =========================== TYPOGRAPHY & FONTS ============================ */
-
-/* ------------------------- FONT-FACE DEFINITIONS ------------------------- */
-
-/* ltr */
+/* :::::::::::::::::::::::::: FONT-FACE DEFINITIONS :::::::::::::::::::::::::: */
 
 @font-face {
     font-family: 'KalamehEn';
     src: url('../../fonts/KalamehWeb-Regular.woff2') format('woff2'),
-         url('../../fonts/KalamehWeb-Regular.woff') format('woff');
+        url('../../fonts/KalamehWeb-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -24,19 +14,16 @@
 @font-face {
     font-family: 'KalamehEn';
     src: url('../../fonts/KalamehWeb-Black.woff2') format('woff2'),
-         url('../../fonts/KalamehWeb-Black.woff') format('woff');
+        url('../../fonts/KalamehWeb-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
 
-
-/* rtl */
-
 @font-face {
     font-family: 'KalamehFaNum';
     src: url('../../fonts/KalamehWebFaNum-Regular.woff2') format('woff2'),
-         url('../../fonts/KalamehWebFaNum-Regular.woff') format('woff');
+        url('../../fonts/KalamehWebFaNum-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -45,13 +32,13 @@
 @font-face {
     font-family: 'KalamehFaNum';
     src: url('../../fonts/KalamehWebFaNum-Black.woff2') format('woff2'),
-         url('../../fonts/KalamehWebFaNum-Black.woff') format('woff');
+        url('../../fonts/KalamehWebFaNum-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
 
-/* ------------------------- CSS VARIABLES ------------------------- */
+/* :::::::::::::::::::::::::: CSS VARIABLES :::::::::::::::::::::::::: */
 
 :root {
     --main-font: 'KalamehEn', sans-serif;

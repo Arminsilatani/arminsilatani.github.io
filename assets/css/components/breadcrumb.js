@@ -1,12 +1,4 @@
-/*
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-05-19
-  *  Version: 1.0.0
-  ****************************************************
-*/
-
-/* ------------------------- BREADCRUMB ANIMATION ------------------------- */
+/* :::::::::::::::::::::::::: BREADCRUMB ANIMATION :::::::::::::::::::::::::: */
 (function initBreadcrumb() {
     const container = document.getElementById("terminalPath");
     if (!container) return;

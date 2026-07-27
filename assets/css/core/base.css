@@ -1,27 +1,19 @@
-/*
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-05-07
-  *  Version: 1.0.0
-  ****************************************************
-*/
-
-/* =========================== BASE RESET & GLOBALS ============================ */
+/* :::::::::::::::::::::::::: BASE RESET AND GLOBALS :::::::::::::::::::::::::: */
 html,
 body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    background: #0d0d0d;
-    color: #f5f5f5;
+    background: #0D0D0D;
+    color: #F5F5F5;
     unicode-bidi: plaintext;
     font-family: var(--main-font);
     text-align: start;
     text-align-last: start;
 }
 
-/* ------------------------- LANGUAGE & DIRECTION ------------------------- */
+/* :::::::::::::::::::::::::: LANGUAGE AND DIRECTION :::::::::::::::::::::::::: */
 html[lang="fa"],
 html[lang="ar"] {
     direction: rtl;
@@ -36,7 +28,6 @@ html[lang="tr"] {
     text-align: left;
 }
 
-/* Direction-aware headings and links */
 html[dir="ltr"] h1,
 html[dir="ltr"] h2,
 html[dir="ltr"] h3,
@@ -59,106 +50,82 @@ html[dir="rtl"] li {
     text-align: right;
 }
 
-/* Paragraph styling */
 p {
     text-align: justify;
     text-align-last: start;
 }
 
-/* ------------------------- UTILITY CLASSES ------------------------- */
+/* :::::::::::::::::::::::::: UTILITY CLASSES :::::::::::::::::::::::::: */
 main.has-footer-gap {
     padding-bottom: 100px;
 }
 
-
-/*
-  ****************************************************
-  *  Custom Scrollbar Styles
-  *  Only affects the scrollbar thumb – no page-level hovers
-  ****************************************************
-*/
-
-/* ===== CSS Variables (override these in your theme) ===== */
+/* :::::::::::::::::::::::::: SCROLLBAR VARIABLES :::::::::::::::::::::::::: */
 :root {
-  --scrollbar-width: 5px;
-  --scrollbar-track-color: transparent;
-  --scrollbar-thumb-color: rgba(255, 255, 255, 0.08); /* subtle, barely visible */
-  --scrollbar-accent-color: var(--accent, #4ecdc4); /* accent color with fallback */
-  --scrollbar-border-radius: 3px;
-  --scrollbar-transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    --scrollbar-width: 5px;
+    --scrollbar-track-color: transparent;
+    --scrollbar-thumb-color: rgba(255, 255, 255, 0.08);
+    --scrollbar-accent-color: var(--accent, #4ECDC4);
+    --scrollbar-border-radius: 3px;
+    --scrollbar-transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* ============================================================
-   WEBKIT BROWSERS (Chrome, Edge, Safari, Opera)
-   ============================================================ */
-
-/* ----- Scrollbar dimensions ----- */
+/* :::::::::::::::::::::::::: WEBKIT SCROLLBAR :::::::::::::::::::::::::: */
 ::-webkit-scrollbar {
-  width: var(--scrollbar-width, 6px);
-  height: var(--scrollbar-width, 6px);
+    width: var(--scrollbar-width, 6px);
+    height: var(--scrollbar-width, 6px);
 }
 
-/* ----- Track: fully transparent ----- */
 ::-webkit-scrollbar-track {
-  background: var(--scrollbar-track-color, transparent);
+    background: var(--scrollbar-track-color, transparent);
 }
 
-/* ----- Thumb: normal state (very subtle) ----- */
 ::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb-color, rgba(255, 255, 255, 0.08));
-  border-radius: var(--scrollbar-border-radius, 3px);
-  transition: var(--scrollbar-transition, background-color 0.2s ease);
+    background: var(--scrollbar-thumb-color, rgba(255, 255, 255, 0.08));
+    border-radius: var(--scrollbar-border-radius, 3px);
+    transition: var(--scrollbar-transition, background-color 0.2s ease);
 }
 
-/* ----- Thumb: hover (only when mouse is directly over the thumb) ----- */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbar-accent-color, #4ecdc4);
-  box-shadow: 0 0 6px var(--scrollbar-accent-color, #4ecdc4);
+    background: var(--scrollbar-accent-color, #4ECDC4);
+    box-shadow: 0 0 6px var(--scrollbar-accent-color, #4ECDC4);
 }
 
-/* ----- Thumb: active (clicking/dragging the thumb) ----- */
 ::-webkit-scrollbar-thumb:active {
-  background: var(--scrollbar-accent-color, #4ecdc4);
-  box-shadow: 0 0 8px var(--scrollbar-accent-color, #4ecdc4);
+    background: var(--scrollbar-accent-color, #4ECDC4);
+    box-shadow: 0 0 8px var(--scrollbar-accent-color, #4ECDC4);
 }
 
-/* ============================================================
-   FIREFOX
-   ============================================================ */
+/* :::::::::::::::::::::::::: FIREFOX SCROLLBAR :::::::::::::::::::::::::: */
 * {
-  scrollbar-width: thin;
-  scrollbar-color: var(--scrollbar-thumb-color, rgba(255, 255, 255, 0.08))
-                   var(--scrollbar-track-color, transparent);
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb-color, rgba(255, 255, 255, 0.08)) var(--scrollbar-track-color, transparent);
 }
 
-/* 
-   NOTE: Firefox does not support :hover or :active on scrollbar parts.
-   The color will remain the normal subtle color.
-   If you want a different Firefox experience, you'd need to use JavaScript.
-*/
-
-/* ============================================================
-   FALLBACK for older browsers without custom properties
-   ============================================================ */
+/* :::::::::::::::::::::::::: SCROLLBAR FALLBACK :::::::::::::::::::::::::: */
 @supports not (--custom-property: value) {
-  ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
-  }
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 3px;
-    transition: background-color 0.2s ease;
-  }
-  ::-webkit-scrollbar-thumb:hover,
-  ::-webkit-scrollbar-thumb:active {
-    background: #4ecdc4;
-  }
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: rgba(255, 255, 255, 0.08) transparent;
-  }
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 3px;
+        transition: background-color 0.2s ease;
+    }
+
+    ::-webkit-scrollbar-thumb:hover,
+    ::-webkit-scrollbar-thumb:active {
+        background: #4ECDC4;
+    }
+
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255, 255, 255, 0.08) transparent;
+    }
 }

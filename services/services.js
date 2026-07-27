@@ -1,136 +1,175 @@
-/*
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-05-21
-  *  Version: 0.0.0
-  ****************************************************
-*/
-
-/* =========================== SERVICE CARDS SCROLL MODULE ============================ */
+/* :::::::::::::::::::::::::: SERVICE CARDS SLIDER :::::::::::::::::::::::::: */
 (function() {
-  const container = document.getElementById('scrollContainer');
-  const dotsNav = document.getElementById('dotsNav');
-  const cards = document.querySelectorAll('.service-card');
-  let activeIndex = 0;
+    const container = document.getElementById('scrollContainer');
+    if (!container) return;
 
-  /* ------------------------- DOT NAVIGATION ------------------------- */
-  function buildDots() {
-    dotsNav.innerHTML = '';
-    cards.forEach((_, idx) => {
-      const dot = document.createElement('button');
-      dot.classList.add('dot');
-      if (idx === activeIndex) dot.classList.add('active-dot');
-      dot.addEventListener('click', (e) => {
-        e.stopPropagation();
-        scrollToCard(idx);
-      });
-      dotsNav.appendChild(dot);
-    });
-  }
+    const dotsNav = document.getElementById('dotsNav');
+    const cards = container.querySelectorAll('.service-card');
+    let activeIndex = 0;
 
-  /* ------------------------- CARD SCROLL & ACTIVATION ------------------------- */
-  function scrollToCard(index) {
-    if (index < 0 || index >= cards.length) return;
-    const card = cards[index];
-    card.scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest',
-      inline: 'center'
-    });
-    updateActiveCard(index);
-  }
-
-  function updateActiveCard(index) {
-    if (index === activeIndex) return;
-    cards.forEach((card, i) => {
-      if (i === index) {
-        card.classList.add('active');
-      } else {
-        card.classList.remove('active');
-      }
-    });
-    const dots = document.querySelectorAll('.dot');
-    dots.forEach((dot, i) => {
-      if (i === index) {
-        dot.classList.add('active-dot');
-      } else {
-        dot.classList.remove('active-dot');
-      }
-    });
-    activeIndex = index;
-  }
-
-  // Detect the card closest to the container center during scroll
-  function onScroll() {
-    const containerRect = container.getBoundingClientRect();
-    const centerX = containerRect.left + containerRect.width / 2;
-    let closestIndex = 0;
-    let minDistance = Infinity;
-
-    cards.forEach((card, idx) => {
-      const rect = card.getBoundingClientRect();
-      const cardCenter = rect.left + rect.width / 2;
-      const distance = Math.abs(centerX - cardCenter);
-      if (distance < minDistance) {
-        minDistance = distance;
-        closestIndex = idx;
-      }
-    });
-    if (closestIndex !== activeIndex) {
-      updateActiveCard(closestIndex);
+    /* :::::::::::::::::::::::::: DOT NAVIGATION :::::::::::::::::::::::::: */
+    function buildDots() {
+        if (!dotsNav) return;
+        dotsNav.innerHTML = '';
+        cards.forEach((_, idx) => {
+            const dot = document.createElement('button');
+            dot.classList.add('dot');
+            if (idx === activeIndex) dot.classList.add('active-dot');
+            dot.addEventListener('click', (e) => {
+                e.stopPropagation();
+                scrollToCard(idx);
+            });
+            dotsNav.appendChild(dot);
+        });
     }
-  }
 
-  /* ------------------------- DRAG DETECTION & CLICK HANDLING ------------------------- */
-  let dragStartX = 0,
-      dragStartY = 0;
-  let isDrag = false;
-  const DRAG_THRESHOLD = 5;
-
-  function onMouseDown(e) {
-    dragStartX = e.clientX;
-    dragStartY = e.clientY;
-    isDrag = false;
-    document.addEventListener('mousemove', onMouseMove);
-    document.addEventListener('mouseup', onMouseUp);
-  }
-
-  function onMouseMove(e) {
-    const dx = Math.abs(e.clientX - dragStartX);
-    const dy = Math.abs(e.clientY - dragStartY);
-    if (dx > DRAG_THRESHOLD || dy > DRAG_THRESHOLD) {
-      isDrag = true;
+    /* :::::::::::::::::::::::::: CARD SCROLL & ACTIVATION :::::::::::::::::::::::::: */
+    function scrollToCard(index) {
+        if (index < 0 || index >= cards.length) return;
+        const card = cards[index];
+        card.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'center'
+        });
+        updateActiveCard(index);
     }
-  }
 
-  function onMouseUp() {
-    document.removeEventListener('mousemove', onMouseMove);
-    document.removeEventListener('mouseup', onMouseUp);
-  }
+    function updateActiveCard(index) {
+        if (index === activeIndex) return;
+        cards.forEach((card, i) => {
+            card.classList.toggle('active', i === index);
+        });
+        const dots = document.querySelectorAll('#dotsNav .dot');
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active-dot', i === index);
+        });
+        activeIndex = index;
+    }
 
-  function handleCardClick(event) {
-    const card = event.currentTarget;
-    // Only active card triggers navigation
-    if (!card.classList.contains('active')) return;
-    if (isDrag) return;
-    const link = card.getAttribute('data-link');
-    if (link && link !== '#') {
-      window.location.href = link;
+    // Detect the nearest card to the center during scroll
+    function onScroll() {
+        const containerRect = container.getBoundingClientRect();
+        const centerX = containerRect.left + containerRect.width / 2;
+        let closestIndex = 0;
+        let minDistance = Infinity;
+
+        cards.forEach((card, idx) => {
+            const rect = card.getBoundingClientRect();
+            const cardCenter = rect.left + rect.width / 2;
+            const distance = Math.abs(centerX - cardCenter);
+            if (distance < minDistance) {
+                minDistance = distance;
+                closestIndex = idx;
+            }
+        });
+        if (closestIndex !== activeIndex) {
+            updateActiveCard(closestIndex);
+        }
+    }
+
+    /* :::::::::::::::::::::::::: DRAG DETECTION & CLICK HANDLING :::::::::::::::::::::::::: */
+    let dragStartX = 0,
+        dragStartY = 0;
+    let isDrag = false;
+    const DRAG_THRESHOLD = 5;
+
+    function onMouseDown(e) {
+        dragStartX = e.clientX;
+        dragStartY = e.clientY;
+        isDrag = false;
+        document.addEventListener('mousemove', onMouseMove);
+        document.addEventListener('mouseup', onMouseUp);
+    }
+
+    function onMouseMove(e) {
+        const dx = Math.abs(e.clientX - dragStartX);
+        const dy = Math.abs(e.clientY - dragStartY);
+        if (dx > DRAG_THRESHOLD || dy > DRAG_THRESHOLD) {
+            isDrag = true;
+        }
+    }
+
+    function onMouseUp() {
+        document.removeEventListener('mousemove', onMouseMove);
+        document.removeEventListener('mouseup', onMouseUp);
+    }
+
+    function handleCardClick(event) {
+        const card = event.currentTarget;
+        // If user was dragging, ignore the click
+        if (isDrag) return;
+
+        // If card is not active, bring it to center and activate it
+        if (!card.classList.contains('active')) {
+            const index = parseInt(card.getAttribute('data-index'), 10);
+            scrollToCard(index);
+            return;
+        }
+
+        // Card is active: navigate to its link
+        const link = card.getAttribute('data-link');
+        if (link && link !== '#') {
+            window.location.href = link;
+        } else {
+            console.warn('No link defined for this card', card);
+        }
+    }
+
+    /* :::::::::::::::::::::::::: KEYBOARD NAVIGATION :::::::::::::::::::::::::: */
+    function onKeyDown(e) {
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+            e.preventDefault();
+            let newIndex = activeIndex;
+            // In RTL: ArrowLeft moves to next card (increase index), ArrowRight to previous
+            if (e.key === 'ArrowLeft') {
+                newIndex = Math.min(activeIndex + 1, cards.length - 1);
+            } else {
+                newIndex = Math.max(activeIndex - 1, 0);
+            }
+            if (newIndex !== activeIndex) {
+                scrollToCard(newIndex);
+            }
+        }
+    }
+
+    /* :::::::::::::::::::::::::: INITIALIZATION :::::::::::::::::::::::::: */
+    function initializeSlider() {
+        buildDots();
+
+        // Activate and center the first card without animation
+        if (cards.length > 0) {
+            cards[0].classList.add('active');
+            const firstDot = document.querySelector('#dotsNav .dot');
+            if (firstDot) firstDot.classList.add('active-dot');
+            activeIndex = 0;
+
+            // Scroll to the first card without animation
+            cards[0].scrollIntoView({
+                behavior: 'auto',
+                block: 'nearest',
+                inline: 'center'
+            });
+        }
+
+        // Attach events
+        container.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll);
+        container.addEventListener('keydown', onKeyDown);
+
+        cards.forEach(card => {
+            card.addEventListener('click', handleCardClick);
+            card.addEventListener('mousedown', onMouseDown);
+        });
+
+        // Check position once more to synchronize dots
+        setTimeout(onScroll, 100);
+    }
+
+    // If page is still loading, wait; otherwise run directly
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializeSlider);
     } else {
-      console.warn('لینکی برای این کارت تعریف نشده است', card);
+        initializeSlider();
     }
-  }
-
-  cards.forEach(card => {
-    card.addEventListener('click', handleCardClick);
-    card.addEventListener('mousedown', onMouseDown);
-  });
-
-  /* ------------------------- INITIALIZATION ------------------------- */
-  buildDots();
-  setTimeout(() => {
-    onScroll();
-  }, 100);
-  container.addEventListener('scroll', onScroll);
-  window.addEventListener('resize', onScroll);
 })();

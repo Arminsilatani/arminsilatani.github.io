@@ -1,15 +1,5 @@
-/*
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-05-05
-  *  Version: 1.0.0
-  ****************************************************
-*/
+/* :::::::::::::::::::::::::: COUNTRY CODE TO CURRENCY CODE MAPPING :::::::::::::::::::::::::: */
 
-/**
- * Mapping of country codes (ISO 3166-1 alpha-2) to their respective currency codes.
- * Groupings roughly follow geographic/economic regions.
- */
 export const countryCurrency = {
     // Turkey, Eurozone & Iran
     TR: "TRY",
