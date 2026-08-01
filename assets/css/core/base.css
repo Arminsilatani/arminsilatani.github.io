@@ -56,9 +56,7 @@ p {
 }
 
 /* :::::::::::::::::::::::::: UTILITY CLASSES :::::::::::::::::::::::::: */
-main.has-footer-gap {
-    padding-bottom: 100px;
-}
+
 
 /* :::::::::::::::::::::::::: SCROLLBAR VARIABLES :::::::::::::::::::::::::: */
 :root {

@@ -1,5 +1,4 @@
 /* :::::::::::::::::::::::::: SMART 60-DAY CALENDAR :::::::::::::::::::::::::: */
-
 (function () {
     /* :::::::::::::::::::::::::: CONSTANTS :::::::::::::::::::::::::: */
 
@@ -15,8 +14,8 @@
     }
 
     const TRACKED_EVENTS = [
-        { title: "Allenamento Parte Superiore A", type: "seo" },
-        { title: "Allenamento Parte Inferiore A", type: "seo" },
+        { title: "Allenamento Parte Superiore A", type: "personal" },
+        { title: "Allenamento Parte Inferiore A", type: "personal" },
         { title: "Allenamento Parte Superiore B", type: "personal" },
         { title: "Allenamento Parte Inferiore B", type: "personal" },
     ];
@@ -54,7 +53,7 @@
     const DAY_NAMES = {
         fa: ['یکشنبه', 'دوشنبه', 'سه‌شنبه', 'چهارشنبه', 'پنجشنبه', 'جمعه', 'شنبه'],
         ar: ['الأحد', 'الإثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'],
-        en: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        en: ['Sun', 'Mon', 'Tues', 'Wednes', 'Thurs', 'Fri', 'Satur'],
         de: ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
         it: ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'],
         tr: ['Pazar', 'Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi'],
@@ -255,38 +254,38 @@
     /* :::::::::::::::::::::::::: DATA FETCHING :::::::::::::::::::::::::: */
 
     async function fetchTrackedEvents() {
-        if (TRACKED_EVENTS.length === 0) return [];
+    if (TRACKED_EVENTS.length === 0) return [];
 
-        const titles = TRACKED_EVENTS.map(e => e.title);
-        const typeMap = new Map(TRACKED_EVENTS.map(e => [e.title, e.type]));
+    const titles = TRACKED_EVENTS.map(e => e.title);
+    const typeMap = new Map(TRACKED_EVENTS.map(e => [e.title, e.type]));
 
-        const { data, error } = await supabaseClient
-            .from('ravlo')
-            .select('id, title, start_date, end_date, recurrence_type, recurrence_interval, recurrence_days, recurrence_day_of_month, recurrence_end_date, recurrence_count')
-            .in('title', titles)
-            .eq('all_day', false);
+    const { data, error } = await supabaseClient
+        .from('ravlo')
+        .select('id, title, start_date, end_date, recurrence_type, recurrence_interval, recurrence_days, recurrence_day_of_month, recurrence_end_date, recurrence_count')
+        .in('title', titles)
+        .or('all_day.eq.false,all_day.is.null')
 
-        if (error) {
-            console.error('Error fetching events:', error);
-            return [];
-        }
-
-        const now = new Date();
-        const rangeStart = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
-        const rangeEnd = new Date(rangeStart);
-        rangeEnd.setUTCDate(rangeEnd.getUTCDate() + 60);
-
-        const allOccurrences = [];
-        for (const event of (data || [])) {
-            const type = typeMap.get(event.title) || 'other';
-            const occurrences = expandRecurringEvent(event, rangeStart, rangeEnd);
-            occurrences.forEach(occ => {
-                occ.type = type;
-                allOccurrences.push(occ);
-            });
-        }
-        return allOccurrences;
+    if (error) {
+        console.error('Error fetching events:', error);
+        return [];
     }
+
+    const now = new Date();
+    const rangeStart = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
+    const rangeEnd = new Date(rangeStart);
+    rangeEnd.setUTCDate(rangeEnd.getUTCDate() + 60);
+
+    const allOccurrences = [];
+    for (const event of (data || [])) {
+        const type = typeMap.get(event.title) || 'other';
+        const occurrences = expandRecurringEvent(event, rangeStart, rangeEnd);
+        occurrences.forEach(occ => {
+            occ.type = type;
+            allOccurrences.push(occ);
+        });
+    }
+    return allOccurrences;
+}
 
     /* :::::::::::::::::::::::::: CALENDAR GENERATION :::::::::::::::::::::::::: */
 
@@ -477,8 +476,24 @@
         const seoRemaining = Math.max(0, MAX_SEO - today.seoCount);
         const designRemaining = Math.max(0, MAX_DESIGN - today.designCount);
 
-        const toPersian = num => String(num).replace(/[0-9]/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
-        el.textContent = `ظرفیت: ${toPersian(seoRemaining)} جای خالی برای پروژه سئو و ${toPersian(designRemaining)} جای خالی برای طراحی سایت`;
+        const formatNumber = (num, lang) => {
+            if (lang === 'fa') {
+                return String(num).replace(/[0-9]/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+            }
+            return new Intl.NumberFormat(lang).format(num);
+        };
+
+        const translations = {
+            fa: (seo, design) => `ظرفیت: ${formatNumber(seo, 'fa')} جای خالی برای پروژه سئو و ${formatNumber(design, 'fa')} جای خالی برای طراحی سایت`,
+            en: (seo, design) => `Capacity: ${formatNumber(seo, 'en')} open slots for SEO projects and ${formatNumber(design, 'en')} for web design`,
+            de: (seo, design) => `Kapazität: ${formatNumber(seo, 'de')} freie Plätze für SEO-Projekte und ${formatNumber(design, 'de')} für Webdesign`,
+            it: (seo, design) => `Capacità: ${formatNumber(seo, 'it')} slot liberi per progetti SEO e ${formatNumber(design, 'it')} per web design`,
+            tr: (seo, design) => `Kapasite: ${formatNumber(seo, 'tr')} SEO projesi için boş yer, ${formatNumber(design, 'tr')} web tasarım için`,
+            ar: (seo, design) => `السعة: ${formatNumber(seo, 'ar')} فتحة متاحة لمشاريع السيو و ${formatNumber(design, 'ar')} لتصميم المواقع`
+        };
+
+        const translateFn = translations[CURRENT_LANG] || translations['en'];
+        el.textContent = translateFn(seoRemaining, designRemaining);
     }
 
     function updateOverallStatus(days) {

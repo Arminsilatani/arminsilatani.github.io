@@ -11,4 +11,11 @@ h4,
 h5,
 h6 {
     font-weight: 900;
+    color: #E0E0E0;
+}
+
+p {
+  color: #CFCFCF;
+  line-height: 1.8;
+  margin-top: 1.3rem;  
 }

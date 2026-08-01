@@ -1,11 +1,3 @@
-```html
-<!--
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-05-24
-  *  Version: 0.0.1
-  ****************************************************
--->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -388,9 +380,9 @@
                     <div class="avail-card reveal-up">
                         <div class="avail-card__header">
                             <span class="status-dot" id="statusDot"></span>
-                            <span class="status-text" id="statusText">در دسترس برای پروژه‌های جدید</span>
+                            <span class="status-text" id="statusText"></span>
                         </div>
-                        <p class="status-detail">Capacity: 2 project slots available this month</p>
+                        <p class="status-detail" id="capacityText"></p>
 
                         <div class="mini-week-wrapper" id="miniWeekWrapper">
                             <div class="mini-week" id="miniWeek">
@@ -411,7 +403,7 @@
                         <div class="timezone-display">
                             <div class="timezone-clock" id="liveClock">--:--</div>
                             <div class="timezone-label">Tehran · IRST</div>
-                            <span class="timezone-offset">UTC +۳:۳۰</span>
+                            <span class="timezone-offset">UTC +3:30</span>
                         </div>
                         <p class="status-detail" style="text-align:center;margin-top:12px;">
                             Working hours: 9 AM – 5 PM (IRST)
@@ -487,6 +479,8 @@
     <script src="/assets/css/components/blurup.js"></script>
     <script src="../language-component.js"></script>
     <script src="/assets/css/components/breadcrumb.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/contact/rrule.min.js"></script>
     <script src="/contact/calendar.js"></script>
     <script src="/assets/css/components/faq.js"></script>
     <script type="module" src="../footer-component.js"></script>
@@ -509,20 +503,6 @@
             }
             updateClock();
             setInterval(updateClock, 1000);
-
-            /* ----------------- Availability Status ----------------- */
-            const statusDot = document.getElementById("statusDot");
-            const statusText = document.getElementById("statusText");
-            if (statusDot && statusText) {
-                const utc = Date.now() + (new Date().getTimezoneOffset() * 60000);
-                const iranHour = new Date(utc + (3.5 * 3600000)).getHours();
-                if (iranHour >= 22 || iranHour < 8) {
-                    statusDot.classList.add("status-dot--busy");
-                    statusText.textContent = "در حال حاضر خارج از ساعات کاری";
-                } else {
-                    statusText.textContent = "در دسترس برای پروژه‌های جدید";
-                }
-            }
 
             /* ----------------- Contact Form Handling ----------------- */
             const form = document.getElementById("contactForm");
@@ -613,4 +593,3 @@
     <script src="/assets/css/components/animations.js"></script>
 </body>
 </html>
-```
