@@ -142,21 +142,21 @@
     }
     </script>
 
-    <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: GSAP + SCROLLTRIGGER :::::::::::::::::::::::::: -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
 
-    <!-- =========================== CONTACT PAGE ============================ -->
+    <!-- :::::::::::::::::::::::::: CONTACT PAGE :::::::::::::::::::::::::: -->
 
-    <!-- ------------------------- HEADER ------------------------- -->
+    <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
     <header-component></header-component>
 
     <main class="has-footer-gap">
 
-        <!-- ------------------------- HERO SECTION ------------------------- -->
+        <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
         <section class="hero-section">
             <div class="hero-container">
                 <language-component></language-component>
@@ -172,11 +172,11 @@
                             <feDropShadow dx="0" dy="-8" stdDeviation="12" flood-color="rgba(0,0,0,0.55)" />
                         </filter>
                     </defs>
-                    <path filter="url(#dividerShadow)" fill="#0d0d0d" d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z" />
+                    <path filter="url(#dividerShadow)" fill="#0D0D0D" d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z" />
                 </svg>
             </div>
 
-            <!-- ------------------------- BREADCRUMB ------------------------- -->
+            <!-- :::::::::::::::::::::::::: BREADCRUMB :::::::::::::::::::::::::: -->
             <div class="fake-terminal-breadcrumb">
                 <div class="fake-terminal-inner">
                     <span class="cmd-prefix">$</span>
@@ -187,7 +187,7 @@
             </div>
         </section>
 
-        <!-- ------------------------- CONTACT FORM & INFO ------------------------- -->
+        <!-- :::::::::::::::::::::::::: CONTACT FORM & INFO :::::::::::::::::::::::::: -->
         <section class="section" id="contact">
             <div class="container">
                 <div class="contact-grid">
@@ -270,7 +270,7 @@
             </div>
         </section>
 
-        <!-- ------------------------- PROCESS STEPS ------------------------- -->
+        <!-- :::::::::::::::::::::::::: PROCESS STEPS :::::::::::::::::::::::::: -->
         <section class="section" id="process">
             <div class="container-1080">
                 <span class="section-eyebrow">The Process</span>
@@ -368,7 +368,7 @@
             </div>
         </section>
 
-        <!-- ------------------------- AVAILABILITY & TIMEZONE ------------------------- -->
+        <!-- :::::::::::::::::::::::::: AVAILABILITY & TIMEZONE :::::::::::::::::::::::::: -->
         <section class="section" id="availability">
             <div class="container">
                 <span class="section-eyebrow">Status & Availability</span>
@@ -413,7 +413,7 @@
             </div>
         </section>
 
-        <!-- ------------------------- FAQ ACCORDION ------------------------- -->
+        <!-- :::::::::::::::::::::::::: FAQ ACCORDION :::::::::::::::::::::::::: -->
         <section class="section" id="faq">
             <div class="container">
                 <span class="section-eyebrow">Frequently Asked Questions</span>
@@ -471,7 +471,7 @@
 
     </main>
 
-    <!-- ------------------------- FOOTER ------------------------- -->
+    <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
     <footer-component></footer-component>
 
     <!-- :::::::::::::::::::::::::: COMPONENT SCRIPTS :::::::::::::::::::::::::: -->
@@ -489,7 +489,7 @@
     <script>
         (function () {
 
-            /* ----------------- Live Clock (IRST) ----------------- */
+            /* :::::::::::::::::::::::::: LIVE CLOCK (IRST) :::::::::::::::::::::::::: */
             const clockEl = document.getElementById("liveClock");
             function updateClock() {
                 if (!clockEl) return;
@@ -504,7 +504,7 @@
             updateClock();
             setInterval(updateClock, 1000);
 
-            /* ----------------- Contact Form Handling ----------------- */
+            /* :::::::::::::::::::::::::: CONTACT FORM HANDLING :::::::::::::::::::::::::: */
             const form = document.getElementById("contactForm");
             const submitBtn = document.getElementById("submitBtn");
             if (form && submitBtn) {
@@ -558,7 +558,7 @@
                 });
             }
 
-            /* ----------------- Process Box Hover / Click Expansion ----------------- */
+            /* :::::::::::::::::::::::::: PROCESS BOX HOVER / CLICK EXPANSION :::::::::::::::::::::::::: */
             const processBoxes = document.querySelectorAll(".process-box");
             if (processBoxes.length) {
                 const openBox = function (box) {
@@ -575,7 +575,7 @@
                 });
             }
 
-            /* ----------------- Inject Shake Keyframes ----------------- */
+            /* :::::::::::::::::::::::::: INJECT SHAKE KEYFRAMES :::::::::::::::::::::::::: */
             const shakeStyle = document.createElement("style");
             shakeStyle.textContent =
                 "@keyframes shake {" +

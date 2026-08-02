@@ -646,6 +646,7 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
     rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border);
   border-radius: 30px;
+  margin-bottom: 150px;
 }
 
 .cta-glow {

@@ -1,10 +1,4 @@
-<!--
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-05-24
-  *  Version: 0.2.1
-  ****************************************************
--->
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -271,15 +265,11 @@
 
 <body>
 
-<!-- ==================================================
-HEADER
-================================================== -->
+<!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
 
 <header-component></header-component><main class="has-footer-gap">
 
-<!-- ==================================================
-HERO SECTION
-================================================== -->
+<!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
 
     <section class="hero-section">
         <div class="hero-container">
@@ -301,7 +291,6 @@ HERO SECTION
             </svg>
         </div>
 
-        <!-- Breadcrumb به شکل ترمینال -->
         <div class="fake-terminal-breadcrumb">
             <div class="fake-terminal-inner">
                 <span class="cmd-prefix">$</span>
@@ -311,16 +300,13 @@ HERO SECTION
             </div>
         </div>
     </section>
-<!-- ==================================================
-SERVICES CONTAINER
-================================================== -->
+
+<!-- :::::::::::::::::::::::::: SERVICES CONTAINER :::::::::::::::::::::::::: -->
 
 <div class="services-container">
 <div class="pricing-wrapper container-1080">
 
-<!-- SERVICES (structure preserved exactly) -->
-
-<!---------------------------------------- SERVICE 01 : SEO ---------------------------------------->
+<!-- :::::::::::::::::::::::::: SERVICE 01 : SEO :::::::::::::::::::::::::: -->
 
 <section class="service-section">
 
@@ -346,7 +332,6 @@ SEO Services
 </h3>
 
 </div>
-
 
 <!-- SERVICE CARD -->
 
@@ -393,7 +378,6 @@ Enterprise
 </div>
 
 </div>
-
 
 <!-- SERVICE ITEMS -->
 
@@ -11101,11 +11085,7 @@ Business
 
 <!-- END SERVICES CONTAINER -->
 
-
-
-<!-- ==================================================
-FINAL INVOICE
-================================================== -->
+<!-- :::::::::::::::::::::::::: FINAL INVOICE :::::::::::::::::::::::::: -->
 
 <section id="final-invoice-section"
 class="invoice-section final-invoice-section">
@@ -11133,9 +11113,8 @@ Cost Calculator
 
 
 
-<!-- ==================================================
+<!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
 FOOTER
-================================================== -->
 
 </main><footer-component currency></footer-component>
 
@@ -11339,20 +11318,17 @@ function applyAutoSlidingText() {
     );
 
     targets.forEach(target => {
-        // --- 1) فاصله بین عدد و متن (فقط در LTR) ---
         const dir = getComputedStyle(target).direction;
         const qty = target.querySelector('.qty-text');
         const slide = target.querySelector('.sliding-text-container');
 
         if (dir === 'ltr' && qty && slide) {
-            // اگر بین عدد و متن فاصله نبود، اضافه کن
             const next = qty.nextSibling;
             if (!next || next.nodeType !== 3 || next.textContent !== ' ') {
                 qty.after(document.createTextNode(' '));
             }
         }
 
-        // --- 2) اسلایدینگ متن (کد اصلی خودت) ---
         let innerWrapper = target.querySelector(".scrolling-text-inner");
         if (!innerWrapper) {
             innerWrapper = document.createElement("div");

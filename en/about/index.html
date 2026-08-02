@@ -1,11 +1,4 @@
-<!--
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-05-24
-  *  Version: 0.2.1
-  ****************************************************
--->
-<!-- =========================== ABOUT PAGE ============================ -->
+<!-- :::::::::::::::::::::::::: ABOUT PAGE :::::::::::::::::::::::::: -->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -169,16 +162,12 @@
 
 <body>
 
-    <!-- ========================================= -->
-    <!-- HEADER -->
-    <!-- ========================================= -->
+    <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
     <header-component></header-component>
 
     <main class="has-footer-gap">
 
-        <!-- ------------------------------------------------------------------ -->
-        <!-- HERO SECTION -->
-        <!-- ------------------------------------------------------------------ -->
+        <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
         <section class="hero-section">
 
             <div class="hero-container">
@@ -197,7 +186,7 @@
                     </defs>
                     <path
                         filter="url(#dividerShadow)"
-                        fill="#0d0d0d"
+                        fill="#0D0D0D"
                         d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
                     />
                 </svg>
@@ -214,32 +203,26 @@
 
         </section>
 
-        <!-- ------------------------------------------------------------------ -->
-        <!-- ABOUT ME SECTION -->
-        <!-- ------------------------------------------------------------------ -->
+        <!-- :::::::::::::::::::::::::: ABOUT ME SECTION :::::::::::::::::::::::::: -->
         <div id="timeline-container" class="story-container"></div>
 
     </main>
 
-    <!-- ========================================= -->
-    <!-- FOOTER -->
-    <!-- ========================================= -->
+    <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
     <footer-component></footer-component>
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: COMPONENT SCRIPTS ::::::::::::::::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: COMPONENT SCRIPTS :::::::::::::::::::::::::: -->
     <script type="module" src="../header-component.js"></script>
     <script src="/assets/css/components/blurup.js"></script>
     <script src="../language-component.js"></script>
     <script src="/assets/css/components/breadcrumb.js"></script>
     <script type="module" src="../footer-component.js"></script>
 
-    <!-- ::::::::::::::::::::::::::::::::::::::: PAGE SCRIPTS ::::::::::::::::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: PAGE SCRIPTS :::::::::::::::::::::::::: -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
 
-            /* ------------------------------------------------------------------
-               TIMELINE DATA
-            --------------------------------------------------------------------- */
+            /* :::::::::::::::::::::::::: TIMELINE DATA :::::::::::::::::::::::::: */
             const timelineData = {
                 1989: {
                     context: "Kasra Hospital",
@@ -313,9 +296,7 @@
                 }
             };
 
-            /* ------------------------------------------------------------------
-               BUILD TIMELINE HTML
-            --------------------------------------------------------------------- */
+            /* :::::::::::::::::::::::::: BUILD TIMELINE HTML :::::::::::::::::::::::::: */
             const container = document.getElementById("timeline-container");
             Object.keys(timelineData).forEach(year => {
                 const data = timelineData[year];
@@ -334,9 +315,7 @@
                 container.appendChild(block);
             });
 
-            /* ------------------------------------------------------------------
-               SCROLL ANIMATION
-            --------------------------------------------------------------------- */
+            /* :::::::::::::::::::::::::: SCROLL ANIMATION :::::::::::::::::::::::::: */
             const storyBlocks = document.querySelectorAll(".story-block");
 
             function updateScrollAnimation() {

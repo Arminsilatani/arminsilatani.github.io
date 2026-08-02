@@ -140,6 +140,7 @@
     flex-shrink: 0;
     transform: translateY(-80px);
     position: relative;
+    margin-bottom: 150px;
 }
 
 .services-wrapper .dot {

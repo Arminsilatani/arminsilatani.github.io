@@ -200,7 +200,7 @@
             <div class="hero-container">
                 <language-component></language-component>
                 <div class="hero-title">
-                    <h1 class="split-title">تواصل معي</h1>
+                    <h1>تواصل معي</h1>
                 </div>
             </div>
 
@@ -419,9 +419,9 @@
                     <div class="avail-card reveal-up">
                         <div class="avail-card__header">
                             <span class="status-dot" id="statusDot"></span>
-                            <span class="status-text" id="statusText">در دسترس برای پروژه‌های جدید</span>
+                            <span class="status-text" id="statusText"></span>
                         </div>
-                        <p class="status-detail">السعة: متاح لمشروعين هذا الشهر</p>
+                        <p class="status-detail" id="capacityText"></p>
 
                         <div class="mini-week-wrapper" id="miniWeekWrapper">
                             <div class="mini-week" id="miniWeek">
@@ -518,7 +518,9 @@
     <script src="/assets/css/components/blurup.js"></script>
     <script src="../language-component.js"></script>
     <script src="/assets/css/components/breadcrumb.js"></script>
-    <script src="../../contact/calendar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/contact/rrule.min.js"></script>
+    <script src="/contact/calendar.js"></script>
     <script src="/assets/css/components/faq.js"></script>
     <script type="module" src="../footer-component.js"></script>
 
