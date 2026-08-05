@@ -1,506 +1,726 @@
-<!--
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-05-24
-  *  Version: 0.3.1
-  ****************************************************
--->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de" dir="ltr">
-<head>
+  <head>
     <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- :::::::::::::::::::::::::: SEO META :::::::::::::::::::::::::: -->
     <title>Kontakt und aktuelle Verfügbarkeit | Armin Silatani</title>
-    <meta name="description" content="Diese Seite stellt Ihnen alle nötigen Informationen zur Kontaktaufnahme bereit und zeigt den zeitlichen Ablauf sowie die Phasen der Projektentwicklung.">
-    <meta name="robots" content="noindex, nofollow">
+    <meta
+      name="description"
+      content="Diese Seite stellt Ihnen alle nötigen Informationen zur Kontaktaufnahme bereit und zeigt den zeitlichen Ablauf sowie die Phasen der Projektentwicklung."
+    />
+    <meta name="robots" content="noindex, nofollow" />
 
     <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
-    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icon-32.png">
-    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/images/icon-32.png"
+    />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
-    <meta property="og:title" content="Kontaktseite und Arbeitsprozess Armin Silatani">
-    <meta property="og:description" content="Auf dieser Seite sind die Kontaktdaten und der Projektverlauf aufgeführt.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://arminsilatani.com/de/contact/">
-    <meta property="og:locale" content="de_DE">
-    <meta property="og:image" content="https://arminsilatani.com/assets/images/arminsilatani/contact/FeaturedImage.webp">
-    <meta property="og:image:alt" content="Mann mit blauer Kappe telefoniert mit kleinem Hund im Pullover">
+    <meta
+      property="og:title"
+      content="Kontaktseite und Arbeitsprozess Armin Silatani"
+    />
+    <meta
+      property="og:description"
+      content="Auf dieser Seite sind die Kontaktdaten und der Projektverlauf aufgeführt."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://arminsilatani.com/de/contact/" />
+    <meta property="og:locale" content="de_DE" />
+    <meta
+      property="og:image"
+      content="https://arminsilatani.com/assets/images/arminsilatani/contact/FeaturedImage.webp"
+    />
+    <meta
+      property="og:image:alt"
+      content="Mann mit blauer Kappe telefoniert mit kleinem Hund im Pullover"
+    />
 
     <!-- :::::::::::::::::::::::::: TWITTER CARD :::::::::::::::::::::::::: -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Kontaktseite und Arbeitsprozess Armin Silatani">
-    <meta name="twitter:description" content="Auf dieser Seite sind die Kontaktdaten und der Projektverlauf aufgeführt.">
-    <meta name="twitter:image" content="https://arminsilatani.com/assets/images/arminsilatani/contact/FeaturedImage.webp">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Kontaktseite und Arbeitsprozess Armin Silatani"
+    />
+    <meta
+      name="twitter:description"
+      content="Auf dieser Seite sind die Kontaktdaten und der Projektverlauf aufgeführt."
+    />
+    <meta
+      name="twitter:image"
+      content="https://arminsilatani.com/assets/images/arminsilatani/contact/FeaturedImage.webp"
+    />
 
     <!-- :::::::::::::::::::::::::: CANONICAL & HREFLANG :::::::::::::::::::::::::: -->
-    <link rel="canonical" href="https://arminsilatani.com/de/contact/">
-    <link rel="alternate" hreflang="fa" href="https://arminsilatani.com/contact/">
-    <link rel="alternate" hreflang="en" href="https://arminsilatani.com/en/contact/">
-    <link rel="alternate" hreflang="ar" href="https://arminsilatani.com/ar/contact/">
-    <link rel="alternate" hreflang="tr" href="https://arminsilatani.com/tr/contact/">
-    <link rel="alternate" hreflang="de" href="https://arminsilatani.com/de/contact/">
-    <link rel="alternate" hreflang="it" href="https://arminsilatani.com/it/contact/">
-    <link rel="alternate" hreflang="x-default" href="https://arminsilatani.com/en/contact/">
+    <link rel="canonical" href="https://arminsilatani.com/de/contact/" />
+    <link
+      rel="alternate"
+      hreflang="fa"
+      href="https://arminsilatani.com/contact/"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://arminsilatani.com/en/contact/"
+    />
+    <link
+      rel="alternate"
+      hreflang="ar"
+      href="https://arminsilatani.com/ar/contact/"
+    />
+    <link
+      rel="alternate"
+      hreflang="tr"
+      href="https://arminsilatani.com/tr/contact/"
+    />
+    <link
+      rel="alternate"
+      hreflang="de"
+      href="https://arminsilatani.com/de/contact/"
+    />
+    <link
+      rel="alternate"
+      hreflang="it"
+      href="https://arminsilatani.com/it/contact/"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://arminsilatani.com/en/contact/"
+    />
 
     <!-- :::::::::::::::::::::::::: SCHEMA :::::::::::::::::::::::::: -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Person",
-          "@id": "https://arminsilatani.com/#person",
-          "name": "Armin Silatani",
-          "jobTitle": "Digital Marketing Specialist",
-          "url": "https://arminsilatani.com/",
-          "image": {
-            "@type": "ImageObject",
-            "url": "https://arminsilatani.com/assets/images/favicon.png"
-          },
-          "email": "contact@arminsilatani.com",
-          "telephone": "+989125759466",
-          "sameAs": [
-            "https://www.linkedin.com/in/arminsilatani/",
-            "https://github.com/Arminsilatani",
-            "https://www.instagram.com/arminsilatani",
-            "https://t.me/ArminSilatani",
-            "https://wa.me/+989125759466"
-          ],
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+989125759466",
-            "contactType": "customer service",
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://arminsilatani.com/#person",
+            "name": "Armin Silatani",
+            "jobTitle": "Digital Marketing Specialist",
+            "url": "https://arminsilatani.com/",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://arminsilatani.com/assets/images/favicon.png"
+            },
             "email": "contact@arminsilatani.com",
-            "availableLanguage": ["Persian", "English", "German", "Arabic", "Turkish", "Italian"]
+            "telephone": "+989125759466",
+            "sameAs": [
+              "https://www.linkedin.com/in/arminsilatani/",
+              "https://github.com/Arminsilatani",
+              "https://www.instagram.com/arminsilatani",
+              "https://t.me/ArminSilatani",
+              "https://wa.me/+989125759466"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+989125759466",
+              "contactType": "customer service",
+              "email": "contact@arminsilatani.com",
+              "availableLanguage": [
+                "Persian",
+                "English",
+                "German",
+                "Arabic",
+                "Turkish",
+                "Italian"
+              ]
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://arminsilatani.com/#website",
+            "url": "https://arminsilatani.com/",
+            "name": "Armin Silatani",
+            "description": "Webdesign, professionelle SEO-Dienstleistungen und Google Ads-Werbung — angeboten von Armin Silatani. Kostenlose Beratung.",
+            "publisher": {
+              "@id": "https://arminsilatani.com/#person"
+            },
+            "inLanguage": "de"
+          },
+          {
+            "@type": ["ContactPage", "FAQPage"],
+            "@id": "https://arminsilatani.com/de/contact/#webpage",
+            "url": "https://arminsilatani.com/de/contact/",
+            "name": "Kontakt | Armin Silatani",
+            "isPartOf": {
+              "@id": "https://arminsilatani.com/#website"
+            },
+            "about": {
+              "@id": "https://arminsilatani.com/#person"
+            },
+            "inLanguage": "de",
+            "breadcrumb": {
+              "@id": "https://arminsilatani.com/de/contact/#breadcrumb"
+            },
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Wie lange dauert es, bis Sie auf meine Nachricht antworten?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sie bekommen innerhalb von 2 bis 24 Stunden eine Antwort von mir. Meistens deutlich schneller – nur bei hohem Arbeitsaufkommen kann es mal etwas länger dauern. Mir ist ein schneller, präziser Austausch wichtig, denn ich weiß, Ihre Zeit ist wertvoll."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Wie erreiche ich Sie am besten?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Da bin ich ganz offen: Nutzen Sie das Formular auf dieser Seite, schreiben Sie eine E-Mail, rufen Sie an oder kontaktieren Sie mich per Telegram oder WhatsApp. Ganz so, wie es für Sie am einfachsten ist."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Zu welchen Zeiten sind Sie für die Kommunikation erreichbar?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "An Werktagen beantworte ich Nachrichten und Anrufe von 9 bis 17 Uhr. Wenn Sie sich außerhalb Irans befinden, orientieren Sie sich bitte an der iranischen Ortszeit, die auf dieser Seite angezeigt wird."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Muss ich meine Preisanfrage über diese Seite stellen?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Alle Preise sind transparent und vollständig auf meiner Seite „Preise“ aufgeführt. Schauen Sie am besten zuerst dort vorbei. Falls Sie danach ein individuelles Angebot wünschen, schicken Sie mir einfach von dieser Seite aus eine Nachricht."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Was passiert, nachdem ich eine Nachricht oder das Formular abgeschickt habe?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ich sichte Ihre Anfrage und vereinbare ein kurzes Gespräch mit Ihnen, um Ihren Bedarf wirklich zu verstehen. Transparenz steht für mich von Anfang an an erster Stelle."
+                }
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://arminsilatani.com/de/contact/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Startseite",
+                "item": "https://arminsilatani.com/de/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Kontakt",
+                "item": "https://arminsilatani.com/de/contact/"
+              }
+            ]
           }
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://arminsilatani.com/#website",
-          "url": "https://arminsilatani.com/",
-          "name": "Armin Silatani",
-          "description": "Webdesign, professionelle SEO-Dienstleistungen und Google Ads-Werbung — angeboten von Armin Silatani. Kostenlose Beratung.",
-          "publisher": {
-            "@id": "https://arminsilatani.com/#person"
-          },
-          "inLanguage": "de"
-        },
-        {
-          "@type": ["ContactPage", "FAQPage"],
-          "@id": "https://arminsilatani.com/de/contact/#webpage",
-          "url": "https://arminsilatani.com/de/contact/",
-          "name": "Kontakt | Armin Silatani",
-          "isPartOf": {
-            "@id": "https://arminsilatani.com/#website"
-          },
-          "about": {
-            "@id": "https://arminsilatani.com/#person"
-          },
-          "inLanguage": "de",
-          "breadcrumb": {
-            "@id": "https://arminsilatani.com/de/contact/#breadcrumb"
-          },
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Wie lange dauert es, bis Sie auf meine Nachricht antworten?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sie bekommen innerhalb von 2 bis 24 Stunden eine Antwort von mir. Meistens deutlich schneller – nur bei hohem Arbeitsaufkommen kann es mal etwas länger dauern. Mir ist ein schneller, präziser Austausch wichtig, denn ich weiß, Ihre Zeit ist wertvoll."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Wie erreiche ich Sie am besten?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Da bin ich ganz offen: Nutzen Sie das Formular auf dieser Seite, schreiben Sie eine E-Mail, rufen Sie an oder kontaktieren Sie mich per Telegram oder WhatsApp. Ganz so, wie es für Sie am einfachsten ist."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Zu welchen Zeiten sind Sie für die Kommunikation erreichbar?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "An Werktagen beantworte ich Nachrichten und Anrufe von 9 bis 17 Uhr. Wenn Sie sich außerhalb Irans befinden, orientieren Sie sich bitte an der iranischen Ortszeit, die auf dieser Seite angezeigt wird."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Muss ich meine Preisanfrage über diese Seite stellen?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Alle Preise sind transparent und vollständig auf meiner Seite „Preise“ aufgeführt. Schauen Sie am besten zuerst dort vorbei. Falls Sie danach ein individuelles Angebot wünschen, schicken Sie mir einfach von dieser Seite aus eine Nachricht."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Was passiert, nachdem ich eine Nachricht oder das Formular abgeschickt habe?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Ich sichte Ihre Anfrage und vereinbare ein kurzes Gespräch mit Ihnen, um Ihren Bedarf wirklich zu verstehen. Transparenz steht für mich von Anfang an an erster Stelle."
-              }
-            }
-          ]
-        },
-        {
-          "@type": "BreadcrumbList",
-          "@id": "https://arminsilatani.com/de/contact/#breadcrumb",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Startseite",
-              "item": "https://arminsilatani.com/de/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Kontakt",
-              "item": "https://arminsilatani.com/de/contact/"
-            }
-          ]
-        }
-      ]
-    }
+        ]
+      }
     </script>
 
-    <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: GSAP + SCROLLTRIGGER :::::::::::::::::::::::::: -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- :::::::::::::::::::::::::: CONTACT PAGE :::::::::::::::::::::::::: -->
 
-    <!-- =========================== CONTACT PAGE ============================ -->
-
-    <!-- ------------------------- HEADER ------------------------- -->
+    <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
     <header-component></header-component>
 
     <main class="has-footer-gap">
+      <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
+      <section class="hero-section">
+        <div class="hero-container">
+          <language-component></language-component>
+          <div class="hero-title">
+            <h1 class="split-title">Kontakt</h1>
+          </div>
+        </div>
 
-        <!-- ------------------------- HERO SECTION ------------------------- -->
-        <section class="hero-section">
-            <div class="hero-container">
-                <language-component></language-component>
-                <div class="hero-title">
-                    <h1 class="split-title">Kontakt</h1>
+        <div class="pro-divider">
+          <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
+            <defs>
+              <filter
+                id="dividerShadow"
+                x="0"
+                y="-30%"
+                width="100%"
+                height="150%"
+              >
+                <feDropShadow
+                  dx="0"
+                  dy="-8"
+                  stdDeviation="12"
+                  flood-color="rgba(0,0,0,0.55)"
+                />
+              </filter>
+            </defs>
+            <path
+              filter="url(#dividerShadow)"
+              fill="#0D0D0D"
+              d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
+            />
+          </svg>
+        </div>
+
+        <!-- :::::::::::::::::::::::::: BREADCRUMB :::::::::::::::::::::::::: -->
+        <div class="fake-terminal-breadcrumb">
+          <div class="fake-terminal-inner">
+            <span class="cmd-prefix">$</span>
+            <span class="command">open</span>
+            <span id="terminalPath"></span>
+            <span class="cursor"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- :::::::::::::::::::::::::: CONTACT FORM & INFO :::::::::::::::::::::::::: -->
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="contact-grid">
+            <!-- :::::::::::::::::::::::::: INFO SIDE :::::::::::::::::::::::::: -->
+            <div class="contact-info">
+              <div
+                class="contact-info__card contact-info__card--featured reveal-up"
+              >
+                <img
+                  src="/assets/images/arminsilatani/contact/FeaturedImage.webp"
+                  alt="Mann mit blauer Kappe telefoniert mit kleinem Hund im Pullover"
+                  class="contact-info__image"
+                />
+              </div>
+              <div class="contact-info__card reveal-up">
+                <div class="contact-info__label">E-Mail</div>
+                <a href="mailto:hello@example.com" class="contact-info__value"
+                  >contact@arminsilatani.com</a
+                >
+              </div>
+              <div class="contact-info__card reveal-up">
+                <div class="contact-info__label">
+                  Telefon / Telegram / WhatsApp
                 </div>
+                <a href="tel:+989123456789" class="contact-info__value"
+                  >+989125759466</a
+                >
+              </div>
+              <div class="contact-info__card reveal-up">
+                <div class="contact-info__label">Antwortzeit</div>
+                <span class="contact-info__value"
+                  >In der Regel innerhalb von 2 bis 24 Stunden</span
+                >
+              </div>
+              <div class="social-dots reveal-up">
+                <a href="https://t.me/ArminSilatani" class="social-dot">
+                  <!-- Telegram -->
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M9.04 15.64 8.9 19.5c.62 0 .9-.27 1.25-.6l3-2.8 6.2 4.55c1.14.63 1.96.3 2.25-1.05L24 4.3c.38-1.7-.62-2.37-1.72-1.96L2 10.4c-1.63.63-1.6 1.52-.3 1.92l5.2 1.62L20.1 6.6c.6-.4 1.14-.18.7.22Z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.instagram.com/arminsilatani"
+                  class="social-dot"
+                >
+                  <!-- Instagram -->
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.25-1.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"
+                    />
+                  </svg>
+                </a>
+                <a href="https://wa.me/989125759466" class="social-dot">
+                  <!-- WhatsApp -->
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21z" />
+                    <path
+                      d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a4 4 0 0 1-4-4z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/arminsilatani/"
+                  class="social-dot"
+                >
+                  <!-- LinkedIn -->
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      fill="currentColor"
+                      d="M20 3H4a1 1 0 00-1 1v16a1 1 0 001 1h16a1 1 0 001-1V4a1 1 0 00-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 110-3.096 1.548 1.548 0 010 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"
+                    />
+                  </svg>
+                </a>
+                <a href="https://github.com/Arminsilatani" class="social-dot">
+                  <!-- GitHub -->
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M12 2a10 10 0 0 0-3.16 19.48c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.36-1.34-3.36-1.34-.45-1.13-1.1-1.43-1.1-1.43-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.84.09-.66.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.9-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.68 0 3.85-2.35 4.7-4.58 4.95.36.31.68.92.68 1.85v2.74c0 .26.18.57.69.48A10 10 0 0 0 12 2z"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
 
-            <div class="pro-divider">
-                <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
-                    <defs>
-                        <filter id="dividerShadow" x="0" y="-30%" width="100%" height="150%">
-                            <feDropShadow dx="0" dy="-8" stdDeviation="12" flood-color="rgba(0,0,0,0.55)" />
-                        </filter>
-                    </defs>
-                    <path filter="url(#dividerShadow)" fill="#0d0d0d" d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z" />
-                </svg>
-            </div>
-
-            <!-- ------------------------- BREADCRUMB ------------------------- -->
-            <div class="fake-terminal-breadcrumb">
-                <div class="fake-terminal-inner">
-                    <span class="cmd-prefix">$</span>
-                    <span class="command">open</span>
-                    <span id="terminalPath"></span>
-                    <span class="cursor"></span>
+            <!-- :::::::::::::::::::::::::: FORM SIDE :::::::::::::::::::::::::: -->
+            <div class="contact-form-wrapper reveal-up">
+              <form id="contactForm" novalidate>
+                <div class="form-group">
+                  <label for="name">Ihr Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="z. B. Angela Merkel"
+                    required
+                  />
                 </div>
-            </div>
-        </section>
-
-        <!-- ------------------------- CONTACT FORM & INFO ------------------------- -->
-        <section class="section" id="contact">
-            <div class="container">
-                <div class="contact-grid">
-
-                    <!-- Info Side -->
-                    <div class="contact-info">
-                        <div class="contact-info__card contact-info__card--featured reveal-up">
-                            <img src="/assets/images/arminsilatani/contact/FeaturedImage.webp" alt="Mann mit blauer Kappe telefoniert mit kleinem Hund im Pullover" class="contact-info__image">
-                        </div>
-                        <div class="contact-info__card reveal-up">
-                            <div class="contact-info__label">E-Mail</div>
-                            <a href="mailto:hello@example.com" class="contact-info__value">contact@arminsilatani.com</a>
-                        </div>
-                        <div class="contact-info__card reveal-up">
-                            <div class="contact-info__label">Telefon / Telegram / WhatsApp</div>
-                            <a href="tel:+989123456789" class="contact-info__value">+989125759466</a>
-                        </div>
-                        <div class="contact-info__card reveal-up">
-                            <div class="contact-info__label">Antwortzeit</div>
-                            <span class="contact-info__value">In der Regel innerhalb von 2 bis 24 Stunden</span>
-                        </div>
-                        <div class="social-dots reveal-up">
-                            <a href="https://t.me/ArminSilatani" class="social-dot">
-                                <!-- Telegram -->
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M9.04 15.64 8.9 19.5c.62 0 .9-.27 1.25-.6l3-2.8 6.2 4.55c1.14.63 1.96.3 2.25-1.05L24 4.3c.38-1.7-.62-2.37-1.72-1.96L2 10.4c-1.63.63-1.6 1.52-.3 1.92l5.2 1.62L20.1 6.6c.6-.4 1.14-.18.7.22Z"/>
-                                </svg>
-                            </a>
-                            <a href="https://www.instagram.com/arminsilatani" class="social-dot">
-                                <!-- Instagram -->
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.25-1.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/>
-                                </svg>
-                            </a>
-                            <a href="https://wa.me/989125759466" class="social-dot">
-                                <!-- WhatsApp -->
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21z"/>
-                                    <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a4 4 0 0 1-4-4z"/>
-                                </svg>
-                            </a>
-                            <a href="https://www.linkedin.com/in/arminsilatani/" class="social-dot">
-                                <!-- LinkedIn -->
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path fill="currentColor" d="M20 3H4a1 1 0 00-1 1v16a1 1 0 001 1h16a1 1 0 001-1V4a1 1 0 00-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 110-3.096 1.548 1.548 0 010 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"/>
-                                </svg>
-                            </a>
-                            <a href="https://github.com/Arminsilatani" class="social-dot">
-                                <!-- GitHub -->
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12 2a10 10 0 0 0-3.16 19.48c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.36-1.34-3.36-1.34-.45-1.13-1.1-1.43-1.1-1.43-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.84.09-.66.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.9-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.68 0 3.85-2.35 4.7-4.58 4.95.36.31.68.92.68 1.85v2.74c0 .26.18.57.69.48A10 10 0 0 0 12 2z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Form Side -->
-                    <div class="contact-form-wrapper reveal-up">
-                        <form id="contactForm" novalidate>
-                            <div class="form-group">
-                                <label for="name">Ihr Name</label>
-                                <input type="text" id="name" placeholder="z. B. Angela Merkel" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">E-Mail</label>
-                                <input type="email" id="email" placeholder="hello@example.com" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Betreff</label>
-                                <input type="text" id="subject" placeholder="Webdesign, Branding, Beratung ...">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Ihre Nachricht</label>
-                                <textarea id="message" placeholder="Erzählen Sie mir von Ihrem Projekt: Budget, Deadline und alles, was Sie für wichtig halten." required></textarea>
-                            </div>
-                            <button type="submit" class="btn-dark contact-submit-btn" id="submitBtn">Nachricht senden</button>
-                        </form>
-                    </div>
+                <div class="form-group">
+                  <label for="email">E-Mail</label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="hello@example.com"
+                    required
+                  />
                 </div>
-            </div>
-        </section>
-
-        <!-- ------------------------- PROCESS STEPS ------------------------- -->
-        <section class="section" id="process">
-            <div class="container-1080">
-                <span class="section-eyebrow">So arbeiten wir zusammen</span>
-                <h2 class="section-title">Wie wir zusammenarbeiten</h2>
-                <p class="section-subtitle">Ein klarer, einfacher Weg – vom ersten Kontakt bis zur finalen Lieferung</p>
-            </div>
-            <div class="container-1300">
-                <div class="process-grid categories-grid" id="processGrid">
-
-                    <article class="process-box reveal-card is-open">
-                        <div class="process-box__meta">
-                            <span class="process-box__step">Erstens</span>
-                            <span class="process-box__vtitle">Erstgespräch</span>
-                        </div>
-                        <div class="process-box__media">
-                            <img src="/assets/images/arminsilatani/contact/ProcessFirst.webp" alt="Ein Freelancer mit weißer Kappe im Home-Office mit seinem passend gekleideten Hund neben einem Laptop.">
-                        </div>
-                        <div class="process-box__content">
-                            <h3 class="process-box__title">Erstgespräch</h3>
-                            <p class="process-box__desc">Wir sprechen miteinander, lernen Ihre Anforderungen und Projektziele kennen und besprechen erste Ideen.</p>
-                        </div>
-                    </article>
-
-                    <article class="process-box reveal-card">
-                        <div class="process-box__meta">
-                            <span class="process-box__step">Zweitens</span>
-                            <span class="process-box__vtitle">Briefing</span>
-                        </div>
-                        <div class="process-box__media">
-                            <img src="/assets/images/arminsilatani/contact/ProcessSecond.webp" alt="Dokument auf einem Schreibtisch mit weißem Laptop, Smartphone und einem kleinen Hund verfassen.">
-                        </div>
-                        <div class="process-box__content">
-                            <h3 class="process-box__title">Briefing</h3>
-                            <p class="process-box__desc">Leistungsumfang, Zielgruppe, Wettbewerber, Referenzbeispiele und Einschränkungen werden definiert und die Briefing-Checkliste wird gemeinsam ausgefüllt.</p>
-                        </div>
-                    </article>
-
-                    <article class="process-box reveal-card">
-                        <div class="process-box__meta">
-                            <span class="process-box__step">Drittens</span>
-                            <span class="process-box__vtitle">Angebot & Zeitplan</span>
-                        </div>
-                        <div class="process-box__media">
-                            <img src="/assets/images/arminsilatani/contact/ProcessThird.webp" alt="Selbstständiger am Schreibtisch: Haushaltskasse und Rechnungen prüfen mit Haustier.">
-                        </div>
-                        <div class="process-box__content">
-                            <h3 class="process-box__title">Angebot & Zeitplan</h3>
-                            <p class="process-box__desc">Sie erhalten ein transparentes Angebot mit Scope, Deadlines, Lieferumfang und Kosten. Nach Ihrer Freigabe starten wir die Umsetzung.</p>
-                        </div>
-                    </article>
-
-                    <article class="process-box reveal-card">
-                        <div class="process-box__meta">
-                            <span class="process-box__step">Viertens</span>
-                            <span class="process-box__vtitle">Vertrag & Anzahlung</span>
-                        </div>
-                        <div class="process-box__media">
-                            <img src="/assets/images/arminsilatani/contact/ProcessFourth.webp" alt="Mann mit weißer Kappe berechnet Zahlungsbedingungen mit Taschenrechner, Hund im Arm.">
-                        </div>
-                        <div class="process-box__content">
-                            <h3 class="process-box__title">Vertrag & Anzahlung</h3>
-                            <p class="process-box__desc">Konditionen, Nutzungsrechte, Änderungsumfang und Zeitplan werden im Vertrag festgehalten. Mit der Anzahlung beginnt die Projektarbeit.</p>
-                        </div>
-                    </article>
-
-                    <article class="process-box reveal-card">
-                        <div class="process-box__meta">
-                            <span class="process-box__step">Fünftens</span>
-                            <span class="process-box__vtitle">Design/Entwicklung & Feedback</span>
-                        </div>
-                        <div class="process-box__media">
-                            <img src="/assets/images/arminsilatani/contact/ProcessFifth.webp" alt="Arbeiten im Homeoffice mit Hund: Mann am Telefon mit Unterlagen am Schreibtisch">
-                        </div>
-                        <div class="process-box__content">
-                            <h3 class="process-box__title">Design/Entwicklung</h3>
-                            <p class="process-box__desc">Die Arbeit erfolgt modular. Sie sehen regelmäßig Demos, und Feedback wird zügig eingearbeitet – bis das Ergebnis perfekt passt.</p>
-                        </div>
-                    </article>
-
-                    <article class="process-box reveal-card">
-                        <div class="process-box__meta">
-                            <span class="process-box__step">Sechstens</span>
-                            <span class="process-box__vtitle">Finale Lieferung</span>
-                        </div>
-                        <div class="process-box__media">
-                            <img src="/assets/images/arminsilatani/contact/ProcessSixth.webp" alt="Hund sitzt im Kragen eines Mannes während der Arbeit am Laptop.">
-                        </div>
-                        <div class="process-box__content">
-                            <h3 class="process-box__title">Finale Lieferung & Support</h3>
-                            <p class="process-box__desc">Finale Lieferung inklusive Dokumentation; bis zu 90 Tage kostenfreier Support für Stabilität und Ihre vollste Zufriedenheit.</p>
-                        </div>
-                    </article>
-
+                <div class="form-group">
+                  <label for="subject">Betreff</label>
+                  <input
+                    type="text"
+                    id="subject"
+                    placeholder="Webdesign, Branding, Beratung ..."
+                  />
                 </div>
-            </div>
-        </section>
-
-        <!-- ------------------------- AVAILABILITY & TIMEZONE ------------------------- -->
-        <section class="section" id="availability">
-            <div class="container">
-                <span class="section-eyebrow">Status & Zeitzone</span>
-                <h2 class="section-title">Verfügbarkeit & Zeitzone</h2>
-                <p class="section-subtitle">Werfen Sie vor Ihrer Kontaktaufnahme gern einen Blick auf meinen aktuellen Status.</p>
-
-                <div class="avail-grid">
-
-                    <div class="avail-card reveal-up">
-                        <div class="avail-card__header">
-                            <span class="status-dot" id="statusDot"></span>
-                            <span class="status-text" id="statusText">در دسترس برای پروژه‌های جدید</span>
-                        </div>
-                        <p class="status-detail">Kapazität: 2 freie Projektplätze in diesem Monat</p>
-
-                        <div class="mini-week-wrapper" id="miniWeekWrapper">
-                            <div class="mini-week" id="miniWeek">
-                            </div>
-                        </div>
-
-                        <div class="legend-row">
-                            <span class="legend-item"><span class="legend-dot legend-dot--green"></span> Verfügbar</span>
-                            <span class="legend-item"><span class="legend-dot legend-dot--yellow"></span> Wochenende/Feiertag</span>
-                            <span class="legend-item"><span class="legend-dot legend-dot--red"></span> Reserviert</span>
-                        </div>
-                    </div>
-
-                    <div class="avail-card reveal-up">
-                        <div class="avail-card__header">
-                            <span class="status-text">Ortszeit</span>
-                        </div>
-                        <div class="timezone-display">
-                            <div class="timezone-clock" id="liveClock">--:--</div>
-                            <div class="timezone-label">Tehran · IRST</div>
-                            <span class="timezone-offset">UTC +۳:۳۰</span>
-                        </div>
-                        <p class="status-detail" style="text-align:center;margin-top:12px;">
-                            Arbeitszeiten: 9–17 Uhr (IRST)
-                        </p>
-                    </div>
+                <div class="form-group">
+                  <label for="message">Ihre Nachricht</label>
+                  <textarea
+                    id="message"
+                    placeholder="Erzählen Sie mir von Ihrem Projekt: Budget, Deadline und alles, was Sie für wichtig halten."
+                    required
+                  ></textarea>
                 </div>
+                <button
+                  type="submit"
+                  class="btn-dark contact-submit-btn"
+                  id="submitBtn"
+                >
+                  Nachricht senden
+                </button>
+              </form>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- ------------------------- FAQ ACCORDION ------------------------- -->
-        <section class="section" id="faq">
-            <div class="container">
-                <span class="section-eyebrow">Häufig gestellte Fragen</span>
-                <h2 class="section-title">Alles, was Sie vielleicht fragen möchten</h2>
-                <p class="section-subtitle">Antworten auf die häufigsten Fragen finden Sie hier.</p>
-                <div class="faq-list">
-                    <div class="faq-item reveal-up">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>Wie lange dauert es, bis Sie auf meine Nachricht antworten?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer-wrapper">
-                            <div class="faq-answer">Sie bekommen innerhalb von 2 bis 24 Stunden eine Antwort von mir. Meistens deutlich schneller – nur bei hohem Arbeitsaufkommen kann es mal etwas länger dauern. Mir ist ein schneller, präziser Austausch wichtig, denn ich weiß, Ihre Zeit ist wertvoll.</div>
-                        </div>
-                    </div>
-                    <div class="faq-item reveal-up">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>Wie erreiche ich Sie am besten?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer-wrapper">
-                            <div class="faq-answer">Da bin ich ganz offen: Nutzen Sie das Formular auf dieser Seite, schreiben Sie eine E-Mail, rufen Sie an oder kontaktieren Sie mich per Telegram oder WhatsApp. Ganz so, wie es für Sie am einfachsten ist.</div>
-                        </div>
-                    </div>
-                    <div class="faq-item reveal-up">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>Zu welchen Zeiten sind Sie für die Kommunikation erreichbar?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer-wrapper">
-                            <div class="faq-answer">An Werktagen beantworte ich Nachrichten und Anrufe von 9 bis 17 Uhr. Wenn Sie sich außerhalb Irans befinden, orientieren Sie sich bitte an der iranischen Ortszeit, die auf dieser Seite angezeigt wird.</div>
-                        </div>
-                    </div>
-                    <div class="faq-item reveal-up">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>Muss ich meine Preisanfrage über diese Seite stellen?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer-wrapper">
-                            <div class="faq-answer">Alle Preise sind transparent und vollständig auf meiner Seite „Preise“ aufgeführt. Schauen Sie am besten zuerst dort vorbei. Falls Sie danach ein individuelles Angebot wünschen, schicken Sie mir einfach von dieser Seite aus eine Nachricht.</div>
-                        </div>
-                    </div>
-                    <div class="faq-item reveal-up">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>Was passiert, nachdem ich eine Nachricht oder das Formular abgeschickt habe?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer-wrapper">
-                            <div class="faq-answer">Ich sichte Ihre Anfrage und vereinbare ein kurzes Gespräch mit Ihnen, um Ihren Bedarf wirklich zu verstehen. Transparenz steht für mich von Anfang an an erster Stelle.</div>
-                        </div>
-                    </div>
+      <!-- :::::::::::::::::::::::::: PROCESS STEPS :::::::::::::::::::::::::: -->
+      <section class="section" id="process">
+        <div class="container-1080">
+          <span class="section-eyebrow">So arbeiten wir zusammen</span>
+          <h2 class="section-title">Wie wir zusammenarbeiten</h2>
+          <p class="section-subtitle">
+            Ein klarer, einfacher Weg – vom ersten Kontakt bis zur finalen
+            Lieferung
+          </p>
+        </div>
+        <div class="container-1300">
+          <div class="process-grid categories-grid" id="processGrid">
+            <article class="process-box reveal-card is-open">
+              <div class="process-box__meta">
+                <span class="process-box__step">Erstens</span>
+                <span class="process-box__vtitle">Erstgespräch</span>
+              </div>
+              <div class="process-box__media">
+                <img
+                  src="/assets/images/arminsilatani/contact/ProcessFirst.webp"
+                  alt="Ein Freelancer mit weißer Kappe im Home-Office mit seinem passend gekleideten Hund neben einem Laptop."
+                />
+              </div>
+              <div class="process-box__content">
+                <h3 class="process-box__title">Erstgespräch</h3>
+                <p class="process-box__desc">
+                  Wir sprechen miteinander, lernen Ihre Anforderungen und
+                  Projektziele kennen und besprechen erste Ideen.
+                </p>
+              </div>
+            </article>
+
+            <article class="process-box reveal-card">
+              <div class="process-box__meta">
+                <span class="process-box__step">Zweitens</span>
+                <span class="process-box__vtitle">Briefing</span>
+              </div>
+              <div class="process-box__media">
+                <img
+                  src="/assets/images/arminsilatani/contact/ProcessSecond.webp"
+                  alt="Dokument auf einem Schreibtisch mit weißem Laptop, Smartphone und einem kleinen Hund verfassen."
+                />
+              </div>
+              <div class="process-box__content">
+                <h3 class="process-box__title">Briefing</h3>
+                <p class="process-box__desc">
+                  Leistungsumfang, Zielgruppe, Wettbewerber, Referenzbeispiele
+                  und Einschränkungen werden definiert und die
+                  Briefing-Checkliste wird gemeinsam ausgefüllt.
+                </p>
+              </div>
+            </article>
+
+            <article class="process-box reveal-card">
+              <div class="process-box__meta">
+                <span class="process-box__step">Drittens</span>
+                <span class="process-box__vtitle">Angebot & Zeitplan</span>
+              </div>
+              <div class="process-box__media">
+                <img
+                  src="/assets/images/arminsilatani/contact/ProcessThird.webp"
+                  alt="Selbstständiger am Schreibtisch: Haushaltskasse und Rechnungen prüfen mit Haustier."
+                />
+              </div>
+              <div class="process-box__content">
+                <h3 class="process-box__title">Angebot & Zeitplan</h3>
+                <p class="process-box__desc">
+                  Sie erhalten ein transparentes Angebot mit Scope, Deadlines,
+                  Lieferumfang und Kosten. Nach Ihrer Freigabe starten wir die
+                  Umsetzung.
+                </p>
+              </div>
+            </article>
+
+            <article class="process-box reveal-card">
+              <div class="process-box__meta">
+                <span class="process-box__step">Viertens</span>
+                <span class="process-box__vtitle">Vertrag & Anzahlung</span>
+              </div>
+              <div class="process-box__media">
+                <img
+                  src="/assets/images/arminsilatani/contact/ProcessFourth.webp"
+                  alt="Mann mit weißer Kappe berechnet Zahlungsbedingungen mit Taschenrechner, Hund im Arm."
+                />
+              </div>
+              <div class="process-box__content">
+                <h3 class="process-box__title">Vertrag & Anzahlung</h3>
+                <p class="process-box__desc">
+                  Konditionen, Nutzungsrechte, Änderungsumfang und Zeitplan
+                  werden im Vertrag festgehalten. Mit der Anzahlung beginnt die
+                  Projektarbeit.
+                </p>
+              </div>
+            </article>
+
+            <article class="process-box reveal-card">
+              <div class="process-box__meta">
+                <span class="process-box__step">Fünftens</span>
+                <span class="process-box__vtitle"
+                  >Design/Entwicklung & Feedback</span
+                >
+              </div>
+              <div class="process-box__media">
+                <img
+                  src="/assets/images/arminsilatani/contact/ProcessFifth.webp"
+                  alt="Arbeiten im Homeoffice mit Hund: Mann am Telefon mit Unterlagen am Schreibtisch"
+                />
+              </div>
+              <div class="process-box__content">
+                <h3 class="process-box__title">Design/Entwicklung</h3>
+                <p class="process-box__desc">
+                  Die Arbeit erfolgt modular. Sie sehen regelmäßig Demos, und
+                  Feedback wird zügig eingearbeitet – bis das Ergebnis perfekt
+                  passt.
+                </p>
+              </div>
+            </article>
+
+            <article class="process-box reveal-card">
+              <div class="process-box__meta">
+                <span class="process-box__step">Sechstens</span>
+                <span class="process-box__vtitle">Finale Lieferung</span>
+              </div>
+              <div class="process-box__media">
+                <img
+                  src="/assets/images/arminsilatani/contact/ProcessSixth.webp"
+                  alt="Hund sitzt im Kragen eines Mannes während der Arbeit am Laptop."
+                />
+              </div>
+              <div class="process-box__content">
+                <h3 class="process-box__title">Finale Lieferung & Support</h3>
+                <p class="process-box__desc">
+                  Finale Lieferung inklusive Dokumentation; bis zu 90 Tage
+                  kostenfreier Support für Stabilität und Ihre vollste
+                  Zufriedenheit.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- :::::::::::::::::::::::::: AVAILABILITY & TIMEZONE :::::::::::::::::::::::::: -->
+      <section class="section" id="availability">
+        <div class="container">
+          <span class="section-eyebrow">Status & Zeitzone</span>
+          <h2 class="section-title">Verfügbarkeit & Zeitzone</h2>
+          <p class="section-subtitle">
+            Werfen Sie vor Ihrer Kontaktaufnahme gern einen Blick auf meinen
+            aktuellen Status.
+          </p>
+
+          <div class="avail-grid">
+            <div class="avail-card reveal-up">
+              <div class="avail-card__header">
+                <span class="status-dot" id="statusDot"></span>
+                <span class="status-text" id="statusText"></span>
+              </div>
+              <p class="status-detail" id="capacityText"></p>
+
+              <div class="mini-week-wrapper" id="miniWeekWrapper">
+                <div class="mini-week" id="miniWeek"></div>
+              </div>
+
+              <div class="legend-row">
+                <span class="legend-item"
+                  ><span class="legend-dot legend-dot--green"></span>
+                  Verfügbar</span
+                >
+                <span class="legend-item"
+                  ><span class="legend-dot legend-dot--yellow"></span>
+                  Wochenende/Feiertag</span
+                >
+                <span class="legend-item"
+                  ><span class="legend-dot legend-dot--red"></span>
+                  Reserviert</span
+                >
+              </div>
+            </div>
+
+            <div class="avail-card reveal-up">
+              <div class="avail-card__header">
+                <span class="status-text">Ortszeit</span>
+              </div>
+              <div class="timezone-display">
+                <div class="timezone-clock" id="liveClock">--:--</div>
+                <div class="timezone-label">Tehran · IRST</div>
+                <span class="timezone-offset">UTC +3:30</span>
+              </div>
+              <p
+                class="status-detail"
+                style="text-align: center; margin-top: 12px"
+              >
+                Arbeitszeiten: 9–17 Uhr (IRST)
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- :::::::::::::::::::::::::: FAQ ACCORDION :::::::::::::::::::::::::: -->
+      <section class="section" id="faq">
+        <div class="container">
+          <span class="section-eyebrow">Häufig gestellte Fragen</span>
+          <h2 class="section-title">
+            Alles, was Sie vielleicht fragen möchten
+          </h2>
+          <p class="section-subtitle">
+            Antworten auf die häufigsten Fragen finden Sie hier.
+          </p>
+          <div class="faq-list">
+            <div class="faq-item reveal-up">
+              <button class="faq-question" aria-expanded="false">
+                <span
+                  >Wie lange dauert es, bis Sie auf meine Nachricht
+                  antworten?</span
+                >
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer">
+                  Sie bekommen innerhalb von 2 bis 24 Stunden eine Antwort von
+                  mir. Meistens deutlich schneller – nur bei hohem
+                  Arbeitsaufkommen kann es mal etwas länger dauern. Mir ist ein
+                  schneller, präziser Austausch wichtig, denn ich weiß, Ihre
+                  Zeit ist wertvoll.
                 </div>
+              </div>
             </div>
-        </section>
-
+            <div class="faq-item reveal-up">
+              <button class="faq-question" aria-expanded="false">
+                <span>Wie erreiche ich Sie am besten?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer">
+                  Da bin ich ganz offen: Nutzen Sie das Formular auf dieser
+                  Seite, schreiben Sie eine E-Mail, rufen Sie an oder
+                  kontaktieren Sie mich per Telegram oder WhatsApp. Ganz so, wie
+                  es für Sie am einfachsten ist.
+                </div>
+              </div>
+            </div>
+            <div class="faq-item reveal-up">
+              <button class="faq-question" aria-expanded="false">
+                <span
+                  >Zu welchen Zeiten sind Sie für die Kommunikation
+                  erreichbar?</span
+                >
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer">
+                  An Werktagen beantworte ich Nachrichten und Anrufe von 9 bis
+                  17 Uhr. Wenn Sie sich außerhalb Irans befinden, orientieren
+                  Sie sich bitte an der iranischen Ortszeit, die auf dieser
+                  Seite angezeigt wird.
+                </div>
+              </div>
+            </div>
+            <div class="faq-item reveal-up">
+              <button class="faq-question" aria-expanded="false">
+                <span
+                  >Muss ich meine Preisanfrage über diese Seite stellen?</span
+                >
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer">
+                  Alle Preise sind transparent und vollständig auf meiner Seite
+                  „Preise“ aufgeführt. Schauen Sie am besten zuerst dort vorbei.
+                  Falls Sie danach ein individuelles Angebot wünschen, schicken
+                  Sie mir einfach von dieser Seite aus eine Nachricht.
+                </div>
+              </div>
+            </div>
+            <div class="faq-item reveal-up">
+              <button class="faq-question" aria-expanded="false">
+                <span
+                  >Was passiert, nachdem ich eine Nachricht oder das Formular
+                  abgeschickt habe?</span
+                >
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer-wrapper">
+                <div class="faq-answer">
+                  Ich sichte Ihre Anfrage und vereinbare ein kurzes Gespräch mit
+                  Ihnen, um Ihren Bedarf wirklich zu verstehen. Transparenz
+                  steht für mich von Anfang an an erster Stelle.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- ------------------------- FOOTER ------------------------- -->
+    <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
     <footer-component></footer-component>
 
     <!-- :::::::::::::::::::::::::: COMPONENT SCRIPTS :::::::::::::::::::::::::: -->
@@ -508,129 +728,139 @@
     <script src="/assets/css/components/blurup.js"></script>
     <script src="../language-component.js"></script>
     <script src="/assets/css/components/breadcrumb.js"></script>
-    <script src="../../contact/calendar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/contact/rrule.min.js"></script>
+    <script src="/contact/calendar.js"></script>
     <script src="/assets/css/components/faq.js"></script>
     <script type="module" src="../footer-component.js"></script>
 
     <!-- :::::::::::::::::::::::::: PAGE SCRIPTS :::::::::::::::::::::::::: -->
     <script>
-        (function () {
+      (function () {
+        /* :::::::::::::::::::::::::: LIVE CLOCK (IRST) :::::::::::::::::::::::::: */
+        const clockEl = document.getElementById("liveClock");
+        function updateClock() {
+          if (!clockEl) return;
+          const now = new Date();
+          const utc = now.getTime() + now.getTimezoneOffset() * 60000;
+          const iranTime = new Date(utc + 3.5 * 3600000);
+          const h = String(iranTime.getHours()).padStart(2, "0");
+          const m = String(iranTime.getMinutes()).padStart(2, "0");
+          const s = String(iranTime.getSeconds()).padStart(2, "0");
+          clockEl.textContent = h + ":" + m + ":" + s;
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
 
-            /* ----------------- Live Clock (IRST) ----------------- */
-            const clockEl = document.getElementById("liveClock");
-            function updateClock() {
-                if (!clockEl) return;
-                const now = new Date();
-                const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
-                const iranTime = new Date(utc + (3.5 * 3600000));
-                const h = String(iranTime.getHours()).padStart(2, "0");
-                const m = String(iranTime.getMinutes()).padStart(2, "0");
-                const s = String(iranTime.getSeconds()).padStart(2, "0");
-                clockEl.textContent = h + ":" + m + ":" + s;
-            }
-            updateClock();
-            setInterval(updateClock, 1000);
+        /* :::::::::::::::::::::::::: AVAILABILITY STATUS :::::::::::::::::::::::::: */
+        const statusDot = document.getElementById("statusDot");
+        const statusText = document.getElementById("statusText");
+        if (statusDot && statusText) {
+          const utc = Date.now() + new Date().getTimezoneOffset() * 60000;
+          const iranHour = new Date(utc + 3.5 * 3600000).getHours();
+          if (iranHour >= 22 || iranHour < 8) {
+            statusDot.classList.add("status-dot--busy");
+            statusText.textContent = "در حال حاضر خارج از ساعات کاری";
+          } else {
+            statusText.textContent = "در دسترس برای پروژه‌های جدید";
+          }
+        }
 
-            /* ----------------- Availability Status ----------------- */
-            const statusDot = document.getElementById("statusDot");
-            const statusText = document.getElementById("statusText");
-            if (statusDot && statusText) {
-                const utc = Date.now() + (new Date().getTimezoneOffset() * 60000);
-                const iranHour = new Date(utc + (3.5 * 3600000)).getHours();
-                if (iranHour >= 22 || iranHour < 8) {
-                    statusDot.classList.add("status-dot--busy");
-                    statusText.textContent = "در حال حاضر خارج از ساعات کاری";
-                } else {
-                    statusText.textContent = "در دسترس برای پروژه‌های جدید";
-                }
-            }
+        /* :::::::::::::::::::::::::: CONTACT FORM HANDLING :::::::::::::::::::::::::: */
+        const form = document.getElementById("contactForm");
+        const submitBtn = document.getElementById("submitBtn");
+        if (form && submitBtn) {
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
 
-            /* ----------------- Contact Form Handling ----------------- */
-            const form = document.getElementById("contactForm");
-            const submitBtn = document.getElementById("submitBtn");
-            if (form && submitBtn) {
-                form.addEventListener("submit", function (e) {
-                    e.preventDefault();
-                    const name = document.getElementById("name").value.trim();
-                    const email = document.getElementById("email").value.trim();
-                    const message = document.getElementById("message").value.trim();
-
-                    if (!name || !email || !message) {
-                        // Trigger shake animation on incomplete form
-                        submitBtn.style.animation = "none";
-                        submitBtn.offsetHeight; // Force reflow
-                        submitBtn.style.animation = "shake 0.5s ease";
-                        submitBtn.textContent = "Bitte füllen Sie die Pflichtfelder aus";
-                        setTimeout(function () {
-                            submitBtn.textContent = "Nachricht senden";
-                            submitBtn.style.animation = "";
-                        }, 2000);
-                        return;
-                    }
-
-                    // Simulate form submission
-                    submitBtn.textContent = "Wird gesendet…";
-                    submitBtn.disabled = true;
-                    submitBtn.style.opacity = "0.8";
-
-                    setTimeout(function () {
-                        submitBtn.textContent = "✓ Ihre Nachricht wurde erfolgreich gesendet";
-                        submitBtn.classList.add("submit-btn--sent");
-                        submitBtn.style.opacity = "1";
-                        form.reset();
-
-                        setTimeout(function () {
-                            submitBtn.textContent = "Nachricht senden";
-                            submitBtn.classList.remove("submit-btn--sent");
-                            submitBtn.disabled = false;
-                        }, 3500);
-                    }, 1500);
-                });
-
-                // Input focus styling via parent class
-                const inputs = form.querySelectorAll("input, textarea");
-                inputs.forEach(function (input) {
-                    input.addEventListener("focus", function () {
-                        input.closest(".form-group").classList.add("form-group--focused");
-                    });
-                    input.addEventListener("blur", function () {
-                        input.closest(".form-group").classList.remove("form-group--focused");
-                    });
-                });
+            if (!name || !email || !message) {
+              // Trigger shake animation on incomplete form
+              submitBtn.style.animation = "none";
+              submitBtn.offsetHeight; // Force reflow
+              submitBtn.style.animation = "shake 0.5s ease";
+              submitBtn.textContent = "Bitte füllen Sie die Pflichtfelder aus";
+              setTimeout(function () {
+                submitBtn.textContent = "Nachricht senden";
+                submitBtn.style.animation = "";
+              }, 2000);
+              return;
             }
 
-            /* ----------------- Process Box Hover / Click Expansion ----------------- */
-            const processBoxes = document.querySelectorAll(".process-box");
-            if (processBoxes.length) {
-                const openBox = function (box) {
-                    processBoxes.forEach(function (b) { b.classList.remove("is-open"); });
-                    box.classList.add("is-open");
-                };
+            // Simulate form submission
+            submitBtn.textContent = "Wird gesendet…";
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = "0.8";
 
-                // Initialize first box as open
-                openBox(processBoxes[0]);
+            setTimeout(function () {
+              submitBtn.textContent =
+                "✓ Ihre Nachricht wurde erfolgreich gesendet";
+              submitBtn.classList.add("submit-btn--sent");
+              submitBtn.style.opacity = "1";
+              form.reset();
 
-                processBoxes.forEach(function (box) {
-                    box.addEventListener("mouseenter", function () { openBox(box); });
-                    box.addEventListener("click", function () { openBox(box); }); // Touch support
-                });
-            }
+              setTimeout(function () {
+                submitBtn.textContent = "Nachricht senden";
+                submitBtn.classList.remove("submit-btn--sent");
+                submitBtn.disabled = false;
+              }, 3500);
+            }, 1500);
+          });
 
-            /* ----------------- Inject Shake Keyframes ----------------- */
-            const shakeStyle = document.createElement("style");
-            shakeStyle.textContent =
-                "@keyframes shake {" +
-                    "0%,100% { transform: translateX(0); }" +
-                    "20% { transform: translateX(-6px); }" +
-                    "40% { transform: translateX(6px); }" +
-                    "60% { transform: translateX(-4px); }" +
-                    "80% { transform: translateX(4px); }" +
-                "}";
-            document.head.appendChild(shakeStyle);
-        })();
+          // Input focus styling via parent class
+          const inputs = form.querySelectorAll("input, textarea");
+          inputs.forEach(function (input) {
+            input.addEventListener("focus", function () {
+              input.closest(".form-group").classList.add("form-group--focused");
+            });
+            input.addEventListener("blur", function () {
+              input
+                .closest(".form-group")
+                .classList.remove("form-group--focused");
+            });
+          });
+        }
+
+        /* :::::::::::::::::::::::::: PROCESS BOX HOVER / CLICK EXPANSION :::::::::::::::::::::::::: */
+        const processBoxes = document.querySelectorAll(".process-box");
+        if (processBoxes.length) {
+          const openBox = function (box) {
+            processBoxes.forEach(function (b) {
+              b.classList.remove("is-open");
+            });
+            box.classList.add("is-open");
+          };
+
+          // Initialize first box as open
+          openBox(processBoxes[0]);
+
+          processBoxes.forEach(function (box) {
+            box.addEventListener("mouseenter", function () {
+              openBox(box);
+            });
+            box.addEventListener("click", function () {
+              openBox(box);
+            }); // Touch support
+          });
+        }
+
+        /* :::::::::::::::::::::::::: INJECT SHAKE KEYFRAMES :::::::::::::::::::::::::: */
+        const shakeStyle = document.createElement("style");
+        shakeStyle.textContent =
+          "@keyframes shake {" +
+          "0%,100% { transform: translateX(0); }" +
+          "20% { transform: translateX(-6px); }" +
+          "40% { transform: translateX(6px); }" +
+          "60% { transform: translateX(-4px); }" +
+          "80% { transform: translateX(4px); }" +
+          "}";
+        document.head.appendChild(shakeStyle);
+      })();
     </script>
 
     <!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
-  <script src="/assets/css/components/animations.js"></script>
-</body>
+    <script src="/assets/css/components/animations.js"></script>
+  </body>
 </html>

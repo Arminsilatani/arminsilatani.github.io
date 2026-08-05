@@ -1,394 +1,488 @@
-<!--
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-05-24
-  *  Version: 0.2.1
-  ****************************************************
--->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de" dir="ltr">
-<head>
+  <head>
+    <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- :::::::::::::::::::::::::: SEO META :::::::::::::::::::::::::: -->
+    <title>Armin Silatani | Digital Marketing Experte</title>
+    <meta
+      name="description"
+      content="Informationen über die professionellen Dienstleistungen zur Website-Entwicklung und die angewandten Methoden von Armin Silatani stehen bereit."
+    />
+    <meta name="robots" content="noindex, nofollow" />
 
-  <!-- :::::::::::::::::::::::::: SEO META :::::::::::::::::::::::::: -->
-  <title>Armin Silatani | Digital Marketing Experte</title>
-  <meta name="description" content="Informationen über die professionellen Dienstleistungen zur Website-Entwicklung und die angewandten Methoden von Armin Silatani stehen bereit.">
-  <meta name="robots" content="noindex, nofollow">
+    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/images/icon-32.png"
+    />
+    <link rel="stylesheet" href="/assets/css/main.css" />
 
-  <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
-  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
-  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icon-32.png">
-  <link rel="stylesheet" href="/assets/css/main.css">
+    <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
+    <meta property="og:title" content="Armin Silatani" />
+    <meta
+      property="og:description"
+      content="Die Fachkenntnisse und angebotenen Dienste von Armin Silatani."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://arminsilatani.com/de/" />
+    <meta property="og:locale" content="de_DE" />
+    <meta
+      property="og:image"
+      content="https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp"
+    />
+    <meta
+      property="og:image:alt"
+      content="Mann, der auf einem Sitzsack an einem Laptop arbeitet, neben ihm ein kleiner Hund."
+    />
 
-  <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
-  <meta property="og:title" content="Armin Silatani">
-  <meta property="og:description" content="Die Fachkenntnisse und angebotenen Dienste von Armin Silatani.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://arminsilatani.com/de/">
-  <meta property="og:locale" content="de_DE">
-  <meta property="og:image" content="https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp">
-  <meta property="og:image:alt" content="Mann, der auf einem Sitzsack an einem Laptop arbeitet, neben ihm ein kleiner Hund.">
+    <!-- :::::::::::::::::::::::::: TWITTER CARD :::::::::::::::::::::::::: -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Armin Silatani" />
+    <meta
+      name="twitter:description"
+      content="Die Fachkenntnisse und angebotenen Dienste von Armin Silatani."
+    />
+    <meta
+      name="twitter:image"
+      content="https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp"
+    />
 
-  <!-- :::::::::::::::::::::::::: TWITTER CARD :::::::::::::::::::::::::: -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Armin Silatani">
-  <meta name="twitter:description" content="Die Fachkenntnisse und angebotenen Dienste von Armin Silatani.">
-  <meta name="twitter:image" content="https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp">
+    <!-- :::::::::::::::::::::::::: CANONICAL & HREFLANG :::::::::::::::::::::::::: -->
+    <link rel="canonical" href="https://arminsilatani.com/de/" />
+    <link rel="alternate" hreflang="fa" href="https://arminsilatani.com/" />
+    <link rel="alternate" hreflang="en" href="https://arminsilatani.com/en/" />
+    <link rel="alternate" hreflang="ar" href="https://arminsilatani.com/ar/" />
+    <link rel="alternate" hreflang="tr" href="https://arminsilatani.com/tr/" />
+    <link rel="alternate" hreflang="de" href="https://arminsilatani.com/de/" />
+    <link rel="alternate" hreflang="it" href="https://arminsilatani.com/it/" />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://arminsilatani.com/en/"
+    />
 
-  <!-- :::::::::::::::::::::::::: CANONICAL & HREFLANG :::::::::::::::::::::::::: -->
-  <link rel="canonical" href="https://arminsilatani.com/de/">
-  <link rel="alternate" hreflang="fa" href="https://arminsilatani.com/">
-  <link rel="alternate" hreflang="en" href="https://arminsilatani.com/en/">
-  <link rel="alternate" hreflang="ar" href="https://arminsilatani.com/ar/">
-  <link rel="alternate" hreflang="tr" href="https://arminsilatani.com/tr/">
-  <link rel="alternate" hreflang="de" href="https://arminsilatani.com/de/">
-  <link rel="alternate" hreflang="it" href="https://arminsilatani.com/it/">
-  <link rel="alternate" hreflang="x-default" href="https://arminsilatani.com/en/">
-
-  <!-- :::::::::::::::::::::::::: SCHEMA :::::::::::::::::::::::::: -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
+    <!-- :::::::::::::::::::::::::: SCHEMA :::::::::::::::::::::::::: -->
+    <script type="application/ld+json">
       {
-        "@type": "WebSite",
-        "@id": "#website",
-        "url": "https://arminsilatani.com/de/",
-        "name": "Armin Silatani ⚡ Experte für digitales Marketing",
-        "description": "Armin Silatani ⚡ Experte für digitales Marketing",
-        "inLanguage": "en"
-      },
-      {
-        "@type": "WebPage",
-        "@id": "#homepage",
-        "url": "https://arminsilatani.com/de/",
-        "name": "Armin Silatani ⚡ Experte für digitales Marketing",
-        "isPartOf": { "@id": "#website" },
-        "primaryImageOfPage": {
-          "@type": "ImageObject",
-          "url": "https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp",
-          "width": 1080,
-          "height": 1080
-        },
-        "mainContentOfPage": { "@id": "#main-content" },
-        "speakable": {
-          "@type": "SpeakableSpecification",
-          "cssSelector": "h1, .intro"
-        },
-        "significantLink": [
-          "https://arminsilatani.com/de/services/",
-          "https://arminsilatani.com/de/about/",
-          "https://arminsilatani.com/de/contact/",
-          "https://arminsilatani.com/de/blog/"
-        ],
-        "relatedLink": [
-          "https://arminsilatani.com/de/portfolio/",
-          "https://arminsilatani.com/de/tariff/"
-        ]
-      },
-      {
-        "@type": "WebPageElement",
-        "@id": "#main-content",
-        "cssSelector": "#main-content",
-        "description": "Über Armin Silatani, Experte für digitales Marketing"
-      },
-      {
-        "@type": "Person",
-        "@id": "#person",
-        "name": "Armin Silatani",
-        "jobTitle": "Experte für digitales Marketing",
-        "url": "https://arminsilatani.com/de/",
-        "image": "https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp",
-        "sameAs": [
-          "https://www.linkedin.com/in/arminsilatani/",
-          "https://github.com/Arminsilatani",
-          "https://www.instagram.com/arminsilatani"
-        ],
-        "description": "Armin Silatani, Webdesigner und SEO-Spezialist mit Erfahrung in der Gestaltung von E-Commerce-, Unternehmens- und persönlichen Websites.",
-        "knowsLanguage": ["fa", "en", "ar", "tr", "de", "it"]
-      },
-      {
-        "@type": "ProfessionalService",
-        "@id": "#professional-service",
-        "name": "Armin Silatani, Experte für digitales Marketing",
-        "url": "https://arminsilatani.com/de/",
-        "image": "https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp",
-        "telephone": "+989125759466",
-        "email": "contact@arminsilatani.com",
-        "areaServed": { "@type": "Country", "name": "Iran" },
-        "provider": { "@id": "#person" },
-        "contactPoint": [
+        "@context": "https://schema.org",
+        "@graph": [
           {
-            "@type": "ContactPoint",
-            "contactType": "Kundenservice",
-            "telephone": "+989125759466",
-            "availableLanguage": ["fa", "en", "ar", "tr", "de", "it"]
+            "@type": "WebSite",
+            "@id": "#website",
+            "url": "https://arminsilatani.com/de/",
+            "name": "Armin Silatani ⚡ Experte für digitales Marketing",
+            "description": "Armin Silatani ⚡ Experte für digitales Marketing",
+            "inLanguage": "en"
           },
           {
-            "@type": "ContactPoint",
-            "contactType": "WhatsApp",
-            "url": "https://wa.me/+989125759466"
+            "@type": "WebPage",
+            "@id": "#homepage",
+            "url": "https://arminsilatani.com/de/",
+            "name": "Armin Silatani ⚡ Experte für digitales Marketing",
+            "isPartOf": { "@id": "#website" },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp",
+              "width": 1080,
+              "height": 1080
+            },
+            "mainContentOfPage": { "@id": "#main-content" },
+            "speakable": {
+              "@type": "SpeakableSpecification",
+              "cssSelector": "h1, .intro"
+            },
+            "significantLink": [
+              "https://arminsilatani.com/de/services/",
+              "https://arminsilatani.com/de/about/",
+              "https://arminsilatani.com/de/contact/",
+              "https://arminsilatani.com/de/blog/"
+            ],
+            "relatedLink": [
+              "https://arminsilatani.com/de/portfolio/",
+              "https://arminsilatani.com/de/tariff/"
+            ]
+          },
+          {
+            "@type": "WebPageElement",
+            "@id": "#main-content",
+            "cssSelector": "#main-content",
+            "description": "Über Armin Silatani, Experte für digitales Marketing"
+          },
+          {
+            "@type": "Person",
+            "@id": "#person",
+            "name": "Armin Silatani",
+            "jobTitle": "Experte für digitales Marketing",
+            "url": "https://arminsilatani.com/de/",
+            "image": "https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp",
+            "sameAs": [
+              "https://www.linkedin.com/in/arminsilatani/",
+              "https://github.com/Arminsilatani",
+              "https://www.instagram.com/arminsilatani"
+            ],
+            "description": "Armin Silatani, Webdesigner und SEO-Spezialist mit Erfahrung in der Gestaltung von E-Commerce-, Unternehmens- und persönlichen Websites.",
+            "knowsLanguage": ["fa", "en", "ar", "tr", "de", "it"]
+          },
+          {
+            "@type": "ProfessionalService",
+            "@id": "#professional-service",
+            "name": "Armin Silatani, Experte für digitales Marketing",
+            "url": "https://arminsilatani.com/de/",
+            "image": "https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp",
+            "telephone": "+989125759466",
+            "email": "contact@arminsilatani.com",
+            "areaServed": { "@type": "Country", "name": "Iran" },
+            "provider": { "@id": "#person" },
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "contactType": "Kundenservice",
+                "telephone": "+989125759466",
+                "availableLanguage": ["fa", "en", "ar", "tr", "de", "it"]
+              },
+              {
+                "@type": "ContactPoint",
+                "contactType": "WhatsApp",
+                "url": "https://wa.me/+989125759466"
+              }
+            ],
+            "makesOffer": [
+              { "@type": "Offer", "itemOffered": { "@id": "#service-design" } },
+              { "@type": "Offer", "itemOffered": { "@id": "#service-seo" } }
+            ]
+          },
+          {
+            "@type": "Service",
+            "@id": "#service-design",
+            "name": "Individuelles Webdesign",
+            "provider": { "@id": "#professional-service" },
+            "description": "Gestaltung von responsiven, Unternehmens-, E-Commerce- und persönlichen Websites unter Verwendung der neuesten Technologien.",
+            "serviceType": "Webdesign"
+          },
+          {
+            "@type": "Service",
+            "@id": "#service-seo",
+            "name": "Suchmaschinenoptimierung (SEO)",
+            "provider": { "@id": "#professional-service" },
+            "description": "Keyword-Recherche, On-Page- und Off-Page-SEO und Verbesserung der Google-Rankings.",
+            "serviceType": "SEO"
+          },
+          {
+            "@type": "Review",
+            "itemReviewed": { "@id": "#professional-service" },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "author": { "@type": "Person", "name": "Mahmoud Safari" },
+            "datePublished": "2023-11-15",
+            "reviewBody": "Ich hatte die Website- und SEO-Betreuung meines Unternehmens längere Zeit an eine vermeintlich große Agentur ausgelagert – das hat mich nur Zeit gekostet. Seit ich mit Herrn Silatani am SEO-Projekt arbeite, hat sich die Situation komplett gedreht."
           }
-        ],
-        "makesOffer": [
-          { "@type": "Offer", "itemOffered": { "@id": "#service-design" } },
-          { "@type": "Offer", "itemOffered": { "@id": "#service-seo" } }
         ]
-      },
-      {
-        "@type": "Service",
-        "@id": "#service-design",
-        "name": "Individuelles Webdesign",
-        "provider": { "@id": "#professional-service" },
-        "description": "Gestaltung von responsiven, Unternehmens-, E-Commerce- und persönlichen Websites unter Verwendung der neuesten Technologien.",
-        "serviceType": "Webdesign"
-      },
-      {
-        "@type": "Service",
-        "@id": "#service-seo",
-        "name": "Suchmaschinenoptimierung (SEO)",
-        "provider": { "@id": "#professional-service" },
-        "description": "Keyword-Recherche, On-Page- und Off-Page-SEO und Verbesserung der Google-Rankings.",
-        "serviceType": "SEO"
-      },
-      {
-        "@type": "Review",
-        "itemReviewed": { "@id": "#professional-service" },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
-        "author": { "@type": "Person", "name": "Mahmoud Safari" },
-        "datePublished": "2023-11-15",
-        "reviewBody": "Ich hatte die Website- und SEO-Betreuung meines Unternehmens längere Zeit an eine vermeintlich große Agentur ausgelagert – das hat mich nur Zeit gekostet. Seit ich mit Herrn Silatani am SEO-Projekt arbeite, hat sich die Situation komplett gedreht."
       }
-    ]
-  }
-  </script>
+    </script>
 
-  <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-</head>
+    <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  </head>
 
-<body>
-  <!-- =========================== HOME PAGE ============================ -->
-  <header-component></header-component>
+  <body>
+    <!-- :::::::::::::::::::::::::: HOME PAGE :::::::::::::::::::::::::: -->
+    <header-component></header-component>
 
-  <main>
-    <!-- ------------------------- HERO SECTION ------------------------- -->
-    <section class="hero-section">
-      <div class="hero-container">
-        <language-component></language-component>
+    <main>
+      <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
+      <section class="hero-section">
+        <div class="hero-container">
+          <language-component></language-component>
 
-        <div class="hero-left">
-          <img src="../assets/images/arminsilatani/HeroSloganDE.webp" alt="Handgezeichneter Text: Bereit für Platz 1 bei Google?">
-        </div>
-
-        <div class="hero-right">
-          <div class="blob-wrapper">
-            <div class="blob"></div>
-            <img class="hero-img" src="../assets/images/arminsilatani/HeroLogo.webp" alt="Cartoon-Illustration eines Mannes in einem grauen Hoodie.">
+          <div class="hero-left">
+            <img
+              src="../assets/images/arminsilatani/HeroSloganDE.webp"
+              alt="Handgezeichneter Text: Bereit für Platz 1 bei Google?"
+            />
           </div>
-        </div>
-      </div>
 
-      <div class="pro-divider">
-        <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
-          <defs>
-            <filter id="dividerShadow" x="0" y="-30%" width="100%" height="150%">
-              <feDropShadow dx="0" dy="-8" stdDeviation="12" flood-color="rgba(0,0,0,0.55)" />
-            </filter>
-          </defs>
-          <path filter="url(#dividerShadow)" fill="#0d0d0d" d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"/>
-        </svg>
-      </div>
-    </section>
-
-    <!-- ------------------------- ABOUT SECTION ------------------------- -->
-    <section class="about-section">
-      <div class="about-container">
-        <div class="about-text reveal-up">
-          <h1 class="split-title">Armin Silatani</h1>
-          <p>
-            Hallo, ich bin Armin Silatani. Ich helfe Unternehmen dabei, das volle Potenzial des Internets zu nutzen. Eine gut gemachte Website mit durchdachter SEO bringt neue Kunden, steigert den Umsatz deutlich und kann Ihr Geschäft grundlegend verändern, vorausgesetzt, sie wird richtig umgesetzt. In meinen Projekten habe ich immer wieder gesehen, wie strategisches Design und technische Optimierung aus einer durchschnittlichen Website ein echtes Verkaufsinstrument machen. Lassen Sie uns gemeinsam genau das für Ihr Unternehmen erreichen.
-          </p>
-          <a class="btn-dark" href="/de/about/" target="_blank" rel="nofollow">Über mich</a>
-        </div>
-        <div class="about-image">
-          <img src="../assets/images/arminsilatani/AboutPicture.webp" alt="Mann, der auf einem Sitzsack an einem Laptop arbeitet, neben ihm ein kleiner Hund.">
-        </div>
-      </div>
-    </section>
-
-    <!-- ------------------------- SERVICES SECTION ------------------------- -->
-    <section class="services-section">
-      <div class="service-item service-main reveal-up">
-        <div class="service-header">
-          <img src="../assets/images/arminsilatani/ServicesSloganDE.webp" alt="Handgezeichneter Text: Meine Leistungen" class="service-image-top">
-        </div>
-        <div class="service-text">
-          <p>
-            Ihre Website muss gefunden werden، und dabei helfe ich Ihnen. Mit SEO, UI-Design und Strategien, die für echte Unternehmen funktionieren. Lassen Sie uns etwas aufbauen, das messbare Ergebnisse liefert.
-          </p>
-          <a href="/de/services/" target="_blank" rel="nofollow" class="btn-dark">Leistungen</a>
-        </div>
-      </div>
-
-      <div class="service-item service-box-1 tv-static-container reveal-up">
-        <a href="#/">
-          <img src="../assets/images/arminsilatani/ServicesWebDesignSloganDE.webp" alt="Handgezeichneter Text: Entwicklung Website" class="service-image-bottom">
-        </a>
-        <div class="tv-noise"></div>
-      </div>
-
-      <div class="service-item service-box-2 tv-static-container reveal-up">
-        <a href="#/">
-          <img src="../assets/images/arminsilatani/ServicesSEOSloganDE.webp" alt="Handgezeichneter Text: SEO Services" class="service-image-bottom">
-        </a>
-        <div class="tv-noise"></div>
-      </div>
-
-      <div class="service-item service-box-3 tv-static-container reveal-up">
-        <a href="#/">
-          <img src="../assets/images/arminsilatani/ServicesAdsSloganEN.webp" alt="Handgezeichneter Text: Google Ads" class="service-image-bottom">
-        </a>
-        <div class="tv-noise"></div>
-      </div>
-    </section>
-
-    <!-- ------------------------- PARTNERS SECTION ------------------------- -->
-    <section class="partners-section reveal-up">
-      <logo-component></logo-component>
-    </section>
-
-    <!-- ------------------------- TESTIMONIALS SECTION ------------------------- -->
-    <section class="testimonials-section">
-      <div class="testimonials-placeholder reveal-up">
-        <img src="../assets/images/arminsilatani/TestimonialSloganDE.webp" alt="Handgezeichneter Text: Ihre Transformation in Worten">
-      </div>
-    </section>
-
-    <div class="testimonials-container">
-      <div class="column">
-        <div class="testimonials" id="column1"></div>
-      </div>
-      <div class="column">
-        <div class="testimonials" id="column2"></div>
-      </div>
-      <div class="column">
-        <div class="testimonials" id="column3"></div>
-      </div>
-    </div>
-  </main>
-
-  <!-- ------------------------- FOOTER ------------------------- -->
-  <footer-component></footer-component>
-
-  <!-- ::::::::::::::::::::::::::::::::::::::: COMPONENT SCRIPTS ::::::::::::::::::::::::::::::::::::::: -->
-  <script type="module" src="header-component.js"></script>
-  <script src="/assets/css/components/blurup.js"></script>
-  <script src="language-component.js"></script>
-  <script src="logo-component.js" defer></script>
-  <script type="module" src="footer-component.js"></script>
-
-  <!-- ::::::::::::::::::::::::::::::::::::::: TESTIMONIALS SCRIPT ::::::::::::::::::::::::::::::::::::::: -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const testimonials = [
-        {
-          name: "رامین منصوری",
-          role: "مدیر فروش شرکت آوای تجارت",
-          content: "من از خدمات سئو مهندس سیلاطانی برای بهبود وب‌سایت شرکتم استفاده کردم و تجربه فوق‌العاده‌ای داشتم...",
-          image: "https://arminsilatani.com/wp-content/uploads/2023/01/ramin-mansoori.webp"
-        },
-        {
-          name: "Mahmoud Safari",
-          role: "Geschäftsführer Farhang-Registrierungsinstitut",
-          content: "Ich hatte die Website- und SEO-Betreuung meines Unternehmens längere Zeit an eine vermeintlich große Agentur ausgelagert – das hat mich nur Zeit gekostet. Seit ich mit Herrn Silatani am SEO-Projekt arbeite, hat sich die Situation komplett gedreht.",
-          image: "../assets/images/arminsilatani/TestimonialMahmoodsafariOld.webp",
-          alt: "Foto eines Mannes mit dunklem Hemd bei Nacht."
-        },
-        {
-          name: "آناهیتا درنیانی",
-          role: "مدیر پروژه شرکت آراد‌ تک",
-          content: "مهندس سیلاطانی یکی از متخصص‌ترین و با تجربه‌ترین افرادی است...",
-          image: "https://arminsilatani.com/wp-content/uploads/2023/01/آناهیتا-درنیانی.webp"
-        },
-        {
-          name: "سارا رضایی",
-          role: "مدیر دیجیتال مارکتینگ شرکت آوای تجارت",
-          content: "کار کردن با جناب مهندس سیلاطانی برای خدمات سئو وردپرس...",
-          image: "https://arminsilatani.com/wp-content/uploads/2024/11/sara-rezaei.webp"
-        },
-        {
-          name: "علی کریمی",
-          role: "مدیر عامل فروشگاه اینترنتی مدیسه",
-          content: "همکاری با مهندس سیلاطانی یکی از بهترین تصمیمات حرفه‌ای من بود...",
-          image: "https://arminsilatani.com/wp-content/uploads/2024/11/ali-karimi-1.webp"
-        },
-        {
-          name: "علی اکبری",
-          role: "مدیر عامل شرکت سامان دیتا",
-          content: "همکاری با مهندس سیلاطانی یکی از بهترین تصمیمات ما بود...",
-          image: "https://arminsilatani.com/wp-content/uploads/2024/11/ali-akbari.webp"
-        },
-        {
-          name: "الهام عزیزی",
-          role: "مدیر فروش در شرکت آرکا دیجیتال",
-          content: "جناب مهندس سیلاطانی کسی نیست که فقط کار شما را انجام دهد...",
-          image: "https://arminsilatani.com/wp-content/uploads/2026/02/elham-azizi.webp"
-        }
-      ];
-
-      function createCard(t) {
-        return `
-          <div class="card">
-            <div class="profile">
-              <img src="${t.image}" alt="${t.name}">
-              <div>
-                <div class="name">${t.name}</div>
-                <div class="role">${t.role}</div>
-              </div>
+          <div class="hero-right">
+            <div class="blob-wrapper">
+              <div class="blob"></div>
+              <img
+                class="hero-img"
+                src="../assets/images/arminsilatani/HeroLogo.webp"
+                alt="Cartoon-Illustration eines Mannes in einem grauen Hoodie."
+              />
             </div>
-            <div class="content">${t.content}</div>
           </div>
-        `;
-      }
+        </div>
 
-      function shuffle(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [array[i], array[j]] = [array[j], array[i]];
+        <div class="pro-divider">
+          <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
+            <defs>
+              <filter
+                id="dividerShadow"
+                x="0"
+                y="-30%"
+                width="100%"
+                height="150%"
+              >
+                <feDropShadow
+                  dx="0"
+                  dy="-8"
+                  stdDeviation="12"
+                  flood-color="rgba(0,0,0,0.55)"
+                />
+              </filter>
+            </defs>
+            <path
+              filter="url(#dividerShadow)"
+              fill="#0d0d0d"
+              d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
+            />
+          </svg>
+        </div>
+      </section>
+
+      <!-- :::::::::::::::::::::::::: ABOUT SECTION :::::::::::::::::::::::::: -->
+      <section class="about-section">
+        <div class="about-container">
+          <div class="about-text reveal-up">
+            <h1 class="split-title">Armin Silatani</h1>
+            <p>
+              Hallo, ich bin Armin Silatani. Ich helfe Unternehmen dabei, das
+              volle Potenzial des Internets zu nutzen. Eine gut gemachte Website
+              mit durchdachter SEO bringt neue Kunden, steigert den Umsatz
+              deutlich und kann Ihr Geschäft grundlegend verändern,
+              vorausgesetzt, sie wird richtig umgesetzt. In meinen Projekten
+              habe ich immer wieder gesehen, wie strategisches Design und
+              technische Optimierung aus einer durchschnittlichen Website ein
+              echtes Verkaufsinstrument machen. Lassen Sie uns gemeinsam genau
+              das für Ihr Unternehmen erreichen.
+            </p>
+            <a class="btn-dark" href="/de/about/" target="_blank" rel="nofollow"
+              >Über mich</a
+            >
+          </div>
+          <div class="about-image">
+            <img
+              src="../assets/images/arminsilatani/AboutPicture.webp"
+              alt="Mann, der auf einem Sitzsack an einem Laptop arbeitet, neben ihm ein kleiner Hund."
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- :::::::::::::::::::::::::: SERVICES SECTION :::::::::::::::::::::::::: -->
+      <section class="services-section">
+        <div class="service-item service-main reveal-up">
+          <div class="service-header">
+            <img
+              src="../assets/images/arminsilatani/ServicesSloganDE.webp"
+              alt="Handgezeichneter Text: Meine Leistungen"
+              class="service-image-top"
+            />
+          </div>
+          <div class="service-text">
+            <p>
+              Ihre Website muss gefunden werden، und dabei helfe ich Ihnen. Mit
+              SEO, UI-Design und Strategien, die für echte Unternehmen
+              funktionieren. Lassen Sie uns etwas aufbauen, das messbare
+              Ergebnisse liefert.
+            </p>
+            <a
+              href="/de/services/"
+              target="_blank"
+              rel="nofollow"
+              class="btn-dark"
+              >Leistungen</a
+            >
+          </div>
+        </div>
+
+        <div class="service-item service-box-1 tv-static-container reveal-up">
+          <a href="/de/services/web-design/">
+            <img
+              src="../assets/images/arminsilatani/ServicesWebDesignSloganDE.webp"
+              alt="Handgezeichneter Text: Entwicklung Website"
+              class="service-image-bottom"
+            />
+          </a>
+          <div class="tv-noise"></div>
+        </div>
+
+        <div class="service-item service-box-2 tv-static-container reveal-up">
+          <a href="/de/services/seo/">
+            <img
+              src="../assets/images/arminsilatani/ServicesSEOSloganDE.webp"
+              alt="Handgezeichneter Text: SEO Services"
+              class="service-image-bottom"
+            />
+          </a>
+          <div class="tv-noise"></div>
+        </div>
+
+        <div class="service-item service-box-3 tv-static-container reveal-up">
+          <a href="/de/services/google-ads/">
+            <img
+              src="../assets/images/arminsilatani/ServicesAdsSloganEN.webp"
+              alt="Handgezeichneter Text: Google Ads"
+              class="service-image-bottom"
+            />
+          </a>
+          <div class="tv-noise"></div>
+        </div>
+      </section>
+
+      <!-- :::::::::::::::::::::::::: PARTNERS SECTION :::::::::::::::::::::::::: -->
+      <section class="partners-section reveal-up">
+        <logo-component></logo-component>
+      </section>
+
+      <!-- :::::::::::::::::::::::::: TESTIMONIALS SECTION :::::::::::::::::::::::::: -->
+      <section class="testimonials-section">
+        <div class="testimonials-placeholder reveal-up">
+          <img
+            src="../assets/images/arminsilatani/TestimonialSloganDE.webp"
+            alt="Handgezeichneter Text: Ihre Transformation in Worten"
+          />
+        </div>
+      </section>
+
+      <div class="testimonials-container">
+        <div class="column">
+          <div class="testimonials" id="column1"></div>
+        </div>
+        <div class="column">
+          <div class="testimonials" id="column2"></div>
+        </div>
+        <div class="column">
+          <div class="testimonials" id="column3"></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
+    <footer-component></footer-component>
+
+    <!-- :::::::::::::::::::::::::: COMPONENT SCRIPTS :::::::::::::::::::::::::: -->
+    <script type="module" src="header-component.js"></script>
+    <script src="/assets/css/components/blurup.js"></script>
+    <script src="language-component.js"></script>
+    <script src="logo-component.js" defer></script>
+    <script type="module" src="footer-component.js"></script>
+
+    <!-- :::::::::::::::::::::::::: TESTIMONIALS SCRIPT :::::::::::::::::::::::::: -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const testimonials = [
+          {
+            name: "رامین منصوری",
+            role: "مدیر فروش شرکت آوای تجارت",
+            content:
+              "من از خدمات سئو مهندس سیلاطانی برای بهبود وب‌سایت شرکتم استفاده کردم و تجربه فوق‌العاده‌ای داشتم...",
+            image:
+              "https://arminsilatani.com/wp-content/uploads/2023/01/ramin-mansoori.webp",
+          },
+          {
+            name: "Mahmoud Safari",
+            role: "Geschäftsführer Farhang-Registrierungsinstitut",
+            content:
+              "Ich hatte die Website- und SEO-Betreuung meines Unternehmens längere Zeit an eine vermeintlich große Agentur ausgelagert – das hat mich nur Zeit gekostet. Seit ich mit Herrn Silatani am SEO-Projekt arbeite, hat sich die Situation komplett gedreht.",
+            image:
+              "../assets/images/arminsilatani/TestimonialMahmoodsafariOld.webp",
+            alt: "Foto eines Mannes mit dunklem Hemd bei Nacht.",
+          },
+          {
+            name: "آناهیتا درنیانی",
+            role: "مدیر پروژه شرکت آراد‌ تک",
+            content:
+              "مهندس سیلاطانی یکی از متخصص‌ترین و با تجربه‌ترین افرادی است...",
+            image:
+              "https://arminsilatani.com/wp-content/uploads/2023/01/آناهیتا-درنیانی.webp",
+          },
+          {
+            name: "سارا رضایی",
+            role: "مدیر دیجیتال مارکتینگ شرکت آوای تجارت",
+            content: "کار کردن با جناب مهندس سیلاطانی برای خدمات سئو وردپرس...",
+            image:
+              "https://arminsilatani.com/wp-content/uploads/2024/11/sara-rezaei.webp",
+          },
+          {
+            name: "علی کریمی",
+            role: "مدیر عامل فروشگاه اینترنتی مدیسه",
+            content:
+              "همکاری با مهندس سیلاطانی یکی از بهترین تصمیمات حرفه‌ای من بود...",
+            image:
+              "https://arminsilatani.com/wp-content/uploads/2024/11/ali-karimi-1.webp",
+          },
+          {
+            name: "علی اکبری",
+            role: "مدیر عامل شرکت سامان دیتا",
+            content: "همکاری با مهندس سیلاطانی یکی از بهترین تصمیمات ما بود...",
+            image:
+              "https://arminsilatani.com/wp-content/uploads/2024/11/ali-akbari.webp",
+          },
+          {
+            name: "الهام عزیزی",
+            role: "مدیر فروش در شرکت آرکا دیجیتال",
+            content:
+              "جناب مهندس سیلاطانی کسی نیست که فقط کار شما را انجام دهد...",
+            image:
+              "https://arminsilatani.com/wp-content/uploads/2026/02/elham-azizi.webp",
+          },
+        ];
+
+        function createCard(t) {
+          return `
+                    <div class="card">
+                        <div class="profile">
+                            <img src="${t.image}" alt="${t.name}">
+                            <div>
+                                <div class="name">${t.name}</div>
+                                <div class="role">${t.role}</div>
+                            </div>
+                        </div>
+                        <div class="content">${t.content}</div>
+                    </div>
+                `;
         }
-        return array;
-      }
 
-      function fillColumn(id) {
-        const element = document.getElementById(id);
-        if (!element) return;
-        const shuffled = shuffle(testimonials.slice());
-        let html = '';
-        shuffled.concat(shuffled).forEach(t => {
-          html += createCard(t);
-        });
-        element.innerHTML = html;
-      }
+        function shuffle(array) {
+          for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+          }
+          return array;
+        }
 
-      fillColumn('column1');
-      fillColumn('column2');
-      fillColumn('column3');
-    });
-  </script>
+        function fillColumn(id) {
+          const element = document.getElementById(id);
+          if (!element) return;
+          const shuffled = shuffle(testimonials.slice());
+          let html = "";
+          shuffled.concat(shuffled).forEach((t) => {
+            html += createCard(t);
+          });
+          element.innerHTML = html;
+        }
 
-  <!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
-  <script src="/assets/css/components/animations.js"></script>
-</body>
+        fillColumn("column1");
+        fillColumn("column2");
+        fillColumn("column3");
+      });
+    </script>
+
+    <!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
+    <script src="/assets/css/components/animations.js"></script>
+  </body>
 </html>

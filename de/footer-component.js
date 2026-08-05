@@ -1,15 +1,5 @@
-/*
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-05-23
-  *  Version: 1.2.2
-  ****************************************************
-*/
-
-/* =========================== FOOTER COMPONENT ============================ */
-
 class FooterComponent extends HTMLElement {
-  /* ------------------------- CONSTRUCTOR ------------------------- */
+  /* :::::::::::::::::::::::::: CONSTRUCTOR :::::::::::::::::::::::::: */
   constructor() {
     super();
     const shadow = this.attachShadow({ mode: "open" });
@@ -37,14 +27,14 @@ class FooterComponent extends HTMLElement {
         :host {
           display: block;
           width: 100%;
-          background: #0d0d0d;
+          background: #0D0D0D;
           box-sizing: border-box;
           overflow: visible;
         }
 
         .footer-wrapper {
           width: 100%;
-          background: #0d0d0d;
+          background: #0D0D0D;
           overflow: visible;
           position: relative;
         }
@@ -70,7 +60,7 @@ class FooterComponent extends HTMLElement {
         .footer-extra {
           width: 100%;
           background: ${color};
-          color: #0d0d0d;
+          color: #0D0D0D;
           padding: 90px 0px 90px;
           display: flex;
           justify-content: center;
@@ -86,7 +76,7 @@ class FooterComponent extends HTMLElement {
         }
 
         .menu a:hover {
-          color: #f5f5f5;
+          color: #F5F5F5;
         }
 
         /* Three columns when currency is active */
@@ -137,7 +127,7 @@ class FooterComponent extends HTMLElement {
         }
 
         .contact a {
-          color: #0d0d0d;
+          color: #0D0D0D;
           text-decoration: none;
           transition: color .25s;
           display: inline-flex;
@@ -147,7 +137,7 @@ class FooterComponent extends HTMLElement {
 
         .contact a:hover,
         .social a:hover {
-          color: #f5f5f5;
+          color: #F5F5F5;
         }
 
         .contact .icon svg {
@@ -164,7 +154,7 @@ class FooterComponent extends HTMLElement {
         }
 
         .social a {
-          color: #0d0d0d;
+          color: #0D0D0D;
           transition: color .25s;
           display: inline-flex;
         }
@@ -176,11 +166,11 @@ class FooterComponent extends HTMLElement {
           display: block;
         }
 
-        /* COPYRIGHT */
+        /* :::::::::::::::::::::::::: COPYRIGHT :::::::::::::::::::::::::: */
         .copyright {
           width: 100%;
           background: ${color};
-          color: #0d0d0d;
+          color: #0D0D0D;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -196,7 +186,7 @@ class FooterComponent extends HTMLElement {
           display: none;
         }
           
-        /* ------------------------- MOBILE STYLES ------------------------- */
+        /* :::::::::::::::::::::::::: MOBILE STYLES :::::::::::::::::::::::::: */
         @media (max-width: 768px) {
           .footer-divider {
             top: -100px;
@@ -355,7 +345,7 @@ class FooterComponent extends HTMLElement {
     `;
   }
 
-  /* ------------------------- CONNECTED CALLBACK ------------------------- */
+  /* :::::::::::::::::::::::::: CONNECTED CALLBACK :::::::::::::::::::::::::: */
   connectedCallback() {
     const inner = this.shadowRoot.querySelector("#footer-inner");
 
@@ -373,5 +363,5 @@ class FooterComponent extends HTMLElement {
   }
 }
 
-/* --------------------------- CUSTOM ELEMENT REGISTRATION --------------------------- */
+/* :::::::::::::::::::::::::: CUSTOM ELEMENT REGISTRATION :::::::::::::::::::::::::: */
 customElements.define("footer-component", FooterComponent);

@@ -1,25 +1,15 @@
-/*
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-05-02
-  *  Version: 1.1.0
-  ****************************************************
-*/
-
-/* ========================================================================================================
-   LOGO COMPONENT - Custom Web Component for Animated Partner Logos
-   ======================================================================================================== */
+/* :::::::::::::::::::::::::: LOGO COMPONENT :::::::::::::::::::::::::: */
 
 class LogoComponent extends HTMLElement {
-
-  /* ------------------------- CONFIGURATION ------------------------- */
+  /* :::::::::::::::::::::::::: CONFIGURATION :::::::::::::::::::::::::: */
   constructor() {
     super();
-    this.attachShadow({ mode: 'open' });
+    this.attachShadow({ mode: "open" });
 
     this.logosPerRow = 11;
     this.totalRows = 6;
-    this.centerImg = "../assets/images/logo-component/LogoComponentSloganAR.webp";
+    this.centerImg =
+      "../assets/images/logo-component/LogoComponentSloganAR.webp";
     this.centerImgAlt = "نص جرافيكي عملاء وثقوا بي بتصميم بخط اليد";
 
     this.logoList = [
@@ -68,18 +58,18 @@ class LogoComponent extends HTMLElement {
       "../assets/images/logo-component/VegimeatLogo.webp",
       "../assets/images/logo-component/ZrmrLogoOld.webp",
       "../assets/images/logo-component/IranpapernetLogo.webp",
-      "../assets/images/logo-component/KaniraLogo.webp"
+      "../assets/images/logo-component/KaniraLogo.webp",
     ];
   }
 
-  /* ------------------------- LIFECYCLE ------------------------- */
+  /* :::::::::::::::::::::::::: LIFECYCLE :::::::::::::::::::::::::: */
   connectedCallback() {
     this.render();
   }
 
-  /* ------------------------- RENDER ------------------------- */
+  /* :::::::::::::::::::::::::: RENDER :::::::::::::::::::::::::: */
   render() {
-    const template = document.createElement('template');
+    const template = document.createElement("template");
     template.innerHTML = `
       <style>
       :host {
@@ -241,11 +231,14 @@ class LogoComponent extends HTMLElement {
 
     this.shadowRoot.appendChild(template.content.cloneNode(true));
 
-    const container = this.shadowRoot.getElementById('marqueeContainer');
+    const container = this.shadowRoot.getElementById("marqueeContainer");
 
     for (let i = 0; i < this.totalRows; i++) {
-      const rowLogos = this.shuffleArray([...this.logoList]).slice(0, this.logosPerRow);
-      const direction = i % 2 === 0 ? 'right' : 'left';
+      const rowLogos = this.shuffleArray([...this.logoList]).slice(
+        0,
+        this.logosPerRow,
+      );
+      const direction = i % 2 === 0 ? "right" : "left";
       const row = this.createMarqueeRow(rowLogos, direction);
       container.appendChild(row);
     }
@@ -253,7 +246,7 @@ class LogoComponent extends HTMLElement {
     this.initBlurEngine();
   }
 
-  /* ------------------------- HELPER: SHUFFLE ARRAY ------------------------- */
+  /* :::::::::::::::::::::::::: SHUFFLE ARRAY :::::::::::::::::::::::::: */
   shuffleArray(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -262,26 +255,26 @@ class LogoComponent extends HTMLElement {
     return arr;
   }
 
-  /* ------------------------- HELPER: CREATE MARQUEE ROW ------------------------- */
+  /* :::::::::::::::::::::::::: CREATE MARQUEE ROW :::::::::::::::::::::::::: */
   createMarqueeRow(logos, direction) {
-    const rowDiv = document.createElement('div');
-    rowDiv.className = 'marquee-row';
+    const rowDiv = document.createElement("div");
+    rowDiv.className = "marquee-row";
 
-    const marqueeDiv = document.createElement('div');
+    const marqueeDiv = document.createElement("div");
     marqueeDiv.className = `marquee marquee-${direction}`;
 
     const repeatedLogos = [...logos, ...logos];
 
-    repeatedLogos.forEach(src => {
-      const itemDiv = document.createElement('div');
-      itemDiv.className = 'marquee-item';
+    repeatedLogos.forEach((src) => {
+      const itemDiv = document.createElement("div");
+      itemDiv.className = "marquee-item";
 
-      const img = document.createElement('img');
+      const img = document.createElement("img");
       img.src = src;
-      img.alt = `Logo of ${src.split('/').pop().replace('.webp', '')}`;
-      img.loading = 'lazy';
-      img.decoding = 'async';
-      img.setAttribute('data-blurup', 'true');
+      img.alt = `Logo of ${src.split("/").pop().replace(".webp", "")}`;
+      img.loading = "lazy";
+      img.decoding = "async";
+      img.setAttribute("data-blurup", "true");
 
       itemDiv.appendChild(img);
       marqueeDiv.appendChild(itemDiv);
@@ -291,36 +284,43 @@ class LogoComponent extends HTMLElement {
     return rowDiv;
   }
 
-  /* ------------------------- BLUR-UP ENGINE ------------------------- */
+  /* :::::::::::::::::::::::::: BLUR-UP ENGINE :::::::::::::::::::::::::: */
   initBlurEngine() {
-    const images = this.shadowRoot.querySelectorAll('img[data-blurup]');
+    const images = this.shadowRoot.querySelectorAll("img[data-blurup]");
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
 
-        const img = entry.target;
+          const img = entry.target;
 
-        if (img.complete) {
-          img.classList.add('blurup-loaded');
-        } else {
-          img.addEventListener('load', () => {
-            img.classList.add('blurup-loaded');
-          }, { once: true });
-        }
+          if (img.complete) {
+            img.classList.add("blurup-loaded");
+          } else {
+            img.addEventListener(
+              "load",
+              () => {
+                img.classList.add("blurup-loaded");
+              },
+              { once: true },
+            );
+          }
 
-        observer.unobserve(img);
-      });
-    }, {
-      rootMargin: '200px',
-      threshold: 0.01
-    });
+          observer.unobserve(img);
+        });
+      },
+      {
+        rootMargin: "200px",
+        threshold: 0.01,
+      },
+    );
 
-    images.forEach(img => observer.observe(img));
+    images.forEach((img) => observer.observe(img));
   }
 }
 
 /* :::::::::::::::::::::::::: CUSTOM ELEMENT REGISTRATION :::::::::::::::::::::::::: */
-if (!customElements.get('logo-component')) {
-  customElements.define('logo-component', LogoComponent);
+if (!customElements.get("logo-component")) {
+  customElements.define("logo-component", LogoComponent);
 }
