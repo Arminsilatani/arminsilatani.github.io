@@ -1,214 +1,206 @@
-/*
-Author: Armin Silatani
-Date: 2026-03-29
-Version: 1.0.0
-*/
-
-class HeaderComponent extends HTMLElement {constructor() {
+class HeaderComponent extends HTMLElement {
+  constructor() {
     super();
 
     const shadow = this.attachShadow({ mode: "open" });
 
-    /* ::::::::::::::::::::::::::::::::::::::::: STYLES ::::::::::::::::::::::::::::::::::::::::: */
+    /* :::::::::::::::::::::::::: STYLES :::::::::::::::::::::::::: */
     const style = document.createElement("style");
-    style.textContent = `.container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 60px;
-        z-index: 4;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 20px;
-        margin: 0 auto;
-        max-width: 1300px;
-        direction: ltr;
-        box-sizing: border-box;
-      }
+    style.textContent = `
+            .container {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 60px;
+                z-index: 4;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 20px;
+                margin: 0 auto;
+                max-width: 1300px;
+                direction: ltr;
+                box-sizing: border-box;
+            }
 
-      /* ::::::::::::::::::::::::::::::::::::::: TOGGLE TRACK ::::::::::::::::::::::::::::::::::::::: */
+            /* :::::::::::::::::::::::::: TOGGLE TRACK :::::::::::::::::::::::::: */
+            .toggle-track {
+                position: absolute;
+                top: 50%;
+                left: 20px;
+                width: 80px;
+                height: 40px;
+                transform: translateY(-50%);
+                border-radius: 50px;
+                background: rgba(78, 205, 196, .6);
+                overflow: hidden;
+                z-index: 3;
+                direction: ltr;
+                transition: background .4s ease;
+            }
 
-      .toggle-track {
-        position: absolute;
-        top: 50%;
-        left: 20px;
-        width: 80px;
-        height: 40px;
-        transform: translateY(-50%);
-        border-radius: 50px;
-        background: rgba(78, 205, 196, .6);
-        overflow: hidden;
-        z-index: 3;
-        direction: ltr;
-        transition: background .4s ease;
-      }
+            .toggle-track.active {
+                background: rgba(255, 107, 107, .3);
+            }
 
-      .toggle-track.active {
-        background: rgba(255, 107, 107, .3);
-      }
+            /* :::::::::::::::::::::::::: TOGGLE BUTTON :::::::::::::::::::::::::: */
+            .button {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 40px;
+                height: 40px;
+                border: none;
+                border-radius: 50%;
+                cursor: pointer;
+                background: #4ECDC4;
+                transform: translate(0, -50%);
+                transition: .4s;
+                z-index: 4;
+                box-shadow: 0 0 12px rgba(78, 205, 196, .6);
+            }
 
-      /* ::::::::::::::::::::::::::::::::::::::: TOGGLE BUTTON ::::::::::::::::::::::::::::::::::::::: */
+            .button:hover {
+                box-shadow: 0 0 20px rgba(78, 205, 196, .8),
+                    0 0 30px rgba(78, 205, 196, .8);
+            }
 
-      .button {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 40px;
-        height: 40px;
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-        background: #4ECDC4;
-        transform: translate(0, -50%);
-        transition: .4s;
-        z-index: 4;
-        box-shadow: 0 0 12px rgba(78, 205, 196, .6);
-      }
+            .button.active {
+                background: #FF6B6B;
+                box-shadow: 0 0 12px rgba(255, 107, 107, .8);
+                transform: translate(40px, -50%);
+            }
 
-      .button:hover {
-        box-shadow: 0 0 20px rgba(78, 205, 196, .8),
-        0 0 30px rgba(78, 205, 196, .8);
-      }
+            .icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 24px;
+                color: #F5F5F5;
+                pointer-events: none;
+                transition: .4s;
+            }
 
-      .button.active {
-        background: #ff6b6b;
-        box-shadow: 0 0 12px rgba(255, 107, 107, .8);
-        transform: translate(40px, -50%);
-      }
+            .icon.rotated {
+                transform: translate(-50%, -50%) rotate(180deg);
+            }
 
-      .icon {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 24px;
-        color: #f5f5f5;
-        pointer-events: none;
-        transition: .4s;
-      }
+            /* :::::::::::::::::::::::::: OVERLAYS :::::::::::::::::::::::::: */
+            .overlay,
+            .overlay-dark {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100vh;
+                z-index: 3;
+                transition: left .4s cubic-bezier(.19, .22, .59, .9);
+            }
 
-      .icon.rotated {
-        transform: translate(-50%, -50%) rotate(180deg);
-      }
+            .overlay {
+                background: #4ECDC4;
+            }
 
-      /* ::::::::::::::::::::::::::::::::::::::: OVERLAYS ::::::::::::::::::::::::::::::::::::::: */
+            .overlay.active {
+                left: 0;
+                transition: left .3s cubic-bezier(.19, .22, .59, .9);
+            }
 
-      .overlay,
-      .overlay-dark {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100vh;
-        z-index: 3;
-        transition: left .4s cubic-bezier(.19, .22, .59, .9);
-      }
+            .overlay-dark {
+                background: #0D0D0D;
+                width: 99%;
+            }
 
-      .overlay {
-        background: #4ECDC4;
-      }
-      .overlay.active {
-        left: 0;
-        transition: left .3s cubic-bezier(.19, .22, .59, .9);
-      }
+            .overlay-dark.active {
+                left: 0;
+                transition: left .3s cubic-bezier(.19, .22, .59, .9);
+            }
 
-      .overlay-dark {
-        background: #0d0d0d;
-        width: 99%;
-      }
+            /* :::::::::::::::::::::::::: MENU WRAPPER :::::::::::::::::::::::::: */
+            .menu-wrapper {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                direction: ltr;
+            }
 
-      .overlay-dark.active {
-        left: 0;
-        transition: left .3s cubic-bezier(.19, .22, .59, .9);
-      }
+            .line-box {
+                position: relative;
+                width: 40px;
+                height: 384px;
+            }
 
-      /* ::::::::::::::::::::::::::::::::::::::: MENU WRAPPER ::::::::::::::::::::::::::::::::::::::: */
+            svg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                overflow: visible;
+            }
 
-      .menu-wrapper {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        align-items: center;
-        gap: 40px;
-        direction: ltr;
-      }
+            .elastic {
+                fill: none;
+                stroke-width: 2.2;
+                filter: drop-shadow(0 0 14px rgba(255, 255, 255, 1));
+            }
 
-      .line-box {
-        position: relative;
-        width: 40px;
-        height: 384px;
-      }
+            /* :::::::::::::::::::::::::: SIDEBAR :::::::::::::::::::::::::: */
+            .sidebar {
+                display: flex;
+                flex-direction: column;
+                gap: 22px;
+                direction: ltr;
+                text-align: left;
+                align-items: flex-start;
+            }
 
-      svg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        overflow: visible;
-      }
+            .sidebar a {
+                font-family: var(--main-font, sans-serif);
+                font-weight: 900;
+                font-size: 1.4rem;
+                color: #F5F5F5;
+                text-decoration: none;
+                padding: 12px 0;
+                margin: -12px 0;
+                backface-visibility: hidden;
+                transform-style: preserve-3d;
+                transform: translateZ(0);
+                transform-origin: left center;
+                transition: opacity .25s;
+            }
 
-      .elastic {
-        fill: none;
-        stroke-width: 2.2;
-        filter: drop-shadow(0 0 14px rgba(255, 255, 255, 1));
-      }
+            .sidebar a.active {
+                color: #4ECDC4 !important;
+                opacity: 1;
+            }
 
-      /* ::::::::::::::::::::::::::::::::::::::: SIDEBAR ::::::::::::::::::::::::::::::::::::::: */
+            /* :::::::::::::::::::::::::: MOBILE :::::::::::::::::::::::::: */
+            @media (max-width: 768px) {
+                .menu-wrapper {
+                    gap: 28px;
+                    left: 43%;
+                    top: 45%;
+                    transform: translate(-50%, -50%);
+                }
 
-      .sidebar {
-        display: flex;
-        flex-direction: column;
-        gap: 22px;
-        direction: ltr;
-        text-align: left;
-        align-items: flex-start;
-      }
+                .sidebar {
+                    min-width: 220px;
+                    text-align: left;
+                }
 
-      .sidebar a {
-        font-family: var(--main-font, sans-serif);
-        font-weight: 900; font-size: 1.4rem;
-        color: #f5f5f5;
-        text-decoration: none;
-        padding: 12px 0;
-        margin: -12px 0;
-        backface-visibility: hidden;
-        transform-style: preserve-3d;
-        transform: translateZ(0);
-        transform-origin: left center;
-        transition: opacity .25s;
-      }
-        .sidebar a.active {
-  color: #4ECDC4 !important;
-  opacity: 1;
-}
+                .sidebar a {
+                    white-space: nowrap;
+                    font-size: 1.3rem;
+                }
+            }
+        `;
 
-
-      /* ::::::::::::::::::::::::::::::::::::::: MOBILE ::::::::::::::::::::::::::::::::::::::: */
-
-      @media (max-width: 768px) {
-        .menu-wrapper {
-          gap: 28px;
-          left: 43%;
-          top: 45%;
-          transform: translate(-50%, -50%);
-        }
-
-        .sidebar {
-          min-width: 220px;
-          text-align: left;
-        }
-
-        .sidebar a {
-          white-space: nowrap;
-          font-size: 1.3rem;
-        }
-      }
-    `;
-
-    /* ::::::::::::::::::::::::::::::::::::::::: DOM STRUCTURE ::::::::::::::::::::::::::::::::::::::::: */
+    /* :::::::::::::::::::::::::: DOM STRUCTURE :::::::::::::::::::::::::: */
     const container = document.createElement("div");
     container.className = "container";
 
@@ -238,36 +230,36 @@ class HeaderComponent extends HTMLElement {constructor() {
     const lineBox = document.createElement("div");
     lineBox.className = "line-box";
     lineBox.innerHTML = `
-      <svg width="40" height="384" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="lineGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="rgba(255,255,255,0)" />
-            <stop offset="50%" stop-color="rgba(255,255,255,1)" />
-            <stop offset="100%" stop-color="rgba(255,255,255,0)" />
-          </linearGradient>
-        </defs>
-        <path class="elastic" stroke="url(#lineGradient)" d="M 20 0 Q 20 192 20 384"></path>
-      </svg>
-    `;
+            <svg width="40" height="384" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="lineGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(255,255,255,0)" />
+                        <stop offset="50%" stop-color="rgba(255,255,255,1)" />
+                        <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+                    </linearGradient>
+                </defs>
+                <path class="elastic" stroke="url(#lineGradient)" d="M 20 0 Q 20 192 20 384"></path>
+            </svg>
+        `;
 
     const path = lineBox.querySelector(".elastic");
 
     const menu = document.createElement("nav");
     menu.className = "sidebar";
     menu.innerHTML = `
-      <a href="/it/">Home</a>
-      <a href="/it/services/">Servizi</a>
-      <a href="/it/about/">Chi Sono</a>
-      <a href="/it/contact/">Contattami</a>
-      <a href="/it/tariff/">Prezzi</a>
-      <a href="/it/portfolio/">Portfolio</a>
-    `;
+            <a href="/it/">Home</a>
+            <a href="/it/services/">Servizi</a>
+            <a href="/it/about/">Chi Sono</a>
+            <a href="/it/contact/">Contattami</a>
+            <a href="/it/tariff/">Prezzi</a>
+            <a href="/it/portfolio/">Portfolio</a>
+        `;
 
     wrapper.appendChild(lineBox);
     wrapper.appendChild(menu);
     overlayDark.appendChild(wrapper);
 
-    /* ::::::::::::::::::::::::::::::::::::::::: TOGGLE LOGIC ::::::::::::::::::::::::::::::::::::::::: */
+    /* :::::::::::::::::::::::::: TOGGLE LOGIC :::::::::::::::::::::::::: */
     let animating = false;
 
     button.addEventListener("click", () => {
@@ -291,17 +283,16 @@ class HeaderComponent extends HTMLElement {constructor() {
       toggleTrack.classList.toggle("active");
     });
 
-    /* ::::::::::::::::::::::::::::::::::::::::: ANIMATION ENGINE ::::::::::::::::::::::::::::::::::::::::: */
+    /* :::::::::::::::::::::::::: ANIMATION ENGINE :::::::::::::::::::::::::: */
     const links = [...menu.querySelectorAll("a")];
     const currentUrl = window.location.pathname;
 
-links.forEach(link => {
-  const linkPath = new URL(link.href).pathname;
-
-  if (linkPath === currentUrl) {
-    link.classList.add("active");
-  }
-});
+    links.forEach((link) => {
+      const linkPath = new URL(link.href).pathname;
+      if (linkPath === currentUrl) {
+        link.classList.add("active");
+      }
+    });
 
     let targets = new Array(links.length).fill(0);
     let currents = new Array(links.length).fill(0);
@@ -328,7 +319,7 @@ links.forEach(link => {
       requestAnimationFrame(animate);
     }
 
-    /* ::::::::::::::::::::::::::::::::::::::::: HOVER INTERACTIONS ::::::::::::::::::::::::::::::::::::::::: */
+    /* :::::::::::::::::::::::::: HOVER INTERACTIONS :::::::::::::::::::::::::: */
     links.forEach((link, i) => {
       link.addEventListener("mouseenter", () => {
         targets.fill(0);
@@ -348,7 +339,7 @@ links.forEach(link => {
       targetY = 192;
     });
 
-    /* ::::::::::::::::::::::::::::::::::::::::: MOUNT TO SHADOW DOM ::::::::::::::::::::::::::::::::::::::::: */
+    /* :::::::::::::::::::::::::: MOUNT TO SHADOW DOM :::::::::::::::::::::::::: */
     shadow.append(style, container, overlay, overlayDark);
   }
 }
