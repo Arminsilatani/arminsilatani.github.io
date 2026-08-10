@@ -1,0 +1,81 @@
+.businesscard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 24px; /* فاصلهٔ افقی بین دو کارتِ یک پروژه */
+  row-gap: 56px; /* فاصلهٔ عمودی بین ردیف‌ها (پروژه‌های مختلف) */
+  max-width: 960px; /* حداکثر عرض کل گرید – می‌تونی تغییرش بدی */
+  margin: 0 auto; /* وسط‌چین */
+}
+
+.businesscard-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #111;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    filter 0.4s ease;
+  aspect-ratio: 1.5 / 1; /* نسبت افقی کارت ویزیت */
+}
+
+.businesscard-media {
+  width: 100%;
+  height: 100%;
+  background: #f5f5f5;
+}
+
+.businesscard-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* اطلاعات پروژه */
+.businesscard-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 1.2rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+  color: #fff;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  pointer-events: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.businesscard-card:hover .businesscard-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* افکت بلور روی بقیه کارت‌ها */
+.businesscard-grid:hover .businesscard-card {
+  filter: blur(3px);
+}
+.businesscard-grid:hover .businesscard-card:hover {
+  filter: blur(0);
+  transform: scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+/* واکنش‌گرایی – موبایل */
+@media (max-width: 768px) {
+  .businesscard-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .businesscard-card {
+    aspect-ratio: 1.6 / 1;
+  }
+}
