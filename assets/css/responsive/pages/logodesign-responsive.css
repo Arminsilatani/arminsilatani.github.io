@@ -1,0 +1,50 @@
+/* :::::::::::::::::::::::::: RESPONSIVE STYLES (max-width: 768px) :::::::::::::::::::::::::: */
+@media (max-width: 768px) {
+  .quote-section,
+  .quote-inner,
+  .logo-projects-section,
+  .container {
+    overflow: visible;
+  }
+
+  .quote-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+    margin-top: 60px;
+  }
+
+  .quote-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    max-width: 100px;
+    z-index: 2;
+    background: transparent;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  .quote-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 100%;
+  }
+
+  .quote-inner blockquote {
+    text-align: center;
+    margin-top: calc(15vw + 20px);
+    width: 100%;
+  }
+}

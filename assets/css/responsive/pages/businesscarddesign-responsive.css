@@ -1,0 +1,22 @@
+@media (max-width: 768px) {
+  .businesscard-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .businesscard-card {
+    aspect-ratio: 1.6 / 1;
+  }
+
+  .businesscard-card:nth-child(odd) {
+    margin-bottom: 20px;
+  }
+
+  .businesscard-card:nth-child(even) {
+    margin-bottom: 75px;
+  }
+
+  .businesscard-card:last-child {
+    margin-bottom: 0;
+  }
+}
