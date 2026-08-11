@@ -265,7 +265,7 @@
             </defs>
             <path
               filter="url(#dividerShadow)"
-              fill="#0d0d0d"
+              fill="#0D0D0D"
               d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
             />
           </svg>
@@ -293,12 +293,21 @@
               >Chi sono</a
             >
           </div>
-
           <div class="about-image">
-            <img
-              src="../assets/images/arminsilatani/AboutPicture.webp"
-              alt="Uomo che lavora al laptop su un divano accanto a un cagnolino"
-            />
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="/assets/images/arminsilatani/AboutPicture.webp"
+              aria-label="Uomo che lavora al laptop su un divano accanto a un cagnolino"
+            >
+              <source
+                src="/assets/images/arminsilatani/AboutVideo.mp4"
+                type="video/mp4"
+              />
+            </video>
           </div>
         </div>
       </section>
@@ -471,17 +480,17 @@
 
         function createCard(t) {
           return `
-                        <div class="card">
-                            <div class="profile">
-                                <img src="${t.image}" alt="${t.name}">
-                                <div>
-                                    <div class="name">${t.name}</div>
-                                    <div class="role">${t.role}</div>
-                                </div>
+                    <div class="card">
+                        <div class="profile">
+                            <img src="${t.image}" alt="${t.name}">
+                            <div>
+                                <div class="name">${t.name}</div>
+                                <div class="role">${t.role}</div>
                             </div>
-                            <div class="content">${t.content}</div>
                         </div>
-                    `;
+                        <div class="content">${t.content}</div>
+                    </div>
+                `;
         }
 
         function shuffle(array) {

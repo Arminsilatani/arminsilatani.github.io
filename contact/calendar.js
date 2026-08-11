@@ -2,10 +2,6 @@
 (function () {
   /* :::::::::::::::::::::::::: CONSTANTS :::::::::::::::::::::::::: */
 
-  const SUPABASE_URL = "https://vzqicidepdmraygulrey.supabase.co";
-  const SUPABASE_ANON_KEY = "sb_publishable_kqRWgOmLISOE2EuLL1s8fw_WN6FJRTI";
-  const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
   const RRule =
     window.rrule && window.rrule.RRule
       ? window.rrule.RRule

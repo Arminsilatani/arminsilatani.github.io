@@ -289,12 +289,21 @@
               >About Me</a
             >
           </div>
-
           <div class="about-image">
-            <img
-              src="../assets/images/arminsilatani/AboutPicture.webp"
-              alt="Man working on a laptop sitting on a bean bag Chair with a small dog beside him."
-            />
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="/assets/images/arminsilatani/AboutPicture.webp"
+              aria-label="Man working on a laptop sitting on a bean bag Chair with a small dog beside him."
+            >
+              <source
+                src="/assets/images/arminsilatani/AboutVideo.mp4"
+                type="video/mp4"
+              />
+            </video>
           </div>
         </div>
       </section>
@@ -461,17 +470,17 @@
 
         function createCard(t) {
           return `
-<div class="card">
-<div class="profile">
-<img src="${t.image}" alt="${t.name}">
-<div>
-<div class="name">${t.name}</div>
-<div class="role">${t.role}</div>
-</div>
-</div>
-<div class="content">${t.content}</div>
-</div>
-`;
+                        <div class="card">
+                            <div class="profile">
+                                <img src="${t.image}" alt="${t.name}">
+                                <div>
+                                    <div class="name">${t.name}</div>
+                                    <div class="role">${t.role}</div>
+                                </div>
+                            </div>
+                            <div class="content">${t.content}</div>
+                        </div>
+                    `;
         }
 
         function shuffle(array) {

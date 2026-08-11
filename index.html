@@ -286,10 +286,20 @@
               >
             </div>
             <div class="about-image">
-              <img
-                src="assets/images/arminsilatani/AboutPicture.webp"
-                alt="مردی در حال کار با لپ‌تاپ روی مبل شنی کنار سگ کوچک"
-              />
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="assets/images/arminsilatani/AboutPicture.webp"
+                aria-label="آرمین سیلاطانی در حال کار با لپ‌تاپ روی مبل شنی کنار سگ کوچک"
+              >
+                <source
+                  src="assets/images/arminsilatani/AboutVideo.mp4"
+                  type="video/mp4"
+                />
+              </video>
             </div>
           </div>
         </div>
@@ -455,17 +465,17 @@
         ];
 
         const createCard = (t) => `
-<div class="card">
-<div class="profile">
-<img src="${t.image}" alt="${t.name}">
-<div>
-<div class="name">${t.name}</div>
-<div class="role">${t.role}</div>
-</div>
-</div>
-<div class="content">${t.content}</div>
-</div>
-            `;
+                    <div class="card">
+                        <div class="profile">
+                            <img src="${t.image}" alt="${t.name}">
+                            <div>
+                                <div class="name">${t.name}</div>
+                                <div class="role">${t.role}</div>
+                            </div>
+                        </div>
+                        <div class="content">${t.content}</div>
+                    </div>
+                `;
 
         function shuffle(arr) {
           for (let i = arr.length - 1; i > 0; i--) {
