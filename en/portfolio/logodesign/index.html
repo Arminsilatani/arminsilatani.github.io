@@ -1,5 +1,7 @@
 <!doctype html>
+<!-- :::::::::::::::::::::::::: DOCTYPE / ROOT :::::::::::::::::::::::::: -->
 <html lang="en" dir="ltr">
+  <!-- :::::::::::::::::::::::::: HEAD :::::::::::::::::::::::::: -->
   <head>
     <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
     <meta charset="UTF-8" />
@@ -13,7 +15,7 @@
     />
     <meta name="robots" content="noindex, nofollow" />
 
-    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: FAVICONS :::::::::::::::::::::::::: -->
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
@@ -23,11 +25,9 @@
       sizes="32x32"
       href="/assets/images/icon-32.png"
     />
-    <link rel="stylesheet" href="/assets/css/main.css" />
 
-    <!-- :::::::::::::::::::::::::: RESOURCE HINTS :::::::::::::::::::::::::: -->
-    <!-- <link rel="preconnect" href="[FONT_OR_API_DOMAIN]" crossorigin> -->
-    <!-- <link rel="preload" href="[CRITICAL_RESOURCE_URL]" as="[style|script|font]"> -->
+    <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
 
     <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
     <meta
@@ -305,17 +305,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   </head>
 
-  <!-- :::::::::::::::::::::::::: PORTFOLIO PAGE :::::::::::::::::::::::::: -->
+  <!-- :::::::::::::::::::::::::: BODY :::::::::::::::::::::::::: -->
   <body class="portfolio-page">
+    <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
     <header-component></header-component>
 
+    <!-- :::::::::::::::::::::::::: MAIN CONTENT :::::::::::::::::::::::::: -->
     <main class="has-footer-gap portfolio-main">
       <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
       <section class="hero-section">
-        <div class="hero-container">
-          <language-component></language-component>
-          <div class="hero-title">
-            <h1>Logo Design Portfolio</h1>
+        <div class="container-1080">
+          <div class="hero-container">
+            <language-component></language-component>
+            <div class="hero-title">
+              <h1>Logo Design Portfolio</h1>
+            </div>
           </div>
         </div>
 
@@ -355,204 +359,216 @@
         </div>
       </section>
 
-      <!-- :::::::::::::::::::::::::: LOGO DESIGN PROJECTS SECTION :::::::::::::::::::::::::: -->
-      <section class="logo-projects-section container">
-        <div class="section-header reveal-up">
-          <div>
-            <p class="portfolio-description">
-              If you want your brand to look professional, trustworthy, and
-              memorable at first glance, it usually starts with a strong logo. A
-              logo is more than a visually appealing image; it should reflect
-              your brand’s personality, remain memorable, and work effectively
-              across different applications.
+      <!-- :::::::::::::::::::::::::: LOGO DESIGN PROJECTS :::::::::::::::::::::::::: -->
+      <section class="logo-projects-section">
+        <div class="container-1080">
+          <div class="section-header reveal-up">
+            <div>
+              <p class="portfolio-description">
+                If you want your brand to look professional, trustworthy, and
+                memorable at first glance, it usually starts with a strong logo.
+                A logo is more than a visually appealing image; it should
+                reflect your brand’s personality, remain memorable, and work
+                effectively across different applications.
+              </p>
+              <p>
+                On this page, you’ll find a selection of logo design projects
+                created around each business, its audience, and its real-world
+                applications. The goal was never simply to create something
+                visually striking. Each logo had to remain clear, distinctive,
+                and professional across websites, social media, business cards,
+                letterheads, packaging, and advertising materials.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-1300">
+          <div class="logo-masonry categories-grid">
+            <article class="logo-card reveal-card">
+              <div class="logo-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/logodesign/vegimeat.webp"
+                  alt="Vegimeat Logo"
+                  loading="lazy"
+                />
+              </div>
+              <div class="logo-info">
+                <h3>Vegimeat</h3>
+                <p>2025</p>
+              </div>
+            </article>
+
+            <article class="logo-card reveal-card">
+              <div class="logo-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/logodesign/tarhfa.webp"
+                  alt="Tarhfa Logo"
+                  loading="lazy"
+                />
+              </div>
+              <div class="logo-info">
+                <h3>Tarhfa</h3>
+                <p>2024</p>
+              </div>
+            </article>
+
+            <article class="logo-card reveal-card">
+              <div class="logo-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/logodesign/niavaransabt.webp"
+                  alt="Niavaran Sabt Logo"
+                  loading="lazy"
+                />
+              </div>
+              <div class="logo-info">
+                <h3>Niavaran Sabt</h3>
+                <p>2023</p>
+              </div>
+            </article>
+
+            <article class="logo-card reveal-card">
+              <div class="logo-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/logodesign/ptahvie.webp"
+                  alt="Parsa Tahvie Logo"
+                  loading="lazy"
+                />
+              </div>
+              <div class="logo-info">
+                <h3>Parsa Tahvie</h3>
+                <p>2022</p>
+              </div>
+            </article>
+
+            <article class="logo-card reveal-card">
+              <div class="logo-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/logodesign/sabtcity.webp"
+                  alt="Sabt city Logo"
+                  loading="lazy"
+                />
+              </div>
+              <div class="logo-info">
+                <h3>Sabt city</h3>
+                <p>2020</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="container-1080">
+          <div class="portfolio-description reveal-up">
+            <p>
+              A design may look great on a monitor but lose clarity and impact
+              when scaled down for a website icon, social media profile picture,
+              or business card. That is why I never judge a logo by its first
+              impression alone.
+            </p>
+
+            <p>
+              A professional logo should be legible, scalable, distinctive, and
+              versatile. It should remain recognisable as a small icon while
+              still representing the brand effectively on signage, website
+              headers, or printed documents. Colour, shape, spacing, and logo
+              variations are all carefully considered throughout the logo design
+              process.
+            </p>
+
+            <p>
+              In many projects, the logo is the first step in building a broader
+              visual identity. Once it has been finalised, the next stage is to
+              create or align the other brand elements, from the colour palette
+              and typography to
+              <a
+                href="https://arminsilatani.com/en/portfolio/businesscarddesign/"
+                target="_blank"
+                rel="noopener"
+                >Business Cards Portfolio</a
+              >, letterheads, social media templates, and other touchpoints.
+              When these elements follow a shared visual logic, the brand feels
+              more consistent, credible, and trustworthy.
             </p>
             <p>
-              On this page, you’ll find a selection of logo design projects
-              created around each business, its audience, and its real-world
-              applications. The goal was never simply to create something
-              visually striking. Each logo had to remain clear, distinctive, and
-              professional across websites, social media, business cards,
-              letterheads, packaging, and advertising materials.
+              The choice of logo style should not depend only on personal taste
+              or short-lived trends. A wordmark may be the right solution for a
+              brand with a distinctive, memorable name, while a symbol may work
+              better for a business that needs to be recognised quickly. In some
+              cases, combining both creates the strongest and most flexible
+              result.
             </p>
           </div>
         </div>
 
-        <div class="logo-masonry categories-grid">
-          <article class="logo-card reveal-card">
-            <div class="logo-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/logodesign/vegimeat.webp"
-                alt="Northridge Expeditions Logo"
-                loading="lazy"
-              />
+        <div class="container-1300">
+          <div class="quote-section reveal-up">
+            <div class="quote-inner">
+              <div class="quote-image">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/logodesign/leonardo da vinci.webp"
+                  alt="Leonardo da Vinci"
+                  loading="lazy"
+                />
+              </div>
+              <blockquote>
+                <p>Simplicity is the ultimate sophistication.</p>
+                <footer>Leonardo da Vinci</footer>
+              </blockquote>
             </div>
-            <div class="logo-info">
-              <h3>Vegimeat</h3>
-              <p>2025</p>
-            </div>
-          </article>
-
-          <article class="logo-card reveal-card">
-            <div class="logo-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/logodesign/tarhfa.webp"
-                alt="Prisma Consulting Logo"
-                loading="lazy"
-              />
-            </div>
-            <div class="logo-info">
-              <h3>Tarhfa</h3>
-              <p>2024</p>
-            </div>
-          </article>
-
-          <article class="logo-card reveal-card">
-            <div class="logo-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/logodesign/niavaransabt.webp"
-                alt="Lumina Wellness Logo"
-                loading="lazy"
-              />
-            </div>
-            <div class="logo-info">
-              <h3>Niavaran Sabt</h3>
-              <p>2023</p>
-            </div>
-          </article>
-
-          <article class="logo-card reveal-card">
-            <div class="logo-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/logodesign/ptahvie.webp"
-                alt="Synthex Software Logo"
-                loading="lazy"
-              />
-            </div>
-            <div class="logo-info">
-              <h3>Parsa Tahvie</h3>
-              <p>2022</p>
-            </div>
-          </article>
-
-          <article class="logo-card reveal-card">
-            <div class="logo-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/logodesign/sabtcity.webp"
-                alt="Aura Interiors Logo"
-                loading="lazy"
-              />
-            </div>
-            <div class="logo-info">
-              <h3>Sabt city</h3>
-              <p>2020</p>
-            </div>
-          </article>
-        </div>
-
-        <div class="portfolio-description reveal-up">
-          <p>
-            A design may look great on a monitor but lose clarity and impact
-            when scaled down for a website icon, social media profile picture,
-            or business card. That is why I never judge a logo by its first
-            impression alone.
-          </p>
-
-          <p>
-            A professional logo should be legible, scalable, distinctive, and
-            versatile. It should remain recognisable as a small icon while still
-            representing the brand effectively on signage, website headers, or
-            printed documents. Colour, shape, spacing, and logo variations are
-            all carefully considered throughout the logo design process.
-          </p>
-
-          <p>
-            In many projects, the logo is the first step in building a broader
-            visual identity. Once it has been finalised, the next stage is to
-            create or align the other brand elements, from the colour palette
-            and typography to
-            <a
-              href="https://arminsilatani.com/en/portfolio/businesscarddesign/"
-              target="_blank"
-              rel="noopener"
-              >Business Cards Portfolio</a
-            >, letterheads, social media templates, and other touchpoints. When
-            these elements follow a shared visual logic, the brand feels more
-            consistent, credible, and trustworthy.
-          </p>
-          <p>
-            The choice of logo style should not depend only on personal taste or
-            short-lived trends. A wordmark may be the right solution for a brand
-            with a distinctive, memorable name, while a symbol may work better
-            for a business that needs to be recognised quickly. In some cases,
-            combining both creates the strongest and most flexible result.
-          </p>
-        </div>
-
-        <div class="quote-section reveal-up">
-          <div class="quote-inner">
-            <div class="quote-image">
-              <img
-                src="/assets/images/arminsilatani/portfolio/logodesign/leonardo da vinci.webp"
-                alt="Leonardo da Vinci"
-                loading="lazy"
-              />
-            </div>
-            <blockquote>
-              <p>Simplicity is the ultimate sophistication.</p>
-              <footer>Leonardo da Vinci</footer>
-            </blockquote>
           </div>
         </div>
 
-        <div style="margin-top: 2.5rem" class="reveal-up">
-          <p>
-            A good logo has to work in real conditions: on light and dark
-            backgrounds, in colour and monochrome, at small and large sizes, and
-            across digital and print applications. That is why the final
-            deliverables are usually prepared in the required variations and
-            formats, so they can be used confidently on your website, social
-            media, printed materials, official documents, and advertising.
-          </p>
+        <div class="container-1080">
+          <div style="margin-top: 2.5rem" class="reveal-up">
+            <p>
+              A good logo has to work in real conditions: on light and dark
+              backgrounds, in colour and monochrome, at small and large sizes,
+              and across digital and print applications. That is why the final
+              deliverables are usually prepared in the required variations and
+              formats, so they can be used confidently on your website, social
+              media, printed materials, official documents, and advertising.
+            </p>
 
-          <p>
-            Alongside the logo, consistent stationery design also plays an
-            important role in building a professional visual identity. To see
-            related examples, take a look at the
-            <a
-              href="https://arminsilatani.com/en/portfolio/letterheaddesign/"
-              target="_blank"
-              rel="noopener"
-              >Letterheads Portfolio</a
-            >, where layout, colour, typography, and practical print usability
-            are carefully considered.
-          </p>
-          <p>
-            Working directly with a freelance logo designer also makes the
-            process much more straightforward. Instead of passing through
-            several layers of communication, you work directly with the person
-            responsible for the design. This usually means faster feedback,
-            clearer decisions, and a final result that is more closely aligned
-            with the business’s real needs.
-          </p>
+            <p>
+              Alongside the logo, consistent stationery design also plays an
+              important role in building a professional visual identity. To see
+              related examples, take a look at the
+              <a
+                href="https://arminsilatani.com/en/portfolio/letterheaddesign/"
+                target="_blank"
+                rel="noopener"
+                >Letterheads Portfolio</a
+              >, where layout, colour, typography, and practical print usability
+              are carefully considered.
+            </p>
+            <p>
+              Working directly with a freelance logo designer also makes the
+              process much more straightforward. Instead of passing through
+              several layers of communication, you work directly with the person
+              responsible for the design. This usually means faster feedback,
+              clearer decisions, and a final result that is more closely aligned
+              with the business’s real needs.
+            </p>
 
-          <p>
-            If you’re looking for professional logo design that goes beyond
-            looking good and works effectively for your brand, this collection
-            will give you a clear sense of my style, attention to detail, and
-            approach to each project.
-          </p>
+            <p>
+              If you’re looking for professional logo design that goes beyond
+              looking good and works effectively for your brand, this collection
+              will give you a clear sense of my style, attention to detail, and
+              approach to each project.
+            </p>
 
-          <p>
-            Get in touch to discuss your project and start designing a custom
-            logo tailored to your business.
-          </p>
+            <p>
+              Get in touch to discuss your project and start designing a custom
+              logo tailored to your business.
+            </p>
 
-          <p>
-            In a short initial conversation, we’ll clarify your brand’s needs,
-            preferred style, logo applications, and required deliverables, so
-            the design process can move forward with clarity, precision, and no
-            unnecessary delays.
-          </p>
+            <p>
+              In a short initial conversation, we’ll clarify your brand’s needs,
+              preferred style, logo applications, and required deliverables, so
+              the design process can move forward with clarity, precision, and
+              no unnecessary delays.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -570,7 +586,6 @@
 
         <div class="container-1300">
           <div class="process-grid categories-grid" id="processGrid">
-            <!-- :::::::::::::::::::::::::: STEP ONE :::::::::::::::::::::::::: -->
             <article class="process-box reveal-card is-open">
               <div class="process-box__meta">
                 <span class="process-box__step">Step 1</span>
@@ -592,7 +607,6 @@
               </div>
             </article>
 
-            <!-- :::::::::::::::::::::::::: STEP TWO :::::::::::::::::::::::::: -->
             <article class="process-box reveal-card">
               <div class="process-box__meta">
                 <span class="process-box__step">Step 2</span>
@@ -614,7 +628,6 @@
               </div>
             </article>
 
-            <!-- :::::::::::::::::::::::::: STEP THREE :::::::::::::::::::::::::: -->
             <article class="process-box reveal-card">
               <div class="process-box__meta">
                 <span class="process-box__step">Step 3</span>
@@ -636,7 +649,6 @@
               </div>
             </article>
 
-            <!-- :::::::::::::::::::::::::: STEP FOUR :::::::::::::::::::::::::: -->
             <article class="process-box reveal-card">
               <div class="process-box__meta">
                 <span class="process-box__step">Step 4</span>
@@ -659,7 +671,6 @@
               </div>
             </article>
 
-            <!-- :::::::::::::::::::::::::: STEP FIVE :::::::::::::::::::::::::: -->
             <article class="process-box reveal-card">
               <div class="process-box__meta">
                 <span class="process-box__step">Step 5</span>
@@ -685,6 +696,7 @@
       </section>
     </main>
 
+    <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
     <footer-component></footer-component>
 
     <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->

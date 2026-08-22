@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="it" dir="ltr">
   <head>
-    <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: HEAD :::::::::::::::::::::::::: -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -13,7 +13,7 @@
     />
     <meta name="robots" content="noindex, nofollow" />
 
-    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: FAVICONS :::::::::::::::::::::::::: -->
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
@@ -23,6 +23,8 @@
       sizes="32x32"
       href="/assets/images/icon-32.png"
     />
+
+    <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
     <link rel="stylesheet" href="/assets/css/main.css" />
 
     <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
@@ -35,8 +37,8 @@
       content="Le opzioni e i processi dei servizi di digital marketing sono disponibili in questa sezione."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://arminsilatani.com/services/" />
-    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:url" content="https://arminsilatani.com/it/services/" />
+    <meta property="og:locale" content="it_IT" />
     <meta
       property="og:image"
       content="https://arminsilatani.com/assets/images/arminsilatani/services/FeaturedImage.webp"
@@ -192,7 +194,7 @@
                 "item": {
                   "@type": "Service",
                   "name": "Sviluppo Siti Web",
-                  "description": "Il tuo sito lo seguo io, dall'idea al lancio. Tu dimmi cosa vuoi, io lo realizzo — puntuale e senza farti perdere il sonno.",
+                  "description": "Il tuo sito lo seguo io, dall’idea al lancio. Tu dimmi cosa vuoi, io lo realizzo — puntuale e senza farti perdere il sonno.",
                   "url": "https://arminsilatani.com/it/services/web-design",
                   "provider": {
                     "@id": "https://arminsilatani.com/#person"
@@ -231,7 +233,7 @@
                 "item": {
                   "@type": "Service",
                   "name": "Grafica",
-                  "description": "La grafica che realizzo non è decorazione: ogni scelta visiva serve a fermare lo scroll, guadagnare fiducia o spingere all'acquisto.",
+                  "description": "La grafica che realizzo non è decorazione: ogni scelta visiva serve a fermare lo scroll, guadagnare fiducia o spingere all’acquisto.",
                   "url": "https://arminsilatani.com/it/services/graphics",
                   "provider": {
                     "@id": "https://arminsilatani.com/#person"
@@ -257,7 +259,7 @@
                 "item": {
                   "@type": "Service",
                   "name": "UI/UX Design",
-                  "description": "UI/UX Ogni pulsante, ogni margine, ogni percorso di navigazione è studiato su come ragiona davvero l'utente — così clicca, va avanti e completa.",
+                  "description": "Ogni pulsante, ogni margine, ogni percorso di navigazione è studiato su come ragiona davvero l’utente — così clicca, va avanti e completa.",
                   "url": "https://arminsilatani.com/it/services/ui-ux",
                   "provider": {
                     "@id": "https://arminsilatani.com/#person"
@@ -270,7 +272,7 @@
       }
     </script>
 
-    <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: GSAP + SCROLLTRIGGER :::::::::::::::::::::::::: -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   </head>
@@ -280,9 +282,9 @@
     <header-component></header-component>
 
     <main class="has-footer-gap">
-      <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
+      <!-- :::::::::::::::::::::::::: HERO :::::::::::::::::::::::::: -->
       <section class="hero-section">
-        <div class="hero-container">
+        <div class="hero-container container-1080">
           <language-component></language-component>
           <div class="hero-title">
             <h1 class="split-title">Servizi di Digital Marketing</h1>
@@ -323,7 +325,7 @@
         </div>
       </section>
 
-      <!-- :::::::::::::::::::::::::: SERVICES SECTION :::::::::::::::::::::::::: -->
+      <!-- :::::::::::::::::::::::::: SERVICES :::::::::::::::::::::::::: -->
       <div class="services-wrapper">
         <div class="scroll-container categories-grid" id="scrollContainer">
           <div
@@ -511,7 +513,7 @@
             </svg>
             <h3>UI/UX Design</h3>
             <p class="card-desc">
-              UI/UX Ogni pulsante, ogni margine, ogni percorso di navigazione è
+              Ogni pulsante, ogni margine, ogni percorso di navigazione è
               studiato su come ragiona davvero l’utente — così clicca, va avanti
               e completa.
             </p>
@@ -536,6 +538,7 @@
     <!-- :::::::::::::::::::::::::: SERVICES SLIDER SCRIPT :::::::::::::::::::::::::: -->
     <script>
       (function () {
+        /* :::::::::::::::::::::::::: DOM REFERENCES :::::::::::::::::::::::::: */
         const wrapper = document.querySelector(".services-wrapper");
         if (!wrapper) return;
 
@@ -544,15 +547,17 @@
         const cards = scrollContainer.querySelectorAll(".service-card");
         const totalCards = cards.length;
 
+        /* :::::::::::::::::::::::::: DOTS CREATION :::::::::::::::::::::::::: */
         for (let i = 0; i < totalCards; i++) {
           const dot = document.createElement("button");
           dot.classList.add("dot");
-          dot.setAttribute("aria-label", `Go to card ${i + 1}`);
+          dot.setAttribute("aria-label", `Vai alla scheda ${i + 1}`);
           dot.addEventListener("click", () => scrollToCard(i));
           dotsNav.appendChild(dot);
         }
         const dots = dotsNav.querySelectorAll(".dot");
 
+        /* :::::::::::::::::::::::::: CORE LOGIC :::::::::::::::::::::::::: */
         function scrollToCard(index) {
           const card = cards[index];
           if (!card) return;
@@ -589,6 +594,7 @@
           });
         }
 
+        /* :::::::::::::::::::::::::: EVENT LISTENERS :::::::::::::::::::::::::: */
         let scrollTimeout;
         scrollContainer.addEventListener(
           "scroll",
@@ -603,6 +609,7 @@
           card.addEventListener("click", () => scrollToCard(index));
         });
 
+        /* :::::::::::::::::::::::::: INITIALIZATION :::::::::::::::::::::::::: */
         function initializePosition() {
           if (cards.length > 0) {
             const firstCard = cards[0];
@@ -627,7 +634,7 @@
               ? parseInt(currentActive.getAttribute("data-index"))
               : 0;
             let newIndex = currentIndex;
-            if (e.key === "ArrowLeft") {
+            if (e.key === "ArrowRight") {
               newIndex = Math.min(currentIndex + 1, totalCards - 1);
             } else {
               newIndex = Math.max(currentIndex - 1, 0);

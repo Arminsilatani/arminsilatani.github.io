@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
+  <!-- :::::::::::::::::::::::::: HEAD :::::::::::::::::::::::::: -->
   <head>
     <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
     <meta charset="UTF-8" />
@@ -13,7 +14,7 @@
     />
     <meta name="robots" content="noindex, nofollow" />
 
-    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: FAVICONS & STYLESHEETS :::::::::::::::::::::::::: -->
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
@@ -105,7 +106,9 @@
             "name": "آرمين سيلاطاني - متخصص التسويق الرقمي",
             "description": "آرمين سيلاطاني، متخصص في التسويق الرقمي مع أكثر من 5 سنوات من الخبرة في تحسين محركات البحث والإعلانات الإلكترونية واستراتيجيات التسويق الرقمي.",
             "inLanguage": ["fa", "en", "ar", "tr", "de", "it"],
-            "publisher": { "@id": "https://arminsilatani.com/#person" },
+            "publisher": {
+              "@id": "https://arminsilatani.com/#person"
+            },
             "potentialAction": {
               "@type": "SearchAction",
               "target": "https://arminsilatani.com/search?q={search_term_string}",
@@ -119,8 +122,12 @@
             "name": "خريطة الموقع - آرمين سيلاطاني",
             "description": "خريطة موقع آرمين سيلاطاني الكاملة تشمل جميع الصفحات والخدمات والمقالات والأدوات.",
             "inLanguage": "ar",
-            "isPartOf": { "@id": "https://arminsilatani.com/#website" },
-            "about": { "@id": "https://arminsilatani.com/#person" },
+            "isPartOf": {
+              "@id": "https://arminsilatani.com/#website"
+            },
+            "about": {
+              "@id": "https://arminsilatani.com/#person"
+            },
             "datePublished": "2020-01-01",
             "dateModified": "2026-05-03",
             "breadcrumb": {
@@ -188,24 +195,25 @@
       }
     </script>
 
-    <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: ANIMATION LIBRARIES :::::::::::::::::::::::::: -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   </head>
 
+  <!-- :::::::::::::::::::::::::: BODY :::::::::::::::::::::::::: -->
   <body>
-    <!-- :::::::::::::::::::::::::: SITEMAP PAGE :::::::::::::::::::::::::: -->
-
-    <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: HEADER / NAVBAR :::::::::::::::::::::::::: -->
     <header-component></header-component>
 
     <main class="has-footer-gap">
       <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
       <section class="hero-section">
-        <div class="hero-container">
-          <language-component></language-component>
-          <div class="hero-title">
-            <h1 class="split-title">خريطة الموقع</h1>
+        <div class="container-1080">
+          <div class="hero-container">
+            <language-component></language-component>
+            <div class="hero-title">
+              <h1 class="split-title">خريطة الموقع</h1>
+            </div>
           </div>
         </div>
 
@@ -248,7 +256,7 @@
       <!-- :::::::::::::::::::::::::: SITEMAP SECTION :::::::::::::::::::::::::: -->
       <section class="sitemap-section">
         <div class="container-1080">
-          <!-- Main Pages -->
+          <!-- :::::::::::::::::::::::::: MAIN PAGES :::::::::::::::::::::::::: -->
           <div class="sitemap-grid">
             <div class="sitemap-card reveal-up">
               <div class="card-title">
@@ -328,7 +336,7 @@
             </div>
           </div>
 
-          <!-- Services -->
+          <!-- :::::::::::::::::::::::::: SERVICES :::::::::::::::::::::::::: -->
           <div class="sitemap-grid">
             <div class="sitemap-card reveal-up">
               <div class="card-title">
@@ -338,7 +346,7 @@
             </div>
           </div>
 
-          <!-- Articles -->
+          <!-- :::::::::::::::::::::::::: ARTICLES :::::::::::::::::::::::::: -->
           <div class="sitemap-grid">
             <div class="sitemap-card reveal-up">
               <div class="card-title">
@@ -348,7 +356,7 @@
             </div>
           </div>
 
-          <!-- Portfolio Card -->
+          <!-- :::::::::::::::::::::::::: PORTFOLIO CARD :::::::::::::::::::::::::: -->
           <div class="sitemap-grid">
             <div class="sitemap-card reveal-up">
               <div class="card-title">
@@ -403,7 +411,7 @@
     <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
     <footer-component></footer-component>
 
-    <!-- :::::::::::::::::::::::::::: COMPONENT SCRIPTS :::::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: COMPONENT SCRIPTS :::::::::::::::::::::::::: -->
     <script type="module" src="../header-component.js"></script>
     <script src="/assets/css/components/blurup.js"></script>
     <script src="../language-component.js"></script>

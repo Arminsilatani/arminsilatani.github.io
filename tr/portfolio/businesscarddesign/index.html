@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="tr" dir="ltr">
   <head>
-    <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: HEAD :::::::::::::::::::::::::: -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -13,7 +13,7 @@
     />
     <meta name="robots" content="noindex, nofollow" />
 
-    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: FAVICONS :::::::::::::::::::::::::: -->
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
@@ -23,12 +23,15 @@
       sizes="32x32"
       href="/assets/images/icon-32.png"
     />
+
+    <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
     <link rel="stylesheet" href="/assets/css/main.css" />
 
     <!-- :::::::::::::::::::::::::: RESOURCE HINTS :::::::::::::::::::::::::: -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
 
+    <!-- :::::::::::::::::::::::::: FONT PRELOADS :::::::::::::::::::::::::: -->
     <link
       rel="preload"
       href="/assets/fonts/KalamehWeb-Regular.woff2"
@@ -39,20 +42,6 @@
     <link
       rel="preload"
       href="/assets/fonts/KalamehWeb-Black.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/assets/fonts/KalamehWebFaNum-Regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/assets/fonts/KalamehWebFaNum-Black.woff2"
       as="font"
       type="font/woff2"
       crossorigin
@@ -261,17 +250,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   </head>
 
-  <!-- :::::::::::::::::::::::::: PORTFOLIO PAGE :::::::::::::::::::::::::: -->
   <body class="portfolio-page">
+    <!-- :::::::::::::::::::::::::: HEADER / NAVBAR :::::::::::::::::::::::::: -->
     <header-component></header-component>
 
+    <!-- :::::::::::::::::::::::::: MAIN CONTENT :::::::::::::::::::::::::: -->
     <main class="has-footer-gap portfolio-main">
       <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
       <section class="hero-section">
-        <div class="hero-container">
-          <language-component></language-component>
-          <div class="hero-title">
-            <h1>Kartvizit Tasarımı Örnekleri</h1>
+        <div class="container-1080">
+          <div class="hero-container">
+            <language-component></language-component>
+            <div class="hero-title">
+              <h1>Kartvizit Tasarımı Örnekleri</h1>
+            </div>
           </div>
         </div>
 
@@ -312,293 +304,296 @@
       </section>
 
       <!-- :::::::::::::::::::::::::: BUSINESS CARD PROJECTS SECTION :::::::::::::::::::::::::: -->
-      <section class="businesscard-projects-section container">
-        <div class="section-header reveal-up">
-          <div>
-            <p class="portfolio-description">
-              Kartvizit tasarımı örnekleri, yalnızca birkaç iletişim bilgisinin
-              yer aldığı bir kâğıt parçasından çok daha fazlasını anlatır.
-              İnsanların markanızla karşılaştığında gördüğü ilk unsurlardan
-              biridir. İyi tasarlanmış bir kartvizit, daha ilk anda profesyonel
-              bir izlenim bırakmalı; güven vermeli ve işletmenizin karakterini
-              doğru şekilde yansıtmalıdır.
+      <section class="businesscard-projects-section">
+        <div class="container-1080">
+          <div class="section-header reveal-up">
+            <div>
+              <p class="portfolio-description">
+                Kartvizit tasarımı örnekleri, yalnızca birkaç iletişim
+                bilgisinin yer aldığı bir kâğıt parçasından çok daha fazlasını
+                anlatır. İnsanların markanızla karşılaştığında gördüğü ilk
+                unsurlardan biridir. İyi tasarlanmış bir kartvizit, daha ilk
+                anda profesyonel bir izlenim bırakmalı; güven vermeli ve
+                işletmenizin karakterini doğru şekilde yansıtmalıdır.
+              </p>
+              <p>
+                Burada tasarladığım bazı kartvizit örneklerini görebilirsiniz.
+                Her birini işletmenin yapısına, hedef kitlesine ve kullanım
+                amacına göre ele aldım. Amacım yalnızca estetik açıdan iyi
+                görünen bir tasarım yapmak değildi. Bilgilerin kolayca
+                okunabildiği, markanın hedef kitlesinde doğru bir izlenim
+                bırakan ve kullanım amacına uygun işlevsel kartvizit tasarım
+                örnekleri hazırlamaya odaklandım.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-1300">
+          <div class="businesscard-grid">
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/Bitateb.webp"
+                  alt="Bita Teb kartvizitinin ön yüzü"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Bita Teb</p>
+                <p>2024</p>
+              </div>
+            </article>
+
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/BitatebBack.webp"
+                  alt="Bita Teb kartvizitinin arka yüzü"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Bita Teb (arka yüz)</p>
+                <p>2024</p>
+              </div>
+            </article>
+
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/Faratoseemandegar.webp"
+                  alt="Fara Tose'e Mandegar Gharan şirketinin kartvizitinin ön yüzü"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Fara Tose'e Mandegar Gharan</p>
+                <p>2024</p>
+              </div>
+            </article>
+
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/FaratoseemandegarBack.webp"
+                  alt="Fara Tose'e Mandegar Gharan şirketinin kartvizitinin arka yüzü"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Fara Tose'e Mandegar Gharan (arka yüz)</p>
+                <p>2024</p>
+              </div>
+            </article>
+
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/Shahresabt.webp"
+                  alt="Shahr Sabt hukuk bürosunun kartvizitinin ön yüzü"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Shahr Sabt</p>
+                <p>2023</p>
+              </div>
+            </article>
+
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/ShahresabtBack.webp"
+                  alt="Shahr Sabt hukuk bürosunun kartvizitinin arka yüzü"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Shahr Sabt (arka yüz)</p>
+                <p>2023</p>
+              </div>
+            </article>
+
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/Ptahvie.webp"
+                  alt="Parsa Tahviye şirketinin kartvizitinin ön yüzü"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Parsa Tahviye</p>
+                <p>2022</p>
+              </div>
+            </article>
+
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/PtahvieBack.webp"
+                  alt="Parsa Tahviye şirketinin kartvizitinin arka yüzü"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Parsa Tahviye (arka yüz)</p>
+                <p>2022</p>
+              </div>
+            </article>
+
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/Arminsilatani.webp"
+                  alt="Armin Silatani kartvizitinin ön yüzü"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Armin Silatani</p>
+                <p>2021</p>
+              </div>
+            </article>
+
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/ArminsilataniBack.webp"
+                  alt="Armin Silatani kartvizitinin arka yüzü"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Armin Silatani (arka yüz)</p>
+                <p>2021</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="container-1080">
+          <div class="portfolio-description reveal-up">
+            <p>
+              Bir kartvizit ekranda oldukça etkileyici görünebilir. Ancak
+              baskıya alındığında, küçük boyutta kullanıldığında veya günlük
+              kullanımda aynı etkiyi vermeyebilir; hatta okunabilirliğini
+              kaybedebilir. Bu nedenle kartvizit tasarımı çalışmalarımda
+              yalnızca ilk bakışta nasıl göründüğüne odaklanmıyorum. Modern
+              kartvizit tasarımları için estetik görünüm kadar kullanım
+              koşullarını da dikkate alıyorum.
             </p>
             <p>
-              Burada tasarladığım bazı kartvizit örneklerini görebilirsiniz. Her
-              birini işletmenin yapısına, hedef kitlesine ve kullanım amacına
-              göre ele aldım. Amacım yalnızca estetik açıdan iyi görünen bir
-              tasarım yapmak değildi. Bilgilerin kolayca okunabildiği, markanın
-              hedef kitlesinde doğru bir izlenim bırakan ve kullanım amacına
-              uygun işlevsel kartvizit tasarım örnekleri hazırlamaya odaklandım.
+              Renklerden yazı tipine, boşluk kullanımından kâğıt ve baskı
+              tercihine, bilgilerin sayfadaki yerleşiminden genel görsel dengeye
+              kadar her unsur marka kimliğini desteklemeli. İletişim bilgileri,
+              isim ve temel hizmetler gereksiz bir yoğunluk oluşturmadan hedef
+              kitlenin kolayca fark edebileceği ve okuyabileceği şekilde
+              yerleştirilmelidir. Minimalist kartvizit tasarımları özellikle bu
+              noktada sadelik ile işlevselliği bir araya getirebilir.
+            </p>
+            <p>
+              Bu kartvizit tasarımı çalışmalarında her projeyi çalışma alanına
+              ve markanın konumlandırmasına göre şekillendirmeye özen gösterdim.
+              Bir danışmanın kartvizitiyle bir inşaat şirketinin ya da mağazanın
+              kartviziti aynı ihtiyaçlara cevap vermez. Bu yüzden her projeye
+              aynı tasarım kalıbıyla yaklaşmak doğru değildir. Kartvizit tasarım
+              fikirleri geliştirilirken sektör, hedef kitle ve markanın iletişim
+              dili birlikte değerlendirilmelidir.
+            </p>
+            <p>
+              Profesyonel bir kartvizit tasarımı, markanın diğer görsel kimlik
+              unsurlarıyla uyum içinde olduğunda asıl değerini gösterir. Logo,
+              kurumsal renkler, antetli kâğıt, sosyal medya hesapları, ambalaj
+              ve web sitesi birbiriyle tutarlı olduğunda marka daha bütünlüklü,
+              profesyonel ve güvenilir bir görünüm kazanır. Bu nedenle kurumsal
+              kartvizit tasarımları, marka kimliğinin diğer unsurlarından
+              bağımsız düşünülmemelidir.
+            </p>
+            <p>
+              İlgili diğer projeleri de görmek isterseniz,
+              <a
+                href="https://arminsilatani.com/tr/portfolio/logodesign/"
+                target="_blank"
+                rel="noopener"
+              >
+                Logo Tasarımı Örnekleri
+              </a>
+              da göz atabilirsiniz. Logo ile kartvizit arasındaki uyum, düzenli
+              ve bütünlüklü bir görsel kimlik oluşturmanın önemli parçalarından
+              biridir.
+            </p>
+            <p>
+              Kartvizit; baskı, dijital kullanım, sosyal medya üzerinden
+              paylaşım, e-posta imzası veya iş toplantılarında tanıtım gibi
+              farklı ihtiyaçlara göre çeşitli formatlarda hazırlanabilir. Nihai
+              dosyaları da projenin gereksinimlerine ve işletmenin gerçek
+              kullanım alanlarına uygun şekilde teslim ediyorum. Böylece
+              hazırlanan kartvizit modelleri yalnızca görsel açıdan değil,
+              farklı kullanım senaryoları açısından da işlevsel olur.
             </p>
           </div>
-        </div>
 
-        <div class="businesscard-grid">
-          <!-- Project 1: Bita Teb -->
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/Bitateb.webp"
-                alt="Bita Teb kartvizitinin ön yüzü"
-                loading="lazy"
-              />
+          <div class="quote-section reveal-up">
+            <div class="quote-inner">
+              <div class="quote-image">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/paul-rand.webp"
+                  alt="Paul Rand"
+                  loading="lazy"
+                />
+              </div>
+              <blockquote>
+                <p>“Tasarım, markanızın sessiz elçisidir.</p>
+                <footer>Paul Rand</footer>
+              </blockquote>
             </div>
-            <div class="businesscard-info">
-              <p>Bita Teb</p>
-              <p>2024</p>
-            </div>
-          </article>
-
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/BitatebBack.webp"
-                alt="Bita Teb kartvizitinin arka yüzü"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Bita Teb (arka yüz)</p>
-              <p>2024</p>
-            </div>
-          </article>
-
-          <!-- Project 2: Corporate Business Card -->
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/Faratoseemandegar.webp"
-                alt="Fara Tose'e Mandegar Gharan şirketinin kartvizitinin ön yüzü"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Fara Tose'e Mandegar Gharan</p>
-              <p>2024</p>
-            </div>
-          </article>
-
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/FaratoseemandegarBack.webp"
-                alt="Fara Tose'e Mandegar Gharan şirketinin kartvizitinin arka yüzü"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Fara Tose'e Mandegar Gharan (arka yüz)</p>
-              <p>2024</p>
-            </div>
-          </article>
-
-          <!-- Project 3: Commercial Brand Identity -->
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/Shahresabt.webp"
-                alt="Shahr Sabt hukuk bürosunun kartvizitinin ön yüzü"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Shahr Sabt</p>
-              <p>2023</p>
-            </div>
-          </article>
-
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/ShahresabtBack.webp"
-                alt="Shahr Sabt hukuk bürosunun kartvizitinin arka yüzü"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Shahr Sabt (arka yüz)</p>
-              <p>2023</p>
-            </div>
-          </article>
-
-          <!-- Project 4: Formal & Professional Design -->
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/Ptahvie.webp"
-                alt="Parsa Tahviye şirketinin kartvizitinin ön yüzü"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Parsa Tahviye</p>
-              <p>2022</p>
-            </div>
-          </article>
-
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/PtahvieBack.webp"
-                alt="Parsa Tahviye şirketinin kartvizitinin arka yüzü"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Parsa Tahviye (arka yüz)</p>
-              <p>2022</p>
-            </div>
-          </article>
-
-          <!-- Project 5: Minimal Design -->
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/Arminsilatani.webp"
-                alt="Armin Silatani kartvizitinin ön yüzü"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Armin Silatani</p>
-              <p>2021</p>
-            </div>
-          </article>
-
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/ArminsilataniBack.webp"
-                alt="Armin Silatani kartvizitinin arka yüzü"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Armin Silatani (arka yüz)</p>
-              <p>2021</p>
-            </div>
-          </article>
-        </div>
-
-        <div class="portfolio-description reveal-up">
-          <p>
-            Bir kartvizit ekranda oldukça etkileyici görünebilir. Ancak baskıya
-            alındığında, küçük boyutta kullanıldığında veya günlük kullanımda
-            aynı etkiyi vermeyebilir; hatta okunabilirliğini kaybedebilir. Bu
-            nedenle kartvizit tasarımı çalışmalarımda yalnızca ilk bakışta nasıl
-            göründüğüne odaklanmıyorum. Modern kartvizit tasarımları için
-            estetik görünüm kadar kullanım koşullarını da dikkate alıyorum.
-          </p>
-          <p>
-            Renklerden yazı tipine, boşluk kullanımından kâğıt ve baskı
-            tercihine, bilgilerin sayfadaki yerleşiminden genel görsel dengeye
-            kadar her unsur marka kimliğini desteklemeli. İletişim bilgileri,
-            isim ve temel hizmetler gereksiz bir yoğunluk oluşturmadan hedef
-            kitlenin kolayca fark edebileceği ve okuyabileceği şekilde
-            yerleştirilmelidir. Minimalist kartvizit tasarımları özellikle bu
-            noktada sadelik ile işlevselliği bir araya getirebilir.
-          </p>
-          <p>
-            Bu kartvizit tasarımı çalışmalarında her projeyi çalışma alanına ve
-            markanın konumlandırmasına göre şekillendirmeye özen gösterdim. Bir
-            danışmanın kartvizitiyle bir inşaat şirketinin ya da mağazanın
-            kartviziti aynı ihtiyaçlara cevap vermez. Bu yüzden her projeye aynı
-            tasarım kalıbıyla yaklaşmak doğru değildir. Kartvizit tasarım
-            fikirleri geliştirilirken sektör, hedef kitle ve markanın iletişim
-            dili birlikte değerlendirilmelidir.
-          </p>
-          <p>
-            Profesyonel bir kartvizit tasarımı, markanın diğer görsel kimlik
-            unsurlarıyla uyum içinde olduğunda asıl değerini gösterir. Logo,
-            kurumsal renkler, antetli kâğıt, sosyal medya hesapları, ambalaj ve
-            web sitesi birbiriyle tutarlı olduğunda marka daha bütünlüklü,
-            profesyonel ve güvenilir bir görünüm kazanır. Bu nedenle kurumsal
-            kartvizit tasarımları, marka kimliğinin diğer unsurlarından bağımsız
-            düşünülmemelidir.
-          </p>
-          <p>
-            İlgili diğer projeleri de görmek isterseniz,
-            <a
-              href="https://arminsilatani.com/tr/portfolio/logodesign/"
-              target="_blank"
-              rel="noopener"
-            >
-              Logo Tasarımı Örnekleri
-            </a>
-            da göz atabilirsiniz. Logo ile kartvizit arasındaki uyum, düzenli ve
-            bütünlüklü bir görsel kimlik oluşturmanın önemli parçalarından
-            biridir.
-          </p>
-          <p>
-            Kartvizit; baskı, dijital kullanım, sosyal medya üzerinden paylaşım,
-            e-posta imzası veya iş toplantılarında tanıtım gibi farklı
-            ihtiyaçlara göre çeşitli formatlarda hazırlanabilir. Nihai dosyaları
-            da projenin gereksinimlerine ve işletmenin gerçek kullanım
-            alanlarına uygun şekilde teslim ediyorum. Böylece hazırlanan
-            kartvizit modelleri yalnızca görsel açıdan değil, farklı kullanım
-            senaryoları açısından da işlevsel olur.
-          </p>
-        </div>
-
-        <div class="quote-section reveal-up">
-          <div class="quote-inner">
-            <div class="quote-image">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/paul-rand.webp"
-                alt="Paul Rand"
-                loading="lazy"
-              />
-            </div>
-            <blockquote>
-              <p>“Tasarım, markanızın sessiz elçisidir.</p>
-              <footer>Paul Rand</footer>
-            </blockquote>
           </div>
-        </div>
 
-        <div style="margin-top: 2.5rem" class="reveal-up">
-          <p>
-            Her projeyi hayata geçirirken görsel görünüm kadar teknik
-            ayrıntılara da dikkat ediyorum. Dosyaların baskıya hazırlanması,
-            renk ayarlarının yapılması, gerçek boyutta okunabilirliğin kontrol
-            edilmesi ve dijital kullanım için uygun versiyonların hazırlanması
-            sürecin önemli parçalarıdır. İyi bir kartvizit tasarımında bu teknik
-            detaylar, nihai sonucun profesyonel görünmesine doğrudan katkı
-            sağlar.
-          </p>
-          <p>
-            Bir freelancer ile doğrudan çalışmak, tasarım sürecinin daha pratik
-            ve hızlı ilerlemesini sağlar. Projeyi analiz eden, tasarlayan ve
-            uygulayan kişiyle doğrudan iletişim kurduğunuz için aradaki gereksiz
-            iletişim katmanları ortadan kalkar. Geri bildirimler daha hızlı
-            değerlendirilir, kararlar da daha az zaman kaybıyla alınır. Böylece
-            yaratıcı kartvizit tasarımları için fikirden uygulamaya daha
-            kontrollü bir süreç yürütülebilir.
-          </p>
-          <p>
-            Yalnızca iyi görünen değil, markanızı tanıtma konusunda gerçekten
-            işlevsel bir kartvizit tasarımı arıyorsanız, bu çalışma seçkisi size
-            tasarım anlayışım, uygulamadaki titizliğim ve projelere yaklaşımım
-            hakkında fikir verebilir. Baskı alanındaki benzer çalışmaları görmek
-            için
-            <a
-              href="https://arminsilatani.com/tr/portfolio/cataloguedesign/"
-              target="_blank"
-              rel="noopener"
-              >Katalog Tasarımı Örnekleri</a
-            >
-            da göz atabilirsiniz.
-          </p>
-          <p>
-            İşletmenize uygun profesyonel bir kartvizit tasarımı için
-            danışmanlık almak ve projeye başlamak isterseniz bana
-            ulaşabilirsiniz. Kısa bir görüşmede markanızın ihtiyaçlarını,
-            istediğiniz tasarım dilini, kartvizitin kullanım alanlarını ve
-            gerekli çıktı formatlarını birlikte belirleyebiliriz. Böylece
-            projenin kapsamını ve sürecini en başından net bir şekilde
-            planlayabiliriz.
-          </p>
+          <div style="margin-top: 2.5rem" class="reveal-up">
+            <p>
+              Her projeyi hayata geçirirken görsel görünüm kadar teknik
+              ayrıntılara da dikkat ediyorum. Dosyaların baskıya hazırlanması,
+              renk ayarlarının yapılması, gerçek boyutta okunabilirliğin kontrol
+              edilmesi ve dijital kullanım için uygun versiyonların hazırlanması
+              sürecin önemli parçalarıdır. İyi bir kartvizit tasarımında bu
+              teknik detaylar, nihai sonucun profesyonel görünmesine doğrudan
+              katkı sağlar.
+            </p>
+            <p>
+              Bir freelancer ile doğrudan çalışmak, tasarım sürecinin daha
+              pratik ve hızlı ilerlemesini sağlar. Projeyi analiz eden,
+              tasarlayan ve uygulayan kişiyle doğrudan iletişim kurduğunuz için
+              aradaki gereksiz iletişim katmanları ortadan kalkar. Geri
+              bildirimler daha hızlı değerlendirilir, kararlar da daha az zaman
+              kaybıyla alınır. Böylece yaratıcı kartvizit tasarımları için
+              fikirden uygulamaya daha kontrollü bir süreç yürütülebilir.
+            </p>
+            <p>
+              Yalnızca iyi görünen değil, markanızı tanıtma konusunda gerçekten
+              işlevsel bir kartvizit tasarımı arıyorsanız, bu çalışma seçkisi
+              size tasarım anlayışım, uygulamadaki titizliğim ve projelere
+              yaklaşımım hakkında fikir verebilir. Baskı alanındaki benzer
+              çalışmaları görmek için
+              <a
+                href="https://arminsilatani.com/tr/portfolio/cataloguedesign/"
+                target="_blank"
+                rel="noopener"
+                >Katalog Tasarımı Örnekleri</a
+              >
+              da göz atabilirsiniz.
+            </p>
+            <p>
+              İşletmenize uygun profesyonel bir kartvizit tasarımı için
+              danışmanlık almak ve projeye başlamak isterseniz bana
+              ulaşabilirsiniz. Kısa bir görüşmede markanızın ihtiyaçlarını,
+              istediğiniz tasarım dilini, kartvizitin kullanım alanlarını ve
+              gerekli çıktı formatlarını birlikte belirleyebiliriz. Böylece
+              projenin kapsamını ve sürecini en başından net bir şekilde
+              planlayabiliriz.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -734,17 +729,18 @@
           </div>
         </div>
       </section>
-
-      <footer-component></footer-component>
-
-      <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->
-      <script type="module" src="../../header-component.js"></script>
-      <script src="/assets/css/components/blurup.js"></script>
-      <script src="../../language-component.js"></script>
-      <script src="/assets/css/components/breadcrumb.js"></script>
-      <script type="module" src="../../footer-component.js"></script>
-      <script src="/assets/css/components/animations.js"></script>
-      <script src="businesscarddesign.js" defer></script>
     </main>
+
+    <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
+    <footer-component></footer-component>
+
+    <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->
+    <script type="module" src="../../header-component.js"></script>
+    <script src="/assets/css/components/blurup.js"></script>
+    <script src="../../language-component.js"></script>
+    <script src="/assets/css/components/breadcrumb.js"></script>
+    <script type="module" src="../../footer-component.js"></script>
+    <script src="/assets/css/components/animations.js"></script>
+    <script src="businesscarddesign.js" defer></script>
   </body>
 </html>

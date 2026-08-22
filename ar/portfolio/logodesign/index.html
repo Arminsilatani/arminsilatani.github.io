@@ -1,5 +1,8 @@
 <!doctype html>
+
+<!-- :::::::::::::::::::::::::: DOCUMENT ROOT :::::::::::::::::::::::::: -->
 <html lang="ar" dir="rtl">
+  <!-- :::::::::::::::::::::::::: HEAD :::::::::::::::::::::::::: -->
   <head>
     <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
     <meta charset="UTF-8" />
@@ -13,7 +16,7 @@
     />
     <meta name="robots" content="noindex, nofollow" />
 
-    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: FAVICONS :::::::::::::::::::::::::: -->
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
@@ -23,25 +26,14 @@
       sizes="32x32"
       href="/assets/images/icon-32.png"
     />
+
+    <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
     <link rel="stylesheet" href="/assets/css/main.css" />
 
     <!-- :::::::::::::::::::::::::: RESOURCE HINTS :::::::::::::::::::::::::: -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-    <link
-      rel="preload"
-      href="/fonts/KalamehWeb-Regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/fonts/KalamehWeb-Black.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
+
     <link
       rel="preload"
       href="/fonts/KalamehWebFaNum-Regular.woff2"
@@ -288,17 +280,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   </head>
 
-  <!-- :::::::::::::::::::::::::: PORTFOLIO PAGE :::::::::::::::::::::::::: -->
+  <!-- :::::::::::::::::::::::::: BODY :::::::::::::::::::::::::: -->
   <body class="portfolio-page">
+    <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
     <header-component></header-component>
 
+    <!-- :::::::::::::::::::::::::: MAIN CONTENT :::::::::::::::::::::::::: -->
     <main class="has-footer-gap portfolio-main">
       <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
       <section class="hero-section">
-        <div class="hero-container">
-          <language-component></language-component>
-          <div class="hero-title">
-            <h1>نماذج تصميم شعارات</h1>
+        <div class="container-1080">
+          <div class="hero-container">
+            <language-component></language-component>
+            <div class="hero-title">
+              <h1>نماذج تصميم شعارات</h1>
+            </div>
           </div>
         </div>
 
@@ -338,186 +334,197 @@
         </div>
       </section>
 
-      <!-- :::::::::::::::::::::::::: LOGO DESIGN PROJECTS SECTION :::::::::::::::::::::::::: -->
-      <section class="logo-projects-section container">
-        <div class="section-header reveal-up">
-          <div>
-            <p class="portfolio-description">
-              إذا كان الهدف هو بناء **علامة تجارية احترافية** تعكس الثقة وتترك
-              أثراً لا يُمحى من اللحظة الأولى، فالبداية دائماً من خلال استعراض
-              **نماذج تصميم شعارات** مبتكرة. فالشعار ليس مجرد رسم جمالي، بل هو
-              الأداة التي تختزل **شخصية هويتك**، وتستقر في ذاكرة جمهورك، وتعمل
-              بمرونة تامة عبر مختلف المنصات.
+      <!-- :::::::::::::::::::::::::: LOGO PROJECTS SECTION :::::::::::::::::::::::::: -->
+      <section class="logo-projects-section">
+        <div class="container-1080">
+          <div class="section-header reveal-up">
+            <div>
+              <p class="portfolio-description">
+                إذا كان الهدف هو بناء علامة تجارية احترافية تعكس الثقة وتترك
+                أثراً لا يُمحى من اللحظة الأولى، فالبداية دائماً من خلال استعراض
+                نماذج تصميم شعارات مبتكرة. فالشعار ليس مجرد رسم جمالي، بل هو
+                الأداة التي تختزل شخصية هويتك، وتستقر في ذاكرة جمهورك، وتعمل
+                بمرونة تامة عبر مختلف المنصات.
+              </p>
+              <p>
+                في هذه الصفحة، أستعرض مجموعة فريدة من نماذج تصميم شعارات
+                احترافية تم تطويرها بناءً على فهم عميق لطبيعة كل عمل وجمهوره
+                المستهدف. لم يكن التركيز منصباً على الجانب البصري فحسب؛ بل على
+                ضمان ظهور الشعار بوضوح واحترافية سواء على الموقع الإلكتروني، أو
+                في منصات التواصل، أو على المطبوعات الرسمية والتغليف.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-1300">
+          <div class="logo-masonry categories-grid">
+            <article class="logo-card reveal-card">
+              <div class="logo-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/logodesign/vegimeat.webp"
+                  alt="شعار وجی ميت"
+                  loading="lazy"
+                />
+              </div>
+              <div class="logo-info">
+                <h3>وجی ميت</h3>
+                <p>1447</p>
+              </div>
+            </article>
+
+            <article class="logo-card reveal-card">
+              <div class="logo-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/logodesign/tarhfa.webp"
+                  alt="شعار طرحفا"
+                  loading="lazy"
+                />
+              </div>
+              <div class="logo-info">
+                <h3>طرحفا</h3>
+                <p>1446</p>
+              </div>
+            </article>
+
+            <article class="logo-card reveal-card">
+              <div class="logo-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/logodesign/niavaransabt.webp"
+                  alt="شعار ثبت نياوران"
+                  loading="lazy"
+                />
+              </div>
+              <div class="logo-info">
+                <h3>ثبت نياوران</h3>
+                <p>1445</p>
+              </div>
+            </article>
+
+            <article class="logo-card reveal-card">
+              <div class="logo-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/logodesign/ptahvie.webp"
+                  alt="شعار بارسا تهوية"
+                  loading="lazy"
+                />
+              </div>
+              <div class="logo-info">
+                <h3>بارسا تهوية</h3>
+                <p>1444</p>
+              </div>
+            </article>
+
+            <article class="logo-card reveal-card">
+              <div class="logo-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/logodesign/sabtcity.webp"
+                  alt="شعار شهر ثبت"
+                  loading="lazy"
+                />
+              </div>
+              <div class="logo-info">
+                <h3>شهر ثبت</h3>
+                <p>1442</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="container-1080">
+          <div class="portfolio-description reveal-up">
+            <p>
+              قد يبدو التصميم جذاباً على الشاشة، لكن الاختبار الحقيقي يكمن في
+              مدى وضوحه وتأثيره عند استخدامه كأيقونة صغيرة أو عند طباعته على
+              بطاقة عمل. لهذا السبب، أتجاوز مجرد "المظهر" عند بناء أي شعار.
             </p>
             <p>
-              في هذه الصفحة، أستعرض مجموعة فريدة من **نماذج تصميم شعارات**
-              احترافية تم تطويرها بناءً على فهم عميق لطبيعة كل عمل وجمهوره
-              المستهدف. لم يكن التركيز منصباً على الجانب البصري فحسب؛ بل على
-              ضمان ظهور الشعار **بوضوح واحترافية** سواء على الموقع الإلكتروني،
-              أو في منصات التواصل، أو على المطبوعات الرسمية والتغليف.
+              الشعار الناجح هو الذي يجمع بين البساطة والمرونة؛ بحيث يظل قابلاً
+              للتمييز حتى في أصغر الأحجام، ويعبر بدقة عن هوية البراند سواء على
+              لافتات ضخمة أو في ترويسة موقع إلكتروني. خلال هذه العملية، يتم
+              تدقيق كل زاوية، ومسافة، وتدرج لوني لضمان اتساق تام.
+            </p>
+            <p>
+              في أغلب الأحيان، يمثل الشعار حجر الأساس لرحلة أوسع في تصميم الهوية
+              البصرية. فبمجرد اعتماده، نبدأ بتنسيق العناصر المكملة؛ من لوحة
+              الألوان والخطوط، وصولاً إلى استلهام الأفكار من
+              <a
+                href="https://arminsilatani.com/ar/portfolio/businesscarddesign/"
+                target="_blank"
+                rel="noopener"
+                >نماذج تصميم بطاقات العمل</a
+              >
+              المبتكرة والقوالب الرسمية. هذا التناغم هو ما يجعل علامتك التجارية
+              تبدو أكثر تماسكاً وموثوقية أمام العميل.
+            </p>
+            <p>
+              كما أن اختيار النمط لا يخضع للذوق الشخصي فحسب؛ فبينما قد يكون
+              الشعار النصي (Logotype) هو الأمثل لبراند يركز على الاسم، قد تكون
+              العلامة الرمزية أكثر قوة في تحقيق انتشار بصري سريع. وفي حالات
+              معينة، يكون الدمج المبتكر بينهما هو الحل الأدق لاحتياجاتك الفنية.
             </p>
           </div>
         </div>
 
-        <div class="logo-masonry categories-grid">
-          <article class="logo-card reveal-card">
-            <div class="logo-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/logodesign/vegimeat.webp"
-                alt="Northridge Expeditions Logo"
-                loading="lazy"
-              />
+        <div class="container-1300">
+          <div class="quote-section reveal-up">
+            <div class="quote-inner">
+              <div class="quote-image">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/logodesign/leonardo da vinci.webp"
+                  alt="لئوناردو داوینچی"
+                  loading="lazy"
+                />
+              </div>
+              <blockquote>
+                <p>البساطة هي أقصى درجات التعقيد.</p>
+                <footer>ليوناردو دا فينشي</footer>
+              </blockquote>
             </div>
-            <div class="logo-info">
-              <h3>وجی ميت</h3>
-              <p>1447</p>
-            </div>
-          </article>
-
-          <article class="logo-card reveal-card">
-            <div class="logo-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/logodesign/tarhfa.webp"
-                alt="Prisma Consulting Logo"
-                loading="lazy"
-              />
-            </div>
-            <div class="logo-info">
-              <h3>طرحفا</h3>
-              <p>1446</p>
-            </div>
-          </article>
-
-          <article class="logo-card reveal-card">
-            <div class="logo-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/logodesign/niavaransabt.webp"
-                alt="Lumina Wellness Logo"
-                loading="lazy"
-              />
-            </div>
-            <div class="logo-info">
-              <h3>ثبت نياوران</h3>
-              <p>1445</p>
-            </div>
-          </article>
-
-          <article class="logo-card reveal-card">
-            <div class="logo-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/logodesign/ptahvie.webp"
-                alt="Synthex Software Logo"
-                loading="lazy"
-              />
-            </div>
-            <div class="logo-info">
-              <h3>بارسا تهوية</h3>
-              <p>1444</p>
-            </div>
-          </article>
-
-          <article class="logo-card reveal-card">
-            <div class="logo-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/logodesign/sabtcity.webp"
-                alt="Aura Interiors Logo"
-                loading="lazy"
-              />
-            </div>
-            <div class="logo-info">
-              <h3>شهر ثبت</h3>
-              <p>1442</p>
-            </div>
-          </article>
-        </div>
-
-        <div class="portfolio-description reveal-up">
-          <p>
-            قد يبدو التصميم جذاباً على الشاشة، لكن الاختبار الحقيقي يكمن في مدى
-            **وضوحه وتأثيره** عند استخدامه كأيقونة صغيرة أو عند طباعته على بطاقة
-            عمل. لهذا السبب، أتجاوز مجرد "المظهر" عند بناء أي شعار.
-          </p>
-          <p>
-            الشعار الناجح هو الذي يجمع بين **البساطة والمرونة**؛ بحيث يظل قابلاً
-            للتمييز حتى في أصغر الأحجام، ويعبر بدقة عن **هوية البراند** سواء على
-            لافتات ضخمة أو في ترويسة موقع إلكتروني. خلال هذه العملية، يتم تدقيق
-            كل زاوية، ومسافة، وتدرج لوني لضمان اتساق تام.
-          </p>
-          <p>
-            في أغلب الأحيان، يمثل الشعار حجر الأساس لرحلة أوسع في تصميم **الهوية
-            البصرية**. فبمجرد اعتماده، نبدأ بتنسيق العناصر المكملة؛ من لوحة
-            الألوان والخطوط، وصولاً إلى استلهام الأفكار من
-            <a
-              href="https://arminsilatani.com/ar/portfolio/businesscarddesign/"
-              target="_blank"
-              rel="noopener"
-              >نماذج تصميم بطاقات العمل</a
-            >
-            المبتكرة والقوالب الرسمية. هذا التناغم هو ما يجعل علامتك التجارية
-            تبدو أكثر **تماسكاً وموثوقية** أمام العميل.
-          </p>
-          <p>
-            كما أن اختيار النمط لا يخضع للذوق الشخصي فحسب؛ فبينما قد يكون
-            **الشعار النصي (Logotype)** هو الأمثل لبراند يركز على الاسم، قد تكون
-            **العلامة الرمزية** أكثر قوة في تحقيق انتشار بصري سريع. وفي حالات
-            معينة، يكون الدمج المبتكر بينهما هو الحل الأدق لاحتياجاتك الفنية.
-          </p>
-        </div>
-
-        <div class="quote-section reveal-up">
-          <div class="quote-inner">
-            <div class="quote-image">
-              <img
-                src="/assets/images/arminsilatani/portfolio/logodesign/leonardo da vinci.webp"
-                alt="لئوناردو داوینچی"
-                loading="lazy"
-              />
-            </div>
-            <blockquote>
-              <p>البساطة هي أقصى درجات التعقيد.</p>
-              <footer>ليوناردو دا فينشي</footer>
-            </blockquote>
           </div>
         </div>
 
-        <div style="margin-top: 2.5rem" class="reveal-up">
-          <p>
-            يجب أن يثبت **الشعار الجيد** كفاءته في كافة الظروف: على الخلفيات
-            الداكنة والفاتحة، بالنسخة الملونة أو الأحادية (أسود وأبيض)،
-            وللاستخدامات الرقمية والمطبعية. لذلك، أحرص على تسليم كافة **الصيغ
-            والملفات المصدرية** اللازمة لضمان عدم وجود أي عوائق تقنية عند
-            التنفيذ المستقبلي.
-          </p>
-          <p>
-            إلى جانب الشعار، يلعب **تنسيق المطبوعات المكتبية** دوراً حيوياً في
-            تعزيز صورتك المهنية. لاستكشاف تفاصيل تتعلق بتنسيق الأوراق الرسمية،
-            يمكنك الاطلاع على
-            <a
-              href="https://arminsilatani.com/ar/portfolio/letterheaddesign/"
-              target="_blank"
-              rel="noopener"
-              >نماذج تصميم الورق الرسمي</a
-            >، حيث يتم التركيز على دقة التخطيط وتناغم الألوان.
-          </p>
-          <p>
-            العمل مع **مستقل (Freelancer)** بشكل مباشر يجعل سير المشروع أكثر
-            سلاسة ووضوحاً. بعيداً عن تعقيدات التواصل في الوكالات الكبرى، ستكون
-            على اتصال مباشر بالمصمم، مما يسرع من وتيرة المراجعات ويضمن وصولنا
-            إلى **نتيجة نهائية** تلبي تطلعات نشاطك التجاري بدقة.
-          </p>
-          <p>
-            إذا كنت تبحث عن فرصة لمشاهدة **نماذج تصميم شعارات** لا تكتفي
-            بالجمال، بل تعمل كأداة تسويقية فعالة لعلامتك التجارية، فإن هذه
-            المجموعة ستعطيك فكرة واضحة عن **منهجيتي في العمل** ودقتي في التنفيذ.
-          </p>
-          <p>
-            للحصول على استشارة فنية والبدء في مشروعك القادم، يسعدني تواصلك معي.
-          </p>
-          <p>
-            من خلال نقاش سريع، سنحدد **أهداف العلامة التجارية**، والأسلوب البصري
-            الأنسب، والمخرجات المطلوبة، لنبدأ رحلة التصميم بوضوح تام وبعيداً عن
-            إهدار الوقت.
-          </p>
+        <div class="container-1080">
+          <div style="margin-top: 2.5rem" class="reveal-up">
+            <p>
+              يجب أن يثبت الشعار الجيد كفاءته في كافة الظروف: على الخلفيات
+              الداكنة والفاتحة، بالنسخة الملونة أو الأحادية (أسود وأبيض)،
+              وللاستخدامات الرقمية والمطبعية. لذلك، أحرص على تسليم كافة الصيغ
+              والملفات المصدرية اللازمة لضمان عدم وجود أي عوائق تقنية عند
+              التنفيذ المستقبلي.
+            </p>
+            <p>
+              إلى جانب الشعار، يلعب تنسيق المطبوعات المكتبية دوراً حيوياً في
+              تعزيز صورتك المهنية. لاستكشاف تفاصيل تتعلق بتنسيق الأوراق الرسمية،
+              يمكنك الاطلاع على
+              <a
+                href="https://arminsilatani.com/ar/portfolio/letterheaddesign/"
+                target="_blank"
+                rel="noopener"
+                >نماذج تصميم الورق الرسمي</a
+              >، حيث يتم التركيز على دقة التخطيط وتناغم الألوان.
+            </p>
+            <p>
+              العمل مع مستقل (Freelancer) بشكل مباشر يجعل سير المشروع أكثر سلاسة
+              ووضوحاً. بعيداً عن تعقيدات التواصل في الوكالات الكبرى، ستكون على
+              اتصال مباشر بالمصمم، مما يسرع من وتيرة المراجعات ويضمن وصولنا إلى
+              نتيجة نهائية تلبي تطلعات نشاطك التجاري بدقة.
+            </p>
+            <p>
+              إذا كنت تبحث عن فرصة لمشاهدة نماذج تصميم شعارات لا تكتفي بالجمال،
+              بل تعمل كأداة تسويقية فعالة لعلامتك التجارية، فإن هذه المجموعة
+              ستعطيك فكرة واضحة عن منهجيتي في العمل ودقتي في التنفيذ.
+            </p>
+            <p>
+              للحصول على استشارة فنية والبدء في مشروعك القادم، يسعدني تواصلك
+              معي.
+            </p>
+            <p>
+              من خلال نقاش سريع، سنحدد أهداف العلامة التجارية، والأسلوب البصري
+              الأنسب، والمخرجات المطلوبة، لنبدأ رحلة التصميم بوضوح تام وبعيداً
+              عن إهدار الوقت.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -534,7 +541,6 @@
 
         <div class="container-1300">
           <div class="process-grid categories-grid" id="processGrid">
-            <!-- :::::::::::::::::::::::::: STEP ONE :::::::::::::::::::::::::: -->
             <article class="process-box reveal-card is-open">
               <div class="process-box__meta">
                 <span class="process-box__step">01</span>
@@ -556,7 +562,6 @@
               </div>
             </article>
 
-            <!-- :::::::::::::::::::::::::: STEP TWO :::::::::::::::::::::::::: -->
             <article class="process-box reveal-card">
               <div class="process-box__meta">
                 <span class="process-box__step">02</span>
@@ -578,7 +583,6 @@
               </div>
             </article>
 
-            <!-- :::::::::::::::::::::::::: STEP THREE :::::::::::::::::::::::::: -->
             <article class="process-box reveal-card">
               <div class="process-box__meta">
                 <span class="process-box__step">03</span>
@@ -600,7 +604,6 @@
               </div>
             </article>
 
-            <!-- :::::::::::::::::::::::::: STEP FOUR :::::::::::::::::::::::::: -->
             <article class="process-box reveal-card">
               <div class="process-box__meta">
                 <span class="process-box__step">04</span>
@@ -622,7 +625,6 @@
               </div>
             </article>
 
-            <!-- :::::::::::::::::::::::::: STEP FIVE :::::::::::::::::::::::::: -->
             <article class="process-box reveal-card">
               <div class="process-box__meta">
                 <span class="process-box__step">05</span>
@@ -648,6 +650,7 @@
       </section>
     </main>
 
+    <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
     <footer-component></footer-component>
 
     <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->

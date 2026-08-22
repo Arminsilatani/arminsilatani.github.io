@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
+  <!-- :::::::::::::::::::::::::: HEAD :::::::::::::::::::::::::: -->
   <head>
     <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
     <meta charset="UTF-8" />
@@ -13,7 +14,7 @@
     />
     <meta name="robots" content="noindex, nofollow" />
 
-    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: FAVICONS :::::::::::::::::::::::::: -->
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
@@ -23,11 +24,9 @@
       sizes="32x32"
       href="/assets/images/icon-32.png"
     />
-    <link rel="stylesheet" href="../../assets/css/main.css" />
 
-    <!-- :::::::::::::::::::::::::: RESOURCE HINTS :::::::::::::::::::::::::: -->
-    <!-- <link rel="preconnect" href="[FONT_OR_API_DOMAIN]" crossorigin> -->
-    <!-- <link rel="preload" href="[CRITICAL_RESOURCE_URL]" as="[style|script|font]"> -->
+    <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
     <meta
@@ -192,17 +191,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   </head>
 
-  <!-- :::::::::::::::::::::::::: PORTFOLIO PAGE :::::::::::::::::::::::::: -->
+  <!-- :::::::::::::::::::::::::: BODY :::::::::::::::::::::::::: -->
   <body class="portfolio-page">
+    <!-- :::::::::::::::::::::::::: HEADER / NAVBAR :::::::::::::::::::::::::: -->
     <header-component></header-component>
 
+    <!-- :::::::::::::::::::::::::: MAIN CONTENT :::::::::::::::::::::::::: -->
     <main class="has-footer-gap portfolio-main">
       <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
       <section class="hero-section">
-        <div class="hero-container">
-          <language-component></language-component>
-          <div class="hero-title">
-            <h1>نمونه کار لوگو</h1>
+        <div class="container-1080">
+          <div class="hero-container">
+            <language-component></language-component>
+            <div class="hero-title">
+              <h1>نمونه کار لوگو</h1>
+            </div>
           </div>
         </div>
 
@@ -242,197 +245,208 @@
         </div>
       </section>
 
-      <!-- :::::::::::::::::::::::::: LOGO DESIGN PROJECTS SECTION :::::::::::::::::::::::::: -->
-      <section class="logo-projects-section container">
-        <div class="section-header reveal-up">
-          <div>
-            <p class="portfolio-description">
-              اگر قرار است یک برند در اولین برخورد حرفه‌ای، قابل‌اعتماد و
-              ماندگار به نظر برسد، معمولاً همه‌چیز از لوگو شروع می‌شود. لوگو فقط
-              یک تصویر زیبا نیست؛ باید شخصیت برند را منتقل کند، در ذهن بماند و
-              در موقعیت‌های مختلف درست عمل کند.
+      <!-- :::::::::::::::::::::::::: LOGO PROJECTS SECTION :::::::::::::::::::::::::: -->
+      <section class="logo-projects-section">
+        <div class="container-1080">
+          <div class="section-header reveal-up">
+            <div>
+              <p class="portfolio-description">
+                اگر قرار است یک برند در اولین برخورد حرفه‌ای، قابل‌اعتماد و
+                ماندگار به نظر برسد، معمولاً همه‌چیز از لوگو شروع می‌شود. لوگو
+                فقط یک تصویر زیبا نیست؛ باید شخصیت برند را منتقل کند، در ذهن
+                بماند و در موقعیت‌های مختلف درست عمل کند.
+              </p>
+              <p>
+                در این صفحه، مجموعه‌ای از نمونه کار لوگو را می‌بینید که با توجه
+                به ماهیت هر کسب‌وکار، مخاطب آن و کاربردهای واقعی برند طراحی
+                شده‌اند. هدف صرفاً ساخت یک طرح چشم‌نواز نبوده؛ هر لوگو باید
+                بتواند روی سایت، شبکه‌های اجتماعی، کارت ویزیت، سربرگ، بسته‌بندی
+                یا تبلیغات، همان‌قدر واضح و حرفه‌ای دیده شود.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-1300">
+          <div class="logo-masonry categories-grid">
+            <article class="logo-card reveal-card">
+              <div class="logo-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/logodesign/vegimeat.webp"
+                  alt="لوگوی وجی میت"
+                  loading="lazy"
+                />
+              </div>
+              <div class="logo-info">
+                <h3>وجی میت</h3>
+                <p>1404</p>
+              </div>
+            </article>
+
+            <article class="logo-card reveal-card">
+              <div class="logo-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/logodesign/tarhfa.webp"
+                  alt="لوگوی طرحفا"
+                  loading="lazy"
+                />
+              </div>
+              <div class="logo-info">
+                <h3>طرحفا</h3>
+                <p>1403</p>
+              </div>
+            </article>
+
+            <article class="logo-card reveal-card">
+              <div class="logo-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/logodesign/niavaransabt.webp"
+                  alt="لوگوی ثبت نیاوران"
+                  loading="lazy"
+                />
+              </div>
+              <div class="logo-info">
+                <h3>ثبت نیاوران</h3>
+                <p>1402</p>
+              </div>
+            </article>
+
+            <article class="logo-card reveal-card">
+              <div class="logo-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/logodesign/ptahvie.webp"
+                  alt="لوگوی پارسا تهویه"
+                  loading="lazy"
+                />
+              </div>
+              <div class="logo-info">
+                <h3>پارسا تهویه</h3>
+                <p>1401</p>
+              </div>
+            </article>
+
+            <article class="logo-card reveal-card">
+              <div class="logo-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/logodesign/sabtcity.webp"
+                  alt="لوگوی شهر ثبت"
+                  loading="lazy"
+                />
+              </div>
+              <div class="logo-info">
+                <h3>شهر ثبت</h3>
+                <p>1399</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="container-1080">
+          <div class="portfolio-description reveal-up">
+            <p>
+              گاهی یک طرح روی مانیتور خوب به نظر می‌رسد، اما وقتی در ابعاد کوچک
+              سایت، عکس پروفایل یا چاپ روی کارت ویزیت قرار می‌گیرد، خوانایی و
+              اثرگذاری خود را از دست می‌دهد. به همین دلیل، در طراحی لوگو فقط به
+              ظاهر اولیه اکتفا نمی‌کنم.
+            </p>
+
+            <p>
+              یک لوگوی حرفه‌ای باید خوانا، مقیاس‌پذیر، متمایز و انعطاف‌پذیر
+              باشد. یعنی هم در یک آیکون کوچک قابل تشخیص بماند و هم روی تابلو،
+              هدر سایت یا یک فایل چاپی، هویت برند را به‌درستی نشان دهد. رنگ‌ها،
+              فرم، فاصله‌ها و نسخه‌های مختلف لوگو همگی در همین مسیر بررسی
+              می‌شوند.
+            </p>
+
+            <p>
+              در بسیاری از پروژه‌ها، لوگو شروع یک مسیر بزرگ‌تر در طراحی هویت
+              بصری برند است. بعد از نهایی شدن آن، نوبت به ساخت یا هماهنگ‌سازی
+              سایر بخش‌ها می‌رسد؛ از رنگ سازمانی و تایپوگرافی گرفته تا
+              <a
+                href="https://arminsilatani.com/portfolio/businesscarddesign/"
+                target="_blank"
+                rel="noopener"
+                >نمونه کار طراحی کارت ویزیت</a
+              >، سربرگ، قالب شبکه‌های اجتماعی و سایر نقاط تماس برند. وقتی این
+              اجزا با یک منطق مشترک طراحی شوند، برند منسجم‌تر و قابل‌اعتمادتر
+              دیده می‌شود.
             </p>
             <p>
-              در این صفحه، مجموعه‌ای از نمونه کار لوگو را می‌بینید که با توجه به
-              ماهیت هر کسب‌وکار، مخاطب آن و کاربردهای واقعی برند طراحی شده‌اند.
-              هدف صرفاً ساخت یک طرح چشم‌نواز نبوده؛ هر لوگو باید بتواند روی
-              سایت، شبکه‌های اجتماعی، کارت ویزیت، سربرگ، بسته‌بندی یا تبلیغات،
-              همان‌قدر واضح و حرفه‌ای دیده شود.
+              انتخاب سبک هم نباید صرفاً بر اساس سلیقه لحظه‌ای باشد. یک لوگوتایپ
+              ممکن است برای برندی با نام خاص و قابل‌اتکا بهترین انتخاب باشد؛ یک
+              نشان تجاری می‌تواند برای کسب‌وکاری که به شناسایی سریع نیاز دارد
+              مؤثرتر عمل کند. گاهی هم ترکیب این دو، پاسخ دقیق‌تری به نیاز برند
+              می‌دهد.
             </p>
           </div>
         </div>
 
-        <div class="logo-masonry categories-grid">
-          <article class="logo-card reveal-card">
-            <div class="logo-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/logodesign/vegimeat.webp"
-                alt="Northridge Expeditions Logo"
-                loading="lazy"
-              />
+        <div class="container-1300">
+          <div class="quote-section reveal-up">
+            <div class="quote-inner">
+              <div class="quote-image">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/logodesign/leonardo da vinci.webp"
+                  alt="لئوناردو داوینچی"
+                  loading="lazy"
+                />
+              </div>
+              <blockquote>
+                <p>سادگی، نهایت پیچیدگی است.</p>
+                <footer>لئوناردو داوینچی</footer>
+              </blockquote>
             </div>
-            <div class="logo-info">
-              <h3>وجی میت</h3>
-              <p>1404</p>
-            </div>
-          </article>
-
-          <article class="logo-card reveal-card">
-            <div class="logo-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/logodesign/tarhfa.webp"
-                alt="Prisma Consulting Logo"
-                loading="lazy"
-              />
-            </div>
-            <div class="logo-info">
-              <h3>طرحفا</h3>
-              <p>1403</p>
-            </div>
-          </article>
-
-          <article class="logo-card reveal-card">
-            <div class="logo-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/logodesign/niavaransabt.webp"
-                alt="Lumina Wellness Logo"
-                loading="lazy"
-              />
-            </div>
-            <div class="logo-info">
-              <h3>ثبت نیاوران</h3>
-              <p>1402</p>
-            </div>
-          </article>
-
-          <article class="logo-card reveal-card">
-            <div class="logo-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/logodesign/ptahvie.webp"
-                alt="Synthex Software Logo"
-                loading="lazy"
-              />
-            </div>
-            <div class="logo-info">
-              <h3>پارسا تهویه</h3>
-              <p>1401</p>
-            </div>
-          </article>
-
-          <article class="logo-card reveal-card">
-            <div class="logo-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/logodesign/sabtcity.webp"
-                alt="Aura Interiors Logo"
-                loading="lazy"
-              />
-            </div>
-            <div class="logo-info">
-              <h3>شهر ثبت</h3>
-              <p>1399</p>
-            </div>
-          </article>
-        </div>
-
-        <div class="portfolio-description reveal-up">
-          <p>
-            گاهی یک طرح روی مانیتور خوب به نظر می‌رسد، اما وقتی در ابعاد کوچک
-            سایت، عکس پروفایل یا چاپ روی کارت ویزیت قرار می‌گیرد، خوانایی و
-            اثرگذاری خود را از دست می‌دهد. به همین دلیل، در طراحی لوگو فقط به
-            ظاهر اولیه اکتفا نمی‌کنم.
-          </p>
-
-          <p>
-            یک لوگوی حرفه‌ای باید خوانا، مقیاس‌پذیر، متمایز و انعطاف‌پذیر باشد.
-            یعنی هم در یک آیکون کوچک قابل تشخیص بماند و هم روی تابلو، هدر سایت
-            یا یک فایل چاپی، هویت برند را به‌درستی نشان دهد. رنگ‌ها، فرم،
-            فاصله‌ها و نسخه‌های مختلف لوگو همگی در همین مسیر بررسی می‌شوند.
-          </p>
-
-          <p>
-            در بسیاری از پروژه‌ها، لوگو شروع یک مسیر بزرگ‌تر در طراحی هویت بصری
-            برند است. بعد از نهایی شدن آن، نوبت به ساخت یا هماهنگ‌سازی سایر
-            بخش‌ها می‌رسد؛ از رنگ سازمانی و تایپوگرافی گرفته تا
-            <a
-              href="https://arminsilatani.com/portfolio/businesscarddesign/"
-              target="_blank"
-              rel="noopener"
-              >نمونه کار طراحی کارت ویزیت</a
-            >، سربرگ، قالب شبکه‌های اجتماعی و سایر نقاط تماس برند. وقتی این اجزا
-            با یک منطق مشترک طراحی شوند، برند منسجم‌تر و قابل‌اعتمادتر دیده
-            می‌شود.
-          </p>
-          <p>
-            انتخاب سبک هم نباید صرفاً بر اساس سلیقه لحظه‌ای باشد. یک لوگوتایپ
-            ممکن است برای برندی با نام خاص و قابل‌اتکا بهترین انتخاب باشد؛ یک
-            نشان تجاری می‌تواند برای کسب‌وکاری که به شناسایی سریع نیاز دارد
-            مؤثرتر عمل کند. گاهی هم ترکیب این دو، پاسخ دقیق‌تری به نیاز برند
-            می‌دهد.
-          </p>
-        </div>
-
-        <div class="quote-section reveal-up">
-          <div class="quote-inner">
-            <div class="quote-image">
-              <img
-                src="/assets/images/arminsilatani/portfolio/logodesign/leonardo da vinci.webp"
-                alt="لئوناردو داوینچی"
-                loading="lazy"
-              />
-            </div>
-            <blockquote>
-              <p>سادگی، نهایت پیچیدگی است.</p>
-              <footer>لئوناردو داوینچی</footer>
-            </blockquote>
           </div>
         </div>
 
-        <div style="margin-top: 2.5rem" class="reveal-up">
-          <p>
-            لوگوی خوب باید در شرایط واقعی امتحان خود را پس بدهد: روی زمینه روشن
-            و تیره، در نسخه رنگی و تک‌رنگ، در اندازه کوچک و بزرگ، برای استفاده
-            دیجیتال و چاپی. به همین دلیل، خروجی نهایی معمولاً در نسخه‌ها و
-            فرمت‌های موردنیاز آماده می‌شود تا برای وب‌سایت، شبکه‌های اجتماعی،
-            چاپ، اسناد رسمی و تبلیغات محدودیتی نداشته باشید.
-          </p>
+        <div class="container-1080">
+          <div style="margin-top: 2.5rem" class="reveal-up">
+            <p>
+              لوگوی خوب باید در شرایط واقعی امتحان خود را پس بدهد: روی زمینه
+              روشن و تیره، در نسخه رنگی و تک‌رنگ، در اندازه کوچک و بزرگ، برای
+              استفاده دیجیتال و چاپی. به همین دلیل، خروجی نهایی معمولاً در
+              نسخه‌ها و فرمت‌های موردنیاز آماده می‌شود تا برای وب‌سایت، شبکه‌های
+              اجتماعی، چاپ، اسناد رسمی و تبلیغات محدودیتی نداشته باشید.
+            </p>
 
-          <p>
-            در کنار لوگو، هماهنگی اقلام اداری نیز به شکل‌گیری یک هویت بصری
-            حرفه‌ای کمک می‌کند. برای مشاهده نمونه‌های مرتبط با طراحی اوراق اداری
-            می‌توانید
-            <a
-              href="https://arminsilatani.com/portfolio/letterheaddesign/"
-              target="_blank"
-              rel="noopener"
-              >نمونه کار طراحی سربرگ</a
-            >
-            را ببینید؛ جایی که جزئیاتی مانند چیدمان، رنگ، تایپوگرافی و
-            کاربردپذیری در چاپ بررسی می‌شوند.
-          </p>
-          <p>
-            کار مستقیم با یک فریلنسر، مسیر پروژه را هم ساده‌تر می‌کند. به‌جای
-            عبور از چند لایه ارتباطی، مستقیماً با کسی در تماس هستید که طراحی را
-            انجام می‌دهد. این موضوع معمولاً باعث می‌شود بازخوردها سریع‌تر بررسی
-            شوند، تصمیم‌ها روشن‌تر باشند و نتیجه نهایی به نیاز واقعی کسب‌وکار
-            نزدیک‌تر شود.
-          </p>
+            <p>
+              در کنار لوگو، هماهنگی اقلام اداری نیز به شکل‌گیری یک هویت بصری
+              حرفه‌ای کمک می‌کند. برای مشاهده نمونه‌های مرتبط با طراحی اوراق
+              اداری می‌توانید
+              <a
+                href="https://arminsilatani.com/portfolio/letterheaddesign/"
+                target="_blank"
+                rel="noopener"
+                >نمونه کار طراحی سربرگ</a
+              >
+              را ببینید؛ جایی که جزئیاتی مانند چیدمان، رنگ، تایپوگرافی و
+              کاربردپذیری در چاپ بررسی می‌شوند.
+            </p>
+            <p>
+              کار مستقیم با یک فریلنسر، مسیر پروژه را هم ساده‌تر می‌کند. به‌جای
+              عبور از چند لایه ارتباطی، مستقیماً با کسی در تماس هستید که طراحی
+              را انجام می‌دهد. این موضوع معمولاً باعث می‌شود بازخوردها سریع‌تر
+              بررسی شوند، تصمیم‌ها روشن‌تر باشند و نتیجه نهایی به نیاز واقعی
+              کسب‌وکار نزدیک‌تر شود.
+            </p>
 
-          <p>
-            اگر به‌دنبال نمونه کار لوگو هستید که فقط ظاهر خوبی نداشته باشد و
-            واقعاً برای برندتان کار کند، این مجموعه می‌تواند دید مناسبی از سبک
-            طراحی، دقت اجرایی و رویکرد من در پروژه‌ها به شما بدهد.
-          </p>
+            <p>
+              اگر به‌دنبال نمونه کار لوگو هستید که فقط ظاهر خوبی نداشته باشد و
+              واقعاً برای برندتان کار کند، این مجموعه می‌تواند دید مناسبی از سبک
+              طراحی، دقت اجرایی و رویکرد من در پروژه‌ها به شما بدهد.
+            </p>
 
-          <p>
-            برای دریافت مشاوره و شروع طراحی لوگو متناسب با کسب‌وکارتان، پیام
-            دهید.
-          </p>
+            <p>
+              برای دریافت مشاوره و شروع طراحی لوگو متناسب با کسب‌وکارتان، پیام
+              دهید.
+            </p>
 
-          <p>
-            با یک گفت‌وگوی کوتاه، نیازهای برند، سبک موردنظر، کاربردهای لوگو و
-            خروجی‌های لازم را مشخص می‌کنیم تا مسیر طراحی از ابتدا شفاف، دقیق و
-            بدون اتلاف وقت پیش برود.
-          </p>
+            <p>
+              با یک گفت‌وگوی کوتاه، نیازهای برند، سبک موردنظر، کاربردهای لوگو و
+              خروجی‌های لازم را مشخص می‌کنیم تا مسیر طراحی از ابتدا شفاف، دقیق و
+              بدون اتلاف وقت پیش برود.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -449,7 +463,6 @@
 
         <div class="container-1300">
           <div class="process-grid categories-grid" id="processGrid">
-            <!-- :::::::::::::::::::::::::: STEP ONE :::::::::::::::::::::::::: -->
             <article class="process-box reveal-card is-open">
               <div class="process-box__meta">
                 <span class="process-box__step">اول</span>
@@ -471,7 +484,6 @@
               </div>
             </article>
 
-            <!-- :::::::::::::::::::::::::: STEP TWO :::::::::::::::::::::::::: -->
             <article class="process-box reveal-card">
               <div class="process-box__meta">
                 <span class="process-box__step">دوم</span>
@@ -493,7 +505,6 @@
               </div>
             </article>
 
-            <!-- :::::::::::::::::::::::::: STEP THREE :::::::::::::::::::::::::: -->
             <article class="process-box reveal-card">
               <div class="process-box__meta">
                 <span class="process-box__step">سوم</span>
@@ -515,7 +526,6 @@
               </div>
             </article>
 
-            <!-- :::::::::::::::::::::::::: STEP FOUR :::::::::::::::::::::::::: -->
             <article class="process-box reveal-card">
               <div class="process-box__meta">
                 <span class="process-box__step">چهارم</span>
@@ -537,7 +547,6 @@
               </div>
             </article>
 
-            <!-- :::::::::::::::::::::::::: STEP FIVE :::::::::::::::::::::::::: -->
             <article class="process-box reveal-card">
               <div class="process-box__meta">
                 <span class="process-box__step">پنجم</span>
@@ -563,6 +572,7 @@
       </section>
     </main>
 
+    <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
     <footer-component></footer-component>
 
     <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->

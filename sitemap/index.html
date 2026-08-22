@@ -1,12 +1,7 @@
-<!--
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-07-10
-  *  Version: 0.0.0
-  ****************************************************
--->
+<!-- :::::::::::::::::::::::::: DOCTYPE / ROOT :::::::::::::::::::::::::: -->
 <!doctype html>
 <html lang="fa" dir="rtl">
+  <!-- :::::::::::::::::::::::::: HEAD :::::::::::::::::::::::::: -->
   <head>
     <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
     <meta charset="UTF-8" />
@@ -20,7 +15,7 @@
     />
     <meta name="robots" content="noindex, nofollow" />
 
-    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: FAVICONS & STYLES :::::::::::::::::::::::::: -->
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
@@ -201,22 +196,25 @@
       }
     </script>
 
-    <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: GSAP + SCROLLTRIGGER :::::::::::::::::::::::::: -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   </head>
 
+  <!-- :::::::::::::::::::::::::: BODY :::::::::::::::::::::::::: -->
   <body>
-    <!-- ---------------------------------------- HEADER ---------------------------------------- -->
+    <!-- :::::::::::::::::::::::::: HEADER / NAVBAR :::::::::::::::::::::::::: -->
     <header-component></header-component>
 
     <main class="has-footer-gap">
-      <!-- ---------------------------------------- HERO SECTION ---------------------------------------- -->
+      <!-- :::::::::::::::::::::::::: HERO :::::::::::::::::::::::::: -->
       <section class="hero-section">
-        <div class="hero-container">
-          <language-component></language-component>
-          <div class="hero-title">
-            <h1>نقشه سایت</h1>
+        <div class="container-1080">
+          <div class="hero-container">
+            <language-component></language-component>
+            <div class="hero-title">
+              <h1 class="split-title">نقشه سایت</h1>
+            </div>
           </div>
         </div>
         <div class="pro-divider">
@@ -239,7 +237,7 @@
             </defs>
             <path
               filter="url(#dividerShadow)"
-              fill="#0d0d0d"
+              fill="#0D0D0D"
               d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
             />
           </svg>
@@ -254,10 +252,10 @@
         </div>
       </section>
 
-      <!-- ---------------------------------------- SITEMAP SECTION ---------------------------------------- -->
+      <!-- :::::::::::::::::::::::::: SITEMAP :::::::::::::::::::::::::: -->
       <section class="sitemap-section">
         <div class="container-1080">
-          <!-- Main Pages Card -->
+          <!-- :::::::::::::::::::::::::: MAIN PAGES :::::::::::::::::::::::::: -->
           <div class="sitemap-grid">
             <div class="sitemap-card reveal-up">
               <div class="card-title">
@@ -349,31 +347,27 @@
             </div>
           </div>
 
-          <!-- Services Card -->
+          <!-- :::::::::::::::::::::::::: SERVICES :::::::::::::::::::::::::: -->
           <div class="sitemap-grid">
             <div class="sitemap-card reveal-up">
               <div class="card-title">
                 <h2>خدمات</h2>
               </div>
-              <ul class="sitemap-list">
-                <!-- No services listed -->
-              </ul>
+              <ul class="sitemap-list"></ul>
             </div>
           </div>
 
-          <!-- Articles Card -->
+          <!-- :::::::::::::::::::::::::: ARTICLES :::::::::::::::::::::::::: -->
           <div class="sitemap-grid">
             <div class="sitemap-card reveal-up">
               <div class="card-title">
                 <h2>مقالات</h2>
               </div>
-              <ul class="sitemap-list">
-                <!-- No articles listed -->
-              </ul>
+              <ul class="sitemap-list"></ul>
             </div>
           </div>
 
-          <!-- Portfolio Card -->
+          <!-- :::::::::::::::::::::::::: PORTFOLIO :::::::::::::::::::::::::: -->
           <div class="sitemap-grid">
             <div class="sitemap-card reveal-up">
               <div class="card-title">
@@ -422,6 +416,18 @@
                     بصری و ساختار کلی در اینجا قرار دارد.
                   </div>
                 </li>
+                <li>
+                  <div class="link-row">
+                    <a href="/portfolio/cataloguedesign/">نمونه کار کاتالوگ</a>
+                    <span class="last-update"
+                      >آخرین بروزرسانی: 31 مرداد 1405</span
+                    >
+                  </div>
+                  <div class="hover-desc">
+                    شما در این صفحه با چند نمونه طراحی کاتالوگ، ویژگی‌های هر
+                    پروژه و روند اجرای سفارش آشنا می‌شوید.
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -429,7 +435,7 @@
       </section>
     </main>
 
-    <!-- ---------------------------------------- FOOTER ---------------------------------------- -->
+    <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
     <footer-component></footer-component>
 
     <!-- :::::::::::::::::::::::::: COMPONENT SCRIPTS :::::::::::::::::::::::::: -->

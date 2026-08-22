@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="de" dir="ltr">
   <head>
-    <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: HEAD :::::::::::::::::::::::::: -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- :::::::::::::::::::::::::: SEO META :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: SEO METADATA :::::::::::::::::::::::::: -->
     <title>Übersicht aller verfügbaren Seiten | Armin Silatani</title>
     <meta
       name="description"
@@ -13,7 +13,7 @@
     />
     <meta name="robots" content="noindex, nofollow" />
 
-    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: FAVICONS :::::::::::::::::::::::::: -->
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
@@ -23,9 +23,11 @@
       sizes="32x32"
       href="/assets/images/icon-32.png"
     />
+
+    <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
-    <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: OPEN GRAPH METADATA :::::::::::::::::::::::::: -->
     <meta property="og:title" content="Sitemap der Website Armin Silatani" />
     <meta
       property="og:description"
@@ -43,7 +45,7 @@
       content="Content-Planung mit Haftnotizen im modernen Arbeitsbereich"
     />
 
-    <!-- :::::::::::::::::::::::::: TWITTER CARD :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: TWITTER CARD METADATA :::::::::::::::::::::::::: -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Sitemap der Website Armin Silatani" />
     <meta
@@ -55,7 +57,7 @@
       content="https://arminsilatani.com/assets/images/arminsilatani/sitemap/FeaturedImage.webp"
     />
 
-    <!-- :::::::::::::::::::::::::: CANONICAL & HREFLANG :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: CANONICAL & HREFLANG LINKS :::::::::::::::::::::::::: -->
     <link rel="canonical" href="https://arminsilatani.com/de/sitemap/" />
     <link
       rel="alternate"
@@ -93,7 +95,7 @@
       href="https://arminsilatani.com/en/sitemap/"
     />
 
-    <!-- :::::::::::::::::::::::::: SCHEMA :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: STRUCTURED DATA :::::::::::::::::::::::::: -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -188,22 +190,25 @@
       }
     </script>
 
-    <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: GSAP & SCROLLTRIGGER LIBRARIES :::::::::::::::::::::::::: -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   </head>
 
   <body>
-    <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: SITE HEADER :::::::::::::::::::::::::: -->
     <header-component></header-component>
 
+    <!-- :::::::::::::::::::::::::: MAIN CONTENT :::::::::::::::::::::::::: -->
     <main class="has-footer-gap">
-      <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
+      <!-- :::::::::::::::::::::::::: HERO :::::::::::::::::::::::::: -->
       <section class="hero-section">
-        <div class="hero-container">
-          <language-component></language-component>
-          <div class="hero-title">
-            <h1 class="split-title">Sitemap</h1>
+        <div class="container-1080">
+          <div class="hero-container">
+            <language-component></language-component>
+            <div class="hero-title">
+              <h1 class="split-title">Sitemap</h1>
+            </div>
           </div>
         </div>
 
@@ -243,10 +248,9 @@
         </div>
       </section>
 
-      <!-- :::::::::::::::::::::::::: SITEMAP SECTION :::::::::::::::::::::::::: -->
+      <!-- :::::::::::::::::::::::::: SITEMAP :::::::::::::::::::::::::: -->
       <section class="sitemap-section">
         <div class="container-1080">
-          <!-- Main Pages -->
           <div class="sitemap-grid">
             <div class="sitemap-card reveal-up">
               <div class="card-title">
@@ -338,7 +342,6 @@
             </div>
           </div>
 
-          <!-- Services -->
           <div class="sitemap-grid">
             <div class="sitemap-card reveal-up">
               <div class="card-title">
@@ -348,7 +351,6 @@
             </div>
           </div>
 
-          <!-- Articles -->
           <div class="sitemap-grid">
             <div class="sitemap-card reveal-up">
               <div class="card-title">
@@ -358,7 +360,6 @@
             </div>
           </div>
 
-          <!-- Portfolio Card -->
           <div class="sitemap-grid">
             <div class="sitemap-card reveal-up">
               <div class="card-title">
@@ -416,7 +417,7 @@
       </section>
     </main>
 
-    <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: SITE FOOTER :::::::::::::::::::::::::: -->
     <footer-component></footer-component>
 
     <!-- :::::::::::::::::::::::::: COMPONENT SCRIPTS :::::::::::::::::::::::::: -->

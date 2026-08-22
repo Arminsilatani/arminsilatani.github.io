@@ -1,11 +1,11 @@
+<!-- :::::::::::::::::::::::::: DOCUMENT ROOT :::::::::::::::::::::::::: -->
 <!doctype html>
 <html lang="tr" dir="ltr">
+  <!-- :::::::::::::::::::::::::: HEAD :::::::::::::::::::::::::: -->
   <head>
-    <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: META TAGS & SEO :::::::::::::::::::::::::: -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- :::::::::::::::::::::::::: SEO META :::::::::::::::::::::::::: -->
     <title>Site Haritası ve Sayfa Listesi | Armin Silatani</title>
     <meta
       name="description"
@@ -13,19 +13,6 @@
     />
     <meta name="robots" content="noindex, nofollow" />
 
-    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
-    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
-    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/assets/images/icon-32.png"
-    />
-    <link rel="stylesheet" href="../../assets/css/main.css" />
-
-    <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
     <meta
       property="og:title"
       content="Web sitesinin tam sayfa listesi Armin Silatani"
@@ -46,7 +33,6 @@
       content="Çalışma alanında post-it notlarla içerik planlaması"
     />
 
-    <!-- :::::::::::::::::::::::::: TWITTER CARD :::::::::::::::::::::::::: -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
@@ -61,7 +47,6 @@
       content="https://arminsilatani.com/assets/images/arminsilatani/sitemap/FeaturedImage.webp"
     />
 
-    <!-- :::::::::::::::::::::::::: CANONICAL & HREFLANG :::::::::::::::::::::::::: -->
     <link rel="canonical" href="https://arminsilatani.com/tr/sitemap/" />
     <link
       rel="alternate"
@@ -99,7 +84,19 @@
       href="https://arminsilatani.com/en/sitemap/"
     />
 
-    <!-- :::::::::::::::::::::::::: SCHEMA :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: FAVICONS & STYLESHEETS :::::::::::::::::::::::::: -->
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/images/icon-32.png"
+    />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <!-- :::::::::::::::::::::::::: STRUCTURED DATA :::::::::::::::::::::::::: -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -194,11 +191,12 @@
       }
     </script>
 
-    <!-- :::::::::::::::::::::::::: GSAP + SCROLLTRIGGER :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: EXTERNAL LIBRARIES :::::::::::::::::::::::::: -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   </head>
 
+  <!-- :::::::::::::::::::::::::: BODY :::::::::::::::::::::::::: -->
   <body>
     <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
     <header-component></header-component>
@@ -206,11 +204,12 @@
     <main class="has-footer-gap">
       <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
       <section class="hero-section">
-        <div class="hero-container">
-          <language-component></language-component>
-
-          <div class="hero-title">
-            <h1 class="split-title">Site Haritası</h1>
+        <div class="container-1080">
+          <div class="hero-container">
+            <language-component></language-component>
+            <div class="hero-title">
+              <h1 class="split-title">Site Haritası</h1>
+            </div>
           </div>
         </div>
 
@@ -232,7 +231,6 @@
                 />
               </filter>
             </defs>
-
             <path
               filter="url(#dividerShadow)"
               fill="#0D0D0D"
@@ -245,9 +243,7 @@
           <div class="fake-terminal-inner">
             <span class="cmd-prefix">$</span>
             <span class="command">open</span>
-
             <span id="terminalPath"></span>
-
             <span class="cursor"></span>
           </div>
         </div>
@@ -256,13 +252,11 @@
       <!-- :::::::::::::::::::::::::: SITEMAP SECTION :::::::::::::::::::::::::: -->
       <section class="sitemap-section">
         <div class="container-1080">
-          <!-- Main Pages -->
           <div class="sitemap-grid">
             <div class="sitemap-card reveal-up">
               <div class="card-title">
                 <h2>Ana Sayfalar</h2>
               </div>
-
               <ul class="sitemap-list">
                 <li>
                   <div class="link-row">
@@ -271,7 +265,6 @@
                       >Son Güncelleme: 30 Mart 2026</span
                     >
                   </div>
-
                   <div class="hover-desc">
                     Armin Silatani web sitesinin ana sayfasına buradan
                     erişebilirsiniz. SEO, web tasarım ve dijital pazarlama
@@ -286,7 +279,6 @@
                       >Son Güncelleme: 20 Mayıs 2026</span
                     >
                   </div>
-
                   <div class="hover-desc">
                     Sayfada iletişim bilgilerinin yanı sıra, ortak projeler için
                     zaman dilimleri ve sık sorulan soruların yanıtları da
@@ -301,7 +293,6 @@
                       >Son Güncelleme: 1 Nisan 2026</span
                     >
                   </div>
-
                   <div class="hover-desc">
                     Bu sayfada Armin Silatani'nin 1998 yılından günümüze kadar
                     olan deneyimlerini, eğitimini ve çalışmalarını
@@ -316,7 +307,6 @@
                       >Son Güncelleme: 25 Mayıs 2026</span
                     >
                   </div>
-
                   <div class="hover-desc">
                     Web sitenizin ihtiyaçlarına yönelik SEO, Google Ads ve
                     mağaza tasarımı gibi dijital pazarlama hizmetlerinin
@@ -331,7 +321,6 @@
                       >Son Güncelleme: 14 Mayıs 2026</span
                     >
                   </div>
-
                   <div class="hover-desc">
                     Bu sayfada, SEO hizmetleri, web sitesi tasarımı, Google Ads
                     kampanyaları ve sosyal medya yönetimi gibi tüm dijital
@@ -347,7 +336,6 @@
                       >Son Güncelleme: 13 Temmuz 2026</span
                     >
                   </div>
-
                   <div class="hover-desc">
                     SEO çalışmaları, web tasarım projeleri ve grafik tasarım
                     örnekleri bu sayfada düzenli olarak sunulmaktadır.
@@ -357,29 +345,24 @@
             </div>
           </div>
 
-          <!-- Services -->
           <div class="sitemap-grid">
             <div class="sitemap-card reveal-up">
               <div class="card-title">
                 <h2>Hizmetler</h2>
               </div>
-
               <ul class="sitemap-list"></ul>
             </div>
           </div>
 
-          <!-- Articles -->
           <div class="sitemap-grid">
             <div class="sitemap-card reveal-up">
               <div class="card-title">
                 <h2>Blog Yazıları</h2>
               </div>
-
               <ul class="sitemap-list"></ul>
             </div>
           </div>
 
-          <!-- Portfolio Card -->
           <div class="sitemap-grid">
             <div class="sitemap-card reveal-up">
               <div class="card-title">
@@ -442,14 +425,12 @@
     <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
     <footer-component></footer-component>
 
-    <!-- :::::::::::::::::::::::::: COMPONENT SCRIPTS :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->
     <script type="module" src="../header-component.js"></script>
     <script src="/assets/css/components/blurup.js"></script>
     <script src="../language-component.js"></script>
     <script src="/assets/css/components/breadcrumb.js"></script>
     <script type="module" src="../footer-component.js"></script>
-
-    <!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
     <script src="/assets/css/components/animations.js"></script>
   </body>
 </html>

@@ -1,11 +1,12 @@
+<!-- :::::::::::::::::::::::::: DOCTYPE / ROOT :::::::::::::::::::::::::: -->
 <!doctype html>
 <html lang="it" dir="ltr">
+  <!-- :::::::::::::::::::::::::: HEAD :::::::::::::::::::::::::: -->
   <head>
-    <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: SEO META :::::::::::::::::::::::::: -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- :::::::::::::::::::::::::: SEO META :::::::::::::::::::::::::: -->
     <title>Mappa del sito e indici dei contenuti | Armin Silatani</title>
     <meta
       name="description"
@@ -13,7 +14,7 @@
     />
     <meta name="robots" content="noindex, nofollow" />
 
-    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: FAVICONS :::::::::::::::::::::::::: -->
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
@@ -23,6 +24,8 @@
       sizes="32x32"
       href="/assets/images/icon-32.png"
     />
+
+    <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
     <link rel="stylesheet" href="/assets/css/main.css" />
 
     <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
@@ -188,11 +191,12 @@
       }
     </script>
 
-    <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: GSAP AND SCROLLTRIGGER :::::::::::::::::::::::::: -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   </head>
 
+  <!-- :::::::::::::::::::::::::: BODY :::::::::::::::::::::::::: -->
   <body>
     <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
     <header-component></header-component>
@@ -200,11 +204,12 @@
     <main class="has-footer-gap">
       <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
       <section class="hero-section">
-        <div class="hero-container">
-          <language-component></language-component>
-
-          <div class="hero-title">
-            <h1 class="split-title">Mappa del Sito</h1>
+        <div class="container-1080">
+          <div class="hero-container">
+            <language-component></language-component>
+            <div class="hero-title">
+              <h1 class="split-title">Mappa del Sito</h1>
+            </div>
           </div>
         </div>
 
@@ -226,7 +231,6 @@
                 />
               </filter>
             </defs>
-
             <path
               filter="url(#dividerShadow)"
               fill="#0D0D0D"
@@ -239,9 +243,7 @@
           <div class="fake-terminal-inner">
             <span class="cmd-prefix">$</span>
             <span class="command">open</span>
-
             <span id="terminalPath"></span>
-
             <span class="cursor"></span>
           </div>
         </div>
@@ -250,13 +252,11 @@
       <!-- :::::::::::::::::::::::::: SITEMAP SECTION :::::::::::::::::::::::::: -->
       <section class="sitemap-section">
         <div class="container-1080">
-          <!-- Main Pages -->
           <div class="sitemap-grid">
             <div class="sitemap-card reveal-up">
               <div class="card-title">
                 <h2>Pagine Principali</h2>
               </div>
-
               <ul class="sitemap-list">
                 <li>
                   <div class="link-row">
@@ -265,7 +265,6 @@
                       >Ultimo aggiornamento: 30 Marzo 2026</span
                     >
                   </div>
-
                   <div class="hover-desc">
                     Da qui puoi accedere alla homepage del sito di Armin
                     Silatani. È il punto di partenza per esplorare i servizi di
@@ -280,7 +279,6 @@
                       >Ultimo aggiornamento: 20 Maggio 2026</span
                     >
                   </div>
-
                   <div class="hover-desc">
                     Questa pagina contiene il modulo di richiesta, i dettagli
                     sui canali di contatto e una guida su come lavoriamo
@@ -292,10 +290,9 @@
                   <div class="link-row">
                     <a href="/it/about/">Chi Sono</a>
                     <span class="last-update"
-                      >Ultimo aggiornamento: 1 Aptile 2026</span
+                      >Ultimo aggiornamento: 1 Aprile 2026</span
                     >
                   </div>
-
                   <div class="hover-desc">
                     Scopri la mia storia: dall'infanzia alla migrazione in
                     Europa, dal lavoro in diverse città fino all'ingresso nel
@@ -311,7 +308,6 @@
                       >Ultimo aggiornamento: 25 Maggio 2026</span
                     >
                   </div>
-
                   <div class="hover-desc">
                     Leggendo questa pagina, vi familiarizzerete con la struttura
                     dei servizi di digital marketing offerti per le varie
@@ -321,12 +317,11 @@
 
                 <li>
                   <div class="link-row">
-                    <a href="/it/about/">Prezzi</a>
+                    <a href="/it/tariff/">Prezzi</a>
                     <span class="last-update"
                       >Ultimo aggiornamento: 11 Maggio 2026</span
                     >
                   </div>
-
                   <div class="hover-desc">
                     Qui trovate l’elenco completo dei pacchetti di marketing
                     digitale insieme ai rispettivi costi.
@@ -340,7 +335,6 @@
                       >Ultimo aggiornamento: 13 Luglio 2026</span
                     >
                   </div>
-
                   <div class="hover-desc">
                     In questo portfolio puoi consultare progetti SEO, web design
                     e graphic design suddivisi per categoria.
@@ -350,29 +344,24 @@
             </div>
           </div>
 
-          <!-- Services -->
           <div class="sitemap-grid">
             <div class="sitemap-card reveal-up">
               <div class="card-title">
                 <h2>Servizi</h2>
               </div>
-
               <ul class="sitemap-list"></ul>
             </div>
           </div>
 
-          <!-- Articles -->
           <div class="sitemap-grid">
             <div class="sitemap-card reveal-up">
               <div class="card-title">
                 <h2>Articoli</h2>
               </div>
-
               <ul class="sitemap-list"></ul>
             </div>
           </div>
 
-          <!-- Portfolio Card -->
           <div class="sitemap-grid">
             <div class="sitemap-card reveal-up">
               <div class="card-title">
@@ -402,25 +391,25 @@
                     >
                   </div>
                   <div class="hover-desc">
-                    In questa pagina sono presentati diversi esempi di carta
-                    intestata, accompagnati da spiegazioni sulla loro
-                    progettazione e sulle fasi di collaborazione.
+                    In questa sezione osservate i modelli di biglietti da visita
+                    realizzati con stili visivi e combinazioni di colori
+                    differenti.
                   </div>
                 </li>
 
                 <li>
                   <div class="link-row">
-                    <a href="/it/portfolio/businesscarddesign/"
-                      >esempi di carta intestata</a
+                    <a href="/it/portfolio/letterheaddesign/"
+                      >Esempi di carta intestata</a
                     >
                     <span class="last-update"
                       >Ultimo aggiornamento: 17 Agosto 2026</span
                     >
                   </div>
                   <div class="hover-desc">
-                    In questa sezione osservate i modelli di biglietti da visita
-                    realizzati con stili visivi e combinazioni di colori
-                    differenti.
+                    In questa pagina sono presentati diversi esempi di carta
+                    intestata, accompagnati da spiegazioni sulla loro
+                    progettazione e sulle fasi di collaborazione.
                   </div>
                 </li>
               </ul>

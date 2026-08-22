@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="de" dir="ltr">
+  <!-- :::::::::::::::::::::::::: HEAD :::::::::::::::::::::::::: -->
   <head>
     <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
     <meta charset="UTF-8" />
@@ -13,7 +14,7 @@
     />
     <meta name="robots" content="noindex, nofollow" />
 
-    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: FAVICONS & STYLESHEETS :::::::::::::::::::::::::: -->
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
@@ -136,8 +137,9 @@
             "primaryImageOfPage": {
               "@type": "ImageObject",
               "@id": "https://arminsilatani.com/de/about/#primaryimage",
-              "url": "https://arminsilatani.com/assets/images/favicon.png",
-              "contentUrl": "https://arminsilatani.com/assets/images/favicon.png"
+              "url": "https://arminsilatani.com/assets/images/arminsilatani/about/FeaturedImage.webp",
+              "contentUrl": "https://arminsilatani.com/assets/images/arminsilatani/about/FeaturedImage.webp",
+              "caption": "Armin in seiner Arbeitsumgebung"
             },
             "image": {
               "@id": "https://arminsilatani.com/de/about/#primaryimage"
@@ -177,8 +179,9 @@
             "url": "https://arminsilatani.com/de/",
             "image": {
               "@type": "ImageObject",
-              "url": "https://arminsilatani.com/assets/images/favicon.png",
-              "contentUrl": "https://arminsilatani.com/assets/images/favicon.png"
+              "url": "https://arminsilatani.com/assets/images/arminsilatani/about/FeaturedImage.webp",
+              "contentUrl": "https://arminsilatani.com/assets/images/arminsilatani/about/FeaturedImage.webp",
+              "caption": "Armin Silatani"
             },
             "jobTitle": "Digital Marketing Spezialist",
             "description": "Digital Marketing Spezialist mit Expertise in SEO, Google Ads und Webdesign",
@@ -206,24 +209,26 @@
       }
     </script>
 
-    <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: GSAP + SCROLLTRIGGER :::::::::::::::::::::::::: -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   </head>
-  <body>
-    <!-- :::::::::::::::::::::::::: ABOUT PAGE :::::::::::::::::::::::::: -->
 
+  <!-- :::::::::::::::::::::::::: BODY :::::::::::::::::::::::::: -->
+  <body>
     <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
     <header-component></header-component>
 
     <main class="has-footer-gap">
       <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
       <section class="hero-section">
-        <div class="hero-container">
-          <language-component></language-component>
+        <div class="container-1080">
+          <div class="hero-container">
+            <language-component></language-component>
 
-          <div class="hero-title">
-            <h1 class="split-title">Über Mich</h1>
+            <div class="hero-title">
+              <h1 class="split-title">Über Mich</h1>
+            </div>
           </div>
         </div>
 
@@ -247,7 +252,7 @@
             </defs>
             <path
               filter="url(#dividerShadow)"
-              fill="#0d0d0d"
+              fill="#0D0D0D"
               d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
             />
           </svg>
@@ -264,7 +269,9 @@
       </section>
 
       <!-- :::::::::::::::::::::::::: ABOUT SECTION :::::::::::::::::::::::::: -->
-      <div id="timeline-container" class="story-container"></div>
+      <div id="timeline-container" class="story-container">
+        <div class="container-1300"></div>
+      </div>
     </main>
 
     <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
@@ -356,6 +363,7 @@
 
         /* :::::::::::::::::::::::::: BUILD TIMELINE HTML :::::::::::::::::::::::::: */
         const container = document.getElementById("timeline-container");
+        const timelineInner = container.querySelector(".container-1300");
 
         Object.keys(timelineData).forEach((year) => {
           const data = timelineData[year];
@@ -373,7 +381,7 @@
                     </div>
                 `;
 
-          container.appendChild(block);
+          timelineInner.appendChild(block);
         });
 
         /* :::::::::::::::::::::::::: SCROLL ANIMATION :::::::::::::::::::::::::: */

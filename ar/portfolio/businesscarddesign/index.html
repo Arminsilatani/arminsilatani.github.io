@@ -1,5 +1,7 @@
 <!doctype html>
+<!-- :::::::::::::::::::::::::: DOCUMENT ROOT :::::::::::::::::::::::::: -->
 <html lang="ar" dir="rtl">
+  <!-- :::::::::::::::::::::::::: HEAD :::::::::::::::::::::::::: -->
   <head>
     <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
     <meta charset="UTF-8" />
@@ -13,7 +15,7 @@
     />
     <meta name="robots" content="noindex, nofollow" />
 
-    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: FAVICONS :::::::::::::::::::::::::: -->
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
@@ -23,26 +25,15 @@
       sizes="32x32"
       href="/assets/images/icon-32.png"
     />
+
+    <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
     <link rel="stylesheet" href="/assets/css/main.css" />
 
     <!-- :::::::::::::::::::::::::: RESOURCE HINTS :::::::::::::::::::::::::: -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
 
-    <link
-      rel="preload"
-      href="../../fonts/KalamehWeb-Regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="../../fonts/KalamehWeb-Black.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
+    <!-- :::::::::::::::::::::::::: FONTS :::::::::::::::::::::::::: -->
     <link
       rel="preload"
       href="../../fonts/KalamehWebFaNum-Regular.woff2"
@@ -269,22 +260,27 @@
         ]
       }
     </script>
+
     <!-- :::::::::::::::::::::::::: GSAP CDN :::::::::::::::::::::::::: -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   </head>
 
-  <!-- :::::::::::::::::::::::::: PORTFOLIO PAGE :::::::::::::::::::::::::: -->
+  <!-- :::::::::::::::::::::::::: BODY :::::::::::::::::::::::::: -->
   <body class="portfolio-page">
+    <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
     <header-component></header-component>
 
+    <!-- :::::::::::::::::::::::::: MAIN CONTENT :::::::::::::::::::::::::: -->
     <main class="has-footer-gap portfolio-main">
       <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
       <section class="hero-section">
-        <div class="hero-container">
-          <language-component></language-component>
-          <div class="hero-title">
-            <h1>نماذج تصميم بطاقات العمل</h1>
+        <div class="container-1080">
+          <div class="hero-container">
+            <language-component></language-component>
+            <div class="hero-title">
+              <h1>نماذج تصميم بطاقات العمل</h1>
+            </div>
           </div>
         </div>
 
@@ -324,259 +320,255 @@
         </div>
       </section>
 
-      <!-- :::::::::::::::::::::::::: BUSINESS CARD PROJECTS SECTION :::::::::::::::::::::::::: -->
-      <section class="businesscard-projects-section container">
-        <div class="section-header reveal-up">
-          <div>
-            <p class="portfolio-description">
-              بطاقة العمل ليست مجرد قطعة ورق صغيرة تحمل رقم هاتف أو عنواناً. هي
-              أول ما يلمسه العميل من علامتك التجارية، وأول انطباع يتشكّل في ذهنه
-              عنك. نموذج تصميم بطاقة العمل الاحترافي يجب أن ينقل دفعةً واحدة
-              إحساساً بالاحترافية والثقة والهوية الفعلية للمشروع.
+      <!-- :::::::::::::::::::::::::: PROJECTS SECTION :::::::::::::::::::::::::: -->
+      <section class="businesscard-projects-section">
+        <div class="container-1080">
+          <div class="section-header reveal-up">
+            <div>
+              <p class="portfolio-description">
+                بطاقة العمل ليست مجرد قطعة ورق صغيرة تحمل رقم هاتف أو عنواناً.
+                هي أول ما يلمسه العميل من علامتك التجارية، وأول انطباع يتشكّل في
+                ذهنه عنك. نموذج تصميم بطاقة العمل الاحترافي يجب أن ينقل دفعةً
+                واحدة إحساساً بالاحترافية والثقة والهوية الفعلية للمشروع.
+              </p>
+              <p>
+                هنا ستجد مجموعة من نماذج تصميم بطاقات العمل التي صممتها. كل
+                بطاقة جاءت استجابةً لطبيعة المشروع وجمهوره والغرض الذي تخدمه. لم
+                يكن الهدف بطاقة تبدو جميلة فحسب، بل بطاقة احترافية تعرض
+                المعلومات بوضوح وتترك أثراً حقيقياً في ذهن من يتلقّاها.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-1300">
+          <div class="businesscard-grid">
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/Bitateb.webp"
+                  alt="وجه بطاقة عمل بيتا طب"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>بيتا طب</p>
+                <p>1446</p>
+              </div>
+            </article>
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/BitatebBack.webp"
+                  alt="ظهر بطاقة عمل بيتا طب"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>بيتا طب (الظهر)</p>
+                <p>1446</p>
+              </div>
+            </article>
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/Faratoseemandegar.webp"
+                  alt="وجه بطاقة عمل شركة فرا توسعه ماندگار قرن"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>فرا توسعه ماندگار قرن</p>
+                <p>1446</p>
+              </div>
+            </article>
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/FaratoseemandegarBack.webp"
+                  alt="ظهر بطاقة عمل شركة فرا توسعه ماندگار قرن"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>فرا توسعه ماندگار قرن (الظهر)</p>
+                <p>1446</p>
+              </div>
+            </article>
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/Shahresabt.webp"
+                  alt="وجه بطاقة مؤسسة شهر ثبت القانونية"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>شهر ثبت</p>
+                <p>1445</p>
+              </div>
+            </article>
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/ShahresabtBack.webp"
+                  alt="ظهر بطاقة مؤسسة شهر ثبت القانونية"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>شهر ثبت (الظهر)</p>
+                <p>1445</p>
+              </div>
+            </article>
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/Ptahvie.webp"
+                  alt="وجه بطاقة عمل شركة پارسا تهویه"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>بارسا تهویه</p>
+                <p>1444</p>
+              </div>
+            </article>
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/PtahvieBack.webp"
+                  alt="ظهر بطاقة عمل شركة پارسا تهویه"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>بارسا تهویه (الظهر)</p>
+                <p>1444</p>
+              </div>
+            </article>
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/Arminsilatani.webp"
+                  alt="وجه بطاقة عمل آرمين سيلاطاني"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>آرمين سيلاطاني</p>
+                <p>1442</p>
+              </div>
+            </article>
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/ArminsilataniBack.webp"
+                  alt="ظهر بطاقة عمل آرمين سيلاطاني"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>آرمين سيلاطاني (الظهر)</p>
+                <p>1442</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="container-1080">
+          <div class="portfolio-description reveal-up">
+            <p>
+              بطاقة العمل قد تبدو رائعة على الشاشة، لكن حين تمسكها بيدك بحجمها
+              الحقيقي، تتبيّن الفروق. الخط الذي بدا أنيقاً قد يصبح ضبابياً.
+              المعلومات المتقاربة قد تتداخل. لهذا بالضبط لا أقف عند المظهر
+              الأولي في نماذج تصميم بطاقات العمل التي أنفّذها.
             </p>
             <p>
-              هنا ستجد مجموعة من نماذج تصميم بطاقات العمل التي صممتها. كل بطاقة
-              جاءت استجابةً لطبيعة المشروع وجمهوره والغرض الذي تخدمه. لم يكن
-              الهدف بطاقة تبدو جميلة فحسب، بل بطاقة احترافية تعرض المعلومات
-              بوضوح وتترك أثراً حقيقياً في ذهن من يتلقّاها.
+              الألوان والخطوط والتباعد ونوع الورق وأسلوب الطباعة وترتيب
+              المعلومات — كل هذه العناصر يجب أن تخدم هوية العلامة التجارية لا أن
+              تزيّنها فحسب. بيانات التواصل والاسم والخدمات الرئيسية يجب أن تُقرأ
+              بنظرة واحدة، دون ضجيج بصري يشتّت الانتباه.
+            </p>
+            <p>
+              في هذه المجموعة، صمّمت كل بطاقة بما يلائم سياقها تماماً. بطاقة
+              المستشار القانوني لا تشبه بطاقة شركة المقاولات، وبطاقة المتجر
+              التجاري لها منطقها المختلف كلياً. قالب واحد لا يصلح للجميع، وهذا
+              ما يحكم كل قرار في تصميم بطاقة العمل الاحترافية أتخذه.
+            </p>
+            <p>
+              تصميم بطاقة العمل الاحترافي يبلغ قيمته الحقيقية حين يندمج مع بقية
+              عناصر الهوية البصرية؛ الشعار والألوان المؤسسية والترويسة ومنصات
+              التواصل والتغليف والموقع الإلكتروني. هذا الاتساق هو ما يجعل
+              العلامة التجارية تبدو متماسكة وجديرة بالثقة فعلاً.
+            </p>
+            <p>
+              إن كنت تودّ الاطلاع على أعمال ذات صلة، فبإمكانك تصفّح
+              <a
+                href="https://arminsilatani.com/ar/portfolio/logodesign/"
+                target="_blank"
+                rel="noopener"
+                >نماذج تصميم الشعار</a
+              >
+              أيضاً. التناسق بين الشعار وبطاقة العمل ركيزة أساسية في بناء هوية
+              بصرية متكاملة تُعبّر عن المشروع بصدق.
+            </p>
+            <p>
+              يمكن إعداد البطاقة بنسخ متعددة: للطباعة، والاستخدام الرقمي،
+              والمشاركة على منصات التواصل، وتوقيع البريد الإلكتروني، أو التعريف
+              في الاجتماعات المهنية. الملف النهائي يُسلَّم وفق متطلبات المشروع
+              واستخداماته الفعلية.
             </p>
           </div>
-        </div>
 
-        <div class="businesscard-grid">
-          <!-- Project 1: Bita Teb -->
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/Bitateb.webp"
-                alt="وجه بطاقة عمل بيتا طب"
-                loading="lazy"
-              />
+          <div class="quote-section reveal-up">
+            <div class="quote-inner">
+              <div class="quote-image">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/paul-rand.webp"
+                  alt="بول راند"
+                  loading="lazy"
+                />
+              </div>
+              <blockquote>
+                <p>التصميم هو الصمت الذي يُرى.</p>
+                <footer>بول راند</footer>
+              </blockquote>
             </div>
-            <div class="businesscard-info">
-              <p>بيتا طب</p>
-              <p>1446</p>
-            </div>
-          </article>
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/BitatebBack.webp"
-                alt="ظهر بطاقة عمل بيتا طب"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>بيتا طب (الظهر)</p>
-              <p>1446</p>
-            </div>
-          </article>
-
-          <!-- Project 2: Corporate Business Card -->
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/Faratoseemandegar.webp"
-                alt="وجه بطاقة عمل شركة فرا توسعه ماندگار قرن"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>فرا توسعه ماندگار قرن</p>
-              <p>1446</p>
-            </div>
-          </article>
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/FaratoseemandegarBack.webp"
-                alt="ظهر بطاقة عمل شركة فرا توسعه ماندگار قرن"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>فرا توسعه ماندگار قرن (الظهر)</p>
-              <p>1446</p>
-            </div>
-          </article>
-
-          <!-- Project 3: Commercial Brand Identity -->
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/Shahresabt.webp"
-                alt="وجه بطاقة مؤسسة شهر ثبت القانونية"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>شهر ثبت</p>
-              <p>1445</p>
-            </div>
-          </article>
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/ShahresabtBack.webp"
-                alt="ظهر بطاقة مؤسسة شهر ثبت القانونية"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>شهر ثبت (الظهر)</p>
-              <p>1445</p>
-            </div>
-          </article>
-
-          <!-- Project 4: Formal & Professional Design -->
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/Ptahvie.webp"
-                alt="وجه بطاقة عمل شركة پارسا تهویه"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>بارسا تهویه</p>
-              <p>1444</p>
-            </div>
-          </article>
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/PtahvieBack.webp"
-                alt="ظهر بطاقة عمل شركة پارسا تهویه"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>بارسا تهویه (الظهر)</p>
-              <p>1444</p>
-            </div>
-          </article>
-
-          <!-- Project 5: Minimal Design -->
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/Arminsilatani.webp"
-                alt="وجه بطاقة عمل آرمين سيلاطاني"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>آرمين سيلاطاني</p>
-              <p>1442</p>
-            </div>
-          </article>
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/ArminsilataniBack.webp"
-                alt="ظهر بطاقة عمل آرمين سيلاطاني"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>آرمين سيلاطاني (الظهر)</p>
-              <p>1442</p>
-            </div>
-          </article>
-        </div>
-
-        <div class="portfolio-description reveal-up">
-          <p>
-            بطاقة العمل قد تبدو رائعة على الشاشة، لكن حين تمسكها بيدك بحجمها
-            الحقيقي، تتبيّن الفروق. الخط الذي بدا أنيقاً قد يصبح ضبابياً.
-            المعلومات المتقاربة قد تتداخل. لهذا بالضبط لا أقف عند المظهر الأولي
-            في نماذج تصميم بطاقات العمل التي أنفّذها.
-          </p>
-          <p>
-            الألوان والخطوط والتباعد ونوع الورق وأسلوب الطباعة وترتيب المعلومات
-            — كل هذه العناصر يجب أن تخدم هوية العلامة التجارية لا أن تزيّنها
-            فحسب. بيانات التواصل والاسم والخدمات الرئيسية يجب أن تُقرأ بنظرة
-            واحدة، دون ضجيج بصري يشتّت الانتباه.
-          </p>
-          <p>
-            في هذه المجموعة، صمّمت كل بطاقة بما يلائم سياقها تماماً. بطاقة
-            المستشار القانوني لا تشبه بطاقة شركة المقاولات، وبطاقة المتجر
-            التجاري لها منطقها المختلف كلياً. قالب واحد لا يصلح للجميع، وهذا ما
-            يحكم كل قرار في تصميم بطاقة العمل الاحترافية أتخذه.
-          </p>
-          <p>
-            تصميم بطاقة العمل الاحترافي يبلغ قيمته الحقيقية حين يندمج مع بقية
-            عناصر الهوية البصرية؛ الشعار والألوان المؤسسية والترويسة ومنصات
-            التواصل والتغليف والموقع الإلكتروني. هذا الاتساق هو ما يجعل العلامة
-            التجارية تبدو متماسكة وجديرة بالثقة فعلاً.
-          </p>
-          <p>
-            إن كنت تودّ الاطلاع على أعمال ذات صلة، فبإمكانك تصفّح
-            <a
-              href="https://arminsilatani.com/ar/portfolio/logodesign/"
-              target="_blank"
-              rel="noopener"
-            >
-              نماذج تصميم الشعار
-            </a>
-            أيضاً. التناسق بين الشعار وبطاقة العمل ركيزة أساسية في بناء هوية
-            بصرية متكاملة تُعبّر عن المشروع بصدق.
-          </p>
-          <p>
-            يمكن إعداد البطاقة بنسخ متعددة: للطباعة، والاستخدام الرقمي،
-            والمشاركة على منصات التواصل، وتوقيع البريد الإلكتروني، أو التعريف في
-            الاجتماعات المهنية. الملف النهائي يُسلَّم وفق متطلبات المشروع
-            واستخداماته الفعلية.
-          </p>
-        </div>
-
-        <div class="quote-section reveal-up">
-          <div class="quote-inner">
-            <div class="quote-image">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/paul-rand.webp"
-                alt="بول راند"
-                loading="lazy"
-              />
-            </div>
-            <blockquote>
-              <p>التصميم هو الصمت الذي يُرى.</p>
-              <footer>بول راند</footer>
-            </blockquote>
           </div>
-        </div>
 
-        <div style="margin-top: 2.5rem" class="reveal-up">
-          <p>
-            في كل مشروع، أولي التفاصيل التقنية نفس الاهتمام الذي أوليه للمظهر
-            البصري؛ إعداد الملف للطباعة وضبط الألوان بدقة، والتحقق من وضوح
-            القراءة بالحجم الحقيقي، وتقديم النسخ المناسبة للاستخدام الرقمي.
-          </p>
-          <p>
-            العمل مع مستقل يختصر المسافة كثيراً. لا طبقات متعددة من التواصل، ولا
-            رسائل تضيع بين الأقسام. أنت تتحدث مباشرةً مع من يحلّل المشروع
-            ويصمّمه وينفّذه. الملاحظات تُراجَع بسرعة والقرارات تُتخذ دون إهدار
-            وقت.
-          </p>
-          <p>
-            إن كنت تبحث عن نموذج تصميم بطاقة عمل يتجاوز الجماليات إلى الفاعلية
-            الحقيقية في تقديم علامتك التجارية، فهذه المجموعة تمنحك صورة واضحة عن
-            أسلوبي ودقة تنفيذي ومقاربتي في التعامل مع المشاريع. وللاطلاع على
-            نماذج مشابهة في مجال المطبوعات،
-            <a
-              href="https://arminsilatani.com/ar/portfolio/cataloguedesign/"
-              target="_blank"
-              rel="noopener"
-              >نماذج تصميم الكتالوجات</a
-            >
-            يمكن أن تكون مرجعاً مفيداً في هذا السياق.
-          </p>
-          <p>
-            للبدء في تصميم بطاقة عمل احترافية تناسب مشروعك، تواصل معي. في حديث
-            قصير نحدد احتياجات علامتك التجارية والأسلوب المطلوب واستخدامات
-            البطاقة والمخرجات اللازمة، لنضمن أن مسار المشروع واضح ومضبوط من
-            اللحظة الأولى.
-          </p>
+          <div style="margin-top: 2.5rem" class="reveal-up">
+            <p>
+              في كل مشروع، أولي التفاصيل التقنية نفس الاهتمام الذي أوليه للمظهر
+              البصري؛ إعداد الملف للطباعة وضبط الألوان بدقة، والتحقق من وضوح
+              القراءة بالحجم الحقيقي، وتقديم النسخ المناسبة للاستخدام الرقمي.
+            </p>
+            <p>
+              العمل مع مستقل يختصر المسافة كثيراً. لا طبقات متعددة من التواصل،
+              ولا رسائل تضيع بين الأقسام. أنت تتحدث مباشرةً مع من يحلّل المشروع
+              ويصمّمه وينفّذه. الملاحظات تُراجَع بسرعة والقرارات تُتخذ دون إهدار
+              وقت.
+            </p>
+            <p>
+              إن كنت تبحث عن نموذج تصميم بطاقة عمل يتجاوز الجماليات إلى الفاعلية
+              الحقيقية في تقديم علامتك التجارية، فهذه المجموعة تمنحك صورة واضحة
+              عن أسلوبي ودقة تنفيذي ومقاربتي في التعامل مع المشاريع. وللاطلاع
+              على نماذج مشابهة في مجال المطبوعات،
+              <a
+                href="https://arminsilatani.com/ar/portfolio/cataloguedesign/"
+                target="_blank"
+                rel="noopener"
+                >نماذج تصميم الكتالوجات</a
+              >
+              يمكن أن تكون مرجعاً مفيداً في هذا السياق.
+            </p>
+            <p>
+              للبدء في تصميم بطاقة عمل احترافية تناسب مشروعك، تواصل معي. في حديث
+              قصير نحدد احتياجات علامتك التجارية والأسلوب المطلوب واستخدامات
+              البطاقة والمخرجات اللازمة، لنضمن أن مسار المشروع واضح ومضبوط من
+              اللحظة الأولى.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -704,17 +696,18 @@
           </div>
         </div>
       </section>
-
-      <footer-component></footer-component>
-
-      <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->
-      <script type="module" src="../../header-component.js"></script>
-      <script src="/assets/css/components/blurup.js"></script>
-      <script src="../../language-component.js"></script>
-      <script src="/assets/css/components/breadcrumb.js"></script>
-      <script type="module" src="../../footer-component.js"></script>
-      <script src="/assets/css/components/animations.js"></script>
-      <script src="businesscarddesign.js" defer></script>
     </main>
+
+    <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
+    <footer-component></footer-component>
+
+    <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->
+    <script type="module" src="../../header-component.js"></script>
+    <script src="/assets/css/components/blurup.js"></script>
+    <script src="../../language-component.js"></script>
+    <script src="/assets/css/components/breadcrumb.js"></script>
+    <script type="module" src="../../footer-component.js"></script>
+    <script src="/assets/css/components/animations.js"></script>
+    <script src="businesscarddesign.js" defer></script>
   </body>
 </html>

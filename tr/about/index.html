@@ -1,11 +1,12 @@
 <!doctype html>
 <html lang="tr" dir="ltr">
+  <!-- :::::::::::::::::::::::::: DOCUMENT HEAD :::::::::::::::::::::::::: -->
   <head>
-    <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: BASE META :::::::::::::::::::::::::: -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- :::::::::::::::::::::::::: SEO META :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: SEARCH META :::::::::::::::::::::::::: -->
     <title>Hakkında Detaylı Biyografi | Armin Silatani</title>
     <meta
       name="description"
@@ -13,7 +14,7 @@
     />
     <meta name="robots" content="noindex, nofollow" />
 
-    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: FAVICONS :::::::::::::::::::::::::: -->
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
@@ -23,9 +24,11 @@
       sizes="32x32"
       href="/assets/images/icon-32.png"
     />
+
+    <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
-    <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: OPEN GRAPH META :::::::::::::::::::::::::: -->
     <meta
       property="og:title"
       content="Biyografi ve Geçmiş Projeler Armin Silatani"
@@ -46,7 +49,7 @@
       content="ev ofisinde masada kitapları düzenleyen kişi ve küçük köpek"
     />
 
-    <!-- :::::::::::::::::::::::::: TWITTER CARD :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: TWITTER META :::::::::::::::::::::::::: -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
@@ -61,7 +64,7 @@
       content="https://arminsilatani.com/assets/images/arminsilatani/about/FeaturedImage.webp"
     />
 
-    <!-- :::::::::::::::::::::::::: CANONICAL & HREFLANG :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: LOCALIZATION LINKS :::::::::::::::::::::::::: -->
     <link rel="canonical" href="https://arminsilatani.com/tr/about/" />
     <link
       rel="alternate"
@@ -99,7 +102,7 @@
       href="https://arminsilatani.com/en/about/"
     />
 
-    <!-- :::::::::::::::::::::::::: SCHEMA :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: STRUCTURED DATA :::::::::::::::::::::::::: -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -139,8 +142,9 @@
             "primaryImageOfPage": {
               "@type": "ImageObject",
               "@id": "https://arminsilatani.com/tr/about/#primaryimage",
-              "url": "https://arminsilatani.com/assets/images/favicon.png",
-              "contentUrl": "https://arminsilatani.com/assets/images/favicon.png"
+              "url": "https://arminsilatani.com/assets/images/arminsilatani/about/FeaturedImage.webp",
+              "contentUrl": "https://arminsilatani.com/assets/images/arminsilatani/about/FeaturedImage.webp",
+              "caption": "Armin çalışma alanında"
             },
             "image": {
               "@id": "https://arminsilatani.com/tr/about/#primaryimage"
@@ -180,8 +184,9 @@
             "url": "https://arminsilatani.com/tr/",
             "image": {
               "@type": "ImageObject",
-              "url": "https://arminsilatani.com/assets/images/favicon.png",
-              "contentUrl": "https://arminsilatani.com/assets/images/favicon.png"
+              "url": "https://arminsilatani.com/assets/images/arminsilatani/about/FeaturedImage.webp",
+              "contentUrl": "https://arminsilatani.com/assets/images/arminsilatani/about/FeaturedImage.webp",
+              "caption": "Armin Silatani"
             },
             "jobTitle": "Dijital Pazarlama Uzmanı",
             "description": "SEO, Google Ads ve web tasarımı konusunda uzmanlığa sahip dijital pazarlama uzmanı",
@@ -209,23 +214,25 @@
       }
     </script>
 
-    <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: ANIMATION LIBRARIES :::::::::::::::::::::::::: -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   </head>
 
   <body>
-    <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: SITE HEADER :::::::::::::::::::::::::: -->
     <header-component></header-component>
 
     <main class="has-footer-gap">
       <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
       <section class="hero-section">
-        <div class="hero-container">
-          <language-component></language-component>
+        <div class="container-1080">
+          <div class="hero-container">
+            <language-component></language-component>
 
-          <div class="hero-title">
-            <h1 class="split-title">Hakkımda</h1>
+            <div class="hero-title">
+              <h1 class="split-title">Hakkımda</h1>
+            </div>
           </div>
         </div>
 
@@ -266,25 +273,26 @@
         </div>
       </section>
 
-      <!-- :::::::::::::::::::::::::: TIMELINE SECTION :::::::::::::::::::::::::: -->
-      <div id="timeline-container" class="story-container"></div>
+      <!-- :::::::::::::::::::::::::: STORY TIMELINE :::::::::::::::::::::::::: -->
+      <div id="timeline-container" class="story-container">
+        <div class="container-1300"></div>
+      </div>
     </main>
 
-    <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: SITE FOOTER :::::::::::::::::::::::::: -->
     <footer-component></footer-component>
 
-    <!-- :::::::::::::::::::::::::: COMPONENT SCRIPTS :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: MODULE SCRIPTS :::::::::::::::::::::::::: -->
     <script type="module" src="../header-component.js"></script>
     <script src="/assets/css/components/blurup.js"></script>
     <script src="../language-component.js"></script>
     <script src="/assets/css/components/breadcrumb.js"></script>
     <script type="module" src="../footer-component.js"></script>
 
-    <!-- :::::::::::::::::::::::::: PAGE INITIALIZATION :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: PAGE SETUP :::::::::::::::::::::::::: -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        /* :::::::::::::::::::::::::: TIMELINE DATA :::::::::::::::::::::::::: */
-
+        /* :::::::::::::::::::::::::: TIMELINE RECORDS :::::::::::::::::::::::::: */
         const timelineData = {
           1989: {
             context: "Kasra Hastanesi",
@@ -358,9 +366,10 @@
           },
         };
 
-        /* :::::::::::::::::::::::::: BUILD TIMELINE HTML :::::::::::::::::::::::::: */
-
+        /* :::::::::::::::::::::::::: TIMELINE RENDERING :::::::::::::::::::::::::: */
         const timelineContainer = document.getElementById("timeline-container");
+        const timelineInner =
+          timelineContainer.querySelector(".container-1300");
 
         Object.keys(timelineData).forEach(function (year) {
           const data = timelineData[year];
@@ -385,11 +394,10 @@
             "</p>" +
             "</div>";
 
-          timelineContainer.appendChild(block);
+          timelineInner.appendChild(block);
         });
 
-        /* :::::::::::::::::::::::::: SCROLL ANIMATION — TIMELINE :::::::::::::::::::::::::: */
-
+        /* :::::::::::::::::::::::::: SCROLL EFFECTS :::::::::::::::::::::::::: */
         const storyBlocks = document.querySelectorAll(".story-block");
 
         function updateScrollAnimation() {
@@ -427,7 +435,7 @@
           });
         }
 
-        /* Scroll performance: throttle with requestAnimationFrame */
+        /* :::::::::::::::::::::::::: INITIALIZATION :::::::::::::::::::::::::: */
         let isScrolling = false;
 
         window.addEventListener("scroll", function () {
@@ -440,12 +448,11 @@
           }
         });
 
-        /* Initialize animation state */
         updateScrollAnimation();
       });
     </script>
 
-    <!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: MOTION EFFECTS :::::::::::::::::::::::::: -->
     <script src="/assets/css/components/animations.js"></script>
   </body>
 </html>

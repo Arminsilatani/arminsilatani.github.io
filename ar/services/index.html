@@ -1,5 +1,7 @@
 <!doctype html>
+<!-- :::::::::::::::::::::::::: DOCUMENT ROOT :::::::::::::::::::::::::: -->
 <html lang="ar" dir="rtl">
+  <!-- :::::::::::::::::::::::::: HEAD :::::::::::::::::::::::::: -->
   <head>
     <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
     <meta charset="UTF-8" />
@@ -13,7 +15,7 @@
     />
     <meta name="robots" content="noindex, nofollow" />
 
-    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: FAVICONS :::::::::::::::::::::::::: -->
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
@@ -23,6 +25,8 @@
       sizes="32x32"
       href="/assets/images/icon-32.png"
     />
+
+    <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
@@ -283,7 +287,7 @@
     <main class="has-footer-gap">
       <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
       <section class="hero-section">
-        <div class="hero-container">
+        <div class="hero-container container-1080">
           <language-component></language-component>
           <div class="hero-title">
             <h1>خدمات التسويق الرقمي</h1>
@@ -532,6 +536,7 @@
     <!-- :::::::::::::::::::::::::: SERVICES SLIDER LOGIC :::::::::::::::::::::::::: -->
     <script>
       (function () {
+        /* :::::::::::::::::::::::::: DOM REFERENCES :::::::::::::::::::::::::: */
         const wrapper = document.querySelector(".services-wrapper");
         if (!wrapper) return;
 
@@ -540,7 +545,7 @@
         const cards = scrollContainer.querySelectorAll(".service-card");
         const totalCards = cards.length;
 
-        // Build navigation dots
+        /* :::::::::::::::::::::::::: NAVIGATION DOTS :::::::::::::::::::::::::: */
         for (let i = 0; i < totalCards; i++) {
           const dot = document.createElement("button");
           dot.classList.add("dot");
@@ -560,6 +565,7 @@
           scrollContainer.scrollTo({ left: scrollTarget, behavior: "smooth" });
         }
 
+        /* :::::::::::::::::::::::::: ACTIVE CARD TRACKING :::::::::::::::::::::::::: */
         function updateActiveCard() {
           const containerWidth = scrollContainer.clientWidth;
           const containerCenter =
@@ -586,6 +592,7 @@
           });
         }
 
+        /* :::::::::::::::::::::::::: EVENT LISTENERS :::::::::::::::::::::::::: */
         let scrollTimeout;
         scrollContainer.addEventListener(
           "scroll",
@@ -600,23 +607,7 @@
           card.addEventListener("click", () => scrollToCard(index));
         });
 
-        function initializePosition() {
-          if (cards.length > 0) {
-            const firstCard = cards[0];
-            const containerWidth = scrollContainer.clientWidth;
-            const cardWidth = firstCard.offsetWidth;
-            const scrollTarget =
-              firstCard.offsetLeft - containerWidth / 2 + cardWidth / 2;
-            scrollContainer.scrollLeft = scrollTarget;
-          }
-          updateActiveCard();
-        }
-
-        window.addEventListener("load", () => {
-          setTimeout(initializePosition, 100);
-        });
-
-        // Keyboard navigation support
+        /* :::::::::::::::::::::::::: KEYBOARD NAVIGATION :::::::::::::::::::::::::: */
         scrollContainer.addEventListener("keydown", (e) => {
           if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
             e.preventDefault();
@@ -634,7 +625,23 @@
           }
         });
 
-        // Initialize if page already loaded
+        /* :::::::::::::::::::::::::: INITIALIZATION :::::::::::::::::::::::::: */
+        function initializePosition() {
+          if (cards.length > 0) {
+            const firstCard = cards[0];
+            const containerWidth = scrollContainer.clientWidth;
+            const cardWidth = firstCard.offsetWidth;
+            const scrollTarget =
+              firstCard.offsetLeft - containerWidth / 2 + cardWidth / 2;
+            scrollContainer.scrollLeft = scrollTarget;
+          }
+          updateActiveCard();
+        }
+
+        window.addEventListener("load", () => {
+          setTimeout(initializePosition, 100);
+        });
+
         if (document.readyState === "complete") {
           setTimeout(initializePosition, 100);
         }

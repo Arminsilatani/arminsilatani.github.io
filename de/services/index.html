@@ -1,5 +1,7 @@
+<!-- :::::::::::::::::::::::::: DOCTYPE / ROOT :::::::::::::::::::::::::: -->
 <!doctype html>
 <html lang="de" dir="ltr">
+  <!-- :::::::::::::::::::::::::: HEAD :::::::::::::::::::::::::: -->
   <head>
     <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
     <meta charset="UTF-8" />
@@ -13,7 +15,7 @@
     />
     <meta name="robots" content="noindex, nofollow" />
 
-    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: FAVICONS :::::::::::::::::::::::::: -->
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
@@ -23,6 +25,8 @@
       sizes="32x32"
       href="/assets/images/icon-32.png"
     />
+
+    <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
     <link rel="stylesheet" href="/assets/css/main.css" />
 
     <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
@@ -153,7 +157,9 @@
               "@id": "#breadcrumb"
             },
             "mainEntity": [
-              { "@id": "https://arminsilatani.com/de/services/seo/#service" },
+              {
+                "@id": "https://arminsilatani.com/de/services/seo/#service"
+              },
               {
                 "@id": "https://arminsilatani.com/de/services/web-design/#service"
               },
@@ -309,11 +315,12 @@
       }
     </script>
 
-    <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: GSAP + SCROLLTRIGGER :::::::::::::::::::::::::: -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   </head>
 
+  <!-- :::::::::::::::::::::::::: BODY :::::::::::::::::::::::::: -->
   <body>
     <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
     <header-component></header-component>
@@ -321,7 +328,7 @@
     <main class="has-footer-gap">
       <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
       <section class="hero-section">
-        <div class="hero-container">
+        <div class="hero-container container-1080">
           <language-component></language-component>
           <div class="hero-title">
             <h1 class="split-title">Digitale Marketing-Dienstleistungen</h1>
@@ -546,7 +553,7 @@
             </svg>
             <h3>UI/UX-Design</h3>
             <p class="card-desc">
-              طراحی UI/UX Jeder Button, jeder Abstand, jeder Klickweg folgt der
+              Jeder Button, jeder Abstand, jeder Klickweg folgt der
               Nutzerpsychologie. Das Ergebnis: mehr Klicks, mehr Conversions.
             </p>
           </div>
@@ -570,6 +577,7 @@
     <!-- :::::::::::::::::::::::::: SERVICES SLIDER SCRIPT :::::::::::::::::::::::::: -->
     <script>
       (function () {
+        /* :::::::::::::::::::::::::: DOM REFERENCES :::::::::::::::::::::::::: */
         const wrapper = document.querySelector(".services-wrapper");
         if (!wrapper) return;
 
@@ -578,16 +586,17 @@
         const cards = scrollContainer.querySelectorAll(".service-card");
         const totalCards = cards.length;
 
-        // Build navigation dots
+        /* :::::::::::::::::::::::::: NAVIGATION DOTS :::::::::::::::::::::::::: */
         for (let i = 0; i < totalCards; i++) {
           const dot = document.createElement("button");
           dot.classList.add("dot");
-          dot.setAttribute("aria-label", `رفتن به کارت ${i + 1}`);
+          dot.setAttribute("aria-label", `Karte ${i + 1}`);
           dot.addEventListener("click", () => scrollToCard(i));
           dotsNav.appendChild(dot);
         }
         const dots = dotsNav.querySelectorAll(".dot");
 
+        /* :::::::::::::::::::::::::: CORE LOGIC :::::::::::::::::::::::::: */
         function scrollToCard(index) {
           const card = cards[index];
           if (!card) return;
@@ -624,6 +633,7 @@
           });
         }
 
+        /* :::::::::::::::::::::::::: EVENT LISTENERS :::::::::::::::::::::::::: */
         let scrollTimeout;
         scrollContainer.addEventListener(
           "scroll",
@@ -638,6 +648,7 @@
           card.addEventListener("click", () => scrollToCard(index));
         });
 
+        /* :::::::::::::::::::::::::: INITIALIZATION :::::::::::::::::::::::::: */
         function initializePosition() {
           if (cards.length > 0) {
             const firstCard = cards[0];
@@ -654,7 +665,6 @@
           setTimeout(initializePosition, 100);
         });
 
-        // Keyboard navigation support
         scrollContainer.addEventListener("keydown", (e) => {
           if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
             e.preventDefault();
@@ -663,7 +673,7 @@
               ? parseInt(currentActive.getAttribute("data-index"))
               : 0;
             let newIndex = currentIndex;
-            if (e.key === "ArrowLeft") {
+            if (e.key === "ArrowRight") {
               newIndex = Math.min(currentIndex + 1, totalCards - 1);
             } else {
               newIndex = Math.max(currentIndex - 1, 0);
@@ -672,7 +682,6 @@
           }
         });
 
-        // Initialize if page already loaded
         if (document.readyState === "complete") {
           setTimeout(initializePosition, 100);
         }

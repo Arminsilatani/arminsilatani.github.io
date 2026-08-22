@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="it" dir="ltr">
   <head>
-    <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: HEAD :::::::::::::::::::::::::: -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -11,10 +11,9 @@
       name="description"
       content="La biografia qui presentata ripercorre le tappe fondamentali della vita lavorativa, evidenziando i vari settori di attività e le competenze acquisite."
     />
-    <!-- LENGTH -->
     <meta name="robots" content="noindex, nofollow" />
 
-    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: FAVICONS :::::::::::::::::::::::::: -->
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
@@ -24,6 +23,8 @@
       sizes="32x32"
       href="/assets/images/icon-32.png"
     />
+
+    <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
     <link rel="stylesheet" href="/assets/css/main.css" />
 
     <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
@@ -140,8 +141,9 @@
             "primaryImageOfPage": {
               "@type": "ImageObject",
               "@id": "https://arminsilatani.com/it/about/#primaryimage",
-              "url": "https://arminsilatani.com/assets/images/favicon.png",
-              "contentUrl": "https://arminsilatani.com/assets/images/favicon.png"
+              "url": "https://arminsilatani.com/assets/images/arminsilatani/about/FeaturedImage.webp",
+              "contentUrl": "https://arminsilatani.com/assets/images/arminsilatani/about/FeaturedImage.webp",
+              "caption": "Armin nel suo spazio di lavoro"
             },
             "image": {
               "@id": "https://arminsilatani.com/it/about/#primaryimage"
@@ -181,8 +183,9 @@
             "url": "https://arminsilatani.com/it/",
             "image": {
               "@type": "ImageObject",
-              "url": "https://arminsilatani.com/assets/images/favicon.png",
-              "contentUrl": "https://arminsilatani.com/assets/images/favicon.png"
+              "url": "https://arminsilatani.com/assets/images/arminsilatani/about/FeaturedImage.webp",
+              "contentUrl": "https://arminsilatani.com/assets/images/arminsilatani/about/FeaturedImage.webp",
+              "caption": "Armin Silatani"
             },
             "jobTitle": "Specialista di Marketing Digitale",
             "description": "Specialista di marketing digitale con competenze in SEO, Google Ads e web design",
@@ -210,23 +213,25 @@
       }
     </script>
 
-    <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   </head>
 
   <body>
-    <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: HEADER / NAVBAR :::::::::::::::::::::::::: -->
     <header-component></header-component>
 
     <main class="has-footer-gap">
-      <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
+      <!-- :::::::::::::::::::::::::: HERO :::::::::::::::::::::::::: -->
       <section class="hero-section">
-        <div class="hero-container">
-          <language-component></language-component>
+        <div class="container-1080">
+          <div class="hero-container">
+            <language-component></language-component>
 
-          <div class="hero-title">
-            <h1 class="split-title">Chi Sono</h1>
+            <div class="hero-title">
+              <h1 class="split-title">Chi Sono</h1>
+            </div>
           </div>
         </div>
 
@@ -269,8 +274,10 @@
         </div>
       </section>
 
-      <!-- :::::::::::::::::::::::::: ABOUT ME SECTION :::::::::::::::::::::::::: -->
-      <div id="timeline-container" class="story-container"></div>
+      <!-- :::::::::::::::::::::::::: ABOUT / TIMELINE :::::::::::::::::::::::::: -->
+      <div id="timeline-container" class="story-container">
+        <div class="container-1300"></div>
+      </div>
     </main>
 
     <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
@@ -286,9 +293,7 @@
     <!-- :::::::::::::::::::::::::: PAGE SCRIPTS :::::::::::::::::::::::::: -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        /* ==================================================================
-               TIMELINE DATA
-               ================================================================== */
+        /* :::::::::::::::::::::::::: TIMELINE DATA :::::::::::::::::::::::::: */
 
         const timelineData = {
           1989: {
@@ -376,11 +381,10 @@
           },
         };
 
-        /* ==================================================================
-               BUILD TIMELINE HTML
-               ================================================================== */
+        /* :::::::::::::::::::::::::: BUILD TIMELINE HTML :::::::::::::::::::::::::: */
 
         const container = document.getElementById("timeline-container");
+        const timelineInner = container.querySelector(".container-1300");
 
         Object.keys(timelineData).forEach(function (year) {
           const data = timelineData[year];
@@ -406,12 +410,10 @@
             "</p>" +
             "</div>";
 
-          container.appendChild(block);
+          timelineInner.appendChild(block);
         });
 
-        /* ==================================================================
-               SCROLL ANIMATION
-               ================================================================== */
+        /* :::::::::::::::::::::::::: SCROLL ANIMATION :::::::::::::::::::::::::: */
 
         const storyBlocks = document.querySelectorAll(".story-block");
 
@@ -451,9 +453,7 @@
           });
         }
 
-        /* ==================================================================
-               SCROLL PERFORMANCE OPTIMIZATION
-               ================================================================== */
+        /* :::::::::::::::::::::::::: SCROLL PERFORMANCE OPTIMIZATION :::::::::::::::::::::::::: */
 
         let isScrolling = false;
 
@@ -468,9 +468,7 @@
           }
         });
 
-        /* ==================================================================
-               INITIAL STATE
-               ================================================================== */
+        /* :::::::::::::::::::::::::: INITIALIZATION :::::::::::::::::::::::::: */
 
         updateScrollAnimation();
       });

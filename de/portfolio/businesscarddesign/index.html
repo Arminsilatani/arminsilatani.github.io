@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="de" dir="ltr">
+  <!-- :::::::::::::::::::::::::: HEAD :::::::::::::::::::::::::: -->
   <head>
     <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
     <meta charset="UTF-8" />
@@ -13,7 +14,7 @@
     />
     <meta name="robots" content="noindex, nofollow" />
 
-    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: FAVICONS :::::::::::::::::::::::::: -->
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
@@ -23,6 +24,8 @@
       sizes="32x32"
       href="/assets/images/icon-32.png"
     />
+
+    <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
     <link rel="stylesheet" href="/assets/css/main.css" />
 
     <!-- :::::::::::::::::::::::::: RESOURCE HINTS :::::::::::::::::::::::::: -->
@@ -39,20 +42,6 @@
     <link
       rel="preload"
       href="../../fonts/KalamehWeb-Black.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="../../fonts/KalamehWebFaNum-Regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="../../fonts/KalamehWebFaNum-Black.woff2"
       as="font"
       type="font/woff2"
       crossorigin
@@ -316,17 +305,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   </head>
 
-  <!-- :::::::::::::::::::::::::: PORTFOLIO PAGE :::::::::::::::::::::::::: -->
+  <!-- :::::::::::::::::::::::::: BODY :::::::::::::::::::::::::: -->
   <body class="portfolio-page">
+    <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
     <header-component></header-component>
 
+    <!-- :::::::::::::::::::::::::: MAIN :::::::::::::::::::::::::: -->
     <main class="has-footer-gap portfolio-main">
-      <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
+      <!-- :::::::::::::::::::::::::: HERO :::::::::::::::::::::::::: -->
       <section class="hero-section">
-        <div class="hero-container">
-          <language-component></language-component>
-          <div class="hero-title">
-            <h1>Visitenkarten Referenzen</h1>
+        <div class="container-1080">
+          <div class="hero-container">
+            <language-component></language-component>
+            <div class="hero-title">
+              <h1>Visitenkarten Referenzen</h1>
+            </div>
           </div>
         </div>
 
@@ -366,291 +359,294 @@
         </div>
       </section>
 
-      <!-- :::::::::::::::::::::::::: BUSINESS CARD PROJECTS SECTION :::::::::::::::::::::::::: -->
-      <section class="businesscard-projects-section container">
-        <div class="section-header reveal-up">
-          <div>
-            <p class="portfolio-description">
-              Eine <strong>Visitenkarte</strong> ist weit mehr als ein Stück
-              Papier mit ein paar Kontaktdaten – sie ist oft der allererste
-              Berührungspunkt zwischen Ihrer Zielgruppe und Ihrer Marke. Die
-              folgenden <strong>Visitenkarten Referenzen</strong> zeigen, wie
-              ein wirklich gelungenes
-              <strong>Visitenkarten-Design</strong> schon auf den ersten Blick
-              Professionalität, Vertrauen und die tatsächliche Identität des
-              Unternehmens vermittelt.
+      <!-- :::::::::::::::::::::::::: BUSINESS CARD PROJECTS :::::::::::::::::::::::::: -->
+      <section class="businesscard-projects-section">
+        <div class="container-1080">
+          <div class="section-header reveal-up">
+            <div>
+              <p class="portfolio-description">
+                Eine <strong>Visitenkarte</strong> ist weit mehr als ein Stück
+                Papier mit ein paar Kontaktdaten – sie ist oft der allererste
+                Berührungspunkt zwischen Ihrer Zielgruppe und Ihrer Marke. Die
+                folgenden <strong>Visitenkarten Referenzen</strong> zeigen, wie
+                ein wirklich gelungenes
+                <strong>Visitenkarten-Design</strong> schon auf den ersten Blick
+                Professionalität, Vertrauen und die tatsächliche Identität des
+                Unternehmens vermittelt.
+              </p>
+              <p>
+                Nachfolgend zeige ich Ihnen eine Auswahl aus meinem
+                Visitenkarten Design Portfolio – Visitenkarten Beispiele, die
+                ich bereits für unterschiedliche Kunden umgesetzt habe. Jede
+                Karte wurde individuell auf die Branche, die Zielgruppe und den
+                konkreten Einsatzzweck abgestimmt. Mir ging es dabei nie nur um
+                ein hübsches Layout, sondern um eine Karte, die Informationen
+                klar strukturiert und das passende <strong>Markenbild</strong>
+                im Kopf der Betrachter verankert.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-1300">
+          <div class="businesscard-grid">
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/Bitateb.webp"
+                  alt="Vorderseite der Visitenkarte von Bita Teb"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Bita Teb</p>
+                <p>2024</p>
+              </div>
+            </article>
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/BitatebBack.webp"
+                  alt="Rückseite der Visitenkarte von Bita Teb"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Bita Teb (Rückseite)</p>
+                <p>2024</p>
+              </div>
+            </article>
+
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/Faratoseemandegar.webp"
+                  alt="Vorderseite der Visitenkarte von Fara Towse'e Mandegar-e Gharn"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Fara Towse'e Mandegar-e Gharn</p>
+                <p>2024</p>
+              </div>
+            </article>
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/FaratoseemandegarBack.webp"
+                  alt="Rückseite der Visitenkarte von Fara Towse'e Mandegar-e Gharn"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Fara Towse'e Mandegar-e Gharn (Rückseite)</p>
+                <p>2024</p>
+              </div>
+            </article>
+
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/Shahresabt.webp"
+                  alt="Vorderseite der Visitenkarte der Rechtsinstitution Shahr Sabt"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Shahr Sabt</p>
+                <p>2023</p>
+              </div>
+            </article>
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/ShahresabtBack.webp"
+                  alt="Rückseite der Visitenkarte der Rechtsinstitution Shahr Sabt"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Shahr Sabt (Rückseite)</p>
+                <p>2023</p>
+              </div>
+            </article>
+
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/Ptahvie.webp"
+                  alt="Vorderseite der Visitenkarte von Parsa Tahvie"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Parsa Tahvie</p>
+                <p>2022</p>
+              </div>
+            </article>
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/PtahvieBack.webp"
+                  alt="Rückseite der Visitenkarte von Parsa Tahvie"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Parsa Tahvie (Rückseite)</p>
+                <p>2022</p>
+              </div>
+            </article>
+
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/Arminsilatani.webp"
+                  alt="Vorderseite der Visitenkarte von Armin Silatani"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Armin Silatani</p>
+                <p>2021</p>
+              </div>
+            </article>
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/ArminsilataniBack.webp"
+                  alt="Rückseite der Visitenkarte von Armin Silatani"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Armin Silatani (Rückseite)</p>
+                <p>2021</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="container-1080">
+          <div class="portfolio-description reveal-up">
+            <p>
+              Am Bildschirm kann eine Visitenkarte durchaus überzeugend aussehen
+              – im Druck oder im täglichen Gebrauch leidet die
+              <strong>Lesbarkeit</strong> aufgrund des kleinen Formats jedoch
+              häufig. Aus diesem Grund reicht mir bei meinen Visitenkarten
+              Referenzen der erste optische Eindruck allein nie aus.
             </p>
             <p>
-              Nachfolgend zeige ich Ihnen eine Auswahl aus meinem Visitenkarten
-              Design Portfolio – Visitenkarten Beispiele, die ich bereits für
-              unterschiedliche Kunden umgesetzt habe. Jede Karte wurde
-              individuell auf die Branche, die Zielgruppe und den konkreten
-              Einsatzzweck abgestimmt. Mir ging es dabei nie nur um ein hübsches
-              Layout, sondern um eine Karte, die Informationen klar strukturiert
-              und das passende <strong>Markenbild</strong>
-              im Kopf der Betrachter verankert.
+              Farbwahl, Schriftart, Abstände, Papierqualität, Drucktechnik und
+              die Anordnung der Informationen müssen der
+              <strong>Markenidentität</strong> untergeordnet sein. Gerade bei
+              einer doppelseitigen Visitenkarte sollten Name, Kontaktdaten und
+              Kernleistungen sich auf einen Blick erfassen lassen – klar
+              strukturiert, ohne überladen zu wirken.
+            </p>
+            <p>
+              In dieser Sammlung von Kundenprojekte Visitenkarten habe ich jedes
+              Projekt passgenau auf das jeweilige Geschäftsfeld und die
+              Positionierung der Marke abgestimmt. Die Visitenkarte eines
+              Beraters braucht schließlich eine ganz andere Sprache als die
+              eines Bauunternehmens oder eines Ladengeschäfts. Ein
+              Schema-F-Ansatz funktioniert hier einfach nicht.
+            </p>
+            <p>
+              Sein volles Potenzial entfaltet ein professionelles
+              Visitenkarten-Design erst im Zusammenspiel mit den übrigen
+              Bausteinen der visuellen Markenidentität – vom Logo über die
+              Unternehmensfarben bis hin zu Briefpapier, Social-Media-Auftritt,
+              Verpackung und Website. Genau diese
+              <strong>Konsistenz</strong> macht eine Marke in sich stimmig und
+              vertrauenswürdig.
+            </p>
+            <p>
+              Wenn Sie sich für weitere passende Visitenkarten Ideen und
+              Arbeiten interessieren, werfen Sie gerne auch einen Blick auf mein
+              <a
+                href="https://arminsilatani.com/de/portfolio/logodesign/"
+                target="_blank"
+                rel="noopener"
+              >
+                Logodesign-Portfolio
+              </a>
+              . Die Abstimmung zwischen Logo und Visitenkarte spielt für eine
+              stimmige visuelle Identität eine entscheidende Rolle.
+            </p>
+            <p>
+              Je nach Bedarf bereite ich Visitenkarten in unterschiedlichen
+              Versionen vor – für den Druck, die digitale Nutzung, das Teilen
+              auf Social Media, die E-Mail-Signatur oder die Vorstellung bei
+              Geschäftstreffen. Die finale Datei liefere ich passend zu den
+              Anforderungen des Projekts und dem tatsächlichen Einsatzbereich
+              Ihres Unternehmens.
             </p>
           </div>
-        </div>
 
-        <div class="businesscard-grid">
-          <!-- Project 1: Bita Teb -->
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/Bitateb.webp"
-                alt="روی کارت ویزیت بیتا طب"
-                loading="lazy"
-              />
+          <div class="quote-section reveal-up">
+            <div class="quote-inner">
+              <div class="quote-image">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/paul-rand.webp"
+                  alt="Paul Rand"
+                  loading="lazy"
+                />
+              </div>
+              <blockquote>
+                <p>Design ist die Stille, die man sieht.</p>
+                <footer>Paul Rand</footer>
+              </blockquote>
             </div>
-            <div class="businesscard-info">
-              <p>Bita Teb</p>
-              <p>2024</p>
-            </div>
-          </article>
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/BitatebBack.webp"
-                alt="پشت کارت ویزیت بیتا طب"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Bita Teb (Rückseite)</p>
-              <p>2024</p>
-            </div>
-          </article>
-
-          <!-- Project 2: Corporate Business Card -->
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/Faratoseemandegar.webp"
-                alt="روی کارت ویزیت شرکت فرا توسعه ماندگار قرن"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Fara Towse'e Mandegar-e Gharn</p>
-              <p>2024</p>
-            </div>
-          </article>
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/FaratoseemandegarBack.webp"
-                alt="پشت کارت ویزیت شرکت فرا توسعه ماندگار قرن"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Fara Towse'e Mandegar-e Gharn (Rückseite)</p>
-              <p>2024</p>
-            </div>
-          </article>
-
-          <!-- Project 3: Commercial Brand Identity -->
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/Shahresabt.webp"
-                alt="روی کارت موسسه حقوقی شهر ثبت"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Shahr Sabt</p>
-              <p>2023</p>
-            </div>
-          </article>
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/ShahresabtBack.webp"
-                alt="پشت کارت موسسه حقوقی شهر ثبت"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Shahr Sabt (Rückseite)</p>
-              <p>2023</p>
-            </div>
-          </article>
-
-          <!-- Project 4: Formal & Professional Design -->
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/Ptahvie.webp"
-                alt="روی کارت ویزیت شرکت پارسا تهویه"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Parsa Tahvie</p>
-              <p>2022</p>
-            </div>
-          </article>
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/PtahvieBack.webp"
-                alt="پشت کارت ویزیت شرکت پارسا تهویه"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Parsa Tahvie (Rückseite)</p>
-              <p>2022</p>
-            </div>
-          </article>
-
-          <!-- Project 5: Minimal Design -->
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/Arminsilatani.webp"
-                alt="روی کارت ویزیت آرمین سیلاطانی"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Armin Silatani</p>
-              <p>2021</p>
-            </div>
-          </article>
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/ArminsilataniBack.webp"
-                alt="پشت کارت ویزیت آرمین سیلاطانی"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Armin Silatani (Rückseite)</p>
-              <p>2021</p>
-            </div>
-          </article>
-        </div>
-
-        <div class="portfolio-description reveal-up">
-          <p>
-            Am Bildschirm kann eine Visitenkarte durchaus überzeugend aussehen –
-            im Druck oder im täglichen Gebrauch leidet die
-            <strong>Lesbarkeit</strong> aufgrund des kleinen Formats jedoch
-            häufig. Aus diesem Grund reicht mir bei meinen Visitenkarten
-            Referenzen der erste optische Eindruck allein nie aus.
-          </p>
-          <p>
-            Farbwahl, Schriftart, Abstände, Papierqualität, Drucktechnik und die
-            Anordnung der Informationen müssen der
-            <strong>Markenidentität</strong> untergeordnet sein. Gerade bei
-            einer doppelseitigen Visitenkarte sollten Name, Kontaktdaten und
-            Kernleistungen sich auf einen Blick erfassen lassen – klar
-            strukturiert, ohne überladen zu wirken.
-          </p>
-          <p>
-            In dieser Sammlung von Kundenprojekte Visitenkarten habe ich jedes
-            Projekt passgenau auf das jeweilige Geschäftsfeld und die
-            Positionierung der Marke abgestimmt. Die Visitenkarte eines Beraters
-            braucht schließlich eine ganz andere Sprache als die eines
-            Bauunternehmens oder eines Ladengeschäfts. Ein Schema-F-Ansatz
-            funktioniert hier einfach nicht.
-          </p>
-          <p>
-            Sein volles Potenzial entfaltet ein professionelles
-            Visitenkarten-Design erst im Zusammenspiel mit den übrigen
-            Bausteinen der visuellen Markenidentität – vom Logo über die
-            Unternehmensfarben bis hin zu Briefpapier, Social-Media-Auftritt,
-            Verpackung und Website. Genau diese
-            <strong>Konsistenz</strong> macht eine Marke in sich stimmig und
-            vertrauenswürdig.
-          </p>
-          <p>
-            Wenn Sie sich für weitere passende Visitenkarten Ideen und Arbeiten
-            interessieren, werfen Sie gerne auch einen Blick auf mein
-            <a
-              href="https://arminsilatani.com/de/portfolio/logodesign/"
-              target="_blank"
-              rel="noopener"
-            >
-              Logodesign-Portfolio
-            </a>
-            . Die Abstimmung zwischen Logo und Visitenkarte spielt für eine
-            stimmige visuelle Identität eine entscheidende Rolle.
-          </p>
-          <p>
-            Je nach Bedarf bereite ich Visitenkarten in unterschiedlichen
-            Versionen vor – für den Druck, die digitale Nutzung, das Teilen auf
-            Social Media, die E-Mail-Signatur oder die Vorstellung bei
-            Geschäftstreffen. Die finale Datei liefere ich passend zu den
-            Anforderungen des Projekts und dem tatsächlichen Einsatzbereich
-            Ihres Unternehmens.
-          </p>
-        </div>
-
-        <div class="quote-section reveal-up">
-          <div class="quote-inner">
-            <div class="quote-image">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/paul-rand.webp"
-                alt="پل رند"
-                loading="lazy"
-              />
-            </div>
-            <blockquote>
-              <p>Design ist die Stille, die man sieht.</p>
-              <footer>Paul Rand</footer>
-            </blockquote>
           </div>
-        </div>
 
-        <div style="margin-top: 2.5rem" class="reveal-up">
-          <p>
-            Neben der optischen Gestaltung lege ich bei jedem Projekt in meinem
-            Grafikdesign Portfolio Visitenkarten großen Wert auf technische
-            Details – von der druckfertigen Dateiaufbereitung über die
-            <strong>Farbabstimmung</strong> bis zur Prüfung der Lesbarkeit in
-            Originalgröße und der Bereitstellung passender Versionen für die
-            digitale Nutzung.
-          </p>
-          <p>
-            Die direkte Zusammenarbeit mit einem Freelancer macht den gesamten
-            Designprozess unkomplizierter und schneller. Statt sich durch
-            mehrere Kommunikationsebenen zu arbeiten, stehen Sie im direkten
-            Kontakt mit der Person, die Ihr Projekt analysiert, gestaltet und
-            umsetzt. So werden Rückmeldungen zügig bearbeitet und Entscheidungen
-            ohne unnötigen Zeitverlust getroffen.
-          </p>
-          <p>
-            Falls Sie nach Visitenkarten Referenzen suchen, die nicht nur gut
-            aussehen, sondern Ihre Marke auch wirklich funktional präsentieren,
-            geben Ihnen diese Visitenkarten Designbeispiele einen guten Einblick
-            in meinen <strong>Designstil</strong>, meine Präzision bei der
-            Umsetzung und meine Herangehensweise an Projekte. Für weitere
-            Beispiele im Druckbereich lohnt sich auch ein Blick in mein
-            <a
-              href="https://arminsilatani.com/de/portfolio/cataloguedesign/"
-              target="_blank"
-              rel="noopener"
-              >Katalogdesign-Portfolio</a
-            >.
-          </p>
-          <p>
-            Wenn Sie ein professionelles Visitenkarten-Design für Ihr
-            Geschäftskarten Portfolio möchten, das wirklich zu Ihrem Unternehmen
-            passt, schreiben Sie mir einfach eine Nachricht. In einem kurzen
-            Gespräch klären wir gemeinsam die Anforderungen Ihrer Marke, den
-            gewünschten Stil, den Einsatzbereich der Karte sowie die benötigten
-            Ausgabeformate – damit der Projektverlauf von Anfang an klar und
-            zielgerichtet ist.
-          </p>
+          <div style="margin-top: 2.5rem" class="reveal-up">
+            <p>
+              Neben der optischen Gestaltung lege ich bei jedem Projekt in
+              meinem Grafikdesign Portfolio Visitenkarten großen Wert auf
+              technische Details – von der druckfertigen Dateiaufbereitung über
+              die
+              <strong>Farbabstimmung</strong> bis zur Prüfung der Lesbarkeit in
+              Originalgröße und der Bereitstellung passender Versionen für die
+              digitale Nutzung.
+            </p>
+            <p>
+              Die direkte Zusammenarbeit mit einem Freelancer macht den gesamten
+              Designprozess unkomplizierter und schneller. Statt sich durch
+              mehrere Kommunikationsebenen zu arbeiten, stehen Sie im direkten
+              Kontakt mit der Person, die Ihr Projekt analysiert, gestaltet und
+              umsetzt. So werden Rückmeldungen zügig bearbeitet und
+              Entscheidungen ohne unnötigen Zeitverlust getroffen.
+            </p>
+            <p>
+              Falls Sie nach Visitenkarten Referenzen suchen, die nicht nur gut
+              aussehen, sondern Ihre Marke auch wirklich funktional
+              präsentieren, geben Ihnen diese Visitenkarten Designbeispiele
+              einen guten Einblick in meinen <strong>Designstil</strong>, meine
+              Präzision bei der Umsetzung und meine Herangehensweise an
+              Projekte. Für weitere Beispiele im Druckbereich lohnt sich auch
+              ein Blick in mein
+              <a
+                href="https://arminsilatani.com/de/portfolio/cataloguedesign/"
+                target="_blank"
+                rel="noopener"
+                >Katalogdesign-Portfolio</a
+              >.
+            </p>
+            <p>
+              Wenn Sie ein professionelles Visitenkarten-Design für Ihr
+              Geschäftskarten Portfolio möchten, das wirklich zu Ihrem
+              Unternehmen passt, schreiben Sie mir einfach eine Nachricht. In
+              einem kurzen Gespräch klären wir gemeinsam die Anforderungen Ihrer
+              Marke, den gewünschten Stil, den Einsatzbereich der Karte sowie
+              die benötigten Ausgabeformate – damit der Projektverlauf von
+              Anfang an klar und zielgerichtet ist.
+            </p>
+          </div>
         </div>
       </section>
 
-      <!-- :::::::::::::::::::::::::: PROCESS SECTION :::::::::::::::::::::::::: -->
+      <!-- :::::::::::::::::::::::::: PROCESS :::::::::::::::::::::::::: -->
       <section class="section" id="process">
         <div class="container-1080 reveal-up">
           <span class="section-eyebrow"
@@ -678,7 +674,7 @@
               <div class="process-box__media">
                 <img
                   src="/assets/images/arminsilatani/portfolio/businesscarddesign/ProcessFirst.webp"
-                  alt="بررسی اطلاعات برند برای طراحی کارت ویزیت"
+                  alt="Überprüfung der Markeninformationen für das Visitenkarten-Design"
                   loading="lazy"
                 />
               </div>
@@ -700,7 +696,7 @@
               <div class="process-box__media">
                 <img
                   src="/assets/images/arminsilatani/portfolio/businesscarddesign/ProcessSecond.webp"
-                  alt="بررسی سبک طراحی و اطلاعات کارت ویزیت"
+                  alt="Überprüfung von Designstil und Visitenkarten-Informationen"
                   loading="lazy"
                 />
               </div>
@@ -722,7 +718,7 @@
               <div class="process-box__media">
                 <img
                   src="/assets/images/arminsilatani/portfolio/businesscarddesign/ProcessThird.webp"
-                  alt="توسعه ایده‌های اولیه برای طراحی کارت ویزیت"
+                  alt="Entwicklung erster Ideen für das Visitenkarten-Design"
                   loading="lazy"
                 />
               </div>
@@ -744,7 +740,7 @@
               <div class="process-box__media">
                 <img
                   src="/assets/images/arminsilatani/portfolio/businesscarddesign/ProcessFourth.webp"
-                  alt="اجرای نهایی طراحی کارت ویزیت"
+                  alt="Finale Umsetzung des Visitenkarten-Designs"
                   loading="lazy"
                 />
               </div>
@@ -766,7 +762,7 @@
               <div class="process-box__media">
                 <img
                   src="/assets/images/arminsilatani/portfolio/businesscarddesign/ProcessFifth.webp"
-                  alt="تحویل فایل‌های نهایی کارت ویزیت برای چاپ"
+                  alt="Übergabe der druckfertigen Visitenkarten-Dateien"
                   loading="lazy"
                 />
               </div>
@@ -782,17 +778,18 @@
           </div>
         </div>
       </section>
-
-      <footer-component></footer-component>
-
-      <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->
-      <script type="module" src="../../header-component.js"></script>
-      <script src="/assets/css/components/blurup.js"></script>
-      <script src="../../language-component.js"></script>
-      <script src="/assets/css/components/breadcrumb.js"></script>
-      <script type="module" src="../../footer-component.js"></script>
-      <script src="/assets/css/components/animations.js"></script>
-      <script src="businesscarddesign.js" defer></script>
     </main>
+
+    <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
+    <footer-component></footer-component>
+
+    <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->
+    <script type="module" src="../../header-component.js"></script>
+    <script src="/assets/css/components/blurup.js"></script>
+    <script src="../../language-component.js"></script>
+    <script src="/assets/css/components/breadcrumb.js"></script>
+    <script type="module" src="../../footer-component.js"></script>
+    <script src="/assets/css/components/animations.js"></script>
+    <script src="businesscarddesign.js" defer></script>
   </body>
 </html>

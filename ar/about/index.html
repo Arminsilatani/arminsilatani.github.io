@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- :::::::::::::::::::::::::: DOCTYPE / ROOT :::::::::::::::::::::::::: -->
 <html lang="ar" dir="rtl">
   <head>
     <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
@@ -13,7 +14,7 @@
     />
     <meta name="robots" content="noindex, nofollow" />
 
-    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: FAVICONS :::::::::::::::::::::::::: -->
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
@@ -23,6 +24,8 @@
       sizes="32x32"
       href="/assets/images/icon-32.png"
     />
+
+    <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
@@ -139,8 +142,8 @@
             "primaryImageOfPage": {
               "@type": "ImageObject",
               "@id": "https://arminsilatani.com/ar/about/#primaryimage",
-              "url": "https://arminsilatani.com/assets/images/favicon.png",
-              "contentUrl": "https://arminsilatani.com/assets/images/favicon.png"
+              "url": "https://arminsilatani.com/assets/images/arminsilatani/about/FeaturedImage.webp",
+              "contentUrl": "https://arminsilatani.com/assets/images/arminsilatani/about/FeaturedImage.webp"
             },
             "image": {
               "@id": "https://arminsilatani.com/ar/about/#primaryimage"
@@ -180,8 +183,8 @@
             "url": "https://arminsilatani.com/ar/",
             "image": {
               "@type": "ImageObject",
-              "url": "https://arminsilatani.com/assets/images/favicon.png",
-              "contentUrl": "https://arminsilatani.com/assets/images/favicon.png"
+              "url": "https://arminsilatani.com/assets/images/arminsilatani/about/FeaturedImage.webp",
+              "contentUrl": "https://arminsilatani.com/assets/images/arminsilatani/about/FeaturedImage.webp"
             },
             "jobTitle": "أخصائي التسويق الرقمي",
             "description": "أخصائي التسويق الرقمي مع خبرة في تحسين محركات البحث وإعلانات جوجل وتصميم المواقع",
@@ -209,22 +212,24 @@
       }
     </script>
 
-    <!-- :::::::::::::::::::::::::: GSAP + ScrollTrigger :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: GSAP + SCROLLTRIGGER :::::::::::::::::::::::::: -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   </head>
 
   <body>
-    <!-- :::::::::::::::::::::::::: HEADER COMPONENT :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: BODY :::::::::::::::::::::::::: -->
     <header-component></header-component>
 
     <main class="has-footer-gap">
       <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
       <section class="hero-section">
-        <div class="hero-container">
-          <language-component></language-component>
-          <div class="hero-title">
-            <h1>من أنا</h1>
+        <div class="container-1080">
+          <div class="hero-container">
+            <language-component></language-component>
+            <div class="hero-title">
+              <h1>من أنا</h1>
+            </div>
           </div>
         </div>
 
@@ -265,7 +270,9 @@
       </section>
 
       <!-- :::::::::::::::::::::::::: ABOUT ME SECTION :::::::::::::::::::::::::: -->
-      <div id="timeline-container" class="story-container"></div>
+      <div id="timeline-container" class="story-container">
+        <div class="container-1300"></div>
+      </div>
     </main>
 
     <!-- :::::::::::::::::::::::::: FOOTER COMPONENT :::::::::::::::::::::::::: -->
@@ -355,9 +362,11 @@
           },
         };
 
-        /* :::::::::::::::::::::::::: BUILD TIMELINE HTML :::::::::::::::::::::::::: */
+        /* :::::::::::::::::::::::::: DOM REFERENCES :::::::::::::::::::::::::: */
         const container = document.getElementById("timeline-container");
+        const timelineInner = container.querySelector(".container-1300");
 
+        /* :::::::::::::::::::::::::: BUILD TIMELINE HTML :::::::::::::::::::::::::: */
         Object.keys(timelineData).forEach((year) => {
           const data = timelineData[year];
           const block = document.createElement("div");
@@ -374,7 +383,7 @@
                     </div>
                 `;
 
-          container.appendChild(block);
+          timelineInner.appendChild(block);
         });
 
         /* :::::::::::::::::::::::::: SCROLL ANIMATION :::::::::::::::::::::::::: */

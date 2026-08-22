@@ -13,7 +13,7 @@
     />
     <meta name="robots" content="noindex, nofollow" />
 
-    <!-- :::::::::::::::::::::::::: FAVICON & STYLES :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: FAVICONS :::::::::::::::::::::::::: -->
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
@@ -23,12 +23,15 @@
       sizes="32x32"
       href="/assets/images/icon-32.png"
     />
+
+    <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
     <link rel="stylesheet" href="/assets/css/main.css" />
 
     <!-- :::::::::::::::::::::::::: RESOURCE HINTS :::::::::::::::::::::::::: -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
 
+    <!-- :::::::::::::::::::::::::: FONT PRELOADS :::::::::::::::::::::::::: -->
     <link
       rel="preload"
       href="/assets/fonts/KalamehWeb-Regular.woff2"
@@ -39,20 +42,6 @@
     <link
       rel="preload"
       href="/assets/fonts/KalamehWeb-Black.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/assets/fonts/KalamehWebFaNum-Regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/assets/fonts/KalamehWebFaNum-Black.woff2"
       as="font"
       type="font/woff2"
       crossorigin
@@ -328,17 +317,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   </head>
 
-  <!-- :::::::::::::::::::::::::: PORTFOLIO PAGE :::::::::::::::::::::::::: -->
   <body class="portfolio-page">
+    <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
     <header-component></header-component>
 
     <main class="has-footer-gap portfolio-main">
       <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
       <section class="hero-section">
-        <div class="hero-container">
-          <language-component></language-component>
-          <div class="hero-title">
-            <h1>Business Cards Portfolio</h1>
+        <div class="container-1080">
+          <div class="hero-container">
+            <language-component></language-component>
+            <div class="hero-title">
+              <h1>Business Cards Portfolio</h1>
+            </div>
           </div>
         </div>
 
@@ -379,271 +370,272 @@
       </section>
 
       <!-- :::::::::::::::::::::::::: BUSINESS CARD PROJECTS SECTION :::::::::::::::::::::::::: -->
-      <section class="businesscard-projects-section container">
-        <div class="section-header reveal-up">
-          <div>
-            <p class="portfolio-description">
-              Welcome to my Business Cards Portfolio. A business card is more
-              than just a piece of paper with a phone number. It's the first
-              thing people see from your brand, and a well-crafted business card
-              design should immediately communicate professionalism, trust, and
-              the real character of your business.
+      <section class="businesscard-projects-section">
+        <div class="container-1080">
+          <div class="section-header reveal-up">
+            <div>
+              <p class="portfolio-description">
+                Welcome to my Business Cards Portfolio. A business card is more
+                than just a piece of paper with a phone number. It's the first
+                thing people see from your brand, and a well-crafted business
+                card design should immediately communicate professionalism,
+                trust, and the real character of your business.
+              </p>
+              <p>
+                Below is a curated Business Card Portfolio of projects I've
+                designed over the years. Each one was shaped by the nature of
+                the business, its audience, and how the card would actually be
+                used. My goal was never just to make something that looks good —
+                it was to design a card that presents information clearly and
+                leaves the right impression of the brand in the viewer's mind.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-1300">
+          <div class="businesscard-grid">
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/Bitateb.webp"
+                  alt="Front of Bita Teb business card"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Bita Teb</p>
+                <p>2024</p>
+              </div>
+            </article>
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/BitatebBack.webp"
+                  alt="Back of Bita Teb business card"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Bita Teb (Back)</p>
+                <p>2024</p>
+              </div>
+            </article>
+
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/Faratoseemandegar.webp"
+                  alt="Front of Fara Tosee Mandegar Gharn business card"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Fara Tosee Mandegar Gharn</p>
+                <p>2024</p>
+              </div>
+            </article>
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/FaratoseemandegarBack.webp"
+                  alt="Back of Fara Tosee Mandegar Gharn business card"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Fara Tosee Mandegar Gharn (Back)</p>
+                <p>2024</p>
+              </div>
+            </article>
+
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/Shahresabt.webp"
+                  alt="Front of Shahr Sabt legal institute business card"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Shahr Sabt</p>
+                <p>2023</p>
+              </div>
+            </article>
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/ShahresabtBack.webp"
+                  alt="Back of Shahr Sabt legal institute business card"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Shahr Sabt (Back)</p>
+                <p>2023</p>
+              </div>
+            </article>
+
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/Ptahvie.webp"
+                  alt="Front of Parsa Tahvie business card"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Parsa Tahvie</p>
+                <p>2022</p>
+              </div>
+            </article>
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/PtahvieBack.webp"
+                  alt="Back of Parsa Tahvie business card"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Parsa Tahvie (Back)</p>
+                <p>2022</p>
+              </div>
+            </article>
+
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/Arminsilatani.webp"
+                  alt="Front of Armin Silatani business card"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Armin Silatani</p>
+                <p>2021</p>
+              </div>
+            </article>
+            <article class="businesscard-card">
+              <div class="businesscard-media">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/ArminsilataniBack.webp"
+                  alt="Back of Armin Silatani business card"
+                  loading="lazy"
+                />
+              </div>
+              <div class="businesscard-info">
+                <p>Armin Silatani (Back)</p>
+                <p>2021</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="container-1080">
+          <div class="portfolio-description reveal-up">
+            <p>
+              A business card can look sharp on screen — but once it's printed,
+              its small size and constant handling make readability the real
+              test. That's why the best business card designs never stop at the
+              initial visual mockup.
             </p>
             <p>
-              Below is a curated Business Card Portfolio of projects I've
-              designed over the years. Each one was shaped by the nature of the
-              business, its audience, and how the card would actually be used.
-              My goal was never just to make something that looks good — it was
-              to design a card that presents information clearly and leaves the
-              right impression of the brand in the viewer's mind.
+              Color choices, typography, spacing, paper stock, print finish, and
+              information layout all need to work in service of the brand's
+              identity. Whether the brief calls for a minimalist business card
+              design or a bolder, creative business card design, contact
+              details, name, and core services should be instantly clear —
+              without any visual noise getting in the way.
+            </p>
+            <p>
+              Across this business card design portfolio, I've approached each
+              project around the specific work environment and brand positioning
+              of the client. A consultant's corporate business card design reads
+              very differently from a construction firm's or a retail store's.
+              There's no universal template that works across the board, which
+              is exactly what makes a thoughtful Business Card Portfolio worth
+              building.
+            </p>
+            <p>
+              Professional business card design only delivers real value when it
+              connects with the rest of the brand's visual identity — logo,
+              brand colors, letterheads, social media, packaging, website. That
+              consistency is what makes a brand feel coherent and trustworthy.
+            </p>
+            <p>
+              If you'd like to explore related projects and gather business card
+              design inspiration, feel free to take a look at my
+              <a
+                href="https://arminsilatani.com/en/portfolio/logodesign/"
+                target="_blank"
+                rel="noopener"
+                >Logo Design Portfolio</a
+              >
+              as well. The relationship between a logo and a business card plays
+              a significant role in building a well-structured visual identity.
+            </p>
+            <p>
+              Business cards can be prepared in multiple formats — for print,
+              digital use, social media sharing, email signatures, or in-person
+              introductions at business meetings. A double-sided business card
+              is a common choice here, and final deliverables depend on the
+              project's scope and the real-world needs of the business.
             </p>
           </div>
-        </div>
 
-        <div class="businesscard-grid">
-          <!-- Project 1: Bita Teb -->
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/Bitateb.webp"
-                alt="Front of Bita Teb business card"
-                loading="lazy"
-              />
+          <div class="quote-section reveal-up">
+            <div class="quote-inner">
+              <div class="quote-image">
+                <img
+                  src="/assets/images/arminsilatani/portfolio/businesscarddesign/paul-rand.webp"
+                  alt="Paul Rand"
+                  loading="lazy"
+                />
+              </div>
+              <blockquote>
+                <p>Design is the silent ambassador of your brand.</p>
+                <footer>Paul Rand</footer>
+              </blockquote>
             </div>
-            <div class="businesscard-info">
-              <p>Bita Teb</p>
-              <p>2024</p>
-            </div>
-          </article>
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/BitatebBack.webp"
-                alt="Back of Bita Teb business card"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Bita Teb (Back)</p>
-              <p>2024</p>
-            </div>
-          </article>
-
-          <!-- Project 2: Corporate Business Card -->
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/Faratoseemandegar.webp"
-                alt="Front of Fara Tosee Mandegar Gharn business card"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Fara Tosee Mandegar Gharn</p>
-              <p>2024</p>
-            </div>
-          </article>
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/FaratoseemandegarBack.webp"
-                alt="Back of Fara Tosee Mandegar Gharn business card"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Fara Tosee Mandegar Gharn (Back)</p>
-              <p>2024</p>
-            </div>
-          </article>
-
-          <!-- Project 3: Commercial Brand Identity -->
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/Shahresabt.webp"
-                alt="Front of Shahr Sabt legal institute business card"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Shahr Sabt</p>
-              <p>2023</p>
-            </div>
-          </article>
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/ShahresabtBack.webp"
-                alt="Back of Shahr Sabt legal institute business card"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Shahr Sabt (Back)</p>
-              <p>2023</p>
-            </div>
-          </article>
-
-          <!-- Project 4: Formal & Professional Design -->
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/Ptahvie.webp"
-                alt="Front of Parsa Tahvie business card"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Parsa Tahvie</p>
-              <p>2022</p>
-            </div>
-          </article>
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/PtahvieBack.webp"
-                alt="Back of Parsa Tahvie business card"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Parsa Tahvie (Back)</p>
-              <p>2022</p>
-            </div>
-          </article>
-
-          <!-- Project 5: Minimal Design -->
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/Arminsilatani.webp"
-                alt="Front of Armin Silatani business card"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Armin Silatani</p>
-              <p>2021</p>
-            </div>
-          </article>
-          <article class="businesscard-card">
-            <div class="businesscard-media">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/ArminsilataniBack.webp"
-                alt="Back of Armin Silatani business card"
-                loading="lazy"
-              />
-            </div>
-            <div class="businesscard-info">
-              <p>Armin Silatani (Back)</p>
-              <p>2021</p>
-            </div>
-          </article>
-        </div>
-
-        <div class="portfolio-description reveal-up">
-          <p>
-            A business card can look sharp on screen — but once it's printed,
-            its small size and constant handling make readability the real test.
-            That's why the best business card designs never stop at the initial
-            visual mockup.
-          </p>
-          <p>
-            Color choices, typography, spacing, paper stock, print finish, and
-            information layout all need to work in service of the brand's
-            identity. Whether the brief calls for a minimalist business card
-            design or a bolder, creative business card design, contact details,
-            name, and core services should be instantly clear — without any
-            visual noise getting in the way.
-          </p>
-          <p>
-            Across this business card design portfolio, I've approached each
-            project around the specific work environment and brand positioning
-            of the client. A consultant's corporate business card design reads
-            very differently from a construction firm's or a retail store's.
-            There's no universal template that works across the board, which is
-            exactly what makes a thoughtful Business Card Portfolio worth
-            building.
-          </p>
-          <p>
-            Professional business card design only delivers real value when it
-            connects with the rest of the brand's visual identity — logo, brand
-            colors, letterheads, social media, packaging, website. That
-            consistency is what makes a brand feel coherent and trustworthy.
-          </p>
-          <p>
-            If you'd like to explore related projects and gather business card
-            design inspiration, feel free to take a look at my
-            <a
-              href="https://arminsilatani.com/en/portfolio/logodesign/"
-              target="_blank"
-              rel="noopener"
-              >Logo Design Portfolio</a
-            >
-            as well. The relationship between a logo and a business card plays a
-            significant role in building a well-structured visual identity.
-          </p>
-          <p>
-            Business cards can be prepared in multiple formats — for print,
-            digital use, social media sharing, email signatures, or in-person
-            introductions at business meetings. A double-sided business card is
-            a common choice here, and final deliverables depend on the project's
-            scope and the real-world needs of the business.
-          </p>
-        </div>
-
-        <div class="quote-section reveal-up">
-          <div class="quote-inner">
-            <div class="quote-image">
-              <img
-                src="/assets/images/arminsilatani/portfolio/businesscarddesign/paul-rand.webp"
-                alt="Paul Rand"
-                loading="lazy"
-              />
-            </div>
-            <blockquote>
-              <p>Design is the silent ambassador of your brand.</p>
-              <footer>Paul Rand</footer>
-            </blockquote>
           </div>
-        </div>
 
-        <div style="margin-top: 2.5rem" class="reveal-up">
-          <p>
-            In every project, alongside the visual outcome, I keep a close eye
-            on the technical side — print-ready file preparation, color
-            calibration, legibility checks at actual size, and delivering the
-            right versions for digital use.
-          </p>
-          <p>
-            Working directly with a freelance business card designer keeps the
-            design process lean and efficient. There's no chain of account
-            managers or approval layers — you're talking directly to the person
-            who analyzes, designs, and delivers the project. Feedback gets
-            addressed faster. Decisions move forward with less friction.
-          </p>
-          <p>
-            If you're looking for business card design that goes beyond surface
-            aesthetics and genuinely supports your brand's introduction, this
-            Business Cards Portfolio gives you a clear picture of my design
-            style, attention to detail, and overall approach. For similar
-            print-focused examples, my
-            <a
-              href="https://arminsilatani.com/en/portfolio/cataloguedesign/"
-              target="_blank"
-              rel="noopener"
-              >Catalog Design Portfolio</a
-            >
-            is worth a look too.
-          </p>
-          <p>
-            To get started with a professional business card design tailored to
-            your business, feel free to reach out. In one short conversation,
-            we'll define your brand's needs, preferred style, card use cases,
-            and required outputs — so the project moves forward with a clear
-            direction from day one.
-          </p>
+          <div style="margin-top: 2.5rem" class="reveal-up">
+            <p>
+              In every project, alongside the visual outcome, I keep a close eye
+              on the technical side — print-ready file preparation, color
+              calibration, legibility checks at actual size, and delivering the
+              right versions for digital use.
+            </p>
+            <p>
+              Working directly with a freelance business card designer keeps the
+              design process lean and efficient. There's no chain of account
+              managers or approval layers — you're talking directly to the
+              person who analyzes, designs, and delivers the project. Feedback
+              gets addressed faster. Decisions move forward with less friction.
+            </p>
+            <p>
+              If you're looking for business card design that goes beyond
+              surface aesthetics and genuinely supports your brand's
+              introduction, this Business Cards Portfolio gives you a clear
+              picture of my design style, attention to detail, and overall
+              approach. For similar print-focused examples, my
+              <a
+                href="https://arminsilatani.com/en/portfolio/cataloguedesign/"
+                target="_blank"
+                rel="noopener"
+                >Catalog Design Portfolio</a
+              >
+              is worth a look too.
+            </p>
+            <p>
+              To get started with a professional business card design tailored
+              to your business, feel free to reach out. In one short
+              conversation, we'll define your brand's needs, preferred style,
+              card use cases, and required outputs — so the project moves
+              forward with a clear direction from day one.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -776,15 +768,18 @@
           </div>
         </div>
       </section>
-      <footer-component></footer-component>
-      <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->
-      <script type="module" src="../../header-component.js"></script>
-      <script src="/assets/css/components/blurup.js"></script>
-      <script src="../../language-component.js"></script>
-      <script src="/assets/css/components/breadcrumb.js"></script>
-      <script type="module" src="../../footer-component.js"></script>
-      <script src="/assets/css/components/animations.js"></script>
-      <script src="businesscarddesign.js" defer></script>
     </main>
+
+    <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
+    <footer-component></footer-component>
+
+    <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->
+    <script type="module" src="../../header-component.js"></script>
+    <script src="/assets/css/components/blurup.js"></script>
+    <script src="../../language-component.js"></script>
+    <script src="/assets/css/components/breadcrumb.js"></script>
+    <script type="module" src="../../footer-component.js"></script>
+    <script src="/assets/css/components/animations.js"></script>
+    <script src="businesscarddesign.js" defer></script>
   </body>
 </html>
