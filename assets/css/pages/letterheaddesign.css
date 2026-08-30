@@ -23,48 +23,76 @@
   color: #ffffff;
 }
 
-/* :::::::::::::::::::::::::: LETTERHEAD GRID :::::::::::::::::::::::::: */
-.letterhead-masonry.categories-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-  align-items: start; /* کارت‌ها کشیده نشوند و هر کدام به اندازه محتوای خودشان باشند */
+/* :::::::::::::::::::::::::: LETTERHEAD MASONRY GRID :::::::::::::::::::::::::: */
+main .letterhead-masonry.categories-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  gap: 24px !important;
+  justify-items: center !important;
+  align-items: start !important;
+  width: 100% !important;
+  margin: 0 auto !important;
 }
 
 /* :::::::::::::::::::::::::: LETTERHEAD CARD :::::::::::::::::::::::::: */
-.letterhead-card {
+main .letterhead-card {
   position: relative;
   background: transparent;
   border: none;
-  border-radius: 12px; /* گوشه‌های گرد کارت */
-  overflow: hidden; /* تصویر داخل کارت با همین گوشه‌ها برش بخورد */
+  border-radius: 12px;
+  overflow: hidden;
   padding: 0;
   cursor: pointer;
+  width: 100% !important;
+  max-width: 400px !important;
+  margin: 0 !important;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease,
     filter 0.4s ease;
 }
 
+main .letterhead-card:only-child {
+  max-width: 400px !important;
+  justify-self: center !important;
+}
+
+.letterhead-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(to top, rgba(13, 13, 13, 0.85), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.letterhead-card:hover::after {
+  opacity: 1;
+}
+
 .letterhead-media {
   width: 100%;
-  height: auto; /* ارتفاع بر اساس تصویر واقعی */
-  background: transparent; /* حذف پس‌زمینه سفید اضافی */
+  height: auto;
+  background: transparent;
   display: block;
   padding: 0;
   box-sizing: border-box;
   overflow: hidden;
-  border-radius: 0; /* گوشه‌ها توسط کارت اصلی کنترل می‌شوند */
+  border-radius: 0;
 }
 
 .letterhead-media img {
   width: 100%;
-  height: auto; /* تصویر با نسبت واقعی خودش نمایش داده شود */
-  object-fit: unset; /* یا کلاً حذف شود تا تصویر دست‌کاری نشود */
+  height: auto;
+  object-fit: unset;
   display: block;
 }
 
-/* اطلاعات نام و سال */
 .letterhead-info {
   position: absolute;
   bottom: 0;
@@ -95,6 +123,7 @@
   font-weight: 700;
   white-space: nowrap;
   text-align: right;
+  transition: color 0.3s ease;
 }
 
 .letterhead-info p {
@@ -103,15 +132,22 @@
   color: #0d0d0d;
   white-space: nowrap;
   text-align: left;
+  transition: color 0.3s ease;
 }
 
-/* نمایش اطلاعات هنگام هاور روی کارت */
 .letterhead-card:hover .letterhead-info {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* مات شدن بقیه کارت‌ها هنگام هاور روی یک کارت */
+.letterhead-card:hover .letterhead-info h3 {
+  color: #f5f5f5;
+}
+
+.letterhead-card:hover .letterhead-info p {
+  color: #f5f5f5;
+}
+
 .letterhead-masonry:hover .letterhead-card {
   filter: blur(3px);
 }
@@ -122,14 +158,7 @@
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
 }
 
-/* :::::::::::::::::::::::::: RESPONSIVE LETTERHEAD :::::::::::::::::::::::::: */
-@media (max-width: 768px) {
-  .letterhead-masonry.categories-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* :::::::::::::::::::::::::: PROCESS SECTION :::::::::::::::::::::::::: */
+/* :::::::::::::::::::::::::: PROCESS SECTION BASE :::::::::::::::::::::::::: */
 #process {
   --bg: #0d0d0d;
   --bg-secondary: #141414;
@@ -186,7 +215,6 @@
   max-width: 500px;
 }
 
-/* Container helpers */
 .container-1080 {
   max-width: 1080px;
   margin: 0 auto;
@@ -199,7 +227,7 @@
   padding: 0 28px;
 }
 
-/* Process grid */
+/* :::::::::::::::::::::::::: PROCESS GRID AND BOX :::::::::::::::::::::::::: */
 #process .process-grid {
   display: flex;
   flex-wrap: nowrap;
@@ -229,7 +257,7 @@
   flex: 3.5 1 0%;
 }
 
-/* Process box media */
+/* :::::::::::::::::::::::::: PROCESS BOX MEDIA :::::::::::::::::::::::::: */
 #process .process-box__media {
   position: absolute;
   inset: 0;
@@ -278,7 +306,7 @@
   );
 }
 
-/* Process box meta */
+/* :::::::::::::::::::::::::: PROCESS BOX META AND CONTENT :::::::::::::::::::::::::: */
 #process .process-box__meta,
 #process .process-box__content {
   z-index: 2;
@@ -316,7 +344,6 @@
   opacity: 0.92;
 }
 
-/* Process box content */
 #process .process-box__content {
   position: absolute;
   right: var(--process-pad-x);
@@ -343,14 +370,14 @@
   margin: 0;
   font-size: 0.85rem;
   line-height: 1.8;
-  color: #ddd;
+  color: #dddddd;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-/* Closed state */
+/* :::::::::::::::::::::::::: PROCESS BOX STATES :::::::::::::::::::::::::: */
 #process .process-box:not(.is-open) .process-box__step {
   font-weight: bold;
   font-size: 1.3rem;
@@ -384,7 +411,6 @@
   pointer-events: none;
 }
 
-/* Open state */
 #process .process-box.is-open::before {
   opacity: 0;
 }
@@ -426,7 +452,7 @@
   background: var(--accent-line);
 }
 
-/* LTR overrides */
+/* :::::::::::::::::::::::::: LTR OVERRIDES :::::::::::::::::::::::::: */
 [dir="ltr"] #process .process-box.is-open .process-box__meta {
   right: auto;
   left: var(--process-pad-x);

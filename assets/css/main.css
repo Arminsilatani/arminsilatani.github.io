@@ -27,6 +27,7 @@
 @import url("pages/businesscarddesign.css");
 @import url("pages/letterheaddesign.css");
 @import url("pages/cataloguedesign.css");
+@import url("pages/contractpagedesign.css");
 
 /* :::::::::::::::::::::::::: RESPONSIVE COMPONENTS :::::::::::::::::::::::::: */
 @import url("responsive/components/breadcrumb-responsive.css");
