@@ -1,452 +1,369 @@
-<!-- :::::::::::::::::::::::::: DOCUMENT ROOT :::::::::::::::::::::::::: -->
 <!doctype html>
 <html lang="tr" dir="ltr">
-  <!-- :::::::::::::::::::::::::: HEAD :::::::::::::::::::::::::: -->
-  <head>
-    <!-- :::::::::::::::::::::::::: META TAGS & SEO :::::::::::::::::::::::::: -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Site Haritası ve Sayfa Listesi | Armin Silatani</title>
-    <meta
-      name="description"
-      content="Web sitesinin tüm sayfalarının kategorilere ayrılmış bir listesi. Ana sayfa, hakkımda, fiyatlar, hizmetler, blog ve iletişim bilgilerine bu sayfadan ulaşabilirsiniz."
-    />
-    <meta name="robots" content="noindex, nofollow" />
 
-    <meta
-      property="og:title"
-      content="Web sitesinin tam sayfa listesi Armin Silatani"
-    />
-    <meta
-      property="og:description"
-      content="Kategorilere ayrılmış site haritası ve tüm sayfaların eksiksiz bir görünümü."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://arminsilatani.com/tr/sitemap/" />
-    <meta property="og:locale" content="tr_TR" />
-    <meta
-      property="og:image"
-      content="https://arminsilatani.com/assets/images/arminsilatani/sitemap/FeaturedImage.webp"
-    />
-    <meta
-      property="og:image:alt"
-      content="Çalışma alanında post-it notlarla içerik planlaması"
-    />
+    <!-- :::::::::::::::::::::::::: HEAD :::::::::::::::::::::::::: -->
+    <head>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Web sitesinin tam sayfa listesi Armin Silatani"
-    />
-    <meta
-      name="twitter:description"
-      content="Kategorilere ayrılmış site haritası ve tüm sayfaların eksiksiz bir görünümü."
-    />
-    <meta
-      name="twitter:image"
-      content="https://arminsilatani.com/assets/images/arminsilatani/sitemap/FeaturedImage.webp"
-    />
+        <!-- :::::::::::::::::::::::::: SEO META :::::::::::::::::::::::::: -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Site Haritası ve Sayfa Listesi | Armin Silatani</title>
+        <meta name="description" content="Web sitesinin tüm sayfalarının kategorilere ayrılmış bir listesi. Ana sayfa, hakkımda, fiyatlar, hizmetler, blog ve iletişim bilgilerine bu sayfadan ulaşabilirsiniz." />
+        <meta name="robots" content="noindex, nofollow" />
 
-    <link rel="canonical" href="https://arminsilatani.com/tr/sitemap/" />
-    <link
-      rel="alternate"
-      hreflang="fa"
-      href="https://arminsilatani.com/sitemap/"
-    />
-    <link
-      rel="alternate"
-      hreflang="en"
-      href="https://arminsilatani.com/en/sitemap/"
-    />
-    <link
-      rel="alternate"
-      hreflang="ar"
-      href="https://arminsilatani.com/ar/sitemap/"
-    />
-    <link
-      rel="alternate"
-      hreflang="tr"
-      href="https://arminsilatani.com/tr/sitemap/"
-    />
-    <link
-      rel="alternate"
-      hreflang="de"
-      href="https://arminsilatani.com/de/sitemap/"
-    />
-    <link
-      rel="alternate"
-      hreflang="it"
-      href="https://arminsilatani.com/it/sitemap/"
-    />
-    <link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://arminsilatani.com/en/sitemap/"
-    />
+        <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
+        <meta property="og:title" content="Web sitesinin tam sayfa listesi Armin Silatani" />
+        <meta property="og:description" content="Kategorilere ayrılmış site haritası ve tüm sayfaların eksiksiz bir görünümü." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://arminsilatani.com/tr/sitemap/" />
+        <meta property="og:locale" content="tr_TR" />
+        <meta property="og:image" content="https://arminsilatani.com/assets/images/arminsilatani/sitemap/FeaturedImage.webp" />
+        <meta property="og:image:alt" content="Çalışma alanında post-it notlarla içerik planlaması" />
 
-    <!-- :::::::::::::::::::::::::: FAVICONS & STYLESHEETS :::::::::::::::::::::::::: -->
-    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
-    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/assets/images/icon-32.png"
-    />
-    <link rel="stylesheet" href="../../assets/css/main.css" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Web sitesinin tam sayfa listesi Armin Silatani" />
+        <meta name="twitter:description" content="Kategorilere ayrılmış site haritası ve tüm sayfaların eksiksiz bir görünümü." />
+        <meta name="twitter:image" content="https://arminsilatani.com/assets/images/arminsilatani/sitemap/FeaturedImage.webp" />
 
-    <!-- :::::::::::::::::::::::::: STRUCTURED DATA :::::::::::::::::::::::::: -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebSite",
-            "@id": "https://arminsilatani.com/#website",
-            "url": "https://arminsilatani.com/",
-            "name": "Armin Silatani - Dijital Pazarlama Uzmanı",
-            "description": "Armin Silatani, SEO, çevrimiçi reklamcılık ve dijital pazarlama stratejileri alanında 5 yılı aşkın deneyime sahip bir Dijital Pazarlama Uzmanıdır.",
-            "inLanguage": ["fa", "en", "ar", "tr", "de", "it"],
-            "publisher": { "@id": "https://arminsilatani.com/#person" },
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "https://arminsilatani.com/search?q={search_term_string}",
-              "query-input": "required name=search_term_string"
+        <!-- :::::::::::::::::::::::::: CANONICAL & HREFLANG :::::::::::::::::::::::::: -->
+        <link rel="canonical" href="https://arminsilatani.com/tr/sitemap/" />
+        <link rel="alternate" hreflang="fa" href="https://arminsilatani.com/sitemap/" />
+        <link rel="alternate" hreflang="en" href="https://arminsilatani.com/en/sitemap/" />
+        <link rel="alternate" hreflang="ar" href="https://arminsilatani.com/ar/sitemap/" />
+        <link rel="alternate" hreflang="tr" href="https://arminsilatani.com/tr/sitemap/" />
+        <link rel="alternate" hreflang="de" href="https://arminsilatani.com/de/sitemap/" />
+        <link rel="alternate" hreflang="it" href="https://arminsilatani.com/it/sitemap/" />
+        <link rel="alternate" hreflang="x-default" href="https://arminsilatani.com/en/sitemap/" />
+
+        <!-- :::::::::::::::::::::::::: FAVICONS :::::::::::::::::::::::::: -->
+        <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+        <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icon-32.png" />
+
+        <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
+        <link rel="stylesheet" href="../../assets/css/main.css" />
+
+        <!-- :::::::::::::::::::::::::: STRUCTURED DATA :::::::::::::::::::::::::: -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "WebSite",
+                        "@id": "https://arminsilatani.com/#website",
+                        "url": "https://arminsilatani.com/",
+                        "name": "Armin Silatani - Dijital Pazarlama Uzmanı",
+                        "description": "Armin Silatani, SEO, çevrimiçi reklamcılık ve dijital pazarlama stratejileri alanında 5 yılı aşkın deneyime sahip bir Dijital Pazarlama Uzmanıdır.",
+                        "inLanguage": ["fa", "en", "ar", "tr", "de", "it"],
+                        "publisher": { "@id": "https://arminsilatani.com/#person" },
+                        "potentialAction": {
+                            "@type": "SearchAction",
+                            "target": "https://arminsilatani.com/search?q={search_term_string}",
+                            "query-input": "required name=search_term_string"
+                        }
+                    },
+                    {
+                        "@type": "CollectionPage",
+                        "@id": "https://arminsilatani.com/tr/sitemap/#webpage",
+                        "url": "https://arminsilatani.com/tr/sitemap/",
+                        "name": "Site Haritası - Armin Silatani",
+                        "description": "Armin Silatani'nin web sitesinin tüm sayfaları, hizmetleri, makaleleri ve araçları içeren eksiksiz site haritası.",
+                        "inLanguage": "tr",
+                        "isPartOf": { "@id": "https://arminsilatani.com/#website" },
+                        "about": { "@id": "https://arminsilatani.com/#person" },
+                        "datePublished": "2020-01-01",
+                        "dateModified": "2026-05-03",
+                        "breadcrumb": {
+                            "@id": "https://arminsilatani.com/tr/sitemap/#breadcrumb"
+                        },
+                        "potentialAction": {
+                            "@type": "ReadAction",
+                            "target": ["https://arminsilatani.com/tr/sitemap/"]
+                        }
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "@id": "https://arminsilatani.com/tr/sitemap/#breadcrumb",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Ana Sayfa",
+                                "item": "https://arminsilatani.com/tr/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Site Haritası",
+                                "item": "https://arminsilatani.com/tr/sitemap/"
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "Person",
+                        "@id": "https://arminsilatani.com/#person",
+                        "name": "Armin Silatani",
+                        "alternateName": "Armin Silatani",
+                        "url": "https://arminsilatani.com/",
+                        "image": {
+                            "@type": "ImageObject",
+                            "url": "https://arminsilatani.com/assets/images/favicon.png",
+                            "caption": "Armin Silatani - Dijital Pazarlama Uzmanı"
+                        },
+                        "jobTitle": "Dijital Pazarlama Uzmanı",
+                        "description": "Armin Silatani, SEO, çevrimiçi reklamcılık ve dijital pazarlama stratejileri alanında 5 yılı aşkın deneyime sahip bir Dijital Pazarlama Uzmanıdır.",
+                        "email": "contact@arminsilatani.com",
+                        "telephone": "+989125759466",
+                        "foundingDate": "2020",
+                        "sameAs": [
+                            "https://www.linkedin.com/in/arminsilatani/",
+                            "https://github.com/arminsilatani",
+                            "https://www.instagram.com/arminsilatani/",
+                            "https://t.me/arminsilatani",
+                            "https://wa.me/989125759466"
+                        ],
+                        "knowsAbout": [
+                            "Digital Marketing",
+                            "SEO",
+                            "Content Marketing",
+                            "Social Media Marketing",
+                            "Online Advertising"
+                        ],
+                        "mainEntityOfPage": {
+                            "@type": "ProfilePage",
+                            "@id": "https://arminsilatani.com/tr/about/"
+                        }
+                    }
+                ]
             }
-          },
-          {
-            "@type": "CollectionPage",
-            "@id": "https://arminsilatani.com/tr/sitemap/#webpage",
-            "url": "https://arminsilatani.com/tr/sitemap/",
-            "name": "Site Haritası - Armin Silatani",
-            "description": "Armin Silatani'nin web sitesinin tüm sayfaları, hizmetleri, makaleleri ve araçları içeren eksiksiz site haritası.",
-            "inLanguage": "tr",
-            "isPartOf": { "@id": "https://arminsilatani.com/#website" },
-            "about": { "@id": "https://arminsilatani.com/#person" },
-            "datePublished": "2020-01-01",
-            "dateModified": "2026-05-03",
-            "breadcrumb": {
-              "@id": "https://arminsilatani.com/tr/sitemap/#breadcrumb"
-            },
-            "potentialAction": {
-              "@type": "ReadAction",
-              "target": ["https://arminsilatani.com/tr/sitemap/"]
-            }
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": "https://arminsilatani.com/tr/sitemap/#breadcrumb",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Ana Sayfa",
-                "item": "https://arminsilatani.com/tr/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Site Haritası",
-                "item": "https://arminsilatani.com/tr/sitemap/"
-              }
-            ]
-          },
-          {
-            "@type": "Person",
-            "@id": "https://arminsilatani.com/#person",
-            "name": "Armin Silatani",
-            "alternateName": "Armin Silatani",
-            "url": "https://arminsilatani.com/",
-            "image": {
-              "@type": "ImageObject",
-              "url": "https://arminsilatani.com/assets/images/favicon.png",
-              "caption": "Armin Silatani - Dijital Pazarlama Uzmanı"
-            },
-            "jobTitle": "Dijital Pazarlama Uzmanı",
-            "description": "Armin Silatani, SEO, çevrimiçi reklamcılık ve dijital pazarlama stratejileri alanında 5 yılı aşkın deneyime sahip bir Dijital Pazarlama Uzmanıdır.",
-            "email": "contact@arminsilatani.com",
-            "telephone": "+989125759466",
-            "foundingDate": "2020",
-            "sameAs": [
-              "https://www.linkedin.com/in/arminsilatani/",
-              "https://github.com/arminsilatani",
-              "https://www.instagram.com/arminsilatani/",
-              "https://t.me/arminsilatani",
-              "https://wa.me/989125759466"
-            ],
-            "knowsAbout": [
-              "Digital Marketing",
-              "SEO",
-              "Content Marketing",
-              "Social Media Marketing",
-              "Online Advertising"
-            ],
-            "mainEntityOfPage": {
-              "@type": "ProfilePage",
-              "@id": "https://arminsilatani.com/tr/about/"
-            }
-          }
-        ]
-      }
-    </script>
+        </script>
 
-    <!-- :::::::::::::::::::::::::: EXTERNAL LIBRARIES :::::::::::::::::::::::::: -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  </head>
+        <!-- :::::::::::::::::::::::::: EXTERNAL LIBRARIES :::::::::::::::::::::::::: -->
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    </head>
 
-  <!-- :::::::::::::::::::::::::: BODY :::::::::::::::::::::::::: -->
-  <body>
-    <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
-    <header-component></header-component>
+    <!-- :::::::::::::::::::::::::: BODY :::::::::::::::::::::::::: -->
+    <body>
 
-    <main class="has-footer-gap">
-      <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
-      <section class="hero-section">
-        <div class="container-1080">
-          <div class="hero-container">
-            <language-component></language-component>
-            <div class="hero-title">
-              <h1 class="split-title">Site Haritası</h1>
-            </div>
-          </div>
-        </div>
+        <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
+        <header-component></header-component>
 
-        <div class="pro-divider">
-          <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
-            <defs>
-              <filter
-                id="dividerShadow"
-                x="0"
-                y="-30%"
-                width="100%"
-                height="150%"
-              >
-                <feDropShadow
-                  dx="0"
-                  dy="-8"
-                  stdDeviation="12"
-                  flood-color="rgba(0,0,0,0.55)"
-                />
-              </filter>
-            </defs>
-            <path
-              filter="url(#dividerShadow)"
-              fill="#0D0D0D"
-              d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
-            />
-          </svg>
-        </div>
+        <main class="has-footer-gap">
 
-        <div class="fake-terminal-breadcrumb">
-          <div class="fake-terminal-inner">
-            <span class="cmd-prefix">$</span>
-            <span class="command">open</span>
-            <span id="terminalPath"></span>
-            <span class="cursor"></span>
-          </div>
-        </div>
-      </section>
+            <!-- :::::::::::::::::::::::::: HERO :::::::::::::::::::::::::: -->
+            <section class="hero-section">
+                <div class="container-1080">
+                    <div class="hero-container">
+                        <language-component></language-component>
+                        <div class="hero-title">
+                            <h1 class="split-title">Site Haritası</h1>
+                        </div>
+                    </div>
+                </div>
 
-      <!-- :::::::::::::::::::::::::: SITEMAP SECTION :::::::::::::::::::::::::: -->
-      <section class="sitemap-section">
-        <div class="container-1080">
-          <div class="sitemap-grid">
-            <div class="sitemap-card reveal-up">
-              <div class="card-title">
-                <h2>Ana Sayfalar</h2>
-              </div>
-              <ul class="sitemap-list">
-                <li>
-                  <div class="link-row">
-                    <a href="/tr/">Ana Sayfa</a>
-                    <span class="last-update"
-                      >Son Güncelleme: 30 Mart 2026</span
-                    >
-                  </div>
-                  <div class="hover-desc">
-                    Armin Silatani web sitesinin ana sayfasına buradan
-                    erişebilirsiniz. SEO, web tasarım ve dijital pazarlama
-                    hizmetleri hakkında bilgi almak için başlangıç noktasıdır.
-                  </div>
-                </li>
+                <div class="pro-divider">
+                    <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
+                        <defs>
+                            <filter id="dividerShadow" x="0" y="-30%" width="100%" height="150%">
+                                <feDropShadow dx="0" dy="-8" stdDeviation="12" flood-color="rgba(0,0,0,0.55)" />
+                            </filter>
+                        </defs>
+                        <path filter="url(#dividerShadow)" fill="#0D0D0D" d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z" />
+                    </svg>
+                </div>
 
-                <li>
-                  <div class="link-row">
-                    <a href="/tr/contact/">İletişim</a>
-                    <span class="last-update"
-                      >Son Güncelleme: 20 Mayıs 2026</span
-                    >
-                  </div>
-                  <div class="hover-desc">
-                    Sayfada iletişim bilgilerinin yanı sıra, ortak projeler için
-                    zaman dilimleri ve sık sorulan soruların yanıtları da
-                    sunulmaktadır.
-                  </div>
-                </li>
+                <div class="fake-terminal-breadcrumb">
+                    <div class="fake-terminal-inner">
+                        <span class="cmd-prefix">$</span>
+                        <span class="command">open</span>
+                        <span id="terminalPath"></span>
+                        <span class="cursor"></span>
+                    </div>
+                </div>
+            </section>
 
-                <li>
-                  <div class="link-row">
-                    <a href="/tr/about/">Hakkımda</a>
-                    <span class="last-update"
-                      >Son Güncelleme: 1 Nisan 2026</span
-                    >
-                  </div>
-                  <div class="hover-desc">
-                    Bu sayfada Armin Silatani'nin 1998 yılından günümüze kadar
-                    olan deneyimlerini, eğitimini ve çalışmalarını
-                    görebilirsiniz.
-                  </div>
-                </li>
+            <!-- :::::::::::::::::::::::::: SITEMAP :::::::::::::::::::::::::: -->
+            <section class="sitemap-section">
+                <div class="container-1080">
+                    <div class="sitemap-grid">
+                        <div class="sitemap-card reveal-up">
+                            <div class="card-title">
+                                <h2>Ana Sayfalar</h2>
+                            </div>
+                            <ul class="sitemap-list">
+                                <li>
+                                    <div class="link-row">
+                                        <a href="/tr/">Ana Sayfa</a>
+                                        <span class="last-update">Son Güncelleme: 30 Mart 2026</span>
+                                    </div>
+                                    <div class="hover-desc">
+                                        Armin Silatani web sitesinin ana sayfasına buradan
+                                        erişebilirsiniz. SEO, web tasarım ve dijital pazarlama
+                                        hizmetleri hakkında bilgi almak için başlangıç noktasıdır.
+                                    </div>
+                                </li>
 
-                <li>
-                  <div class="link-row">
-                    <a href="/tr/services/">Hizmetler</a>
-                    <span class="last-update"
-                      >Son Güncelleme: 25 Mayıs 2026</span
-                    >
-                  </div>
-                  <div class="hover-desc">
-                    Web sitenizin ihtiyaçlarına yönelik SEO, Google Ads ve
-                    mağaza tasarımı gibi dijital pazarlama hizmetlerinin
-                    detaylarına bu sayfadan ulaşabilirsiniz.
-                  </div>
-                </li>
+                                <li>
+                                    <div class="link-row">
+                                        <a href="/tr/contact/">İletişim</a>
+                                        <span class="last-update">Son Güncelleme: 20 Mayıs 2026</span>
+                                    </div>
+                                    <div class="hover-desc">
+                                        Sayfada iletişim bilgilerinin yanı sıra, ortak projeler için
+                                        zaman dilimleri ve sık sorulan soruların yanıtları da
+                                        sunulmaktadır.
+                                    </div>
+                                </li>
 
-                <li>
-                  <div class="link-row">
-                    <a href="/tr/tariff/">Fiyatlar</a>
-                    <span class="last-update"
-                      >Son Güncelleme: 14 Mayıs 2026</span
-                    >
-                  </div>
-                  <div class="hover-desc">
-                    Bu sayfada, SEO hizmetleri, web sitesi tasarımı, Google Ads
-                    kampanyaları ve sosyal medya yönetimi gibi tüm dijital
-                    pazarlama hizmetlerinin fiyat listesini ve paket detaylarını
-                    görebilirsiniz.
-                  </div>
-                </li>
+                                <li>
+                                    <div class="link-row">
+                                        <a href="/tr/about/">Hakkımda</a>
+                                        <span class="last-update">Son Güncelleme: 1 Nisan 2026</span>
+                                    </div>
+                                    <div class="hover-desc">
+                                        Bu sayfada Armin Silatani'nin 1998 yılından günümüze kadar
+                                        olan deneyimlerini, eğitimini ve çalışmalarını
+                                        görebilirsiniz.
+                                    </div>
+                                </li>
 
-                <li>
-                  <div class="link-row">
-                    <a href="/tr/portfolio/">Portfolyo</a>
-                    <span class="last-update"
-                      >Son Güncelleme: 13 Temmuz 2026</span
-                    >
-                  </div>
-                  <div class="hover-desc">
-                    SEO çalışmaları, web tasarım projeleri ve grafik tasarım
-                    örnekleri bu sayfada düzenli olarak sunulmaktadır.
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
+                                <li>
+                                    <div class="link-row">
+                                        <a href="/tr/services/">Hizmetler</a>
+                                        <span class="last-update">Son Güncelleme: 25 Mayıs 2026</span>
+                                    </div>
+                                    <div class="hover-desc">
+                                        Web sitenizin ihtiyaçlarına yönelik SEO, Google Ads ve
+                                        mağaza tasarımı gibi dijital pazarlama hizmetlerinin
+                                        detaylarına bu sayfadan ulaşabilirsiniz.
+                                    </div>
+                                </li>
 
-          <div class="sitemap-grid">
-            <div class="sitemap-card reveal-up">
-              <div class="card-title">
-                <h2>Hizmetler</h2>
-              </div>
-              <ul class="sitemap-list"></ul>
-            </div>
-          </div>
+                                <li>
+                                    <div class="link-row">
+                                        <a href="/tr/tariff/">Fiyatlar</a>
+                                        <span class="last-update">Son Güncelleme: 14 Mayıs 2026</span>
+                                    </div>
+                                    <div class="hover-desc">
+                                        Bu sayfada, SEO hizmetleri, web sitesi tasarımı, Google Ads
+                                        kampanyaları ve sosyal medya yönetimi gibi tüm dijital
+                                        pazarlama hizmetlerinin fiyat listesini ve paket detaylarını
+                                        görebilirsiniz.
+                                    </div>
+                                </li>
 
-          <div class="sitemap-grid">
-            <div class="sitemap-card reveal-up">
-              <div class="card-title">
-                <h2>Blog Yazıları</h2>
-              </div>
-              <ul class="sitemap-list"></ul>
-            </div>
-          </div>
+                                <li>
+                                    <div class="link-row">
+                                        <a href="/tr/portfolio/">Portfolyo</a>
+                                        <span class="last-update">Son Güncelleme: 13 Temmuz 2026</span>
+                                    </div>
+                                    <div class="hover-desc">
+                                        SEO çalışmaları, web tasarım projeleri ve grafik tasarım
+                                        örnekleri bu sayfada düzenli olarak sunulmaktadır.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
-          <div class="sitemap-grid">
-            <div class="sitemap-card reveal-up">
-              <div class="card-title">
-                <h2>Portfolyo</h2>
-              </div>
-              <ul class="sitemap-list">
-                <li>
-                  <div class="link-row">
-                    <a href="/tr/portfolio/logodesign/"
-                      >Logo Tasarımı Örnekleri</a
-                    >
-                    <span class="last-update"
-                      >Son Güncelleme: 8 Ağustos 2026</span
-                    >
-                  </div>
-                  <div class="hover-desc">
-                    Bu sayfada farklı sektörlere ait logo tasarımı örneklerini
-                    inceleyebilir, tasarım sürecinde kullanılan yaklaşımlar
-                    hakkında bilgi edinebilirsiniz.
-                  </div>
-                </li>
-                <li>
-                  <div class="link-row">
-                    <a href="/tr/portfolio/businesscarddesign/"
-                      >Kartvizit Tasarımı Örnekleri</a
-                    >
-                    <span class="last-update"
-                      >Son Güncelleme: 14 Ağustos 2026</span
-                    >
-                  </div>
-                  <div class="hover-desc">
-                    Bu sayfada farklı sektörlere ait kartvizit tasarımı
-                    örneklerini inceleyebilir, ön ve arka yüz uygulamalarını
-                    birlikte görebilirsiniz.
-                  </div>
-                </li>
+                    <div class="sitemap-grid">
+                        <div class="sitemap-card reveal-up">
+                            <div class="card-title">
+                                <h2>Hizmetler</h2>
+                            </div>
+                            <ul class="sitemap-list"></ul>
+                        </div>
+                    </div>
 
-                <li>
-                  <div class="link-row">
-                    <a href="/tr/portfolio/letterheaddesign/"
-                      >Antetli Kâğıt Örnekleri</a
-                    >
-                    <span class="last-update"
-                      >Son Güncelleme: 18 Ağustos 2026</span
-                    >
-                  </div>
-                  <div class="hover-desc">
-                    Bu sayfada kurumsal yazışmalarınızda kullanabileceğiniz
-                    antetli kâğıt örneklerini ve tasarım detaylarını
-                    inceleyebilirsiniz.
-                  </div>
-                </li>
+                    <div class="sitemap-grid">
+                        <div class="sitemap-card reveal-up">
+                            <div class="card-title">
+                                <h2>Blog Yazıları</h2>
+                            </div>
+                            <ul class="sitemap-list"></ul>
+                        </div>
+                    </div>
 
-                <li>
-                  <div class="link-row">
-                    <a href="/tr/portfolio/cataloguedesign/"
-                      >Katalog Tasarımı Örnekleri</a
-                    >
-                    <span class="last-update"
-                      >Son Güncelleme: 27 Ağustos 2026</span
-                    >
-                  </div>
-                  <div class="hover-desc">
-                    Çeşitli markalara ait tamamlanmış katalog tasarım
-                    projelerini görselleriyle birlikte bu sayfada
-                    görüntüleyebilirsiniz.
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+                    <div class="sitemap-grid">
+                        <div class="sitemap-card reveal-up">
+                            <div class="card-title">
+                                <h2>Portfolyo</h2>
+                            </div>
+                            <ul class="sitemap-list">
+                                <li>
+                                    <div class="link-row">
+                                        <a href="/tr/portfolio/logodesign/">Logo Tasarımı Örnekleri</a>
+                                        <span class="last-update">Son Güncelleme: 8 Ağustos 2026</span>
+                                    </div>
+                                    <div class="hover-desc">
+                                        Bu sayfada farklı sektörlere ait logo tasarımı örneklerini
+                                        inceleyebilir, tasarım sürecinde kullanılan yaklaşımlar
+                                        hakkında bilgi edinebilirsiniz.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="link-row">
+                                        <a href="/tr/portfolio/businesscarddesign/">Kartvizit Tasarımı Örnekleri</a>
+                                        <span class="last-update">Son Güncelleme: 14 Ağustos 2026</span>
+                                    </div>
+                                    <div class="hover-desc">
+                                        Bu sayfada farklı sektörlere ait kartvizit tasarımı
+                                        örneklerini inceleyebilir, ön ve arka yüz uygulamalarını
+                                        birlikte görebilirsiniz.
+                                    </div>
+                                </li>
 
-    <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
-    <footer-component></footer-component>
+                                <li>
+                                    <div class="link-row">
+                                        <a href="/tr/portfolio/letterheaddesign/">Antetli Kâğıt Örnekleri</a>
+                                        <span class="last-update">Son Güncelleme: 18 Ağustos 2026</span>
+                                    </div>
+                                    <div class="hover-desc">
+                                        Bu sayfada kurumsal yazışmalarınızda kullanabileceğiniz
+                                        antetli kâğıt örneklerini ve tasarım detaylarını
+                                        inceleyebilirsiniz.
+                                    </div>
+                                </li>
 
-    <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->
-    <script type="module" src="../header-component.js"></script>
-    <script src="/assets/css/components/blurup.js"></script>
-    <script src="../language-component.js"></script>
-    <script src="/assets/css/components/breadcrumb.js"></script>
-    <script type="module" src="../footer-component.js"></script>
-    <script src="/assets/css/components/animations.js"></script>
-  </body>
+                                <li>
+                                    <div class="link-row">
+                                        <a href="/tr/portfolio/cataloguedesign/">Katalog Tasarımı Örnekleri</a>
+                                        <span class="last-update">Son Güncelleme: 27 Ağustos 2026</span>
+                                    </div>
+                                    <div class="hover-desc">
+                                        Çeşitli markalara ait tamamlanmış katalog tasarım
+                                        projelerini görselleriyle birlikte bu sayfada
+                                        görüntüleyebilirsiniz.
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="link-row">
+                                        <a href="/tr/portfolio/cataloguedesign/">esempi di moduli di contratto</a>
+                                        <span class="last-update">Son Güncelleme: 16 Eylül 2026</span>
+                                    </div>
+                                    <div class="hover-desc">
+                                        Sözleşme tasarım örneklerini ve iş birliği adımlarını bu sayfada inceleyebilirsiniz.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
+        <footer-component></footer-component>
+
+        <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->
+        <script type="module" src="../header-component.js"></script>
+        <script src="/assets/css/components/blurup.js"></script>
+        <script src="../language-component.js"></script>
+        <script src="/assets/css/components/breadcrumb.js"></script>
+        <script type="module" src="../footer-component.js"></script>
+        <script src="/assets/css/components/animations.js"></script>
+    </body>
 </html>
