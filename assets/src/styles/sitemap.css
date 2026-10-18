@@ -1,0 +1,266 @@
+/*
+  ****************************************************
+  *  Author: Armin Silatani
+  *  Date: 2026-05-20
+  *  Version: 0.0.1
+  ****************************************************
+*/
+
+/* =========================== SITEMAP PAGE ============================ */
+
+.sitemap-section {
+    padding: 60px 0 100px;
+    background-color: #0d0d0d;
+    color: #f5f5f5;
+}
+
+/* ------------------------- HEADER TEXT ------------------------- */
+
+.sitemap-header-text {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+/* ------------------------- GRID SYSTEM ------------------------- */
+
+.sitemap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+/* ------------------------- CARDS ------------------------- */
+
+.sitemap-card {
+    background: #151515;
+    border: 1px solid #252525;
+    border-radius: 3px;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.sitemap-card:hover {
+    border-color: #4ECDC4;
+}
+
+/* ------------------------- CARD TITLE ------------------------- */
+
+.card-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #252525;
+}
+
+.card-title h2 {
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* ------------------------- LIST & LINKS ------------------------- */
+
+.sitemap-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sitemap-list li {
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.sitemap-list li:last-child {
+    margin-bottom: 0;
+}
+
+.sitemap-list a {
+    color: #a0a0a0;
+    text-decoration: none;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 8px 0;
+}
+
+.sitemap-list a:hover {
+    color: #f5f5f5;
+}
+
+/* ------------------------- HOVER ROW MOTION ------------------------- */
+
+.link-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: gap 0.3s ease;
+}
+
+.link-row:has(a:hover) {
+    gap: 25px;
+}
+
+/* ------------------------- EXTRA META INFO ------------------------- */
+
+.last-update {
+    font-size: 0.80rem;
+    color: #4ECDC4;
+    opacity: 0.9;
+}
+
+/* ------------------------- HOVER DESCRIPTION BOX ------------------------- */
+
+.hover-desc {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    padding: 0 14px;
+
+    background: rgba(78, 205, 196, 0.08);
+    border-inline-start: 3px solid #4ECDC4;
+    border-radius: 3px;
+
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #d8fdfb;
+
+    transition:
+        max-height 0.55s cubic-bezier(.4, 0, .2, 1),
+        opacity 0.45s ease,
+        padding 0.45s ease,
+        margin-top 0.3s ease;
+}
+
+.sitemap-list li:has(.link-row a:hover) .hover-desc {
+    max-height: 220px;
+    opacity: 1;
+    padding: 12px 14px;
+}
+
+/* ------------------------- FOCUS & ACTIVE STYLES ------------------------- */
+
+/* Remove default browser outline and add a custom focus indicator */
+.sitemap-list a:focus,
+.sitemap-list a:active {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+/* Accessible custom focus style (overrides the removal above for :focus-visible) */
+.sitemap-list a:focus-visible {
+    outline: 2px solid #4ECDC4;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+/* Prevent card outline when a child is focused */
+.sitemap-card:focus-within {
+    outline: none;
+}
+
+/* ===================================================================== */
+/* ============================ 320px = XS ============================= */
+/* iPhone 5 (568x320)                                                    */
+/* ===================================================================== */
+
+@media (min-width: 320px) {
+
+}
+
+/* ===================================================================== */
+/* ============================ 380px = S ============================== */
+/* Galaxy Z Flip 3 (880x360) | Galaxy S24 Ultra (891x412)                */
+/* ===================================================================== */
+
+@media (min-width: 380px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 440px = S+ ============================== */
+/* iPhone 17 Pro Max (956x440)                                           */
+/* ===================================================================== */
+
+@media (min-width: 440px) {
+
+}
+
+/* ===================================================================== */
+/* ============================ 480px = M ============================== */
+/* —                                                                     */
+/* ===================================================================== */
+
+@media (min-width: 480px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 768px = TAB ============================= */
+/* iPad Mini (1024x768) | Galaxy Fold inner (1076x768)                   */
+/* ===================================================================== */
+
+@media (min-width: 768px) {
+
+}
+
+/* ===================================================================== */
+/* ========================== 800px = TAB+ ============================= */
+/* Galaxy Tab S7 (1280x800)                                              */
+/* ===================================================================== */
+
+@media (min-width: 800px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 1024px = L ============================== */
+/* iPad Pro 13 (1376x1032)                                               */
+/* ===================================================================== */
+
+@media (min-width: 1024px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 1366px = XL ============================= */
+/* Desktop / Laptop FHD                                                  */
+/* ===================================================================== */
+
+@media (min-width: 1366px) {
+
+}
+
+/* ===================================================================== */
+/* ========================== 1920px = 2XL ============================= */
+/* Full HD / 2K                                                          */
+/* ===================================================================== */
+
+@media (min-width: 1920px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 2560px = UW ============================= */
+/* Ultrawide (3440x1440) | 4K UHD (2160x3840)                            */
+/* ===================================================================== */
+
+@media (min-width: 2560px) {
+
+}
+
+/* ===================================================================== */
+/* ======================= LANDSCAPE PHONE ============================= */
+/* iPhone 17 PM / S24 Ultra در حالت افقی (ارتفاع کم)                     */
+/* ===================================================================== */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+}

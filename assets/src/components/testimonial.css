@@ -1,0 +1,295 @@
+/* :::::::::::::::::::::::::: TESTIMONIALS STYLES :::::::::::::::::::::::::: */
+
+.testimonials-section {
+    background: #0D0D0D;
+    text-align: center;
+}
+
+.testimonials-section .title {
+    position: relative;
+    margin: 25px 0;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.testimonials-section .title::after {
+    content: "";
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    width: 80px;
+    height: 2px;
+    background: #1A1A1A;
+    transform: translateX(-50%);
+}
+
+/* :::::::::::::::::::::::::: LAYOUT :::::::::::::::::::::::::: */
+.testimonials-container {
+    display: flex;
+    gap: 1.5rem;
+    width: 90%;
+    max-width: 1400px;
+    height: 560px;
+    margin-inline: auto;
+    margin-top: 3.5rem;
+}
+
+.column {
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 25%,
+        black 75%,
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 25%,
+        black 75%,
+        transparent 100%
+    );
+}
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.column:hover .testimonials {
+    animation-play-state: paused;
+}
+
+.column:nth-child(1) .testimonials {
+    animation-name: testimonialScrollUp;
+    animation-duration: 32s;
+}
+
+.column:nth-child(2) .testimonials {
+    animation-name: testimonialScrollDown;
+    animation-duration: 45s;
+}
+
+.column:nth-child(3) .testimonials {
+    animation-name: testimonialScrollUp;
+    animation-duration: 38s;
+}
+
+/* :::::::::::::::::::::::::: CARD (GLASS) :::::::::::::::::::::::::: */
+.card {
+    background: rgba(20, 20, 20, .72);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(78, 205, 196, .16);
+    padding: 1.5rem;
+    border-radius: 5px;
+    transition: border-color .35s ease;
+}
+
+.card:hover {
+    border-color: rgba(78, 205, 196, .45);
+}
+
+.card .profile {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin-bottom: 1rem;
+}
+
+.card .profile img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid rgba(78, 205, 196, .25);
+}
+
+.card .profile .name {
+    font-size: .875rem;
+    font-weight: 700;
+    color: #FFF;
+    line-height: 1.3;
+}
+
+.card .profile .role {
+    font-size: .6875rem;
+    color: rgba(255, 255, 255, .4);
+    line-height: 1.4;
+    margin-top: 2px;
+}
+
+.card .content {
+    color: rgba(255, 255, 255, .6);
+    font-size: .8125rem;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+/* :::::::::::::::::::::::::: ANIMATIONS :::::::::::::::::::::::::: */
+@keyframes testimonialScrollUp {
+    from { transform: translateY(0); }
+    to   { transform: translateY(-50%); }
+}
+
+@keyframes testimonialScrollDown {
+    from { transform: translateY(-50%); }
+    to   { transform: translateY(0); }
+}
+
+/* :::::::::::::::::::::::::: PLACEHOLDER :::::::::::::::::::::::::: */
+.testimonials-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.testimonials-placeholder img {
+    max-width: 45%;
+    height: auto;
+}
+
+/* :::::::::::::::::::::::::: TESTIMONIALS COMPONENT RESPONSIVE :::::::::::::::::::::::::: */
+
+@media (max-width: 1400px) {
+    .testimonials-container {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-placeholder img {
+        max-width: 80%;
+    }
+
+    .testimonials-container {
+        width: 90%;
+        padding: 10px;
+        gap: 10px;
+        height: 80vh;
+    }
+
+    .testimonials-container .column {
+        display: none;
+    }
+
+    .testimonials-container .column:first-child {
+        display: block;
+    }
+}
+
+@media (max-width: 640px) {
+    .testimonials-container {
+        padding: 4px;
+        gap: 4px;
+    }
+}
+
+
+/* ===================================================================== */
+/* ============================ 320px = XS ============================= */
+/* iPhone 5 (568x320)                                                    */
+/* ===================================================================== */
+
+@media (min-width: 320px) {
+
+}
+
+/* ===================================================================== */
+/* ============================ 380px = S ============================== */
+/* Galaxy Z Flip 3 (880x360) | Galaxy S24 Ultra (891x412)                */
+/* ===================================================================== */
+
+@media (min-width: 380px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 440px = S+ ============================== */
+/* iPhone 17 Pro Max (956x440)                                           */
+/* ===================================================================== */
+
+@media (min-width: 440px) {
+
+}
+
+/* ===================================================================== */
+/* ============================ 480px = M ============================== */
+/* —                                                                     */
+/* ===================================================================== */
+
+@media (min-width: 480px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 768px = TAB ============================= */
+/* iPad Mini (1024x768) | Galaxy Fold inner (1076x768)                   */
+/* ===================================================================== */
+
+@media (min-width: 768px) {
+
+}
+
+/* ===================================================================== */
+/* ========================== 800px = TAB+ ============================= */
+/* Galaxy Tab S7 (1280x800)                                              */
+/* ===================================================================== */
+
+@media (min-width: 800px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 1024px = L ============================== */
+/* iPad Pro 13 (1376x1032)                                               */
+/* ===================================================================== */
+
+@media (min-width: 1024px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 1366px = XL ============================= */
+/* Desktop / Laptop FHD                                                  */
+/* ===================================================================== */
+
+@media (min-width: 1366px) {
+
+}
+
+/* ===================================================================== */
+/* ========================== 1920px = 2XL ============================= */
+/* Full HD / 2K                                                          */
+/* ===================================================================== */
+
+@media (min-width: 1920px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 2560px = UW ============================= */
+/* Ultrawide (3440x1440) | 4K UHD (2160x3840)                            */
+/* ===================================================================== */
+
+@media (min-width: 2560px) {
+
+}
+
+/* ===================================================================== */
+/* ======================= LANDSCAPE PHONE ============================= */
+/* iPhone 17 PM / S24 Ultra در حالت افقی (ارتفاع کم)                     */
+/* ===================================================================== */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+}

@@ -1,0 +1,845 @@
+/* :::::::::::::::::::::::::: CSS VARIABLES :::::::::::::::::::::::::: */
+
+:root {
+    --bg: #0D0D0D;
+    --bg-secondary: #141414;
+    --bg-card: #1A1A1A;
+    --text: #F5F5F5;
+    --text-muted: #A0A0A0;
+    --accent: #4ECDC4;
+    --accent-glow: rgba(78, 205, 196, 0.25);
+    --accent-subtle: rgba(78, 205, 196, 0.08);
+    --border: rgba(255, 255, 255, 0.06);
+    --border-active: rgba(78, 205, 196, 0.4);
+    --radius: 3px;
+    --radius-sm: 3px;
+    --transition: 0.35s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+    --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+/* :::::::::::::::::::::::::: BASE & TEXTURE :::::::::::::::::::::::::: */
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.03;
+    background-image:
+        radial-gradient(circle at 20% 30%, #4ECDC4 0.5px, transparent 0.5px),
+        radial-gradient(circle at 60% 70%, #4ECDC4 0.4px, transparent 0.4px),
+        radial-gradient(circle at 80% 20%, #F5F5F5 0.3px, transparent 0.3px);
+    background-size: 60px 60px, 80px 80px, 50px 50px;
+    background-position: 0 0, 20px 30px, 40px 10px;
+}
+
+
+
+/* :::::::::::::::::::::::::: LAYOUT: CONTAINER & SECTION :::::::::::::::::::::::::: */
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 28px;
+    position: relative;
+    z-index: 1;
+}
+
+.section {
+    padding: 1px;
+    position: relative;
+}
+
+.section-eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+    opacity: 0.85;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+    color: var(--text);
+    line-height: 1.25;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+
+
+/* :::::::::::::::::::::::::: CONTACT FORM & INFO :::::::::::::::::::::::::: */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.78fr;
+    gap: 15px;
+    align-items: start;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-info__card {
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 5.5px 15px;
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-info__card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    background: radial-gradient(ellipse at top left, var(--accent-subtle), transparent 70%);
+    pointer-events: none;
+}
+
+.contact-info__card:hover::after {
+    opacity: 1;
+}
+
+.contact-info__card:hover {
+    border-color: var(--border-active);
+}
+
+.contact-info__label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.contact-info__value {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a.contact-info__value:hover {
+    color: var(--accent);
+}
+
+.contact-info__card--featured {
+    padding: 0;
+    overflow: hidden;
+}
+
+.contact-info__image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* :::::::::::::::::::::::::: SOCIAL LINKS :::::::::::::::::::::::::: */
+
+.social-dots {
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.social-dot {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 0.7rem;
+    font-weight: 600;
+    background: var(--bg-card);
+}
+
+.social-dot:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-subtle);
+}
+
+.social-dot svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    display: block;
+}
+
+
+
+/* :::::::::::::::::::::::::: FORM WRAPPER :::::::::::::::::::::::::: */
+
+.contact-form-wrapper {
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 36px 32px;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.contact-form-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0.5;
+    border-radius: 50%;
+}
+
+.contact-form-wrapper:hover {
+    border-color: var(--border-active);
+}
+
+.submit-btn--sent {
+    pointer-events: none;
+}
+
+
+
+/* :::::::::::::::::::::::::: AVAILABILITY & TIMEZONE :::::::::::::::::::::::::: */
+
+#availability .section-title {
+    margin-top: 0;
+}
+
+.avail-grid {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    gap: 30px;
+}
+
+#availability .avail-grid {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    gap: 30px;
+}
+
+.avail-card {
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 30px 28px;
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.avail-card:hover {
+    border-color: var(--border-active);
+}
+
+.avail-card__header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+
+
+/* :::::::::::::::::::::::::: STATUS DOT (NEON) :::::::::::::::::::::::::: */
+
+.status-dot {
+    --c-on: #4ECDC4;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: relative;
+    background: radial-gradient(circle, var(--c-on) 35%, transparent 70%);
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.status-dot::after {
+    content: "";
+    position: absolute;
+    inset: -5px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--c-on) 25%, transparent 70%);
+    opacity: 0;
+    animation: pulseNeon 1.8s ease-out infinite;
+    pointer-events: none;
+}
+
+.status-dot--busy {
+    --c-on: #FF6B6B;
+}
+
+.status-text {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text);
+}
+
+.status-detail {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+
+
+/* :::::::::::::::::::::::::: 60-DAY CALENDAR SLIDER :::::::::::::::::::::::::: */
+
+.mini-week-wrapper {
+    margin-top: 18px;
+    overflow: hidden;
+    user-select: none;
+    cursor: grab;
+}
+
+.mini-week-wrapper:active {
+    cursor: grabbing;
+}
+
+.mini-week {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding: 4px 8px;
+    direction: ltr;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+}
+
+.mini-week::-webkit-scrollbar {
+    display: none;
+}
+
+.mini-week__day {
+    flex-shrink: 0;
+    width: 50px;
+    text-align: center;
+    padding: 8px 4px 6px;
+    border-radius: var(--radius-sm);
+    background: var(--bg-secondary);
+    border: 2px solid transparent;
+    font-size: 0.7rem;
+    transition: all 0.25s ease;
+    cursor: default;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mini-week__day--available {
+    border-color: #4ECDC4;
+    background: #4ECDC515;
+}
+
+.mini-week__day--partial {
+    border-color: #FFE76D;
+    background: #FFE76D18;
+}
+
+.mini-week__day--busy {
+    border-color: #FF6B6B;
+    background: #FF6B6B15;
+}
+
+.mini-week__day-name {
+    color: var(--text-muted);
+    font-size: 0.65rem;
+    margin-bottom: 3px;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+.mini-week__day-date {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.2;
+}
+
+.mini-week__day-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    margin: 5px auto 0;
+    opacity: 1;
+    transition: filter 0.3s ease;
+}
+
+.mini-week__day-dot--green {
+    background: #4ECDC4;
+}
+
+.mini-week__day-dot--yellow {
+    background: #FFE76D;
+}
+
+.mini-week__day-dot--red {
+    background: #FF6B6B;
+}
+
+.mini-week__day:hover .mini-week__day-dot {
+    animation: pulseNeon 1.5s ease-in-out infinite;
+}
+
+.mini-week__day--available:hover .mini-week__day-dot {
+    filter: drop-shadow(0 0 6px #4ECDC4);
+}
+
+.mini-week__day--partial:hover .mini-week__day-dot {
+    filter: drop-shadow(0 0 6px #FFE76D);
+}
+
+.mini-week__day--busy:hover .mini-week__day-dot {
+    filter: drop-shadow(0 0 6px #FF6B6B);
+}
+
+.mini-week__month-separator {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0 6px;
+    opacity: 0.7;
+    border-left: 1px dashed var(--border);
+    margin: 0 4px;
+}
+
+#dayTooltip {
+    position: fixed;
+    z-index: 9999;
+    background: var(--bg-card);
+    border: 1px solid var(--border-active);
+    border-radius: var(--radius);
+    padding: 2px;
+    display: flex;
+    gap: 2px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    pointer-events: none;
+}
+
+#dayTooltip .hour-block {
+    width: 3px;
+    height: 8px;
+    border-radius: 1px;
+    transition: background 0.2s;
+}
+
+.hour-block.free {
+    background: #4ECDC4;
+}
+
+.hour-block.busy {
+    background: #FF6B6B;
+}
+
+
+
+/* :::::::::::::::::::::::::: LEGEND :::::::::::::::::::::::::: */
+
+.legend-row {
+    display: flex;
+    gap: 16px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+.legend-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.legend-dot--green {
+    background: #4ECDC4;
+}
+
+.legend-dot--yellow {
+    background: #FFE76D;
+}
+
+.legend-dot--red {
+    background: #FF6B6B;
+}
+
+
+
+/* :::::::::::::::::::::::::: TIMEZONE :::::::::::::::::::::::::: */
+
+.timezone-display {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.timezone-clock {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+    font-family: 'SF Mono', 'JetBrains Mono', 'Courier New', monospace;
+    direction: ltr;
+    display: inline-block;
+}
+
+.timezone-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.timezone-offset {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 20px;
+    background: var(--accent-subtle);
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+
+
+/* :::::::::::::::::::::::::: FAQ :::::::::::::::::::::::::: */
+
+#faq .section-title {
+    margin-top: 0;
+}
+
+
+
+/* :::::::::::::::::::::::::: 320PX - XS - IPHONE 5 (320X568) :::::::::::::::::::::::::: */
+
+@media (min-width: 320px) {
+
+}
+
+@media (min-width: 568px) and (max-height: 320px) and (orientation: landscape) {
+
+}
+
+
+
+/* :::::::::::::::::::::::::: 380PX - S - GALAXY Z FLIP 3 / S24 ULTRA (380X880) :::::::::::::::::::::::::: */
+
+@media (min-width: 380px) {
+
+}
+
+@media (min-width: 880px) and (max-height: 412px) and (orientation: landscape) {
+
+}
+
+
+
+/* :::::::::::::::::::::::::: 440PX - S+ - IPHONE 17 PRO MAX (440X956) :::::::::::::::::::::::::: */
+
+@media (min-width: 440px) {
+
+}
+
+@media (min-width: 956px) and (max-height: 440px) and (orientation: landscape) {
+
+}
+
+
+
+/* :::::::::::::::::::::::::: 480PX - M - LARGE MOBILE :::::::::::::::::::::::::: */
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 480px) and (max-height: 500px) and (orientation: landscape) {
+
+}
+
+@media (max-width: 480px) {
+
+    /* :::::::::::::::::::::::::: GENERAL :::::::::::::::::::::::::: */
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+
+    /* :::::::::::::::::::::::::: CONTACT FORM :::::::::::::::::::::::::: */
+
+    .contact-form-wrapper {
+        padding: 18px 14px;
+    }
+}
+
+
+
+/* :::::::::::::::::::::::::: 768PX - TAB - IPAD MINI / GALAXY FOLD INNER (768X1024) :::::::::::::::::::::::::: */
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
+
+}
+
+@media (max-width: 768px) {
+
+    /* :::::::::::::::::::::::::: GENERAL :::::::::::::::::::::::::: */
+
+    .container,
+    .container-1080,
+    .container-1300 {
+        padding: 0 18px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+
+    /* :::::::::::::::::::::::::: CONTACT GRID :::::::::::::::::::::::::: */
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-info {
+        gap: 12px;
+    }
+
+    .contact-form-wrapper {
+        padding: 24px 20px;
+    }
+
+    .social-dots {
+        justify-content: center;
+    }
+
+
+    /* :::::::::::::::::::::::::: AVAILABILITY :::::::::::::::::::::::::: */
+
+    #availability .avail-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .avail-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .avail-card {
+        padding: 24px 20px;
+    }
+
+    .timezone-clock {
+        font-size: 2.6rem;
+    }
+
+
+    /* :::::::::::::::::::::::::: MINI CALENDAR :::::::::::::::::::::::::: */
+
+    .mini-week {
+        padding: 4px 2px;
+        gap: 4px;
+    }
+
+    .mini-week__day {
+        width: 44px;
+        padding: 6px 2px 4px;
+    }
+
+    .mini-week__day-name {
+        font-size: 0.6rem;
+    }
+
+    .mini-week__day-date {
+        font-size: 0.8rem;
+    }
+
+    .mini-week__month-separator {
+        font-size: 0.55rem;
+        padding: 0 4px;
+    }
+
+
+    /* :::::::::::::::::::::::::: FAQ :::::::::::::::::::::::::: */
+
+    .faq-question {
+        font-size: 0.9rem;
+        padding: 14px 10px;
+        font-weight: 400;
+    }
+
+    .faq-answer {
+        font-size: 0.85rem;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 680px) and (max-height: 320px) and (orientation: landscape) {
+
+    /* :::::::::::::::::::::::::: TIMEZONE :::::::::::::::::::::::::: */
+
+    .timezone-clock {
+        font-size: 1.6rem;
+    }
+}
+
+
+
+/* :::::::::::::::::::::::::: 800PX - TAB+ - GALAXY TAB S7 (800X1280) :::::::::::::::::::::::::: */
+
+@media (min-width: 800px) {
+
+}
+
+@media (min-width: 1280px) and (max-height: 800px) and (orientation: landscape) {
+
+}
+
+@media (min-width: 850px) and (max-width: 899px) and (max-height: 500px) and (orientation: landscape) {
+
+    /* :::::::::::::::::::::::::: TIMEZONE :::::::::::::::::::::::::: */
+
+    .timezone-clock {
+        font-size: 2.6rem;
+    }
+}
+
+@media (min-width: 860px) and (max-width: 899px) and (max-height: 400px) and (orientation: landscape) {
+
+    /* :::::::::::::::::::::::::: TIMEZONE :::::::::::::::::::::::::: */
+
+    .timezone-clock {
+        font-size: 2.4rem;
+    }
+}
+
+
+
+/* :::::::::::::::::::::::::: 1024PX - L - IPAD PRO 13 (1024X1376) :::::::::::::::::::::::::: */
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1376px) and (max-height: 1032px) and (orientation: landscape) {
+
+}
+
+@media (min-width: 900px) and (max-width: 1000px) and (max-height: 500px) and (orientation: landscape) {
+
+    /* :::::::::::::::::::::::::: TIMEZONE :::::::::::::::::::::::::: */
+
+    .timezone-clock {
+        font-size: 2.8rem;
+    }
+}
+
+@media (min-width: 1020px) and (max-width: 1030px) and (max-height: 800px) and (orientation: landscape) {
+
+    /* :::::::::::::::::::::::::: TIMEZONE :::::::::::::::::::::::::: */
+
+    .timezone-clock {
+        font-size: 2.4rem;
+    }
+}
+
+@media (min-width: 1060px) and (max-width: 1090px) and (max-height: 800px) and (orientation: landscape) {
+
+    /* :::::::::::::::::::::::::: TIMEZONE :::::::::::::::::::::::::: */
+
+    .timezone-clock {
+        font-size: 2.8rem;
+    }
+}
+
+
+
+/* :::::::::::::::::::::::::: 1366PX - XL - DESKTOP / LAPTOP FHD :::::::::::::::::::::::::: */
+
+@media (min-width: 1366px) {
+
+}
+
+
+
+/* :::::::::::::::::::::::::: 1920PX - 2XL - FULL HD / 2K :::::::::::::::::::::::::: */
+
+@media (min-width: 1920px) {
+
+}
+
+
+
+/* :::::::::::::::::::::::::: 2560PX - UW - ULTRAWIDE / 4K UHD :::::::::::::::::::::::::: */
+
+@media (min-width: 2560px) {
+
+}
+
+
+
+/* :::::::::::::::::::::::::: LANDSCAPE PHONE - GENERAL LOW HEIGHT :::::::::::::::::::::::::: */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+}

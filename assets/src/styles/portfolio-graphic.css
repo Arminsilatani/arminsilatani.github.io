@@ -1,0 +1,772 @@
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+   GRAPHIC PORTFOLIO STYLES
+   Logo · Business Card · Document Card · Letterhead · Catalogue
+   :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+
+
+/* :::::::::::::::::::::::::: ROOT VARIABLES :::::::::::::::::::::::::: */
+
+:root {
+    /* رنگ‌ها */
+    --catalogue-bg: #0D0D0D;
+    --catalogue-surface: #111;
+    --catalogue-text: #F5F5F5;
+    --catalogue-muted: rgba(245, 245, 245, 0.65);
+
+    /* انیمیشن و ابعاد */
+    --catalogue-radius: 18px;
+    --catalogue-transition: 0.35s cubic-bezier(0.2, 0.6, 0.2, 1);
+    --catalogue-gap: 1.5rem;
+    --catalogue-blur: 5px;
+}
+
+
+
+/* :::::::::::::::::::::::::: SHARED BASE :::::::::::::::::::::::::: */
+
+body.portfolio-page {
+    background: var(--catalogue-bg);
+    color: var(--catalogue-text);
+    overflow-x: hidden;
+}
+
+header-component {
+    display: block;
+    position: relative;
+    z-index: 9999;
+}
+
+.section-header {
+    display: block;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.section-header > div {
+    width: 100%;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: #FFFFFF;
+}
+
+.logo-projects-section,
+.letterhead-projects-section,
+.catalogue-projects-section {
+    color: #FFFFFF;
+}
+
+.portfolio-description {
+    margin-top: 3rem;
+    line-height: 2;
+    color: var(--catalogue-muted);
+}
+
+.portfolio-description p + p {
+    margin-top: 1rem;
+}
+
+
+
+/* :::::::::::::::::::::::::: UNIFIED PORTFOLIO INFO :::::::::::::::::::::::::: */
+
+.portfolio-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 0.9rem 1.2rem;
+    box-sizing: border-box;
+
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.82), transparent);
+    color: #F5F5F5;
+
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.portfolio-info > * {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    white-space: nowrap;
+}
+
+:is(.logo-card, .businesscard-card, .doc-card, .letterhead-card):hover .portfolio-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+   LOGO PROJECTS
+   :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.logo-masonry {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.logo-card {
+    position: relative;
+    background: transparent;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 0;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.4s ease;
+}
+
+.logo-media {
+    width: 100%;
+    height: 100%;
+    background: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15%;
+    box-sizing: border-box;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.logo-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.logo-masonry:hover .logo-card {
+    filter: blur(3px);
+}
+
+.logo-masonry:hover .logo-card:hover {
+    filter: blur(0);
+    transform: scale(1.03);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+   BUSINESS CARD PROJECTS (کارت ویزیت — افقی)
+   :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.businesscard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    row-gap: 100px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.businesscard-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #111;
+    cursor: pointer;
+    aspect-ratio: 1.5 / 1;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        filter 0.4s ease;
+}
+
+.businesscard-media {
+    width: 100%;
+    height: 100%;
+    background: #F5F5F5;
+}
+
+.businesscard-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.businesscard-grid:hover .businesscard-card {
+    filter: blur(3px);
+}
+
+.businesscard-grid:hover .businesscard-card:hover {
+    filter: blur(0);
+    transform: scale(1.02);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+   DOCUMENT CARDS (قرارداد · سربرگ · گواهی · فاکتور — سند کاغذی)
+   :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.doc-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    row-gap: 100px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.doc-grid--single {
+    grid-template-columns: 1fr;
+    max-width: 720px;
+    row-gap: 0;
+}
+
+.doc-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #F5F5F5;
+    cursor: pointer;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        filter 0.4s ease;
+}
+
+.doc-card--paper {
+    aspect-ratio: auto;
+}
+
+.doc-card__media {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 2.5rem 2rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.doc-card__media img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 80vh;
+    border-radius: 4px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    display: block;
+}
+
+.doc-grid:hover .doc-card {
+    filter: blur(3px);
+}
+
+.doc-grid:hover .doc-card:hover {
+    filter: blur(0);
+    transform: scale(1.02);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+   LETTERHEAD PROJECTS (سربرگ — تصویر عمودی، بدون سایه‌ی پایین)
+   :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+main .letterhead-masonry.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
+    gap: 75px;                 /* ← کاهش از 24px به 12px */
+    justify-content: center;    /* ← به‌جای justify-items: center */
+    align-items: start;
+    width: 100%;
+    margin: 0 auto;
+}
+
+main .letterhead-masonry.categories-grid .letterhead-card {
+    position: relative;
+    background: transparent;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 0;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        filter 0.4s ease;
+}
+
+main .letterhead-masonry.categories-grid .letterhead-card:only-child {
+    max-width: 400px;
+    justify-self: center;
+}
+
+.letterhead-media {
+    width: 100%;
+    height: auto;
+    background: transparent;
+    display: block;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.letterhead-media img {
+    width: 100%;
+    height: auto;
+    object-fit: unset;
+    display: block;
+}
+
+.letterhead-masonry:hover .letterhead-card {
+    filter: blur(3px);
+}
+
+.letterhead-masonry:hover .letterhead-card:hover {
+    filter: blur(0);
+    transform: scale(1.03);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+   CATALOGUE PROJECTS
+   :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+/* ---------- ساختار کارت ---------- */
+
+.catalogue-projects-section .section-header {
+    margin-bottom: 2.5rem;
+}
+
+.catalogue-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    width: 100%;
+}
+
+.catalogue-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* ---------- نوار اطلاعات (بالای اسلایدر) ---------- */
+
+.catalogue-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0.25rem;
+    color: var(--catalogue-text);
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+}
+
+.catalogue-info > p {
+    white-space: nowrap;
+    margin: 0;
+}
+
+.catalogue-info > p:last-child {
+    color: var(--catalogue-muted);
+    font-size: 0.85rem;
+}
+
+/* ---------- دایره‌های ناوبری ---------- */
+
+.catalogue-dots {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex: 0 0 auto;
+}
+
+.catalogue-dot {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(245, 245, 245, 0.25);
+    cursor: pointer;
+    flex: 0 0 auto;
+    transition:
+        width 0.35s cubic-bezier(0.2, 0.6, 0.2, 1),
+        background-color 0.3s ease;
+}
+
+.catalogue-dot:hover {
+    background: rgba(245, 245, 245, 0.5);
+}
+
+.catalogue-dot:focus-visible {
+    outline: 2px solid rgba(245, 245, 245, 0.7);
+    outline-offset: 3px;
+}
+
+.catalogue-dot.is-current {
+    width: 24px;
+    background: #F5F5F5;
+}
+
+/* ---------- صحنه‌ی اسلایدشو ---------- */
+
+.catalogue-media {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    cursor: grab;
+}
+
+.catalogue-media.is-dragging {
+    cursor: grabbing;
+}
+
+.catalogue-slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    --dx: 0px;
+    --drag: 0px;
+    --scale: 0.82;
+    --op: 0.5;
+    --blur: 4px;
+    --bright: 0.55;
+    --z: 3;
+
+    transform:
+        translate(-50%, -50%)
+        translateX(calc(var(--dx) + var(--drag)))
+        scale(var(--scale));
+    opacity: var(--op);
+    filter: blur(var(--blur)) brightness(var(--bright));
+    z-index: var(--z);
+
+    transition:
+        transform 0.55s cubic-bezier(0.2, 0.6, 0.2, 1),
+        opacity 0.5s ease,
+        filter 0.5s ease;
+    pointer-events: none;
+    will-change: transform, opacity, filter;
+}
+
+.catalogue-slide.is-current {
+    --scale: 1.07;
+    --op: 1;
+    --blur: 0px;
+    --bright: 1;
+    --z: 5;
+}
+
+.catalogue-media.is-dragging .catalogue-slide {
+    transition: none;
+}
+
+.catalogue-media img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 70vw;
+    max-height: calc(100dvh - 180px);
+    border-radius: var(--catalogue-radius);
+    background: #1A1A1A;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55);
+    -webkit-user-drag: none;
+}
+
+
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+   PROCESS COMPONENT — LTR OVERRIDES
+   (بقیه‌ی استایل‌های process در components/process-component.css است)
+   :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+[dir="ltr"] #process .process-box.is-open .process-box__meta {
+    right: auto;
+    left: var(--process-pad-x);
+    align-items: flex-start;
+    text-align: left;
+}
+
+[dir="ltr"] #process .process-box.is-open .process-box__content {
+    right: auto;
+    left: calc(var(--process-pad-x) - 8px);
+    text-align: left;
+}
+
+[dir="ltr"] #process .process-box.is-open .process-box__title {
+    padding-right: 0;
+    padding-left: calc(var(--open-line-width) + -5px);
+}
+
+[dir="ltr"] #process .process-box.is-open .process-box__title::after {
+    right: auto;
+    left: -15px;
+    top: 10px;
+}
+
+
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+   RESPONSIVE
+   :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+/* :::::::::::::::::::::::::: 768PX — TABLET / MOBILE CATALOGUE :::::::::::::::::::::::::: */
+
+@media (max-width: 768px) {
+
+    /* ---------- QUOTE SECTION ---------- */
+
+    .quote-section,
+    .quote-inner,
+    .logo-projects-section,
+    .container {
+        overflow: visible;
+    }
+
+    .quote-inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+        margin-top: 60px;
+    }
+
+    .quote-image {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        max-width: 100px;
+        z-index: 2;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        outline: none;
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+        overflow: visible;
+    }
+
+    .quote-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 100%;
+    }
+
+    .quote-inner blockquote {
+        text-align: center;
+        margin-top: calc(15vw + 20px);
+        width: 100%;
+    }
+
+    /* ---------- LETTERHEAD ---------- */
+
+    main .letterhead-masonry.categories-grid .letterhead-card {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* ---------- CATALOGUE ---------- */
+
+    .catalogue-grid {
+        gap: 3.5rem;
+    }
+
+    .catalogue-info {
+        font-size: 0.85rem;
+        padding: 0;
+    }
+
+    .catalogue-media img {
+        max-width: 80vw;
+        max-height: calc(100dvh - 160px);
+    }
+}
+
+
+
+/* :::::::::::::::::::::::::: 900PX — BUSINESS CARD & DOC CARD (MOBILE) :::::::::::::::::::::::::: */
+
+@media (max-width: 900px) {
+
+    /* ---------- BUSINESS CARD ---------- */
+
+    .businesscard-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        max-width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .businesscard-card {
+        width: 100%;
+        max-width: 560px;
+        aspect-ratio: auto;
+        margin: 0 0 20px;
+    }
+
+    .businesscard-media {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .businesscard-media img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }
+
+    .businesscard-card .portfolio-info {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .businesscard-grid:hover .businesscard-card {
+        filter: none;
+    }
+
+    .businesscard-grid:hover .businesscard-card:hover {
+        filter: none;
+        transform: none;
+        box-shadow: none;
+    }
+
+    .businesscard-card:nth-child(even) {
+        margin-bottom: 60px;
+    }
+
+    .businesscard-card:last-child {
+        margin-bottom: 0;
+    }
+
+    /* ---------- DOCUMENT CARD ---------- */
+
+    .doc-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        max-width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .doc-card {
+        width: 100%;
+        max-width: 560px;
+    }
+
+    .doc-card .portfolio-info {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .doc-grid:hover .doc-card,
+    .doc-grid:hover .doc-card:hover {
+        filter: none;
+        transform: none;
+        box-shadow: none;
+    }
+
+    .doc-card__media {
+        padding: 1.5rem 1rem;
+    }
+
+    .doc-card__media img {
+        max-height: none;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+
+    .businesscard-grid,
+    .doc-grid {
+        padding: 0 80px;
+    }
+}
+
+
+
+/* :::::::::::::::::::::::::: LANDSCAPE MOBILE — CATALOGUE :::::::::::::::::::::::::: */
+
+@media (orientation: landscape) and (max-height: 600px) {
+
+    .catalogue-media img {
+        max-width: 55vw;
+        max-height: calc(100dvh - 140px);
+    }
+
+    .catalogue-info {
+        font-size: 0.8rem;
+        padding: 0;
+    }
+
+    .catalogue-dot {
+        width: 6px;
+        height: 6px;
+    }
+
+    .catalogue-dot.is-current {
+        width: 18px;
+    }
+
+    .catalogue-grid {
+        gap: 2rem;
+    }
+}

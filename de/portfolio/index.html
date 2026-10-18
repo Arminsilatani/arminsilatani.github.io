@@ -27,7 +27,7 @@
     />
 
     <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
-    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/src/main.css" />
 
     <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
     <meta
@@ -104,224 +104,7 @@
     />
 
     <!-- :::::::::::::::::::::::::: SCHEMA :::::::::::::::::::::::::: -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebSite",
-            "@id": "https://arminsilatani.com/#WebSite",
-            "url": "https://arminsilatani.com/",
-            "name": "Armin Silatani",
-            "description": "Professionelle SEO-Dienstleistungen, Webdesign und Google Ads von Armin Silatani. Kostenlose Beratung.",
-            "inLanguage": "de",
-            "publisher": {
-              "@id": "https://arminsilatani.com/#Person"
-            }
-          },
-          {
-            "@type": "Person",
-            "@id": "https://arminsilatani.com/#Person",
-            "name": "Armin Silatani",
-            "url": "https://arminsilatani.com/de/",
-            "image": "https://arminsilatani.com/images/favicon.png",
-            "jobTitle": "Spezialist für digitales Marketing",
-            "description": "Armin Silatani bietet professionelle Dienstleistungen in den Bereichen SEO, Webdesign und Google Ads sowie eine kostenlose Beratung an.",
-            "email": "contact@arminsilatani.com",
-            "telephone": "+989125759466",
-            "sameAs": [
-              "https://www.linkedin.com/in/arminsilatani/",
-              "https://github.com/Arminsilatani",
-              "https://www.instagram.com/arminsilatani",
-              "https://t.me/ArminSilatani",
-              "https://wa.me/+989125759466"
-            ]
-          },
-          {
-            "@type": "CollectionPage",
-            "@id": "https://arminsilatani.com/de/portfolio/#WebPage",
-            "url": "https://arminsilatani.com/de/portfolio/",
-            "name": "Referenzen aus SEO und Webdesign | Armin Silatani",
-            "headline": "Referenzen",
-            "description": "Referenzen aus SEO, Webdesign und Grafikdesign mit ausgewählten Kundenprojekten, Leistungen und Einblicken in unterschiedliche Arbeitsbereiche.",
-            "isPartOf": {
-              "@id": "https://arminsilatani.com/#WebSite"
-            },
-            "about": {
-              "@id": "https://arminsilatani.com/de/portfolio/#MainEntity"
-            },
-            "author": {
-              "@id": "https://arminsilatani.com/#Person"
-            },
-            "publisher": {
-              "@id": "https://arminsilatani.com/#Person"
-            },
-            "primaryImageOfPage": {
-              "@type": "ImageObject",
-              "@id": "https://arminsilatani.com/de/portfolio/#PrimaryImage",
-              "url": "https://arminsilatani.com/assets/images/arminsilatani/portfolio/FeaturedImage.webp",
-              "contentUrl": "https://arminsilatani.com/assets/images/arminsilatani/portfolio/FeaturedImage.webp"
-            },
-            "image": {
-              "@id": "https://arminsilatani.com/de/portfolio/#PrimaryImage"
-            },
-            "inLanguage": "de",
-            "datePublished": "2026-07-13",
-            "dateModified": "2026-07-13",
-            "breadcrumb": {
-              "@id": "https://arminsilatani.com/de/portfolio/#BreadcrumbList"
-            },
-            "sameAs": [
-              "https://arminsilatani.com/portfolio/",
-              "https://arminsilatani.com/en/portfolio/",
-              "https://arminsilatani.com/ar/portfolio/",
-              "https://arminsilatani.com/tr/portfolio/",
-              "https://arminsilatani.com/it/portfolio/"
-            ],
-            "potentialAction": [
-              {
-                "@type": "ContactAction",
-                "name": "Kontakt aufnehmen",
-                "description": "Kontaktieren Sie Armin Silatani für Ihr nächstes Projekt.",
-                "agent": {
-                  "@id": "https://arminsilatani.com/#Person"
-                },
-                "target": {
-                  "@type": "EntryPoint",
-                  "urlTemplate": "https://arminsilatani.com/de/kontakt/"
-                }
-              },
-              {
-                "@type": "ViewAction",
-                "name": "Dienstleistungen ansehen",
-                "description": "SEO-, Webdesign- und Grafikdesign-Dienstleistungen ansehen.",
-                "target": {
-                  "@type": "EntryPoint",
-                  "urlTemplate": "https://arminsilatani.com/de/services/"
-                }
-              }
-            ],
-            "_warnings": [
-              "Die URLs der einzelnen Referenz- und Projektseiten sind derzeit noch nicht verfügbar. Ersetzen Sie die Platzhalter-Listenelemente nach Veröffentlichung der jeweiligen Projektseiten durch offizielle Projektnamen und absolute URLs.",
-              "Die Ziel-URLs für Kontakt und Dienstleistungen wurden anhand des bekannten URL-Musters abgeleitet. Prüfen und ersetzen Sie diese URLs, falls Ihre tatsächlichen deutschen Slugs abweichen."
-            ]
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": "https://arminsilatani.com/de/portfolio/#BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Startseite",
-                "item": "https://arminsilatani.com/de/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Referenzen",
-                "item": "https://arminsilatani.com/de/portfolio/"
-              }
-            ]
-          },
-          {
-            "@type": "ItemList",
-            "@id": "https://arminsilatani.com/de/portfolio/#MainEntity",
-            "name": "Meine Referenzen",
-            "description": "Ausgewählte Referenzen aus den Bereichen SEO, Webdesign und Grafikdesign.",
-            "url": "https://arminsilatani.com/de/portfolio/",
-            "inLanguage": "de",
-            "numberOfItems": 3,
-            "itemListOrder": "https://schema.org/ItemListUnordered",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "SEO-Referenzen",
-                "description": "Ausgewählte SEO-Projekte und Referenzen.",
-                "item": {
-                  "@type": "ItemList",
-                  "@id": "https://arminsilatani.com/de/portfolio/#SEOReferences",
-                  "name": "SEO-Referenzen",
-                  "description": "Ausgewählte SEO-Projekte und Referenzen.",
-                  "inLanguage": "de",
-                  "itemListOrder": "https://schema.org/ItemListUnordered",
-                  "itemListElement": [
-                    {
-                      "@type": "ListItem",
-                      "position": 1,
-                      "name": "TODO: Offiziellen Projektnamen und URL der SEO-Referenz ergänzen"
-                    }
-                  ]
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Webdesign-Referenzen",
-                "description": "Ausgewählte Webdesign-Projekte und Referenzen.",
-                "item": {
-                  "@type": "ItemList",
-                  "@id": "https://arminsilatani.com/de/portfolio/#WebdesignReferences",
-                  "name": "Webdesign-Referenzen",
-                  "description": "Ausgewählte Webdesign-Projekte und Referenzen.",
-                  "inLanguage": "de",
-                  "itemListOrder": "https://schema.org/ItemListUnordered",
-                  "itemListElement": [
-                    {
-                      "@type": "ListItem",
-                      "position": 1,
-                      "name": "TODO: Offiziellen Projektnamen und URL der Webdesign-Referenz ergänzen"
-                    }
-                  ]
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Grafikdesign-Referenzen",
-                "description": "Leistungen und Referenzen im Bereich Grafikdesign.",
-                "item": {
-                  "@type": "ItemList",
-                  "@id": "https://arminsilatani.com/de/portfolio/#GraphicDesignReferences",
-                  "name": "Grafikdesign-Referenzen",
-                  "description": "Leistungen und Referenzen im Bereich Grafikdesign.",
-                  "inLanguage": "de",
-                  "itemListOrder": "https://schema.org/ItemListUnordered",
-                  "itemListElement": [
-                    {
-                      "@type": "ListItem",
-                      "position": 1,
-                      "name": "Logo-Design"
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": 2,
-                      "name": "Visitenkarten"
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": 3,
-                      "name": "Briefpapier"
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": 4,
-                      "name": "Katalogdesign"
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": 5,
-                      "name": "Vertragsunterlagen"
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        ]
-      }
-    </script>
+
   </head>
 
   <!-- :::::::::::::::::::::::::: BODY :::::::::::::::::::::::::: -->
@@ -332,46 +115,58 @@
     <main class="has-footer-gap portfolio-main">
       <!-- :::::::::::::::::::::::::: HERO :::::::::::::::::::::::::: -->
       <section class="hero-section">
-        <div class="container-1080 hero-container">
-          <language-component></language-component>
-          <div class="hero-title">
-            <h1>Referenzen</h1>
-          </div>
-        </div>
+                        <video
+        class="hero-section__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+    >
+        <source src="/assets/images/arminsilatani/services/seo/hero.mp4" type="video/mp4">
+    </video>
 
-        <div class="pro-divider">
-          <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
-            <defs>
-              <filter
-                id="dividerShadow"
-                x="0"
-                y="-30%"
-                width="100%"
-                height="150%"
-              >
-                <feDropShadow
-                  dx="0"
-                  dy="-8"
-                  stdDeviation="12"
-                  flood-color="rgba(0,0,0,0.55)"
-                />
-              </filter>
-            </defs>
-            <path
-              filter="url(#dividerShadow)"
-              fill="#0D0D0D"
-              d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
-            />
-          </svg>
-        </div>
-
-        <div class="fake-terminal-breadcrumb">
-          <div class="fake-terminal-inner">
-            <span class="cmd-prefix">$</span>
-            <span class="command">open</span>
-            <span id="terminalPath"></span>
-            <span class="cursor"></span>
+    <div class="hero-section__noise" aria-hidden="true"></div>
+    <div class="hero-section__scanlines" aria-hidden="true"></div>
+    <div class="hero-section__glitch" aria-hidden="true"></div>
+        <div class="container-1080">
+          <div class="hero-container">
+            <language-component></language-component>
+            <div class="hero-title">
+              <h1>
+                <span class="split-title">Referenzen</span>
+                <span class="h1_sub reveal-up">----------</span>
+              </h1>
+            </div>
           </div>
+
+          <div class="pro-divider">
+            <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
+              <defs>
+                <filter
+                  id="dividerShadow"
+                  x="0"
+                  y="-30%"
+                  width="100%"
+                  height="150%"
+                >
+                  <feDropShadow
+                    dx="0"
+                    dy="-8"
+                    stdDeviation="12"
+                    flood-color="rgba(0,0,0,0.55)"
+                  />
+                </filter>
+              </defs>
+              <path
+                filter="url(#dividerShadow)"
+                fill="#0D0D0D"
+                d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
+              />
+            </svg>
+          </div>
+
+          <terminal-breadcrumb></terminal-breadcrumb>
         </div>
       </section>
 
@@ -411,7 +206,7 @@
           </div>
         </div>
       </section>
-
+<section-divider></section-divider>
       <!-- :::::::::::::::::::::::::: PORTFOLIO CATEGORIES :::::::::::::::::::::::::: -->
       <section class="portfolio-categories section-dark">
         <div class="container-1080">
@@ -552,7 +347,7 @@
           </div>
         </div>
       </section>
-
+<section-divider></section-divider>
       <!-- :::::::::::::::::::::::::: SEO PROJECTS :::::::::::::::::::::::::: -->
       <section id="seo-projects" class="portfolio-list-section section-dark">
         <div class="container-1080">
@@ -885,7 +680,7 @@
           </div>
         </div>
       </section>
-
+<section-divider></section-divider>
       <!-- :::::::::::::::::::::::::: WEB PROJECTS :::::::::::::::::::::::::: -->
       <section id="web-projects" class="portfolio-list-section section-dark">
         <div class="container-1080">
@@ -1169,7 +964,7 @@
           </div>
         </div>
       </section>
-
+<section-divider></section-divider>
       <!-- :::::::::::::::::::::::::: WEB APPS / PROGRAMMING :::::::::::::::::::::::::: -->
       <section id="web-apps" class="portfolio-list-section section-dark">
         <div class="container-1080">
@@ -1841,7 +1636,7 @@
           </div>
         </div>
       </section>
-
+<section-divider></section-divider>
       <!-- :::::::::::::::::::::::::: GRAPHIC DESIGN CATEGORIES :::::::::::::::::::::::::: -->
       <section id="graphic-categories" class="graphic-section section-dark">
         <div class="container-1080">
@@ -1934,7 +1729,7 @@
           </div>
         </div>
       </section>
-
+<section-divider></section-divider>
       <!-- :::::::::::::::::::::::::: PORTFOLIO CTA :::::::::::::::::::::::::: -->
       <section class="portfolio-cta section-dark">
         <div class="container-1080">
@@ -1959,21 +1754,27 @@
           </div>
         </div>
       </section>
+
+      <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
+      <footer-component></footer-component>
+
+      <back-to-top></back-to-top>
+
+      <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->
+      <script src="/assets/src/core/i18n.js"></script>
+      <script type="module" src="/assets/src/components/header.js"></script>
+      <script src="/assets/src/components/blurup.js"></script>
+      <script type="module" src="/assets/src/components/language-selector.js"></script>
+      <script src="/assets/src/components/terminal-breadcrumb.js"></script>
+      <script type="module" src="/assets/src/components/footer.js"></script>
+      <script type="module" src="/assets/src/components/back-to-top.js"></script>
+
+      <script type="module" src="/assets/src/components/process-component.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+      <script src="../../assets/src/components/animations.js"></script>
     </main>
-
-    <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
-    <footer-component></footer-component>
-
-    <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->
-    <script type="module" src="../header-component.js"></script>
-    <script src="/assets/css/components/blurup.js"></script>
-    <script src="../language-component.js"></script>
-    <script src="/assets/css/components/breadcrumb.js"></script>
-    <script type="module" src="../footer-component.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-
-    <script src="../../assets/css/components/animations.js"></script>
   </body>
 </html>

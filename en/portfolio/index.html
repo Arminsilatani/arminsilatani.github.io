@@ -25,7 +25,7 @@
       sizes="32x32"
       href="/assets/images/icon-32.png"
     />
-    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/src/main.css" />
 
     <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
     <meta
@@ -102,105 +102,7 @@
     />
 
     <!-- :::::::::::::::::::::::::: SCHEMA :::::::::::::::::::::::::: -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebSite",
-            "@id": "https://arminsilatani.com/#WebSite",
-            "url": "https://arminsilatani.com/",
-            "name": "Armin Silatani",
-            "description": "Professional website design, SEO services, and Google Ads advertising provided by Armin Silatani. Free consultation.",
-            "inLanguage": "en",
-            "publisher": {
-              "@id": "https://arminsilatani.com/#Person"
-            }
-          },
-          {
-            "@type": "Person",
-            "@id": "https://arminsilatani.com/#Person",
-            "name": "Armin Silatani",
-            "url": "https://arminsilatani.com/en/",
-            "image": "https://arminsilatani.com/images/favicon.png",
-            "jobTitle": "Digital Marketing Specialist",
-            "description": "Digital Marketing Specialist providing professional website design, SEO services, and Google Ads advertising.",
-            "email": "contact@arminsilatani.com",
-            "telephone": "+989125759466",
-            "sameAs": [
-              "https://www.linkedin.com/in/arminsilatani/",
-              "https://github.com/Arminsilatani",
-              "https://www.instagram.com/arminsilatani",
-              "https://t.me/ArminSilatani",
-              "https://wa.me/+989125759466"
-            ]
-          },
-          {
-            "@type": "CollectionPage",
-            "@id": "https://arminsilatani.com/en/portfolio/#WebPage",
-            "url": "https://arminsilatani.com/en/portfolio/",
-            "name": "Portfolio of SEO and Design Projects | Armin Silatani",
-            "headline": "Portfolio of SEO and Design Projects",
-            "description": "Find examples of completed digital projects, from SEO work and website design to logo creation, catalogs, letterheads, and business cards.",
-            "inLanguage": "en",
-            "isPartOf": {
-              "@id": "https://arminsilatani.com/#WebSite"
-            },
-            "about": {
-              "@id": "https://arminsilatani.com/#Person"
-            },
-            "author": {
-              "@id": "https://arminsilatani.com/#Person"
-            },
-            "dateModified": "2026-07-13",
-            "breadcrumb": {
-              "@id": "https://arminsilatani.com/en/portfolio/#BreadcrumbList"
-            },
-            "mainEntity": {
-              "@id": "https://arminsilatani.com/en/portfolio/#MainEntity"
-            },
-            "sameAs": [
-              "https://arminsilatani.com/portfolio/",
-              "https://arminsilatani.com/ar/portfolio/",
-              "https://arminsilatani.com/tr/portfolio/",
-              "https://arminsilatani.com/de/portfolio/",
-              "https://arminsilatani.com/it/portfolio/"
-            ],
-            "_warnings": [
-              "Portfolio item detail pages, stable item URLs, project images, and complete project metadata are not available yet. Therefore, no ItemList or individual CreativeWork nodes have been added."
-            ]
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": "https://arminsilatani.com/en/portfolio/#BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://arminsilatani.com/en/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Portfolio",
-                "item": "https://arminsilatani.com/en/portfolio/"
-              }
-            ]
-          },
-          {
-            "@type": "ItemList",
-            "@id": "https://arminsilatani.com/en/portfolio/#MainEntity",
-            "name": "Portfolio Projects",
-            "description": "A collection of SEO, web design, and graphic design projects by Armin Silatani.",
-            "inLanguage": "en",
-            "itemListOrder": "https://schema.org/ItemListUnordered",
-            "numberOfItems": 0,
-            "itemListElement": []
-          }
-        ]
-      }
-    </script>
+
   </head>
 
   <!-- :::::::::::::::::::::::::: BODY :::::::::::::::::::::::::: -->
@@ -211,6 +113,20 @@
     <main class="has-footer-gap portfolio-main">
       <!-- :::::::::::::::::::::::::: HERO :::::::::::::::::::::::::: -->
       <section class="hero-section">
+                        <video
+        class="hero-section__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+    >
+        <source src="/assets/images/arminsilatani/services/seo/hero.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-section__noise" aria-hidden="true"></div>
+    <div class="hero-section__scanlines" aria-hidden="true"></div>
+    <div class="hero-section__glitch" aria-hidden="true"></div>
         <div class="container-1080 hero-container">
           <language-component></language-component>
           <div class="hero-title">
@@ -244,14 +160,7 @@
           </svg>
         </div>
 
-        <div class="fake-terminal-breadcrumb">
-          <div class="fake-terminal-inner">
-            <span class="cmd-prefix">$</span>
-            <span class="command">open</span>
-            <span id="terminalPath"></span>
-            <span class="cursor"></span>
-          </div>
-        </div>
+       <terminal-breadcrumb></terminal-breadcrumb>
       </section>
 
       <!-- :::::::::::::::::::::::::: PORTFOLIO INTRO :::::::::::::::::::::::::: -->
@@ -289,7 +198,7 @@
           </div>
         </div>
       </section>
-
+<section-divider></section-divider>
       <!-- :::::::::::::::::::::::::: MAIN PORTFOLIO CATEGORIES :::::::::::::::::::::::::: -->
       <section class="portfolio-categories section-dark">
         <div class="container-1080">
@@ -427,7 +336,7 @@
           </div>
         </div>
       </section>
-
+<section-divider></section-divider>
       <!-- :::::::::::::::::::::::::: SEO PROJECTS :::::::::::::::::::::::::: -->
       <section id="seo-projects" class="portfolio-list-section section-dark">
         <div class="container-1080">
@@ -759,7 +668,7 @@
           </div>
         </div>
       </section>
-
+<section-divider></section-divider>
       <!-- :::::::::::::::::::::::::: WEB DESIGN PROJECTS :::::::::::::::::::::::::: -->
       <section id="web-projects" class="portfolio-list-section section-dark">
         <div class="container-1080">
@@ -1039,7 +948,7 @@
           </div>
         </div>
       </section>
-
+<section-divider></section-divider>
       <!-- :::::::::::::::::::::::::: PROGRAMMING PORTFOLIO :::::::::::::::::::::::::: -->
       <section id="web-apps" class="portfolio-list-section section-dark">
         <div class="container-1080">
@@ -1711,7 +1620,7 @@
           </div>
         </div>
       </section>
-
+<section-divider></section-divider>
       <!-- :::::::::::::::::::::::::: GRAPHIC DESIGN PORTFOLIO :::::::::::::::::::::::::: -->
       <section id="graphic-categories" class="graphic-section section-dark">
         <div class="container-1080">
@@ -1804,7 +1713,7 @@
           </div>
         </div>
       </section>
-
+<section-divider></section-divider>
       <!-- :::::::::::::::::::::::::: PORTFOLIO CTA :::::::::::::::::::::::::: -->
       <section class="portfolio-cta section-dark">
         <div class="container-1080">
@@ -1835,15 +1744,17 @@
     <footer-component></footer-component>
 
     <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->
-    <script type="module" src="../header-component.js"></script>
-    <script src="/assets/css/components/blurup.js"></script>
-    <script src="../language-component.js"></script>
-    <script src="/assets/css/components/breadcrumb.js"></script>
-    <script type="module" src="../footer-component.js"></script>
+<script src="/assets/src/core/i18n.js"></script>
+<script type="module" src="/assets/src/components/header.js"></script>
+     <script src="/assets/src/components/blurup.js"></script>
+<script type="module" src="/assets/src/components/language-selector.js"></script>
+    <script src="/assets/src/components/terminal-breadcrumb.js"></script>
+    <script type="module" src="/assets/src/components/process-component.js"></script>
+<script type="module" src="/assets/src/components/footer.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
-    <script src="../../assets/css/components/animations.js"></script>
+    <script src="../../assets/src/components/animations.js"></script>
   </body>
 </html>

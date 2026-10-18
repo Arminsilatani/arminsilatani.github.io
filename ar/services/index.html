@@ -27,7 +27,7 @@
     />
 
     <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
-    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/src/main.css" />
 
     <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
     <meta
@@ -104,176 +104,7 @@
     />
 
     <!-- :::::::::::::::::::::::::: SCHEMA :::::::::::::::::::::::::: -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "Person",
-            "@id": "https://arminsilatani.com/ar/#person",
-            "name": "أرمين سيلاتاني",
-            "url": "https://arminsilatani.com/ar/",
-            "jobTitle": "خبير تحسين محركات البحث وتطوير الويب",
-            "image": "https://arminsilatani.com/assets/images/arminsilatani/services/FeaturedImage.webp",
-            "sameAs": [
-              "https://www.linkedin.com/in/arminsilatani/",
-              "https://twitter.com/arminsilatani",
-              "https://github.com/arminsilatani"
-            ]
-          },
-          {
-            "@type": "WebSite",
-            "@id": "https://arminsilatani.com/ar/#website",
-            "url": "https://arminsilatani.com/ar/",
-            "name": "أرمين سيلاتاني",
-            "publisher": {
-              "@id": "https://arminsilatani.com/ar/#person"
-            },
-            "inLanguage": "ar"
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": "https://arminsilatani.com/ar/services/#breadcrumb",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "الرئيسية",
-                "item": "https://arminsilatani.com/ar/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "الخدمات",
-                "item": "https://arminsilatani.com/ar/services/"
-              }
-            ]
-          },
-          {
-            "@type": ["WebPage", "CollectionPage"],
-            "@id": "https://arminsilatani.com/ar/services/#webpage",
-            "url": "https://arminsilatani.com/ar/services/",
-            "name": "خدمات تصميم المواقع وتحسين محركات البحث | أرمين سيلاتاني",
-            "description": "قائمة بخدمات أرمين سيلاتاني في تحسين محركات البحث، وتصميم المواقع، والتسويق الرقمي.",
-            "inLanguage": "ar",
-            "isPartOf": {
-              "@id": "https://arminsilatani.com/ar/#website"
-            },
-            "breadcrumb": {
-              "@id": "https://arminsilatani.com/ar/services/#breadcrumb"
-            },
-            "mainEntity": {
-              "@id": "https://arminsilatani.com/ar/services/#itemlist"
-            }
-          },
-          {
-            "@type": "ItemList",
-            "@id": "https://arminsilatani.com/ar/services/#itemlist",
-            "name": "قائمة الخدمات",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                  "@type": "Service",
-                  "@id": "https://arminsilatani.com/ar/services/seo/#service",
-                  "name": "تحسين محركات البحث (SEO)",
-                  "description": "أختار الكلمات المفتاحية اللي تجيب مبيعات فعلية، وأكتب محتوى يستهدف العملاء الجاهزين للشراء مش مجرد زوار عابرين.",
-                  "provider": { "@id": "https://arminsilatani.com/ar/#person" },
-                  "url": "https://arminsilatani.com/ar/services/seo",
-                  "image": "https://arminsilatani.com/assets/images/arminsilatani/services/FeaturedImage.webp",
-                  "areaServed": ["AE", "SA", "QA", "KW", "OM", "BH", "IQ", "EG"]
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                  "@type": "Service",
-                  "@id": "https://arminsilatani.com/ar/services/web-design/#service",
-                  "name": "تصميم المواقع الإلكترونية",
-                  "description": "أتابع موقعك من أول فكرة لحد ما يشتغل على الهوا. دورك بس تقول عايز إيه، والباقي عليّ.",
-                  "provider": { "@id": "https://arminsilatani.com/ar/#person" },
-                  "url": "https://arminsilatani.com/ar/services/web-design",
-                  "image": "https://arminsilatani.com/assets/images/arminsilatani/services/FeaturedImage.webp",
-                  "areaServed": ["AE", "SA", "QA", "KW", "OM", "BH", "IQ", "EG"]
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "item": {
-                  "@type": "Service",
-                  "@id": "https://arminsilatani.com/ar/services/ecommerce/#service",
-                  "name": "تصميم المتاجر الإلكترونية",
-                  "description": "أبنيلك متجر إلكتروني تقدر تدير منتجاتك وعروضك وطلباتك منه بسهولة، زي ما تتصفح جوالك بالضبط.",
-                  "provider": { "@id": "https://arminsilatani.com/ar/#person" },
-                  "url": "https://arminsilatani.com/ar/services/ecommerce",
-                  "image": "https://arminsilatani.com/assets/images/arminsilatani/services/FeaturedImage.webp",
-                  "areaServed": ["AE", "SA", "QA", "KW", "OM", "BH", "IQ", "EG"]
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 4,
-                "item": {
-                  "@type": "Service",
-                  "@id": "https://arminsilatani.com/ar/services/google-ads/#service",
-                  "name": "إعلانات جوجل",
-                  "description": "أشغّل إعلانات جوجل بدقة عشان كل كليك يجيبلك عميل جاد مهتم، مش فلوس تروح على الفاضي.",
-                  "provider": { "@id": "https://arminsilatani.com/ar/#person" },
-                  "url": "https://arminsilatani.com/ar/services/google-ads",
-                  "image": "https://arminsilatani.com/assets/images/arminsilatani/services/FeaturedImage.webp",
-                  "areaServed": ["AE", "SA", "QA", "KW", "OM", "BH", "IQ", "EG"]
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 5,
-                "item": {
-                  "@type": "Service",
-                  "@id": "https://arminsilatani.com/ar/services/graphics/#service",
-                  "name": "التصميم الجرافيكي",
-                  "description": "التصميم عندي مش للشكل بس. كل تصميم وراه هدف واضح: يلفت النظر، يبني ثقة، أو يزيد مبيعاتك.",
-                  "provider": { "@id": "https://arminsilatani.com/ar/#person" },
-                  "url": "https://arminsilatani.com/ar/services/graphics",
-                  "image": "https://arminsilatani.com/assets/images/arminsilatani/services/FeaturedImage.webp",
-                  "areaServed": ["AE", "SA", "QA", "KW", "OM", "BH", "IQ", "EG"]
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 6,
-                "item": {
-                  "@type": "Service",
-                  "@id": "https://arminsilatani.com/ar/services/social-media/#service",
-                  "name": "إدارة وسائل التواصل الاجتماعي",
-                  "description": "أشتغل على الهاشتاقات والترندات بذكاء عشان المحتوى بتاعك يطلع في الإكسبلور ويجذب متابعين فعلاً مهتمين بمجالك.",
-                  "provider": { "@id": "https://arminsilatani.com/ar/#person" },
-                  "url": "https://arminsilatani.com/ar/services/social-media",
-                  "image": "https://arminsilatani.com/assets/images/arminsilatani/services/FeaturedImage.webp",
-                  "areaServed": ["AE", "SA", "QA", "KW", "OM", "BH", "IQ", "EG"]
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 7,
-                "item": {
-                  "@type": "Service",
-                  "@id": "https://arminsilatani.com/ar/services/ui-ux/#service",
-                  "name": "تصميم واجهة وتجربة المستخدم (UI/UX)",
-                  "description": "أصمم كل زر ومسافة ومسار في الموقع على أساس سيكولوجية المستخدم، عشان يضغط أكثر ويكمل العملية لآخرها.",
-                  "provider": { "@id": "https://arminsilatani.com/ar/#person" },
-                  "url": "https://arminsilatani.com/ar/services/ui-ux",
-                  "image": "https://arminsilatani.com/assets/images/arminsilatani/services/FeaturedImage.webp",
-                  "areaServed": ["AE", "SA", "QA", "KW", "OM", "BH", "IQ", "EG"]
-                }
-              }
-            ]
-          }
-        ]
-      }
-    </script>
+    
 
     <!-- :::::::::::::::::::::::::: GSAP + SCROLLTRIGGER :::::::::::::::::::::::::: -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -287,6 +118,20 @@
     <main class="has-footer-gap">
       <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
       <section class="hero-section">
+                        <video
+        class="hero-section__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+    >
+        <source src="/assets/images/arminsilatani/services/seo/hero.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-section__noise" aria-hidden="true"></div>
+    <div class="hero-section__scanlines" aria-hidden="true"></div>
+    <div class="hero-section__glitch" aria-hidden="true"></div>
         <div class="hero-container container-1080">
           <language-component></language-component>
           <div class="hero-title">
@@ -318,14 +163,7 @@
             />
           </svg>
         </div>
-        <div class="fake-terminal-breadcrumb">
-          <div class="fake-terminal-inner">
-            <span class="cmd-prefix">$</span>
-            <span class="command">open</span>
-            <span id="terminalPath"></span>
-            <span class="cursor"></span>
-          </div>
-        </div>
+        <terminal-breadcrumb></terminal-breadcrumb>
       </section>
 
       <!-- :::::::::::::::::::::::::: SERVICES SECTION :::::::::::::::::::::::::: -->
@@ -334,7 +172,7 @@
           <div
             class="service-card reveal-card"
             data-index="0"
-            data-link="/services/seo"
+            data-link="/ar/services/seo"
           >
             <svg
               width="32"
@@ -349,7 +187,7 @@
               <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
               <polyline points="17 6 23 6 23 12"></polyline>
             </svg>
-            <h3>تحسين محركات البحث (SEO)</h3>
+            <h3>خدمات سيو</h3>
             <p class="card-desc">
               أختار الكلمات المفتاحية اللي تجيب مبيعات فعلية، وأكتب محتوى يستهدف
               العملاء الجاهزين للشراء مش مجرد زوار عابرين.
@@ -359,7 +197,7 @@
           <div
             class="service-card reveal-card"
             data-index="1"
-            data-link="/services/web-design"
+            data-link="/ar/services/web-design"
           >
             <svg
               width="32"
@@ -385,7 +223,7 @@
           <div
             class="service-card reveal-card"
             data-index="2"
-            data-link="/services/ecommerce"
+            data-link="/ar/services/ecommerce"
           >
             <svg
               width="32"
@@ -413,7 +251,7 @@
           <div
             class="service-card reveal-card"
             data-index="3"
-            data-link="/services/google-ads"
+            data-link="/ar/services/google-ads"
           >
             <svg
               width="32"
@@ -439,7 +277,7 @@
           <div
             class="service-card reveal-card"
             data-index="4"
-            data-link="/services/graphics"
+            data-link="/ar/services/graphics"
           >
             <svg
               width="32"
@@ -466,7 +304,7 @@
           <div
             class="service-card reveal-card"
             data-index="5"
-            data-link="/services/social-media"
+            data-link="/ar/services/social-media"
           >
             <svg
               width="32"
@@ -494,7 +332,7 @@
           <div
             class="service-card reveal-card"
             data-index="6"
-            data-link="/services/ui-ux"
+            data-link="/ar/services/ui-ux"
           >
             <svg
               width="32"
@@ -526,12 +364,13 @@
     <footer-component></footer-component>
 
     <!-- :::::::::::::::::::::::::: EXTERNAL SCRIPTS :::::::::::::::::::::::::: -->
-    <script type="module" src="../header-component.js"></script>
-    <script src="/assets/css/components/blurup.js"></script>
-    <script src="../language-component.js"></script>
-    <script src="/assets/css/components/breadcrumb.js"></script>
+    <script src="/assets/src/core/i18n.js"></script>
+<script type="module" src="/assets/src/components/header.js"></script>
+    <script src="/assets/src/components/blurup.js"></script>
+<script type="module" src="/assets/src/components/language-selector.js"></script>    
+<script src="/assets/src/components/terminal-breadcrumb.js"></script>
     <script type="module" src="../../services/services.js"></script>
-    <script type="module" src="../footer-component.js"></script>
+<script type="module" src="/assets/src/components/footer.js"></script>
 
     <!-- :::::::::::::::::::::::::: SERVICES SLIDER LOGIC :::::::::::::::::::::::::: -->
     <script>
@@ -649,6 +488,6 @@
     </script>
 
     <!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
-    <script src="/assets/css/components/animations.js"></script>
+    <script src="/assets/src/components/animations.js"></script>
   </body>
 </html>

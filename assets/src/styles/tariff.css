@@ -1,0 +1,1247 @@
+/* :::::::::::::::::::::::::: PRICING PAGE :::::::::::::::::::::::::: */
+
+/* :::::::::::::::::::::::::: GLOBAL BASE STYLES :::::::::::::::::::::::::: */
+body {
+    background: #0B0B0B;
+    color: #F5F5F5;
+    margin: 0;
+    padding: 0;
+}
+
+.container-1080 {
+    max-width: 1080px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.scrolling-text-inner {
+    display: inline-block;
+    white-space: nowrap;
+    width: auto;
+    max-width: none;
+    will-change: transform;
+}
+
+.sliding-text {
+    animation: slideText 6s linear infinite alternate;
+}
+
+/* :::::::::::::::::::::::::: CURRENCY SELECTOR :::::::::::::::::::::::::: */
+.currency-selector {
+    padding: 40px 40px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.currency-selector label {
+    color: #A0A0A0;
+    font-size: 0.9rem;
+}
+
+.currency-selector select {
+    background: #161616;
+    color: #4ECDC4;
+    border: 1px solid #333;
+    padding: 8px 16px;
+    border-radius: 8px;
+    outline: none;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.currency-selector select:hover {
+    border-color: #4ECDC4;
+}
+
+/* :::::::::::::::::::::::::: TABS & PACKAGE TABS :::::::::::::::::::::::::: */
+.tabs-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    flex-direction: row-reverse;
+}
+
+.pricing-tabs {
+    display: flex;
+    gap: 25px;
+    flex-direction: row-reverse;
+}
+
+.package-tabs-wrapper {
+    padding: 10px 40px;
+    margin-top: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.package-tabs {
+    display: flex;
+    gap: 25px;
+}
+
+/* :::::::::::::::::::::::::: PRICING TAB BUTTONS :::::::::::::::::::::::::: */
+.pricing-tab {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 400;
+    cursor: pointer;
+    color: #9A9A9A;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), color 0.25s ease, opacity 0.25s ease;
+}
+
+.pricing-tab.moving {
+    transform: translateX(-15px);
+    opacity: 0.7;
+}
+
+.pricing-tab.general:hover,
+.pricing-tab.general.active {
+    color: #4ECDC4;
+}
+
+.pricing-tab.specialist:hover,
+.pricing-tab.specialist.active {
+    color: #FFE76D;
+}
+
+/* :::::::::::::::::::::::::: PACKAGE TAB BUTTONS :::::::::::::::::::::::::: */
+.package-tab {
+    background: none;
+    border: none;
+    font-family: inherit;
+    padding: 5px 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+    cursor: pointer;
+    color: #9A9A9A;
+    position: relative;
+    transition: color 0.25s ease;
+}
+
+.package-tab:hover {
+    color: #F5F5F5;
+}
+
+.package-tab.active {
+    color: var(--tab-color, #4ECDC4);
+}
+
+.package-tab::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--tab-color, #4ECDC4);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* :::::::::::::::::::::::::: PRICING WRAPPER :::::::::::::::::::::::::: */
+.pricing-wrapper {
+    padding: 0 50px;
+    margin-top: 40px;
+    font-family: var(--font-family, inherit);
+}
+
+/* :::::::::::::::::::::::::: SERVICE SECTIONS & ACCORDION :::::::::::::::::::::::::: */
+.service-section {
+    margin-bottom: 40px;
+    position: relative;
+    width: 100%;
+    display: flow-root;
+}
+
+.service-section:last-child {
+    margin-bottom: 150px;
+}
+
+.service-header {
+    padding-right: 40px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    cursor: default;
+}
+
+.service-header h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+    user-select: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* :::::::::::::::::::::::::: SERVICE DOT (ACCORDION INDICATOR) :::::::::::::::::::::::::: */
+.service-dot {
+    position: absolute;
+    right: 0;
+    top: 9px;
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--tab-color, #4ECDC4);
+    border-radius: 50%;
+    background: transparent;
+    box-sizing: border-box;
+    transition:
+        height 0.4s ease 0s,
+        border-radius 0.3s ease 0.4s,
+        background 0.3s ease 0.4s,
+        border-width 0.3s ease 0.4s,
+        width 0.3s ease 0.4s,
+        top 0.3s ease 0.7s,
+        border-color 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s ease 0s;
+    position: relative;
+    z-index: 2;
+}
+
+.service-content {
+    overflow: hidden;
+    min-height: 0;
+    opacity: 0;
+    padding-bottom: 2px;
+    transition: opacity 0.2s ease 0s;
+}
+
+.service-content p {
+    padding: 24px 40px 10px;
+    margin: 0;
+    line-height: 1.8;
+    color: #A0A0A0;
+    font-size: 0.95rem;
+}
+
+/* :::::::::::::::::::::::::: ACCORDION ACTIVE STATES :::::::::::::::::::::::::: */
+.service-section.active .service-dot {
+    top: 45px;
+    width: 100%;
+    height: calc(100% - 45px);
+    border-radius: 18px;
+    background: #161616;
+    border-width: 2px;
+    border-color: var(--tab-color, #4ECDC4);
+    transition:
+        top 0.3s ease 0s,
+        width 0.3s ease 0.3s,
+        background 0.3s ease 0.3s,
+        border-width 0.3s ease 0.3s,
+        border-radius 0.3s ease 0.3s,
+        height 0.4s ease 0.6s,
+        border-color 0.45s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+
+.service-section.active .service-card {
+    grid-template-rows: 1fr;
+    transition: grid-template-rows 0.4s ease 0.6s;
+}
+
+.service-section.active .service-content {
+    opacity: 1;
+    transition: opacity 0.3s ease 0.7s;
+}
+
+/* :::::::::::::::::::::::::: PIN BUTTON :::::::::::::::::::::::::: */
+.pin-btn {
+    position: absolute;
+    left: 15px;
+    top: 9px;
+    background: transparent;
+    border: none;
+    color: #54595F;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+.pin-btn svg {
+    width: 18px;
+    height: 18px;
+    transition: color 0.3s ease;
+}
+
+.pin-btn:hover {
+    color: #F5F5F5;
+}
+
+.service-section.active .pin-btn {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    transition: opacity 0.4s ease 1.5s, transform 0.4s ease 1.5s;
+}
+
+.service-section.pinned .pin-btn {
+    color: #F5F5F5;
+}
+
+/* :::::::::::::::::::::::::: SUB-SERVICES & ITEMS :::::::::::::::::::::::::: */
+.sub-services {
+    padding: 0 40px 24px;
+}
+
+.sub-item {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 14px 0;
+    flex-wrap: nowrap;
+}
+
+.sub-item:not([style*="display: none"]) {
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+}
+
+.sub-item > .price-display,
+.sub-item > .service-title-group {
+    flex: 0 0 auto;
+}
+
+.sub-item label {
+    display: flex;
+    align-items: center;
+    flex: 0 1 auto;
+    min-width: 0;
+    margin: 0;
+    order: 3;
+    margin-left: auto;
+}
+
+/* :::::::::::::::::::::::::: PRICE DISPLAY :::::::::::::::::::::::::: */
+.price-display {
+    color: #F5F5F5;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.sub-item .price-display {
+    font-size: 0.8rem;
+}
+
+.service-title-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: help;
+}
+
+/* :::::::::::::::::::::::::: QUANTITY CONTROL :::::::::::::::::::::::::: */
+.qty-control-minimal {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+}
+
+label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+.sub-item .qty-control-minimal {
+    flex-shrink: 0;
+    margin-right: auto;
+    margin-left: 8px;
+}
+
+.sub-item > .qty-control-minimal {
+    order: 2;
+    margin: 0;
+}
+
+.qty-control-minimal .qty-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #A0A0A0;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    padding: 0;
+}
+
+.qty-control-minimal .qty-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #F5F5F5;
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.qty-text {
+    flex-shrink: 0;
+    margin-left: 6px;
+    display: inline-block;
+}
+
+/* :::::::::::::::::::::::::: GROUPED SERVICES BOX :::::::::::::::::::::::::: */
+.sub-group-box {
+    border: 1px solid rgba(78, 205, 196, 0.6);
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin: 12px 0 18px 0;
+    background: rgba(22, 22, 22, 0.96);
+}
+
+.sub-group-box .sub-item {
+    border-bottom: none;
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+.sub-group-box:empty {
+    display: none;
+}
+
+.grouped-services-box {
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    margin-bottom: 24px;
+    margin-right: -16px;
+    margin-left: -16px;
+    padding: 1px 16px 8px 16px;
+    transition: all 0.3s ease;
+}
+
+.grouped-services-box .sub-item {
+    border-bottom: none !important;
+    padding-bottom: 0px;
+    margin-bottom: 4px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.grouped-services-box .sub-item:last-child {
+    margin-bottom: 4px;
+}
+
+/* :::::::::::::::::::::::::: FINAL INVOICE SECTION :::::::::::::::::::::::::: */
+#final-invoice-section {
+    margin-top: 60px;
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-20px);
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#final-invoice-section.show-invoice {
+    visibility: visible;
+    opacity: 1;
+    max-height: 1000px;
+    transform: translateY(0);
+    margin-top: 40px;
+}
+
+#final-invoice-section .service-card {
+    padding: 25px 40px;
+    box-sizing: border-box;
+}
+
+/* :::::::::::::::::::::::::: INVOICE HEADER :::::::::::::::::::::::::: */
+.invoice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.invoice-header h3 {
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: 600;
+    color: #F5F5F5;
+}
+
+#invoice-total-amount {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4ECDC4;
+}
+
+/* :::::::::::::::::::::::::: INVOICE ITEMS LIST :::::::::::::::::::::::::: */
+#invoice-items-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.invoice-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    width: 100%;
+    box-sizing: border-box;
+    opacity: 0;
+    will-change: transform, opacity, max-height;
+    gap: 2px;
+    direction: rtl;
+}
+
+.invoice-item:last-child {
+    border-bottom: none;
+}
+
+.invoice-item.visible {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    opacity: 1;
+    overflow: visible;
+}
+
+.invoice-item .sliding-text-container {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.invoice-item .scrolling-text-inner.animate {
+    animation: marquee 8s linear infinite;
+}
+
+.invoice-item .item-name {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: right;
+}
+
+.invoice-item .item-name .scrolling-text-inner {
+    display: inline-flex;
+    justify-content: flex-start;
+}
+
+.invoice-item .item-price {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    text-align: left;
+    direction: rtl;
+}
+
+.invoice-item::before {
+    content: "";
+    display: block;
+    flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    margin-left: 10px;
+    border-radius: 50%;
+    animation: pulseColorNeon 2s ease-in-out infinite;
+    --c-on: #4ECDC4;
+}
+
+.invoice-item.bullet-yellow::before {
+    --c-on: #FFE76D;
+}
+
+.invoice-item.bullet-green::before {
+    --c-on: #4ECDC4;
+}
+
+.invoice-item.bullet-white::before {
+    --c-on: #F5F5F5;
+}
+
+.invoice-item.entering {
+    animation: slideDownItem 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.invoice-item.leaving {
+    animation: slideUpItem 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* :::::::::::::::::::::::::: ANIMATIONS :::::::::::::::::::::::::: */
+@keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes pulseColorNeon {
+    0%, 100% {
+        background-color: #7A7A7A;
+        filter: drop-shadow(0 0 1px #7A7A7A);
+        opacity: 0.2;
+    }
+    50% {
+        background-color: var(--c-on);
+        filter: drop-shadow(0 0 4px var(--c-on));
+        opacity: 1;
+    }
+}
+
+@keyframes slideDownItem {
+    0% {
+        max-height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    100% {
+        max-height: 100px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUpItem {
+    0% {
+        max-height: 100px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        max-height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        opacity: 0;
+        transform: translateY(-15px);
+        border-color: transparent;
+    }
+}
+
+/* :::::::::::::::::::::::::: LTR OVERRIDES :::::::::::::::::::::::::: */
+
+[dir="ltr"] .pin-btn {
+    left: auto;
+    right: 15px;
+}
+
+[dir="ltr"] .service-dot {
+    right: auto;
+    left: 0;
+}
+
+[dir="ltr"] .service-section.active .service-dot {
+    right: auto;
+    left: 0;
+}
+
+[dir="ltr"] .service-header {
+    padding-right: 0;
+    padding-left: 40px;
+}
+
+[dir="ltr"] .sub-item {
+    flex-direction: row;
+}
+
+[dir="ltr"] .price-display {
+    order: 2;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+[dir="ltr"] .sub-item label {
+    order: 0;
+    margin-left: 0;
+    margin-right: 0;
+    flex: 0 1 auto;
+}
+
+[dir="ltr"] .sub-item > .qty-control-minimal {
+    order: 1;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+[dir="ltr"] .invoice-item {
+    direction: ltr;
+}
+
+[dir="ltr"] .invoice-item .item-name {
+    text-align: left;
+}
+
+[dir="ltr"] .invoice-item .item-price {
+    text-align: right;
+    direction: ltr;
+}
+
+[dir="ltr"] .invoice-item::before {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+[dir="ltr"] .tabs-container {
+    flex-direction: row;
+}
+
+[dir="ltr"] .pricing-tabs {
+    flex-direction: row;
+}
+
+html[dir="ltr"] .yellow-checkbox-checked-label .qty-text {
+    margin-right: 6px;
+}
+
+html[dir="ltr"] .sub-item label.white-checkbox-container {
+    order: 1;
+}
+
+html[dir="ltr"] .sub-item .qty-control-minimal {
+    order: 2;
+    margin-left: 6px;
+}
+
+html[dir="ltr"] .sub-item .price-display {
+    order: 3;
+    margin-left: auto;
+}
+
+html[dir="ltr"] .tabs-header,
+html[dir="ltr"] .pricing-header,
+html[dir="ltr"] .invoice-top-row {
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100%;
+}
+
+html[dir="ltr"] .pricing-tabs {
+    order: 2 !important;
+    display: flex;
+    justify-content: flex-end;
+}
+
+html[dir="ltr"] .package-tabs {
+    order: 1 !important;
+    display: flex;
+    justify-content: flex-start;
+}
+
+html[dir="ltr"] .pricing-tabs {
+    display: flex !important;
+    flex-direction: row-reverse !important;
+}
+
+html[dir="ltr"] .qty-text {
+    margin-left: 0 !important;
+    margin-right: 6px !important;
+}
+
+/* :::::::::::::::::::::::::: MOBILE STYLES (MAX-WIDTH: 768PX) :::::::::::::::::::::::::: */
+@media (max-width: 768px) {
+
+    /* :::::::::::::::::::::::::: LAYOUT CONTAINERS :::::::::::::::::::::::::: */
+    .pricing-wrapper {
+        padding: 20px 10px 40px;
+        margin-bottom: 30px;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .service-section,
+    .service-content,
+    .service-card,
+    #final-invoice-section {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .service-section {
+        max-width: 100%;
+        display: block;
+    }
+
+    .service-card {
+        margin: 0;
+        border-radius: 16px;
+        background: transparent;
+    }
+
+    #final-invoice-section {
+        margin: 12px 0 0;
+        padding: 0;
+    }
+
+    #final-invoice-section .service-card {
+        padding: 20px 15px;
+    }
+
+    #final-invoice-section h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.6rem;
+    }
+
+    /* :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: */
+    .service-header {
+        display: flex;
+        align-items: center;
+        padding-right: 36px;
+        padding-left: 15px;
+        min-height: 46px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* :::::::::::::::::::::::::: GREEN DOT ANIMATION :::::::::::::::::::::::::: */
+    .service-dot {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        right: 12px;
+        top: 23px;
+        transform: translateY(-50%);
+        opacity: 0.8;
+        transition: height 0.25s ease 0s,
+                    border-radius 0.25s ease 0s,
+                    width 0.25s ease 0.25s,
+                    right 0.15s ease 0.5s,
+                    top 0.2s ease 0.65s,
+                    transform 0.2s ease 0.65s;
+    }
+
+    .service-section.active .service-dot {
+        top: 46px;
+        right: 0;
+        transform: translateY(0);
+        width: 100%;
+        height: calc(100% - 46px);
+        border-radius: 16px;
+        border-width: 1px;
+        border-style: solid;
+        box-sizing: border-box;
+        transition: top 0.2s ease 0s,
+                    transform 0.2s ease 0s,
+                    right 0.15s ease 0.2s,
+                    width 0.25s ease 0.35s,
+                    height 0.25s ease 0.6s,
+                    border-radius 0.25s ease 0.6s;
+    }
+
+    /* :::::::::::::::::::::::::: TABS :::::::::::::::::::::::::: */
+    .tabs-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        padding: 5px;
+        box-sizing: border-box;
+        width: 100%;
+        height: 42px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .tabs-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tabs-container::after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 16px;
+        background-color: rgba(255, 255, 255, 0.2);
+        order: 2;
+        margin: 0 auto;
+        flex-shrink: 0;
+    }
+
+    .package-tabs,
+    .pricing-tabs {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .package-tabs {
+        order: 1;
+        gap: 10px;
+    }
+
+    .pricing-tabs {
+        order: 3;
+        gap: 4px;
+    }
+
+    .package-tabs::after,
+    .pricing-tabs::after,
+    .pricing-tabs::before {
+        display: none;
+    }
+
+    .pricing-tab,
+    .package-tab {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        font-size: 0.85rem;
+        padding: 6px 6px;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+    }
+
+    /* :::::::::::::::::::::::::: SERVICES LIST :::::::::::::::::::::::::: */
+    .grouped-services-box {
+        margin-right: 0;
+        margin-left: 0;
+        padding: 12px 10px;
+    }
+
+    .sub-services {
+        padding: 10px 15px 20px;
+        overflow: hidden;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .sub-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 14px 0;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+    }
+
+    .sub-item:last-child {
+        border-bottom: none;
+    }
+
+    /* :::::::::::::::::::::::::: PIN BUTTON & PRICE :::::::::::::::::::::::::: */
+    .pin-btn {
+        top: 9px;
+        left: 20px;
+    }
+
+    .price-display {
+        flex-shrink: 0;
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: #94A3B8;
+        white-space: nowrap;
+        background: rgba(255, 255, 255, 0.03);
+        padding: 4px 8px;
+        border-radius: 6px;
+    }
+
+    /* :::::::::::::::::::::::::: ICONS :::::::::::::::::::::::::: */
+    .green-checkbox,
+    .green-checkbox-checked,
+    .yellow-checkbox,
+    .service-checkbox {
+        flex: 0 0 auto;
+    }
+
+    /* :::::::::::::::::::::::::: SLIDING TEXT :::::::::::::::::::::::::: */
+    .scrolling-text-inner {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        white-space: nowrap;
+        will-change: transform;
+        direction: rtl;
+    }
+
+    .scrolling-text-inner br {
+        display: none;
+    }
+
+    .sliding-text {
+        animation: slideTextInside 8s linear infinite;
+    }
+
+    /* :::::::::::::::::::::::::: INVOICE ITEM :::::::::::::::::::::::::: */
+    .invoice-item {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        overflow: hidden;
+        gap: 10px;
+        box-sizing: border-box;
+        padding-right: 7px;
+    }
+
+    .invoice-item::before {
+        margin-left: 1px;
+        width: 5px;
+        height: 5px;
+    }
+
+    .invoice-item .sliding-text-container {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .sliding-text-container {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: flex-start;
+        flex: 1 1 0%;
+        min-width: 0;
+        direction: rtl;
+        text-align: right;
+    }
+
+    .invoice-item-price {
+        flex-shrink: 0;
+        font-weight: normal;
+        white-space: nowrap;
+    }
+
+    .invoice-item .scrolling-text-inner {
+        display: inline-flex;
+        align-items: center;
+        width: max-content;
+        max-width: none;
+        min-width: 100%;
+        overflow: visible;
+        white-space: nowrap;
+        will-change: transform;
+    }
+
+    .invoice-item .item-price {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        font-size: 0.85rem;
+        font-weight: normal;
+        direction: rtl;
+    }
+
+    .invoice-item .item-name {
+        flex: 1 1 0%;
+        min-width: 0;
+        width: 0;
+        display: block;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* :::::::::::::::::::::::::: PREVENT WRAPPING & KEEP SLIDING TEXT (MOBILE) :::::::::::::::::::::::::: */
+    .sub-item {
+        flex-wrap: nowrap !important;
+    }
+
+    .sub-item label.white-checkbox-container {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .sub-item .sliding-text-container {
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .sub-item .scrolling-text-inner {
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    /* :::::::::::::::::::::::::: LTR SLIDING DIRECTION FIX :::::::::::::::::::::::::: */
+    html[dir="ltr"] .sliding-text-container,
+    html[dir="ltr"] .invoice-item .sliding-text-container {
+        direction: ltr !important;
+        text-align: left !important;
+        justify-content: flex-start !important;
+    }
+
+    html[dir="ltr"] .scrolling-text-inner,
+    html[dir="ltr"] .invoice-item .scrolling-text-inner {
+        direction: ltr !important;
+        text-align: left !important;
+    }
+
+    html[dir="ltr"] .sliding-text {
+        animation-name: slideTextInsideLTR !important;
+        animation-duration: 8s !important;
+        animation-timing-function: linear !important;
+        animation-iteration-count: infinite !important;
+    }
+
+    html[dir="ltr"] .sub-item {
+        flex-direction: row !important;
+    }
+
+    html[dir="ltr"] .tabs-container {
+        flex-direction: row !important;
+    }
+
+    html[dir="ltr"] .package-tabs {
+        order: 1 !important;
+    }
+
+    html[dir="ltr"] .tabs-container::after {
+        order: 2 !important;
+        margin: 0 10px !important;
+    }
+
+    html[dir="ltr"] .pricing-tabs {
+        order: 3 !important;
+    }
+
+    @keyframes slideTextInsideLTR {
+        0%,
+        15% {
+            transform: translateX(0);
+        }
+        45%,
+        55% {
+            transform: translateX(calc(-1 * (var(--overflow-amount, 80px) + 16px)));
+        }
+        85%,
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
+
+/* ===================================================================== */
+/* ============================ 320px = XS ============================= */
+/* iPhone 5 (568x320)                                                    */
+/* ===================================================================== */
+
+@media (min-width: 320px) {
+
+}
+
+/* ===================================================================== */
+/* ============================ 380px = S ============================== */
+/* Galaxy Z Flip 3 (880x360) | Galaxy S24 Ultra (891x412)                */
+/* ===================================================================== */
+
+@media (min-width: 380px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 440px = S+ ============================== */
+/* iPhone 17 Pro Max (956x440)                                           */
+/* ===================================================================== */
+
+@media (min-width: 440px) {
+
+}
+
+/* ===================================================================== */
+/* ============================ 480px = M ============================== */
+/* —                                                                     */
+/* ===================================================================== */
+
+@media (min-width: 480px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 768px = TAB ============================= */
+/* iPad Mini (1024x768) | Galaxy Fold inner (1076x768)                   */
+/* ===================================================================== */
+
+@media (min-width: 768px) {
+
+}
+
+/* ===================================================================== */
+/* ========================== 800px = TAB+ ============================= */
+/* Galaxy Tab S7 (1280x800)                                              */
+/* ===================================================================== */
+
+@media (min-width: 800px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 1024px = L ============================== */
+/* iPad Pro 13 (1376x1032)                                               */
+/* ===================================================================== */
+
+@media (min-width: 1024px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 1366px = XL ============================= */
+/* Desktop / Laptop FHD                                                  */
+/* ===================================================================== */
+
+@media (min-width: 1366px) {
+
+}
+
+/* ===================================================================== */
+/* ========================== 1920px = 2XL ============================= */
+/* Full HD / 2K                                                          */
+/* ===================================================================== */
+
+@media (min-width: 1920px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 2560px = UW ============================= */
+/* Ultrawide (3440x1440) | 4K UHD (2160x3840)                            */
+/* ===================================================================== */
+
+@media (min-width: 2560px) {
+
+}
+
+/* ===================================================================== */
+/* ======================= LANDSCAPE PHONE ============================= */
+/* iPhone 17 PM / S24 Ultra در حالت افقی (ارتفاع کم)                     */
+/* ===================================================================== */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+}

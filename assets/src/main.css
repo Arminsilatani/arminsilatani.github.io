@@ -1,0 +1,40 @@
+/* :::::::::::::::::::::::::: COMPONENTS :::::::::::::::::::::::::: */
+@import url("components/terminal-breadcrumb.css");
+@import url("components/faq.css");
+@import url("components/testimonial.css");
+@import url("components/field-prefix.css");
+@import url("components/process-component.css");
+@import url("components/hero.css");
+@import url("components/section-divider.css");
+/*
+@import url("components/quote.css");
+*/
+
+/* :::::::::::::::::::::::::: CORE :::::::::::::::::::::::::: */
+@import url("core/animations.css");
+@import url("core/base.css");
+@import url("core/buttons.css");
+@import url("core/checkbox.css");
+@import url("core/containers.css");
+@import url("core/fonts.css");
+@import url("core/images.css");
+@import url("core/links.css");
+@import url("core/typography.css");
+
+
+/* :::::::::::::::::::::::::: STYLES :::::::::::::::::::::::::: */
+@import url("styles/home.css");
+@import url("styles/contact.css");
+@import url("styles/about.css");
+@import url("styles/services.css");
+@import url("styles/tariff.css");
+@import url("styles/sitemap.css");
+@import url("styles/portfolio.css");
+@import url("styles/portfolio-graphic.css");
+@import url("styles/seo.css");
+/*
+@import url("styles/logodesign.css");
+@import url("styles/letterheaddesign.css");
+@import url("styles/cataloguedesign.css");
+@import url("styles/contractpagedesign.css");
+*/

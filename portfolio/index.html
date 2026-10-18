@@ -26,7 +26,7 @@
     />
 
     <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
-    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/src/main.css" />
 
     <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
     <meta
@@ -103,108 +103,7 @@
     />
 
     <!-- :::::::::::::::::::::::::: SCHEMA :::::::::::::::::::::::::: -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebSite",
-            "@id": "https://arminsilatani.com/#WebSite",
-            "url": "https://arminsilatani.com/",
-            "name": "آرمین سیلاطانی",
-            "description": "طراحی سایت، خدمات سئو حرفه‌ای و تبلیغات گوگل ادز — ارائه توسط آرمین سیلاطانی. مشاوره رایگان",
-            "publisher": {
-              "@id": "https://arminsilatani.com/#Person"
-            },
-            "inLanguage": "fa"
-          },
-          {
-            "@type": "Person",
-            "@id": "https://arminsilatani.com/#Person",
-            "name": "آرمین سیلاطانی",
-            "jobTitle": "متخصص دیجیتال مارکتینگ",
-            "url": "https://arminsilatani.com/",
-            "image": "https://arminsilatani.com/images/favicon.png",
-            "email": "mailto:contact@arminsilatani.com",
-            "telephone": "+989125759466",
-            "sameAs": [
-              "https://www.linkedin.com/in/arminsilatani/",
-              "https://github.com/Arminsilatani",
-              "https://www.instagram.com/arminsilatani",
-              "https://t.me/ArminSilatani",
-              "https://wa.me/+989125759466"
-            ]
-          },
-          {
-            "@type": "CollectionPage",
-            "@id": "https://arminsilatani.com/portfolio/#WebPage",
-            "url": "https://arminsilatani.com/portfolio/",
-            "name": "نمونه کارهای من | آرمین سیلاطانی",
-            "description": "در این صفحه نمونه کارهای انجام شده در سه بخش اصلی طراحی سایت، سئو و گرافیک دسته‌بندی شده‌اند تا شما بتوانید جزئیات پروژه‌ها را به دقت ارزیابی کنید.",
-            "isPartOf": {
-              "@id": "https://arminsilatani.com/#WebSite"
-            },
-            "about": {
-              "@id": "https://arminsilatani.com/#Person"
-            },
-            "breadcrumb": {
-              "@id": "https://arminsilatani.com/portfolio/#BreadcrumbList"
-            },
-            "inLanguage": "fa",
-            "sameAs": [
-              "https://arminsilatani.com/en/portfolio/",
-              "https://arminsilatani.com/ar/portfolio/",
-              "https://arminsilatani.com/tr/portfolio/",
-              "https://arminsilatani.com/de/portfolio/",
-              "https://arminsilatani.com/it/portfolio/"
-            ],
-            "mainEntity": {
-              "@type": "ItemList",
-              "@id": "https://arminsilatani.com/portfolio/#ItemList",
-              "name": "لیست نمونه کارهای طراحی سایت، سئو و گرافیک",
-              "___ATTENTION___": "👇👇👇 جایگاه اضافه کردن آیتم‌های نمونه کار - در اینجا ویرایش کنید 👇👇👇",
-              "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "url": "https://arminsilatani.com/portfolio/project-1-url",
-                  "name": "نام پروژه اول (مثلا: ایران کالا)"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "url": "https://arminsilatani.com/portfolio/project-2-url",
-                  "name": "نام پروژه دوم (مثلا: هولدینگ پایا)"
-                }
-              ],
-              "___END_ATTENTION___": "👆👆👆 پایان جایگاه نمونه کارها 👆👆👆"
-            }
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": "https://arminsilatani.com/portfolio/#BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                  "@id": "https://arminsilatani.com/",
-                  "name": "خانه"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                  "@id": "https://arminsilatani.com/portfolio/",
-                  "name": "نمونه کارهای من"
-                }
-              }
-            ]
-          }
-        ]
-      }
-    </script>
+
   </head>
 
   <!-- :::::::::::::::::::::::::: BODY :::::::::::::::::::::::::: -->
@@ -216,10 +115,27 @@
     <main class="has-footer-gap portfolio-main">
       <!-- :::::::::::::::::::::::::: HERO :::::::::::::::::::::::::: -->
       <section class="hero-section">
+                        <video
+        class="hero-section__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+    >
+        <source src="/assets/images/arminsilatani/services/seo/hero.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-section__noise" aria-hidden="true"></div>
+    <div class="hero-section__scanlines" aria-hidden="true"></div>
+    <div class="hero-section__glitch" aria-hidden="true"></div>
         <div class="container-1080 hero-container">
           <language-component></language-component>
           <div class="hero-title">
-            <h1>نمونه کارها</h1>
+            <h1>
+                <span class="split-title">نمونه کارها</span>
+                <span class="h1_sub reveal-up">----------</span>
+            </h1>
           </div>
         </div>
 
@@ -249,14 +165,7 @@
           </svg>
         </div>
 
-        <div class="fake-terminal-breadcrumb">
-          <div class="fake-terminal-inner">
-            <span class="cmd-prefix">$</span>
-            <span class="command">open</span>
-            <span id="terminalPath"></span>
-            <span class="cursor"></span>
-          </div>
-        </div>
+      <terminal-breadcrumb></terminal-breadcrumb>
       </section>
 
       <!-- :::::::::::::::::::::::::: PORTFOLIO INTRO :::::::::::::::::::::::::: -->
@@ -294,7 +203,7 @@
           </div>
         </div>
       </section>
-
+<section-divider></section-divider>
       <!-- :::::::::::::::::::::::::: PORTFOLIO CATEGORIES :::::::::::::::::::::::::: -->
       <section class="portfolio-categories section-dark">
         <div class="container-1080">
@@ -434,7 +343,7 @@
           </div>
         </div>
       </section>
-
+<section-divider></section-divider>
       <!-- :::::::::::::::::::::::::: SEO PROJECTS :::::::::::::::::::::::::: -->
       <section id="seo-projects" class="portfolio-list-section section-dark">
         <div class="container-1080">
@@ -762,7 +671,7 @@
           </div>
         </div>
       </section>
-
+<section-divider></section-divider>
       <!-- :::::::::::::::::::::::::: WEB PROJECTS :::::::::::::::::::::::::: -->
       <section id="web-projects" class="portfolio-list-section section-dark">
         <div class="container-1080">
@@ -1030,7 +939,7 @@
           </div>
         </div>
       </section>
-
+<section-divider></section-divider>
       <!-- :::::::::::::::::::::::::: WEB APPS / PROGRAMMING :::::::::::::::::::::::::: -->
       <section id="web-apps" class="portfolio-list-section section-dark">
         <div class="container-1080">
@@ -1702,7 +1611,7 @@
           </div>
         </div>
       </section>
-
+<section-divider></section-divider>
       <!-- :::::::::::::::::::::::::: GRAPHIC DESIGN CATEGORIES :::::::::::::::::::::::::: -->
       <section id="graphic-categories" class="graphic-section section-dark">
         <div class="container-1080">
@@ -1783,7 +1692,7 @@
           </div>
         </div>
       </section>
-
+<section-divider></section-divider>
       <!-- :::::::::::::::::::::::::: PORTFOLIO CTA :::::::::::::::::::::::::: -->
       <section class="portfolio-cta section-dark">
         <div class="container-1080">
@@ -1808,19 +1717,26 @@
       </section>
     </main>
 
-    <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
-    <footer-component></footer-component>
+        <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
 
-    <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->
-    <script type="module" src="../header-component.js"></script>
-    <script src="/assets/css/components/blurup.js"></script>
-    <script src="../language-component.js"></script>
-    <script src="/assets/css/components/breadcrumb.js"></script>
-    <script type="module" src="../footer-component.js"></script>
+        <footer-component></footer-component>
+        <back-to-top></back-to-top>
+
+
+        <!-- :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: -->
+
+        <script src="/assets/src/core/i18n.js"></script>
+        <script type="module" src="/assets/src/components/header.js"></script>
+        <script src="/assets/src/components/blurup.js"></script>
+        <script type="module" src="/assets/src/components/language-selector.js"></script>
+        <script src="/assets/src/components/terminal-breadcrumb.js"></script>
+        <script type="module" src="/assets/src/components/footer.js"></script>
+        <script type="module" src="/assets/src/components/back-to-top.js"></script>
+        <script type="module" src="/assets/src/components/process-component.js"></script>
+        <script src="/assets/src/core/animations.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
-    <script src="/assets/css/components/animations.js"></script>
   </body>
 </html>

@@ -1,0 +1,2787 @@
+/* ===================================================================== */
+/* ================== 01. RESET & CSS VARIABLES ======================= */
+/* ===================================================================== */
+
+.seo-page *,
+.seo-page *::before,
+.seo-page *::after {
+    box-sizing: border-box;
+}
+
+.seo-page {
+    --seo-brand: #4ECDC4;
+    --seo-brand-dark: #35A89F;
+    --seo-brand-darker: #04201F;
+    --seo-ink: #0D0D0D;
+    --seo-surface: #141414;
+    --seo-surface-2: #0A0A0A;
+    --seo-text-70: rgba(255, 255, 255, .7);
+    --seo-text-60: rgba(255, 255, 255, .6);
+    --seo-text-50: rgba(255, 255, 255, .5);
+    --seo-text-40: rgba(255, 255, 255, .4);
+    --seo-text-30: rgba(255, 255, 255, .3);
+    --seo-border: rgba(78, 205, 196, .16);
+    --seo-border-hover: rgba(78, 205, 196, .45);
+    --seo-border-strong: rgba(78, 205, 196, .25);
+    --seo-ease-out: cubic-bezier(.16, 1, .3, 1);
+    --seo-ease-smooth: cubic-bezier(.4, 0, .2, 1);
+
+    position: relative;
+    isolation: isolate;
+}
+
+.seo-page ul,
+.seo-page ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.seo-page a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.seo-page button {
+    font: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    padding: 0;
+}
+
+.seo-page input,
+.seo-page textarea {
+    font: inherit;
+    color: inherit;
+}
+
+.seo-page img,
+.seo-page svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* ===================================================================== */
+/* ======================== 02. UTILITIES ============================= */
+/* ===================================================================== */
+
+.seo-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+}
+
+.seo-container-narrow {
+    max-width: 56rem;
+}
+
+.seo-relative {
+    position: relative;
+}
+
+.seo-text-brand {
+    color: var(--seo-brand);
+}
+
+.seo-text-right {
+    text-align: right;
+}
+
+.seo-hidden {
+    display: none;
+}
+
+.seo-ltr {
+    direction: ltr;
+    unicode-bidi: embed;
+}
+
+.seo-section {
+    padding: 5rem 0;
+    position: relative;
+}
+
+.seo-section-tight {
+    padding: 4rem 0;
+}
+
+.seo-sticky {
+    position: sticky;
+    top: 8rem;
+}
+
+/* ===================================================================== */
+/* ========================= 03. TYPOGRAPHY =========================== */
+/* ===================================================================== */
+
+.seo-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .375rem 1rem;
+    font-size: .75rem;
+    font-weight: 500;
+    color: var(--seo-brand);
+    border: 1px solid rgba(78, 205, 196, .3);
+    background: rgba(78, 205, 196, .05);
+    border-radius: 5px;
+}
+
+.seo-eyebrow svg {
+    width: .875rem;
+    height: .875rem;
+}
+
+.seo-eyebrow-sm {
+    font-size: .6875rem;
+    padding: .3125rem .875rem;
+}
+
+.seo-eyebrow[data-state="loading"] {
+    border-color: rgba(78, 205, 196, .3);
+    background: rgba(78, 205, 196, .05);
+    color: #4ECDC4;
+}
+
+.seo-eyebrow[data-state="available"] {
+    border-color: rgba(78, 205, 196, .6);
+    background: rgba(78, 205, 196, .1);
+    color: #4ECDC4;
+}
+
+.seo-eyebrow[data-state="limited"] {
+    border-color: rgba(255, 193, 7, .55);
+    background: rgba(255, 193, 7, .08);
+    color: #FFC107;
+}
+
+.seo-eyebrow[data-state="full"] {
+    border-color: rgba(239, 68, 68, .55);
+    background: rgba(239, 68, 68, .08);
+    color: #EF4444;
+}
+
+.seo-eyebrow[data-state="limited"] .seo-pulse-core,
+.seo-eyebrow[data-state="limited"] .seo-pulse-ring {
+    background: #FFC107;
+}
+
+.seo-eyebrow[data-state="full"] .seo-pulse-core,
+.seo-eyebrow[data-state="full"] .seo-pulse-ring {
+    background: #EF4444;
+}
+
+/* ---------- Section Header ---------- */
+.seo-section-header {
+    max-width: 48rem;
+    margin: 0 auto 3.5rem;
+}
+
+.seo-section-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 1.5;
+    color: #FFF;
+    margin-top: 1.25rem;
+    letter-spacing: -.01em;
+}
+
+.seo-section-sub {
+    margin-top: 1.25rem;
+    color: var(--seo-text-60);
+    font-size: .9375rem;
+    line-height: 2.1;
+}
+
+/* ---------- Portfolio & Pricing Headers ---------- */
+.seo-page #seo-portfolio .seo-section-header,
+.seo-page #seo-pricing .seo-section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seo-page #seo-portfolio .seo-section-header .seo-eyebrow,
+.seo-page #seo-pricing .seo-section-header .seo-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+}
+
+.seo-page #seo-portfolio .seo-section-header .seo-section-title,
+.seo-page #seo-pricing .seo-section-header .seo-section-title {
+    text-align: center;
+    text-align-last: center;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    float: none;
+    direction: rtl;
+}
+
+.seo-page #seo-portfolio .seo-section-header .seo-section-sub,
+.seo-page #seo-pricing .seo-section-header .seo-section-sub {
+    align-self: stretch;
+    width: 100%;
+    text-align: justify;
+    text-align-last: right;
+    -moz-text-align-last: right;
+    text-justify: inter-word;
+}
+
+/* ===================================================================== */
+/* ========================== 04. GLASS =============================== */
+/* ===================================================================== */
+
+.seo-glass {
+    background: rgba(20, 20, 20, .72);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid var(--seo-border);
+    transition: border-color .35s cubic-bezier(.16, 1, .3, 1);
+}
+
+.seo-glass:hover {
+    border-color: rgba(78, 205, 196, .6);
+}
+
+/* ===================================================================== */
+/* ========================== 05. HERO ================================ */
+/* ===================================================================== */
+
+.seo-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 0 5rem;
+}
+
+.seo-hero-container {
+    position: relative;
+}
+
+.seo-hero-grid {
+    display: grid;
+    gap: 3.5rem;
+    align-items: center;
+}
+
+.seo-hero-copy {
+    display: flex;
+    flex-direction: column;
+}
+
+.seo-hero-title {
+    margin-top: 1.5rem;
+    font-size: 1.875rem;
+    font-weight: 900;
+    line-height: 1.55;
+    color: #FFF;
+}
+
+.seo-hero-desc {
+    margin-top: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    color: var(--seo-text-60);
+    font-size: .9375rem;
+}
+
+.seo-hero-desc p {
+    line-height: 2.1;
+    margin: 0;
+}
+
+/* ---------- Pulse Dot ---------- */
+.seo-pulse-dot {
+    position: relative;
+    display: inline-flex;
+    width: .5rem;
+    height: .5rem;
+}
+
+.seo-pulse-ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: var(--seo-brand);
+    opacity: .75;
+    animation: seo-ping 1.5s cubic-bezier(0, 0, .2, 1) infinite;
+}
+
+.seo-pulse-core {
+    position: relative;
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background: var(--seo-brand);
+}
+
+/* ---------- Metric Badges ---------- */
+.seo-metric-badges {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .75rem;
+    width: 100%;
+}
+
+.seo-metric-badge {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .75rem 1rem;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.seo-metric-icon {
+    display: grid;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 5px;
+    background: rgba(78, 205, 196, .1);
+    color: var(--seo-brand);
+}
+
+.seo-metric-icon svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+.seo-metric-value {
+    font-size: .875rem;
+    font-weight: 800;
+    color: #FFF;
+    line-height: 1.2;
+}
+
+.seo-metric-label {
+    font-size: .6875rem;
+    color: var(--seo-text-40);
+    line-height: 1.4;
+}
+
+/* ---------- Hero CTA ---------- */
+.seo-hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .75rem;
+    margin-top: 2.5rem;
+}
+
+.seo-hero-cta .btn-dark {
+    width: auto;
+    max-width: none;
+    margin: 0;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.seo-hero-cta .btn-dark.seo-btn-accent {
+    background: var(--seo-brand);
+    color: var(--seo-ink);
+    border-color: var(--seo-brand);
+}
+
+.seo-hero-cta .btn-dark.seo-btn-accent:hover {
+    background: var(--seo-brand);
+    color: var(--seo-ink);
+    border-color: var(--seo-brand);
+    box-shadow:
+        0 0 10px 5px rgba(78, 205, 196, .8),
+        0 0 20px 10px rgba(78, 205, 196, .6),
+        0 0 30px 15px rgba(78, 205, 196, .4);
+}
+
+/* ---------- Hero Visual ---------- */
+.seo-hero-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.seo-hero-visual-inner {
+    position: relative;
+    width: 100%;
+    max-width: 24rem;
+}
+
+.seo-live-card {
+    position: relative;
+    border-radius: 5px;
+    padding: 1.5rem;
+}
+
+.seo-hero-badge-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.seo-hero-badge-wrap .seo-eyebrow {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.seo-live-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.seo-live-card-label {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .75rem;
+    color: var(--seo-text-40);
+}
+
+.seo-live-badge {
+    padding: .25rem .75rem;
+    font-size: .6875rem;
+    font-weight: 700;
+    color: var(--seo-brand);
+    background: rgba(78, 205, 196, .1);
+    border-radius: 5px;
+}
+
+/* ---------- GSC Dashboard ---------- */
+.seo-live-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--seo-brand);
+    box-shadow: 0 0 8px rgba(78, 205, 196, .9);
+    animation: seo-live-pulse 2s ease-in-out infinite;
+}
+
+@keyframes seo-live-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%      { opacity: .35; transform: scale(.85); }
+}
+
+.seo-gsc-metrics {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .75rem;
+}
+
+.seo-gsc-metric {
+    padding: .875rem 1rem;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, .02);
+    border: 1px solid rgba(78, 205, 196, .1);
+    transition: border-color .4s ease, background .4s ease;
+}
+
+.seo-gsc-metric:hover {
+    border-color: rgba(78, 205, 196, .4);
+    background: rgba(78, 205, 196, .045);
+}
+
+.seo-gsc-metric-label {
+    font-size: .6875rem;
+    color: var(--seo-text-40);
+    margin-bottom: .375rem;
+    line-height: 1.4;
+}
+
+.seo-gsc-metric-value {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #FFF;
+    line-height: 1.1;
+    letter-spacing: -.02em;
+}
+
+.seo-gsc-metric-change {
+    display: inline-flex;
+    align-items: center;
+    gap: .25rem;
+    margin-top: .375rem;
+    font-size: .6875rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.seo-gsc-metric-change.is-up {
+    color: var(--seo-brand);
+}
+
+.seo-gsc-chart {
+    direction: ltr;
+    position: relative;
+    margin: 1.5rem -1.5rem -1.5rem -1.5rem;
+    height: 80px;
+    overflow: hidden;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.seo-gsc-chart svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.seo-gsc-chart::before,
+.seo-gsc-chart::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 28%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.seo-gsc-chart::before {
+    left: 0;
+    background: linear-gradient(to right, #141414 0%, rgba(20, 20, 20, 0) 100%);
+}
+
+.seo-gsc-chart::after {
+    right: 0;
+    background: linear-gradient(to left, #141414 0%, rgba(20, 20, 20, 0) 100%);
+}
+
+/* ===================================================================== */
+/* ========================== 06. BANNER ============================== */
+/* ===================================================================== */
+
+.seo-banner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    background: #0A0A0A;
+}
+
+.seo-bubbles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.seo-bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle at 32% 28%,
+        rgba(120, 235, 225, .9),
+        rgba(78, 205, 196, .4) 45%,
+        rgba(78, 205, 196, .05) 70%
+    );
+    box-shadow:
+        inset 0 0 24px rgba(78, 205, 196, .6),
+        inset 0 0 8px rgba(255, 255, 255, .5),
+        0 0 45px rgba(78, 205, 196, .45);
+    will-change: transform;
+    pointer-events: none;
+}
+
+.seo-bubble-1  { width: 100px; height: 100px; top: 12%; left: 6%; animation: seo-bubble-a 14s ease-in-out infinite alternate; }
+.seo-bubble-2  { width:  65px; height:  65px; top: 62%; left: 18%; animation: seo-bubble-b 11s ease-in-out infinite alternate; }
+.seo-bubble-3  { width: 140px; height: 140px; top: 22%; right: 8%; animation: seo-bubble-c 17s ease-in-out infinite alternate; }
+.seo-bubble-4  { width:  50px; height:  50px; top: 78%; right: 22%; animation: seo-bubble-d 9s ease-in-out infinite alternate; }
+.seo-bubble-5  { width:  80px; height:  80px; top: 45%; left: 42%; animation: seo-bubble-e 13s ease-in-out infinite alternate; }
+.seo-bubble-6  { width: 115px; height: 115px; bottom: 8%; left: 55%; animation: seo-bubble-a 19s ease-in-out infinite alternate; animation-delay: -3s; }
+.seo-bubble-7  { width:  45px; height:  45px; top: 18%; left: 78%; animation: seo-bubble-c 10s ease-in-out infinite alternate; animation-delay: -2s; }
+.seo-bubble-8  { width:  75px; height:  75px; bottom: 12%; right: 6%; animation: seo-bubble-b 15s ease-in-out infinite alternate; animation-delay: -5s; }
+.seo-bubble-9  { width:  55px; height:  55px; top: 55%; right: 40%; animation: seo-bubble-d 12s ease-in-out infinite alternate; animation-delay: -4s; }
+.seo-bubble-10 { width: 130px; height: 130px; top: -10%; left: 38%; animation: seo-bubble-e 22s ease-in-out infinite alternate; animation-delay: -8s; }
+
+.seo-glass-layer {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    z-index: 2;
+    pointer-events: none;
+    background: rgba(20, 20, 20, .45);
+    backdrop-filter: blur(40px) saturate(160%);
+    -webkit-backdrop-filter: blur(40px) saturate(160%);
+    border: 1px solid rgba(78, 205, 196, .3);
+    box-shadow:
+        inset 0 1px 0 0 rgba(255, 255, 255, .15),
+        inset 0 -1px 0 0 rgba(78, 205, 196, .08),
+        0 20px 60px -30px rgba(0, 0, 0, .9);
+}
+
+.seo-glass-layer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(78, 205, 196, .7), transparent);
+}
+
+.seo-banner-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.seo-banner-title {
+    text-align: center;
+    text-align-last: center;
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+    float: none;
+    direction: rtl;
+}
+
+.seo-banner-desc {
+    max-width: 48rem;
+    margin: -10px 0 20px 0;
+    color: var(--seo-text-60);
+    font-size: .9375rem;
+    line-height: 2.1;
+}
+
+.seo-banner-note {
+    margin-top: 1rem;
+    font-size: .75rem;
+    color: rgba(255, 255, 255, .35);
+}
+
+.seo-page .seo-banner .btn-dark {
+    background: transparent;
+    border: 2px solid #4ECDC4;
+    color: #4ECDC4;
+}
+
+.seo-page .seo-banner .btn-dark:hover {
+    background: #4ECDC4;
+    color: #0D0D0D;
+    border-color: #4ECDC4;
+}
+
+/* ===================================================================== */
+/* ========================== 07. SPLIT =============================== */
+/* ===================================================================== */
+
+.seo-split-grid {
+    display: grid;
+    gap: 3.5rem;
+}
+
+.seo-split-aside .seo-section-title,
+.seo-split-aside .seo-section-sub {
+    text-align: right;
+}
+
+.seo-split-aside .seo-section-sub {
+    font-size: .875rem;
+    color: var(--seo-text-50);
+}
+
+.seo-bullet-list {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    font-size: .875rem;
+    color: var(--seo-text-60);
+}
+
+.seo-bullet-list li {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.seo-dot {
+    width: .375rem;
+    height: .375rem;
+    border-radius: 50%;
+    background: var(--seo-brand);
+    box-shadow: 0 0 22px -6px rgba(78, 205, 196, .55);
+    flex-shrink: 0;
+}
+
+.seo-bullet-list-lg {
+    margin-top: 2rem;
+    gap: 1rem;
+    font-size: .875rem;
+}
+
+.seo-check-icon {
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5px;
+    background: rgba(78, 205, 196, .1);
+    color: var(--seo-brand);
+    flex-shrink: 0;
+}
+
+.seo-check-icon svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+.seo-editorial {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    font-size: .9375rem;
+    color: var(--seo-text-60);
+    line-height: 2.1;
+}
+
+.seo-editorial p {
+    margin: 0;
+}
+
+.seo-editorial-lead {
+    border-right: 2px solid rgba(78, 205, 196, .5);
+    padding-right: 1.5rem;
+    color: rgba(255, 255, 255, .75);
+}
+
+.seo-mini-stats {
+    margin-top: 2.5rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.seo-mini-stat {
+    padding: 1.25rem;
+    border-radius: 5px;
+}
+
+.seo-mini-stat-value {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--seo-brand);
+    line-height: 1.2;
+}
+
+.seo-mini-stat-desc {
+    margin-top: .5rem;
+    font-size: .75rem;
+    color: var(--seo-text-40);
+    line-height: 1.7;
+}
+
+/* ===================================================================== */
+/* ======================== 08. PORTFOLIO ============================= */
+/* ===================================================================== */
+
+.seo-portfolio {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.seo-portfolio-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: .28;
+    pointer-events: none;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 15%, #000 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, #000 15%, #000 85%, transparent 100%);
+}
+
+.seo-portfolio .seo-container {
+    position: relative;
+    z-index: 1;
+}
+
+.seo-portfolio .seo-portfolio-card {
+    background: rgba(20, 20, 20, .85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.seo-portfolio .seo-section-header {
+    position: relative;
+}
+
+.seo-portfolio .seo-section-title,
+.seo-portfolio .seo-section-sub {
+    position: relative;
+}
+
+.seo-portfolio-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.seo-portfolio-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 1.75rem;
+}
+
+.seo-tag {
+    display: inline-block;
+    padding: .25rem .75rem;
+    font-size: .6875rem;
+    font-weight: 700;
+    color: var(--seo-brand);
+    background: rgba(78, 205, 196, .1);
+    border-radius: 5px;
+}
+
+.seo-portfolio-title {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: #FFF;
+}
+
+.seo-portfolio-desc {
+    margin-top: .75rem;
+    font-size: .875rem;
+    color: var(--seo-text-50);
+    line-height: 2.1;
+}
+
+.seo-portfolio-meta {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: .75rem;
+    color: var(--seo-text-40);
+}
+
+.seo-portfolio-meta span:last-child {
+    font-weight: 700;
+    color: var(--seo-brand);
+}
+
+/* ===================================================================== */
+/* ======================== 09. PRICING =============================== */
+/* ===================================================================== */
+
+.seo-pricing-grid {
+    margin-top: 4rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.seo-pricing-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 2rem;
+}
+
+.seo-pricing-card-featured {
+    border-color: rgba(78, 205, 196, .5);
+    box-shadow: 0 0 45px -12px rgba(78, 205, 196, .65);
+}
+
+.seo-pricing-name {
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: #FFF;
+}
+
+.seo-pricing-sub {
+    margin-top: .5rem;
+    font-size: .75rem;
+    color: var(--seo-text-40);
+}
+
+.seo-badge-featured {
+    position: absolute;
+    top: -.875rem;
+    right: 2rem;
+    padding: .25rem 1rem;
+    font-size: .6875rem;
+    font-weight: 900;
+    color: var(--seo-brand-darker);
+    background: linear-gradient(to left, var(--seo-brand), rgba(78, 205, 196, .7));
+    border-radius: 5px;
+    box-shadow: 0 0 22px -6px rgba(78, 205, 196, .55);
+}
+
+.seo-price {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    gap: .5rem;
+}
+
+.seo-price-value {
+    font-size: 1.875rem;
+    font-weight: 900;
+    color: #FFF;
+    line-height: 1;
+}
+
+.seo-price-unit {
+    font-size: .875rem;
+    color: var(--seo-text-40);
+    padding-bottom: .25rem;
+}
+
+.seo-feature-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: .875rem;
+    font-size: .875rem;
+    color: var(--seo-text-60);
+}
+
+.seo-feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: .75rem;
+    line-height: 1.9;
+}
+
+.seo-check {
+    margin-top: .375rem;
+    display: grid;
+    place-items: center;
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: rgba(78, 205, 196, .15);
+    color: var(--seo-brand);
+}
+
+.seo-check svg {
+    width: .625rem;
+    height: .625rem;
+}
+
+.seo-pricing-card .seo-btn {
+    margin-top: 2rem;
+}
+
+/* ---------- Pricing Tabs ---------- */
+.seo-pricing-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.seo-tab {
+    padding: .5rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, .4);
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: color .25s ease, border-color .25s ease;
+}
+
+.seo-tab:hover {
+    color: rgba(255, 255, 255, .75);
+}
+
+.seo-tab[data-seo-tab="standard"].is-active {
+    color: #4ECDC4;
+}
+
+.seo-tab[data-seo-tab="advanced"].is-active {
+    color: #FFE76D;
+}
+
+/* ---------- Pricing Panels ---------- */
+.seo-pricing-grid[hidden] {
+    display: none;
+}
+
+/* ---------- Advanced Panel Accent ---------- */
+.seo-pricing-grid[data-seo-panel="advanced"] {
+    --seo-brand: #FFE76D;
+    --seo-border: rgba(255, 231, 109, .16);
+    --seo-border-hover: rgba(255, 231, 109, .5);
+    --seo-border-strong: rgba(255, 231, 109, .25);
+}
+
+.seo-pricing-grid[data-seo-panel="advanced"] .seo-glass:hover {
+    border-color: rgba(255, 231, 109, .6);
+}
+
+.seo-pricing-grid[data-seo-panel="advanced"] .seo-pricing-card-featured {
+    border-color: rgba(255, 231, 109, .5);
+    box-shadow: 0 0 45px -12px rgba(255, 231, 109, .65);
+}
+
+.seo-pricing-grid[data-seo-panel="advanced"] .seo-badge-featured {
+    background: linear-gradient(to left, #FFE76D, rgba(255, 231, 109, .7));
+    box-shadow: 0 0 22px -6px rgba(255, 231, 109, .55);
+}
+
+.seo-pricing-grid[data-seo-panel="advanced"] .seo-check {
+    background: rgba(255, 231, 109, .15);
+}
+
+.seo-pricing-grid[data-seo-panel="advanced"] .seo-text-brand {
+    color: #FFE76D;
+}
+
+.seo-pricing-grid[data-seo-panel="advanced"] .btn-dark {
+    border-color: #FFE76D;
+    color: #FFE76D;
+}
+
+.seo-pricing-grid[data-seo-panel="advanced"] .btn-dark:hover {
+    background: #FFE76D;
+    color: #0D0D0D;
+    border-color: #FFE76D;
+    box-shadow:
+        0 0 10px 5px rgba(255, 231, 109, .8),
+        0 0 20px 10px rgba(255, 231, 109, .6),
+        0 0 30px 15px rgba(255, 231, 109, .4);
+}
+
+/* ===================================================================== */
+/* ======================== 10. CALCULATOR ============================ */
+/* ===================================================================== */
+
+.seo-calculator {
+    position: relative;
+    overflow: hidden;
+    margin-top: 5rem;
+    padding: 1.5rem;
+    border-radius: 5px;
+}
+
+.seo-calc-grid {
+    position: relative;
+    display: grid;
+    gap: 2.5rem;
+}
+
+.seo-calc-head {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.seo-calc-head-icon {
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 5px;
+    background: rgba(78, 205, 196, .1);
+    border: 1px solid var(--seo-border-strong);
+    color: var(--seo-brand);
+    flex-shrink: 0;
+}
+
+.seo-calc-head-icon svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.seo-calc-head-title {
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: #FFF;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.seo-calc-head-sub {
+    font-size: .75rem;
+    color: var(--seo-text-40);
+    margin: 0;
+    margin-top: .125rem;
+    line-height: 1.4;
+}
+
+/* ---------- Calculator Package ---------- */
+.seo-calc-package {
+    margin-top: 2rem;
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--seo-border-strong);
+    background: linear-gradient(to left, rgba(78, 205, 196, .06), transparent);
+}
+
+.seo-calc-package-label {
+    font-size: .6875rem;
+    color: var(--seo-text-40);
+    margin-bottom: .25rem;
+}
+
+.seo-calc-package-name {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #FFF;
+}
+
+.seo-calc-package-price {
+    font-size: 1.125rem;
+    font-weight: 900;
+    color: var(--seo-brand);
+    filter: drop-shadow(0 0 12px rgba(78, 205, 196, .4));
+    white-space: nowrap;
+}
+
+/* ---------- Calculator Controls ---------- */
+.seo-control-group {
+    margin-top: 2.25rem;
+}
+
+.seo-control-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .75rem;
+}
+
+.seo-control-label {
+    display: block;
+    font-size: .875rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, .8);
+    margin-bottom: .75rem;
+}
+
+.seo-control-head .seo-control-label {
+    margin-bottom: 0;
+}
+
+.seo-range-value {
+    padding: .25rem .75rem;
+    font-size: .75rem;
+    font-weight: 900;
+    color: var(--seo-brand);
+    background: rgba(78, 205, 196, .1);
+    border-radius: 5px;
+}
+
+.seo-btn-group {
+    display: grid;
+    gap: .625rem;
+}
+
+.seo-btn-group-4 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.seo-btn-group-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.seo-calc-btn {
+    padding: .75rem;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--seo-text-60);
+    background: rgba(255, 255, 255, .02);
+    border: 1px solid rgba(78, 205, 196, .2);
+    border-radius: 5px;
+    transition: all .3s ease;
+}
+
+.seo-calc-btn:hover {
+    border-color: rgba(78, 205, 196, .5);
+    color: var(--seo-brand);
+}
+
+.seo-calc-btn.is-active {
+    border-color: var(--seo-brand);
+    background: rgba(78, 205, 196, .12);
+    color: var(--seo-brand);
+    box-shadow: 0 0 22px -6px rgba(78, 205, 196, .55);
+}
+
+/* ---------- Range Input ---------- */
+.seo-page input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .09);
+    outline: none;
+    cursor: pointer;
+    margin-top: .25rem;
+}
+
+.seo-page input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--seo-brand);
+    border: 3px solid var(--seo-ink);
+    box-shadow: 0 0 0 3px rgba(78, 205, 196, .22), 0 0 22px rgba(78, 205, 196, .85);
+    transition: transform .25s ease;
+}
+
+.seo-page input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.18);
+}
+
+.seo-page input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--seo-brand);
+    border: 3px solid var(--seo-ink);
+    box-shadow: 0 0 0 3px rgba(78, 205, 196, .22), 0 0 22px rgba(78, 205, 196, .85);
+    cursor: pointer;
+}
+
+.seo-range-scale {
+    margin-top: .5rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: .6875rem;
+    color: var(--seo-text-30);
+}
+
+/* ---------- Calculator Result ---------- */
+.seo-calc-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.75rem;
+    border-radius: 5px;
+    border: 1px solid var(--seo-border-strong);
+    background: linear-gradient(to bottom, rgba(78, 205, 196, .07), transparent);
+}
+
+.seo-calc-result-label {
+    font-size: .75rem;
+    color: var(--seo-text-40);
+}
+
+.seo-calc-result-price {
+    margin-top: 1rem;
+    display: flex;
+    align-items: flex-end;
+    gap: .5rem;
+}
+
+.seo-price-glow {
+    font-size: 2.25rem;
+    font-weight: 900;
+    color: var(--seo-brand);
+    line-height: 1;
+    filter: drop-shadow(0 0 25px rgba(78, 205, 196, .55));
+}
+
+.seo-price-currency {
+    font-size: .875rem;
+    color: var(--seo-text-50);
+    padding-bottom: .5rem;
+}
+
+.seo-calc-result-cta {
+    margin-top: 2rem;
+}
+
+.seo-calc-note {
+    margin-top: .75rem;
+    text-align: center;
+    font-size: .6875rem;
+    color: var(--seo-text-30);
+}
+
+/* ---------- Print Invoice Button Center ---------- */
+.seo-calc-result .btn-dark[data-seo-print-invoice-trigger] {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------- Summary List ---------- */
+.seo-summary-list {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    font-size: .75rem;
+    color: var(--seo-text-50);
+}
+
+.seo-summary-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.seo-summary-value {
+    font-weight: 700;
+    color: rgba(255, 255, 255, .8);
+}
+
+.seo-summary-list li.seo-summary-addon {
+    padding-right: 1rem;
+    font-size: .6875rem;
+    color: var(--seo-text-40);
+    opacity: 0;
+    transform: translateX(-6px);
+    animation: seoRowIn .35s ease forwards;
+}
+
+.seo-summary-list li.seo-summary-addon .seo-summary-value {
+    color: var(--seo-brand);
+    font-weight: 700;
+}
+
+.seo-summary-list li.seo-summary-total {
+    margin-top: .5rem;
+    padding-top: .75rem;
+    border-top: 1px dashed rgba(255, 255, 255, .1);
+}
+
+.seo-summary-list li.seo-breakdown-row {
+    padding-right: 1.25rem;
+    font-size: .6875rem;
+    color: var(--seo-text-40);
+    opacity: 0;
+    transform: translateY(-4px);
+    animation: seoBreakdownIn .35s ease forwards;
+}
+
+.seo-summary-list li.seo-breakdown-row .seo-summary-value {
+    color: rgba(255, 255, 255, .7);
+    font-weight: 600;
+    font-size: .6875rem;
+}
+
+.seo-summary-list li.seo-breakdown-row:hover {
+    color: var(--seo-text-70);
+}
+
+/* ---------- Calculator Toggle ---------- */
+.seo-toggle {
+    display: flex;
+    align-items: center;
+    gap: .875rem;
+    margin-top: 2.25rem;
+    padding: 1rem 1.25rem;
+    border-radius: 5px;
+    border: 1px solid var(--seo-border);
+    background: rgba(255, 255, 255, .02);
+    cursor: pointer;
+    transition: border-color .25s ease, background .25s ease;
+}
+
+.seo-toggle:hover {
+    border-color: var(--seo-border-hover);
+}
+
+.seo-toggle input {
+    display: none;
+}
+
+.seo-toggle-box {
+    position: relative;
+    width: 2.5rem;
+    height: 1.25rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .1);
+    flex-shrink: 0;
+    transition: background .3s ease;
+}
+
+.seo-toggle-box::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #FFF;
+    transition: transform .3s ease;
+}
+
+.seo-toggle input:checked + .seo-toggle-box {
+    background: var(--seo-brand);
+}
+
+.seo-toggle input:checked + .seo-toggle-box::after {
+    transform: translateX(-1.25rem);
+}
+
+.seo-toggle-label {
+    flex: 1;
+    font-size: .875rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, .85);
+    line-height: 1.5;
+}
+
+.seo-toggle-price {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--seo-brand);
+    white-space: nowrap;
+    filter: drop-shadow(0 0 8px rgba(78, 205, 196, .35));
+}
+
+/* ---------- Addon Hint ---------- */
+.seo-addon-hint {
+    margin-top: .5rem;
+    font-size: .6875rem;
+    color: var(--seo-text-30);
+    line-height: 1.6;
+}
+
+.seo-addon-hint span {
+    color: var(--seo-brand);
+    font-weight: 700;
+}
+
+/* ---------- Calculator Advanced Accent ---------- */
+.seo-calculator.is-advanced {
+    --seo-brand: #FFE76D;
+    --seo-border: rgba(255, 231, 109, .16);
+    --seo-border-hover: rgba(255, 231, 109, .5);
+    --seo-border-strong: rgba(255, 231, 109, .25);
+    border-color: rgba(255, 231, 109, .45);
+}
+
+.seo-calculator.is-advanced:hover {
+    border-color: rgba(255, 231, 109, .7);
+}
+
+.seo-calculator.is-advanced .seo-calc-package {
+    border-color: rgba(255, 231, 109, .35);
+    background: linear-gradient(to left, rgba(255, 231, 109, .06), transparent);
+}
+
+.seo-calculator.is-advanced .seo-calc-package-price {
+    color: #FFE76D;
+    filter: drop-shadow(0 0 12px rgba(255, 231, 109, .4));
+}
+
+.seo-calculator.is-advanced .seo-calc-head-icon {
+    background: rgba(255, 231, 109, .1);
+    border-color: rgba(255, 231, 109, .25);
+    color: #FFE76D;
+}
+
+.seo-calculator.is-advanced input[type="range"]::-webkit-slider-thumb {
+    background: #FFE76D;
+    box-shadow: 0 0 0 3px rgba(255, 231, 109, .22), 0 0 22px rgba(255, 231, 109, .85);
+}
+
+.seo-calculator.is-advanced input[type="range"]::-moz-range-thumb {
+    background: #FFE76D;
+    box-shadow: 0 0 0 3px rgba(255, 231, 109, .22), 0 0 22px rgba(255, 231, 109, .85);
+}
+
+.seo-calculator.is-advanced .seo-range-value {
+    color: #FFE76D;
+    background: rgba(255, 231, 109, .1);
+}
+
+.seo-calculator.is-advanced .seo-addon-hint span {
+    color: #FFE76D;
+}
+
+.seo-calculator.is-advanced .seo-price-glow {
+    color: #FFE76D;
+    filter: drop-shadow(0 0 25px rgba(255, 231, 109, .55));
+}
+
+.seo-calculator.is-advanced .seo-calc-result {
+    border-color: rgba(255, 231, 109, .25);
+    background: linear-gradient(to bottom, rgba(255, 231, 109, .07), transparent);
+}
+
+.seo-calculator.is-advanced .btn-dark {
+    border-color: #FFE76D;
+    color: #FFE76D;
+}
+
+.seo-calculator.is-advanced .btn-dark:hover {
+    background: #FFE76D;
+    color: #0D0D0D;
+    border-color: #FFE76D;
+    box-shadow:
+        0 0 10px 5px rgba(255, 231, 109, .8),
+        0 0 20px 10px rgba(255, 231, 109, .6),
+        0 0 30px 15px rgba(255, 231, 109, .4);
+}
+
+.seo-calculator.is-advanced .seo-toggle-price {
+    filter: drop-shadow(0 0 8px rgba(255, 231, 109, .4));
+}
+
+/* ===================================================================== */
+/* ======================== 11. AUDIT FORM ============================ */
+/* ===================================================================== */
+
+.seo-audit-grid {
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+}
+
+.seo-audit-info .seo-section-title,
+.seo-audit-info .seo-section-sub {
+    text-align: right;
+}
+
+.seo-audit-form {
+    border-radius: 5px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.seo-form-grid {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.seo-form-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.seo-field-label {
+    display: block;
+    margin-bottom: .5rem;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--seo-text-70);
+}
+
+.seo-field {
+    width: 100%;
+    padding: .875rem 1rem;
+    font-size: .875rem;
+    color: #FFF;
+    background: rgba(255, 255, 255, .03);
+    border: 1px solid var(--seo-border);
+    border-radius: 5px;
+    transition: border-color .3s ease, box-shadow .3s ease, background .3s ease;
+}
+
+.seo-field:focus {
+    outline: none;
+    border-color: var(--seo-brand);
+    background: rgba(78, 205, 196, .05);
+    box-shadow: 0 0 0 4px rgba(78, 205, 196, .12);
+}
+
+.seo-field::placeholder,
+.seo-field-ltr::placeholder {
+    color: rgba(255, 255, 255, .28);
+    text-align: right;
+}
+
+.seo-field-textarea {
+    resize: none;
+}
+
+/* ---------- Field Group & Prefix ---------- */
+.seo-audit-form .field-group {
+    position: relative;
+    width: 100%;
+}
+
+.seo-audit-form .field-group .seo-field {
+    margin-top: 0;
+}
+
+.seo-audit-form .field-group:has(textarea) {
+    overflow: hidden;
+}
+
+.seo-audit-form .field-prefix {
+    position: absolute;
+    top: 50%;
+    left: auto;
+    right: auto;
+    z-index: 3;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #A5A5A5;
+    font-size: .875rem;
+    font-family: inherit;
+    white-space: nowrap;
+    user-select: none;
+}
+
+[dir="rtl"] .seo-audit-form .field-prefix,
+html:not([dir="ltr"]) .seo-audit-form .field-prefix {
+    right: 12px;
+    left: auto;
+}
+
+[dir="ltr"] .seo-audit-form .field-prefix {
+    left: 12px;
+    right: auto;
+}
+
+[dir="rtl"] .seo-audit-form .field-group input,
+[dir="rtl"] .seo-audit-form .field-group textarea,
+html:not([dir="ltr"]) .seo-audit-form .field-group input,
+html:not([dir="ltr"]) .seo-audit-form .field-group textarea {
+    text-align: right;
+}
+
+[dir="ltr"] .seo-audit-form .field-group input,
+[dir="ltr"] .seo-audit-form .field-group textarea {
+    text-align: left;
+}
+
+[dir="rtl"] .seo-audit-form .field-group:has(textarea) .field-prefix,
+[dir="ltr"] .seo-audit-form .field-group:has(textarea) .field-prefix {
+    top: auto;
+    transform: none;
+}
+
+/* ---------- Form Submit Button ---------- */
+.seo-audit-form button[type="submit"].btn-dark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    width: 100%;
+    margin-top: 1.75rem;
+    padding: 1rem 1.5rem;
+    font-size: .9375rem;
+    font-weight: 700;
+    color: var(--seo-brand);
+    background: transparent;
+    border: 2px solid var(--seo-brand);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .3s ease;
+    text-align: center;
+}
+
+.seo-audit-form button[type="submit"].btn-dark:hover {
+    background: var(--seo-brand);
+    color: var(--seo-ink);
+    border-color: var(--seo-brand);
+    box-shadow:
+        0 0 10px 5px rgba(78, 205, 196, .7),
+        0 0 20px 10px rgba(78, 205, 196, .4);
+}
+
+.seo-audit-form button[type="submit"].btn-dark:disabled {
+    opacity: .7;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* ---------- Form Message & Note ---------- */
+.seo-form-msg,
+.seo-audit-form .seo-form-msg {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--seo-brand);
+}
+
+.seo-form-msg.seo-error,
+.seo-audit-form .seo-form-msg.seo-error {
+    color: #F87171;
+}
+
+.seo-form-note,
+.seo-audit-form .seo-form-note {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: .6875rem;
+    color: var(--seo-text-30);
+    align-self: center;
+}
+
+/* ===================================================================== */
+/* =========================== 12. FAQ ================================ */
+/* ===================================================================== */
+
+.seo-page .faq-question {
+    padding: 18px 20px;
+    color: var(--text);
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 1.5;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    gap: 16px;
+    width: 100%;
+    transition: color 0.3s;
+}
+
+.seo-page .faq-question:hover {
+    color: var(--accent);
+}
+
+.seo-page .faq-item--open .faq-question {
+    color: var(--accent);
+}
+
+.seo-page .faq-icon {
+    font-size: 0;
+}
+
+/* ===================================================================== */
+/* ======================= 13. TESTIMONIALS =========================== */
+/* ===================================================================== */
+
+.testimonials-section {
+    text-align: center;
+    position: relative;
+}
+
+.testimonials-section .title {
+    position: relative;
+    margin: 25px 0;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.testimonials-section .title::after {
+    content: "";
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    width: 80px;
+    height: 2px;
+    background: #1A1A1A;
+    transform: translateX(-50%);
+}
+
+.testimonials-section .testimonials-container {
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1400px;
+    height: 560px;
+    margin-inline: auto;
+    margin-top: 3.5rem;
+}
+
+.testimonials-section .column {
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%);
+}
+
+.testimonials-section .testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.testimonials-section .column:hover .testimonials {
+    animation-play-state: paused;
+}
+
+.testimonials-section .column:nth-child(1) .testimonials {
+    animation-name: testimonialScrollUp;
+    animation-duration: 32s;
+}
+
+.testimonials-section .column:nth-child(2) .testimonials {
+    animation-name: testimonialScrollDown;
+    animation-duration: 45s;
+}
+
+.testimonials-section .column:nth-child(3) .testimonials {
+    animation-name: testimonialScrollUp;
+    animation-duration: 38s;
+}
+
+.testimonials-section .card {
+    background: rgba(20, 20, 20, .72);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(78, 205, 196, .16);
+    padding: 1.5rem;
+    border-radius: 5px;
+    transition: border-color .35s ease;
+    text-align: right;
+}
+
+.testimonials-section .card:hover {
+    border-color: rgba(78, 205, 196, .45);
+}
+
+.testimonials-section .card .profile {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin-bottom: 1rem;
+}
+
+.testimonials-section .card .profile img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid rgba(78, 205, 196, .25);
+}
+
+.testimonials-section .card .profile .name {
+    font-size: .875rem;
+    font-weight: 700;
+    color: #FFF;
+    line-height: 1.3;
+}
+
+.testimonials-section .card .profile .role {
+    font-size: .6875rem;
+    color: rgba(255, 255, 255, .4);
+    line-height: 1.4;
+    margin-top: 2px;
+}
+
+.testimonials-section .card .content {
+    color: rgba(255, 255, 255, .6);
+    font-size: .8125rem;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+.testimonials-section .testimonials-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.testimonials-section .testimonials-placeholder img {
+    max-width: 45%;
+    height: auto;
+}
+
+/* ===================================================================== */
+/* ========================== 14. SERVICES ============================ */
+/* ===================================================================== */
+
+.seo-services-grid {
+    margin-top: 3.5rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.seo-service-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 1.75rem;
+}
+
+.seo-service-card::before {
+    content: '';
+    position: absolute;
+    top: -5rem;
+    left: -5rem;
+    width: 11rem;
+    height: 11rem;
+    border-radius: 50%;
+    background: rgba(78, 205, 196, .1);
+    filter: blur(60px);
+    transition: background .5s ease;
+    pointer-events: none;
+}
+
+.seo-service-card:hover::before {
+    background: rgba(78, 205, 196, .25);
+}
+
+.seo-service-card > * {
+    position: relative;
+}
+
+.seo-service-icon {
+    display: grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 5px;
+    border: 1px solid var(--seo-border-strong);
+    background: rgba(78, 205, 196, .1);
+    color: var(--seo-brand);
+}
+
+.seo-service-icon svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.seo-service-title {
+    margin-top: 1.25rem;
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: #FFF;
+}
+
+.seo-service-desc {
+    margin-top: .75rem;
+    font-size: .875rem;
+    line-height: 2.1;
+    color: rgba(255, 255, 255, .55);
+}
+
+.seo-service-wide {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.seo-service-tags {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .75rem;
+}
+
+.seo-service-tag {
+    padding: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid var(--seo-border);
+    background: rgba(255, 255, 255, .02);
+}
+
+.seo-tag-value {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: var(--seo-brand);
+    line-height: 1.2;
+}
+
+.seo-tag-label {
+    margin-top: .25rem;
+    font-size: .6875rem;
+    color: var(--seo-text-40);
+    line-height: 1.5;
+}
+
+.seo-page #seo-services {
+    padding-bottom: calc(7rem + 20px);
+}
+
+/* ===================================================================== */
+/* ================== 15. SCROLL REVEAL & KEYFRAMES =================== */
+/* ===================================================================== */
+
+.seo-page .seo-reveal {
+    opacity: 0;
+    transform: translateY(34px);
+    transition: opacity .9s var(--seo-ease-out), transform .9s var(--seo-ease-out);
+    will-change: opacity, transform;
+}
+
+.seo-page .seo-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes seo-bubble-a {
+    0%   { transform: translate(0, 0) scale(1); }
+    35%  { transform: translate(60px, -40px) scale(1.12); }
+    65%  { transform: translate(-30px, 30px) scale(.92); }
+    100% { transform: translate(40px, -80px) scale(1.06); }
+}
+
+@keyframes seo-bubble-b {
+    0%   { transform: translate(0, 0) scale(1); }
+    40%  { transform: translate(-70px, 40px) scale(1.15); }
+    70%  { transform: translate(30px, -20px) scale(.9); }
+    100% { transform: translate(-50px, 60px) scale(1.08); }
+}
+
+@keyframes seo-bubble-c {
+    0%   { transform: translate(0, 0) scale(1); }
+    30%  { transform: translate(-50px, -60px) scale(.94); }
+    60%  { transform: translate(70px, 30px) scale(1.1); }
+    100% { transform: translate(-20px, -40px) scale(1.02); }
+}
+
+@keyframes seo-bubble-d {
+    0%   { transform: translate(0, 0) scale(1); }
+    50%  { transform: translate(80px, -30px) scale(1.2); }
+    100% { transform: translate(-40px, 40px) scale(.88); }
+}
+
+@keyframes seo-bubble-e {
+    0%   { transform: translate(0, 0) scale(1); }
+    25%  { transform: translate(40px, 50px) scale(1.05); }
+    50%  { transform: translate(-60px, 20px) scale(.95); }
+    75%  { transform: translate(30px, -50px) scale(1.1); }
+    100% { transform: translate(-40px, -20px) scale(1); }
+}
+
+@keyframes seo-drift {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50%      { transform: translate(30px, -25px) scale(1.12); }
+}
+
+@keyframes seo-pulseGlow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(78, 205, 196, .55), 0 0 30px -8px rgba(78, 205, 196, .7); }
+    50%      { box-shadow: 0 0 0 14px rgba(78, 205, 196, 0), 0 0 55px -6px rgba(78, 205, 196, .95); }
+}
+
+@keyframes seo-ping {
+    0%       { transform: scale(1); opacity: .75; }
+    75%, 100% { transform: scale(2); opacity: 0; }
+}
+
+@keyframes seoRowIn {
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes seoBreakdownIn {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes testimonialScrollUp {
+    from { transform: translateY(0); }
+    to   { transform: translateY(-50%); }
+}
+
+@keyframes testimonialScrollDown {
+    from { transform: translateY(-50%); }
+    to   { transform: translateY(0); }
+}
+
+/* ===================================================================== */
+/* ======================== 16. PRINT MODE ============================ */
+/* ===================================================================== */
+
+.seo-print-invoice {
+    display: none;
+}
+
+@media print {
+    body > *:not(.seo-print-invoice) {
+        display: none !important;
+    }
+
+    html, body {
+        background: #FFF !important;
+        color: #000 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .seo-print-invoice {
+        display: block !important;
+        position: static;
+        width: 100%;
+        padding: 2rem 2.5rem;
+        font-family: 'Vazirmatn', 'Tahoma', sans-serif;
+        color: #111;
+        direction: rtl;
+        font-size: 12pt;
+        line-height: 1.9;
+    }
+
+    .seo-print-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-bottom: 2px solid #111;
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .seo-print-logo-img {
+        display: block;
+        height: 20pt;
+        width: auto;
+        max-width: 220pt;
+        object-fit: contain;
+        margin-bottom: .5rem;
+    }
+
+    .seo-print-logo {
+        font-size: 22pt;
+        font-weight: 900;
+        letter-spacing: -0.5px;
+        color: #111;
+    }
+
+    .seo-print-logo span {
+        color: #35A89F;
+    }
+
+    .seo-print-tagline {
+        font-size: 10pt;
+        color: #666;
+        margin-top: .25rem;
+    }
+
+    .seo-print-meta {
+        text-align: left;
+        font-size: 10pt;
+        color: #444;
+        line-height: 1.9;
+    }
+
+    .seo-print-package {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .875rem 1.25rem;
+        border: 1px solid #CCC;
+        background: #F7F7F7;
+        border-radius: 6px;
+        margin-bottom: 1.5rem;
+    }
+
+    .seo-print-package-label {
+        font-size: 9pt;
+        color: #666;
+    }
+
+    .seo-print-package-name {
+        font-size: 14pt;
+        font-weight: 800;
+        color: #111;
+        margin-top: .25rem;
+    }
+
+    .seo-print-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 1.5rem;
+        font-size: 11pt;
+    }
+
+    .seo-print-table thead th {
+        background: #111;
+        color: #FFF;
+        padding: .625rem .875rem;
+        text-align: right;
+        font-weight: 700;
+        font-size: 10pt;
+        border: 1px solid #111;
+    }
+
+    .seo-print-table tbody td {
+        padding: .625rem .875rem;
+        border: 1px solid #DDD;
+        vertical-align: top;
+    }
+
+    .seo-print-table tbody tr:nth-child(even) td {
+        background: #FAFAFA;
+    }
+
+    .seo-print-table tbody td:first-child {
+        width: 2.5rem;
+        text-align: center;
+        color: #888;
+    }
+
+    .seo-print-table tbody td:last-child {
+        text-align: left;
+        direction: ltr;
+        white-space: nowrap;
+        width: 10rem;
+    }
+
+    .seo-print-total-row td {
+        padding: 1rem .875rem;
+        font-weight: 900;
+        font-size: 13pt;
+        background: #F0F0F0;
+        border-top: 2px solid #111;
+        border-bottom: 2px solid #111;
+    }
+
+    .seo-print-total-row td:last-child {
+        text-align: left;
+        direction: ltr;
+        color: #35A89F;
+    }
+
+    .seo-print-footer {
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px dashed #CCC;
+        font-size: 9.5pt;
+        color: #555;
+        text-align: center;
+    }
+
+    .seo-print-footer p {
+        margin: .25rem 0;
+    }
+
+    .seo-print-contact {
+        margin-top: .75rem !important;
+        font-weight: 700;
+        color: #111;
+    }
+
+    .seo-print-note {
+        margin-top: 1.25rem;
+        padding: .75rem 1rem;
+        border: 1px dashed #BBB;
+        background: #FAFAFA;
+        font-size: 9pt;
+        color: #666;
+        text-align: center;
+        border-radius: 4px;
+    }
+
+    .seo-ltr {
+        direction: ltr;
+        unicode-bidi: embed;
+    }
+
+    @page {
+        size: A4;
+        margin: 1.5cm;
+    }
+}
+
+/* ===================================================================== */
+/* ==================== 17. LTR DIRECTION OVERRIDES =================== */
+/* ===================================================================== */
+/* این بخش *قبل از* Responsive باید بیاد تا موبایل بتونه override کنه   */
+
+[dir="ltr"] .seo-text-right {
+    text-align: left;
+}
+
+[dir="ltr"] .seo-page #seo-portfolio .seo-section-header .seo-section-title,
+[dir="ltr"] .seo-page #seo-pricing .seo-section-header .seo-section-title {
+    direction: ltr;
+}
+
+[dir="ltr"] .seo-page #seo-portfolio .seo-section-header .seo-section-sub,
+[dir="ltr"] .seo-page #seo-pricing .seo-section-header .seo-section-sub {
+    text-align-last: left;
+    -moz-text-align-last: left;
+}
+
+[dir="ltr"] .seo-banner-title {
+    direction: ltr;
+}
+
+[dir="ltr"] .seo-split-aside .seo-section-title,
+[dir="ltr"] .seo-split-aside .seo-section-sub {
+    text-align: left;
+}
+
+[dir="ltr"] .seo-audit-info .seo-section-title,
+[dir="ltr"] .seo-audit-info .seo-section-sub {
+    text-align: left;
+}
+
+[dir="ltr"] .seo-editorial-lead {
+    border-right: none;
+    border-left: 2px solid rgba(78, 205, 196, .5);
+    padding-right: 0;
+    padding-left: 1.5rem;
+}
+
+[dir="ltr"] .seo-field::placeholder,
+[dir="ltr"] .seo-field-ltr::placeholder {
+    text-align: left;
+}
+
+[dir="ltr"] .seo-page .faq-question {
+    text-align: left;
+}
+
+[dir="ltr"] .seo-toggle-box::after {
+    right: auto;
+    left: 2px;
+}
+
+[dir="ltr"] .seo-toggle input:checked + .seo-toggle-box::after {
+    transform: translateX(1.25rem);
+}
+
+[dir="ltr"] .seo-summary-list li.seo-summary-addon {
+    padding-right: 0;
+    padding-left: 1rem;
+    transform: translateX(6px);
+}
+
+[dir="ltr"] .seo-summary-list li.seo-breakdown-row {
+    padding-right: 0;
+    padding-left: 1.25rem;
+}
+
+[dir="ltr"] .seo-calc-package {
+    background: linear-gradient(to right, rgba(78, 205, 196, .06), transparent);
+}
+
+[dir="ltr"] .seo-calculator.is-advanced .seo-calc-package {
+    background: linear-gradient(to right, rgba(255, 231, 109, .06), transparent);
+}
+
+/* ===================================================================== */
+/* ==================== 18. RESPONSIVE OVERRIDES ====================== */
+/* ===================================================================== */
+
+/* ---------- Container Padding ---------- */
+@media (min-width: 640px) {
+    .seo-container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .seo-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* ---------- Section Padding ---------- */
+@media (min-width: 640px) {
+    .seo-section       { padding: 7rem 0; }
+    .seo-section-tight { padding: 5rem 0; }
+}
+
+/* ---------- Sticky ---------- */
+@media (max-width: 1023px) {
+    .seo-sticky { position: static; }
+}
+
+/* ---------- Section Title / Sub ---------- */
+@media (min-width: 640px) {
+    .seo-section-title { font-size: 2.25rem; line-height: 1.4; }
+    .seo-section-sub   { font-size: 1rem; }
+}
+
+/* ---------- Hero ---------- */
+@media (min-width: 640px) {
+    .seo-hero       { padding: 6rem 0 7rem; }
+    .seo-hero-title { font-size: 3rem; line-height: 1.45; }
+    .seo-hero-desc  { font-size: 1rem; }
+}
+
+@media (min-width: 1024px) {
+    .seo-hero-grid  { grid-template-columns: 7fr 5fr; }
+    .seo-hero-title { font-size: 3.4rem; line-height: 1.4; }
+}
+
+/* ---------- Banner ---------- */
+@media (min-width: 640px) {
+    .seo-banner       { padding: 4rem 3.5rem; }
+    .seo-banner-title { font-size: 2.25rem; }
+    .seo-banner-desc  { font-size: 1rem; }
+}
+
+/* ---------- Split / Editorial ---------- */
+@media (min-width: 640px) {
+    .seo-editorial  { font-size: 1rem; }
+    .seo-mini-stats { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1024px) {
+    .seo-split-grid { grid-template-columns: 4fr 8fr; }
+}
+
+/* ---------- Portfolio Grid ---------- */
+@media (min-width: 768px) {
+    .seo-portfolio-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---------- Pricing Grid (Desktop) ---------- */
+@media (min-width: 1024px) {
+    .seo-pricing-grid { grid-template-columns: repeat(3, 1fr); }
+
+    .seo-pricing-card-featured {
+        margin-top: -1.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* ---------- Calculator ---------- */
+@media (min-width: 640px) {
+    .seo-calculator  { padding: 2.5rem; }
+    .seo-btn-group-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (min-width: 1024px) {
+    .seo-calc-grid { grid-template-columns: 7fr 5fr; gap: 2.5rem; }
+}
+
+/* ---------- Audit Form ---------- */
+@media (min-width: 640px) {
+    .seo-audit-form    { padding: 2.25rem; }
+    .seo-form-grid     { grid-template-columns: repeat(2, 1fr); }
+    .seo-form-row-full { grid-column: span 2; }
+}
+
+@media (min-width: 1024px) {
+    .seo-audit-grid { grid-template-columns: 5fr 7fr; }
+}
+
+/* ---------- Testimonials Mobile ---------- */
+@media (max-width: 767px) {
+    .testimonials-section .testimonials-container { height: 480px; gap: 1rem; }
+    .testimonials-section .column:nth-child(3)    { display: none; }
+}
+
+/* ---------- Services ---------- */
+@media (min-width: 768px) {
+    .seo-services-grid     { grid-template-columns: repeat(2, 1fr); }
+    .seo-service-card-wide { grid-column: span 2; }
+    .seo-service-wide      { grid-template-columns: 8fr 4fr; align-items: center; }
+}
+
+@media (min-width: 1024px) {
+    .seo-services-grid     { grid-template-columns: repeat(3, 1fr); }
+    .seo-service-card-wide { grid-column: span 3; }
+}
+
+/* ---------- Metric Badges Mobile Slider ---------- */
+@media (max-width: 768px) {
+    .seo-metric-badges {
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        gap: 1rem;
+        margin: 0;
+        padding: 0.5rem 0 0.75rem;
+        width: 100%;
+        max-width: 100%;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        grid-template-columns: none;
+        grid-auto-rows: auto;
+    }
+
+    .seo-metric-badges::-webkit-scrollbar { display: none; }
+
+    .seo-metric-badges .seo-metric-badge {
+        flex: 0 0 75%;
+        max-width: 75%;
+        scroll-snap-align: center;
+        box-sizing: border-box;
+    }
+}
+
+/* ---------- Pricing Tabs Mobile ---------- */
+@media (max-width: 768px) {
+    .seo-pricing-tabs {
+        margin-bottom: -55px;
+    }
+}
+
+/* ---------- Pricing Grid Mobile Slider ---------- */
+@media (max-width: 1023px) {
+    .seo-page .seo-pricing-grid,
+    .seo-page .seo-pricing-grid.categories-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        gap: 1rem;
+        margin-left: -1rem;
+        margin-right: -1rem;
+        padding: 2rem 1rem 1.5rem;
+        grid-template-columns: none !important;
+        width: calc(100% + 2rem);
+        max-width: calc(100% + 2rem);
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .seo-page .seo-pricing-grid::-webkit-scrollbar,
+    .seo-page .seo-pricing-grid.categories-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .seo-page .seo-pricing-grid > .seo-pricing-card,
+    .seo-page .seo-pricing-grid.categories-grid > .seo-pricing-card {
+        flex: 0 0 82%;
+        max-width: 82%;
+        min-width: 82%;
+        scroll-snap-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        box-sizing: border-box;
+    }
+
+    .seo-page .seo-pricing-grid > .seo-pricing-card-featured,
+    .seo-page .seo-pricing-grid.categories-grid > .seo-pricing-card-featured {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .seo-page .seo-pricing-grid[hidden] {
+        display: none !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .seo-page .seo-pricing-grid > .seo-pricing-card,
+    .seo-page .seo-pricing-grid.categories-grid > .seo-pricing-card {
+        flex: 0 0 88%;
+        max-width: 88%;
+        min-width: 88%;
+    }
+}
+
+/* ---------- Hero Grid Overflow Fix ---------- */
+@media (max-width: 768px) {
+    .seo-hero-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .seo-hero,
+    .seo-hero-container,
+    .seo-hero-copy,
+    .seo-hero-visual,
+    .seo-hero-visual-inner,
+    .seo-hero-desc,
+    .seo-metric-badges,
+    .seo-hero-cta {
+        min-width: 0 !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .seo-gsc-chart {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .seo-hero-cta .btn-dark {
+        white-space: normal;
+        text-align: center;
+    }
+}
+
+/* ---------- Section Sub — Justify Mobile ---------- */
+@media (max-width: 768px) {
+
+    [dir="ltr"] .seo-page .seo-section-sub,
+    [dir="ltr"] .seo-page .seo-text-right,
+    [dir="ltr"] .seo-page .seo-editorial p,
+    [dir="ltr"] .seo-page .seo-hero-desc p {
+        text-align: justify;
+        text-align-last: left;
+        -moz-text-align-last: left;
+        text-justify: inter-word;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+    }
+
+    .seo-audit-info .seo-section-sub,
+    .seo-audit-info .seo-text-right {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    [dir="rtl"] .seo-audit-info .seo-section-sub,
+    [dir="rtl"] .seo-audit-info .seo-text-right {
+        text-align-last: right;
+        -moz-text-align-last: right;
+    }
+
+    [dir="ltr"] .seo-audit-info .seo-section-sub,
+    [dir="ltr"] .seo-audit-info .seo-text-right {
+        text-align-last: left;
+        -moz-text-align-last: left;
+    }
+}
+
+/* ---------- Mini Stat Mobile Center ---------- */
+@media (max-width: 768px) {
+    .seo-mini-stat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .seo-mini-stat .seo-mini-stat-value,
+    .seo-mini-stat .seo-mini-stat-desc {
+        width: 100%;
+        text-align: center;
+        text-align-last: center;
+        -moz-text-align-last: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ===================================================================== */
+/* ======================= 19. REDUCED MOTION ========================= */
+/* ===================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .seo-page *,
+    .seo-page *::before,
+    .seo-page *::after {
+        animation: none !important;
+        transition-duration: .01ms !important;
+    }
+
+    .seo-page .seo-reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ===================================================================== */
+/* ============================ 320px = XS ============================= */
+/* iPhone 5 (568x320)                                                    */
+/* ===================================================================== */
+
+@media (min-width: 320px) {
+
+}
+
+/* ===================================================================== */
+/* ============================ 380px = S ============================== */
+/* Galaxy Z Flip 3 (880x360) | Galaxy S24 Ultra (891x412)                */
+/* ===================================================================== */
+
+@media (min-width: 380px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 440px = S+ ============================== */
+/* iPhone 17 Pro Max (956x440)                                           */
+/* ===================================================================== */
+
+@media (min-width: 440px) {
+
+}
+
+/* ===================================================================== */
+/* ============================ 480px = M ============================== */
+/* —                                                                     */
+/* ===================================================================== */
+
+@media (min-width: 480px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 768px = TAB ============================= */
+/* iPad Mini (1024x768) | Galaxy Fold inner (1076x768)                   */
+/* ===================================================================== */
+
+@media (min-width: 768px) {
+
+}
+
+/* ===================================================================== */
+/* ========================== 800px = TAB+ ============================= */
+/* Galaxy Tab S7 (1280x800)                                              */
+/* ===================================================================== */
+
+@media (min-width: 800px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 1024px = L ============================== */
+/* iPad Pro 13 (1376x1032)                                               */
+/* ===================================================================== */
+
+@media (min-width: 1024px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 1366px = XL ============================= */
+/* Desktop / Laptop FHD                                                  */
+/* ===================================================================== */
+
+@media (min-width: 1366px) {
+
+}
+
+/* ===================================================================== */
+/* ========================== 1920px = 2XL ============================= */
+/* Full HD / 2K                                                          */
+/* ===================================================================== */
+
+@media (min-width: 1920px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 2560px = UW ============================= */
+/* Ultrawide (3440x1440) | 4K UHD (2160x3840)                            */
+/* ===================================================================== */
+
+@media (min-width: 2560px) {
+
+}
+
+/* ===================================================================== */
+/* ======================= LANDSCAPE PHONE ============================= */
+/* iPhone 17 PM / S24 Ultra در حالت افقی (ارتفاع کم)                     */
+/* ===================================================================== */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+}

@@ -1,0 +1,362 @@
+/* :::::::::::::::::::::::::: PARTNERS COMPONENT :::::::::::::::::::::::::: */
+
+class PartnersComponent extends HTMLElement {
+    constructor() {
+        super();
+        this.attachShadow({ mode: "open" });
+
+        /* :::::::::::::::::::::::::: CONFIGURATION :::::::::::::::::::::::::: */
+        this.logosPerRow = 11;
+        this.totalRows = 6;
+        this.hideCenter = false;
+
+        /* زبان و ترجمه‌ها */
+        const i18n = window.i18n;
+        const langCode = i18n.detectLang();
+        const dict = i18n.TRANSLATIONS[langCode] || i18n.TRANSLATIONS[i18n.DEFAULT_LANG];
+        const partners = dict.partners;
+
+        this.centerImg = partners.centerImg;
+        this.centerImgAlt = partners.centerImgAlt;
+
+        /* :::::::::::::::::::::::::: LOGO LIST (مشترک بین همه‌ی زبان‌ها) :::::::::::::::::::::::::: */
+        this.logoList = [
+            "/assets/images/logo-component/AlvandtasisatLogoOld.webp",
+            "/assets/images/logo-component/HevaapsLogoOld.webp",
+            "/assets/images/logo-component/AlzahravfxLogoOld.webp",
+            "/assets/images/logo-component/ApakalaLogo.webp",
+            "/assets/images/logo-component/ApasazehLogoOld.webp",
+            "/assets/images/logo-component/AplusLogo.webp",
+            "/assets/images/logo-component/ArmaghanLogo.webp",
+            "/assets/images/logo-component/AvrinLogoOld.webp",
+            "/assets/images/logo-component/AyeghbamaLogoOld.webp",
+            "/assets/images/logo-component/BitatebLogo.webp",
+            "/assets/images/logo-component/CadinuLogoOld.webp",
+            "/assets/images/logo-component/DiacoLogoOld.webp",
+            "/assets/images/logo-component/DorfaksazehLogo.webp",
+            "/assets/images/logo-component/FaratoseeLogo.webp",
+            "/assets/images/logo-component/FarhangLogo.webp",
+            "/assets/images/logo-component/HampadigitalLogoOld.webp",
+            "/assets/images/logo-component/IlsglobalLogoOld.webp",
+            "/assets/images/logo-component/KashanestoreLogoOld.webp",
+            "/assets/images/logo-component/KralhomeLogoOld.webp",
+            "/assets/images/logo-component/LinexLogoOld.webp",
+            "/assets/images/logo-component/MegalightLogoOld.webp",
+            "/assets/images/logo-component/MehmandarLogoOld.webp",
+            "/assets/images/logo-component/MehrnooshLogoOld.webp",
+            "/assets/images/logo-component/NabiranLogoOld.webp",
+            "/assets/images/logo-component/NiavaranLogo.webp",
+            "/assets/images/logo-component/NickdigiLogo.webp",
+            "/assets/images/logo-component/PardeoxinLogoOld.webp",
+            "/assets/images/logo-component/PartbanLogo.webp",
+            "/assets/images/logo-component/PayamavaLogoOld.webp",
+            "/assets/images/logo-component/PayetakhtetalaLogo.webp",
+            "/assets/images/logo-component/PermonmedLogoOld.webp",
+            "/assets/images/logo-component/PtahvieLogo.webp",
+            "/assets/images/logo-component/RabiLogoOld.webp",
+            "/assets/images/logo-component/RossoLogoOld.webp",
+            "/assets/images/logo-component/ShahabmarcoLogo.webp",
+            "/assets/images/logo-component/ShahrekhabLogoOld.webp",
+            "/assets/images/logo-component/ShahresabtLogo.webp",
+            "/assets/images/logo-component/SholepishgamLogoOld.webp",
+            "/assets/images/logo-component/SpantawebLogo.webp",
+            "/assets/images/logo-component/TarhfaLogo.webp",
+            "/assets/images/logo-component/TimartebLogo.webp",
+            "/assets/images/logo-component/UromkaracaLogoOld.webp",
+            "/assets/images/logo-component/VegimeatLogo.webp",
+            "/assets/images/logo-component/ZrmrLogoOld.webp",
+            "/assets/images/logo-component/IranpapernetLogo.webp",
+            "/assets/images/logo-component/KaniraLogo.webp",
+        ];
+    }
+
+    /* :::::::::::::::::::::::::: CONNECTED CALLBACK :::::::::::::::::::::::::: */
+    connectedCallback() {
+        const rowsAttr = this.getAttribute("rows");
+        this.totalRows = rowsAttr ? (parseInt(rowsAttr, 10) || 6) : 6;
+
+        const perRowAttr = this.getAttribute("per-row");
+        this.logosPerRow = perRowAttr ? (parseInt(perRowAttr, 10) || 11) : 11;
+
+        this.hideCenter = this.hasAttribute("hide-center");
+
+        this.render();
+    }
+
+    /* :::::::::::::::::::::::::: RENDER :::::::::::::::::::::::::: */
+    render() {
+        const template = document.createElement("template");
+
+        const centerImageHTML = !this.hideCenter
+            ? `
+                <div class="center-image">
+                    <img
+                        src="${this.centerImg}"
+                        alt="${this.centerImgAlt}"
+                        data-blurup="true"
+                        loading="eager"
+                        fetchpriority="high"
+                    >
+                </div>
+            `
+            : "";
+
+        template.innerHTML = `
+            <style>
+                :host {
+                    display: block;
+                    font-family: sans-serif;
+                }
+
+                /* :::::::::::::::::::::::::: PARTNERS SECTION :::::::::::::::::::::::::: */
+                .partners-section {
+                    width: 100%;
+                    padding: 60px 0;
+                    position: relative;
+                    overflow: hidden;
+                    direction: ltr;
+                }
+
+                /* :::::::::::::::::::::::::: MARQUEE :::::::::::::::::::::::::: */
+                .marquee-container {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    width: 100%;
+                    position: relative;
+                    z-index: 0;
+                }
+
+                .marquee-row {
+                    display: flex;
+                    white-space: nowrap;
+                    width: 100%;
+                }
+
+                .marquee {
+                    display: flex;
+                    gap: 35px;
+                    padding: 4px 0;
+                    animation-duration: 15s;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                    will-change: transform;
+                }
+
+                .marquee-right {
+                    animation-name: scrollRight;
+                }
+
+                .marquee-left {
+                    animation-name: scrollLeft;
+                }
+
+                .marquee-item {
+                    flex: 0 0 auto;
+                    width: 120px;
+                    height: 70px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 35px;
+                    flex-shrink: 0;
+                    opacity: 0.6;
+                    transition: opacity 0.3s;
+                }
+
+                .marquee-item:nth-child(11n) {
+                    margin-right: 0;
+                }
+
+                .marquee-item img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    width: auto;
+                    height: auto;
+                    object-fit: contain;
+                    opacity: 0.6;
+                    filter: blur(18px);
+                    transform: scale(1.05);
+                    transition: filter 0.6s ease, transform 0.6s ease, opacity 0.3s;
+                }
+
+                .marquee-item img.blurup-loaded {
+                    filter: blur(0);
+                    transform: scale(1);
+                }
+
+                .marquee-item img:hover {
+                    opacity: 1;
+                }
+
+                /* :::::::::::::::::::::::::: CENTER IMAGE :::::::::::::::::::::::::: */
+                .center-image {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 1;
+                    width: 50%;
+                    max-width: 90vw;
+                    max-height: 36vw;
+                    overflow: hidden;
+                    pointer-events: none;
+                }
+
+                .center-image img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    filter: blur(18px) drop-shadow(0 3px 4px rgba(0,0,0,0.4));
+                    transform: scale(1.05);
+                    transition: filter 0.6s ease, transform 0.6s ease;
+                }
+
+                .center-image img.blurup-loaded {
+                    filter: drop-shadow(0 3px 4px rgba(0,0,0,0.4));
+                    transform: scale(1);
+                }
+
+                /* :::::::::::::::::::::::::: ANIMATIONS :::::::::::::::::::::::::: */
+                @keyframes scrollRight {
+                    0% {
+                        transform: translateX(-50%);
+                    }
+                    100% {
+                        transform: translateX(0);
+                    }
+                }
+
+                @keyframes scrollLeft {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    100% {
+                        transform: translateX(-50%);
+                    }
+                }
+
+                /* :::::::::::::::::::::::::: RESPONSIVE :::::::::::::::::::::::::: */
+                @media (max-width: 1100px) {
+                    .partners-section {
+                        padding: 30px 0;
+                    }
+
+                    .center-image {
+                        width: 95vw;
+                        height: calc(95vw * 0.4);
+                    }
+
+                    .marquee-item {
+                        width: 120px;
+                        height: 70px;
+                        margin-right: 25px;
+                    }
+
+                    .marquee-item:nth-child(11n) {
+                        margin-right: 0;
+                    }
+                }
+            </style>
+
+            <section class="partners-section">
+                <div class="marquee-container" id="marqueeContainer"></div>
+                ${centerImageHTML}
+            </section>
+        `;
+
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
+
+        const container = this.shadowRoot.getElementById("marqueeContainer");
+
+        for (let i = 0; i < this.totalRows; i++) {
+            const rowLogos = this.shuffleArray([...this.logoList]).slice(
+                0,
+                this.logosPerRow,
+            );
+            const direction = i % 2 === 0 ? "right" : "left";
+            const row = this.createMarqueeRow(rowLogos, direction);
+            container.appendChild(row);
+        }
+
+        this.initBlurEngine();
+    }
+
+    /* :::::::::::::::::::::::::: SHUFFLE ARRAY :::::::::::::::::::::::::: */
+    shuffleArray(arr) {
+        for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+    }
+
+    /* :::::::::::::::::::::::::: CREATE MARQUEE ROW :::::::::::::::::::::::::: */
+    createMarqueeRow(logos, direction) {
+        const rowDiv = document.createElement("div");
+        rowDiv.className = "marquee-row";
+
+        const marqueeDiv = document.createElement("div");
+        marqueeDiv.className = `marquee marquee-${direction}`;
+
+        const repeatedLogos = [...logos, ...logos];
+
+        repeatedLogos.forEach((src) => {
+            const itemDiv = document.createElement("div");
+            itemDiv.className = "marquee-item";
+
+            const img = document.createElement("img");
+            img.src = src;
+            img.alt = `Logo of ${src.split("/").pop().replace(".webp", "")}`;
+            img.loading = "lazy";
+            img.decoding = "async";
+            img.setAttribute("data-blurup", "true");
+
+            itemDiv.appendChild(img);
+            marqueeDiv.appendChild(itemDiv);
+        });
+
+        rowDiv.appendChild(marqueeDiv);
+        return rowDiv;
+    }
+
+    /* :::::::::::::::::::::::::: BLUR-UP ENGINE :::::::::::::::::::::::::: */
+    initBlurEngine() {
+        const images = this.shadowRoot.querySelectorAll("img[data-blurup]");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+
+                    const img = entry.target;
+
+                    if (img.complete) {
+                        img.classList.add("blurup-loaded");
+                    } else {
+                        img.addEventListener(
+                            "load",
+                            () => {
+                                img.classList.add("blurup-loaded");
+                            },
+                            { once: true },
+                        );
+                    }
+
+                    observer.unobserve(img);
+                });
+            },
+            {
+                rootMargin: "200px",
+                threshold: 0.01,
+            },
+        );
+
+        images.forEach((img) => observer.observe(img));
+    }
+}
+
+/* :::::::::::::::::::::::::: REGISTRATION :::::::::::::::::::::::::: */
+if (!customElements.get("partners-component")) {
+    customElements.define("partners-component", PartnersComponent);
+}

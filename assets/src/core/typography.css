@@ -1,0 +1,461 @@
+/* ===================================================================== */
+/* ============== TYPOGRAPHY — SINGLE SOURCE OF TRUTH ================== */
+/* ===================================================================== */
+
+/* ===================================================================== */
+/* ======================== TABLE OF CONTENTS ========================== */
+/* ===================================================================== */
+/*
+  1. BASE TYPOGRAPHY (h1 - h6, p, h1 .h1_sub)
+  2. SPLIT TEXT / GSAP PROTECTION
+  3. RESPONSIVE TYPOGRAPHY (Global)
+  4. STORY / ABOUT PAGE
+  5. HERO SECTION (Light Home)
+  6. TESTIMONIALS
+  7. PORTFOLIO PAGE
+  8. PORTFOLIO ROW (Global)
+  9. UTILITIES
+*/
+
+
+/* ===================================================================== */
+/* ======================= 1. BASE TYPOGRAPHY ========================== */
+/* ===================================================================== */
+
+:root {
+    /* ---- توکن‌های رنگ متن و سایه‌ی معکوس (سراسری) ---- */
+    --text-light: #f5f5f5;
+    --text-dark: #0d0d0d;
+
+    /* سایه‌ی متنی که روی پس‌زمینه‌ی روشن استفاده می‌شه (متن تیره) */
+    --shadow-on-dark-text: 0 2px 12px rgba(245, 245, 245, 0.6);
+
+    /* سایه‌ی متنی که روی پس‌زمینه‌ی تیره استفاده می‌شه (متن روشن) */
+    --shadow-on-light-text: 0 2px 12px rgba(13, 13, 13, 0.7);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    display: block;
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.15;
+    color: var(--text-dark);
+    text-shadow: var(--shadow-on-dark-text);
+}
+
+/* تگ‌لاین زیر h1 — تنها کلاس مجاز داخل h1 */
+h1 .h1_sub {
+    display: block;
+    font-size: 0.30em;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.005em;
+    color: inherit;
+    margin-top: 0.5em;
+    /* text-shadow خودکار از h1 ارث می‌بره */
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--text-light);
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--text-light);
+}
+
+p {
+    color: #A0A0A0;
+    line-height: 1.7;
+}
+
+
+/* ===================================================================== */
+/* ============= 2. SPLIT TEXT / GSAP PROTECTION ======================= */
+/* ===================================================================== */
+
+.split-title .word,
+.split-title .space,
+.split-text .word,
+.split-text .space {
+    display: inline-block;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    -webkit-text-fill-color: inherit;
+    text-shadow: inherit;   /* ← صریحاً از والد */
+    background: none;
+    text-align: inherit;
+    will-change: transform, opacity;
+}
+
+.split-title .word,
+.split-text .word {
+    transform-origin: center bottom;
+}
+
+.split-title .space { width: 0.32em; }
+.split-text .space  { width: 0.28em; }
+
+/* حفظ بلوک بودن h1های split‌شده تا کلمات عمودی روی هم نریزن */
+.js h1.split-title,
+h1.split-title {
+    display: block;
+    flex-direction: unset;
+    gap: 0;
+}
+
+
+/* ===================================================================== */
+/* ================ 3. RESPONSIVE TYPOGRAPHY (Global) ================== */
+/* ===================================================================== */
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: clamp(2.2rem, 5vw, 2.8rem);
+        text-align: center;
+        text-align-last: center;
+    }
+
+    h2 { font-size: clamp(1.8rem, 4vw, 2.3rem); }
+    h3 { font-size: clamp(1.4rem, 3.5vw, 1.9rem); }
+}
+
+@media (max-width: 768px) {
+    h1,
+    h1.split-title {
+        font-size: clamp(2.4rem, 8vw, 3rem);
+        line-height: 1.3;
+        color: var(--text-light);
+        -webkit-text-fill-color: var(--text-light);
+        text-shadow: var(--shadow-on-light-text);
+        text-align: center;
+        text-align-last: center;
+    }
+
+    h1 .h1_sub {
+        font-size: 0.42em;
+        color: inherit;
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+        line-height: 1.4;
+    }
+
+    h3 { font-size: clamp(1.2rem, 4vw, 1.7rem); }
+
+    p, li {
+        font-size: clamp(0.9rem, 2.8vw, 1rem);
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 480px) {
+    h1,
+    h1.split-title {
+        font-size: 2.6rem;
+        text-align: center;
+        text-align-last: center;
+        color: var(--text-light);
+        -webkit-text-fill-color: var(--text-light);
+        text-shadow: var(--shadow-on-light-text);
+    }
+
+    h1 .h1_sub { font-size: 0.45em; }
+
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.35rem; }
+
+    p { font-size: 1.05rem; line-height: 1.55; }
+}
+
+
+/* ===================================================================== */
+/* ==================== 4. STORY / ABOUT PAGE ========================== */
+/* ===================================================================== */
+
+.step-year {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 900;
+    color: #54595f;
+}
+
+.story-block.active .step-year { color: var(--text-light); }
+
+.step-context {
+    font-size: 1.1rem;
+    color: #4ECDC4;
+    letter-spacing: 2px;
+}
+
+.step-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.step-text {
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    color: #54595f;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .step-year    { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+    .step-context { font-size: 0.8rem; }
+    .step-title   { font-size: clamp(1.5rem, 4vw, 2rem); }
+    .step-text    { font-size: clamp(1rem, 2.5vw, 1.3rem); }
+}
+
+
+/* ===================================================================== */
+/* ==================== 5. HERO SECTION (Light Home) =================== */
+/* ===================================================================== */
+
+.hero-section h1 {
+    color: var(--text-dark);
+    text-shadow: var(--shadow-on-dark-text);
+}
+
+/* ---- موبایل (≤768px): تیتر روشن روی پس‌زمینه تیره ---- */
+@media (max-width: 768px) {
+    .hero-section h1,
+    .hero-section h1 .h1_sub {
+        color: var(--text-light);
+        -webkit-text-fill-color: var(--text-light);
+        text-shadow: var(--shadow-on-light-text);
+    }
+}
+
+/* ---- تبلت‌های portrait (800–1100px): تیتر روشن روی پس‌زمینه تیره ---- */
+@media (min-width: 800px) and (max-width: 1100px) and (orientation: portrait) {
+    .hero-section h1,
+    .hero-section h1 .h1_sub,
+    .hero-section h1 .split-title,
+    .hero-section h1 .split-title .word,
+    .hero-section h1 .split-title .space,
+    .hero-section h1 .h1_sub .word,
+    .hero-section h1 .h1_sub .space {
+        color: var(--text-light);
+        -webkit-text-fill-color: var(--text-light);
+        text-shadow: var(--shadow-on-light-text);
+    }
+}
+
+
+/* ===================================================================== */
+/* ========================= 6. TESTIMONIALS =========================== */
+/* ===================================================================== */
+
+.testimonials-section .title {
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+
+/* ===================================================================== */
+/* ======================== 7. PORTFOLIO PAGE ========================== */
+/* ===================================================================== */
+
+.eyebrow {
+    color: #4ecdc4;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+}
+
+.section-title {
+    font-size: clamp(32px, 5vw, 58px);
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.section-desc {
+    color: rgba(245, 247, 251, 0.74);
+    font-size: 16px;
+    line-height: 2;
+}
+
+.category-number {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.category-badge {
+    color: #4ecdc4;
+    font-size: 13px;
+}
+
+.category-card__body h3 { font-size: 28px; }
+
+.category-card__body p {
+    color: rgba(245, 247, 251, 0.74);
+    line-height: 2;
+}
+
+.graphic-card__index {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.graphic-card h3 { font-size: 24px; }
+
+.graphic-card p {
+    color: rgba(245, 247, 251, 0.74);
+    line-height: 2;
+}
+
+.show-more-btn {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+    body.portfolio-page h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    body.portfolio-page .section-title.split-title .word {
+        font-size: 30px;
+    }
+
+    body.portfolio-page .quick-link { font-size: 15px; }
+    body.portfolio-page .category-number { font-size: 32px; }
+    body.portfolio-page .category-badge { font-size: 11px; }
+    body.portfolio-page .category-card__body h3 { font-size: 20px; }
+
+    body.portfolio-page .category-card__body p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    body.portfolio-page .category-card__footer { font-size: 14px; }
+    body.portfolio-page .graphic-card__index { font-size: 32px; }
+    body.portfolio-page .graphic-card h3 { font-size: 20px; }
+
+    body.portfolio-page .graphic-card p {
+        font-size: 14px;
+        line-height: 1.7;
+        color: rgba(245, 247, 251, 0.74);
+    }
+
+    body.portfolio-page .cta-btn { font-size: 15px; }
+}
+
+
+/* ===================================================================== */
+/* ==================== 8. PORTFOLIO ROW (Global) ===================== */
+/* ===================================================================== */
+
+.portfolio-row__index {
+    color: rgba(255, 255, 255, 0.42);
+    font-size: clamp(1.9rem, 3vw, 3.35rem);
+    font-weight: 900;
+    letter-spacing: 0.08em;
+}
+
+.portfolio-row__title {
+    color: #F5F7FB;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.portfolio-row__year {
+    color: rgba(255, 255, 255, 0.42);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.portfolio-row__hint {
+    color: rgba(255, 255, 255, 0.42);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    body.portfolio-page .portfolio-row__year {
+        font-size: 0.65rem;
+        color: rgba(255, 255, 255, 0.42);
+        letter-spacing: 0.12em;
+    }
+
+    body.portfolio-page .portfolio-row__title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #f5f7fb;
+    }
+
+    body.portfolio-page .portfolio-row__hint {
+        color: rgba(255, 255, 255, 0.42);
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 1.4;
+    }
+
+    body.portfolio-page .portfolio-row__index {
+        color: rgba(255, 255, 255, 0.42);
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+}
+
+
+/* ===================================================================== */
+/* ============ 9. MEDIA CAPTION (Hover / Overlay Text) ================ */
+/* ===================================================================== */
+
+/*
+  برای هر متنی که روی تصویر/ویدیو (اورلی یا هاور) نمایش داده می‌شود.
+  - رنگ اصلی از توکن --text-light گرفته می‌شود.
+  - پاراگراف دوم (مثل سال) به‌صورت خودکار کم‌رنگ می‌شود.
+*/
+
+.media-caption {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+}
+
+.media-caption p {
+    margin: 0;
+    color: inherit;
+    line-height: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/* آیتم دوم (معمولاً سال یا متادیتا) کمی محوتر */
+.media-caption p:last-child:not(:first-child) {
+    color: rgba(245, 245, 245, 0.7);
+    font-size: 0.85rem;
+    font-weight: 400;
+}

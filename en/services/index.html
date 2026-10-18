@@ -23,7 +23,7 @@
       sizes="32x32"
       href="/assets/images/icon-32.png"
     />
-    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/src/main.css" />
 
     <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
     <meta
@@ -100,171 +100,6 @@
     />
 
     <!-- :::::::::::::::::::::::::: SCHEMA :::::::::::::::::::::::::: -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "Person",
-            "@id": "https://arminsilatani.com/#person",
-            "name": "Armin Silatani",
-            "url": "https://arminsilatani.com/",
-            "jobTitle": "Digital Marketing Expert"
-          },
-          {
-            "@type": "WebSite",
-            "@id": "https://arminsilatani.com/#website",
-            "url": "https://arminsilatani.com/",
-            "name": "Armin Silatani",
-            "publisher": {
-              "@id": "https://arminsilatani.com/#person"
-            },
-            "inLanguage": ["fa", "en", "ar", "tr", "de", "it"]
-          },
-          {
-            "@type": "CollectionPage",
-            "@id": "https://arminsilatani.com/en/services/#webpage",
-            "url": "https://arminsilatani.com/en/services/",
-            "name": "Digital Marketing Services - Armin Silatani",
-            "isPartOf": {
-              "@id": "https://arminsilatani.com/#website"
-            },
-            "about": {
-              "@id": "https://arminsilatani.com/#person"
-            },
-            "inLanguage": "en",
-            "breadcrumb": {
-              "@id": "https://arminsilatani.com/en/services/#breadcrumb"
-            },
-            "mainEntity": {
-              "@id": "https://arminsilatani.com/en/services/#itemlist"
-            }
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": "https://arminsilatani.com/en/services/#breadcrumb",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://arminsilatani.com/en/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Services",
-                "item": "https://arminsilatani.com/en/services/"
-              }
-            ]
-          },
-          {
-            "@type": "ItemList",
-            "@id": "https://arminsilatani.com/en/services/#itemlist",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                  "@type": "Service",
-                  "url": "https://arminsilatani.com/en/services/seo/",
-                  "name": "Search Engine Optimization (SEO)",
-                  "description": "Data-driven SEO strategies that increase organic traffic, improve rankings, and generate qualified leads. Stop guessing and start growing.",
-                  "provider": {
-                    "@id": "https://arminsilatani.com/#person"
-                  },
-                  "areaServed": "Global"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                  "@type": "Service",
-                  "url": "https://arminsilatani.com/en/services/google-ads/",
-                  "name": "Google Ads",
-                  "description": "Targeted PPC campaigns designed for maximum ROI. We put your business in front of the right people at the exact moment they're searching for you.",
-                  "provider": {
-                    "@id": "https://arminsilatani.com/#person"
-                  },
-                  "areaServed": "Global"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "item": {
-                  "@type": "Service",
-                  "url": "https://arminsilatani.com/en/services/web-design/",
-                  "name": "Web Design",
-                  "description": "Custom, responsive websites built to convert. Combining beautiful aesthetics with seamless functionality to create your perfect digital storefront.",
-                  "provider": {
-                    "@id": "https://arminsilatani.com/#person"
-                  },
-                  "areaServed": "Global"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 4,
-                "item": {
-                  "@type": "Service",
-                  "url": "https://arminsilatani.com/en/services/online-shop/",
-                  "name": "Online Shop / E-commerce",
-                  "description": "Scalable e-commerce solutions that drive sales. From inventory management to secure checkouts, we build platforms that turn visitors into customers.",
-                  "provider": {
-                    "@id": "https://arminsilatani.com/#person"
-                  },
-                  "areaServed": "Global"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 5,
-                "item": {
-                  "@type": "Service",
-                  "url": "https://arminsilatani.com/en/services/social-media/",
-                  "name": "Social Media Marketing",
-                  "description": "Engaging social media strategies that build brand awareness and foster community. We create content that stops the scroll and starts conversations.",
-                  "provider": {
-                    "@id": "https://arminsilatani.com/#person"
-                  },
-                  "areaServed": "Global"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 6,
-                "item": {
-                  "@type": "Service",
-                  "url": "https://arminsilatani.com/en/services/graphic-design/",
-                  "name": "Graphic Design",
-                  "description": "Compelling visual identities that communicate your brand's unique story. From logos to marketing materials, we design with purpose and impact.",
-                  "provider": {
-                    "@id": "https://arminsilatani.com/#person"
-                  },
-                  "areaServed": "Global"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 7,
-                "item": {
-                  "@type": "Service",
-                  "url": "https://arminsilatani.com/en/services/uiux-design/",
-                  "name": "UI/UX Design",
-                  "description": "Every button placement, spacing decision, and navigation path is intentional. Built around how users actually behave, not how we wish they would.",
-                  "provider": {
-                    "@id": "https://arminsilatani.com/#person"
-                  },
-                  "areaServed": "Global"
-                }
-              }
-            ]
-          }
-        ]
-      }
-    </script>
 
     <!-- :::::::::::::::::::::::::: GSAP & SCROLLTRIGGER :::::::::::::::::::::::::: -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -278,6 +113,20 @@
     <main class="has-footer-gap">
       <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
       <section class="hero-section">
+                        <video
+        class="hero-section__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+    >
+        <source src="/assets/images/arminsilatani/services/seo/hero.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-section__noise" aria-hidden="true"></div>
+    <div class="hero-section__scanlines" aria-hidden="true"></div>
+    <div class="hero-section__glitch" aria-hidden="true"></div>
         <div class="hero-container container-1080">
           <language-component></language-component>
           <div class="hero-title">
@@ -309,14 +158,7 @@
             />
           </svg>
         </div>
-        <div class="fake-terminal-breadcrumb">
-          <div class="fake-terminal-inner">
-            <span class="cmd-prefix">$</span>
-            <span class="command">open</span>
-            <span id="terminalPath"></span>
-            <span class="cursor"></span>
-          </div>
-        </div>
+<terminal-breadcrumb></terminal-breadcrumb>
       </section>
 
       <!-- :::::::::::::::::::::::::: SERVICES SECTION :::::::::::::::::::::::::: -->
@@ -518,12 +360,13 @@
     <footer-component></footer-component>
 
     <!-- :::::::::::::::::::::::::: COMPONENT SCRIPTS :::::::::::::::::::::::::: -->
-    <script type="module" src="../header-component.js"></script>
-    <script src="/assets/css/components/blurup.js"></script>
-    <script src="../language-component.js"></script>
-    <script src="/assets/css/components/breadcrumb.js"></script>
+<script src="/assets/src/core/i18n.js"></script>
+<script type="module" src="/assets/src/components/header.js"></script> 
+    <script src="/assets/src/components/blurup.js"></script>
+<script type="module" src="/assets/src/components/language-selector.js"></script>
+    <script src="/assets/src/components/terminal-breadcrumb.js"></script>
     <script type="module" src="../../services/services.js"></script>
-    <script type="module" src="../footer-component.js"></script>
+<script type="module" src="/assets/src/components/footer.js"></script>
 
     <!-- :::::::::::::::::::::::::: SERVICES SLIDER SCRIPT :::::::::::::::::::::::::: -->
     <script>
@@ -639,6 +482,6 @@
     </script>
 
     <!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
-    <script src="/assets/css/components/animations.js"></script>
+    <script src="/assets/src/components/animations.js"></script>
   </body>
 </html>

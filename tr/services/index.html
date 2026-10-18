@@ -26,7 +26,7 @@
       sizes="32x32"
       href="/assets/images/icon-32.png"
     />
-    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/src/main.css" />
 
     <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
     <meta
@@ -103,179 +103,7 @@
     />
 
     <!-- :::::::::::::::::::::::::: STRUCTURED DATA :::::::::::::::::::::::::: -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebSite",
-            "@id": "https://arminsilatani.com/tr/services/#website",
-            "url": "https://arminsilatani.com/tr/services/",
-            "name": "Arminsilatani - Dijital Pazarlama Uzmanı",
-            "description": "Arminsilatani, web tasarımı, SEO, Google Ads ve sosyal medya yönetimi gibi profesyonel dijital pazarlama hizmetleri sunmaktadır.",
-            "inLanguage": "tr",
-            "publisher": {
-              "@id": "https://arminsilatani.com/tr/services/#person"
-            }
-          },
-          {
-            "@type": "CollectionPage",
-            "@id": "https://arminsilatani.com/tr/services/#webpage",
-            "url": "https://arminsilatani.com/tr/services/",
-            "name": "Dijital Pazarlama Hizmetleri",
-            "description": "Sayfada, müşterilerinizi çekecek anahtar kelime araştırmasından web sitesi tasarımına kadar olan tüm dijital pazarlama hizmetlerini bulabilirsiniz.",
-            "inLanguage": "tr",
-            "dateModified": "2026-05-25",
-            "image": "https://arminsilatani.com/assets/images/arminsilatani/services/FeaturedImage.webp",
-            "author": {
-              "@id": "https://arminsilatani.com/tr/services/#person"
-            },
-            "about": {
-              "@id": "https://arminsilatani.com/tr/services/#website"
-            },
-            "mainEntity": {
-              "@id": "https://arminsilatani.com/tr/services/#itemlist"
-            },
-            "breadcrumb": {
-              "@id": "https://arminsilatani.com/tr/services/#breadcrumb"
-            }
-          },
-          {
-            "@type": "Person",
-            "@id": "https://arminsilatani.com/tr/services/#person",
-            "name": "Armin Silatani",
-            "alternateName": "Armin Silatani",
-            "jobTitle": "Dijital Pazarlama Uzmanı",
-            "image": "https://arminsilatani.com/assets/images/arminsilatani/services/FeaturedImage.webp",
-            "url": "https://arminsilatani.com/tr/services/",
-            "sameAs": [
-              "https://www.linkedin.com/in/arminsilatani/",
-              "https://github.com/Arminsilatani",
-              "https://www.instagram.com/arminsilatani",
-              "https://t.me/ArminSilatani",
-              "https://wa.me/+989125759466"
-            ],
-            "email": "contact@arminsilatani.com",
-            "telephone": "+989125759466"
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": "https://arminsilatani.com/tr/services/#breadcrumb",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Ana Sayfa",
-                "item": "https://arminsilatani.com/tr/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Dijital Pazarlama Hizmetleri",
-                "item": "https://arminsilatani.com/tr/services/"
-              }
-            ]
-          },
-          {
-            "@type": "ItemList",
-            "@id": "https://arminsilatani.com/tr/services/#itemlist",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                  "@type": "Service",
-                  "name": "SEO",
-                  "description": "Paranızı doğru yere harcayın. Satın almaya niyetli müşterileri çeken anahtar kelimeleri bulur, onlara özel içerikler üretirim.",
-                  "serviceType": "Arama Motoru Optimizasyonu",
-                  "provider": {
-                    "@id": "https://arminsilatani.com/tr/services/#person"
-                  }
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                  "@type": "Service",
-                  "name": "Web Tasarımı",
-                  "description": "Sitenizi baştan sona ben kuruyorum. Siz fikrinizi söyleyin, teknik detaylar, süreç, teslimat — hepsi bende.",
-                  "serviceType": "Web Tasarım Hizmeti",
-                  "provider": {
-                    "@id": "https://arminsilatani.com/tr/services/#person"
-                  }
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "item": {
-                  "@type": "Service",
-                  "name": "E-Ticaret Sitesi Tasarımı",
-                  "description": "Ürün eklemek, kampanya açmak, siparişleri takip etmek; kurduğum mağazada bunların hepsi birkaç tıkla halloluyor.",
-                  "serviceType": "E-Ticaret Web Tasarımı",
-                  "provider": {
-                    "@id": "https://arminsilatani.com/tr/services/#person"
-                  }
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 4,
-                "item": {
-                  "@type": "Service",
-                  "name": "Google Ads",
-                  "description": "Her tıklamanın bir bedeli var. Google Ads bütçenizi boşa harcamadan, gerçekten alım yapacak kişilere ulaştırıyorum.",
-                  "serviceType": "Google Ads Yönetimi",
-                  "provider": {
-                    "@id": "https://arminsilatani.com/tr/services/#person"
-                  }
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 5,
-                "item": {
-                  "@type": "Service",
-                  "name": "Grafik Tasarım",
-                  "description": "Tasarım sadece göz zevki değil. Çizdiğim her şeyin arkasında net bir hedef var: doğru izlenimi vermek ve satışa dönüştürmek.",
-                  "serviceType": "Grafik Tasarım Hizmeti",
-                  "provider": {
-                    "@id": "https://arminsilatani.com/tr/services/#person"
-                  }
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 6,
-                "item": {
-                  "@type": "Service",
-                  "name": "Sosyal Medya Yönetimi",
-                  "description": "Trend olan içerik rastlantı değildir. Doğru hashtag ve zamanlamayla içeriklerinizi keşfet sayfasına taşır, takipçiye dönüştürürüm.",
-                  "serviceType": "Sosyal Medya Yönetimi",
-                  "provider": {
-                    "@id": "https://arminsilatani.com/tr/services/#person"
-                  }
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 7,
-                "item": {
-                  "@type": "Service",
-                  "name": "UI/UX Tasarımı",
-                  "description": "Bir butonu nereye koyacağınız bile kullanıcıyı etkiler. Arayüzü psikolojiye göre tasarlıyor, tıklama ve tamamlama oranlarını yukarı çekiyorum.",
-                  "serviceType": "UI/UX Tasarımı",
-                  "provider": {
-                    "@id": "https://arminsilatani.com/tr/services/#person"
-                  }
-                }
-              }
-            ]
-          }
-        ]
-      }
-    </script>
+
 
     <!-- :::::::::::::::::::::::::: GSAP & SCROLLTRIGGER :::::::::::::::::::::::::: -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -289,6 +117,20 @@
     <main class="has-footer-gap">
       <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
       <section class="hero-section">
+                        <video
+        class="hero-section__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+    >
+        <source src="/assets/images/arminsilatani/services/seo/hero.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-section__noise" aria-hidden="true"></div>
+    <div class="hero-section__scanlines" aria-hidden="true"></div>
+    <div class="hero-section__glitch" aria-hidden="true"></div>
         <div class="hero-container container-1080">
           <language-component></language-component>
           <div class="hero-title">
@@ -320,14 +162,7 @@
             />
           </svg>
         </div>
-        <div class="fake-terminal-breadcrumb">
-          <div class="fake-terminal-inner">
-            <span class="cmd-prefix">$</span>
-            <span class="command">open</span>
-            <span id="terminalPath"></span>
-            <span class="cursor"></span>
-          </div>
-        </div>
+        <terminal-breadcrumb></terminal-breadcrumb>
       </section>
 
       <!-- :::::::::::::::::::::::::: SERVICES SECTION :::::::::::::::::::::::::: -->
@@ -530,12 +365,13 @@
     <footer-component></footer-component>
 
     <!-- :::::::::::::::::::::::::: COMPONENT SCRIPTS :::::::::::::::::::::::::: -->
-    <script type="module" src="../header-component.js"></script>
-    <script src="/assets/css/components/blurup.js"></script>
-    <script src="../language-component.js"></script>
-    <script src="/assets/css/components/breadcrumb.js"></script>
+<script src="/assets/src/core/i18n.js"></script>
+<script type="module" src="/assets/src/components/header.js"></script> 
+    <script src="/assets/src/components/blurup.js"></script>
+<script type="module" src="/assets/src/components/language-selector.js"></script>
+    <script src="/assets/src/components/terminal-breadcrumb.js"></script>
     <script type="module" src="../../services/services.js"></script>
-    <script type="module" src="../footer-component.js"></script>
+<script type="module" src="/assets/src/components/footer.js"></script>
 
     <!-- :::::::::::::::::::::::::: SERVICES SLIDER SCRIPT :::::::::::::::::::::::::: -->
     <script>
@@ -647,6 +483,6 @@
     </script>
 
     <!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
-    <script src="/assets/css/components/animations.js"></script>
+    <script src="/assets/src/components/animations.js"></script>
   </body>
 </html>

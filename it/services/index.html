@@ -25,7 +25,7 @@
     />
 
     <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
-    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/src/main.css" />
 
     <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
     <meta
@@ -102,175 +102,7 @@
     />
 
     <!-- :::::::::::::::::::::::::: SCHEMA :::::::::::::::::::::::::: -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebSite",
-            "@id": "https://arminsilatani.com/it/#website",
-            "url": "https://arminsilatani.com/it/",
-            "name": "Armin Silatani",
-            "description": "Web design, servizi SEO professionali e pubblicità Google Ads — forniti da Armin Silatani. Consulenza gratuita.",
-            "publisher": {
-              "@id": "https://arminsilatani.com/#person"
-            },
-            "inLanguage": "it"
-          },
-          {
-            "@type": "CollectionPage",
-            "@id": "https://arminsilatani.com/it/services/#webpage",
-            "url": "https://arminsilatani.com/it/services/",
-            "name": "Servizi di Digital Marketing",
-            "description": "I dettagli sulle campagne pubblicitarie, la gestione dei social media e le fasi dei servizi di digital marketing sono chiarificati in questa pagina.",
-            "isPartOf": {
-              "@id": "https://arminsilatani.com/it/#website"
-            },
-            "about": {
-              "@id": "https://arminsilatani.com/#person"
-            },
-            "inLanguage": "it"
-          },
-          {
-            "@type": "Person",
-            "@id": "https://arminsilatani.com/#person",
-            "name": "Armin Silatani",
-            "jobTitle": "Specialista di Digital Marketing",
-            "description": "Web design, servizi SEO professionali e pubblicità Google Ads — forniti da Armin Silatani. Consulenza gratuita.",
-            "url": "https://arminsilatani.com/it/",
-            "image": "https://arminsilatani.com/assets/images/favicon.png",
-            "email": "contact@arminsilatani.com",
-            "telephone": "+989125759466",
-            "foundingDate": "2020",
-            "sameAs": [
-              "https://www.linkedin.com/in/arminsilatani/",
-              "https://github.com/Arminsilatani",
-              "https://www.instagram.com/arminsilatani",
-              "https://t.me/ArminSilatani",
-              "https://wa.me/+989125759466"
-            ]
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": "https://arminsilatani.com/it/services/#breadcrumb",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://arminsilatani.com/it/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Servizi",
-                "item": "https://arminsilatani.com/it/services/"
-              }
-            ]
-          },
-          {
-            "@type": "ItemList",
-            "@id": "https://arminsilatani.com/it/services/#services-list",
-            "mainEntityOfPage": {
-              "@id": "https://arminsilatani.com/it/services/#webpage"
-            },
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                  "@type": "Service",
-                  "name": "SEO",
-                  "description": "Trovo le parole chiave che portano clienti, non solo traffico, e costruisco contenuti pensati per chi ha già il portafoglio in mano.",
-                  "url": "https://arminsilatani.com/it/services/seo",
-                  "provider": {
-                    "@id": "https://arminsilatani.com/#person"
-                  }
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                  "@type": "Service",
-                  "name": "Sviluppo Siti Web",
-                  "description": "Il tuo sito lo seguo io, dall’idea al lancio. Tu dimmi cosa vuoi, io lo realizzo — puntuale e senza farti perdere il sonno.",
-                  "url": "https://arminsilatani.com/it/services/web-design",
-                  "provider": {
-                    "@id": "https://arminsilatani.com/#person"
-                  }
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "item": {
-                  "@type": "Service",
-                  "name": "Creazione di E-commerce",
-                  "description": "Un e-commerce dove caricare un prodotto, applicare uno sconto o evadere un ordine richiede meno tempo che rispondere a un messaggio su WhatsApp.",
-                  "url": "https://arminsilatani.com/it/services/ecommerce",
-                  "provider": {
-                    "@id": "https://arminsilatani.com/#person"
-                  }
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 4,
-                "item": {
-                  "@type": "Service",
-                  "name": "Google Ads",
-                  "description": "Ogni euro investito in Google Ads finisce davanti a chi sta già cercando quello che vendi. Niente sprechi, solo conversioni.",
-                  "url": "https://arminsilatani.com/it/services/google-ads",
-                  "provider": {
-                    "@id": "https://arminsilatani.com/#person"
-                  }
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 5,
-                "item": {
-                  "@type": "Service",
-                  "name": "Grafica",
-                  "description": "La grafica che realizzo non è decorazione: ogni scelta visiva serve a fermare lo scroll, guadagnare fiducia o spingere all’acquisto.",
-                  "url": "https://arminsilatani.com/it/services/graphics",
-                  "provider": {
-                    "@id": "https://arminsilatani.com/#person"
-                  }
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 6,
-                "item": {
-                  "@type": "Service",
-                  "name": "Social Media",
-                  "description": "Uso hashtag e trend con criterio, non a caso. Il risultato: contenuti che finiscono in Esplora e follower che diventano clienti.",
-                  "url": "https://arminsilatani.com/it/services/social-media",
-                  "provider": {
-                    "@id": "https://arminsilatani.com/#person"
-                  }
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 7,
-                "item": {
-                  "@type": "Service",
-                  "name": "UI/UX Design",
-                  "description": "Ogni pulsante, ogni margine, ogni percorso di navigazione è studiato su come ragiona davvero l’utente — così clicca, va avanti e completa.",
-                  "url": "https://arminsilatani.com/it/services/ui-ux",
-                  "provider": {
-                    "@id": "https://arminsilatani.com/#person"
-                  }
-                }
-              }
-            ]
-          }
-        ]
-      }
-    </script>
+
 
     <!-- :::::::::::::::::::::::::: GSAP + SCROLLTRIGGER :::::::::::::::::::::::::: -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -284,6 +116,20 @@
     <main class="has-footer-gap">
       <!-- :::::::::::::::::::::::::: HERO :::::::::::::::::::::::::: -->
       <section class="hero-section">
+                        <video
+        class="hero-section__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+    >
+        <source src="/assets/images/arminsilatani/services/seo/hero.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-section__noise" aria-hidden="true"></div>
+    <div class="hero-section__scanlines" aria-hidden="true"></div>
+    <div class="hero-section__glitch" aria-hidden="true"></div>
         <div class="hero-container container-1080">
           <language-component></language-component>
           <div class="hero-title">
@@ -315,14 +161,7 @@
             />
           </svg>
         </div>
-        <div class="fake-terminal-breadcrumb">
-          <div class="fake-terminal-inner">
-            <span class="cmd-prefix">$</span>
-            <span class="command">open</span>
-            <span id="terminalPath"></span>
-            <span class="cursor"></span>
-          </div>
-        </div>
+        <terminal-breadcrumb></terminal-breadcrumb>
       </section>
 
       <!-- :::::::::::::::::::::::::: SERVICES :::::::::::::::::::::::::: -->
@@ -528,12 +367,13 @@
     <footer-component></footer-component>
 
     <!-- :::::::::::::::::::::::::: COMPONENT SCRIPTS :::::::::::::::::::::::::: -->
-    <script type="module" src="../header-component.js"></script>
-    <script src="/assets/css/components/blurup.js"></script>
-    <script src="../language-component.js"></script>
-    <script src="/assets/css/components/breadcrumb.js"></script>
+<script src="/assets/src/core/i18n.js"></script>
+<script type="module" src="/assets/src/components/header.js"></script> 
+    <script src="/assets/src/components/blurup.js"></script>
+<script type="module" src="/assets/src/components/language-selector.js"></script>
+    <script src="/assets/src/components/terminal-breadcrumb.js"></script>
     <script type="module" src="../../services/services.js"></script>
-    <script type="module" src="../footer-component.js"></script>
+<script type="module" src="/assets/src/components/footer.js"></script>
 
     <!-- :::::::::::::::::::::::::: SERVICES SLIDER SCRIPT :::::::::::::::::::::::::: -->
     <script>
@@ -650,6 +490,6 @@
     </script>
 
     <!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
-    <script src="/assets/css/components/animations.js"></script>
+    <script src="/assets/src/components/animations.js"></script>
   </body>
 </html>

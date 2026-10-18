@@ -28,21 +28,21 @@
         />
 
         <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
-        <link rel="stylesheet" href="/assets/css/main.css" />
+        <link rel="stylesheet" href="/assets/src/main.css" />
 
         <!-- :::::::::::::::::::::::::: RESOURCE HINTS :::::::::::::::::::::::::: -->
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
         <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
         <link
             rel="preload"
-            href="/fonts/KalamehWeb-Regular.woff2"
+            href="/assets/fonts/KalamehWeb-Regular.woff2"
             as="font"
             type="font/woff2"
             crossorigin
         />
         <link
             rel="preload"
-            href="/fonts/KalamehWeb-Black.woff2"
+            href="/assets/fonts/KalamehWeb-Black.woff2"
             as="font"
             type="font/woff2"
             crossorigin
@@ -126,217 +126,9 @@
         />
 
         <!-- :::::::::::::::::::::::::: SCHEMA :::::::::::::::::::::::::: -->
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@graph": [
-                    {
-                        "@type": "WebSite",
-                        "@id": "https://arminsilatani.com/#WebSite",
-                        "url": "https://arminsilatani.com/",
-                        "name": "Armin Silatani",
-                        "publisher": {
-                            "@id": "https://arminsilatani.com/#Person"
-                        },
-                        "inLanguage": ["fa", "en", "ar", "tr", "de", "it"]
-                    },
-                    {
-                        "@type": "Person",
-                        "@id": "https://arminsilatani.com/#Person",
-                        "name": "Armin Silatani",
-                        "alternateName": "آرمین سیلاطانی",
-                        "jobTitle": "Dijital Pazarlama Uzmanı",
-                        "url": "https://arminsilatani.com/",
-                        "image": "https://arminsilatani.com/images/favicon.png",
-                        "email": "contact@arminsilatani.com",
-                        "telephone": "+989125759466",
-                        "description": "Web tasarımı, profesyonel SEO hizmetleri ve Google Ads — Armin Silatani tarafından sunulmaktadır. Ücretsiz danışmanlık.",
-                        "sameAs": [
-                            "https://www.linkedin.com/in/arminsilatani/",
-                            "https://github.com/Arminsilatani",
-                            "https://www.instagram.com/arminsilatani",
-                            "https://t.me/ArminSilatani",
-                            "https://wa.me/+989125759466"
-                        ]
-                    },
-                    {
-                        "@type": "CollectionPage",
-                        "@id": "https://arminsilatani.com/tr/portfolio/cataloguedesign#WebPage",
-                        "url": "https://arminsilatani.com/tr/portfolio/cataloguedesign",
-                        "name": "Katalog Tasarımı Örnekleri | Armin Silatani",
-                        "description": "Armin Silatani tarafından hazırlanan profesyonel katalog tasarımı örnekleri. Farhang Sabt, Bita Teb ve Parsa Tahvieh gibi gerçek projelerden oluşan grafik tasarım portföyü.",
-                        "inLanguage": "tr",
-                        "datePublished": "2026-08-27",
-                        "dateModified": "2026-08-27",
-                        "isPartOf": {
-                            "@id": "https://arminsilatani.com/#WebSite"
-                        },
-                        "about": {
-                            "@id": "https://arminsilatani.com/#Person"
-                        },
-                        "author": {
-                            "@id": "https://arminsilatani.com/#Person"
-                        },
-                        "image": "https://arminsilatani.com/assets/images/arminsilatani/portfolio/cataloguedesign/FeaturedImage.webp",
-                        "primaryImageOfPage": {
-                            "@type": "ImageObject",
-                            "url": "https://arminsilatani.com/assets/images/arminsilatani/portfolio/cataloguedesign/FeaturedImage.webp"
-                        },
-                        "breadcrumb": {
-                            "@id": "https://arminsilatani.com/tr/portfolio/cataloguedesign#BreadcrumbList"
-                        },
-                        "mainEntity": {
-                            "@id": "https://arminsilatani.com/tr/portfolio/cataloguedesign#MainEntity"
-                        },
-                        "sameAs": [
-                            "https://arminsilatani.com/portfolio/cataloguedesign",
-                            "https://arminsilatani.com/en/portfolio/cataloguedesign",
-                            "https://arminsilatani.com/ar/portfolio/cataloguedesign",
-                            "https://arminsilatani.com/de/portfolio/cataloguedesign",
-                            "https://arminsilatani.com/it/portfolio/cataloguedesign"
-                        ]
-                    },
-                    {
-                        "@type": "BreadcrumbList",
-                        "@id": "https://arminsilatani.com/tr/portfolio/cataloguedesign#BreadcrumbList",
-                        "itemListElement": [
-                            {
-                                "@type": "ListItem",
-                                "position": 1,
-                                "name": "Ana Sayfa",
-                                "item": "https://arminsilatani.com/tr/"
-                            },
-                            {
-                                "@type": "ListItem",
-                                "position": 2,
-                                "name": "Portföy",
-                                "item": "https://arminsilatani.com/tr/portfolio"
-                            },
-                            {
-                                "@type": "ListItem",
-                                "position": 3,
-                                "name": "Katalog Tasarımı Örnekleri",
-                                "item": "https://arminsilatani.com/tr/portfolio/cataloguedesign"
-                            }
-                        ]
-                    },
-                    {
-                        "@type": "ItemList",
-                        "@id": "https://arminsilatani.com/tr/portfolio/cataloguedesign#MainEntity",
-                        "name": "Katalog Tasarımı Portföyü",
-                        "description": "Armin Silatani tarafından farklı sektörlerdeki müşteriler için tasarlanan profesyonel katalog ve broşür örnekleri.",
-                        "numberOfItems": 3,
-                        "author": {
-                            "@id": "https://arminsilatani.com/#Person"
-                        },
-                        "itemListElement": [
-                            {
-                                "@type": "ListItem",
-                                "position": 1,
-                                "item": {
-                                    "@type": "CreativeWork",
-                                    "name": "Farhang Sabt Enstitüsü Kataloğu",
-                                    "dateCreated": "2024",
-                                    "author": {
-                                        "@id": "https://arminsilatani.com/#Person"
-                                    },
-                                    "image": [
-                                        {
-                                            "@type": "ImageObject",
-                                            "url": "https://arminsilatani.com/assets/images/arminsilatani/portfolio/cataloguedesign/FarhangSabtFirstPage.webp",
-                                            "description": "Farhang Sabt projesinin katalogunun ilk sayfası"
-                                        },
-                                        {
-                                            "@type": "ImageObject",
-                                            "url": "https://arminsilatani.com/assets/images/arminsilatani/portfolio/cataloguedesign/FarhangSabtSecondPage.webp",
-                                            "description": "Farhang Sabt projesinin katalogunun ikinci sayfası"
-                                        },
-                                        {
-                                            "@type": "ImageObject",
-                                            "url": "https://arminsilatani.com/assets/images/arminsilatani/portfolio/cataloguedesign/FarhangSabtThirdPage.webp",
-                                            "description": "Farhang Sabt projesinin katalogunun üçüncü sayfası"
-                                        },
-                                        {
-                                            "@type": "ImageObject",
-                                            "url": "https://arminsilatani.com/assets/images/arminsilatani/portfolio/cataloguedesign/FarhangSabtFourthPage.webp",
-                                            "description": "Farhang Sabt projesinin katalogunun dördüncü sayfası"
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "@type": "ListItem",
-                                "position": 2,
-                                "item": {
-                                    "@type": "CreativeWork",
-                                    "name": "Bita Teb Broşürü",
-                                    "dateCreated": "2024",
-                                    "author": {
-                                        "@id": "https://arminsilatani.com/#Person"
-                                    },
-                                    "image": [
-                                        {
-                                            "@type": "ImageObject",
-                                            "url": "https://arminsilatani.com/assets/images/arminsilatani/portfolio/cataloguedesign/BitaTebFront.webp",
-                                            "description": "Bita Teb broşürünün ön yüzü"
-                                        },
-                                        {
-                                            "@type": "ImageObject",
-                                            "url": "https://arminsilatani.com/assets/images/arminsilatani/portfolio/cataloguedesign/BitaTebBack.webp",
-                                            "description": "Bita Teb broşürünün arka yüzü"
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "@type": "ListItem",
-                                "position": 3,
-                                "item": {
-                                    "@type": "CreativeWork",
-                                    "name": "Parsa Tahvieh Kataloğu",
-                                    "dateCreated": "2022",
-                                    "author": {
-                                        "@id": "https://arminsilatani.com/#Person"
-                                    },
-                                    "image": [
-                                        {
-                                            "@type": "ImageObject",
-                                            "url": "https://arminsilatani.com/assets/images/arminsilatani/portfolio/cataloguedesign/PTahvieFirstPage.webp",
-                                            "description": "Parsa Tahvieh projesinin katalogunun ilk sayfası"
-                                        },
-                                        {
-                                            "@type": "ImageObject",
-                                            "url": "https://arminsilatani.com/assets/images/arminsilatani/portfolio/cataloguedesign/PTahvieSecondPage.webp",
-                                            "description": "Parsa Tahvieh projesinin katalogunun ikinci sayfası"
-                                        },
-                                        {
-                                            "@type": "ImageObject",
-                                            "url": "https://arminsilatani.com/assets/images/arminsilatani/portfolio/cataloguedesign/PTahvieThirdPage.webp",
-                                            "description": "Parsa Tahvieh projesinin katalogunun üçüncü sayfası"
-                                        },
-                                        {
-                                            "@type": "ImageObject",
-                                            "url": "https://arminsilatani.com/assets/images/arminsilatani/portfolio/cataloguedesign/PTahvieFourthPage.webp",
-                                            "description": "Parsa Tahvieh projesinin katalogunun dördüncü sayfası"
-                                        },
-                                        {
-                                            "@type": "ImageObject",
-                                            "url": "https://arminsilatani.com/assets/images/arminsilatani/portfolio/cataloguedesign/PTahvietFifthPage.webp",
-                                            "description": "Parsa Tahvieh projesinin katalogunun beşinci sayfası"
-                                        },
-                                        {
-                                            "@type": "ImageObject",
-                                            "url": "https://arminsilatani.com/assets/images/arminsilatani/portfolio/cataloguedesign/PTahvieSixthPage.webp",
-                                            "description": "Parsa Tahvieh projesinin katalogunun altıncı sayfası"
-                                        }
-                                    ]
-                                }
-                            }
-                        ]
-                    }
-                ]
-            }
-        </script>
+<!-- :::::::::::::::::::::::::: HEAD SCRIPTS :::::::::::::::::::::::::: -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     </head>
 
     <!-- :::::::::::::::::::::::::: BODY :::::::::::::::::::::::::: -->
@@ -350,12 +142,31 @@
 
             <!-- :::::::::::::::::::::::::: HERO :::::::::::::::::::::::::: -->
             <section class="hero-section">
+                                <video
+        class="hero-section__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+    >
+        <source src="/assets/images/arminsilatani/services/seo/hero.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-section__noise" aria-hidden="true"></div>
+    <div class="hero-section__scanlines" aria-hidden="true"></div>
+    <div class="hero-section__glitch" aria-hidden="true"></div>
                 <div class="container-1080">
                     <div class="hero-container">
                         <language-component></language-component>
                         <div class="hero-title">
-                            <h1>Katalog Tasarımı Örnekleri</h1>
+                            <h1>
+                                <span class="split-title">Katalog Tasarımı Örnekleri</span>
+                                <span class="h1_sub reveal-up">Göz atın ve hayata geçirilen projeleri inceleyin</span>
+                            </h1>
                         </div>
+
+                            
                     </div>
 
                     <div class="pro-divider">
@@ -384,14 +195,7 @@
                         </svg>
                     </div>
 
-                    <div class="fake-terminal-breadcrumb">
-                        <div class="fake-terminal-inner">
-                            <span class="cmd-prefix">$</span>
-                            <span class="command">open</span>
-                            <span id="terminalPath"></span>
-                            <span class="cursor"></span>
-                        </div>
-                    </div>
+                    <terminal-breadcrumb></terminal-breadcrumb>
                 </div>
             </section>
 
@@ -410,99 +214,109 @@
           </div>
         </div>
 
-        <div class="container-1300">
-          <div class="catalogue-grid">
-            <article class="catalogue-card">
-              <div class="catalogue-info">
-                <p>Ferheng Sabt Enstitüsü</p>
-                <p>2024</p>
-              </div>
+<div class="catalogue-grid">
+  <article class="catalogue-card">
+    <div class="container-1080">
+      <div class="catalogue-info">
+        <p>Ferheng Sabt Enstitüsü</p>
+        <p>2024</p>
+      </div>
+    </div>
 
-              <div class="catalogue-media">
-                <img
-                  src="/assets/images/arminsilatani/portfolio/cataloguedesign/FarhangSabtFirstPage.webp"
-                  alt="Ferheng Sabt projesi kataloğunun ilk sayfası"
-                  loading="lazy"
-                />
-                <img
-                  src="/assets/images/arminsilatani/portfolio/cataloguedesign/FarhangSabtSecondPage.webp"
-                  alt="Ferheng Sabt projesi kataloğunun ikinci sayfası"
-                  loading="lazy"
-                />
-                <img
-                  src="/assets/images/arminsilatani/portfolio/cataloguedesign/FarhangSabtThirdPage.webp"
-                  alt="Ferheng Sabt projesi kataloğunun üçüncü sayfası"
-                  loading="lazy"
-                />
-                <img
-                  src="/assets/images/arminsilatani/portfolio/cataloguedesign/FarhangSabtFourthPage.webp"
-                  alt="Ferheng Sabt projesi kataloğunun dördüncü sayfası"
-                  loading="lazy"
-                />
-              </div>
-            </article>
+    <div class="container-max">
+      <div class="catalogue-media">
+        <img
+          src="/assets/images/arminsilatani/portfolio/cataloguedesign/FarhangSabtFirstPage.webp"
+          alt="Ferheng Sabt projesi kataloğunun ilk sayfası"
+          loading="lazy"
+        />
+        <img
+          src="/assets/images/arminsilatani/portfolio/cataloguedesign/FarhangSabtSecondPage.webp"
+          alt="Ferheng Sabt projesi kataloğunun ikinci sayfası"
+          loading="lazy"
+        />
+        <img
+          src="/assets/images/arminsilatani/portfolio/cataloguedesign/FarhangSabtThirdPage.webp"
+          alt="Ferheng Sabt projesi kataloğunun üçüncü sayfası"
+          loading="lazy"
+        />
+        <img
+          src="/assets/images/arminsilatani/portfolio/cataloguedesign/FarhangSabtFourthPage.webp"
+          alt="Ferheng Sabt projesi kataloğunun dördüncü sayfası"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </article>
 
-            <article class="catalogue-card">
-              <div class="catalogue-info">
-                <p>Bita Tıp</p>
-                <p>2024</p>
-              </div>
+  <article class="catalogue-card">
+    <div class="container-1080">
+      <div class="catalogue-info">
+        <p>Bita Tıp</p>
+        <p>2024</p>
+      </div>
+    </div>
 
-              <div class="catalogue-media">
-                <img
-                  src="/assets/images/arminsilatani/portfolio/cataloguedesign/BitaTebFront.webp"
-                  alt="Bita Tıp broşürünün ön yüzü"
-                  loading="lazy"
-                />
-                <img
-                  src="/assets/images/arminsilatani/portfolio/cataloguedesign/BitaTebBack.webp"
-                  alt="Bita Tıp broşürünün arka yüzü"
-                  loading="lazy"
-                />
-              </div>
-            </article>
+    <div class="container-max">
+      <div class="catalogue-media">
+        <img
+          src="/assets/images/arminsilatani/portfolio/cataloguedesign/BitaTebFront.webp"
+          alt="Bita Tıp broşürünün ön yüzü"
+          loading="lazy"
+        />
+        <img
+          src="/assets/images/arminsilatani/portfolio/cataloguedesign/BitaTebBack.webp"
+          alt="Bita Tıp broşürünün arka yüzü"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </article>
 
-            <article class="catalogue-card">
-              <div class="catalogue-info">
-                <p>Parsa Havalandırma</p>
-                <p>2022</p>
-              </div>
+  <article class="catalogue-card">
+    <div class="container-1080">
+      <div class="catalogue-info">
+        <p>Parsa Havalandırma</p>
+        <p>2022</p>
+      </div>
+    </div>
 
-              <div class="catalogue-media">
-                <img
-                  src="/assets/images/arminsilatani/portfolio/cataloguedesign/PTahvieFirstPage.webp"
-                  alt="Parsa Havalandırma projesi kataloğunun ilk sayfası"
-                  loading="lazy"
-                />
-                <img
-                  src="/assets/images/arminsilatani/portfolio/cataloguedesign/PTahvieSecondPage.webp"
-                  alt="Parsa Havalandırma projesi kataloğunun ikinci sayfası"
-                  loading="lazy"
-                />
-                <img
-                  src="/assets/images/arminsilatani/portfolio/cataloguedesign/PTahvieThirdPage.webp"
-                  alt="Parsa Havalandırma projesi kataloğunun üçüncü sayfası"
-                  loading="lazy"
-                />
-                <img
-                  src="/assets/images/arminsilatani/portfolio/cataloguedesign/PTahvieFourthPage.webp"
-                  alt="Parsa Havalandırma projesi kataloğunun dördüncü sayfası"
-                  loading="lazy"
-                />
-                <img
-                  src="/assets/images/arminsilatani/portfolio/cataloguedesign/PTahvietFifthPage.webp"
-                  alt="Parsa Havalandırma projesi kataloğunun beşinci sayfası"
-                  loading="lazy"
-                />
-                <img
-                  src="/assets/images/arminsilatani/portfolio/cataloguedesign/PTahvieSixthPage.webp"
-                  alt="Parsa Havalandırma projesi kataloğunun altıncı sayfası"
-                  loading="lazy"
-                />
-              </div>
-            </article>
-          </div>
-        </div>
+    <div class="container-max">
+      <div class="catalogue-media">
+        <img
+          src="/assets/images/arminsilatani/portfolio/cataloguedesign/PTahvieFirstPage.webp"
+          alt="Parsa Havalandırma projesi kataloğunun ilk sayfası"
+          loading="lazy"
+        />
+        <img
+          src="/assets/images/arminsilatani/portfolio/cataloguedesign/PTahvieSecondPage.webp"
+          alt="Parsa Havalandırma projesi kataloğunun ikinci sayfası"
+          loading="lazy"
+        />
+        <img
+          src="/assets/images/arminsilatani/portfolio/cataloguedesign/PTahvieThirdPage.webp"
+          alt="Parsa Havalandırma projesi kataloğunun üçüncü sayfası"
+          loading="lazy"
+        />
+        <img
+          src="/assets/images/arminsilatani/portfolio/cataloguedesign/PTahvieFourthPage.webp"
+          alt="Parsa Havalandırma projesi kataloğunun dördüncü sayfası"
+          loading="lazy"
+        />
+        <img
+          src="/assets/images/arminsilatani/portfolio/cataloguedesign/PTahvietFifthPage.webp"
+          alt="Parsa Havalandırma projesi kataloğunun beşinci sayfası"
+          loading="lazy"
+        />
+        <img
+          src="/assets/images/arminsilatani/portfolio/cataloguedesign/PTahvieSixthPage.webp"
+          alt="Parsa Havalandırma projesi kataloğunun altıncı sayfası"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </article>
+</div>
 
         <div class="container-1080">
           <div class="portfolio-description reveal-up">
@@ -532,23 +346,7 @@
           </div>
         </div>
 
-        <div class="container-1300">
-          <div class="quote-section reveal-up">
-            <div class="quote-inner">
-              <div class="quote-image">
-                <img
-                  src="/assets/images/arminsilatani/portfolio/cataloguedesign/DieterRams.webp"
-                  alt="Dieter Rams"
-                  loading="lazy"
-                />
-              </div>
-              <blockquote>
-                <p>Daha az, ama daha iyi.</p>
-                <footer>Dieter Rams</footer>
-              </blockquote>
-            </div>
-          </div>
-        </div>
+
 
         <div class="container-1080">
           <div style="margin-top: 2.5rem" class="reveal-up">
@@ -572,7 +370,7 @@
         </div>
       </section>
 
-
+<section-divider></section-divider>
             <!-- :::::::::::::::::::::::::: PROCESS :::::::::::::::::::::::::: -->
             <section class="section" id="process">
                 <div class="container-1080 reveal-up">
@@ -592,7 +390,7 @@
                 </div>
 
                 <div class="container-1300">
-                    <div class="process-grid categories-grid" id="processGrid">
+                    <process-component class="process-grid categories-grid">
                         <article class="process-box reveal-card is-open">
                             <div class="process-box__meta">
                                 <span class="process-box__step">Birinci</span>
@@ -718,21 +516,26 @@
                 </div>
             </section>
 
-            <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
-            <footer-component></footer-component>
+</main>
+    <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
 
-            <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->
-            <script type="module" src="../../header-component.js"></script>
-            <script src="/assets/css/components/blurup.js"></script>
-            <script src="../../language-component.js"></script>
-            <script src="/assets/css/components/breadcrumb.js"></script>
-            <script type="module" src="../../footer-component.js"></script>
-            <script src="/assets/css/components/animations.js"></script>
-            <script src="cataloguedesign.js" defer></script>
-        </main>
+    <footer-component></footer-component>
 
-        <!-- :::::::::::::::::::::::::: LIBRARY SCRIPTS :::::::::::::::::::::::::: -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <back-to-top></back-to-top>
+
+
+
+    <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->
+
+    <script src="/assets/src/core/i18n.js"></script>
+    <script type="module" src="/assets/src/components/header.js"></script>
+    <script src="/assets/src/components/blurup.js"></script>
+    <script type="module" src="/assets/src/components/language-selector.js"></script>
+    <script src="/assets/src/components/terminal-breadcrumb.js"></script>
+    <script type="module" src="/assets/src/components/footer.js"></script>
+    <script type="module" src="/assets/src/components/back-to-top.js"></script>
+    <script type="module" src="/assets/src/components/process-component.js"></script>
+    <script src="/assets/src/components/portfolio-graphic.js"></script>
+    <script src="/assets/src/core/animations.js"></script>
     </body>
 </html>

@@ -1,8 +1,10 @@
 <!doctype html>
 <html lang="de" dir="ltr">
-    <!-- :::::::::::::::::::::::::: HEAD :::::::::::::::::::::::::: -->
+
+
+    <!-- :::::::::::::::::::::::::: HEAD & META :::::::::::::::::::::::::: -->
+
     <head>
-        <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Logodesign-Portfolio im Überblick | Armin Silatani</title>
@@ -12,7 +14,6 @@
         />
         <meta name="robots" content="noindex, nofollow" />
 
-        <!-- :::::::::::::::::::::::::: FAVICONS :::::::::::::::::::::::::: -->
         <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
         <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
         <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
@@ -23,10 +24,14 @@
             href="/assets/images/icon-32.png"
         />
 
-        <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
-        <link rel="stylesheet" href="/assets/css/main.css" />
 
-        <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
+        <!-- :::::::::::::::::::::::::: STYLESHEETS & FONTS :::::::::::::::::::::::::: -->
+
+        <link rel="stylesheet" href="/assets/src/main.css" />
+
+
+        <!-- :::::::::::::::::::::::::: OPEN GRAPH & TWITTER CARDS :::::::::::::::::::::::::: -->
+
         <meta
             property="og:title"
             content="Logodesign-Portfolio mit Beispielen Armin Silatani"
@@ -49,8 +54,6 @@
             property="og:image:alt"
             content="Mann mit Kappe und kariertem Hemd arbeitet mit einem Tablet im Home-Office, ein kleiner Hund liegt entspannt daneben."
         />
-
-        <!-- :::::::::::::::::::::::::: TWITTER CARD :::::::::::::::::::::::::: -->
         <meta name="twitter:card" content="summary_large_image" />
         <meta
             name="twitter:title"
@@ -65,7 +68,9 @@
             content="https://arminsilatani.com/assets/images/arminsilatani/portfolio/logodesign/FeaturedImage.webp"
         />
 
+
         <!-- :::::::::::::::::::::::::: CANONICAL & HREFLANG :::::::::::::::::::::::::: -->
+
         <link
             rel="canonical"
             href="https://arminsilatani.com/de/portfolio/logodesign"
@@ -106,25 +111,57 @@
             href="https://arminsilatani.com/en/portfolio/logodesign"
         />
 
-        <!-- :::::::::::::::::::::::::: GSAP CDN :::::::::::::::::::::::::: -->
+
+        <!-- :::::::::::::::::::::::::: JSON-LD SCHEMA :::::::::::::::::::::::::: -->
+
+        <script type="application/ld+json">
+
+        </script>
+
+
+        <!-- :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: -->
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     </head>
 
-    <!-- :::::::::::::::::::::::::: BODY :::::::::::::::::::::::::: -->
+
     <body class="portfolio-page">
-        <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
+
+
+        <!-- :::::::::::::::::::::::::: HEADER & NAVIGATION :::::::::::::::::::::::::: -->
+
         <header-component></header-component>
 
-        <!-- :::::::::::::::::::::::::: MAIN :::::::::::::::::::::::::: -->
+
+        <!-- :::::::::::::::::::::::::: MAIN CONTENT :::::::::::::::::::::::::: -->
+
         <main class="has-footer-gap portfolio-main">
             <!-- :::::::::::::::::::::::::: HERO :::::::::::::::::::::::::: -->
+
             <section class="hero-section">
-                <div class="container-1080">
+                <video
+                    class="hero-section__video"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                >
+                    <source src="/assets/images/arminsilatani/services/seo/hero.mp4" type="video/mp4">
+                </video>
+
+                <div class="hero-section__noise" aria-hidden="true"></div>
+                <div class="hero-section__scanlines" aria-hidden="true"></div>
+                <div class="hero-section__glitch" aria-hidden="true"></div>
+                <div class="container-1300">
                     <div class="hero-container">
                         <language-component></language-component>
                         <div class="hero-title">
-                            <h1>logo design referenzen</h1>
+                            <h1>
+                                <span class="split-title">logo design referenzen</span>
+                                <span class="h1_sub reveal-up">Logo Design Referenzen aus realisierten Projekten verschiedener Branchen</span>
+                            </h1>
                         </div>
                     </div>
                 </div>
@@ -155,17 +192,12 @@
                     </svg>
                 </div>
 
-                <div class="fake-terminal-breadcrumb">
-                    <div class="fake-terminal-inner">
-                        <span class="cmd-prefix">$</span>
-                        <span class="command">open</span>
-                        <span id="terminalPath"></span>
-                        <span class="cursor"></span>
-                    </div>
-                </div>
+                <terminal-breadcrumb></terminal-breadcrumb>
             </section>
 
+
             <!-- :::::::::::::::::::::::::: LOGO PROJECTS :::::::::::::::::::::::::: -->
+
             <section class="logo-projects-section">
                 <div class="container-1080">
                     <div class="portfolio-description reveal-up">
@@ -188,11 +220,12 @@
                                     loading="lazy"
                                 />
                             </div>
-                            <div class="logo-info">
+                            <div class="portfolio-info">
                                 <h3>Vegimeat</h3>
                                 <p>2025</p>
                             </div>
                         </article>
+
                         <article class="logo-card reveal-card">
                             <div class="logo-media">
                                 <img
@@ -201,11 +234,12 @@
                                     loading="lazy"
                                 />
                             </div>
-                            <div class="logo-info">
+                            <div class="portfolio-info">
                                 <h3>Tarhfa</h3>
                                 <p>2024</p>
                             </div>
                         </article>
+
                         <article class="logo-card reveal-card">
                             <div class="logo-media">
                                 <img
@@ -214,11 +248,12 @@
                                     loading="lazy"
                                 />
                             </div>
-                            <div class="logo-info">
+                            <div class="portfolio-info">
                                 <h3>Niavaran Sabt</h3>
                                 <p>2023</p>
                             </div>
                         </article>
+
                         <article class="logo-card reveal-card">
                             <div class="logo-media">
                                 <img
@@ -227,11 +262,12 @@
                                     loading="lazy"
                                 />
                             </div>
-                            <div class="logo-info">
+                            <div class="portfolio-info">
                                 <h3>Parsa Tahvieh</h3>
                                 <p>2022</p>
                             </div>
                         </article>
+
                         <article class="logo-card reveal-card">
                             <div class="logo-media">
                                 <img
@@ -240,7 +276,7 @@
                                     loading="lazy"
                                 />
                             </div>
-                            <div class="logo-info">
+                            <div class="portfolio-info">
                                 <h3>Sabt City</h3>
                                 <p>2020</p>
                             </div>
@@ -261,7 +297,7 @@
                         </p>
                         <p>
                             Neben dem Logo selbst verrät die Umsetzung der übrigen visuellen Elemente viel. Wie stimmig Logo und Werbemittel zusammenspielen, zeigt, wie konsequent jemand eine komplette Markenidentität durchdenkt. Wie eine visuelle Identität auf Printprodukte übertragen wird, lässt sich gut an den
-                            <a href="https://arminsilatani.com/de/portfolio/businesscarddesign/" target="_blank" rel="noopener">visitenkarten design beispiele</a>
+                            <a href="/de/portfolio/businesscarddesign/" target="_blank" rel="noopener">visitenkarten design beispiele</a>
                             nachvollziehen. Eine professionelle Visitenkarte muss die Informationen klar und lesbar liefern und zugleich in Farbe, Komposition und Stil zur Marke passen.
                         </p>
                         <p>
@@ -270,29 +306,11 @@
                     </div>
                 </div>
 
-                <div class="container-1300">
-                    <div class="quote-section reveal-up">
-                        <div class="quote-inner">
-                            <div class="quote-image">
-                                <img
-                                    src="/assets/images/arminsilatani/portfolio/logodesign/leonardo da vinci.webp"
-                                    alt="Leonardo da Vinci"
-                                    loading="lazy"
-                                />
-                            </div>
-                            <blockquote>
-                                <p>Einfachheit ist die höchste Form der Vollendung.</p>
-                                <footer>Leonardo da Vinci</footer>
-                            </blockquote>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="container-1080">
                     <div class="portfolio-description reveal-up">
                         <p>
                             Genauso aufschlussreich ist die Frage, wie eine Identität in der täglichen Geschäftskommunikation weiterlebt. Angebote, Verträge, Rechnungen, Anschreiben landen häufiger bei Kunden als jede Werbeanzeige, und genau dort zeigt sich, ob ein Gestaltungssystem trägt. Wer sehen will, wie Logo, Farben, Schriften und Satzspiegel in Geschäftsdokumenten zusammenkommen, findet in den
-                            <a href="https://arminsilatani.com/portfolio/cataloguedesign/" target="_blank" rel="noopener">briefpapier design beispiele</a>
+                            <a href="/portfolio/cataloguedesign/" target="_blank" rel="noopener">briefpapier design beispiele</a>
                             einen brauchbaren Anhaltspunkt. Achten Sie auf Lesbarkeit, auf eine klare Informationshierarchie und darauf, ob die Vorlage auch bei längeren Texten und im Druck sauber bleibt. Ein durchdachtes Briefpapier verstärkt den Eindruck von Verbindlichkeit und Sorgfalt, ganz ohne Effekte. Bei Unternehmen mit mehreren Produkten oder Leistungen kommt eine weitere Frage hinzu: Kann der Designer Informationen, Bilder und Inhaltsstruktur in eine geordnete, verständliche visuelle Erfahrung überführen? Marken, die online strukturiert und vertrauenswürdig auftreten wollen, gewinnen genau hier.
                         </p>
                         <p>
@@ -302,11 +320,15 @@
                 </div>
             </section>
 
+            <section-divider></section-divider>
+
+
             <!-- :::::::::::::::::::::::::: PROCESS :::::::::::::::::::::::::: -->
+
             <section class="section" id="process">
                 <div class="container-1080 reveal-up">
                     <span class="section-eyebrow">Durchdachtes Design, nachhaltige Wirkung</span>
-                    <h2 class="section-title">
+                    <h2 class="section-title split-title">
                         Logo Design Prozess: Zusammenarbeit und Ablauf
                     </h2>
                     <p class="section-subtitle">
@@ -317,7 +339,7 @@
                 </div>
 
                 <div class="container-1300">
-                    <div class="process-grid categories-grid" id="processGrid">
+                    <process-component class="process-grid categories-grid">
                         <article class="process-box reveal-card is-open">
                             <div class="process-box__meta">
                                 <span class="process-box__step">erste</span>
@@ -427,22 +449,29 @@
                                 </p>
                             </div>
                         </article>
-                    </div>
+                    </process-component>
                 </div>
             </section>
         </main>
 
+
         <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
+
         <footer-component></footer-component>
 
-        <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->
-        <script type="module" src="../../header-component.js"></script>
-        <script src="/assets/css/components/blurup.js"></script>
-        <script src="../../language-component.js"></script>
-        <script src="/assets/css/components/breadcrumb.js"></script>
-        <script type="module" src="../../footer-component.js"></script>
+        <back-to-top></back-to-top>
 
-        <script src="/assets/css/components/animations.js"></script>
-        <script src="/portfolio/logodesign/logodesign.js" defer></script>
+
+        <!-- :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: -->
+
+        <script src="/assets/src/core/i18n.js"></script>
+        <script type="module" src="/assets/src/components/header.js"></script>
+        <script src="/assets/src/components/blurup.js"></script>
+        <script type="module" src="/assets/src/components/language-selector.js"></script>
+        <script src="/assets/src/components/terminal-breadcrumb.js"></script>
+        <script type="module" src="/assets/src/components/footer.js"></script>
+        <script type="module" src="/assets/src/components/back-to-top.js"></script>
+        <script type="module" src="/assets/src/components/process-component.js"></script>
+        <script src="/assets/src/core/animations.js"></script>
     </body>
 </html>

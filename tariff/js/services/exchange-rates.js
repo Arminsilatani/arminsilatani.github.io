@@ -1,7 +1,7 @@
-/* :::::::::::::::::::::::::: CONFIGURATION :::::::::::::::::::::::::: */
+/* :::::::::::::::::::::::::: CONSTANTS / CONFIG :::::::::::::::::::::::::: */
 const CACHE_KEY       = "exchangeRates";
 const CACHE_TIMESTAMP = "ratesTimestamp";
-const CACHE_TIME      = 0; // seconds (0 = always fetch fresh data)
+const CACHE_TIME      = 0;
 
 /* :::::::::::::::::::::::::: MOCK DATA FETCH :::::::::::::::::::::::::: */
 export async function fetchExchangeRatesMock() {
@@ -9,9 +9,9 @@ export async function fetchExchangeRatesMock() {
         setTimeout(() => {
             resolve({
                 USD: 1,
-                EUR: 0.8547,
-                IRR: 90000,
-                TRY: 45.21,
+                EUR: 0.88,
+                IRR: 115000,
+                TRY: 48.83,
                 AED: 3.638
             });
         }, 500);
@@ -20,7 +20,6 @@ export async function fetchExchangeRatesMock() {
 
 /* :::::::::::::::::::::::::: CACHE-AWARE EXCHANGE RATES :::::::::::::::::::::::::: */
 export async function getExchangeRates() {
-    // Attempt to read from localStorage
     try {
         const cachedRates = localStorage.getItem(CACHE_KEY);
         const timestamp    = localStorage.getItem(CACHE_TIMESTAMP);
@@ -32,12 +31,10 @@ export async function getExchangeRates() {
             }
         }
     } catch (e) {
-        // If reading fails, clear potentially corrupted cache
         localStorage.removeItem(CACHE_KEY);
         localStorage.removeItem(CACHE_TIMESTAMP);
     }
 
-    // Fetch fresh data and update cache
     const rates = await fetchExchangeRatesMock();
 
     localStorage.setItem(CACHE_KEY, JSON.stringify(rates));

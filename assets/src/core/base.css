@@ -1,0 +1,248 @@
+/* :::::::::::::::::::::::::: BASE RESET AND GLOBALS :::::::::::::::::::::::::: */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #0D0D0D;
+    color: #F5F5F5;
+    unicode-bidi: plaintext;
+    font-family: var(--main-font);
+    text-align: start;
+    text-align-last: start;
+}
+
+/* :::::::::::::::::::::::::: LANGUAGE AND DIRECTION :::::::::::::::::::::::::: */
+html[lang="fa"],
+html[lang="ar"] {
+    direction: rtl;
+    text-align: right;
+}
+
+html[lang="en"],
+html[lang="de"],
+html[lang="it"],
+html[lang="tr"] {
+    direction: ltr;
+    text-align: left;
+}
+
+html[dir="ltr"] h1,
+html[dir="ltr"] h2,
+html[dir="ltr"] h3,
+html[dir="ltr"] h4,
+html[dir="ltr"] h5,
+html[dir="ltr"] h6,
+html[dir="ltr"] a,
+html[dir="ltr"] li {
+    text-align: left;
+}
+
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6,
+html[dir="rtl"] a,
+html[dir="rtl"] li {
+    text-align: right;
+}
+
+p {
+    text-align: justify;
+    text-align-last: start;
+}
+
+/* :::::::::::::::::::::::::: UTILITY CLASSES :::::::::::::::::::::::::: */
+
+
+/* :::::::::::::::::::::::::: SCROLLBAR VARIABLES :::::::::::::::::::::::::: */
+:root {
+    --scrollbar-width: 5px;
+    --scrollbar-track-color: transparent;
+    --scrollbar-thumb-color: rgba(255, 255, 255, 0.08);
+    --scrollbar-accent-color: var(--accent, #4ECDC4);
+    --scrollbar-border-radius: 3px;
+    --scrollbar-transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* :::::::::::::::::::::::::: WEBKIT SCROLLBAR :::::::::::::::::::::::::: */
+::-webkit-scrollbar {
+    width: var(--scrollbar-width, 6px);
+    height: var(--scrollbar-width, 6px);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-color, transparent);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-color, rgba(255, 255, 255, 0.08));
+    border-radius: var(--scrollbar-border-radius, 3px);
+    transition: var(--scrollbar-transition, background-color 0.2s ease);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-accent-color, #4ECDC4);
+    box-shadow: 0 0 6px var(--scrollbar-accent-color, #4ECDC4);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: var(--scrollbar-accent-color, #4ECDC4);
+    box-shadow: 0 0 8px var(--scrollbar-accent-color, #4ECDC4);
+}
+
+/* :::::::::::::::::::::::::: FIREFOX SCROLLBAR :::::::::::::::::::::::::: */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb-color, rgba(255, 255, 255, 0.08)) var(--scrollbar-track-color, transparent);
+}
+
+/* :::::::::::::::::::::::::: SCROLLBAR FALLBACK :::::::::::::::::::::::::: */
+@supports not (--custom-property: value) {
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 3px;
+        transition: background-color 0.2s ease;
+    }
+
+    ::-webkit-scrollbar-thumb:hover,
+    ::-webkit-scrollbar-thumb:active {
+        background: #4ECDC4;
+    }
+
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255, 255, 255, 0.08) transparent;
+    }
+}
+
+/* :::::::::::::::::::::::::: RESPONSIVE CORE BASE :::::::::::::::::::::::::: */
+
+/* :::::::::::::::::::::::::: RTL DIRECTION ADJUSTMENTS :::::::::::::::::::::::::: */
+@media (max-width: 768px) {
+    html[lang="fa"],
+    html[lang="fa"] body {
+        direction: rtl;
+        text-align: justify;
+        text-align-last: right;
+    }
+}
+
+/* :::::::::::::::::::::::::: PREFERS-REDUCED-MOTION :::::::::::::::::::::::::: */
+@media (prefers-reduced-motion: reduce) {
+    img[data-blurup="true"] {
+        transition: none !important;
+    }
+}
+
+
+/* ===================================================================== */
+/* ============================ 320px = XS ============================= */
+/* iPhone 5 (568x320)                                                    */
+/* ===================================================================== */
+
+@media (min-width: 320px) {
+
+}
+
+/* ===================================================================== */
+/* ============================ 380px = S ============================== */
+/* Galaxy Z Flip 3 (880x360) | Galaxy S24 Ultra (891x412)                */
+/* ===================================================================== */
+
+@media (min-width: 380px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 440px = S+ ============================== */
+/* iPhone 17 Pro Max (956x440)                                           */
+/* ===================================================================== */
+
+@media (min-width: 440px) {
+
+}
+
+/* ===================================================================== */
+/* ============================ 480px = M ============================== */
+/* —                                                                     */
+/* ===================================================================== */
+
+@media (min-width: 480px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 768px = TAB ============================= */
+/* iPad Mini (1024x768) | Galaxy Fold inner (1076x768)                   */
+/* ===================================================================== */
+
+@media (min-width: 768px) {
+
+}
+
+/* ===================================================================== */
+/* ========================== 800px = TAB+ ============================= */
+/* Galaxy Tab S7 (1280x800)                                              */
+/* ===================================================================== */
+
+@media (min-width: 800px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 1024px = L ============================== */
+/* iPad Pro 13 (1376x1032)                                               */
+/* ===================================================================== */
+
+@media (min-width: 1024px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 1366px = XL ============================= */
+/* Desktop / Laptop FHD                                                  */
+/* ===================================================================== */
+
+@media (min-width: 1366px) {
+
+}
+
+/* ===================================================================== */
+/* ========================== 1920px = 2XL ============================= */
+/* Full HD / 2K                                                          */
+/* ===================================================================== */
+
+@media (min-width: 1920px) {
+
+}
+
+/* ===================================================================== */
+/* =========================== 2560px = UW ============================= */
+/* Ultrawide (3440x1440) | 4K UHD (2160x3840)                            */
+/* ===================================================================== */
+
+@media (min-width: 2560px) {
+
+}
+
+/* ===================================================================== */
+/* ======================= LANDSCAPE PHONE ============================= */
+/* iPhone 17 PM / S24 Ultra در حالت افقی (ارتفاع کم)                     */
+/* ===================================================================== */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+}
