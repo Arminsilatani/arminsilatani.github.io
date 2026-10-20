@@ -166,28 +166,23 @@ function initProjectRowHover() {
     if (typeof gsap === "undefined") return;
 
     document.querySelectorAll(".portfolio-row").forEach(row => {
-        const glow = row.querySelector(".portfolio-row__glow");
-        const line = row.querySelector(".portfolio-row__line");
+        const line  = row.querySelector(".portfolio-row__line");
         const title = row.querySelector(".portfolio-row__title");
-        const hint = row.querySelector(".portfolio-row__hint");
-        const year = row.querySelector(".portfolio-row__year");
+        const hint  = row.querySelector(".portfolio-row__hint");
+        const year  = row.querySelector(".portfolio-row__year");
 
         row.addEventListener("mouseenter", () => {
-            gsap.to(row, { y: -4, duration: 0.35, ease: "power2.out" });
-            if (glow) gsap.to(glow, { opacity: 1, right: "8%", duration: 0.45, ease: "power3.out" });
-            if (line) gsap.to(line, { scaleX: 1, transformOrigin: "right", duration: 0.4, ease: "power2.out" });
-            if (title) gsap.to(title, { x: -8, duration: 0.35, ease: "power2.out" });
-            if (hint) gsap.to(hint, { x: -8, color: "#4ECDC4", duration: 0.35, ease: "power2.out" });
-            if (year) gsap.to(year, { x: -4, duration: 0.3, ease: "power2.out" });
+            if (line)  gsap.to(line,  { scaleX: 1, transformOrigin: "right", duration: 0.4,  ease: "power2.out", overwrite: "auto" });
+            if (title) gsap.to(title, { x: -8,                                duration: 0.35, ease: "power2.out", overwrite: "auto" });
+            if (hint)  gsap.to(hint,  { x: -8, color: "#4ECDC4",              duration: 0.35, ease: "power2.out", overwrite: "auto" });
+            if (year)  gsap.to(year,  { x: -4,                                duration: 0.3,  ease: "power2.out", overwrite: "auto" });
         });
 
         row.addEventListener("mouseleave", () => {
-            gsap.to(row, { y: 0, duration: 0.35, ease: "power2.out" });
-            if (glow) gsap.to(glow, { opacity: 0, right: "-140px", duration: 0.4, ease: "power2.out" });
-            if (line) gsap.to(line, { scaleX: 0, transformOrigin: "left", duration: 0.35, ease: "power2.out" });
-            if (title) gsap.to(title, { x: 0, duration: 0.3, ease: "power2.out" });
-            if (hint) gsap.to(hint, { x: 0, color: "rgba(255,255,255,0.42)", duration: 0.3, ease: "power2.out" });
-            if (year) gsap.to(year, { x: 0, duration: 0.28, ease: "power2.out" });
+            if (line)  gsap.to(line,  { scaleX: 0, transformOrigin: "left",  duration: 0.35, ease: "power2.out", overwrite: "auto" });
+            if (title) gsap.to(title, { x: 0,                                 duration: 0.3,  ease: "power2.out", overwrite: "auto" });
+            if (hint)  gsap.to(hint,  { x: 0, color: "rgba(255,255,255,0.42)", duration: 0.3,  ease: "power2.out", overwrite: "auto" });
+            if (year)  gsap.to(year,  { x: 0,                                 duration: 0.28, ease: "power2.out", overwrite: "auto" });
         });
     });
 }
@@ -287,35 +282,83 @@ function initExpandableLists() {
     });
 }
 
-/* :::::::::::::::::::::::::: MAGNETIC BUTTONS :::::::::::::::::::::::::: */
-function initMagneticButtons() {
-    if (typeof gsap === "undefined") return;
+/* :::::::::::::::::::::::::: HASH ANCHOR SCROLL :::::::::::::::::::::::::: */
+function initHashScroll() {
+    const HEADER_OFFSET = 110;
 
-    document.querySelectorAll(".cta-btn").forEach(btn => {
-        btn.addEventListener("mousemove", e => {
-            const rect = btn.getBoundingClientRect();
-            const x = e.clientX - rect.left - rect.width / 2;
-            const y = e.clientY - rect.top - rect.height / 2;
+    function smoothScrollTo(hash) {
+        const target = document.querySelector(hash);
+        if (!target) return;
 
-            gsap.to(btn, {
-                x: x * 0.08,
-                y: y * 0.12,
-                duration: 0.3,
-                ease: "power2.out"
-            });
+        const top = target.getBoundingClientRect().top + window.pageYOffset - HEADER_OFFSET;
+
+        window.scrollTo({
+            top,
+            behavior: "smooth"
         });
+    }
 
-        btn.addEventListener("mouseleave", () => {
-            gsap.to(btn, {
-                x: 0,
-                y: 0,
-                duration: 0.45,
-                ease: "power3.out"
-            });
+    if (window.location.hash) {
+        setTimeout(() => {
+            if (typeof ScrollTrigger !== "undefined") ScrollTrigger.refresh();
+            smoothScrollTo(window.location.hash);
+        }, 450);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener("click", e => {
+            const href = link.getAttribute("href");
+            if (!href || href === "#") return;
+
+            const target = document.querySelector(href);
+            if (!target) return;
+
+            e.preventDefault();
+            history.pushState(null, "", href);
+
+            if (typeof ScrollTrigger !== "undefined") ScrollTrigger.refresh();
+            smoothScrollTo(href);
         });
+    });
+
+    window.addEventListener("hashchange", () => {
+        if (typeof ScrollTrigger !== "undefined") ScrollTrigger.refresh();
+        setTimeout(() => smoothScrollTo(window.location.hash), 60);
     });
 }
 
+/* :::::::::::::::::::::::::: PROJECT STATUS FILTER :::::::::::::::::::::::::: */
+function initProjectStatus() {
+    document.querySelectorAll(".portfolio-list").forEach(list => {
+        const rows = Array.from(list.querySelectorAll(".portfolio-row"));
+        if (!rows.length) return;
+
+        const hasMixedStatus = rows.some(r => r.dataset.status !== "done");
+
+        // لیست‌های همه done (SEO و Web Design) رو دست نزن
+        if (!hasMixedStatus) return;
+
+        // ۱. حذف کامل پروژه‌های not-started از DOM
+        list.querySelectorAll('.portfolio-row[data-status="not-started"]').forEach(el => {
+            el.remove();
+        });
+
+        // ۲. in-progress ها رو قابل مشاهده کن (حذف هر extra-item اضافی)
+        list.querySelectorAll('.portfolio-row[data-status="in-progress"]').forEach(el => {
+            el.classList.remove("extra-item");
+            el.classList.remove("is-visible");
+        });
+
+        // ۳. غیرفعال‌سازی لینک in-progress ها
+        list.querySelectorAll('.portfolio-row[data-status="in-progress"]').forEach(el => {
+            el.removeAttribute("href");
+            el.setAttribute("aria-disabled", "true");
+            el.setAttribute("tabindex", "-1");
+            el.style.cursor = "default";
+            el.addEventListener("click", e => e.preventDefault());
+        });
+    });
+}
 /* :::::::::::::::::::::::::: GLOW PULSE ANIMATION :::::::::::::::::::::::::: */
 function initGlowPulse() {
     if (typeof gsap === "undefined") return;
@@ -336,11 +379,12 @@ function initGlowPulse() {
 
 /* :::::::::::::::::::::::::: INITIALIZATION :::::::::::::::::::::::::: */
 document.addEventListener("DOMContentLoaded", () => {
+    initProjectStatus(); 
     splitTextElements();
     initRevealAnimations();
     initProjectRowHover();
     initGraphicHover();
     initExpandableLists();
-    initMagneticButtons();
     initGlowPulse();
+    initHashScroll(); 
 });

@@ -8,3 +8,9 @@ section-divider {
     border: 0;
     margin: 100px auto;
 }
+
+@media (max-width: 768px) {
+    section-divider {
+        margin: 50px auto;
+    }
+}

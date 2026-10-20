@@ -14,12 +14,22 @@
     );
   }
 
-  const TRACKED_EVENTS = [
-    { title: "Allenamento Parte Superiore A", type: "personal" },
-    { title: "Allenamento Parte Inferiore A", type: "personal" },
-    { title: "Allenamento Parte Superiore B", type: "personal" },
-    { title: "Allenamento Parte Inferiore B", type: "personal" },
-  ];
+const TRACKED_EVENTS = [
+  /* ═══════════════════ PERSONAL (بلاک زمان، خارج از ظرفیت پروژه) ═══════════════════ */
+  { title: "Allenamento",          type: "personal" },   // ورزش (تک تایتل)
+  { title: "Viaggio",              type: "personal" },   // مسافرت
+  { title: "Formazione",           type: "personal" },   // آموزش، یادگیری
+  { title: "Ferie",                type: "personal" },   // مرخصی، تعطیلی
+
+  /* ═══════════════════ GENERAL WORK (کارهای عمومی، بلاک زمان) ═══════════════════ */
+  { title: "Lavoro generale",      type: "general" },    // کارهای عمومی
+  { title: "Consulenza",           type: "general" },    // تماس/جلسه با کلاینت
+
+  /* ═══════════════════ CLIENT PROJECTS (ظرفیت‌سنجی) ═══════════════════ */
+  { title: "Progetto SEO 1",       type: "seo" },        // پروژه اول سئو
+  { title: "Progetto SEO 2",       type: "seo" },        // پروژه دوم سئو
+  { title: "Progetto Web Design",  type: "design" },     // پروژه طراحی سایت
+];
 
   const MAX_SEO = 2;
   const MAX_DESIGN = 1;
@@ -343,29 +353,49 @@
       count: event.recurrence_count || null,
     };
 
-    if (event.recurrence_days && event.recurrence_type === "weekly") {
-      const days = event.recurrence_days.split(",").map(Number);
-      const dayMap = [
-        RRule.SU,
-        RRule.MO,
-        RRule.TU,
-        RRule.WE,
-        RRule.TH,
-        RRule.FR,
-        RRule.SA,
-      ];
-      options.byweekday = days.map((d) => dayMap[d]);
-    }
+if (event.recurrence_days && event.recurrence_type === "weekly") {
+  /* recurrence_days می‌تونه آرایه، رشته یا عدد باشه */
+  const raw = event.recurrence_days;
+  let days;
 
-    if (event.recurrence_day_of_month && event.recurrence_type === "monthly") {
-      options.bymonthday = [event.recurrence_day_of_month];
-    }
+  if (Array.isArray(raw)) {
+    days = raw.map(Number);
+  } else if (typeof raw === "string") {
+    days = raw.split(",").map((d) => Number(d.trim()));
+  } else if (typeof raw === "number") {
+    days = [raw];
+  } else {
+    days = [];
+  }
+
+  days = days.filter((n) => Number.isFinite(n) && n >= 0 && n <= 6);
+
+  const dayMap = [
+    RRule.SU, RRule.MO, RRule.TU, RRule.WE,
+    RRule.TH, RRule.FR, RRule.SA,
+  ];
+
+  if (days.length > 0) {
+    options.byweekday = days.map((d) => dayMap[d]);
+  }
+}
+
+if (event.recurrence_day_of_month && event.recurrence_type === "monthly") {
+  const dom = Number(
+    Array.isArray(event.recurrence_day_of_month)
+      ? event.recurrence_day_of_month[0]
+      : event.recurrence_day_of_month,
+  );
+  if (Number.isFinite(dom) && dom >= 1 && dom <= 31) {
+    options.bymonthday = [dom];
+  }
+}
 
     if (!options.until && !options.count) options.until = rangeEnd;
 
     try {
       const rule = new RRule(options);
-      const dates = rule.all((date) => date >= rangeStart && date <= rangeEnd);
+      const dates = rule.between(rangeStart, rangeEnd, true);
       return dates.map((date) => {
         const start = new Date(date.getTime());
         const end = new Date(start.getTime() + duration);
@@ -667,39 +697,57 @@ async function renderCalendar() {
     el.textContent = translateFn(seoRemaining, designRemaining);
   }
 
-  function updateOverallStatus(days) {
-    const hasAvailable = days.some((day) => day.status === "available");
-    isAvailable = hasAvailable;
+function updateOverallStatus(days) {
+  isAvailable = days.some((day) => day.status === "available");
+  updateStatusUI();
+}
 
-    const dot = document.getElementById("statusDot");
-    const text = document.getElementById("statusText");
-    if (!dot || !text) return;
+function updateStatusUI() {
+  const dot = document.getElementById("statusDot");
+  const text = document.getElementById("statusText");
+  if (!dot || !text) return;
 
-    const availableTexts = {
-      fa: "در دسترس برای پروژه‌های جدید",
-      en: "Available for new projects",
-      de: "Verfügbar für neue Projekte",
-      it: "Disponibile per nuovi progetti",
-      tr: "Yeni projeler için müsait",
-      ar: "متاح لمشاريع جديدة",
-    };
-    const busyTexts = {
-      fa: "در حال حاضر ظرفیت تکمیل است",
-      en: "Currently fully booked",
-      de: "Derzeit ausgebucht",
-      it: "Attualmente al completo",
-      tr: "Şu anda tamamen doluyum",
-      ar: "مكتمل الحجوزات حالياً",
-    };
+  const outOfHoursTexts = {
+    fa: "در حال حاضر خارج از ساعات کاری",
+    en: "Currently outside working hours",
+    de: "Derzeit außerhalb der Geschäftszeiten",
+    it: "Attualmente fuori orario di lavoro",
+    tr: "Şu anda çalışma saatleri dışında",
+    ar: "حالياً خارج ساعات العمل",
+  };
+  const availableTexts = {
+    fa: "در دسترس برای پروژه‌های جدید",
+    en: "Available for new projects",
+    de: "Verfügbar für neue Projekte",
+    it: "Disponibile per nuovi progetti",
+    tr: "Yeni projeler için müsait",
+    ar: "متاح لمشاريع جديدة",
+  };
+  const busyTexts = {
+    fa: "در حال حاضر ظرفیت تکمیل است",
+    en: "Currently fully booked",
+    de: "Derzeit ausgebucht",
+    it: "Attualmente al completo",
+    tr: "Şu anda tamamen doluyum",
+    ar: "مكتمل الحجوزات حالياً",
+  };
 
-    if (isAvailable) {
-      dot.className = "status-dot";
-      text.textContent = availableTexts[CURRENT_LANG] || availableTexts.en;
-    } else {
-      dot.className = "status-dot status-dot--busy";
-      text.textContent = busyTexts[CURRENT_LANG] || busyTexts.en;
-    }
+  /* ۱) اولویت اول: ساعت پاسخگویی */
+  if (!isWithinWorkingHours()) {
+    dot.className = "status-dot status-dot--busy";
+    text.textContent = outOfHoursTexts[CURRENT_LANG] || outOfHoursTexts.en;
+    return;
   }
+
+  /* ۲) داخل ساعات کاری: بر اساس capacity تقویم */
+  if (isAvailable) {
+    dot.className = "status-dot";
+    text.textContent = availableTexts[CURRENT_LANG] || availableTexts.en;
+  } else {
+    dot.className = "status-dot status-dot--busy";
+    text.textContent = busyTexts[CURRENT_LANG] || busyTexts.en;
+  }
+}
 
 /* :::::::::::::::::::::::::: SEO EVENT DISPATCHER :::::::::::::::::::::::::: */
 
@@ -847,25 +895,49 @@ function dispatchSeoAvailability(days) {
     slider.addEventListener("mouseleave", onMouseLeave);
   }
 
-  /* :::::::::::::::::::::::::: LIVE CLOCK :::::::::::::::::::::::::: */
+/* :::::::::::::::::::::::::: LIVE CLOCK :::::::::::::::::::::::::: */
 
-  function updateLiveClock() {
-    const clock = document.getElementById("liveClock");
-    if (!clock) return;
-    const tehran = new Date(
-      new Date().toLocaleString("en-US", { timeZone: "Asia/Tehran" }),
-    );
-    clock.textContent = `${String(tehran.getHours()).padStart(2, "0")}:${String(tehran.getMinutes()).padStart(2, "0")}`;
-  }
+function updateLiveClock() {
+  const clock = document.getElementById("liveClock");
+  if (!clock) return;
+  const tehran = new Date(
+    new Date().toLocaleString("en-US", { timeZone: "Asia/Tehran" }),
+  );
+  const h = String(tehran.getHours()).padStart(2, "0");
+  const m = String(tehran.getMinutes()).padStart(2, "0");
+  const s = String(tehran.getSeconds()).padStart(2, "0");
+  clock.textContent = `${h}:${m}:${s}`;
+}
+
+/* :::::::::::::::::::::::::: RESPONSE HOURS (Time-based) :::::::::::::::::::::::::: */
+/*
+ * توجه: WORK_START_HOUR/WORK_END_HOUR (9-19) ساعات «رزرو در تقویم» هستن.
+ * این دو مقدار، ساعات پاسخگوییِ اعلام‌شده در صفحه تماس هستن (9-17).
+ */
+const RESPONSE_START_HOUR = 9;
+const RESPONSE_END_HOUR = 19;
+
+function getTehranHour() {
+  const tehran = new Date(
+    new Date().toLocaleString("en-US", { timeZone: "Asia/Tehran" }),
+  );
+  return tehran.getHours();
+}
+
+function isWithinWorkingHours() {
+  const h = getTehranHour();
+  return h >= RESPONSE_START_HOUR && h < RESPONSE_END_HOUR;
+}
 
   /* :::::::::::::::::::::::::: INITIALIZATION :::::::::::::::::::::::::: */
 
-  async function init() {
-    await renderCalendar();
-    enableDragScroll("miniWeek");
-    updateLiveClock();
-    setInterval(updateLiveClock, 30000);
-  }
+async function init() {
+  await renderCalendar();
+  enableDragScroll("miniWeek");
+  updateLiveClock();
+  setInterval(updateLiveClock, 1000);  // ثانیه‌شمار
+  setInterval(updateStatusUI, 60000);  // چک هر دقیقه: ساعت اداری عوض شد؟
+}
 
   window.availabilityAPI = {
     refresh: () => renderCalendar(),

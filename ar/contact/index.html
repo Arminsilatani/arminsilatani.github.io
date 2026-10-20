@@ -594,63 +594,6 @@
         <script src="/assets/src/core/calendar.js"></script>
         <script src="/assets/src/components/faq.js"></script>
         <script src="/assets/src/components/field-prefix.js" defer></script>
-        <script>
-            (function () {
-                const clockEl = document.getElementById("liveClock");
-                function updateClock() {
-                    if (!clockEl) return;
-                    const now = new Date();
-                    const utc = now.getTime() + now.getTimezoneOffset() * 60000;
-                    const iranTime = new Date(utc + 3.5 * 3600000);
-                    const h = String(iranTime.getHours()).padStart(2, "0");
-                    const m = String(iranTime.getMinutes()).padStart(2, "0");
-                    const s = String(iranTime.getSeconds()).padStart(2, "0");
-                    clockEl.textContent = h + ":" + m + ":" + s;
-                }
-                updateClock();
-                setInterval(updateClock, 1000);
-                const statusDot = document.getElementById("statusDot");
-                const statusText = document.getElementById("statusText");
-                if (statusDot && statusText) {
-                    const utc = Date.now() + new Date().getTimezoneOffset() * 60000;
-                    const iranHour = new Date(utc + 3.5 * 3600000).getHours();
-                    if (iranHour >= 22 || iranHour < 8) {
-                        statusDot.classList.add("status-dot--busy");
-                        statusText.textContent = "در حال حاضر خارج از ساعات کاری";
-                    } else {
-                        statusText.textContent = "در دسترس برای پروژه‌های جدید";
-                    }
-                }
-                const processBoxes = document.querySelectorAll(".process-box");
-                if (processBoxes.length) {
-                    const openBox = function (box) {
-                        processBoxes.forEach(function (b) {
-                            b.classList.remove("is-open");
-                        });
-                        box.classList.add("is-open");
-                    };
-                    openBox(processBoxes[0]);
-                    processBoxes.forEach(function (box) {
-                        box.addEventListener("mouseenter", function () {
-                            openBox(box);
-                        });
-                        box.addEventListener("click", function () {
-                            openBox(box);
-                        });
-                    });
-                }
-                const shakeStyle = document.createElement("style");
-                shakeStyle.textContent =
-                    "@keyframes shake {" +
-                    "0%,100% { transform: translateX(0); }" +
-                    "20% { transform: translateX(-6px); }" +
-                    "40% { transform: translateX(6px); }" +
-                    "60% { transform: translateX(-4px); }" +
-                    "80% { transform: translateX(4px); }" +
-                    "}";
-                document.head.appendChild(shakeStyle);
-            })();
-        </script>
         <script src="/assets/src/core/animations.js"></script>
     </body>
 </html>

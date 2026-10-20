@@ -1,37 +1,57 @@
 /*
   Author: Armin Silatani
   Date: 2026-07-10
-  Version: 0.0.0
+  Version: 0.0.3
 */
 
-/* =========================== PORTFOLIO STYLES ============================ */
+/* ==========================================================================
+   ==============================  INDEX  ==================================
+   ==========================================================================
+   01. CSS VARIABLES
+   02. RESET & BASE
+   03. UTILITY CLASSES
+   04. INTRO SECTION
+   05. CATEGORIES GRID
+   06. CATEGORY CARD
+   07. PORTFOLIO LIST
+   08. PORTFOLIO ROW
+   09. IN-PROGRESS STATUS
+   10. GRAPHIC CARDS
+   11. CTA BOX
+   12. BUTTONS
+   13. EXPANDABLE LIST
+   14. LIST WRAPPER
+   15. MOTION HELPERS
+   16. RESPONSIVE — MOBILE (≤768px)
+   17. RESPONSIVE — OTHER BREAKPOINTS
+   ==========================================================================
+   
+   ⚠️  نکته: افکت glow ردیف‌ها توسط CSS و via `inset-inline-start` کنترل می‌شه.
+       خطوط GSAP مربوط به glow در animations.js باید حذف شده باشن.
+   ========================================================================== */
 
-/* ------------------------- CSS VARIABLES ------------------------- */
+
+/* ==========================================================================
+   01. CSS VARIABLES
+   ========================================================================== */
+
 :root {
   --bg: #0d0d0d;
-  --bg-soft: #111318;
-  --bg-card: rgba(255, 255, 255, 0.04);
-  --bg-card-hover: rgba(255, 255, 255, 0.07);
   --border: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.14);
   --text: #f5f7fb;
   --text-soft: rgba(245, 247, 251, 0.74);
-  --text-muted: rgba(245, 247, 251, 0.48);
   --accent: #4ecdc4;
   --accent-soft: rgba(78, 205, 196, 0.14);
   --accent-soft-2: rgba(78, 205, 196, 0.08);
   --accent-border: rgba(78, 205, 196, 0.35);
-  --seo: var(--accent);
-  --web: var(--accent);
-  --graphic: var(--accent);
-  --shadow: 0 20px 80px rgba(0, 0, 0, 0.35);
-  --radius-lg: 28px;
-  --radius-md: 20px;
-  --radius-sm: 14px;
   --container: 1280px;
 }
 
-/* ------------------------- RESET & BASE ------------------------- */
+
+/* ==========================================================================
+   02. RESET & BASE
+   ========================================================================== */
+
 *,
 *::before,
 *::after {
@@ -64,7 +84,11 @@ button {
   font: inherit;
 }
 
-/* ------------------------- UTILITY CLASSES ------------------------- */
+
+/* ==========================================================================
+   03. UTILITY CLASSES
+   ========================================================================== */
+
 .container {
   width: min(100% - 32px, var(--container));
   margin-inline: auto;
@@ -92,7 +116,11 @@ button {
   margin-bottom: 42px;
 }
 
-/* ------------------------- INTRO SECTION ------------------------- */
+
+/* ==========================================================================
+   04. INTRO SECTION
+   ========================================================================== */
+
 .portfolio-intro__grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -122,20 +150,6 @@ button {
     color 0.35s ease, box-shadow 0.35s ease;
 }
 
-.quick-link::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(78, 205, 196, 0.06),
-    transparent
-  );
-  transition: opacity 0.35s ease;
-}
-
 .quick-link i {
   display: block;
   width: 42px;
@@ -143,10 +157,6 @@ button {
   background: currentColor;
   transform-origin: right;
   transition: width 0.35s ease;
-}
-
-.quick-link:hover::before {
-  opacity: 0;
 }
 
 .quick-link:hover i {
@@ -159,10 +169,13 @@ button {
   border-color: var(--accent);
   box-shadow: 0 0 10px 5px rgba(78, 205, 196, 0.8),
     0 0 20px 10px rgba(78, 205, 196, 0.6), 0 0 30px 15px rgba(78, 205, 196, 0.4);
-  transform: translateY(-2px);
 }
 
-/* ========== CATEGORIES GRID ========== */
+
+/* ==========================================================================
+   05. CATEGORIES GRID
+   ========================================================================== */
+
 .categories-grid {
   display: flex;
   flex-direction: column;
@@ -202,7 +215,11 @@ button {
   max-width: 100%;
 }
 
-/* ------------------------- CATEGORY CARD ------------------------- */
+
+/* ==========================================================================
+   06. CATEGORY CARD
+   ========================================================================== */
+
 .category-card {
   position: relative;
   min-height: 320px;
@@ -272,6 +289,8 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
   transform: scaleX(1) translateX(6px);
 }
 
+/* --- Card glow (نور پس‌زمینه) --- */
+
 .card-glow {
   position: absolute;
   width: 240px;
@@ -310,15 +329,24 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
     rgba(255, 255, 255, 0.03)
   );
   border-color: var(--accent-border);
-  transform: translateY(-8px);
 }
 
-/* ------------------------- PORTFOLIO LIST ------------------------- */
+
+/* ==========================================================================
+   07. PORTFOLIO LIST
+   ========================================================================== */
+
 .portfolio-list {
   display: grid;
   gap: 14px;
   margin-top: 0;
+  counter-reset: portfolio-row;
 }
+
+
+/* ==========================================================================
+   08. PORTFOLIO ROW
+   ========================================================================== */
 
 .portfolio-row {
   --row-inline-padding: 24px;
@@ -336,10 +364,13 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
   overflow: hidden;
   text-decoration: none;
   background: rgba(255, 255, 255, 0.025);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
   border-radius: 5px;
   backdrop-filter: blur(6px);
+  counter-increment: portfolio-row;
 }
+
+/* --- Gradient overlay on hover --- */
 
 .portfolio-row::before {
   content: "";
@@ -356,6 +387,8 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
   transition: opacity 0.4s ease;
 }
 
+/* --- Index (auto-numbered) --- */
+
 .portfolio-row__index {
   display: flex;
   align-items: center;
@@ -365,6 +398,12 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
   transform: rotate(-90deg);
   transform-origin: center;
 }
+
+.portfolio-row__index::before {
+  content: counter(portfolio-row, decimal-leading-zero);
+}
+
+/* --- Content --- */
 
 .portfolio-row__content {
   min-width: 0;
@@ -380,9 +419,10 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
 }
 
 .portfolio-row__title {
-  margin: 0px;
-  transition: transform 0.35s, color 0.35s;
+  margin: 0;
 }
+
+/* --- Year --- */
 
 .portfolio-row__year {
   position: absolute;
@@ -390,7 +430,6 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
   inset-inline-end: var(--row-inline-padding);
   transform: translateY(-50%);
   z-index: 2;
-
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -409,14 +448,18 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
   background: rgba(255, 255, 255, 0.18);
 }
 
+/* --- Hint (subtitle) --- */
+
 .portfolio-row__hint {
   display: block;
 }
 
+/* --- Glow ball (RTL از راست، LTR از چپ) --- */
+
 .portfolio-row__glow {
   position: absolute;
   top: 50%;
-  right: -140px;
+  inset-inline-start: -140px;
   width: 220px;
   height: 220px;
   opacity: 0;
@@ -425,8 +468,10 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
   border-radius: 5px;
   filter: blur(55px);
   transform: translateY(-50%);
-  transition: opacity 0.45s ease, right 0.45s ease;
+  transition: opacity 0.45s ease, inset-inline-start 0.45s ease;
 }
+
+/* --- Bottom line --- */
 
 .portfolio-row__line {
   position: absolute;
@@ -437,30 +482,23 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
   background: linear-gradient(90deg, transparent, var(--accent), transparent);
   transform: scaleX(0);
   transform-origin: right;
-  transition: transform 0.45s ease;
 }
+
+/* --- Hover state (فقط پراپرتی‌هایی که GSAP کنترل نمی‌کنه) --- */
 
 .portfolio-row:hover {
   background: rgba(78, 205, 196, 0.07);
   border-color: rgba(78, 205, 196, 0.35);
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.26),
     inset 0 0 0 1px rgba(78, 205, 196, 0.08);
-  transform: translateY(-4px);
 }
 
 .portfolio-row:hover::before {
   opacity: 1;
 }
 
-.portfolio-row:hover .portfolio-row__title {
-  transform: translateX(-8px);
-}
-
 .portfolio-row:hover .portfolio-row__year {
   color: rgba(255, 255, 255, 0.78);
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
 }
 
 .portfolio-row:hover .portfolio-row__year::before {
@@ -468,21 +506,56 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
   background: rgba(255, 255, 255, 0.42);
 }
 
-.portfolio-row:hover .portfolio-row__hint {
-  color: var(--accent);
-  transform: translateX(-8px);
-}
-
 .portfolio-row:hover .portfolio-row__glow {
-  right: 8%;
+  inset-inline-start: 100px;
   opacity: 1;
 }
 
-.portfolio-row:hover .portfolio-row__line {
-  transform: scaleX(1);
+
+/* ==========================================================================
+   09. IN-PROGRESS STATUS (جای تاریخ)
+   ========================================================================== */
+
+.portfolio-row[data-status="in-progress"] .portfolio-row__year {
+  font-size: 0;
 }
 
-/* ------------------------- GRAPHIC CARDS ------------------------- */
+.portfolio-row[data-status="in-progress"] .portfolio-row__year::after {
+  font-size: 14px;
+  font-weight: inherit;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+html[lang="fa"] .portfolio-row[data-status="in-progress"] .portfolio-row__year::after {
+  content: "در حال انجام";
+}
+
+html[lang="en"] .portfolio-row[data-status="in-progress"] .portfolio-row__year::after {
+  content: "In Progress";
+}
+
+html[lang="ar"] .portfolio-row[data-status="in-progress"] .portfolio-row__year::after {
+  content: "قيد التنفيذ";
+}
+
+html[lang="tr"] .portfolio-row[data-status="in-progress"] .portfolio-row__year::after {
+  content: "Devam Ediyor";
+}
+
+html[lang="de"] .portfolio-row[data-status="in-progress"] .portfolio-row__year::after {
+  content: "In Bearbeitung";
+}
+
+html[lang="it"] .portfolio-row[data-status="in-progress"] .portfolio-row__year::after {
+  content: "In Corso";
+}
+
+
+/* ==========================================================================
+   10. GRAPHIC CARDS
+   ========================================================================== */
+
 .graphic-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -561,7 +634,6 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
   border-color: rgba(78, 205, 196, 0.35);
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.26),
     inset 0 0 0 1px rgba(78, 205, 196, 0.08);
-  transform: translateY(-4px);
 }
 
 .graphic-card:hover::after {
@@ -587,7 +659,11 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
   color: var(--accent);
 }
 
-/* ------------------------- CTA BOX ------------------------- */
+
+/* ==========================================================================
+   11. CTA BOX
+   ========================================================================== */
+
 .cta-box {
   position: relative;
   padding: 52px 32px;
@@ -614,6 +690,11 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
   border-radius: 5px;
   filter: blur(60px);
 }
+
+
+/* ==========================================================================
+   12. BUTTONS
+   ========================================================================== */
 
 .cta-actions {
   display: flex;
@@ -651,10 +732,8 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
   border-color: var(--accent);
   box-shadow: 0 0 10px 5px rgba(78, 205, 196, 0.8),
     0 0 20px 10px rgba(78, 205, 196, 0.6), 0 0 30px 15px rgba(78, 205, 196, 0.4);
-  transform: translateY(-2px);
 }
 
-/* ------------------------- BUTTONS ------------------------- */
 .show-more-btn {
   display: inline-flex;
   align-items: center;
@@ -672,7 +751,11 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
   color: var(--accent);
 }
 
-/* ------------------------- EXPANDABLE LIST ------------------------- */
+
+/* ==========================================================================
+   13. EXPANDABLE LIST
+   ========================================================================== */
+
 .extra-item {
   display: none;
 }
@@ -681,11 +764,11 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
   display: grid;
 }
 
-.extra-item:not(.is-visible) {
-  display: none !important;
-}
 
-/* ------------------------- LIST WRAPPER ------------------------- */
+/* ==========================================================================
+   14. LIST WRAPPER
+   ========================================================================== */
+
 .list-wrapper {
   display: flex;
   flex-direction: column;
@@ -699,8 +782,10 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
 }
 
 
+/* ==========================================================================
+   15. MOTION HELPERS
+   ========================================================================== */
 
-/* ------------------------- MOTION HELPERS ------------------------- */
 .reveal-up,
 .reveal-card,
 .reveal-row {
@@ -714,9 +799,14 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
   opacity: 0;
 }
 
+
+/* ==========================================================================
+   16. RESPONSIVE — MOBILE (≤768px)
+   ========================================================================== */
+
 @media (max-width: 768px) {
 
-  /* ------------------------- INTRO SECTION ------------------------- */
+  /* --- Intro --- */
   body.portfolio-page .portfolio-intro__grid {
     display: flex;
     flex-direction: column;
@@ -743,8 +833,7 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
     gap: 18px;
     padding: 14px 20px;
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+
   }
 
   body.portfolio-page .quick-link i {
@@ -760,7 +849,7 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
     width: 40px;
   }
 
-  /* ------------------------- CATEGORY CARDS SECTION ------------------------- */
+  /* --- Category cards --- */
   body.portfolio-page .categories-grid {
     display: flex;
     flex-direction: column;
@@ -807,7 +896,7 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
     height: 18px;
   }
 
-  /* ------------------------- GENERAL SETTINGS ------------------------- */
+  /* --- General settings --- */
   body.portfolio-page .container {
     width: min(100% - 20px, 1280px);
   }
@@ -817,16 +906,16 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
   }
 
   body.portfolio-page .section-title {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   body.portfolio-page .section-desc {
-    margin-top: 8px !important;
+    margin-top: 8px;
   }
 
   body.portfolio-page .eyebrow {
-    margin-bottom: 4px !important;
+    margin-bottom: 4px;
   }
 
   body.portfolio-page .section-heading {
@@ -837,17 +926,13 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
     display: none;
   }
 
-  body.portfolio-page .category-card:hover {
-    transform: translateY(-3px);
-  }
-
-  /* ------------------------- PROJECT LIST CARDS (MOBILE) ------------------------- */
+  /* --- Project list cards --- */
   body.portfolio-page .portfolio-row {
     display: flex;
     align-items: center;
     padding: 14px 12px;
     gap: 8px;
-    border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+    border: 1px solid var(--border);
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.025);
     min-height: auto;
@@ -915,7 +1000,7 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
     flex-shrink: 0;
   }
 
-  /* ------------------------- GRAPHIC CARDS SECTION ------------------------- */
+  /* --- Graphic cards --- */
   body.portfolio-page .graphic-grid {
     display: flex;
     flex-direction: column;
@@ -923,12 +1008,12 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
   }
 
   body.portfolio-page .graphic-card {
-    grid-column: auto !important;
+    grid-column: auto;
     min-height: auto;
     padding: 20px;
     border-radius: 5px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
-    border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+    border: 1px solid var(--border);
     transition: all 0.35s ease;
   }
 
@@ -950,11 +1035,10 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
   }
 
   body.portfolio-page .graphic-card:hover {
-    transform: translateY(-3px);
     border-color: rgba(78, 205, 196, 0.35);
   }
 
-  /* ------------------------- CTA ACTIONS SECTION ------------------------- */
+  /* --- CTA actions --- */
   body.portfolio-page .cta-actions {
     display: flex;
     flex-direction: column;
@@ -983,103 +1067,22 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
     color: var(--text);
     border: 1px solid var(--border);
   }
+    body.portfolio-page .portfolio-row.extra-item:not(.is-visible) {
+    display: none;
+  }
 }
 
-/* ===================================================================== */
-/* ============================ 320px = XS ============================= */
-/* iPhone 5 (568x320)                                                    */
-/* ===================================================================== */
 
-@media (min-width: 320px) {
+/* ==========================================================================
+   17. RESPONSIVE — OTHER BREAKPOINTS
+   ========================================================================== */
 
-}
-
-/* ===================================================================== */
-/* ============================ 380px = S ============================== */
-/* Galaxy Z Flip 3 (880x360) | Galaxy S24 Ultra (891x412)                */
-/* ===================================================================== */
-
-@media (min-width: 380px) {
-
-}
-
-/* ===================================================================== */
-/* =========================== 440px = S+ ============================== */
-/* iPhone 17 Pro Max (956x440)                                           */
-/* ===================================================================== */
-
-@media (min-width: 440px) {
-
-}
-
-/* ===================================================================== */
-/* ============================ 480px = M ============================== */
-/* —                                                                     */
-/* ===================================================================== */
-
-@media (min-width: 480px) {
-
-}
-
-/* ===================================================================== */
-/* =========================== 768px = TAB ============================= */
-/* iPad Mini (1024x768) | Galaxy Fold inner (1076x768)                   */
-/* ===================================================================== */
-
-@media (min-width: 768px) {
-
-}
-
-/* ===================================================================== */
-/* ========================== 800px = TAB+ ============================= */
-/* Galaxy Tab S7 (1280x800)                                              */
-/* ===================================================================== */
-
-@media (min-width: 800px) {
-
-}
-
-/* ===================================================================== */
-/* =========================== 1024px = L ============================== */
-/* iPad Pro 13 (1376x1032)                                               */
-/* ===================================================================== */
-
-@media (min-width: 1024px) {
-
-}
-
-/* ===================================================================== */
-/* =========================== 1366px = XL ============================= */
-/* Desktop / Laptop FHD                                                  */
-/* ===================================================================== */
-
-@media (min-width: 1366px) {
-
-}
-
-/* ===================================================================== */
-/* ========================== 1920px = 2XL ============================= */
-/* Full HD / 2K                                                          */
-/* ===================================================================== */
-
-@media (min-width: 1920px) {
-
-}
-
-/* ===================================================================== */
-/* =========================== 2560px = UW ============================= */
-/* Ultrawide (3440x1440) | 4K UHD (2160x3840)                            */
-/* ===================================================================== */
-
-@media (min-width: 2560px) {
-
-}
-
-/* ===================================================================== */
-/* ======================= LANDSCAPE PHONE ============================= */
-/* iPhone 17 PM / S24 Ultra در حالت افقی (ارتفاع کم)                     */
-/* ===================================================================== */
-
-@media (max-height: 500px) and (orientation: landscape) {
-
-}
+/*
+  بریک‌پوینت‌های آینده رو اینجا اضافه کن:
+  @media (min-width: 480px)  { ... }
+  @media (min-width: 800px)  { ... }
+  @media (min-width: 1024px) { ... }
+  @media (min-width: 1366px) { ... }
+  @media (min-width: 1920px) { ... }
+  @media (min-width: 2560px) { ... }
+*/

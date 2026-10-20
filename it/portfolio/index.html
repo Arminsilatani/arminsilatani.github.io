@@ -95,7 +95,12 @@
       hreflang="x-default"
       href="https://arminsilatani.com/en/portfolio/"
     />
-
+<script>
+  (function () {
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    if (window.location.hash) window.scrollTo(0, 0);
+  })();
+</script>
     <!-- :::::::::::::::::::::::::: SCHEMA :::::::::::::::::::::::::: -->
     
   </head>
@@ -122,10 +127,13 @@
     <div class="hero-section__noise" aria-hidden="true"></div>
     <div class="hero-section__scanlines" aria-hidden="true"></div>
     <div class="hero-section__glitch" aria-hidden="true"></div>
-        <div class="container-1080 hero-container">
+        <div class="container-1300 hero-container">
           <language-component></language-component>
           <div class="hero-title">
-            <h1>Portfolio</h1>
+            <h1>
+                            <span class="split-title">Portfolio</span>
+                            <span class="h1_sub reveal-up">Tutti i progetti in SEO, sviluppo web, programmazione e grafica.</span>
+                        </h1>
           </div>
         </div>
 
@@ -350,9 +358,9 @@
             <div class="portfolio-list" data-expandable-list>
               <a
                 href="/it/portfolio/seo-uromkaraca/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="done"
               >
-                <span class="portfolio-row__index">01</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Urom Karaca</h3>
@@ -366,9 +374,9 @@
 
               <a
                 href="/it/portfolio/seo-nickdigi/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="done"
               >
-                <span class="portfolio-row__index">02</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">NickDigi</h3>
@@ -382,9 +390,9 @@
 
               <a
                 href="/it/portfolio/seo-kashanestore/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="done"
               >
-                <span class="portfolio-row__index">03</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Kashaneh Store</h3>
@@ -398,9 +406,9 @@
 
               <a
                 href="/it/portfolio/seo-pardehoxin/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="done"
               >
-                <span class="portfolio-row__index">04</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Pardeh Oxin</h3>
@@ -414,9 +422,9 @@
 
               <a
                 href="/it/portfolio/seo-kralhome/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="done"
               >
-                <span class="portfolio-row__index">05</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Kral Home</h3>
@@ -430,9 +438,9 @@
 
               <a
                 href="/it/portfolio/seo-timarteb/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="done"
               >
-                <span class="portfolio-row__index">06</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Timar Teb</h3>
@@ -446,9 +454,9 @@
 
               <a
                 href="/it/portfolio/seo-shahabmarco/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="done"
               >
-                <span class="portfolio-row__index">07</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Shahab Marco</h3>
@@ -462,9 +470,9 @@
 
               <a
                 href="/it/portfolio/seo-dorfaksazehrayan/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="done"
               >
-                <span class="portfolio-row__index">08</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Dorfak Sazeh Rayan</h3>
@@ -478,9 +486,9 @@
 
               <a
                 href="/it/portfolio/seo-megalightled/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="done"
               >
-                <span class="portfolio-row__index">09</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Mega Light</h3>
@@ -494,9 +502,9 @@
 
               <a
                 href="/it/portfolio/seo-hampadigital/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="done"
               >
-                <span class="portfolio-row__index">10</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Hampa Digital</h3>
@@ -510,9 +518,9 @@
 
               <a
                 href="/it/portfolio/seo-linex/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="done"
               >
-                <span class="portfolio-row__index">11</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Linex</h3>
@@ -526,9 +534,9 @@
 
               <a
                 href="/it/portfolio/seo-ayeghbama/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="done"
               >
-                <span class="portfolio-row__index">12</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Ayegh Ba Ma</h3>
@@ -542,9 +550,9 @@
 
               <a
                 href="/it/portfolio/seo-shahrekhab/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="done"
               >
-                <span class="portfolio-row__index">13</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Shahr Khab</h3>
@@ -558,9 +566,9 @@
 
               <a
                 href="/it/portfolio/seo-alvandtasisat/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="done"
               >
-                <span class="portfolio-row__index">14</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Alvand Tasisat</h3>
@@ -574,9 +582,9 @@
 
               <a
                 href="/it/portfolio/seo-iranpapernet/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="done"
               >
-                <span class="portfolio-row__index">15</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Iran Paper Network</h3>
@@ -590,9 +598,9 @@
 
               <a
                 href="/it/portfolio/seo-niavaransabt/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="done"
               >
-                <span class="portfolio-row__index">16</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Niavaran Sabt</h3>
@@ -608,9 +616,9 @@
 
               <a
                 href="/it/portfolio/seo-permonmed/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="done"
               >
-                <span class="portfolio-row__index">17</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">PermonMed</h3>
@@ -624,9 +632,9 @@
 
               <a
                 href="/it/portfolio/seo-sabtfarhang/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="done"
               >
-                <span class="portfolio-row__index">18</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Farhang Sabt</h3>
@@ -642,9 +650,9 @@
 
               <a
                 href="/it/portfolio/seo-arminsilatani/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="done"
               >
-                <span class="portfolio-row__index">19</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Armin Silatani</h3>
@@ -682,9 +690,9 @@
             <div class="portfolio-list" data-expandable-list>
               <a
                 href="/it/portfolio/onlineshop-apakala/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="done"
               >
-                <span class="portfolio-row__index">01</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Apa Kala</h3>
@@ -698,9 +706,9 @@
 
               <a
                 href="/it/portfolio/onlineshop-partban/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="done"
               >
-                <span class="portfolio-row__index">02</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Part Ban</h3>
@@ -716,9 +724,9 @@
 
               <a
                 href="/it/portfolio/webdesign-mehmandar/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="done"
               >
-                <span class="portfolio-row__index">03</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Mehmandar</h3>
@@ -734,9 +742,9 @@
 
               <a
                 href="/it/portfolio/webdesign-aplusvfx/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="done"
               >
-                <span class="portfolio-row__index">04</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">A Plus VFX</h3>
@@ -752,9 +760,9 @@
 
               <a
                 href="/it/portfolio/webdesign-payetakhtetala/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="done"
               >
-                <span class="portfolio-row__index">05</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Paytakht Tala</h3>
@@ -768,9 +776,9 @@
 
               <a
                 href="/it/portfolio/webdesign-sabtfarhang/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="done"
               >
-                <span class="portfolio-row__index">06</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Farhang Sabt</h3>
@@ -786,9 +794,9 @@
 
               <a
                 href="/it/portfolio/webdesign-hevaaps/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="done"
               >
-                <span class="portfolio-row__index">07</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Heva ApS</h3>
@@ -802,9 +810,9 @@
 
               <a
                 href="/it/portfolio/webdesign-rabi-foundation/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="done"
               >
-                <span class="portfolio-row__index">08</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Rabi Foundation</h3>
@@ -820,9 +828,9 @@
 
               <a
                 href="/it/portfolio/webdesign-niavaransabt/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="done"
               >
-                <span class="portfolio-row__index">09</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Niavaran Sabt</h3>
@@ -838,9 +846,9 @@
 
               <a
                 href="/it/portfolio/webdesign-ptahvie/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="done"
               >
-                <span class="portfolio-row__index">10</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Parsa Tahie</h3>
@@ -854,9 +862,9 @@
 
               <a
                 href="/it/portfolio/webdesign-spantaweb/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="done"
               >
-                <span class="portfolio-row__index">11</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Spanta Web</h3>
@@ -872,9 +880,9 @@
 
               <a
                 href="/it/portfolio/webdesign-pouyanabi/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="done"
               >
-                <span class="portfolio-row__index">12</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Pouya Nabi</h3>
@@ -888,9 +896,9 @@
 
               <a
                 href="/it/portfolio/landingpage-cadinu/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="done"
               >
-                <span class="portfolio-row__index">13</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Cadinu Inu</h3>
@@ -906,9 +914,9 @@
 
               <a
                 href="/it/portfolio/onlineshop-zrmr/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="done"
               >
-                <span class="portfolio-row__index">14</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Zomorrod Rokh</h3>
@@ -922,9 +930,9 @@
 
               <a
                 href="/it/portfolio/webdesign-alzahravfx/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="done"
               >
-                <span class="portfolio-row__index">15</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Alzahra VFX</h3>
@@ -964,9 +972,9 @@
             <div class="portfolio-list" data-expandable-list>
               <a
                 href="/it/portfolio/develop-qerlo/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="not-started"
               >
-                <span class="portfolio-row__index">01</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Qerlo</h3>
@@ -982,9 +990,9 @@
 
               <a
                 href="/it/portfolio/develop-tivra/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="not-started"
               >
-                <span class="portfolio-row__index">02</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Tivra</h3>
@@ -1000,9 +1008,9 @@
 
               <a
                 href="/it/portfolio/develop-valeno/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="not-started"
               >
-                <span class="portfolio-row__index">03</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Valeno</h3>
@@ -1018,9 +1026,9 @@
 
               <a
                 href="/it/portfolio/develop-brilo/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="not-started"
               >
-                <span class="portfolio-row__index">04</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Brilo</h3>
@@ -1036,9 +1044,9 @@
 
               <a
                 href="/it/portfolio/develop-fiora/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="not-started"
               >
-                <span class="portfolio-row__index">05</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Fiora</h3>
@@ -1055,9 +1063,9 @@
 
               <a
                 href="/it/portfolio/develop-sorbi/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="not-started"
               >
-                <span class="portfolio-row__index">06</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Sorbi</h3>
@@ -1073,9 +1081,9 @@
 
               <a
                 href="/it/portfolio/develop-belluno/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="not-started"
               >
-                <span class="portfolio-row__index">07</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Belluno</h3>
@@ -1091,9 +1099,9 @@
 
               <a
                 href="/it/portfolio/develop-nuvello/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="not-started"
               >
-                <span class="portfolio-row__index">08</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Nuvello</h3>
@@ -1109,9 +1117,9 @@
 
               <a
                 href="/it/portfolio/develop-velto/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="not-started"
               >
-                <span class="portfolio-row__index">09</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Velto</h3>
@@ -1127,9 +1135,9 @@
 
               <a
                 href="/it/portfolio/develop-alviano/"
-                class="portfolio-row reveal-row"
+                class="portfolio-row reveal-row" data-status="not-started"
               >
-                <span class="portfolio-row__index">10</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Alviano</h3>
@@ -1145,9 +1153,9 @@
 
               <a
                 href="/it/portfolio/develop-galvo/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="not-started"
               >
-                <span class="portfolio-row__index">11</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Galvo</h3>
@@ -1162,9 +1170,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-xelpo/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="not-started"
               >
-                <span class="portfolio-row__index">12</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Xelpo</h3>
@@ -1179,9 +1187,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-lemro/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="not-started"
               >
-                <span class="portfolio-row__index">13</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Lemro</h3>
@@ -1196,9 +1204,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-dirmo/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="not-started"
               >
-                <span class="portfolio-row__index">14</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Dirmo</h3>
@@ -1213,9 +1221,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-hirvo/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="not-started"
               >
-                <span class="portfolio-row__index">15</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Hirvo</h3>
@@ -1230,9 +1238,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-jorvi/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="not-started"
               >
-                <span class="portfolio-row__index">16</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Jorvi</h3>
@@ -1247,9 +1255,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-mirto/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="not-started"
               >
-                <span class="portfolio-row__index">17</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Mirto</h3>
@@ -1264,9 +1272,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-rinvo/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="not-started"
               >
-                <span class="portfolio-row__index">18</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Rinvo</h3>
@@ -1281,9 +1289,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-yelmo/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="not-started"
               >
-                <span class="portfolio-row__index">19</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Yelmo</h3>
@@ -1298,9 +1306,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-fresca/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="not-started"
               >
-                <span class="portfolio-row__index">20</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Fresca</h3>
@@ -1315,9 +1323,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-mavero/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="not-started"
               >
-                <span class="portfolio-row__index">21</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Mavero</h3>
@@ -1332,9 +1340,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-cedro/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="not-started"
               >
-                <span class="portfolio-row__index">22</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Cedro</h3>
@@ -1349,9 +1357,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-orvella/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row" data-status="in-progress"
               >
-                <span class="portfolio-row__index">23</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Orvella</h3>
@@ -1366,9 +1374,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-tempozio/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row" data-status="in-progress"
               >
-                <span class="portfolio-row__index">24</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Tempozio</h3>
@@ -1383,9 +1391,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-ravlo/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row" data-status="in-progress"
               >
-                <span class="portfolio-row__index">25</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Ravlo</h3>
@@ -1400,9 +1408,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-dashboard/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="not-started"
               >
-                <span class="portfolio-row__index">26</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Pannello utente</h3>
@@ -1417,9 +1425,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-tavio/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row" data-status="in-progress"
               >
-                <span class="portfolio-row__index">27</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Tavio</h3>
@@ -1434,9 +1442,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-codara/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="not-started"
               >
-                <span class="portfolio-row__index">28</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Codara</h3>
@@ -1451,9 +1459,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-falco/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="not-started"
               >
-                <span class="portfolio-row__index">29</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Falco</h3>
@@ -1468,9 +1476,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-lume/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row" data-status="in-progress"
               >
-                <span class="portfolio-row__index">30</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Lume</h3>
@@ -1485,9 +1493,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-ubiro/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="not-started"
               >
-                <span class="portfolio-row__index">31</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Ubiro</h3>
@@ -1502,9 +1510,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-semora/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="not-started"
               >
-                <span class="portfolio-row__index">32</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Semora</h3>
@@ -1519,9 +1527,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-nolvo/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="not-started"
               >
-                <span class="portfolio-row__index">33</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Nolvo</h3>
@@ -1536,9 +1544,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-zorio/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row" data-status="in-progress"
               >
-                <span class="portfolio-row__index">34</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Zorio</h3>
@@ -1553,9 +1561,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-refacto/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="not-started"
               >
-                <span class="portfolio-row__index">35</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Refacto</h3>
@@ -1570,9 +1578,9 @@
               </a>
               <a
                 href="/it/portfolio/develop-pilvo/"
-                class="portfolio-row reveal-row extra-item"
+                class="portfolio-row reveal-row extra-item" data-status="not-started"
               >
-                <span class="portfolio-row__index">36</span>
+                <span class="portfolio-row__index"></span>
                 <div class="portfolio-row__content">
                   <div class="portfolio-row__top">
                     <h3 class="portfolio-row__title">Pilvo</h3>
@@ -1717,20 +1725,23 @@
       </section>
     </main>
 
-    <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
-    <footer-component></footer-component>
+        <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
 
-    <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->
-<script src="/assets/src/core/i18n.js"></script>
-<script type="module" src="/assets/src/components/header.js"></script> 
-    <script src="/assets/src/components/blurup.js"></script>
-<script type="module" src="/assets/src/components/language-selector.js"></script>
-    <script src="/assets/src/components/terminal-breadcrumb.js"></script>
-<script type="module" src="/assets/src/components/footer.js"></script>
+        <footer-component></footer-component>
+        <back-to-top></back-to-top>
 
+
+        <!-- :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-
-    <script src="../../assets/src/components/animations.js"></script>
+        <script src="/assets/src/core/i18n.js"></script>
+        <script type="module" src="/assets/src/components/header.js"></script>
+        <script src="/assets/src/components/blurup.js"></script>
+        <script type="module" src="/assets/src/components/language-selector.js"></script>
+        <script src="/assets/src/components/terminal-breadcrumb.js"></script>
+        <script type="module" src="/assets/src/components/footer.js"></script>
+        <script type="module" src="/assets/src/components/back-to-top.js"></script>
+        <script type="module" src="/assets/src/components/process-component.js"></script>
+        <script src="/assets/src/core/animations.js"></script>
   </body>
 </html>

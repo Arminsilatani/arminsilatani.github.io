@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin-bottom: -1px;
+    margin-bottom: 70px;
 
     background: linear-gradient(
         to bottom,
@@ -1276,4 +1276,58 @@
     78.4% { filter: brightness(1.20) contrast(1.30) saturate(1.5) hue-rotate(-12deg); }
     78.8% { filter: brightness(0.95) contrast(1.20) saturate(1.3) hue-rotate(6deg);   }
     79.2% { filter: none; }
+}
+
+/* =====================================================================
+   SUBTITLE ALIGNMENT FIX (DESKTOP)
+   مشکل: text-align: center + text-align-last: start
+   راه‌حل: هر دو start-aligned (راست در RTL، چپ در LTR)
+   ===================================================================== */
+
+@media (min-width: 768px) {
+    [dir="rtl"] .hero-section .hero-title h1 .h1_sub,
+    [dir="rtl"] .hero-section .hero-title h1 .hero-title__sub {
+        text-align: right;
+        text-align-last: right;
+    }
+
+    [dir="ltr"] .hero-section .hero-title h1 .h1_sub,
+    [dir="ltr"] .hero-section .hero-title h1 .hero-title__sub {
+        text-align: left;
+        text-align-last: left;
+    }
+}
+
+/* =====================================================================
+   TABLETS — iPad Pro 13 + Galaxy Tab S7 → center-aligned subtitle
+   (pointer: coarse) → فقط دستگاه‌های لمسی؛ دسکتاپ هرگز درگیر نمی‌شود.
+   ===================================================================== */
+
+/* Landscape — touch only */
+@media (min-width: 1024px) and (max-width: 1400px)
+       and (orientation: landscape)
+       and (pointer: coarse) {
+    html[dir] .hero-section .hero-title h1 .h1_sub,
+    html[dir] .hero-section .hero-title h1 .hero-title__sub {
+        text-align: center;
+        text-align-last: center;
+        margin-inline: auto;
+    }
+}
+
+/* Portrait — touch only */
+@media (min-width: 800px) and (max-width: 1100px)
+       and (orientation: portrait)
+       and (pointer: coarse) {
+    html[dir] .hero-section .hero-title h1 .h1_sub,
+    html[dir] .hero-section .hero-title h1 .hero-title__sub {
+        text-align: center;
+        text-align-last: center;
+        margin-inline: auto;
+    }
+}
+
+.hero-section {
+  contain: layout style;   /* تغییرات ارتفاع داخلی به بیرون نشت نمی‌کنه */
+  min-height: 100svh;      /* کف ارتفاع، مستقل از viewport */
 }

@@ -37,10 +37,29 @@ class LanguageComponent extends HTMLElement {
         dropdown.setAttribute("role", "menu");
 
         /* :::::::::::::::::::::::::: GENERATE LANGUAGE LINKS :::::::::::::::::::::::::: */
-        /* همه‌ی زبان‌ها به‌جز زبان فعلی */
-        const otherLangs = Object.values(i18n.TRANSLATIONS).filter(
-            (lang) => lang.code !== currentLangCode
-        );
+        /* ترتیب اولویت‌دار زبان‌ها بر اساس اهمیت در دنیای اینترنت */
+        const LANG_PRIORITY = [
+            "en", // English
+            "de", // German
+            "it", // Italian
+            "ar", // Arabic
+            "tr", // Turkish
+            "fa", // Persian
+        ];
+
+        /* همه‌ی زبان‌ها به‌جز زبان فعلی، مرتب‌شده بر اساس اولویت */
+        const otherLangs = Object.values(i18n.TRANSLATIONS)
+            .filter((lang) => lang.code !== currentLangCode)
+            .sort((a, b) => {
+                const posA = LANG_PRIORITY.indexOf(a.code);
+                const posB = LANG_PRIORITY.indexOf(b.code);
+
+                // زبان‌هایی که در لیست اولویت نیستند، به انتهای لیست می‌روند
+                const indexA = posA === -1 ? LANG_PRIORITY.length : posA;
+                const indexB = posB === -1 ? LANG_PRIORITY.length : posB;
+
+                return indexA - indexB;
+            });
 
         otherLangs.forEach((lang, index) => {
             const a = document.createElement("a");
