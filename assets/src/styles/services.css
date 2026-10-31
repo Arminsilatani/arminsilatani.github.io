@@ -1,382 +1,245 @@
-/* :::::::::::::::::::::::::: SERVICES SECTION :::::::::::::::::::::::::: */
+/* =========================================
+   SERVICES PAGE — EDITORIAL LIST ONLY
+   (بدون ریست، بدون فونت، فقط کلاس‌های اختصاصی)
+   ========================================= */
 
-/* :::::::::::::::::::::::::: CUSTOM PROPERTIES :::::::::::::::::::::::::: */
-.services-wrapper {
-    --bg-dark: #0D0D0D;
-    --text-light: #F5F5F5;
-    --accent: #4ECDC4;
-    --accent-glow: rgba(78, 205, 196, 0.4);
-    --border-gray: rgba(84, 89, 95, 0.4);
-    --card-width: 55vw;
-    --card-gap: 15rem;
+/* ===== Section: List ===== */
+.editorial-list-section {
+    padding-block: 60px;
+}
 
-    background-color: var(--bg-dark);
-    color: var(--text-light);
-    font-family: inherit;
+.list-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.list-header h2 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-soft);
+    text-transform: uppercase;
+    letter-spacing: 3px;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    width: 100%;
-    min-height: 120vh;
+}
+
+.list-header .line {
+    flex-grow: 1;
+    height: 1px;
+    background: var(--border);
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+[dir="ltr"] .list-header .line {
+    transform-origin: left;
+}
+
+/* ===== Editorial list ===== */
+.editorial-list {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
 }
 
-.services-wrapper *,
-.services-wrapper *::before,
-.services-wrapper *::after {
-    box-sizing: inherit;
-}
-
-/* :::::::::::::::::::::::::: HORIZONTAL SCROLL CONTAINER :::::::::::::::::::::::::: */
-.services-wrapper .scroll-container {
-    display: flex;
-    gap: var(--card-gap);
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding: 4rem calc(50vw - var(--card-width) / 2);
-    scroll-behavior: smooth;
-    cursor: grab;
-    user-select: none;
-    -webkit-user-select: none;
-    position: relative;
-    width: 100vw;
-    max-width: 100%;
-    flex: 1;
+.editorial-item {
+    display: grid;
+    grid-template-columns: 350px 1fr 140px;
     align-items: center;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.services-wrapper .scroll-container::-webkit-scrollbar {
-    height: 0;
-    display: none;
-}
-
-.services-wrapper .scroll-container:active {
-    cursor: grabbing;
-}
-
-/* :::::::::::::::::::::::::: CARDS :::::::::::::::::::::::::: */
-.services-wrapper .service-card {
-    min-width: var(--card-width);
-    max-width: var(--card-width);
-    height: 420px;
-    border-radius: 16px;
-    padding: 3rem 2.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    scroll-snap-align: center;
-    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+    padding-block: 45px;
+    border-bottom: 1px solid var(--border);
     position: relative;
-
-    /* Glassmorphism effect */
-    background: rgba(255, 255, 255, 0.02);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid var(--border-gray);
-
-    color: var(--text-light);
-    flex-shrink: 0;
-    cursor: pointer;
-    gap: 1.2rem;
-    margin-top: 6rem;
-    margin-bottom: auto;
-
-    /* Entry animation */
-    animation: fadeUp 0.8s ease-out forwards;
+    transition: background-color 0.4s ease;
+    text-decoration: none;
+    color: inherit;
+    will-change: transform;
 }
 
-/* :::::::::::::::::::::::::: ACTIVE CARD STATE :::::::::::::::::::::::::: */
-.services-wrapper .service-card.active {
-    background: linear-gradient(145deg, var(--accent), #2B9991);
-    border-color: var(--accent);
-    color: #0D0D0D;
-    transform: scale(1.05) translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px var(--accent-glow);
-}
-
-/* Inactive state: text color #0D0D0D (as requested) */
-.services-wrapper .service-card:not(.active) {
-    color: #0D0D0D;
-}
-
-/* :::::::::::::::::::::::::: CARD TYPOGRAPHY :::::::::::::::::::::::::: */
-.services-wrapper .service-card h3 {
-    font-size: 1.7rem;
-    font-weight: 800;
-    margin: 0;
-    color: #0D0D0D;
-}
-
-.services-wrapper .service-card .card-desc {
-    font-size: 0.95rem;
-    line-height: 1.8;
-    opacity: 0.75;
-    max-width: 320px;
-    transition: all 0.3s ease;
-}
-
-.services-wrapper .service-card.active .card-desc {
-    opacity: 0.95;
-    color: #0D0D0D;
-    font-weight: 500;
-}
-
-/* :::::::::::::::::::::::::: DOTS NAVIGATION :::::::::::::::::::::::::: */
-.services-wrapper .dots-nav {
-    display: flex;
-    gap: 0.7rem;
-    justify-content: center;
-    padding: 0.5rem 0 3rem;
-    flex-wrap: wrap;
-    flex-shrink: 0;
-    transform: translateY(-80px);
-    position: relative;
-    margin-bottom: 150px;
-}
-
-.services-wrapper .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--border-gray);
-    cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border: none;
-    outline: none;
-    padding: 0;
-    position: relative;
-}
-
-.services-wrapper .dot.active-dot {
+.editorial-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
     background: var(--accent);
-    width: 32px;
-    border-radius: 20px;
-    box-shadow: 0 0 15px var(--accent-glow);
+    filter: blur(100px);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: -1;
+    pointer-events: none;
 }
 
-.services-wrapper .dot:hover:not(.active-dot) {
-    background: rgba(78, 205, 196, 0.6);
-    transform: scale(1.2);
+.editorial-item:hover::before {
+    opacity: 0.1;
+    transform: translate(-50%, -50%) scale(1);
 }
 
-/* :::::::::::::::::::::::::: ANIMATIONS :::::::::::::::::::::::::: */
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* --- Title group --- */
+.item-title-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.services-wrapper {
-    min-height: auto;
-    justify-content: flex-start;
+.item-icon {
+    color: var(--text-soft);
+    transition: all 0.4s ease;
+    transform: scale(0.9);
+    flex-shrink: 0;
 }
 
-.services-wrapper .scroll-container {
-    flex: 0 0 auto;
-    height: auto;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+.editorial-item:hover .item-icon {
+    color: var(--accent);
+    transform: scale(1.1);
 }
 
-
-.services-wrapper .dots-nav {
-    transform: translateY(-20px);
+.item-title-group h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    margin: 0;
 }
 
-.services-wrapper .scroll-container {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
+.item-title-group h3 span {
+    font-size: 1rem;
+    color: var(--text-soft);
+    font-weight: 400;
+    opacity: 0.7;
 }
 
-.services-wrapper .service-card {
-    flex-shrink: 0 !important;
-    min-width: var(--card-width) !important;
-    max-width: var(--card-width) !important;
+[dir="rtl"] .editorial-item:hover .item-title-group h3 {
+    transform: translateX(-10px);
 }
 
-
-
-/* :::::::::::::::::::::::::: ANIMATIONS :::::::::::::::::::::::::: */
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+[dir="ltr"] .editorial-item:hover .item-title-group h3 {
+    transform: translateX(10px);
 }
 
-/* :::::::::::::::::::::::::: MOBILE OPTIMIZATIONS :::::::::::::::::::::::::: */
-@media (max-width: 768px) {
-    .services-wrapper {
-        --card-width: 85vw;
-        --card-gap: 1.5rem;
-        min-height: auto;
-        padding: 3rem 0;
-    }
+/* --- Description --- */
+.item-desc p {
+    color: var(--text-soft);
+    font-size: 1rem;
+    line-height: 1.8;
+    transition: color 0.4s ease;
+    padding-inline-start: 40px;
+    max-width: 90%;
+    margin: 0;
+}
 
-    .services-wrapper .scroll-container {
-        padding: 2rem calc(50vw - var(--card-width) / 2) 1rem;
-        gap: var(--card-gap);
-        scroll-padding: 0 calc(50vw - var(--card-width) / 2);
-    }
+.editorial-item:hover .item-desc p {
+    color: var(--text);
+}
 
-    .services-wrapper .service-card {
-        height: auto;
-        min-height: 320px;
-        padding: 2rem 1.5rem;
-        margin-top: 0;
-        margin-bottom: 2rem;
-        border-radius: 14px;
-    }
+.item-action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--text-soft);
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
 
-    .services-wrapper .service-card.active {
-        transform: scale(1.02) translateY(-3px);
-    }
+[dir="rtl"] .item-action {
+    transform: translateX(20px);
+}
 
-    .services-wrapper .service-card h3 {
-        font-size: 1.4rem;
-        margin-bottom: 0.3rem;
-    }
+.editorial-item:hover .item-action {
+    opacity: 1;
+    transform: translateX(0);
+    color: var(--accent);
+}
 
-    .services-wrapper .service-card .card-desc {
-        font-size: 0.85rem;
+/* ===== Sub services ===== */
+.sub-list-section {
+    padding-block: 60px 0;
+}
+
+.sub-list .editorial-item {
+    padding-block: 35px;
+}
+
+.sub-list .item-title-group h3 {
+    font-size: 1.4rem;
+}
+
+/* ===== CTA ===== */
+.editorial-cta {
+    padding-block: 120px 0;          /* ← پایین صفر شد (قبلاً 160px بود) */
+    text-align: center;
+}
+
+.cta-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;              /* ← وسط‌چین افقی مطمئن */
+    gap: 20px;                        /* فاصله بین h2 و دکمه */
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin: 0;                        /* margin-bottom حذف شد چون gap جایش را گرفت */
+    font-weight: 800;
+    color: var(--text);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1100px) {
+    .editorial-item {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-block: 35px;
+    }
+    .item-desc p {
+        padding-inline-start: 0;
         max-width: 100%;
-        line-height: 1.7;
     }
-
-    .services-wrapper .dots-nav {
-        transform: translateY(0);
-        margin-top: -1.5rem;
-        padding: 0.5rem 0 2rem;
-        gap: 0.5rem;
+    .item-action {
+        display: none;
     }
-
-    .services-wrapper .dot {
-        width: 8px;
-        height: 8px;
+    .item-title-group h3 {
+        font-size: 1.5rem;
     }
-
-    .services-wrapper .dot.active-dot {
-        width: 24px;
+    .sub-list .editorial-item {
+        grid-template-columns: 1fr;
     }
 }
 
-/* ===================================================================== */
-/* ============================ 320px = XS ============================= */
-/* iPhone 5 (568x320)                                                    */
-/* ===================================================================== */
+@media (max-width: 768px) {
+    .editorial-list-section {
+        padding-block: 40px;
+    }
 
-@media (min-width: 320px) {
+    .editorial-item {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding-block: 30px;
+    }
 
-}
+    .item-title-group h3 {
+        font-size: 1.3rem;
+        transform: none !important;
+    }
 
-/* ===================================================================== */
-/* ============================ 380px = S ============================== */
-/* Galaxy Z Flip 3 (880x360) | Galaxy S24 Ultra (891x412)                */
-/* ===================================================================== */
+    .item-title-group h3 span {
+        display: block;
+        margin-top: 5px;
+        font-size: 0.85rem;
+    }
 
-@media (min-width: 380px) {
+    .item-desc p {
+        font-size: 0.95rem;
+    }
 
-}
+    .editorial-cta {
+        padding-block: 60px 100px;
+    }
 
-/* ===================================================================== */
-/* =========================== 440px = S+ ============================== */
-/* iPhone 17 Pro Max (956x440)                                           */
-/* ===================================================================== */
-
-@media (min-width: 440px) {
-
-}
-
-/* ===================================================================== */
-/* ============================ 480px = M ============================== */
-/* —                                                                     */
-/* ===================================================================== */
-
-@media (min-width: 480px) {
-
-}
-
-/* ===================================================================== */
-/* =========================== 768px = TAB ============================= */
-/* iPad Mini (1024x768) | Galaxy Fold inner (1076x768)                   */
-/* ===================================================================== */
-
-@media (min-width: 768px) {
-
-}
-
-/* ===================================================================== */
-/* ========================== 800px = TAB+ ============================= */
-/* Galaxy Tab S7 (1280x800)                                              */
-/* ===================================================================== */
-
-@media (min-width: 800px) {
-
-}
-
-/* ===================================================================== */
-/* =========================== 1024px = L ============================== */
-/* iPad Pro 13 (1376x1032)                                               */
-/* ===================================================================== */
-
-@media (min-width: 1024px) {
-
-}
-
-/* ===================================================================== */
-/* =========================== 1366px = XL ============================= */
-/* Desktop / Laptop FHD                                                  */
-/* ===================================================================== */
-
-@media (min-width: 1366px) {
-
-}
-
-/* ===================================================================== */
-/* ========================== 1920px = 2XL ============================= */
-/* Full HD / 2K                                                          */
-/* ===================================================================== */
-
-@media (min-width: 1920px) {
-
-}
-
-/* ===================================================================== */
-/* =========================== 2560px = UW ============================= */
-/* Ultrawide (3440x1440) | 4K UHD (2160x3840)                            */
-/* ===================================================================== */
-
-@media (min-width: 2560px) {
-
-}
-
-/* ===================================================================== */
-/* ======================= LANDSCAPE PHONE ============================= */
-/* iPhone 17 PM / S24 Ultra در حالت افقی (ارتفاع کم)                     */
-/* ===================================================================== */
-
-@media (max-height: 500px) and (orientation: landscape) {
-
+    .cta-content h2 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
 }

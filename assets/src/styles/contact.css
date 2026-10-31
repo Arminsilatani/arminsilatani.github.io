@@ -52,16 +52,7 @@ body::before {
     position: relative;
 }
 
-.section-eyebrow {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 400;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 18px;
-    opacity: 0.85;
-}
+/* NOTE: .section-eyebrow و .eyebrow قدیمی به typography.css منتقل/ادغام شدند (بخش ۱۰). */
 
 .section-title {
     font-size: 2.2rem;
@@ -174,29 +165,39 @@ a.contact-info__value:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-muted);
     text-decoration: none;
     transition: var(--transition);
-    font-size: 0.7rem;
-    font-weight: 600;
     background: var(--bg-card);
+
+    /* ✅ رنگ Lottie: خاکستری پیش‌فرض، accent در هاور */
+    --lottie-color: var(--text-muted);
+    --lottie-hover-color: var(--accent);
 }
 
 .social-dot:hover {
     border-color: var(--accent);
-    color: var(--accent);
     background: var(--accent-subtle);
 }
 
-.social-dot svg {
+/* ✅ سایز Lottie داخل دایره */
+.social-dot .lottie-icon {
+    width: 18px;
+    height: 18px;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.social-dot:hover .lottie-icon {
+    transform: scale(1.15);
+}
+
+/* ✅ فقط SVG مستقیم (legacy) — Lottie SVG داخل .lottie-icon است و تحت تأثیر قرار نمی‌گیرد */
+.social-dot > svg {
     width: 18px;
     height: 18px;
     fill: currentColor;
     display: block;
 }
-
-
-
 /* :::::::::::::::::::::::::: FORM WRAPPER :::::::::::::::::::::::::: */
 
 .contact-form-wrapper {
@@ -561,6 +562,3 @@ a.contact-info__value:hover {
 #faq .section-title {
     margin-top: 0;
 }
-
-
-

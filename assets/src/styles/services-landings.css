@@ -101,12 +101,7 @@
 }
 
 .seo-section {
-    padding: 5rem 0;
     position: relative;
-}
-
-.seo-section-tight {
-    padding: 4rem 0;
 }
 
 .seo-sticky {
@@ -115,126 +110,32 @@
 }
 
 /* ===================================================================== */
-/* ========================= 03. TYPOGRAPHY =========================== */
+/* ==================== 03. AVAILABILITY STATUS ====================== */
 /* ===================================================================== */
 
-.seo-eyebrow {
+.availability-status {
     display: inline-flex;
     align-items: center;
     gap: .5rem;
-    padding: .375rem 1rem;
     font-size: .75rem;
     font-weight: 500;
+    letter-spacing: .08em;
     color: var(--seo-brand);
-    border: 1px solid rgba(78, 205, 196, .3);
-    background: rgba(78, 205, 196, .05);
-    border-radius: 5px;
 }
 
-.seo-eyebrow svg {
-    width: .875rem;
-    height: .875rem;
-}
+.availability-status[data-state="loading"]   { color: #4ECDC4; }
+.availability-status[data-state="available"] { color: #4ECDC4; }
+.availability-status[data-state="limited"]   { color: #FFC107; }
+.availability-status[data-state="full"]      { color: #EF4444; }
 
-.seo-eyebrow-sm {
-    font-size: .6875rem;
-    padding: .3125rem .875rem;
-}
-
-.seo-eyebrow[data-state="loading"] {
-    border-color: rgba(78, 205, 196, .3);
-    background: rgba(78, 205, 196, .05);
-    color: #4ECDC4;
-}
-
-.seo-eyebrow[data-state="available"] {
-    border-color: rgba(78, 205, 196, .6);
-    background: rgba(78, 205, 196, .1);
-    color: #4ECDC4;
-}
-
-.seo-eyebrow[data-state="limited"] {
-    border-color: rgba(255, 193, 7, .55);
-    background: rgba(255, 193, 7, .08);
-    color: #FFC107;
-}
-
-.seo-eyebrow[data-state="full"] {
-    border-color: rgba(239, 68, 68, .55);
-    background: rgba(239, 68, 68, .08);
-    color: #EF4444;
-}
-
-.seo-eyebrow[data-state="limited"] .seo-pulse-core,
-.seo-eyebrow[data-state="limited"] .seo-pulse-ring {
+.availability-status[data-state="limited"] .seo-pulse-core,
+.availability-status[data-state="limited"] .seo-pulse-ring {
     background: #FFC107;
 }
 
-.seo-eyebrow[data-state="full"] .seo-pulse-core,
-.seo-eyebrow[data-state="full"] .seo-pulse-ring {
+.availability-status[data-state="full"] .seo-pulse-core,
+.availability-status[data-state="full"] .seo-pulse-ring {
     background: #EF4444;
-}
-
-/* ---------- Section Header ---------- */
-.seo-section-header {
-    max-width: 48rem;
-    margin: 0 auto 3.5rem;
-}
-
-.seo-section-title {
-    font-size: 1.5rem;
-    font-weight: 900;
-    line-height: 1.5;
-    color: #FFF;
-    margin-top: 1.25rem;
-    letter-spacing: -.01em;
-}
-
-.seo-section-sub {
-    margin-top: 1.25rem;
-    color: var(--seo-text-60);
-    font-size: .9375rem;
-    line-height: 2.1;
-}
-
-/* ---------- Portfolio & Pricing Headers ---------- */
-.seo-page #seo-portfolio .seo-section-header,
-.seo-page #seo-pricing .seo-section-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.seo-page #seo-portfolio .seo-section-header .seo-eyebrow,
-.seo-page #seo-pricing .seo-section-header .seo-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    text-align: center;
-}
-
-.seo-page #seo-portfolio .seo-section-header .seo-section-title,
-.seo-page #seo-pricing .seo-section-header .seo-section-title {
-    text-align: center;
-    text-align-last: center;
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0;
-    padding-right: 0;
-    float: none;
-    direction: rtl;
-}
-
-.seo-page #seo-portfolio .seo-section-header .seo-section-sub,
-.seo-page #seo-pricing .seo-section-header .seo-section-sub {
-    align-self: stretch;
-    width: 100%;
-    text-align: justify;
-    text-align-last: right;
-    -moz-text-align-last: right;
-    text-justify: inter-word;
 }
 
 /* ===================================================================== */
@@ -260,7 +161,7 @@
 .seo-hero {
     position: relative;
     overflow: hidden;
-    padding: 4rem 0 5rem;
+    padding: 0 0 200px;
 }
 
 .seo-hero-container {
@@ -428,7 +329,7 @@
     margin-top: 1.5rem;
 }
 
-.seo-hero-badge-wrap .seo-eyebrow {
+.seo-hero-badge-wrap .availability-status {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -661,7 +562,7 @@
 
 .seo-banner-desc {
     max-width: 48rem;
-    margin: -10px 0 20px 0;
+    margin: 40px 0 20px 0;
     color: var(--seo-text-60);
     font-size: .9375rem;
     line-height: 2.1;
@@ -683,6 +584,10 @@
     background: #4ECDC4;
     color: #0D0D0D;
     border-color: #4ECDC4;
+}
+
+#seo-consult {
+    padding-bottom: 200px;
 }
 
 /* ===================================================================== */
@@ -794,6 +699,10 @@
     line-height: 1.7;
 }
 
+#seo-what {
+    padding-bottom: 150px;
+}
+
 /* ===================================================================== */
 /* ======================== 08. PORTFOLIO ============================= */
 /* ===================================================================== */
@@ -883,14 +792,19 @@
     color: var(--seo-brand);
 }
 
+#seo-portfolio {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
 /* ===================================================================== */
-/* ======================== 09. PRICING =============================== */
+/* ======================== 09. PRICING CARDS ========================= */
 /* ===================================================================== */
 
 .seo-pricing-grid {
-    margin-top: 4rem;
     display: grid;
     gap: 1.5rem;
+    margin-bottom: 100px;
 }
 
 .seo-pricing-card {
@@ -989,79 +903,124 @@
     margin-top: 2rem;
 }
 
-/* ---------- Pricing Tabs ---------- */
-.seo-pricing-tabs {
+/* ===================================================================== */
+/* ================= 10. PRICING — TABS & PANELS ====================== */
+/* ===================================================================== */
+
+/* ---------- Tab Switch (reusable component) ---------- */
+.tab-switch {
     display: flex;
     justify-content: center;
     gap: 2.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
-.seo-tab {
+.tab-switch__btn {
+    position: relative;
     padding: .5rem 0;
     font-size: 1rem;
     font-weight: 500;
     color: rgba(255, 255, 255, .4);
     background: none;
     border: none;
-    border-bottom: 2px solid transparent;
     cursor: pointer;
-    transition: color .25s ease, border-color .25s ease;
+    transition: color .35s cubic-bezier(.16, 1, .3, 1);
 }
 
-.seo-tab:hover {
+.tab-switch__btn:hover {
     color: rgba(255, 255, 255, .75);
 }
 
-.seo-tab[data-seo-tab="standard"].is-active {
+.tab-switch__btn::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+    transform: translateX(-50%);
+    box-shadow: 0 0 12px currentColor;
+    transition: width .5s cubic-bezier(.16, 1, .3, 1);
+    pointer-events: none;
+}
+
+.tab-switch__btn:hover::after {
+    width: 50%;
+}
+
+.tab-switch__btn.is-active::after {
+    width: 100%;
+}
+
+.tab-switch__btn[data-tab="standard"].is-active {
     color: #4ECDC4;
 }
 
-.seo-tab[data-seo-tab="advanced"].is-active {
+.tab-switch__btn[data-tab="advanced"].is-active {
     color: #FFE76D;
 }
 
-/* ---------- Pricing Panels ---------- */
+/* ---------- Pricing Panels (hide) ---------- */
 .seo-pricing-grid[hidden] {
     display: none;
 }
 
+/* ---------- Panel Switch Animation ---------- */
+.seo-pricing-grid[data-tab-panel="standard"]:not([hidden]) {
+    animation: tabPanelEnterRight .4s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+.seo-pricing-grid[data-tab-panel="advanced"]:not([hidden]) {
+    animation: tabPanelEnterLeft .4s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+/* ---------- Card Stagger ---------- */
+.seo-pricing-grid:not([hidden]) > .seo-pricing-card {
+    animation: tabCardStaggerIn .55s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+.seo-pricing-grid:not([hidden]) > .seo-pricing-card:nth-child(1) { animation-delay: .04s; }
+.seo-pricing-grid:not([hidden]) > .seo-pricing-card:nth-child(2) { animation-delay: .10s; }
+.seo-pricing-grid:not([hidden]) > .seo-pricing-card:nth-child(3) { animation-delay: .16s; }
+
 /* ---------- Advanced Panel Accent ---------- */
-.seo-pricing-grid[data-seo-panel="advanced"] {
+.seo-pricing-grid[data-tab-panel="advanced"] {
     --seo-brand: #FFE76D;
     --seo-border: rgba(255, 231, 109, .16);
     --seo-border-hover: rgba(255, 231, 109, .5);
     --seo-border-strong: rgba(255, 231, 109, .25);
 }
 
-.seo-pricing-grid[data-seo-panel="advanced"] .seo-glass:hover {
+.seo-pricing-grid[data-tab-panel="advanced"] .seo-glass:hover {
     border-color: rgba(255, 231, 109, .6);
 }
 
-.seo-pricing-grid[data-seo-panel="advanced"] .seo-pricing-card-featured {
+.seo-pricing-grid[data-tab-panel="advanced"] .seo-pricing-card-featured {
     border-color: rgba(255, 231, 109, .5);
     box-shadow: 0 0 45px -12px rgba(255, 231, 109, .65);
 }
 
-.seo-pricing-grid[data-seo-panel="advanced"] .seo-badge-featured {
+.seo-pricing-grid[data-tab-panel="advanced"] .seo-badge-featured {
     background: linear-gradient(to left, #FFE76D, rgba(255, 231, 109, .7));
     box-shadow: 0 0 22px -6px rgba(255, 231, 109, .55);
 }
 
-.seo-pricing-grid[data-seo-panel="advanced"] .seo-check {
+.seo-pricing-grid[data-tab-panel="advanced"] .seo-check {
     background: rgba(255, 231, 109, .15);
 }
 
-.seo-pricing-grid[data-seo-panel="advanced"] .seo-text-brand {
+.seo-pricing-grid[data-tab-panel="advanced"] .seo-text-brand {
     color: #FFE76D;
 }
 
-.seo-pricing-grid[data-seo-panel="advanced"] .btn-dark {
+.seo-pricing-grid[data-tab-panel="advanced"] .btn-dark {
     border-color: #FFE76D;
     color: #FFE76D;
 }
 
-.seo-pricing-grid[data-seo-panel="advanced"] .btn-dark:hover {
+.seo-pricing-grid[data-tab-panel="advanced"] .btn-dark:hover {
     background: #FFE76D;
     color: #0D0D0D;
     border-color: #FFE76D;
@@ -1071,14 +1030,17 @@
         0 0 30px 15px rgba(255, 231, 109, .4);
 }
 
+#seo-pricing {
+    padding-top: 150px;
+}
+
 /* ===================================================================== */
-/* ======================== 10. CALCULATOR ============================ */
+/* ======================== 11. CALCULATOR ============================ */
 /* ===================================================================== */
 
 .seo-calculator {
     position: relative;
     overflow: hidden;
-    margin-top: 5rem;
     padding: 1.5rem;
     border-radius: 5px;
 }
@@ -1551,7 +1513,7 @@
 }
 
 /* ===================================================================== */
-/* ======================== 11. AUDIT FORM ============================ */
+/* ======================== 12. AUDIT FORM ============================ */
 /* ===================================================================== */
 
 .seo-audit-grid {
@@ -1735,8 +1697,12 @@ html:not([dir="ltr"]) .seo-audit-form .field-group textarea {
     align-self: center;
 }
 
+#seo-audit {
+    padding-bottom: 200px;
+}
+
 /* ===================================================================== */
-/* =========================== 12. FAQ ================================ */
+/* =========================== 13. FAQ ================================ */
 /* ===================================================================== */
 
 .seo-page .faq-question {
@@ -1770,8 +1736,12 @@ html:not([dir="ltr"]) .seo-audit-form .field-group textarea {
     font-size: 0;
 }
 
+#seo-faq {
+    padding-top: 200px;
+}
+
 /* ===================================================================== */
-/* ======================= 13. TESTIMONIALS =========================== */
+/* ======================= 14. TESTIMONIALS =========================== */
 /* ===================================================================== */
 
 .testimonials-section {
@@ -1908,7 +1878,7 @@ html:not([dir="ltr"]) .seo-audit-form .field-group textarea {
 }
 
 /* ===================================================================== */
-/* ========================== 14. SERVICES ============================ */
+/* ========================== 15. SERVICES ============================ */
 /* ===================================================================== */
 
 .seo-services-grid {
@@ -2009,12 +1979,8 @@ html:not([dir="ltr"]) .seo-audit-form .field-group textarea {
     line-height: 1.5;
 }
 
-.seo-page #seo-services {
-    padding-bottom: calc(7rem + 20px);
-}
-
 /* ===================================================================== */
-/* ================== 15. SCROLL REVEAL & KEYFRAMES =================== */
+/* ================== 16. SCROLL REVEAL & KEYFRAMES =================== */
 /* ===================================================================== */
 
 .seo-page .seo-reveal {
@@ -2097,8 +2063,23 @@ html:not([dir="ltr"]) .seo-audit-form .field-group textarea {
     to   { transform: translateY(0); }
 }
 
+@keyframes tabPanelEnterRight {
+    from { opacity: 0; transform: translateX(24px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes tabPanelEnterLeft {
+    from { opacity: 0; transform: translateX(-24px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes tabCardStaggerIn {
+    from { opacity: 0; transform: translateY(28px) scale(.94); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
 /* ===================================================================== */
-/* ======================== 16. PRINT MODE ============================ */
+/* ======================== 17. PRINT MODE ============================ */
 /* ===================================================================== */
 
 .seo-print-invoice {
@@ -2106,19 +2087,19 @@ html:not([dir="ltr"]) .seo-audit-form .field-group textarea {
 }
 
 @media print {
-    body > *:not(.seo-print-invoice) {
-        display: none !important;
+    html body {
+        background: #FFF;
+        color: #000;
+        margin: 0;
+        padding: 0;
     }
 
-    html, body {
-        background: #FFF !important;
-        color: #000 !important;
-        margin: 0 !important;
-        padding: 0 !important;
+    body > *:not([data-seo-print-invoice]):not(.seo-print-invoice) {
+        display: none;
     }
 
     .seo-print-invoice {
-        display: block !important;
+        display: block;
         position: static;
         width: 100%;
         padding: 2rem 2.5rem;
@@ -2262,8 +2243,8 @@ html:not([dir="ltr"]) .seo-audit-form .field-group textarea {
         margin: .25rem 0;
     }
 
-    .seo-print-contact {
-        margin-top: .75rem !important;
+    .seo-print-footer .seo-print-contact {
+        margin-top: .75rem;
         font-weight: 700;
         color: #111;
     }
@@ -2291,23 +2272,11 @@ html:not([dir="ltr"]) .seo-audit-form .field-group textarea {
 }
 
 /* ===================================================================== */
-/* ==================== 17. LTR DIRECTION OVERRIDES =================== */
+/* ==================== 18. LTR DIRECTION OVERRIDES =================== */
 /* ===================================================================== */
-/* این بخش *قبل از* Responsive باید بیاد تا موبایل بتونه override کنه   */
 
 [dir="ltr"] .seo-text-right {
     text-align: left;
-}
-
-[dir="ltr"] .seo-page #seo-portfolio .seo-section-header .seo-section-title,
-[dir="ltr"] .seo-page #seo-pricing .seo-section-header .seo-section-title {
-    direction: ltr;
-}
-
-[dir="ltr"] .seo-page #seo-portfolio .seo-section-header .seo-section-sub,
-[dir="ltr"] .seo-page #seo-pricing .seo-section-header .seo-section-sub {
-    text-align-last: left;
-    -moz-text-align-last: left;
 }
 
 [dir="ltr"] .seo-banner-title {
@@ -2369,10 +2338,10 @@ html:not([dir="ltr"]) .seo-audit-form .field-group textarea {
 }
 
 /* ===================================================================== */
-/* ==================== 18. RESPONSIVE OVERRIDES ====================== */
+/* ============ 19. RESPONSIVE — PROGRESSIVE (min-width) ============== */
 /* ===================================================================== */
 
-/* ---------- Container Padding ---------- */
+/* ---------- Container ---------- */
 @media (min-width: 640px) {
     .seo-container {
         padding-left: 1.5rem;
@@ -2387,26 +2356,8 @@ html:not([dir="ltr"]) .seo-audit-form .field-group textarea {
     }
 }
 
-/* ---------- Section Padding ---------- */
-@media (min-width: 640px) {
-    .seo-section       { padding: 7rem 0; }
-    .seo-section-tight { padding: 5rem 0; }
-}
-
-/* ---------- Sticky ---------- */
-@media (max-width: 1023px) {
-    .seo-sticky { position: static; }
-}
-
-/* ---------- Section Title / Sub ---------- */
-@media (min-width: 640px) {
-    .seo-section-title { font-size: 2.25rem; line-height: 1.4; }
-    .seo-section-sub   { font-size: 1rem; }
-}
-
 /* ---------- Hero ---------- */
 @media (min-width: 640px) {
-    .seo-hero       { padding: 6rem 0 7rem; }
     .seo-hero-title { font-size: 3rem; line-height: 1.45; }
     .seo-hero-desc  { font-size: 1rem; }
 }
@@ -2469,12 +2420,6 @@ html:not([dir="ltr"]) .seo-audit-form .field-group textarea {
     .seo-audit-grid { grid-template-columns: 5fr 7fr; }
 }
 
-/* ---------- Testimonials Mobile ---------- */
-@media (max-width: 767px) {
-    .testimonials-section .testimonials-container { height: 480px; gap: 1rem; }
-    .testimonials-section .column:nth-child(3)    { display: none; }
-}
-
 /* ---------- Services ---------- */
 @media (min-width: 768px) {
     .seo-services-grid     { grid-template-columns: repeat(2, 1fr); }
@@ -2487,8 +2432,78 @@ html:not([dir="ltr"]) .seo-audit-form .field-group textarea {
     .seo-service-card-wide { grid-column: span 3; }
 }
 
-/* ---------- Metric Badges Mobile Slider ---------- */
+/* ===================================================================== */
+/* ============ 20. RESPONSIVE — DEVICE OVERRIDES (max-width) ========= */
+/* ===================================================================== */
+
+/* ---------- ≤ 1023px — Tablet & Below ---------- */
+@media (max-width: 1023px) {
+    .seo-sticky {
+        position: static;
+    }
+
+    /* Pricing Grid Slider */
+    .seo-page .seo-pricing-grid,
+    .seo-page .seo-pricing-grid.categories-grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        gap: 1rem;
+        margin-left: -1rem;
+        margin-right: -1rem;
+        padding: 2rem 1rem 1.5rem;
+        grid-template-columns: none;
+        width: calc(100% + 2rem);
+        max-width: calc(100% + 2rem);
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        touch-action: pan-x;
+        overscroll-behavior-x: contain;
+        -webkit-user-select: none;
+        user-select: none;
+        animation: none;
+    }
+
+    .seo-page .seo-pricing-grid::-webkit-scrollbar,
+    .seo-page .seo-pricing-grid.categories-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .seo-page .seo-pricing-grid > .seo-pricing-card,
+    .seo-page .seo-pricing-grid.categories-grid > .seo-pricing-card {
+        flex: 0 0 82%;
+        max-width: 82%;
+        min-width: 82%;
+        scroll-snap-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        box-sizing: border-box;
+        touch-action: pan-x;
+        animation: none;
+    }
+
+    .seo-page .seo-pricing-grid > .seo-pricing-card.seo-reveal {
+        will-change: auto;
+    }
+
+    .seo-page .seo-pricing-grid[hidden],
+    .seo-page .seo-pricing-grid.categories-grid[hidden] {
+        display: none;
+    }
+}
+
+/* ---------- ≤ 768px — Phone & Small Tablet ---------- */
 @media (max-width: 768px) {
+    /* Tab Switch */
+    .tab-switch {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Metric Badges Slider */
     .seo-metric-badges {
         display: flex;
         overflow-x: auto;
@@ -2514,77 +2529,10 @@ html:not([dir="ltr"]) .seo-audit-form .field-group textarea {
         scroll-snap-align: center;
         box-sizing: border-box;
     }
-}
 
-/* ---------- Pricing Tabs Mobile ---------- */
-@media (max-width: 768px) {
-    .seo-pricing-tabs {
-        margin-bottom: -55px;
-    }
-}
-
-/* ---------- Pricing Grid Mobile Slider ---------- */
-@media (max-width: 1023px) {
-    .seo-page .seo-pricing-grid,
-    .seo-page .seo-pricing-grid.categories-grid {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto;
-        overflow-y: hidden;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        gap: 1rem;
-        margin-left: -1rem;
-        margin-right: -1rem;
-        padding: 2rem 1rem 1.5rem;
-        grid-template-columns: none !important;
-        width: calc(100% + 2rem);
-        max-width: calc(100% + 2rem);
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-    }
-
-    .seo-page .seo-pricing-grid::-webkit-scrollbar,
-    .seo-page .seo-pricing-grid.categories-grid::-webkit-scrollbar {
-        display: none;
-    }
-
-    .seo-page .seo-pricing-grid > .seo-pricing-card,
-    .seo-page .seo-pricing-grid.categories-grid > .seo-pricing-card {
-        flex: 0 0 82%;
-        max-width: 82%;
-        min-width: 82%;
-        scroll-snap-align: center;
-        margin-top: 0;
-        margin-bottom: 0;
-        box-sizing: border-box;
-    }
-
-    .seo-page .seo-pricing-grid > .seo-pricing-card-featured,
-    .seo-page .seo-pricing-grid.categories-grid > .seo-pricing-card-featured {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    .seo-page .seo-pricing-grid[hidden] {
-        display: none !important;
-    }
-}
-
-@media (max-width: 480px) {
-    .seo-page .seo-pricing-grid > .seo-pricing-card,
-    .seo-page .seo-pricing-grid.categories-grid > .seo-pricing-card {
-        flex: 0 0 88%;
-        max-width: 88%;
-        min-width: 88%;
-    }
-}
-
-/* ---------- Hero Grid Overflow Fix ---------- */
-@media (max-width: 768px) {
+    /* Hero Grid Overflow Fix */
     .seo-hero-grid {
-        grid-template-columns: minmax(0, 1fr) !important;
+        grid-template-columns: minmax(0, 1fr);
         width: 100%;
         max-width: 100%;
         min-width: 0;
@@ -2598,25 +2546,21 @@ html:not([dir="ltr"]) .seo-audit-form .field-group textarea {
     .seo-hero-desc,
     .seo-metric-badges,
     .seo-hero-cta {
-        min-width: 0 !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
+        min-width: 0;
+        max-width: 100%;
     }
 
     .seo-gsc-chart {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .seo-hero-cta .btn-dark {
         white-space: normal;
         text-align: center;
     }
-}
 
-/* ---------- Section Sub — Justify Mobile ---------- */
-@media (max-width: 768px) {
-
+    /* Section Sub — Justify */
     [dir="ltr"] .seo-page .seo-section-sub,
     [dir="ltr"] .seo-page .seo-text-right,
     [dir="ltr"] .seo-page .seo-editorial p,
@@ -2646,10 +2590,8 @@ html:not([dir="ltr"]) .seo-audit-form .field-group textarea {
         text-align-last: left;
         -moz-text-align-last: left;
     }
-}
 
-/* ---------- Mini Stat Mobile Center ---------- */
-@media (max-width: 768px) {
+    /* Mini Stat Center */
     .seo-mini-stat {
         display: flex;
         flex-direction: column;
@@ -2669,119 +2611,224 @@ html:not([dir="ltr"]) .seo-audit-form .field-group textarea {
     }
 }
 
+/* ---------- ≤ 767px — Testimonials Mobile ---------- */
+@media (max-width: 767px) {
+    .testimonials-section .testimonials-container {
+        height: 480px;
+        gap: 1rem;
+    }
+
+    .testimonials-section .column:nth-child(3) {
+        display: none;
+    }
+}
+
+/* ---------- ≤ 480px — Small Phone ---------- */
+@media (max-width: 480px) {
+    .seo-page .seo-pricing-grid > .seo-pricing-card,
+    .seo-page .seo-pricing-grid.categories-grid > .seo-pricing-card {
+        flex: 0 0 88%;
+        max-width: 88%;
+        min-width: 88%;
+    }
+}
+
+/* ---------- ≤ 380px — Very Small Phone ---------- */
+@media (max-width: 380px) {
+    .seo-calculator {
+        padding: 1rem;
+    }
+
+    /* Head */
+    .seo-calc-head-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .seo-calc-head-title {
+        font-size: .9375rem;
+    }
+
+    /* Package — stack */
+    .seo-calc-package {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .5rem;
+        padding: .875rem 1rem;
+    }
+
+    .seo-calc-package-name {
+        font-size: .9375rem;
+    }
+
+    .seo-calc-package-price {
+        font-size: 1rem;
+        white-space: normal;
+    }
+
+    /* Result — stack, smaller price */
+    .seo-calc-result {
+        padding: 1.25rem;
+    }
+
+    .seo-calc-result-price {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .25rem;
+    }
+
+    .seo-price-glow {
+        font-size: 1.5rem;
+    }
+
+    .seo-price-currency {
+        padding-bottom: 0;
+        font-size: .75rem;
+    }
+
+    /* Toggle — price on new line */
+    .seo-toggle {
+        flex-wrap: wrap;
+        padding: .875rem 1rem;
+        gap: .5rem .75rem;
+    }
+
+    .seo-toggle-price {
+        flex: 1 1 100%;
+        white-space: normal;
+        text-align: center;
+        font-size: .6875rem;
+    }
+
+    /* Summary rows — wrap */
+    .seo-summary-list li {
+        flex-wrap: wrap;
+        gap: .125rem .5rem;
+    }
+
+    .seo-summary-value {
+        margin-right: auto;
+    }
+
+    /* Range controls — wrap */
+    .seo-control-head {
+        flex-wrap: wrap;
+        gap: .25rem .5rem;
+    }
+
+    /* Addon hint — break long words */
+    .seo-addon-hint {
+        word-break: break-word;
+    }
+}
+
+/* ---------- Landscape Phones ---------- */
+@media (max-width: 1023px) and (orientation: landscape) {
+
+    .seo-page .seo-pricing-grid,
+    .seo-page .seo-pricing-grid.categories-grid {
+        gap: .875rem;
+        padding: 1.5rem 1rem 1rem;
+    }
+
+    .seo-page .seo-pricing-grid > .seo-pricing-card,
+    .seo-page .seo-pricing-grid.categories-grid > .seo-pricing-card {
+        flex: 0 0 46%;
+        max-width: 46%;
+        min-width: 46%;
+        padding: 1.25rem;
+    }
+
+    .seo-pricing-name {
+        font-size: 1rem;
+    }
+
+    .seo-pricing-sub {
+        font-size: .6875rem;
+    }
+
+    .seo-price {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .seo-price-value {
+        font-size: 1.375rem;
+    }
+
+    .seo-price-unit {
+        font-size: .75rem;
+    }
+
+    .seo-feature-list {
+        font-size: .75rem;
+        gap: .625rem;
+    }
+
+    .seo-feature-list li {
+        line-height: 1.7;
+    }
+
+    .seo-badge-featured {
+        top: -.75rem;
+        right: 1.25rem;
+        padding: .1875rem .75rem;
+        font-size: .625rem;
+    }
+}
+
+/* ---------- Landscape Phones — Wide (≥ 800px) ---------- */
+@media (max-width: 1023px) and (orientation: landscape) and (min-width: 800px) {
+    .seo-page .seo-pricing-grid > .seo-pricing-card,
+    .seo-page .seo-pricing-grid.categories-grid > .seo-pricing-card {
+        flex: 0 0 32%;
+        max-width: 32%;
+        min-width: 32%;
+    }
+}
+
 /* ===================================================================== */
-/* ======================= 19. REDUCED MOTION ========================= */
+/* ======================= 21. REDUCED MOTION ========================= */
 /* ===================================================================== */
 
 @media (prefers-reduced-motion: reduce) {
     .seo-page *,
     .seo-page *::before,
     .seo-page *::after {
-        animation: none !important;
-        transition-duration: .01ms !important;
+        animation: none;
+        transition-duration: .01ms;
+    }
+
+    .seo-page .seo-reveal,
+    .seo-page .seo-audit-form button[type="submit"].btn-dark,
+    .seo-page .testimonials-section .card,
+    .seo-page .seo-summary-list li.seo-summary-addon,
+    .seo-page .seo-summary-list li.seo-breakdown-row,
+    .seo-page .btn-dark {
+        animation: none;
+        transition-duration: .01ms;
+    }
+
+    .seo-page .testimonials-section .column .testimonials {
+        animation: none;
+    }
+
+    .seo-page input[type="range"]::-webkit-slider-thumb,
+    .seo-page input[type="range"]::-moz-range-thumb {
+        transition-duration: .01ms;
     }
 
     .seo-page .seo-reveal {
         opacity: 1;
         transform: none;
     }
-}
 
-/* ===================================================================== */
-/* ============================ 320px = XS ============================= */
-/* iPhone 5 (568x320)                                                    */
-/* ===================================================================== */
+    .seo-pricing-grid[data-tab-panel]:not([hidden]),
+    .seo-pricing-grid:not([hidden]) > .seo-pricing-card {
+        animation: none;
+    }
 
-@media (min-width: 320px) {
-
-}
-
-/* ===================================================================== */
-/* ============================ 380px = S ============================== */
-/* Galaxy Z Flip 3 (880x360) | Galaxy S24 Ultra (891x412)                */
-/* ===================================================================== */
-
-@media (min-width: 380px) {
-
-}
-
-/* ===================================================================== */
-/* =========================== 440px = S+ ============================== */
-/* iPhone 17 Pro Max (956x440)                                           */
-/* ===================================================================== */
-
-@media (min-width: 440px) {
-
-}
-
-/* ===================================================================== */
-/* ============================ 480px = M ============================== */
-/* —                                                                     */
-/* ===================================================================== */
-
-@media (min-width: 480px) {
-
-}
-
-/* ===================================================================== */
-/* =========================== 768px = TAB ============================= */
-/* iPad Mini (1024x768) | Galaxy Fold inner (1076x768)                   */
-/* ===================================================================== */
-
-@media (min-width: 768px) {
-
-}
-
-/* ===================================================================== */
-/* ========================== 800px = TAB+ ============================= */
-/* Galaxy Tab S7 (1280x800)                                              */
-/* ===================================================================== */
-
-@media (min-width: 800px) {
-
-}
-
-/* ===================================================================== */
-/* =========================== 1024px = L ============================== */
-/* iPad Pro 13 (1376x1032)                                               */
-/* ===================================================================== */
-
-@media (min-width: 1024px) {
-
-}
-
-/* ===================================================================== */
-/* =========================== 1366px = XL ============================= */
-/* Desktop / Laptop FHD                                                  */
-/* ===================================================================== */
-
-@media (min-width: 1366px) {
-
-}
-
-/* ===================================================================== */
-/* ========================== 1920px = 2XL ============================= */
-/* Full HD / 2K                                                          */
-/* ===================================================================== */
-
-@media (min-width: 1920px) {
-
-}
-
-/* ===================================================================== */
-/* =========================== 2560px = UW ============================= */
-/* Ultrawide (3440x1440) | 4K UHD (2160x3840)                            */
-/* ===================================================================== */
-
-@media (min-width: 2560px) {
-
-}
-
-/* ===================================================================== */
-/* ======================= LANDSCAPE PHONE ============================= */
-/* iPhone 17 PM / S24 Ultra در حالت افقی (ارتفاع کم)                     */
-/* ===================================================================== */
-
-@media (max-height: 500px) and (orientation: landscape) {
-
+    .tab-switch__btn::after {
+        transition: none;
+    }
 }

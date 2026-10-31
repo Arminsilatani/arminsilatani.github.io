@@ -1,0 +1,144 @@
+/* =========================================
+   LOTTIE ICONS — SITE-WIDE
+   رنگ‌ها از طریق CSS variables کنترل می‌شوند
+   ========================================= */
+
+.lottie-icon {
+  /* متغیرهای داخلی — از بیرون قابل override */
+  --_lottie-c: var(--lottie-color, #f5f5f5);
+  --_lottie-hover-c: var(--lottie-hover-color, var(--accent, #4ecdc4));
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transition: color 0.4s ease, transform 0.4s ease;
+  flex-shrink: 0;
+}
+
+.lottie-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+  transform: scale(1.05);
+}
+
+/* ✅ رنگ از variable — کاملاً قابل override */
+.lottie-icon svg path,
+.lottie-icon svg circle,
+.lottie-icon svg rect,
+.lottie-icon svg ellipse,
+.lottie-icon svg line,
+.lottie-icon svg polyline,
+.lottie-icon svg polygon {
+  fill: var(--_lottie-c) !important;
+  stroke: var(--_lottie-c) !important;
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+/* استثناها */
+.lottie-icon svg [fill="none"] { fill: none !important; }
+.lottie-icon svg [stroke="none"] { stroke: none !important; }
+
+/* =========================================
+   هاور — بدون چرخش
+   ========================================= */
+a:hover .lottie-icon svg path,
+a:hover .lottie-icon svg circle,
+a:hover .lottie-icon svg rect,
+a:hover .lottie-icon svg ellipse,
+a:hover .lottie-icon svg line,
+a:hover .lottie-icon svg polyline,
+a:hover .lottie-icon svg polygon,
+button:hover .lottie-icon svg path,
+button:hover .lottie-icon svg circle,
+button:hover .lottie-icon svg rect,
+button:hover .lottie-icon svg ellipse,
+button:hover .lottie-icon svg line,
+button:hover .lottie-icon svg polyline,
+button:hover .lottie-icon svg polygon,
+.editorial-item:hover .lottie-icon svg path,
+.editorial-item:hover .lottie-icon svg circle,
+.editorial-item:hover .lottie-icon svg rect,
+.editorial-item:hover .lottie-icon svg ellipse,
+.editorial-item:hover .lottie-icon svg line,
+.editorial-item:hover .lottie-icon svg polyline,
+.editorial-item:hover .lottie-icon svg polygon,
+.service-card:hover .lottie-icon svg path,
+.service-card:hover .lottie-icon svg circle,
+.service-card:hover .lottie-icon svg rect,
+.service-card:hover .lottie-icon svg ellipse,
+.service-card:hover .lottie-icon svg line,
+.service-card:hover .lottie-icon svg polyline,
+.service-card:hover .lottie-icon svg polygon,
+[data-lottie-trigger]:hover .lottie-icon svg path,
+[data-lottie-trigger]:hover .lottie-icon svg circle,
+[data-lottie-trigger]:hover .lottie-icon svg rect,
+[data-lottie-trigger]:hover .lottie-icon svg ellipse,
+[data-lottie-trigger]:hover .lottie-icon svg line,
+[data-lottie-trigger]:hover .lottie-icon svg polyline,
+[data-lottie-trigger]:hover .lottie-icon svg polygon {
+  fill: var(--_lottie-hover-c) !important;
+  stroke: var(--_lottie-hover-c) !important;
+}
+
+/* هاور: transform روی کانتینر (بدون چرخش) */
+a:hover .lottie-icon,
+button:hover .lottie-icon,
+.editorial-item:hover .lottie-icon,
+.service-card:hover .lottie-icon,
+[data-lottie-trigger]:hover .lottie-icon {
+  transform: scale(1.1);
+}
+
+/* استثناها در هاور */
+a:hover .lottie-icon svg [fill="none"],
+.editorial-item:hover .lottie-icon svg [fill="none"] { fill: none !important; }
+a:hover .lottie-icon svg [stroke="none"],
+.editorial-item:hover .lottie-icon svg [stroke="none"] { stroke: none !important; }
+
+/* ===== FAQ ===== */
+.faq-icon.lottie-icon {
+  width: 24px;
+  height: 24px;
+  --lottie-color: var(--text-muted, #888);
+  --lottie-hover-color: var(--accent, #4ecdc4);
+}
+
+.faq-item--open .faq-icon.lottie-icon {
+  --lottie-color: var(--accent, #4ecdc4);
+}
+
+/* ===== سایزها ===== */
+.lottie-icon--sm { width: 32px; height: 32px; }
+.lottie-icon--lg { width: 64px; height: 64px; }
+
+/* =========================================
+   SEO SERVICE ICONS — LOTTIE
+   ========================================= */
+
+/* رنگ Lottie: accent (هماهنگ با آیکون‌های فعلی) */
+.seo-service-icon {
+    --lottie-color: #4ecdc4;
+    --lottie-hover-color: #f5f5f5;
+}
+
+/* سایز Lottie داخل کارت‌ها */
+.seo-service-icon .lottie-icon {
+    width: 32px;
+    height: 32px;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.seo-service-card:hover .seo-service-icon .lottie-icon {
+    transform: scale(1.1);
+}
+
+/* کارت wide (سئو شرکتی) — کمی بزرگ‌تر */
+.seo-service-card-wide .seo-service-icon .lottie-icon {
+    width: 40px;
+    height: 40px;
+}

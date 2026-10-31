@@ -1,0 +1,76 @@
+/* =========================================
+   INITIAL FULL-PAGE LOADER
+   ========================================= */
+:root {
+  --bg: #0d0d0d;                /* dark background for overlay transparency */
+  --accent: #4ecdc4;            /* primary accent — dot color and glow (تغییر یافته به رنگ سایت شما) */
+  --loader-dot-size: 8px;       /* width and height of each dot */
+  --loader-anim-speed: 1.5s;    /* base animation duration */
+}
+
+/* Full-page semi-transparent overlay */
+.fullpage-loader {
+  position: fixed;
+  inset: 0;
+  background: #0d0d0d; /* پس‌زمینه کاملاً تیره و یکدست */
+  /* backdrop-filter: blur(4px); <- این خط رو حذف کن چون با پس‌زمینه یکدست نیازی نیست و ممکنه پرفورمنس رو پایین بیاره */
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 3×3 grid container */
+.lds-grid {
+  display: grid;
+  grid-template-columns: repeat(3, var(--loader-dot-size));
+  grid-gap: calc(var(--loader-dot-size) * 0.625);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Individual neon dot */
+.lds-grid div {
+  width: var(--loader-dot-size);
+  height: var(--loader-dot-size);
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 calc(var(--loader-dot-size) * 0.5) var(--accent);
+  animation: neonBlink var(--loader-anim-speed) infinite ease-in-out;
+}
+
+/* Wave pattern: staggered delay and duration per dot */
+.lds-grid div:nth-child(1) { animation-delay: 0.0s;                                animation-duration: calc(var(--loader-anim-speed) * 0.80); }
+.lds-grid div:nth-child(2) { animation-delay: calc(var(--loader-anim-speed) * 0.20); animation-duration: calc(var(--loader-anim-speed) * 0.93); }
+.lds-grid div:nth-child(3) { animation-delay: calc(var(--loader-anim-speed) * 0.47); animation-duration: calc(var(--loader-anim-speed) * 0.73); }
+.lds-grid div:nth-child(4) { animation-delay: calc(var(--loader-anim-speed) * 0.07); animation-duration: calc(var(--loader-anim-speed) * 0.87); }
+.lds-grid div:nth-child(5) { animation-delay: calc(var(--loader-anim-speed) * 0.33); animation-duration: calc(var(--loader-anim-speed) * 1.07); }
+.lds-grid div:nth-child(6) { animation-delay: calc(var(--loader-anim-speed) * 0.13); animation-duration: calc(var(--loader-anim-speed) * 0.80); }
+.lds-grid div:nth-child(7) { animation-delay: calc(var(--loader-anim-speed) * 0.53); animation-duration: calc(var(--loader-anim-speed) * 1.00); }
+.lds-grid div:nth-child(8) { animation-delay: calc(var(--loader-anim-speed) * 0.27); animation-duration: calc(var(--loader-anim-speed) * 0.87); }
+.lds-grid div:nth-child(9) { animation-delay: calc(var(--loader-anim-speed) * 0.40); animation-duration: calc(var(--loader-anim-speed) * 0.73); }
+
+/* Corner dots are slightly dimmer for an organic look */
+.lds-grid div:nth-child(1),
+.lds-grid div:nth-child(3),
+.lds-grid div:nth-child(7),
+.lds-grid div:nth-child(9) {
+  opacity: 0.35;
+}
+
+/* Neon blink keyframes */
+@keyframes neonBlink {
+  0%, 100% {
+    opacity: 0.2;
+    box-shadow: 0 0 calc(var(--loader-dot-size) * 0.25) var(--accent);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 calc(var(--loader-dot-size) * 0.75) var(--accent);
+  }
+}
+
+/* Utility class to hide the loader */
+.hidden {
+  display: none !important;
+}

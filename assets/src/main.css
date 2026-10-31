@@ -7,8 +7,6 @@
 @import url("components/hero.css");
 @import url("components/section-divider.css");
 /*
-@import url("components/quote.css");
-*/
 
 /* :::::::::::::::::::::::::: CORE :::::::::::::::::::::::::: */
 @import url("core/animations.css");
@@ -20,6 +18,9 @@
 @import url("core/images.css");
 @import url("core/links.css");
 @import url("core/typography.css");
+@import url("core/cursor.css");
+@import url("core/loader.css");
+@import url("core/lottie-icons.css");
 
 
 /* :::::::::::::::::::::::::: STYLES :::::::::::::::::::::::::: */
@@ -31,10 +32,4 @@
 @import url("styles/sitemap.css");
 @import url("styles/portfolio.css");
 @import url("styles/portfolio-graphic.css");
-@import url("styles/seo.css");
-/*
-@import url("styles/logodesign.css");
-@import url("styles/letterheaddesign.css");
-@import url("styles/cataloguedesign.css");
-@import url("styles/contractpagedesign.css");
-*/
+@import url("styles/services-landings.css");

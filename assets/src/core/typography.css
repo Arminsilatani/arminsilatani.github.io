@@ -6,15 +6,17 @@
 /* ======================== TABLE OF CONTENTS ========================== */
 /* ===================================================================== */
 /*
-  1. BASE TYPOGRAPHY (h1 - h6, p, h1 .h1_sub)
-  2. SPLIT TEXT / GSAP PROTECTION
-  3. RESPONSIVE TYPOGRAPHY (Global)
-  4. STORY / ABOUT PAGE
-  5. HERO SECTION (Light Home)
-  6. TESTIMONIALS
-  7. PORTFOLIO PAGE
-  8. PORTFOLIO ROW (Global)
-  9. UTILITIES
+  1.  BASE TYPOGRAPHY (h1 - h6, p, h1 .h1_sub)
+  2.  SPLIT TEXT / GSAP PROTECTION
+  3.  RESPONSIVE TYPOGRAPHY (Global)
+  4.  STORY / ABOUT PAGE
+  5.  HERO SECTION (Light Home)
+  6.  TESTIMONIALS
+  7.  PORTFOLIO PAGE
+  8.  PORTFOLIO ROW (Global)
+  9.  MEDIA CAPTION (Hover / Overlay Text)
+  10. SECTION EYEBROW (Global Label)
+  11. SEO PAGE SECTION HEADERS
 */
 
 
@@ -23,14 +25,10 @@
 /* ===================================================================== */
 
 :root {
-    /* ---- توکن‌های رنگ متن و سایه‌ی معکوس (سراسری) ---- */
     --text-light: #f5f5f5;
     --text-dark: #0d0d0d;
 
-    /* سایه‌ی متنی که روی پس‌زمینه‌ی روشن استفاده می‌شه (متن تیره) */
     --shadow-on-dark-text: 0 2px 12px rgba(245, 245, 245, 0.6);
-
-    /* سایه‌ی متنی که روی پس‌زمینه‌ی تیره استفاده می‌شه (متن روشن) */
     --shadow-on-light-text: 0 2px 12px rgba(13, 13, 13, 0.7);
 }
 
@@ -48,7 +46,6 @@ h1 {
     text-shadow: var(--shadow-on-dark-text);
 }
 
-/* تگ‌لاین زیر h1 — تنها کلاس مجاز داخل h1 */
 h1 .h1_sub {
     display: block;
     font-size: 0.30em;
@@ -57,7 +54,6 @@ h1 .h1_sub {
     letter-spacing: 0.005em;
     color: inherit;
     margin-top: 0.5em;
-    /* text-shadow خودکار از h1 ارث می‌بره */
 }
 
 h2 {
@@ -95,7 +91,7 @@ p {
     letter-spacing: inherit;
     color: inherit;
     -webkit-text-fill-color: inherit;
-    text-shadow: inherit;   /* ← صریحاً از والد */
+    text-shadow: inherit;
     background: none;
     text-align: inherit;
     will-change: transform, opacity;
@@ -109,7 +105,6 @@ p {
 .split-title .space { width: 0.32em; }
 .split-text .space  { width: 0.28em; }
 
-/* حفظ بلوک بودن h1های split‌شده تا کلمات عمودی روی هم نریزن */
 .js h1.split-title,
 h1.split-title {
     display: block;
@@ -231,7 +226,6 @@ h1.split-title {
     text-shadow: var(--shadow-on-dark-text);
 }
 
-/* ---- موبایل (≤768px): تیتر روشن روی پس‌زمینه تیره ---- */
 @media (max-width: 768px) {
     .hero-section h1,
     .hero-section h1 .h1_sub {
@@ -241,7 +235,6 @@ h1.split-title {
     }
 }
 
-/* ---- تبلت‌های portrait (800–1100px): تیتر روشن روی پس‌زمینه تیره ---- */
 @media (min-width: 800px) and (max-width: 1100px) and (orientation: portrait) {
     .hero-section h1,
     .hero-section h1 .h1_sub,
@@ -271,14 +264,6 @@ h1.split-title {
 /* ===================================================================== */
 /* ======================== 7. PORTFOLIO PAGE ========================== */
 /* ===================================================================== */
-
-.eyebrow {
-    color: #4ecdc4;
-    font-size: 12px;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.16em;
-}
 
 .section-title {
     font-size: clamp(32px, 5vw, 58px);
@@ -431,12 +416,6 @@ h1.split-title {
 /* ============ 9. MEDIA CAPTION (Hover / Overlay Text) ================ */
 /* ===================================================================== */
 
-/*
-  برای هر متنی که روی تصویر/ویدیو (اورلی یا هاور) نمایش داده می‌شود.
-  - رنگ اصلی از توکن --text-light گرفته می‌شود.
-  - پاراگراف دوم (مثل سال) به‌صورت خودکار کم‌رنگ می‌شود.
-*/
-
 .media-caption {
     color: var(--text-light);
     font-size: 0.9rem;
@@ -453,9 +432,110 @@ h1.split-title {
     font-weight: inherit;
 }
 
-/* آیتم دوم (معمولاً سال یا متادیتا) کمی محوتر */
 .media-caption p:last-child:not(:first-child) {
     color: rgba(245, 245, 245, 0.7);
     font-size: 0.85rem;
     font-weight: 400;
+}
+
+
+/* ===================================================================== */
+/* ==================== 10. SECTION EYEBROW ============================ */
+/* ===================================================================== */
+
+.section-eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4ecdc4;
+    margin-bottom: 0;
+    opacity: 0.85;
+}
+
+
+/* ===================================================================== */
+/* ================== 11. SEO PAGE SECTION HEADERS ==================== */
+/* ===================================================================== */
+/* تایپوگرافی سرتیتر و متن سکشن‌های صفحه سئو                              */
+
+.seo-section-header {
+    max-width: 48rem;
+    margin: 0 auto 3.5rem;
+}
+
+.seo-section-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 1.5;
+    color: #FFF;
+    margin-top: 1.25rem;
+    letter-spacing: -.01em;
+}
+
+.seo-section-sub {
+    margin-top: 1.25rem;
+    color: rgba(255, 255, 255, .6);
+    font-size: .9375rem;
+    line-height: 2.1;
+}
+
+/* ---------- Portfolio & Pricing — وسط‌چین ---------- */
+.seo-page #seo-portfolio .seo-section-header,
+.seo-page #seo-pricing .seo-section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seo-page #seo-portfolio .seo-section-header .section-eyebrow,
+.seo-page #seo-pricing .seo-section-header .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+}
+
+.seo-page #seo-portfolio .seo-section-header .seo-section-title,
+.seo-page #seo-pricing .seo-section-header .seo-section-title {
+    text-align: center;
+    text-align-last: center;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    float: none;
+    direction: rtl;
+}
+
+.seo-page #seo-portfolio .seo-section-header .seo-section-sub,
+.seo-page #seo-pricing .seo-section-header .seo-section-sub {
+    align-self: stretch;
+    width: 100%;
+    text-align: justify;
+    text-align-last: right;
+    -moz-text-align-last: right;
+    text-justify: inter-word;
+}
+
+/* ---------- LTR overrides ---------- */
+[dir="ltr"] .seo-page #seo-portfolio .seo-section-header .seo-section-title,
+[dir="ltr"] .seo-page #seo-pricing .seo-section-header .seo-section-title {
+    direction: ltr;
+}
+
+[dir="ltr"] .seo-page #seo-portfolio .seo-section-header .seo-section-sub,
+[dir="ltr"] .seo-page #seo-pricing .seo-section-header .seo-section-sub {
+    text-align-last: left;
+    -moz-text-align-last: left;
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 640px) {
+    .seo-section-title { font-size: 2.25rem; line-height: 1.4; }
+    .seo-section-sub   { font-size: 1rem; }
 }

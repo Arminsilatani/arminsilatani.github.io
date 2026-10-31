@@ -1,31 +1,28 @@
 <!DOCTYPE html>
 <html lang="tr" dir="ltr">
 
-<!-- :::::::::::::::::::::::::: HEAD :::::::::::::::::::::::::: -->
 <head>
 
-    <!-- :::::::::::::::::::::::::: META TAGS :::::::::::::::::::::::::: -->
+
+    <!-- :::::::::::::::::::::::::: HEAD & META :::::::::::::::::::::::::: -->
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- :::::::::::::::::::::::::: SEO META :::::::::::::::::::::::::: -->
     <title>SEO Hizmeti ve Size Uygun Paketler | Armin Silatani</title>
     <meta
         name="description"
         content="SEO Hizmeti seçeneklerini inceleyin; seo hizmeti fiyatları ve paket kapsamlarını karşılaştırarak işletmeniz için uygun hizmeti seçin."
     />
     <meta name="robots" content="noindex, nofollow" />
-
-    <!-- :::::::::::::::::::::::::: FAVICONS :::::::::::::::::::::::::: -->
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icon-32.png">
 
-    <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
-    <link rel="stylesheet" href="/assets/src/main.css" />
 
-    <!-- :::::::::::::::::::::::::: RESOURCE HINTS :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: STYLESHEETS & FONTS :::::::::::::::::::::::::: -->
+
+    <link rel="stylesheet" href="/assets/src/main.css" />
     <link
         rel="preload"
         href="/assets/fonts/KalamehWeb-Regular.woff2"
@@ -43,7 +40,9 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
-    <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
+
+    <!-- :::::::::::::::::::::::::: OPEN GRAPH & TWITTER CARDS :::::::::::::::::::::::::: -->
+
     <meta
         property="og:title"
         content="Bütçenize Uygun SEO Seçenekleri Armin Silatani"
@@ -66,8 +65,6 @@
         property="og:image:alt"
         content="Laptop başında çalışan SEO uzmanı, arka planda seo hizmeti stratejileri yazılı beyaz tahta |"
     />
-
-    <!-- :::::::::::::::::::::::::: TWITTER CARD :::::::::::::::::::::::::: -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
         name="twitter:title"
@@ -82,7 +79,9 @@
         content="https://arminsilatani.com/assets/images/arminsilatani/services/seo/FeaturedImage.webp"
     />
 
+
     <!-- :::::::::::::::::::::::::: CANONICAL & HREFLANG :::::::::::::::::::::::::: -->
+
     <link
         rel="canonical"
         href="https://arminsilatani.com/tr/services/seo/"
@@ -123,45 +122,57 @@
         href="https://arminsilatani.com/en/services/seo/"
     />
 
-    <!-- :::::::::::::::::::::::::: SCHEMA :::::::::::::::::::::::::: -->
+
+    <!-- :::::::::::::::::::::::::: JSON-LD SCHEMA :::::::::::::::::::::::::: -->
+
+    <script type="application/ld+json">
+
+    </script>
 
 
-    <!-- :::::::::::::::::::::::::: GSAP LIBRARIES :::::::::::::::::::::::::: -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: -->
+
+<script src="/assets/src/core/gsap.min.js" defer></script>
+<script src="/assets/src/core/ScrollTrigger.min.js" defer></script>
+<script src="/assets/src/core/lottie_light.min.js" defer></script>
 </head>
 
-<!-- :::::::::::::::::::::::::: BODY :::::::::::::::::::::::::: -->
 <body>
+  <div id="initial-loader" class="fullpage-loader">
+    <div class="lds-grid">
+      <div></div><div></div><div></div>
+      <div></div><div></div><div></div>
+      <div></div><div></div><div></div>
+    </div>
+  </div>
+        <div class="cursor"></div>
+    <div class="cursor-follower"></div>
 
-    <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: HEADER & NAVIGATION :::::::::::::::::::::::::: -->
+
     <header-component></header-component>
 
+
     <!-- :::::::::::::::::::::::::: MAIN CONTENT :::::::::::::::::::::::::: -->
+
     <main class="has-footer-gap">
 
-        <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
-        <section class="hero-section">
-                <video
-        class="hero-section__video"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="metadata"
-    >
-        <source src="/assets/images/arminsilatani/services/seo/hero.mp4" type="video/mp4">
-    </video>
 
-    <div class="hero-section__noise" aria-hidden="true"></div>
-    <div class="hero-section__scanlines" aria-hidden="true"></div>
-    <div class="hero-section__glitch" aria-hidden="true"></div>
+        <!-- :::::::::::::::::::::::::: HERO :::::::::::::::::::::::::: -->
+
+        <section class="hero-section">
+            <video class="hero-section__video" autoplay muted loop playsinline preload="metadata">
+                <source src="/assets/images/arminsilatani/services/seo/hero.mp4" type="video/mp4">
+            </video>
+            <div class="hero-section__noise" aria-hidden="true"></div>
+            <div class="hero-section__scanlines" aria-hidden="true"></div>
+            <div class="hero-section__glitch" aria-hidden="true"></div>
             <div class="hero-container container-1300">
                 <language-component></language-component>
                 <div class="hero-title">
                     <h1>
-                        <span class="hero-title__main">Web Siteniz için SEO Hizmeti — Strateji, Teknik ve İçerik</span>
-                        <span class="hero-title__sub">Profesyonel SEO hizmetleri ile siteniz için organik büyüme</span>
+                        <span class="split-title">SEO Hizmeti</span>
+                        <span class="h1_sub reveal-up">Temel SEO çalışmalarından AI SEO hizmetlerine kapsamlı çözümler</span>
                     </h1>
                 </div>
             </div>
@@ -178,15 +189,17 @@
             <terminal-breadcrumb></terminal-breadcrumb>
         </section>
 
-        <!-- :::::::::::::::::::::::::: SEO PAGE CONTENT :::::::::::::::::::::::::: -->
+
         <div class="seo-page">
 
+
             <!-- :::::::::::::::::::::::::: SEO HERO :::::::::::::::::::::::::: -->
+
             <section id="seo-hero" class="seo-hero">
                 <div class="seo-container seo-hero-container">
                     <div class="seo-hero-grid">
                         <div class="seo-hero-copy">
-                            <div class="seo-hero-desc seo-reveal">
+                            <div class="seo-hero-desc seo-reveal reveal-up">
                                 <p>
                                     SEO hizmeti; teknik, yapısal ve içerik odaklı çalışmaları kapsayan, bir sitenin organik görünürlüğünü zaman içinde artıran ölçülebilir bir süreçtir. Sonuçlar, sitenin mevcut durumuna, sektördeki rekabete ve çalışmanın devamlılığına bağlıdır. 8 yılı aşkın deneyim, 34'ten fazla tamamlanan proje ve %94 müşteri memnuniyeti oranıyla profesyonellere ve işletmelere kalıcı bir çevrimiçi varlık kurmalarında destek oluyorum.
                                 </p>
@@ -194,9 +207,8 @@
                                     SEO hızlı bir çözüm değildir; teknik altyapı, site yapısı, içerik kalitesi ve alan adı otoritesi gibi birden fazla katmanda sürdürülen ölçülebilir bir süreçtir. Her proje kendine özgü koşullarla gelir: hangi müdahalelerin uygulanacağı, işletmenin hedeflerine ve sitenin başlangıç durumuna göre şekillenir.
                                 </p>
                             </div>
-
                             <div class="seo-metric-badges seo-reveal">
-                                <div class="seo-glass seo-metric-badge">
+                                <div class="seo-glass seo-metric-badge reveal-up">
                                     <span class="seo-metric-icon">
                                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                             <path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 16.8 6.5 19.5l1-6.3L3 8.9 9 8z" />
@@ -207,7 +219,7 @@
                                         <div class="seo-metric-label">Uzman Deneyim</div>
                                     </div>
                                 </div>
-                                <div class="seo-glass seo-metric-badge">
+                                <div class="seo-glass seo-metric-badge reveal-up">
                                     <span class="seo-metric-icon">
                                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                             <path d="M20 6L9 17l-5-5" />
@@ -218,7 +230,7 @@
                                         <div class="seo-metric-label">Tamamlandı</div>
                                     </div>
                                 </div>
-                                <div class="seo-glass seo-metric-badge">
+                                <div class="seo-glass seo-metric-badge reveal-up">
                                     <span class="seo-metric-icon">
                                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                             <path d="M3 3v18h18" />
@@ -231,13 +243,12 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="seo-hero-cta seo-reveal">
+                            <div class="seo-hero-cta seo-reveal reveal-up">
                                 <a href="#seo-pricing" class="btn-dark seo-btn-accent">Fiyatları Görüntüle</a>
                                 <a href="#seo-audit" class="btn-dark">Ücretsiz Site Analizi</a>
                             </div>
                         </div>
-                        <div class="seo-hero-visual seo-reveal">
+                        <div class="seo-hero-visual seo-reveal reveal-up">
                             <div class="seo-hero-visual-inner">
                                 <div class="seo-glass seo-live-card">
                                     <div class="seo-live-card-head">
@@ -247,7 +258,6 @@
                                         </div>
                                         <span class="seo-live-badge">Canlı</span>
                                     </div>
-
                                     <div class="seo-gsc-metrics">
                                         <div class="seo-gsc-metric">
                                             <div class="seo-gsc-metric-label">Gösterim</div>
@@ -270,7 +280,6 @@
                                             <div class="seo-gsc-metric-change is-up">↓ 0.8</div>
                                         </div>
                                     </div>
-
                                     <div class="seo-gsc-chart">
                                         <svg viewBox="0 0 300 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
                                             <defs>
@@ -284,9 +293,8 @@
                                         </svg>
                                     </div>
                                 </div>
-
                                 <div class="seo-hero-badge-wrap">
-                                    <span class="seo-eyebrow" data-seo-capacity data-state="loading">
+                                    <span class="availability-status" data-seo-capacity data-state="loading">
                                         <span class="seo-pulse-dot">
                                             <span class="seo-pulse-ring"></span>
                                             <span class="seo-pulse-core"></span>
@@ -300,7 +308,9 @@
                 </div>
             </section>
 
+
             <!-- :::::::::::::::::::::::::: CONSULTATION BANNER :::::::::::::::::::::::::: -->
+
             <section id="seo-consult" class="seo-section seo-section-tight">
                 <div class="seo-container">
                     <div class="seo-banner seo-reveal is-visible">
@@ -316,35 +326,35 @@
                             <span class="seo-bubble seo-bubble-9"></span>
                             <span class="seo-bubble seo-bubble-10"></span>
                         </div>
-
                         <div class="seo-glass-layer" aria-hidden="true"></div>
-
                         <div class="seo-banner-content">
-                            <h2 class="seo-banner-title">Sitenizin büyümesine nereden başlayalım?</h2>
-                            <p class="seo-banner-desc">
+                            <h2 class="seo-banner-title split-title">Sitenizin büyümesine nereden başlayalım?</h2>
+                            <p class="seo-banner-desc reveal-up">
                                 Öncelikle sitenizin mevcut durumu, iş hedefleriniz ve müşteri kazanmada yaşadığınız zorluklar hakkında konuşuyoruz. İhtiyaçlarınız hakkında daha net bir tabloya sahip olduğumda, fırsatları, iş birliği kapsamını ve bir sonraki adımı birlikte değerlendirebiliriz. Koordinasyon için benimle iletişime geçin veya site inceleme talep formunu gönderin.
                             </p>
-                            <a href="/tr/contact/" class="btn-dark">
+                            <a href="tel:+989125759466" class="btn-dark">
                                 <span class="seo-ltr">İletişim</span>
                             </a>
-                            <p class="seo-banner-note">Doğrudan arama - sekretersiz ve beklemesiz</p>
+                            <p class="seo-banner-note reveal-up">Doğrudan arama - sekretersiz ve beklemesiz</p>
                         </div>
                     </div>
                 </div>
             </section>
 
+
             <!-- :::::::::::::::::::::::::: WHAT IS SEO :::::::::::::::::::::::::: -->
+
             <section id="seo-what" class="seo-section">
                 <div class="seo-container">
                     <div class="seo-split-grid">
                         <aside class="seo-split-aside">
                             <div class="seo-sticky">
-                                <span class="seo-eyebrow seo-reveal">SEO Sürecine Genel Bakış</span>
-                                <h2 class="seo-section-title seo-reveal">SEO Nedir ve Neleri Kapsar</h2>
-                                <p class="seo-section-sub seo-reveal">
+                                <span class="section-eyebrow seo-eyebrow seo-reveal reveal-up">SEO Sürecine Genel Bakış</span>
+                                <h2 class="seo-section-title seo-reveal split-title">SEO Nedir ve Neleri Kapsar</h2>
+                                <p class="seo-section-sub seo-reveal reveal-up">
                                     SEO; arama motorlarının site sayfalarını daha iyi bulup anlamasını ve kullanıcıların da ihtiyaç duydukları bilgilere, ürünlere veya hizmetlere daha kolay ulaşmasını sağlayan teknik, içeriksel ve yapısal faaliyetler bütünüdür.
                                 </p>
-                                <ul class="seo-bullet-list seo-reveal">
+                                <ul class="seo-bullet-list seo-reveal reveal-up">
                                     <li><span class="seo-dot"></span> Teknik altyapının iyileştirilmesi</li>
                                     <li><span class="seo-dot"></span> Anahtar kelime araştırması</li>
                                     <li><span class="seo-dot"></span> İçerik ve sayfa düzenlemeleri</li>
@@ -352,33 +362,31 @@
                                 </ul>
                             </div>
                         </aside>
-
                         <div class="seo-split-main">
                             <div class="seo-editorial">
-                                <p class="seo-editorial-lead seo-reveal">
+                                <p class="seo-editorial-lead seo-reveal reveal-up">
                                     İşin başında sitenin mevcut durumu, sayfa yapısı, içerik kalitesi, teknik sorunlar, hedef anahtar kelimeler ve pazar koşulları incelenir. Bu inceleme, hangi bölümlerin en çok düzeltmeye ihtiyaç duyduğunu ve proje kaynaklarının hangi eylemlere odaklanması gerektiğini belirlemeye yardımcı olur.
                                 </p>
-                                <p class="seo-reveal">
+                                <p class="seo-reveal reveal-up">
                                     SEO hizmetleri; teknik altyapının iyileştirilmesi, tarama ve dizine ekleme uygunluğunun incelenmesi, dahili bağlantıların düzeltilmesi, anahtar kelime araştırması, hizmet ve ürün sayfalarının optimize edilmesi, mevcut içeriğin gözden geçirilmesi ve içerik yol haritasının tasarlanmasını kapsayabilir. E-ticaret siteleri için kategori yapıları, ürün sayfaları, filtreler ve benzeri sayfalar da ayrıca önem taşır.
                                 </p>
-                                <p class="seo-reveal">
+                                <p class="seo-reveal reveal-up">
                                     Tüm siteler aynı plana ihtiyaç duymaz. Bir kurumsal site daha çok hizmet sayfalarının düzeltilmesine ve kullanıcı odaklı içerik üretimine ihtiyaç duyabilirken, bir online mağazada ürün ve kategori yapısının düzenlenmesi öncelikli olabilir. SEO planı, sabit bir hizmet listesine göre değil, sitenin temel sorununa ve iş hedeflerine göre şekillenir.
                                 </p>
-                                <p class="seo-reveal">
+                                <p class="seo-reveal reveal-up">
                                     İş birliği süresince sitenin performansı ve yapılan çalışmaların sonuçları incelenir. İlgili gösterim ve tıklamalardaki artış, hedef sayfaların konumu, trafik kalitesi ve önemli sayfaların performansı, ilerleme hakkında daha net bir tablo sunar. SEO kademeli bir süreçtir ve sonucu sitenin durumuna, rekabet düzeyine, uygulama kalitesine ve çalışmanın sürekliliğine bağlıdır; bu nedenle projeyi incelemeden belirli bir sıralama veya sonuç garanti edilemez.
                                 </p>
                             </div>
-
                             <div class="seo-mini-stats seo-reveal">
-                                <div class="seo-glass seo-mini-stat">
+                                <div class="seo-glass seo-mini-stat reveal-up">
                                     <div class="seo-mini-stat-value">0.68s</div>
                                     <p class="seo-mini-stat-desc">Optimize ettiğimiz sitelerin ortalama yüklenme hızı</p>
                                 </div>
-                                <div class="seo-glass seo-mini-stat">
+                                <div class="seo-glass seo-mini-stat reveal-up">
                                     <div class="seo-mini-stat-value">75%</div>
                                     <p class="seo-mini-stat-desc">Kullanıcılar Google'ın ikinci sayfasına asla gitmez</p>
                                 </div>
-                                <div class="seo-glass seo-mini-stat">
+                                <div class="seo-glass seo-mini-stat reveal-up">
                                     <div class="seo-mini-stat-value">24/7</div>
                                     <p class="seo-mini-stat-desc">Uyurken bile kesintisiz organik trafik</p>
                                 </div>
@@ -388,58 +396,55 @@
                 </div>
             </section>
 
+
             <!-- :::::::::::::::::::::::::: PORTFOLIO :::::::::::::::::::::::::: -->
+
             <section id="seo-portfolio" class="seo-section seo-portfolio">
                 <div class="seo-portfolio-bg" aria-hidden="true">
                     <partners-component hide-center rows="10"></partners-component>
                 </div>
-
                 <div class="seo-container seo-relative">
                     <div class="seo-section-header">
-                        <span class="seo-eyebrow seo-reveal">Gerçek Sonuçlar</span>
-                        <h2 class="seo-section-title seo-reveal">SEO Referans Projeleri</h2>
-                        <p class="seo-section-sub seo-reveal">
+                        <span class="section-eyebrow seo-eyebrow seo-reveal reveal-up">Gerçek Sonuçlar</span>
+                        <h2 class="seo-section-title seo-reveal split-title">SEO Referans Projeleri</h2>
+                        <p class="seo-section-sub seo-reveal reveal-up">
                             Her projede önce sitenin temel sorununun ne olduğu ve işletme sahibinin hangi sonucu istediği netleşmelidir. Ardından sayfa yapısının düzeltilmesi, tarama ve dizine eklemenin iyileştirilmesi, anahtar kelime araştırması, içeriğin gözden geçirilmesi veya hizmet ve ürün sayfalarının optimize edilmesi gibi öncelikler hakkında karar verilebilir ve çalışmanın etkisi zaman içinde ölçülebilir.
                         </p>
-                        <p class="seo-section-sub seo-reveal">
+                        <p class="seo-section-sub seo-reveal reveal-up">
                             Tüm projelerin detayları yayınlanamaz; bazı işletmelerin bilgileri gizlidir. Yalnızca bilgilerini paylaşmama izin verilen ya da isimsiz olarak ve referans verilebilir verilerle açıklayabildiğim örnekleri yayınlıyorum. Referans sayfasında her örneğin başlangıç sorunu, yapılan çalışmalar, zaman aralığı ve ölçülebilir sonucunu sunuyorum.
                         </p>
                     </div>
-
                     <div class="seo-reveal">
-                        <a href="/portfolio/#seo-projects" class="btn-dark btn-glass">
+                        <a href="/portfolio/#seo-projects" class="btn-dark btn-glass" target="_blank">
                             Tüm Projeleri Görüntüle
                         </a>
                     </div>
                 </div>
             </section>
 
-            <!-- :::::::::::::::::::::::::: PRICING + CALCULATOR :::::::::::::::::::::::::: -->
+
+            <!-- :::::::::::::::::::::::::: PRICING & CALCULATOR :::::::::::::::::::::::::: -->
+
             <section id="seo-pricing" class="seo-section">
                 <div class="seo-container">
                     <div class="seo-section-header">
-                        <span class="seo-eyebrow seo-reveal">Ne kadar ödemelisiniz ve ne beklemelisiniz?</span>
-                        <h2 class="seo-section-title seo-reveal">SEO Hizmeti Paketleri ve Fiyatları</h2>
-                        <p class="seo-section-sub seo-reveal">
+                        <span class="section-eyebrow seo-eyebrow seo-reveal reveal-up">Ne kadar ödemelisiniz ve ne beklemelisiniz?</span>
+                        <h2 class="seo-section-title seo-reveal split-title">SEO Hizmeti Paketleri ve Fiyatları</h2>
+                        <p class="seo-section-sub seo-reveal reveal-up">
                             Sitenize en uygun planı keşfedin. Belirtilen fiyatlar başlangıç tahminleridir. Kesin teklif, site analizi yapıldıktan sonra iletilir.
                         </p>
-                        <p class="seo-section-sub seo-reveal">
+                        <p class="seo-section-sub seo-reveal reveal-up">
                             Fiyatı belirlemek için sitenin kendisini görmek gerekir. Boyutu ve yapısı, sektördeki rekabet, teknik sorunlar, sayfa sayısı, mevcut içerik, iş hedefleri ve gereken çalışma miktarı fiyatı etkiler.
                         </p>
-                        <p class="seo-section-sub seo-reveal">
+                        <p class="seo-section-sub seo-reveal reveal-up">
                             Hizmetler standart ve gelişmiş olmak üzere iki seviyede sunulur ve her seviyenin temel, profesyonel ve premium paketleri vardır. Ancak siteyi incelemeden paket seçmek, maliyeti projenin önceliği olmayan bir yöne kaydırabilir. Nihai öneriyi ihtiyaçları ve sitenin durumunu anladıktan sonra sunuyorum. Tutar, sözleşme süresi, pakete dahil hizmetler ve paket dışı çalışmalar baştan net olmalıdır. İçerik üretimi, basın bülteni, ek teknik çalışmalar ve kapsamlı raporlama da projenin ihtiyaç duyması halinde ayrıca değerlendirilir. Maliyet tahmini için site inceleme talebini gönderin, gerekli çalışmaları konuşalım.
                         </p>
                     </div>
-
-                    <!-- :::::::::::::::::::::::::: PRICING TABS :::::::::::::::::::::::::: -->
-                    <div class="seo-pricing-tabs">
-                        <button type="button" class="seo-tab is-active" data-seo-tab="standard">Standart</button>
-                        <button type="button" class="seo-tab" data-seo-tab="advanced">Gelişmiş</button>
+                    <div class="tab-switch">
+                        <button type="button" class="tab-switch__btn is-active" data-tab="standard">Standart</button>
+                        <button type="button" class="tab-switch__btn" data-tab="advanced">Gelişmiş</button>
                     </div>
-
-                    <!-- :::::::::::::::::::::::::: STANDARD PANEL :::::::::::::::::::::::::: -->
-                    <div class="seo-pricing-grid categories-grid" data-seo-panel="standard">
-
+                    <div class="seo-pricing-grid categories-grid" data-tab-panel="standard">
                         <article class="seo-glass seo-pricing-card seo-reveal reveal-card">
                             <h3 class="seo-pricing-name">Temel Paket</h3>
                             <p class="seo-pricing-sub">Kişisel siteler ve ilk aşamadaki işletmeler için uygundur</p>
@@ -459,7 +464,6 @@
                             </ul>
                             <a href="#seo-calc" class="btn-dark" data-seo-select-pkg="BASIC">Temel Paketi Seç</a>
                         </article>
-
                         <article class="seo-glass seo-pricing-card seo-pricing-card-featured seo-reveal reveal-card">
                             <div class="seo-badge-featured">En çok tercih edilen</div>
                             <h3 class="seo-pricing-name seo-text-brand">Profesyonel Paket</h3>
@@ -481,7 +485,6 @@
                             </ul>
                             <a href="#seo-calc" class="btn-dark" data-seo-select-pkg="PRO">Profesyonel Paketi Seç</a>
                         </article>
-
                         <article class="seo-glass seo-pricing-card seo-reveal reveal-card">
                             <h3 class="seo-pricing-name">Premium Paket</h3>
                             <p class="seo-pricing-sub">Kurumsal şirketler ve yüksek rekabetli pazarlar için uygundur</p>
@@ -502,12 +505,8 @@
                             </ul>
                             <a href="#seo-calc" class="btn-dark" data-seo-select-pkg="ENTERPRISE">Premium Paketi Seç</a>
                         </article>
-
                     </div>
-
-                    <!-- :::::::::::::::::::::::::: ADVANCED PANEL :::::::::::::::::::::::::: -->
-                    <div class="seo-pricing-grid categories-grid" data-seo-panel="advanced" hidden>
-
+                    <div class="seo-pricing-grid categories-grid" data-tab-panel="advanced" hidden>
                         <article class="seo-glass seo-pricing-card seo-reveal reveal-card">
                             <h3 class="seo-pricing-name">Temel Advanced Paket</h3>
                             <p class="seo-pricing-sub">Önceki SEO deneyimine sahip işletmeler için uygundur</p>
@@ -528,7 +527,6 @@
                             </ul>
                             <a href="#seo-calc" class="btn-dark" data-seo-select-pkg="ADV_BASIC">Temel Advanced Paketi Seç</a>
                         </article>
-
                         <article class="seo-glass seo-pricing-card seo-pricing-card-featured seo-reveal reveal-card">
                             <div class="seo-badge-featured">En çok tercih edilen</div>
                             <h3 class="seo-pricing-name seo-text-brand">Profesyonel Advanced Paket</h3>
@@ -550,7 +548,6 @@
                             </ul>
                             <a href="#seo-calc" class="btn-dark" data-seo-select-pkg="ADV_PRO">Profesyonel Advanced Paketi Seç</a>
                         </article>
-
                         <article class="seo-glass seo-pricing-card seo-reveal reveal-card">
                             <h3 class="seo-pricing-name">Premium Advanced Paket</h3>
                             <p class="seo-pricing-sub">Ulusal markalar ve büyük çevrimiçi mağazalar için uygundur</p>
@@ -571,14 +568,9 @@
                             </ul>
                             <a href="#seo-calc" class="btn-dark" data-seo-select-pkg="ADV_ENTERPRISE">Premium Advanced Paketi Seç</a>
                         </article>
-
                     </div>
-
-                    <!-- :::::::::::::::::::::::::: CALCULATOR :::::::::::::::::::::::::: -->
-                    <div class="seo-calculator seo-glass seo-reveal" id="seo-calc">
+                    <div class="seo-calculator seo-glass seo-reveal reveal-up" id="seo-calc">
                         <div class="seo-calc-grid">
-
-                            <!-- :::::::::::::::::::::::::: CALCULATOR CONTROLS :::::::::::::::::::::::::: -->
                             <div class="seo-calc-controls">
                                 <div class="seo-calc-head">
                                     <span class="seo-calc-head-icon">
@@ -592,7 +584,6 @@
                                         <p class="seo-calc-head-sub">İstediğiniz paketi ve eklentileri seçin</p>
                                     </div>
                                 </div>
-
                                 <div class="seo-calc-package">
                                     <div>
                                         <div class="seo-calc-package-label">Seçilen paket</div>
@@ -600,11 +591,8 @@
                                     </div>
                                     <div class="seo-calc-package-price" data-seo-calc-pkg-price>—</div>
                                 </div>
-
                                 <div class="seo-calc-addons" data-seo-addons></div>
                             </div>
-
-                            <!-- :::::::::::::::::::::::::: CALCULATOR RESULT :::::::::::::::::::::::::: -->
                             <div class="seo-calc-result">
                                 <div>
                                     <div class="seo-calc-result-label">Tahmini aylık toplam</div>
@@ -615,7 +603,6 @@
                                     <div class="seo-divider"></div>
                                     <ul class="seo-summary-list">
                                         <span data-seo-sum-addon-rows></span>
-
                                         <li class="seo-summary-total">
                                             <span>Toplam eklenti</span>
                                             <span data-seo-sum-addons class="seo-summary-value">—</span>
@@ -627,94 +614,64 @@
                                     <p class="seo-calc-note">Bu tutar başlangıç tahminidir; kesin fiyat site analizi sonrasında belirlenir.</p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </section>
 
+            <section-divider></section-divider>
+
+
             <!-- :::::::::::::::::::::::::: AUDIT FORM :::::::::::::::::::::::::: -->
+
             <section id="seo-audit" class="seo-section">
                 <div class="seo-container">
                     <div class="seo-audit-grid">
                         <div class="seo-audit-info">
-                            <span class="seo-eyebrow seo-reveal">Sitenizin mevcut durumunun değerlendirilmesi</span>
-                            <h2 class="seo-section-title seo-reveal">Site Analiz Talebi</h2>
-                            <p class="seo-section-sub seo-text-right seo-reveal">
+                            <span class="section-eyebrow seo-eyebrow seo-reveal reveal-up">Sitenizin mevcut durumunun değerlendirilmesi</span>
+                            <h2 class="seo-section-title seo-reveal split-title">Site Analiz Talebi</h2>
+                            <p class="seo-section-sub seo-text-right seo-reveal reveal-up">
                                 Formu aldıktan sonra siteniz ve hedefleriniz hakkındaki temel bilgileri inceliyorum; koordinasyon ya da bir sonraki adımı belirlemek için sizinle iletişime geçiyorum. Bu değerlendirme, önemli engelleri ve hedef anahtar kelimelerle ilgili fırsatları tespit etmeye, izlenecek yönü seçmeye yardımcı olabilir. Kapsamlı bir site denetiminin yerini tutmaz ve herhangi bir sonuç garantisi içermez.
                             </p>
-                            <p class="seo-section-sub seo-text-right seo-reveal">
+                            <p class="seo-section-sub seo-text-right seo-reveal reveal-up">
                                 Formda site adresini, hedef anahtar kelimelerinizi veya hizmetlerinizi, adınızı ve iletişim bilgilerinizi belirtin. İletişim bilgileri yalnızca talebinizi yanıtlamak amacıyla kullanılır. Bilgilerin nasıl kullanıldığına ilişkin gizlilik politikası sayfada ya da formun yanında yer alır.
                             </p>
-                            <ul class="seo-bullet-list seo-bullet-list-lg seo-reveal">
+                            <ul class="seo-bullet-list seo-bullet-list-lg seo-reveal reveal-up">
                                 <li><span class="seo-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" /></svg></span> 30 teknik faktörün kapsamlı analizi</li>
                                 <li><span class="seo-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" /></svg></span> Rakip analizi ve anahtar kelime boşluk analizi</li>
                                 <li><span class="seo-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" /></svg></span> Yol haritası ve şeffaf teklif</li>
                             </ul>
                         </div>
-
-                        <form data-seo-audit class="seo-glass seo-audit-form seo-reveal" novalidate>
+                        <form data-seo-audit class="seo-glass seo-audit-form seo-reveal reveal-up" novalidate>
                             <div class="seo-form-grid">
-
                                 <div class="seo-form-row seo-form-row-full">
                                     <div class="field-group">
                                         <span class="field-prefix">Web sitesi adresi:</span>
-                                        <input
-                                            id="seoSiteUrl"
-                                            name="siteUrl"
-                                            type="text"
-                                            dir="ltr"
-                                            class="seo-field seo-field-ltr"
-                                            required
-                                        />
+                                        <input id="seoSiteUrl" name="siteUrl" type="text" dir="ltr" class="seo-field seo-field-ltr" required />
                                     </div>
                                 </div>
-
                                 <div class="seo-form-row">
                                     <div class="field-group">
                                         <span class="field-prefix">Ad ve Soyad:</span>
-                                        <input
-                                            id="seoFullName"
-                                            name="fullName"
-                                            type="text"
-                                            class="seo-field"
-                                            required
-                                        />
+                                        <input id="seoFullName" name="fullName" type="text" class="seo-field" required />
                                     </div>
                                 </div>
-
                                 <div class="seo-form-row">
                                     <div class="field-group">
                                         <span class="field-prefix">Telefon numarası:</span>
-                                        <input
-                                            id="seoPhone"
-                                            name="phone"
-                                            type="tel"
-                                            dir="ltr"
-                                            class="seo-field seo-field-ltr"
-                                            required
-                                        />
+                                        <input id="seoPhone" name="phone" type="tel" dir="ltr" class="seo-field seo-field-ltr" required />
                                     </div>
                                 </div>
-
                                 <div class="seo-form-row seo-form-row-full">
                                     <div class="field-group">
                                         <span class="field-prefix">Hedef anahtar kelimeler:</span>
-                                        <textarea
-                                            id="seoKeywords"
-                                            name="keywords"
-                                            rows="4"
-                                            class="seo-field seo-field-textarea"
-                                        ></textarea>
+                                        <textarea id="seoKeywords" name="keywords" rows="4" class="seo-field seo-field-textarea"></textarea>
                                     </div>
                                 </div>
-
                             </div>
-
                             <button type="submit" class="btn-dark seo-btn-lg-gap">
                                 Talebi Gönder
                             </button>
-
                             <p data-seo-form-msg class="seo-form-msg seo-hidden"></p>
                             <p class="seo-form-note">Bilgileriniz gizlilik içinde işlenir.</p>
                         </form>
@@ -722,11 +679,12 @@
                 </div>
             </section>
 
+
             <!-- :::::::::::::::::::::::::: SECONDARY BANNER :::::::::::::::::::::::::: -->
+
             <section class="seo-section seo-section-tight">
                 <div class="seo-container">
                     <div class="seo-banner seo-reveal is-visible">
-
                         <div class="seo-bubbles" aria-hidden="true">
                             <span class="seo-bubble seo-bubble-1"></span>
                             <span class="seo-bubble seo-bubble-2"></span>
@@ -739,15 +697,13 @@
                             <span class="seo-bubble seo-bubble-9"></span>
                             <span class="seo-bubble seo-bubble-10"></span>
                         </div>
-
                         <div class="seo-glass-layer" aria-hidden="true"></div>
-
                         <div class="seo-banner-content">
-                            <h2 class="seo-banner-title">Sitenizin SEO'su Hakkında Konuşalım</h2>
-                            <p class="seo-banner-desc">
+                            <h2 class="seo-banner-title split-title">Sitenizin SEO'su Hakkında Konuşalım</h2>
+                            <p class="seo-banner-desc reveal-up">
                                 Sitenizin mevcut durumunu, hangi yönün daha uygun olduğunu ya da bir iş birliğinin hangi alanları kapsaması gerektiğini bilmiyorsanız benimle iletişime geçin. İlk görüşmede ihtiyaçlarınızı dinliyor, bir iş birliğinin mantıklı olup olmadığını ve atılacak bir sonraki somut adımı birlikte değerlendiriyoruz.
                             </p>
-                            <a href="/tr/contact/" class="btn-dark">
+                            <a href="tel:+989125759466" class="btn-dark">
                                 İletişim
                             </a>
                         </div>
@@ -755,20 +711,21 @@
                 </div>
             </section>
 
+
             <!-- :::::::::::::::::::::::::: FAQ :::::::::::::::::::::::::: -->
+
             <section id="seo-faq" class="seo-section">
                 <div class="seo-container seo-container-narrow">
                     <div class="seo-section-header">
-                        <span class="seo-eyebrow seo-reveal">İş birliğine başlamadan önce sorulan sorulara dürüst yanıtlar</span>
-                        <h2 class="seo-section-title seo-reveal">SEO Hizmetleri Hakkında Sıkça Sorulan Sorular</h2>
-                        <p class="seo-section-sub seo-reveal">Müşterilerin iş birliğine başlamadan önce en sık sorduğu sorulara dürüst yanıtlar.</p>
+                        <span class="section-eyebrow seo-eyebrow seo-reveal reveal-up">İş birliğine başlamadan önce sorulan sorulara dürüst yanıtlar</span>
+                        <h2 class="seo-section-title seo-reveal split-title">SEO Hizmetleri Hakkında Sıkça Sorulan Sorular</h2>
+                        <p class="seo-section-sub seo-reveal reveal-up">Müşterilerin iş birliğine başlamadan önce en sık sorduğu sorulara dürüst yanıtlar.</p>
                     </div>
-
                     <div class="faq-list">
                         <div class="faq-item faq-item--open reveal-up">
                             <button class="faq-question" aria-expanded="true">
                                 <span>SEO hizmetleri nedir ve hangi alanları kapsar?</span>
-                                <span class="faq-icon">+</span>
+                                <span class="faq-icon" data-lottie="/assets/lottie/plus-to-x.json" data-lottie-mode="faq"></span>
                             </button>
                             <div class="faq-answer-wrapper">
                                 <div class="faq-answer">
@@ -776,11 +733,10 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="faq-item reveal-up">
                             <button class="faq-question" aria-expanded="false">
                                 <span>SEO'da ilk ilerleme sinyallerini görmek ne kadar sürer?</span>
-                                <span class="faq-icon">+</span>
+                                <span class="faq-icon" data-lottie="/assets/lottie/plus-to-x.json" data-lottie-mode="faq"></span>
                             </button>
                             <div class="faq-answer-wrapper">
                                 <div class="faq-answer">
@@ -788,11 +744,10 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="faq-item reveal-up">
                             <button class="faq-question" aria-expanded="false">
                                 <span>SEO hizmeti fiyatları ve ücretleri nasıl belirlenir?</span>
-                                <span class="faq-icon">+</span>
+                                <span class="faq-icon" data-lottie="/assets/lottie/plus-to-x.json" data-lottie-mode="faq"></span>
                             </button>
                             <div class="faq-answer-wrapper">
                                 <div class="faq-answer">
@@ -800,11 +755,10 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="faq-item reveal-up">
                             <button class="faq-question" aria-expanded="false">
                                 <span>WordPress sitesi için SEO ile diğer siteler için SEO arasındaki farklar nelerdir?</span>
-                                <span class="faq-icon">+</span>
+                                <span class="faq-icon" data-lottie="/assets/lottie/plus-to-x.json" data-lottie-mode="faq"></span>
                             </button>
                             <div class="faq-answer-wrapper">
                                 <div class="faq-answer">
@@ -812,11 +766,10 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="faq-item reveal-up">
                             <button class="faq-question" aria-expanded="false">
                                 <span>E-ticaret sitesi için SEO ile kurumsal site için SEO arasındaki farklar nelerdir?</span>
-                                <span class="faq-icon">+</span>
+                                <span class="faq-icon" data-lottie="/assets/lottie/plus-to-x.json" data-lottie-mode="faq"></span>
                             </button>
                             <div class="faq-answer-wrapper">
                                 <div class="faq-answer">
@@ -824,11 +777,10 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="faq-item reveal-up">
                             <button class="faq-question" aria-expanded="false">
                                 <span>SEO çalışması yapmadan Google'da görünmek mümkün mü?</span>
-                                <span class="faq-icon">+</span>
+                                <span class="faq-icon" data-lottie="/assets/lottie/plus-to-x.json" data-lottie-mode="faq"></span>
                             </button>
                             <div class="faq-answer-wrapper">
                                 <div class="faq-answer">
@@ -836,11 +788,10 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="faq-item reveal-up">
                             <button class="faq-question" aria-expanded="false">
                                 <span>SEO çalışmasının kalitesini ve ilerlemeyi nasıl değerlendirebilirim?</span>
-                                <span class="faq-icon">+</span>
+                                <span class="faq-icon" data-lottie="/assets/lottie/plus-to-x.json" data-lottie-mode="faq"></span>
                             </button>
                             <div class="faq-answer-wrapper">
                                 <div class="faq-answer">
@@ -852,19 +803,22 @@
                 </div>
             </section>
 
+            <section-divider></section-divider>
+
+
             <!-- :::::::::::::::::::::::::: TESTIMONIALS :::::::::::::::::::::::::: -->
+
             <section id="seo-testimonials" class="seo-section testimonials-section">
                 <div class="seo-container">
                     <div class="seo-section-header">
-                        <span class="seo-eyebrow seo-reveal">Site sahiplerinin görüşleri</span>
-                        <h2 class="seo-section-title seo-reveal">Müşteri Yorumları</h2>
-                        <p class="seo-section-sub seo-reveal">
+                        <span class="section-eyebrow seo-eyebrow seo-reveal reveal-up">Site sahiplerinin görüşleri</span>
+                        <h2 class="seo-section-title seo-reveal split-title">Müşteri Yorumları</h2>
+                        <p class="seo-section-sub seo-reveal reveal-up">
                             Güveniniz en değerli varlığımızdır. Aşağıda, çevrimiçi büyüme yolculuklarına birlikte devam ettiğimiz
                             müşterilerin gerçek geri bildirimlerinden bir kısmını bulabilirsiniz.
                         </p>
                     </div>
-
-                    <div class="testimonials-container seo-reveal">
+                    <div class="testimonials-container seo-reveal reveal-up">
                         <div class="column">
                             <div class="testimonials" id="column1"></div>
                         </div>
@@ -878,99 +832,85 @@
                 </div>
             </section>
 
+            <section-divider></section-divider>
+
+
             <!-- :::::::::::::::::::::::::: SERVICES :::::::::::::::::::::::::: -->
+
             <section id="seo-services" class="seo-section">
                 <div class="seo-container">
                     <div class="seo-section-header">
-                        <span class="seo-eyebrow seo-reveal">Siteniz için hangi hizmetler gerekli?</span>
-                        <h2 class="seo-section-title seo-reveal">Siteniz için SEO Hizmeti Türleri</h2>
-                        <p class="seo-section-sub seo-reveal">
+                        <span class="section-eyebrow seo-eyebrow seo-reveal reveal-up">Siteniz için hangi hizmetler gerekli?</span>
+                        <h2 class="seo-section-title seo-reveal split-title">Siteniz için SEO Hizmeti Türleri</h2>
+                        <p class="seo-section-sub seo-reveal reveal-up">
                             Bazı işletmelerin dahili bir ekibi vardır ve yalnızca danışmanlığa ile önceliklendirmeye ihtiyaç duyar. Diğerleri teknik, içerik veya yerel müdahalelerin uygulanmasını da dış kaynak olarak tercih eder. Hizmetlerin bileşimi, işletmenin hedeflerine, sitenin durumuna ve ekibin operasyonel kapasitesine göre şekillenir.
                         </p>
-                        <p class="seo-section-sub seo-reveal">
+                        <p class="seo-section-sub seo-reveal reveal-up">
                             İlk bir değerlendirme, hangi hizmetin sitenin mevcut sorununa en yakın çözümü sunduğunu ve bunun bağımsız mı yoksa daha kapsamlı bir plan dahilinde mi ele alınması gerektiğini anlamak için iyi bir başlangıç noktasıdır.
                         </p>
                     </div>
-
                     <div class="seo-services-grid categories-grid">
                         <article class="seo-glass seo-service-card seo-reveal reveal-card">
                             <span class="seo-service-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title>wordpress</title><path fill="#4ECDC4" d="M0 12v-.017c0-1.763.385-3.437 1.076-4.94l-.03.074l5.727 15.68a12 12 0 0 1-4.887-4.338l-.029-.048A11.54 11.54 0 0 1 0 12.098v-.103zm20.099-.609q0 .319-.042.625l.003-.024a7 7 0 0 1-.171.822l.011-.049q-.117.468-.179.686t-.27.921q-.21.702-.273.905l-1.186 3.994l-4.338-12.889q.72-.047 1.374-.125a.46.46 0 0 0 .404-.286l.001-.003a.48.48 0 0 0-.04-.482l.001.002a.47.47 0 0 0-.447-.211h.002l-3.2.16q-1.17-.016-3.152-.16a.47.47 0 0 0-.321.081l.002-.001a.46.46 0 0 0-.178.231l-.001.003a.6.6 0 0 0-.023.292v-.004a.44.44 0 0 0 .14.257a.5.5 0 0 0 .303.125h.001l1.248.125l1.873 5.12l-2.622 7.865L4.65 6.38q.72-.047 1.374-.125a.46.46 0 0 0 .404-.286l.001-.003a.48.48 0 0 0-.04-.482l.001.002a.47.47 0 0 0-.447-.211h.002l-3.2.16q-.11 0-.359-.008t-.406-.008a12.04 12.04 0 0 1 4.222-3.925l.061-.031A11.86 11.86 0 0 1 11.998.004c1.575 0 3.08.304 4.458.855L16.375.83a12.1 12.1 0 0 1 3.73 2.333l-.009-.008H19.9c-.557 0-1.056.244-1.398.63l-.002.002c-.354.38-.571.892-.571 1.454v.03v-.002q0 .199.033.388l-.002-.014q.031.187.062.335c.033.137.076.257.13.37l-.005-.011q.094.21.141.328c.061.137.124.252.194.362l-.007-.011q.141.234.195.328t.226.374l.218.359c.595.94.958 2.079.982 3.301v.007zm-7.896 1.655l3.698 10.096q.019.1.08.173v-.001a11.7 11.7 0 0 1-3.978.686h-.028a11.5 11.5 0 0 1-3.441-.521l.082.022zm10.315-6.8A11.7 11.7 0 0 1 24 11.982v.025v-.001v.087c0 2.187-.603 4.233-1.653 5.981l.029-.053a12.1 12.1 0 0 1-4.297 4.315l-.056.031l3.667-10.586c.51-1.269.841-2.738.919-4.274l.001-.033v-.035a8 8 0 0 0-.1-1.242l.006.044z"/></svg>
-                            </span>
-                            <h3 class="seo-service-title">WordPress Siteleri için SEO</h3>
+                    <div class="lottie-icon" data-lottie="/assets/lottie/wordpress.json" data-lottie-mode="hover"></div>
+                </span>
+                            <h3 class="seo-service-title">Wordpress SEO Hizmeti</h3>
                             <p class="seo-service-desc">
                                 WordPress, yüksek esnekliği sayesinde en yaygın kullanılan CMS'tir; ancak bu esneklik beraberinde teknik karmaşıklığı da getirebilir. Permalink yapısının optimizasyonu, SEO eklentilerinin doğru yönetimi, kod çakışmalarının giderilmesi, görsel sıkıştırma ve gelişmiş önbellek uygulaması, WordPress sitenizin hız ve dizine eklenebilirlik performansını belirgin biçimde iyileştirir.
                             </p>
                         </article>
-
                         <article class="seo-glass seo-service-card seo-reveal reveal-card">
                             <span class="seo-service-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                                </svg>
-                            </span>
+                    <div class="lottie-icon" data-lottie="/assets/lottie/message-square.json" data-lottie-mode="hover"></div>
+                </span>
                             <h3 class="seo-service-title">SEO Danışmanlığı</h3>
                             <p class="seo-service-desc">
                                 Bazen dahili ekibin uygulama kapasitesi mevcuttur; eksik olan net bir yol haritası ve bağımsız bir dış bakış açısıdır. Kurumsal SEO hizmeti kapsamında sunduğum danışmanlıkta kapsamlı bir site denetimi yapıyor, güçlü ve zayıf yönleri belgeliyor, son tarihlerle birlikte operasyonel bir plan sunuyorum. Süreç boyunca erişilebilir kalarak çalışmanın doğru seyrinde ilerlediğinden emin oluyorum.
                             </p>
                         </article>
-
                         <article class="seo-glass seo-service-card seo-reveal reveal-card">
                             <span class="seo-service-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9l-3.8 3.8z" />
-                                </svg>
-                            </span>
-                            <h3 class="seo-service-title">Teknik SEO Hizmetleri</h3>
+                    <div class="lottie-icon" data-lottie="/assets/lottie/settings.json" data-lottie-mode="hover"></div>
+                </span>
+                            <h3 class="seo-service-title">Teknik SEO</h3>
                             <p class="seo-service-desc">
                                 Teknik SEO, her başarılı projenin temelini oluşturur. robots.txt dosyası, site haritası, URL yapısı, yapılandırılmış veriler (Schema), dizine eklenme durumu, 404 hataları ve yönlendirmeler, canonical etiketleri, dahili bağlantı sağlığı ve Core Web Vitals'ın derinlemesine analizi aracılığıyla sitenin büyümesinin önündeki teknik engelleri tespit edip çözüyorum.
                             </p>
                         </article>
-
                         <article class="seo-glass seo-service-card seo-reveal reveal-card">
                             <span class="seo-service-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><title>pen</title><path fill="#4ECDC4" d="M27.307 6.107L30 3.414L28.586 2l-2.693 2.693L24.8 3.6a1.933 1.933 0 0 0-2.8 0l-18 18V28h6.4l18-18a1.933 1.933 0 0 0 0-2.8ZM9.6 26H6v-3.6L23.4 5L27 8.6ZM9 11.586L16.586 4L18 5.414L10.414 13z"/></svg>
-                            </span>
-                            <h3 class="seo-service-title">İçerik SEO'su</h3>
+                    <div class="lottie-icon" data-lottie="/assets/lottie/pen-tool.json" data-lottie-mode="hover"></div>
+                </span>
+                            <h3 class="seo-service-title">SEO Uyumlu Içerik</h3>
                             <p class="seo-service-desc">
                                 İçerik ancak doğru kurgulandığında fark yaratır. Anahtar kelime araştırması ve kullanıcının arama niyetine dayalı olarak blog makaleleri, ürün sayfaları ve özel açılış sayfaları üretiyorum. Her metin, doğru başlık yapısıyla, hedefli dahili bağlantılarla ve Öne Çıkan Snippet optimizasyonuyla hazırlanır; böylece hem arama motorlarına hem de gerçek kullanıcıya hitap eder.
                             </p>
                         </article>
-
                         <article class="seo-glass seo-service-card seo-reveal reveal-card">
                             <span class="seo-service-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="9" cy="21" r="1" />
-                                    <circle cx="20" cy="21" r="1" />
-                                    <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6" />
-                                </svg>
-                            </span>
-                            <h3 class="seo-service-title">E-Ticaret SEO'su</h3>
+                    <div class="lottie-icon" data-lottie="/assets/lottie/tag.json" data-lottie-mode="hover"></div>
+                </span>
+                            <h3 class="seo-service-title">E-Ticaret SEO Hizmeti</h3>
                             <p class="seo-service-desc">
                                 Çevrimiçi mağazalar kendine özgü zorluklarla karşılaşır: ürün sayfalarındaki yinelenen içerikler, çok sayıda filtre ve kategori sayfası, yüksek hemen çıkma oranı. Kategori sayfalarını optimize ederek, filtreleri doğru şekilde yöneterek, özgün ürün açıklamaları yazarak ve fiyat ile stok durumu için Schema uygulayarak satın alma niyetli trafiği gerçek satışa dönüştürüyorum.
                             </p>
                         </article>
-
                         <article class="seo-glass seo-service-card seo-reveal reveal-card">
                             <span class="seo-service-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" />
-                                    <circle cx="12" cy="10" r="3" />
-                                </svg>
-                            </span>
-                            <h3 class="seo-service-title">Yerel SEO</h3>
+                    <div class="lottie-icon" data-lottie="/assets/lottie/map-pin.json" data-lottie-mode="hover"></div>
+                </span>
+                            <h3 class="seo-service-title">Yerel SEO Hizmeti</h3>
                             <p class="seo-service-desc">
                                 İşletmeniz belirli bir şehre veya bölgeye hizmet veriyorsa yerel SEO en etkili büyüme araçlarından biridir. İzmir SEO hizmeti, İstanbul SEO hizmetleri, Bursa SEO hizmetleri ve Kocaeli dijital SEO hizmetleri dahil olmak üzere Google Business profilinizi eksiksiz optimize ediyor, şehirlere özel açılış sayfaları oluşturuyor, yorum ve değerlendirmeleri yönetiyor, yetkili yerel alıntılar oluşturarak Haritalar sonuçları ve "yakınımdaki" aramalarındaki konumunuzu pekiştiriyorum.
                             </p>
                         </article>
-
                         <article class="seo-glass seo-service-card seo-service-card-wide seo-reveal reveal-card">
                             <div class="seo-service-wide">
                                 <div>
                                     <span class="seo-service-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title>work</title><path fill="#4ECDC4" d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2m4 4V4h-4v2z"/></svg>
-                                    </span>
-                                    <h3 class="seo-service-title">Kurumsal Siteler için SEO Hizmeti</h3>
+                    <div class="lottie-icon" data-lottie="/assets/lottie/briefcase.json" data-lottie-mode="hover"></div>
+                </span>
+                                    <h3 class="seo-service-title">Kurumsal SEO Hizmeti</h3>
                                     <p class="seo-service-desc">
                                         Kurumsal siteler çoğunlukla doğrudan satış yerine lead edinme ve marka güvenilirliği oluşturma hedefiyle çalışır; bu nedenle SEO stratejileri farklı biçimlenmelidir. Yüksek ticari niyetli hizmet anahtar kelimelerine odaklanıyor, özel hizmet sayfaları oluşturuyor, dijital PR ve sektöre özgü yetkili backlinkler aracılığıyla alan adı otoritesini artırıyor, CRO ile ziyaretçiden müşteriye dönüşüm yolunu optimize ediyorum.
                                     </p>
@@ -996,39 +936,42 @@
                             </div>
                         </article>
                     </div>
-
                 </div>
             </section>
+
+
         </div>
+
+
     </main>
 
-    <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
-    <footer-component currency></footer-component>
 
-    <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
+
+    <footer-component currency></footer-component>
+    <back-to-top></back-to-top>
+
+
+    <!-- :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: -->
+
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="/assets/src/core/supabase.js"></script>
-    <script src="/contact/rrule.min.js"></script>
-    <script src="/contact/calendar.js"></script>
-
-    <!-- :::::::::::::::::::::::::: COMPONENT SCRIPTS :::::::::::::::::::::::::: -->
-<script src="/assets/src/core/i18n.js"></script>
-<script type="module" src="/assets/src/components/header.js"></script> 
+    <script src="/assets/src/core/rrule.min.js"></script>
+    <script src="/assets/src/core/calendar.js"></script>
+    <script src="/assets/src/core/i18n.js"></script>
+    <script type="module" src="/assets/src/components/header.js"></script>
     <script src="/assets/src/components/blurup.js"></script>
-<script type="module" src="/assets/src/components/language-selector.js"></script>
+    <script type="module" src="/assets/src/components/language-selector.js"></script>
     <script src="/assets/src/components/terminal-breadcrumb.js"></script>
-    <script type="module" src="/services/seo/seo.js"></script>
+    <script type="module" src="/assets/src/core/services-landings.js"></script>
     <script type="module" src="/assets/src/components/partners-component.js"></script>
-<script type="module" src="/assets/src/components/footer.js"></script>
+    <script type="module" src="/assets/src/components/footer.js"></script>
     <script src="/assets/src/components/faq.js"></script>
     <script src="/tariff/js/utils/currency-selector.js" type="module"></script>
-
-    <!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
-    <script src="/assets/src/components/animations.js"></script>
-
-    <!-- :::::::::::::::::::::::::: PRINT INVOICE TEMPLATE :::::::::::::::::::::::::: -->
+<script type="module" src="/assets/src/components/back-to-top.js"></script>
+<script src="/assets/src/core/cursor.js"></script>
+<script src="/assets/src/core/loader.js"></script>
     <div class="seo-print-invoice" data-seo-print-invoice aria-hidden="true">
-
         <div class="seo-print-header">
             <div class="seo-print-brand">
                 <img src="/assets/images/arminsilatanisign.webp" alt="Armin Silatani" class="seo-print-logo-img" />
@@ -1039,12 +982,10 @@
                 <div>Teklif numarası: <span data-print-id>—</span></div>
             </div>
         </div>
-
         <div class="seo-print-package">
             <div class="seo-print-package-label">Seçilen paket</div>
             <div class="seo-print-package-name" data-print-pkg-name>—</div>
         </div>
-
         <table class="seo-print-table">
             <thead>
                 <tr>
@@ -1061,7 +1002,6 @@
                 </tr>
             </tfoot>
         </table>
-
         <div class="seo-print-footer">
             <p>Bu teklif, sitedeki çevrimiçi hesaplayıcıda yapılan seçimlere göre oluşturulmuştur.</p>
             <p>Fiyatlar aylık bazda ve güncel döviz kuruna göre hesaplanmaktadır.</p>
@@ -1069,10 +1009,11 @@
                 İletişim: <span class="seo-ltr">+989125759466</span> — arminsilatani.com
             </p>
         </div>
-
         <div class="seo-print-note">
             Bu teklifin geçerlilik süresi 7 gündür. Kesin fiyat, kapsamlı site analizi sonrasında iletilecektir.
         </div>
     </div>
+    <script src="/assets/src/core/animations.js"></script>
+
 </body>
 </html>

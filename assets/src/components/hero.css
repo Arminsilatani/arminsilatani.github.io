@@ -1331,3 +1331,34 @@
   contain: layout style;   /* تغییرات ارتفاع داخلی به بیرون نشت نمی‌کنه */
   min-height: 100svh;      /* کف ارتفاع، مستقل از viewport */
 }
+
+/* ===================================================================== */
+/* ========= FIX: Desktop — start-align wrapped hero title ============= */
+/* ===================================================================== */
+/*
+   مشکل:
+     قاعده‌ی @media (min-width: 768px) مقدار text-align: center
+     را روی .hero-title h1 و .split-title اعمال می‌کند. در نتیجه وقتی
+     عنوان دو خطی می‌شود، هر خط جداگانه وسط‌چین می‌شود و خط اول
+     از لبه‌ی start (چپ در LTR / راست در RTL) عقب می‌افتد و با
+     زیرنویس هم‌تراز نمی‌ماند.
+
+   راه‌حل:
+     بازگرداندن alignment به شروع فقط برای دسکتاپ واقعی
+     (pointer: fine + hover: hover) و viewport ≥ 1024px.
+     تبلت‌های لمسی دست‌نخورده می‌مانند.
+
+   نکته:
+     اگر در واقع می‌خواهی متن justified شود (کشیده تا لبه‌ی خط)
+     نه فقط start-aligned، مقدار left/right را با justify عوض کن.
+*/
+@media (min-width: 1024px) and (pointer: fine) and (hover: hover) {
+    [dir="rtl"] .hero-section .hero-title h1,
+    [dir="rtl"] .hero-section .hero-title h1 .split-title {
+        text-align: right;
+    }
+    [dir="ltr"] .hero-section .hero-title h1,
+    [dir="ltr"] .hero-section .hero-title h1 .split-title {
+        text-align: left;
+    }
+}

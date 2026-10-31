@@ -107,11 +107,22 @@
     
 
     <!-- :::::::::::::::::::::::::: GSAP + SCROLLTRIGGER :::::::::::::::::::::::::: -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="/assets/src/core/gsap.min.js" defer></script>
+<script src="/assets/src/core/ScrollTrigger.min.js" defer></script>
+<script src="/assets/src/core/lottie_light.min.js" defer></script>
   </head>
 
   <body>
+
+      <div id="initial-loader" class="fullpage-loader">
+    <div class="lds-grid">
+      <div></div><div></div><div></div>
+      <div></div><div></div><div></div>
+      <div></div><div></div><div></div>
+    </div>
+  </div>
+        <div class="cursor"></div>
+    <div class="cursor-follower"></div>
     <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
     <header-component></header-component>
 
@@ -371,6 +382,10 @@
 <script src="/assets/src/components/terminal-breadcrumb.js"></script>
     <script type="module" src="../../services/services.js"></script>
 <script type="module" src="/assets/src/components/footer.js"></script>
+<script type="module" src="/assets/src/components/back-to-top.js"></script>
+<script src="/assets/src/core/cursor.js"></script>
+<script src="/assets/src/core/loader.js"></script>
+<script type="module" src="/assets/src/core/lottie-icons.js"></script>
 
     <!-- :::::::::::::::::::::::::: SERVICES SLIDER LOGIC :::::::::::::::::::::::::: -->
     <script>

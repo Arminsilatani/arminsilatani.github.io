@@ -4,7 +4,7 @@
     background-color: #0D0D0D;
     color: #F5F5F5;
     position: relative;
-    padding: 2rem 0;
+    padding: 2rem 0 calc(2rem + 100px);
     overflow: hidden;
 }
 
@@ -104,23 +104,10 @@ html[dir="ltr"] .step-year {
 
 /* :::::::::::::::::::::::::: TEXT ELEMENTS :::::::::::::::::::::::::: */
 
-.step-context {
-    display: block;
-    margin-bottom: 20px;
-    opacity: 0.9;
-}
 
 .step-title {
     margin-top: 0.2rem;
     margin-bottom: 1.5rem;
-}
-
-
-
-/* :::::::::::::::::::::::::: STORY CONTAINER SPACING :::::::::::::::::::::::::: */
-
-.story-container {
-    padding-bottom: calc(2rem + 100px);
 }
 
 
@@ -176,37 +163,6 @@ html[dir="ltr"] .step-year {
 /* :::::::::::::::::::::::::: 768PX - TAB - IPAD MINI / GALAXY FOLD INNER (768X1024) :::::::::::::::::::::::::: */
 
 @media (min-width: 768px) {
-
-    /* :::::::::::::::::::::::::: ABOUT :::::::::::::::::::::::::: */
-
-    .about-section {
-        height: auto;
-        padding: 60px 0;
-    }
-
-    .about-container {
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-        width: 100%;
-    }
-
-    .about-image {
-        display: none;
-    }
-
-    .about-text {
-        max-width: 90%;
-    }
-
-    /* :::::::::::::::::::::::::: BUTTON :::::::::::::::::::::::::: */
-
-    .btn-large {
-        width: 100%;
-        max-width: 90%;
-        margin: 20px auto 0;
-    }
 
     /* :::::::::::::::::::::::::: TIMELINE :::::::::::::::::::::::::: */
 

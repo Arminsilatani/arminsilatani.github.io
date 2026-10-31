@@ -751,21 +751,21 @@ let determineCurrency = (lang) => {
 /* :::::::::::::::::::::::::: DYNAMIC IMPORTS :::::::::::::::::::::::::: */
 
 try {
-    const mod = await import('../../tariff/js/data/prices.js');
+    const mod = await import('../../../tariff/js/data/prices.js');
     if (mod?.basePricesUSD) basePricesUSD = mod.basePricesUSD;
 } catch (e) {
     console.warn('[SEO] prices.js not loaded — using empty defaults.', e);
 }
 
 try {
-    const mod = await import('../../tariff/js/services/exchange-rates.js');
+    const mod = await import('../../../tariff/js/services/exchange-rates.js');
     if (mod?.getExchangeRates) getExchangeRates = mod.getExchangeRates;
 } catch (e) {
     console.warn('[SEO] exchange-rates.js not loaded.', e);
 }
 
 try {
-    const mod = await import('../../tariff/js/utils/currency-engine.js');
+    const mod = await import('../../../tariff/js/utils/currency-engine.js');
     if (mod?.determineCurrency) determineCurrency = mod.determineCurrency;
 } catch (e) {
     console.warn('[SEO] currency-engine.js not loaded — using simple fallback.', e);
@@ -1446,21 +1446,21 @@ function getPackageBreakdown(prefix) {
         selectPackage(state.package);
     })();
 
-    /* :::::::::::::::::::::::::: PRICING TABS :::::::::::::::::::::::::: */
+    /* :::::::::::::::::::::::::: TAB SWITCH :::::::::::::::::::::::::: */
 
-    (function initPricingTabs() {
-        const tabs = page.querySelectorAll('[data-seo-tab]');
-        const panels = page.querySelectorAll('[data-seo-panel]');
+    (function initTabSwitch() {
+        const tabs = page.querySelectorAll('[data-tab]');
+        const panels = page.querySelectorAll('[data-tab-panel]');
         if (!tabs.length || !panels.length) return;
 
         tabs.forEach((tab) => {
             tab.addEventListener('click', () => {
-                const target = tab.dataset.seoTab;
+                const target = tab.dataset.tab;
 
                 tabs.forEach((tb) => tb.classList.toggle('is-active', tb === tab));
 
                 panels.forEach((p) => {
-                    p.hidden = p.dataset.seoPanel !== target;
+                    p.hidden = p.dataset.tabPanel !== target;
                 });
 
                 panels.forEach((p) => {
