@@ -3,6 +3,7 @@
 /* ===================================================================== */
 
 :host {
+    display: block;
     --header-dir: ltr;
     --header-text-align: left;
     --header-transform-origin: left center;

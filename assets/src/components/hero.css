@@ -11,13 +11,12 @@
     position: relative;
     width: 100%;
     min-height: 100vh;
-    min-height: 100svh;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     margin-bottom: 70px;
-
+box-sizing: border-box;
     background: linear-gradient(
         to bottom,
         #F5F5F5 0%,
@@ -1325,11 +1324,6 @@
         text-align-last: center;
         margin-inline: auto;
     }
-}
-
-.hero-section {
-  contain: layout style;   /* تغییرات ارتفاع داخلی به بیرون نشت نمی‌کنه */
-  min-height: 100svh;      /* کف ارتفاع، مستقل از viewport */
 }
 
 /* ===================================================================== */
