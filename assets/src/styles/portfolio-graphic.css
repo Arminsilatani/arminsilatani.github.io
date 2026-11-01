@@ -4,7 +4,6 @@
    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 
 
-
 /* :::::::::::::::::::::::::: ROOT VARIABLES :::::::::::::::::::::::::: */
 
 :root {
@@ -22,19 +21,12 @@
 }
 
 
-
 /* :::::::::::::::::::::::::: SHARED BASE :::::::::::::::::::::::::: */
 
 body.portfolio-page {
     background: var(--catalogue-bg);
     color: var(--catalogue-text);
     overflow-x: hidden;
-}
-
-header-component {
-    display: block;
-    position: relative;
-    z-index: 9999;
 }
 
 .section-header {
@@ -70,7 +62,6 @@ header-component {
 }
 
 
-
 /* :::::::::::::::::::::::::: UNIFIED PORTFOLIO INFO :::::::::::::::::::::::::: */
 
 .portfolio-info {
@@ -78,7 +69,7 @@ header-component {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 2;
+    z-index: var(--z-raised);        /* 20 — بود 2 */
 
     display: flex;
     flex-direction: row;
@@ -115,7 +106,6 @@ header-component {
     opacity: 1;
     transform: translateY(0);
 }
-
 
 
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -171,7 +161,6 @@ header-component {
 }
 
 
-
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
    BUSINESS CARD PROJECTS (کارت ویزیت — افقی)
    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
@@ -220,7 +209,6 @@ header-component {
     transform: scale(1.02);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
 }
-
 
 
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -290,16 +278,15 @@ header-component {
 }
 
 
-
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-   LETTERHEAD PROJECTS (سربرگ — تصویر عمودی، بدون سایه‌ی پایین)
+   LETTERHEAD PROJECTS (سربرگ — تصویر عمودی)
    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 
 main .letterhead-masonry.categories-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
-    gap: 75px;                 /* ← کاهش از 24px به 12px */
-    justify-content: center;    /* ← به‌جای justify-items: center */
+    gap: 75px;
+    justify-content: center;
     align-items: start;
     width: 100%;
     margin: 0 auto;
@@ -356,12 +343,9 @@ main .letterhead-masonry.categories-grid .letterhead-card:only-child {
 }
 
 
-
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
    CATALOGUE PROJECTS
    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
-
-/* ---------- ساختار کارت ---------- */
 
 .catalogue-projects-section .section-header {
     margin-bottom: 2.5rem;
@@ -453,6 +437,7 @@ main .letterhead-masonry.categories-grid .letterhead-card:only-child {
 
 .catalogue-media {
     position: relative;
+    isolation: isolate;          /* ← NEW: قفل‌کردن z-index اسلایدها */
     width: 100%;
     overflow: hidden;
     touch-action: pan-y;
@@ -477,7 +462,7 @@ main .letterhead-masonry.categories-grid .letterhead-card:only-child {
     --op: 0.5;
     --blur: 4px;
     --bright: 0.55;
-    --z: 3;
+    --slide-z: var(--z-content);     /* 10 — بود 3 */
 
     transform:
         translate(-50%, -50%)
@@ -485,7 +470,7 @@ main .letterhead-masonry.categories-grid .letterhead-card:only-child {
         scale(var(--scale));
     opacity: var(--op);
     filter: blur(var(--blur)) brightness(var(--bright));
-    z-index: var(--z);
+    z-index: var(--slide-z);
 
     transition:
         transform 0.55s cubic-bezier(0.2, 0.6, 0.2, 1),
@@ -500,7 +485,7 @@ main .letterhead-masonry.categories-grid .letterhead-card:only-child {
     --op: 1;
     --blur: 0px;
     --bright: 1;
-    --z: 5;
+    --slide-z: var(--z-raised);      /* 20 — بود 5 */
 }
 
 .catalogue-media.is-dragging .catalogue-slide {
@@ -520,10 +505,8 @@ main .letterhead-masonry.categories-grid .letterhead-card:only-child {
 }
 
 
-
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
    PROCESS COMPONENT — LTR OVERRIDES
-   (بقیه‌ی استایل‌های process در components/process-component.css است)
    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 
 [dir="ltr"] #process .process-box.is-open .process-box__meta {
@@ -551,17 +534,13 @@ main .letterhead-masonry.categories-grid .letterhead-card:only-child {
 }
 
 
-
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
    RESPONSIVE
    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 
-/* :::::::::::::::::::::::::: 768PX — TABLET / MOBILE CATALOGUE :::::::::::::::::::::::::: */
-
 @media (max-width: 768px) {
 
     /* ---------- QUOTE SECTION ---------- */
-
     .quote-section,
     .quote-inner,
     .logo-projects-section,
@@ -585,7 +564,7 @@ main .letterhead-masonry.categories-grid .letterhead-card:only-child {
         transform: translate(-50%, -50%);
         width: 60%;
         max-width: 100px;
-        z-index: 2;
+        z-index: var(--z-content);   /* 10 — بود 2 */
         background: transparent;
         border: none;
         box-shadow: none;
@@ -610,7 +589,6 @@ main .letterhead-masonry.categories-grid .letterhead-card:only-child {
     }
 
     /* ---------- LETTERHEAD ---------- */
-
     main .letterhead-masonry.categories-grid .letterhead-card {
         max-width: 100%;
         margin-left: auto;
@@ -618,7 +596,6 @@ main .letterhead-masonry.categories-grid .letterhead-card:only-child {
     }
 
     /* ---------- CATALOGUE ---------- */
-
     .catalogue-grid {
         gap: 3.5rem;
     }
@@ -635,13 +612,9 @@ main .letterhead-masonry.categories-grid .letterhead-card:only-child {
 }
 
 
-
-/* :::::::::::::::::::::::::: 900PX — BUSINESS CARD & DOC CARD (MOBILE) :::::::::::::::::::::::::: */
-
 @media (max-width: 900px) {
 
     /* ---------- BUSINESS CARD ---------- */
-
     .businesscard-grid {
         display: flex;
         flex-direction: column;
@@ -696,7 +669,6 @@ main .letterhead-masonry.categories-grid .letterhead-card:only-child {
     }
 
     /* ---------- DOCUMENT CARD ---------- */
-
     .doc-grid {
         display: flex;
         flex-direction: column;
@@ -733,17 +705,14 @@ main .letterhead-masonry.categories-grid .letterhead-card:only-child {
     }
 }
 
-@media (min-width: 600px) and (max-width: 900px) {
 
+@media (min-width: 600px) and (max-width: 900px) {
     .businesscard-grid,
     .doc-grid {
         padding: 0 80px;
     }
 }
 
-
-
-/* :::::::::::::::::::::::::: LANDSCAPE MOBILE — CATALOGUE :::::::::::::::::::::::::: */
 
 @media (orientation: landscape) and (max-height: 600px) {
 

@@ -1,6 +1,8 @@
-/* :::::::::::::::::::::::::: PRICING PAGE :::::::::::::::::::::::::: */
+/* =========================================
+   PRICING PAGE
+   ========================================= */
 
-/* :::::::::::::::::::::::::: GLOBAL BASE STYLES :::::::::::::::::::::::::: */
+/* ==== GLOBAL BASE ==== */
 body {
     background: #0B0B0B;
     color: #F5F5F5;
@@ -27,7 +29,7 @@ body {
     animation: slideText 6s linear infinite alternate;
 }
 
-/* :::::::::::::::::::::::::: CURRENCY SELECTOR :::::::::::::::::::::::::: */
+/* ==== CURRENCY SELECTOR ==== */
 .currency-selector {
     padding: 40px 40px 0;
     display: flex;
@@ -56,7 +58,7 @@ body {
     border-color: #4ECDC4;
 }
 
-/* :::::::::::::::::::::::::: TABS & PACKAGE TABS :::::::::::::::::::::::::: */
+/* ==== TABS & PACKAGE TABS ==== */
 .tabs-container {
     display: flex;
     justify-content: space-between;
@@ -82,7 +84,7 @@ body {
     gap: 25px;
 }
 
-/* :::::::::::::::::::::::::: PRICING TAB BUTTONS :::::::::::::::::::::::::: */
+/* ==== PRICING TAB BUTTONS ==== */
 .pricing-tab {
     background: none;
     border: none;
@@ -109,7 +111,7 @@ body {
     color: #FFE76D;
 }
 
-/* :::::::::::::::::::::::::: PACKAGE TAB BUTTONS :::::::::::::::::::::::::: */
+/* ==== PACKAGE TAB BUTTONS ==== */
 .package-tab {
     background: none;
     border: none;
@@ -144,17 +146,18 @@ body {
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* :::::::::::::::::::::::::: PRICING WRAPPER :::::::::::::::::::::::::: */
+/* ==== PRICING WRAPPER ==== */
 .pricing-wrapper {
     padding: 0 50px;
     margin-top: 40px;
     font-family: var(--font-family, inherit);
 }
 
-/* :::::::::::::::::::::::::: SERVICE SECTIONS & ACCORDION :::::::::::::::::::::::::: */
+/* ==== SERVICE SECTIONS & ACCORDION ==== */
 .service-section {
     margin-bottom: 40px;
     position: relative;
+    isolation: isolate;              /* ← NEW: قفل‌کردن z-index داخلی */
     width: 100%;
     display: flow-root;
 }
@@ -177,10 +180,10 @@ body {
     margin: 0;
     user-select: none;
     cursor: pointer;
-    z-index: 2;
+    /* z-index: 2 ← حذف شد (کد مرده — بدون position اثری ندارد) */
 }
 
-/* :::::::::::::::::::::::::: SERVICE DOT (ACCORDION INDICATOR) :::::::::::::::::::::::::: */
+/* ==== SERVICE DOT (ACCORDION INDICATOR) ==== */
 .service-dot {
     position: absolute;
     right: 0;
@@ -207,7 +210,7 @@ body {
     grid-template-rows: 0fr;
     transition: grid-template-rows 0.4s ease 0s;
     position: relative;
-    z-index: 2;
+    z-index: var(--z-content);       /* 10 — بود 2 */
 }
 
 .service-content {
@@ -226,7 +229,7 @@ body {
     font-size: 0.95rem;
 }
 
-/* :::::::::::::::::::::::::: ACCORDION ACTIVE STATES :::::::::::::::::::::::::: */
+/* ==== ACCORDION ACTIVE STATES ==== */
 .service-section.active .service-dot {
     top: 45px;
     width: 100%;
@@ -255,7 +258,7 @@ body {
     transition: opacity 0.3s ease 0.7s;
 }
 
-/* :::::::::::::::::::::::::: PIN BUTTON :::::::::::::::::::::::::: */
+/* ==== PIN BUTTON ==== */
 .pin-btn {
     position: absolute;
     left: 15px;
@@ -293,7 +296,7 @@ body {
     color: #F5F5F5;
 }
 
-/* :::::::::::::::::::::::::: SUB-SERVICES & ITEMS :::::::::::::::::::::::::: */
+/* ==== SUB-SERVICES & ITEMS ==== */
 .sub-services {
     padding: 0 40px 24px;
 }
@@ -327,7 +330,7 @@ body {
     margin-left: auto;
 }
 
-/* :::::::::::::::::::::::::: PRICE DISPLAY :::::::::::::::::::::::::: */
+/* ==== PRICE DISPLAY ==== */
 .price-display {
     color: #F5F5F5;
     font-size: 1rem;
@@ -347,7 +350,7 @@ body {
     cursor: help;
 }
 
-/* :::::::::::::::::::::::::: QUANTITY CONTROL :::::::::::::::::::::::::: */
+/* ==== QUANTITY CONTROL ==== */
 .qty-control-minimal {
     display: flex;
     align-items: center;
@@ -407,7 +410,7 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     display: inline-block;
 }
 
-/* :::::::::::::::::::::::::: GROUPED SERVICES BOX :::::::::::::::::::::::::: */
+/* ==== GROUPED SERVICES BOX ==== */
 .sub-group-box {
     border: 1px solid rgba(78, 205, 196, 0.6);
     border-radius: 12px;
@@ -448,7 +451,7 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     margin-bottom: 4px;
 }
 
-/* :::::::::::::::::::::::::: FINAL INVOICE SECTION :::::::::::::::::::::::::: */
+/* ==== FINAL INVOICE SECTION ==== */
 #final-invoice-section {
     margin-top: 60px;
     visibility: hidden;
@@ -472,7 +475,7 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     box-sizing: border-box;
 }
 
-/* :::::::::::::::::::::::::: INVOICE HEADER :::::::::::::::::::::::::: */
+/* ==== INVOICE HEADER ==== */
 .invoice-header {
     display: flex;
     justify-content: space-between;
@@ -495,7 +498,7 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     color: #4ECDC4;
 }
 
-/* :::::::::::::::::::::::::: INVOICE ITEMS LIST :::::::::::::::::::::::::: */
+/* ==== INVOICE ITEMS LIST ==== */
 #invoice-items-list {
     padding: 0;
     margin: 0;
@@ -574,27 +577,14 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     --c-on: #4ECDC4;
 }
 
-.invoice-item.bullet-yellow::before {
-    --c-on: #FFE76D;
-}
+.invoice-item.bullet-yellow::before { --c-on: #FFE76D; }
+.invoice-item.bullet-green::before  { --c-on: #4ECDC4; }
+.invoice-item.bullet-white::before  { --c-on: #F5F5F5; }
 
-.invoice-item.bullet-green::before {
-    --c-on: #4ECDC4;
-}
+.invoice-item.entering { animation: slideDownItem 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+.invoice-item.leaving  { animation: slideUpItem 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
 
-.invoice-item.bullet-white::before {
-    --c-on: #F5F5F5;
-}
-
-.invoice-item.entering {
-    animation: slideDownItem 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-}
-
-.invoice-item.leaving {
-    animation: slideUpItem 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-}
-
-/* :::::::::::::::::::::::::: ANIMATIONS :::::::::::::::::::::::::: */
+/* ==== ANIMATIONS ==== */
 @keyframes marquee {
     0%   { transform: translateX(0); }
     100% { transform: translateX(-50%); }
@@ -648,94 +638,26 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     }
 }
 
-/* :::::::::::::::::::::::::: LTR OVERRIDES :::::::::::::::::::::::::: */
+/* ==== LTR OVERRIDES ==== */
+[dir="ltr"] .pin-btn { left: auto; right: 15px; }
+[dir="ltr"] .service-dot { right: auto; left: 0; }
+[dir="ltr"] .service-section.active .service-dot { right: auto; left: 0; }
+[dir="ltr"] .service-header { padding-right: 0; padding-left: 40px; }
+[dir="ltr"] .sub-item { flex-direction: row; }
+[dir="ltr"] .price-display { order: 2; margin-left: auto; margin-right: 0; }
+[dir="ltr"] .sub-item label { order: 0; margin-left: 0; margin-right: 0; flex: 0 1 auto; }
+[dir="ltr"] .sub-item > .qty-control-minimal { order: 1; margin-left: auto; margin-right: 0; }
+[dir="ltr"] .invoice-item { direction: ltr; }
+[dir="ltr"] .invoice-item .item-name { text-align: left; }
+[dir="ltr"] .invoice-item .item-price { text-align: right; direction: ltr; }
+[dir="ltr"] .invoice-item::before { margin-left: 0; margin-right: 10px; }
+[dir="ltr"] .tabs-container { flex-direction: row; }
+[dir="ltr"] .pricing-tabs { flex-direction: row; }
 
-[dir="ltr"] .pin-btn {
-    left: auto;
-    right: 15px;
-}
-
-[dir="ltr"] .service-dot {
-    right: auto;
-    left: 0;
-}
-
-[dir="ltr"] .service-section.active .service-dot {
-    right: auto;
-    left: 0;
-}
-
-[dir="ltr"] .service-header {
-    padding-right: 0;
-    padding-left: 40px;
-}
-
-[dir="ltr"] .sub-item {
-    flex-direction: row;
-}
-
-[dir="ltr"] .price-display {
-    order: 2;
-    margin-left: auto;
-    margin-right: 0;
-}
-
-[dir="ltr"] .sub-item label {
-    order: 0;
-    margin-left: 0;
-    margin-right: 0;
-    flex: 0 1 auto;
-}
-
-[dir="ltr"] .sub-item > .qty-control-minimal {
-    order: 1;
-    margin-left: auto;
-    margin-right: 0;
-}
-
-[dir="ltr"] .invoice-item {
-    direction: ltr;
-}
-
-[dir="ltr"] .invoice-item .item-name {
-    text-align: left;
-}
-
-[dir="ltr"] .invoice-item .item-price {
-    text-align: right;
-    direction: ltr;
-}
-
-[dir="ltr"] .invoice-item::before {
-    margin-left: 0;
-    margin-right: 10px;
-}
-
-[dir="ltr"] .tabs-container {
-    flex-direction: row;
-}
-
-[dir="ltr"] .pricing-tabs {
-    flex-direction: row;
-}
-
-html[dir="ltr"] .yellow-checkbox-checked-label .qty-text {
-    margin-right: 6px;
-}
-
-html[dir="ltr"] .sub-item label.white-checkbox-container {
-    order: 1;
-}
-
-html[dir="ltr"] .sub-item .qty-control-minimal {
-    order: 2;
-    margin-left: 6px;
-}
-
-html[dir="ltr"] .sub-item .price-display {
-    order: 3;
-    margin-left: auto;
-}
+html[dir="ltr"] .yellow-checkbox-checked-label .qty-text { margin-right: 6px; }
+html[dir="ltr"] .sub-item label.white-checkbox-container { order: 1; }
+html[dir="ltr"] .sub-item .qty-control-minimal { order: 2; margin-left: 6px; }
+html[dir="ltr"] .sub-item .price-display { order: 3; margin-left: auto; }
 
 html[dir="ltr"] .tabs-header,
 html[dir="ltr"] .pricing-header,
@@ -747,32 +669,14 @@ html[dir="ltr"] .invoice-top-row {
     width: 100%;
 }
 
-html[dir="ltr"] .pricing-tabs {
-    order: 2 !important;
-    display: flex;
-    justify-content: flex-end;
-}
+html[dir="ltr"] .pricing-tabs { order: 2 !important; display: flex; justify-content: flex-end; }
+html[dir="ltr"] .package-tabs { order: 1 !important; display: flex; justify-content: flex-start; }
+html[dir="ltr"] .pricing-tabs { display: flex !important; flex-direction: row-reverse !important; }
+html[dir="ltr"] .qty-text { margin-left: 0 !important; margin-right: 6px !important; }
 
-html[dir="ltr"] .package-tabs {
-    order: 1 !important;
-    display: flex;
-    justify-content: flex-start;
-}
-
-html[dir="ltr"] .pricing-tabs {
-    display: flex !important;
-    flex-direction: row-reverse !important;
-}
-
-html[dir="ltr"] .qty-text {
-    margin-left: 0 !important;
-    margin-right: 6px !important;
-}
-
-/* :::::::::::::::::::::::::: MOBILE STYLES (MAX-WIDTH: 768PX) :::::::::::::::::::::::::: */
+/* ==== MOBILE (max-width: 768px) ==== */
 @media (max-width: 768px) {
 
-    /* :::::::::::::::::::::::::: LAYOUT CONTAINERS :::::::::::::::::::::::::: */
     .pricing-wrapper {
         padding: 20px 10px 40px;
         margin-bottom: 30px;
@@ -813,7 +717,6 @@ html[dir="ltr"] .qty-text {
         margin-bottom: 0.6rem;
     }
 
-    /* :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: */
     .service-header {
         display: flex;
         align-items: center;
@@ -824,7 +727,6 @@ html[dir="ltr"] .qty-text {
         box-sizing: border-box;
     }
 
-    /* :::::::::::::::::::::::::: GREEN DOT ANIMATION :::::::::::::::::::::::::: */
     .service-dot {
         position: absolute;
         width: 14px;
@@ -860,7 +762,6 @@ html[dir="ltr"] .qty-text {
                     border-radius 0.25s ease 0.6s;
     }
 
-    /* :::::::::::::::::::::::::: TABS :::::::::::::::::::::::::: */
     .tabs-container {
         display: flex;
         flex-direction: row;
@@ -878,9 +779,7 @@ html[dir="ltr"] .qty-text {
         scrollbar-width: none;
     }
 
-    .tabs-container::-webkit-scrollbar {
-        display: none;
-    }
+    .tabs-container::-webkit-scrollbar { display: none; }
 
     .tabs-container::after {
         content: "";
@@ -900,21 +799,12 @@ html[dir="ltr"] .qty-text {
         flex-shrink: 0;
     }
 
-    .package-tabs {
-        order: 1;
-        gap: 10px;
-    }
-
-    .pricing-tabs {
-        order: 3;
-        gap: 4px;
-    }
+    .package-tabs { order: 1; gap: 10px; }
+    .pricing-tabs { order: 3; gap: 4px; }
 
     .package-tabs::after,
     .pricing-tabs::after,
-    .pricing-tabs::before {
-        display: none;
-    }
+    .pricing-tabs::before { display: none; }
 
     .pricing-tab,
     .package-tab {
@@ -926,7 +816,6 @@ html[dir="ltr"] .qty-text {
         transition: all 0.2s ease;
     }
 
-    /* :::::::::::::::::::::::::: SERVICES LIST :::::::::::::::::::::::::: */
     .grouped-services-box {
         margin-right: 0;
         margin-left: 0;
@@ -951,15 +840,9 @@ html[dir="ltr"] .qty-text {
         border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
     }
 
-    .sub-item:last-child {
-        border-bottom: none;
-    }
+    .sub-item:last-child { border-bottom: none; }
 
-    /* :::::::::::::::::::::::::: PIN BUTTON & PRICE :::::::::::::::::::::::::: */
-    .pin-btn {
-        top: 9px;
-        left: 20px;
-    }
+    .pin-btn { top: 9px; left: 20px; }
 
     .price-display {
         flex-shrink: 0;
@@ -972,7 +855,6 @@ html[dir="ltr"] .qty-text {
         border-radius: 6px;
     }
 
-    /* :::::::::::::::::::::::::: ICONS :::::::::::::::::::::::::: */
     .green-checkbox,
     .green-checkbox-checked,
     .yellow-checkbox,
@@ -980,7 +862,6 @@ html[dir="ltr"] .qty-text {
         flex: 0 0 auto;
     }
 
-    /* :::::::::::::::::::::::::: SLIDING TEXT :::::::::::::::::::::::::: */
     .scrolling-text-inner {
         display: inline-flex;
         align-items: center;
@@ -990,15 +871,9 @@ html[dir="ltr"] .qty-text {
         direction: rtl;
     }
 
-    .scrolling-text-inner br {
-        display: none;
-    }
+    .scrolling-text-inner br { display: none; }
+    .sliding-text { animation: slideTextInside 8s linear infinite; }
 
-    .sliding-text {
-        animation: slideTextInside 8s linear infinite;
-    }
-
-    /* :::::::::::::::::::::::::: INVOICE ITEM :::::::::::::::::::::::::: */
     .invoice-item {
         display: flex;
         flex-wrap: nowrap;
@@ -1068,10 +943,7 @@ html[dir="ltr"] .qty-text {
         padding: 0;
     }
 
-    /* :::::::::::::::::::::::::: PREVENT WRAPPING & KEEP SLIDING TEXT (MOBILE) :::::::::::::::::::::::::: */
-    .sub-item {
-        flex-wrap: nowrap !important;
-    }
+    .sub-item { flex-wrap: nowrap !important; }
 
     .sub-item label.white-checkbox-container {
         flex: 1 1 auto;
@@ -1089,7 +961,6 @@ html[dir="ltr"] .qty-text {
         white-space: nowrap;
     }
 
-    /* :::::::::::::::::::::::::: LTR SLIDING DIRECTION FIX :::::::::::::::::::::::::: */
     html[dir="ltr"] .sliding-text-container,
     html[dir="ltr"] .invoice-item .sliding-text-container {
         direction: ltr !important;
@@ -1110,138 +981,15 @@ html[dir="ltr"] .qty-text {
         animation-iteration-count: infinite !important;
     }
 
-    html[dir="ltr"] .sub-item {
-        flex-direction: row !important;
-    }
-
-    html[dir="ltr"] .tabs-container {
-        flex-direction: row !important;
-    }
-
-    html[dir="ltr"] .package-tabs {
-        order: 1 !important;
-    }
-
-    html[dir="ltr"] .tabs-container::after {
-        order: 2 !important;
-        margin: 0 10px !important;
-    }
-
-    html[dir="ltr"] .pricing-tabs {
-        order: 3 !important;
-    }
+    html[dir="ltr"] .sub-item { flex-direction: row !important; }
+    html[dir="ltr"] .tabs-container { flex-direction: row !important; }
+    html[dir="ltr"] .package-tabs { order: 1 !important; }
+    html[dir="ltr"] .tabs-container::after { order: 2 !important; margin: 0 10px !important; }
+    html[dir="ltr"] .pricing-tabs { order: 3 !important; }
 
     @keyframes slideTextInsideLTR {
-        0%,
-        15% {
-            transform: translateX(0);
-        }
-        45%,
-        55% {
-            transform: translateX(calc(-1 * (var(--overflow-amount, 80px) + 16px)));
-        }
-        85%,
-        100% {
-            transform: translateX(0);
-        }
+        0%, 15% { transform: translateX(0); }
+        45%, 55% { transform: translateX(calc(-1 * (var(--overflow-amount, 80px) + 16px))); }
+        85%, 100% { transform: translateX(0); }
     }
-}
-
-/* ===================================================================== */
-/* ============================ 320px = XS ============================= */
-/* iPhone 5 (568x320)                                                    */
-/* ===================================================================== */
-
-@media (min-width: 320px) {
-
-}
-
-/* ===================================================================== */
-/* ============================ 380px = S ============================== */
-/* Galaxy Z Flip 3 (880x360) | Galaxy S24 Ultra (891x412)                */
-/* ===================================================================== */
-
-@media (min-width: 380px) {
-
-}
-
-/* ===================================================================== */
-/* =========================== 440px = S+ ============================== */
-/* iPhone 17 Pro Max (956x440)                                           */
-/* ===================================================================== */
-
-@media (min-width: 440px) {
-
-}
-
-/* ===================================================================== */
-/* ============================ 480px = M ============================== */
-/* —                                                                     */
-/* ===================================================================== */
-
-@media (min-width: 480px) {
-
-}
-
-/* ===================================================================== */
-/* =========================== 768px = TAB ============================= */
-/* iPad Mini (1024x768) | Galaxy Fold inner (1076x768)                   */
-/* ===================================================================== */
-
-@media (min-width: 768px) {
-
-}
-
-/* ===================================================================== */
-/* ========================== 800px = TAB+ ============================= */
-/* Galaxy Tab S7 (1280x800)                                              */
-/* ===================================================================== */
-
-@media (min-width: 800px) {
-
-}
-
-/* ===================================================================== */
-/* =========================== 1024px = L ============================== */
-/* iPad Pro 13 (1376x1032)                                               */
-/* ===================================================================== */
-
-@media (min-width: 1024px) {
-
-}
-
-/* ===================================================================== */
-/* =========================== 1366px = XL ============================= */
-/* Desktop / Laptop FHD                                                  */
-/* ===================================================================== */
-
-@media (min-width: 1366px) {
-
-}
-
-/* ===================================================================== */
-/* ========================== 1920px = 2XL ============================= */
-/* Full HD / 2K                                                          */
-/* ===================================================================== */
-
-@media (min-width: 1920px) {
-
-}
-
-/* ===================================================================== */
-/* =========================== 2560px = UW ============================= */
-/* Ultrawide (3440x1440) | 4K UHD (2160x3840)                            */
-/* ===================================================================== */
-
-@media (min-width: 2560px) {
-
-}
-
-/* ===================================================================== */
-/* ======================= LANDSCAPE PHONE ============================= */
-/* iPhone 17 PM / S24 Ultra در حالت افقی (ارتفاع کم)                     */
-/* ===================================================================== */
-
-@media (max-height: 500px) and (orientation: landscape) {
-
 }

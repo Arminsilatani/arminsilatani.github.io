@@ -23,7 +23,6 @@
     width: 24px;
     height: 24px;
     vertical-align: middle;
-    margin: 38;
     border: none;
     outline: none;
     background-color: transparent;
@@ -211,9 +210,6 @@
 }
 
 /* :::::::::::::::::::::::::: CURSOR BEHAVIOR :::::::::::::::::::::::::: */
-.green-checkbox-checked-container {
-    cursor: default !;
-}
 
 .green-checkbox-checked,
 .green-checkbox-checked-label {

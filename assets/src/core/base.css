@@ -100,33 +100,7 @@ p {
     scrollbar-color: var(--scrollbar-thumb-color, rgba(255, 255, 255, 0.08)) var(--scrollbar-track-color, transparent);
 }
 
-/* :::::::::::::::::::::::::: SCROLLBAR FALLBACK :::::::::::::::::::::::::: */
-@supports not (--custom-property: value) {
-    ::-webkit-scrollbar {
-        width: 6px;
-        height: 6px;
-    }
 
-    ::-webkit-scrollbar-track {
-        background: transparent;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: rgba(255, 255, 255, 0.08);
-        border-radius: 3px;
-        transition: background-color 0.2s ease;
-    }
-
-    ::-webkit-scrollbar-thumb:hover,
-    ::-webkit-scrollbar-thumb:active {
-        background: #4ECDC4;
-    }
-
-    * {
-        scrollbar-width: thin;
-        scrollbar-color: rgba(255, 255, 255, 0.08) transparent;
-    }
-}
 
 /* :::::::::::::::::::::::::: RESPONSIVE CORE BASE :::::::::::::::::::::::::: */
 

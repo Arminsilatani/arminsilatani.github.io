@@ -1,51 +1,3 @@
-/*
-  Author: Armin Silatani
-  Date: 2026-07-10
-  Version: 0.0.3
-*/
-
-/* ==========================================================================
-   ==============================  INDEX  ==================================
-   ==========================================================================
-   01. CSS VARIABLES
-   02. RESET & BASE
-   03. UTILITY CLASSES
-   04. INTRO SECTION
-   05. CATEGORIES GRID
-   06. CATEGORY CARD
-   07. PORTFOLIO LIST
-   08. PORTFOLIO ROW
-   09. IN-PROGRESS STATUS
-   10. GRAPHIC CARDS
-   11. CTA BOX
-   12. BUTTONS
-   13. EXPANDABLE LIST
-   14. LIST WRAPPER
-   15. MOTION HELPERS
-   16. RESPONSIVE — MOBILE (≤768px)
-   17. RESPONSIVE — OTHER BREAKPOINTS
-   ==========================================================================
-   
-   ⚠️  نکته: افکت glow ردیف‌ها توسط CSS و via `inset-inline-start` کنترل می‌شه.
-       خطوط GSAP مربوط به glow در animations.js باید حذف شده باشن.
-   ========================================================================== */
-
-
-/* ==========================================================================
-   01. CSS VARIABLES
-   ========================================================================== */
-
-:root {
-  --bg: #0d0d0d;
-  --border: rgba(255, 255, 255, 0.08);
-  --text: #f5f7fb;
-  --text-soft: rgba(245, 247, 251, 0.74);
-  --accent: #4ecdc4;
-  --accent-soft: rgba(78, 205, 196, 0.14);
-  --accent-soft-2: rgba(78, 205, 196, 0.08);
-  --accent-border: rgba(78, 205, 196, 0.35);
-  --container: 1280px;
-}
 
 
 /* ==========================================================================
@@ -429,7 +381,7 @@ html[dir="ltr"] .category-card:hover .category-card__footer svg {
   top: 50%;
   inset-inline-end: var(--row-inline-padding);
   transform: translateY(-50%);
-  z-index: 2;
+  z-index: var(--z-content);       /* 10 — بود 2 */
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -833,7 +785,6 @@ html[lang="it"] .portfolio-row[data-status="in-progress"] .portfolio-row__year::
     gap: 18px;
     padding: 14px 20px;
     border-radius: 5px;
-
   }
 
   body.portfolio-page .quick-link i {
@@ -1067,7 +1018,8 @@ html[lang="it"] .portfolio-row[data-status="in-progress"] .portfolio-row__year::
     color: var(--text);
     border: 1px solid var(--border);
   }
-    body.portfolio-page .portfolio-row.extra-item:not(.is-visible) {
+
+  body.portfolio-page .portfolio-row.extra-item:not(.is-visible) {
     display: none;
   }
 }

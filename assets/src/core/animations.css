@@ -79,18 +79,6 @@
     80%      { transform: translateX(4px); }
 }
 
-/* :::::::::::::::::::::::::: GSAP / REVEAL & COMPONENT STYLES :::::::::::::::::::::::::: */
-
-:root {
-    --accent: #4ECDC4;
-    --accent-soft: rgba(78,205,196,0.14);
-    --accent-border: rgba(78,205,196,0.35);
-    --text: #F5F7FB;
-    --text-soft: rgba(245,247,251,0.74);
-    --border: rgba(255,255,255,0.08);
-    --radius-lg: 28px;
-    --radius-md: 20px;
-}
 
 /* :::::::::::::::::::::::::: REVEAL HELPERS :::::::::::::::::::::::::: */
 
@@ -188,7 +176,7 @@
 
 .portfolio-row__content {
     position: relative;
-    z-index: 2;
+    z-index: var(--z-content);
     display: flex;
     flex-direction: column;
     gap: 10px;

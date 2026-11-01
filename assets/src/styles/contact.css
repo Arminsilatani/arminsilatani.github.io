@@ -26,7 +26,7 @@ body::before {
     position: fixed;
     inset: 0;
     pointer-events: none;
-    z-index: 0;
+    z-index: var(--z-base);
     opacity: 0.03;
     background-image:
         radial-gradient(circle at 20% 30%, #4ECDC4 0.5px, transparent 0.5px),
@@ -45,7 +45,7 @@ body::before {
     margin: 0 auto;
     padding: 0 28px;
     position: relative;
-    z-index: 1;
+    z-index: var(--z-content);
 }
 
 .section {
@@ -451,7 +451,7 @@ a.contact-info__value:hover {
 
 #dayTooltip {
     position: fixed;
-    z-index: 9999;
+    z-index: var(--z-dropdown);
     background: var(--bg-card);
     border: 1px solid var(--border-active);
     border-radius: var(--radius);
