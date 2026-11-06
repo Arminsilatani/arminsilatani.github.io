@@ -1,12 +1,4 @@
-/* =========================================
-   SERVICES PAGE — EDITORIAL LIST ONLY
-   (بدون ریست، بدون فونت، فقط کلاس‌های اختصاصی)
-   ========================================= */
 
-/* ===== Section: List ===== */
-.editorial-list-section {
-    padding-block: 60px;
-}
 
 .list-header {
     display: flex;
@@ -152,11 +144,15 @@
     transform: translateX(0);
     color: var(--accent);
 }
-
-/* ===== Sub services ===== */
-.sub-list-section {
-    padding-block: 60px 0;
+/* در حالت LTR فلش برعکس شود */
+[dir="ltr"] .item-action svg,
+[dir="ltr"] .item-action i,
+[dir="ltr"] .item-action .arrow-icon,
+[dir="ltr"] .item-action img {
+    transform: scaleX(-1);
 }
+/* ===== Sub services ===== */
+
 
 .sub-list .editorial-item {
     padding-block: 35px;
@@ -168,15 +164,15 @@
 
 /* ===== CTA ===== */
 .editorial-cta {
-    padding-block: 120px 0;          /* ← پایین صفر شد (قبلاً 160px بود) */
+    padding-block: 120px 0;
     text-align: center;
 }
 
 .cta-content {
     display: flex;
     flex-direction: column;
-    align-items: center;              /* ← وسط‌چین افقی مطمئن */
-    gap: 20px;                        /* فاصله بین h2 و دکمه */
+    align-items: center;
+    gap: 20px;
 }
 
 .cta-content h2 {
@@ -234,9 +230,6 @@
         font-size: 0.95rem;
     }
 
-    .editorial-cta {
-        padding-block: 60px 100px;
-    }
 
     .cta-content h2 {
         font-size: 1.8rem;

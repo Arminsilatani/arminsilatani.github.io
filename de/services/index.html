@@ -146,380 +146,249 @@
     <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
     <header-component></header-component>
 
-    <main class="has-footer-gap">
-      <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
-      <section class="hero-section">
-                        <video
-        class="hero-section__video"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="metadata"
+<main class="has-footer-gap">
+  <!-- :::::::::::::::::::::::::: HERO SECTION (دقیقاً مثل انگلیسی) :::::::::::::::::::::::::: -->
+  <section class="hero-section">
+    <video
+      class="hero-section__video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
     >
-        <source src="/assets/images/arminsilatani/services/seo/hero.mp4" type="video/mp4">
+      <source src="/assets/images/arminsilatani/services/seo/hero.mp4" type="video/mp4">
     </video>
 
     <div class="hero-section__noise" aria-hidden="true"></div>
     <div class="hero-section__scanlines" aria-hidden="true"></div>
     <div class="hero-section__glitch" aria-hidden="true"></div>
-        <div class="hero-container container-1300">
-          <language-component></language-component>
-          <div class="hero-title">
-            <h1 class="split-title">Digitale Marketing-Dienstleistungen</h1>
-          </div>
-        </div>
-        <div class="pro-divider">
-          <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
-            <defs>
-              <filter
-                id="dividerShadow"
-                x="0"
-                y="-30%"
-                width="100%"
-                height="150%"
-              >
-                <feDropShadow
-                  dx="0"
-                  dy="-8"
-                  stdDeviation="12"
-                  flood-color="rgba(0,0,0,0.55)"
-                />
-              </filter>
-            </defs>
-            <path
-              filter="url(#dividerShadow)"
-              fill="#0D0D0D"
-              d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
+    <div class="hero-container container-1300">
+      <language-component></language-component>
+      <div class="hero-title">
+        <h1>
+          <span class="split-title">Digitale Marketing-Dienstleistungen</span>
+          <span class="h1_sub reveal-up">– Online-Marketing von Beratung bis Umsetzung</span>
+        </h1>
+      </div>
+    </div>
+    <div class="pro-divider">
+      <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
+        <defs>
+          <filter
+            id="dividerShadow"
+            x="0"
+            y="-30%"
+            width="100%"
+            height="150%"
+          >
+            <feDropShadow
+              dx="0"
+              dy="-8"
+              stdDeviation="12"
+              flood-color="rgba(0,0,0,0.55)"
             />
+          </filter>
+        </defs>
+        <path
+          filter="url(#dividerShadow)"
+          fill="#0D0D0D"
+          d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
+        />
+      </svg>
+    </div>
+    <terminal-breadcrumb></terminal-breadcrumb>
+  </section>
+
+  <!-- :::::::::::::::::::::::::: SERVICES — EDITORIAL (فقط این بخش عوض شده) :::::::::::::::::::::::::: -->
+  <section class="editorial-list-section container-1300">
+    <div class="list-header">
+      <span class="line"></span>
+    </div>
+
+    <div class="editorial-list">
+
+      <!-- 01 — سئو -->
+      <a href="/services/seo" class="editorial-item reveal-item">
+        <div class="item-title-group">
+          <div class="item-icon lottie-icon"
+               data-lottie="/assets/lottie/trending-up.json"
+               data-lottie-mode="hover">
+          </div>
+          <h3>SEO-Dienstleistungen</h3>
+        </div>
+        <div class="item-desc">
+          <p>Im Rahmen meiner digitalen Marketing-Dienstleistungen ermittle ich zunächst <strong>wirtschaftlich relevante Suchbegriffe</strong> und erstelle darauf abgestimmte Inhalte. Damit möchte ich Menschen erreichen, die konkretes Kaufinteresse haben.</p>
+        </div>
+        <div class="item-action">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
           </svg>
         </div>
-        <terminal-breadcrumb></terminal-breadcrumb>
-      </section>
+      </a>
 
-      <!-- :::::::::::::::::::::::::: SERVICES SECTION :::::::::::::::::::::::::: -->
-      <div class="services-wrapper">
-        <div class="scroll-container categories-grid" id="scrollContainer">
-          <div
-            class="service-card reveal-card"
-            data-index="0"
-            data-link="/services/seo"
-          >
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-              <polyline points="17 6 23 6 23 12"></polyline>
-            </svg>
-            <h3>SEO</h3>
-            <p class="card-desc">
-              Ich finde die Keywords, die Ihnen Geld bringen, und schreibe
-              Content, der kaufbereite Kunden direkt anspricht.
-            </p>
+      <!-- 02 — طراحی سایت -->
+      <a href="/services/web-design" class="editorial-item reveal-item">
+        <div class="item-title-group">
+          <div class="item-icon lottie-icon"
+               data-lottie="/assets/lottie/code.json"
+               data-lottie-mode="hover">
           </div>
-
-          <div
-            class="service-card reveal-card"
-            data-index="1"
-            data-link="/services/web-design"
-          >
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-              <line x1="8" y1="21" x2="16" y2="21"></line>
-              <line x1="12" y1="17" x2="12" y2="21"></line>
-            </svg>
-            <h3>Webdesign</h3>
-            <p class="card-desc">
-              Von der ersten Idee bis zur fertigen Website – ich übernehme
-              alles. Sie bleiben entspannt, ich liefere pünktlich.
-            </p>
-          </div>
-
-          <div
-            class="service-card reveal-card"
-            data-index="2"
-            data-link="/services/ecommerce"
-          >
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="9" cy="21" r="1"></circle>
-              <circle cx="20" cy="21" r="1"></circle>
-              <path
-                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
-              ></path>
-            </svg>
-            <h3>Online-Shop-Entwicklung</h3>
-            <p class="card-desc">
-              Ihr Online-Shop wird so aufgebaut, dass Sie Produkte, Rabatte und
-              Bestellungen genauso leicht verwalten wie Ihre Handy-Apps.
-            </p>
-          </div>
-
-          <div
-            class="service-card reveal-card"
-            data-index="3"
-            data-link="/services/google-ads"
-          >
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="12" cy="12" r="10"></circle>
-              <circle cx="12" cy="12" r="6"></circle>
-              <circle cx="12" cy="12" r="2"></circle>
-            </svg>
-            <h3>Google Ads</h3>
-            <p class="card-desc">
-              Meine Google Ads-Kampagnen bringen echte Interessenten. Jeder
-              Klick zählt – kein Cent wird verschwendet.
-            </p>
-          </div>
-
-          <div
-            class="service-card reveal-card"
-            data-index="4"
-            data-link="/services/graphics"
-          >
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
-              <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
-              <path d="M2 2l7.586 7.586"></path>
-              <circle cx="11" cy="11" r="2"></circle>
-            </svg>
-            <h3>Grafikdesign</h3>
-            <p class="card-desc">
-              Meine Grafiken sehen nicht nur gut aus. Sie haben einen Job:
-              Blicke fangen, Vertrauen schaffen, Verkäufe pushen.
-            </p>
-          </div>
-
-          <div
-            class="service-card reveal-card"
-            data-index="5"
-            data-link="/services/social-media"
-          >
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="18" cy="5" r="3"></circle>
-              <circle cx="6" cy="12" r="3"></circle>
-              <circle cx="18" cy="19" r="3"></circle>
-              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-            </svg>
-            <h3>Social Media</h3>
-            <p class="card-desc">
-              Mit den richtigen Hashtags und Trends sorge ich dafür, dass Ihr
-              Content in der Explore-Seite landet und genau Ihre Leute erreicht.
-            </p>
-          </div>
-
-          <div
-            class="service-card reveal-card"
-            data-index="6"
-            data-link="/services/ui-ux"
-          >
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-              <polyline points="2 12 12 17 22 12"></polyline>
-              <polyline points="2 17 12 22 22 17"></polyline>
-            </svg>
-            <h3>UI/UX-Design</h3>
-            <p class="card-desc">
-              Jeder Button, jeder Abstand, jeder Klickweg folgt der
-              Nutzerpsychologie. Das Ergebnis: mehr Klicks, mehr Conversions.
-            </p>
-          </div>
+          <h3>Webdesign</h3>
         </div>
+        <div class="item-desc">
+          <p>Von der ersten Idee bis zur Veröffentlichung Ihrer Website koordiniere ich die Umsetzung. Sie bringen Ihre Vorstellungen ein, ich kümmere mich um die Realisierung – mit dem Anspruch, das Projekt für Sie unkompliziert und termingerecht umzusetzen.</p>
+        </div>
+        <div class="item-action">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </div>
+      </a>
 
-        <div class="dots-nav" id="dotsNav"></div>
-      </div>
-    </main>
+      <!-- 03 — فروشگاه اینترنتی -->
+      <a href="/services/ecommerce" class="editorial-item reveal-item">
+        <div class="item-title-group">
+          <div class="item-icon lottie-icon"
+               data-lottie="/assets/lottie/shopping-bag.json"
+               data-lottie-mode="hover">
+          </div>
+          <h3>Onlineshop-Erstellung</h3>
+        </div>
+        <div class="item-desc">
+          <p>Ich erstelle einen professionellen Onlineshop, in dem Sie <strong>Produkte, Rabatte und Bestellungen einfach verwalten</strong> können. Die Bedienung soll für Sie so verständlich und vertraut sein wie die tägliche Nutzung Ihres Smartphones.</p>
+        </div>
+        <div class="item-action">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- 04 — گوگل ادز -->
+      <a href="/services/google-ads" class="editorial-item reveal-item">
+        <div class="item-title-group">
+          <div class="item-icon lottie-icon"
+               data-lottie="/assets/lottie/target.json"
+               data-lottie-mode="hover">
+          </div>
+          <h3>Google Ads</h3>
+        </div>
+        <div class="item-desc">
+          <p>Ihre Google-Ads-Kampagnen richte ich gezielt auf potenzielle Kunden mit ernsthaftem Interesse aus. Dabei geht es darum, relevante Klicks zu gewinnen und Ihre <strong>Werbeausgaben sinnvoll einzusetzen</strong>, statt Budget für unpassende Zugriffe aufzuwenden.</p>
+        </div>
+        <div class="item-action">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </div>
+      </a>
+
+    </div>
+  </section>
+  <section-divider role="presentation" aria-hidden="true"></section-divider>
+  <!-- :::::::::::::::::::::::::: SUB SERVICES :::::::::::::::::::::::::: -->
+  <section class="editorial-list-section sub-list-section container-1300">
+    <div class="list-header">
+      <h2 class="reveal-up">Ergänzende Leistungen</h2>
+      <span class="line"></span>
+    </div>
+
+    <div class="editorial-list sub-list">
+
+      <!-- 05 — گرافیک -->
+      <a href="/services/graphics" class="editorial-item reveal-item">
+        <div class="item-title-group">
+          <div class="item-icon lottie-icon"
+               data-lottie="/assets/lottie/move.json"
+               data-lottie-mode="hover">
+          </div>
+          <h3>Grafikdesign</h3>
+        </div>
+        <div class="item-desc">
+          <p>Gutes Aussehen allein reicht nicht: Jeder meiner Entwürfe verfolgt ein klares Ziel – Aufmerksamkeit gewinnen, Vertrauen aufbauen oder den Verkauf unterstützen.</p>
+        </div>
+        <div class="item-action">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- 06 — شبکه‌های اجتماعی -->
+      <a href="/services/social-media" class="editorial-item reveal-item">
+        <div class="item-title-group">
+          <div class="item-icon lottie-icon"
+               data-lottie="/assets/lottie/hash.json"
+               data-lottie-mode="hover">
+          </div>
+          <h3>Social Media</h3>
+        </div>
+        <div class="item-desc">
+          <p>Mit passenden Hashtags und aktuellen Trends arbeite ich darauf hin, dass Ihre Inhalte im Explore-Bereich, dem Entdeckungsbereich von Instagram, sichtbar werden können. So möchte ich Follower gewinnen, die sich für Ihre Themen interessieren.</p>
+        </div>
+        <div class="item-action">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- 07 — رابط کاربری -->
+      <a href="/services/ui-ux" class="editorial-item reveal-item">
+        <div class="item-title-group">
+          <div class="item-icon lottie-icon"
+               data-lottie="/assets/lottie/layout.json"
+               data-lottie-mode="hover">
+          </div>
+          <h3>UI/UX-Design</h3>
+        </div>
+        <div class="item-desc">
+          <p>Schaltflächen, Abstände und Interaktionswege gestalte ich auf Grundlage der Nutzerpsychologie. <strong>Benutzeroberfläche und Nutzerführung</strong> sollen so zusammenspielen, dass sie höhere Klickraten unterstützen und es Nutzern erleichtern, Abläufe vollständig abzuschließen.</p>
+        </div>
+        <div class="item-action">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- :::::::::::::::::::::::::: CTA (با دکمه btn-dark خودتان) :::::::::::::::::::::::::: -->
+  <section class="editorial-cta container-1080">
+    <div class="cta-content reveal-item">
+      <h2>Möchten Sie ein Projekt starten?</h2>
+      <a href="tel:+989125759466" class="btn-dark"><strong>Lassen Sie uns darüber sprechen</strong></a>
+    </div>
+  </section>
+</main>
 
     <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
     <footer-component></footer-component>
+    <back-to-top></back-to-top>
 
-    <!-- :::::::::::::::::::::::::: COMPONENT SCRIPTS :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: COMPONENT SCRIPTS (دقیقاً مثل انگلیسی) :::::::::::::::::::::::::: -->
     <script src="/assets/src/core/i18n.js"></script>
-<script type="module" src="/assets/src/components/header.js"></script> 
-   <script src="/assets/src/components/blurup.js"></script>
-<script type="module" src="/assets/src/components/language-selector.js"></script>
+    <script type="module" src="/assets/src/components/header.js"></script>
+    <script src="/assets/src/components/blurup.js"></script>
+    <script type="module" src="/assets/src/components/language-selector.js"></script>
     <script src="/assets/src/components/terminal-breadcrumb.js"></script>
-<script type="module" src="/assets/src/components/footer.js"></script>
-<script type="module" src="/assets/src/components/back-to-top.js"></script>
-<script src="/assets/src/core/cursor.js"></script>
-<script src="/assets/src/core/loader.js"></script>
-<script type="module" src="/assets/src/core/lottie-icons.js"></script>
-    <!-- :::::::::::::::::::::::::: SERVICES SLIDER SCRIPT :::::::::::::::::::::::::: -->
-    <script>
-      (function () {
-        /* :::::::::::::::::::::::::: DOM REFERENCES :::::::::::::::::::::::::: */
-        const wrapper = document.querySelector(".services-wrapper");
-        if (!wrapper) return;
-
-        const scrollContainer = wrapper.querySelector("#scrollContainer");
-        const dotsNav = wrapper.querySelector("#dotsNav");
-        const cards = scrollContainer.querySelectorAll(".service-card");
-        const totalCards = cards.length;
-
-        /* :::::::::::::::::::::::::: NAVIGATION DOTS :::::::::::::::::::::::::: */
-        for (let i = 0; i < totalCards; i++) {
-          const dot = document.createElement("button");
-          dot.classList.add("dot");
-          dot.setAttribute("aria-label", `Karte ${i + 1}`);
-          dot.addEventListener("click", () => scrollToCard(i));
-          dotsNav.appendChild(dot);
-        }
-        const dots = dotsNav.querySelectorAll(".dot");
-
-        /* :::::::::::::::::::::::::: CORE LOGIC :::::::::::::::::::::::::: */
-        function scrollToCard(index) {
-          const card = cards[index];
-          if (!card) return;
-          const containerWidth = scrollContainer.clientWidth;
-          const cardLeft = card.offsetLeft;
-          const cardWidth = card.offsetWidth;
-          const scrollTarget = cardLeft - containerWidth / 2 + cardWidth / 2;
-          scrollContainer.scrollTo({ left: scrollTarget, behavior: "smooth" });
-        }
-
-        function updateActiveCard() {
-          const containerWidth = scrollContainer.clientWidth;
-          const containerCenter =
-            scrollContainer.scrollLeft + containerWidth / 2;
-          let closestIndex = 0;
-          let closestDistance = Infinity;
-
-          cards.forEach((card, index) => {
-            const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-            const distance = Math.abs(containerCenter - cardCenter);
-            if (distance < closestDistance) {
-              closestDistance = distance;
-              closestIndex = index;
-            }
-            card.classList.remove("active");
-          });
-
-          if (cards[closestIndex]) {
-            cards[closestIndex].classList.add("active");
-          }
-
-          dots.forEach((dot, index) => {
-            dot.classList.toggle("active-dot", index === closestIndex);
-          });
-        }
-
-        /* :::::::::::::::::::::::::: EVENT LISTENERS :::::::::::::::::::::::::: */
-        let scrollTimeout;
-        scrollContainer.addEventListener(
-          "scroll",
-          () => {
-            if (scrollTimeout) cancelAnimationFrame(scrollTimeout);
-            scrollTimeout = requestAnimationFrame(updateActiveCard);
-          },
-          { passive: true },
-        );
-
-        cards.forEach((card, index) => {
-          card.addEventListener("click", () => scrollToCard(index));
-        });
-
-        /* :::::::::::::::::::::::::: INITIALIZATION :::::::::::::::::::::::::: */
-        function initializePosition() {
-          if (cards.length > 0) {
-            const firstCard = cards[0];
-            const containerWidth = scrollContainer.clientWidth;
-            const cardWidth = firstCard.offsetWidth;
-            const scrollTarget =
-              firstCard.offsetLeft - containerWidth / 2 + cardWidth / 2;
-            scrollContainer.scrollLeft = scrollTarget;
-          }
-          updateActiveCard();
-        }
-
-        window.addEventListener("load", () => {
-          setTimeout(initializePosition, 100);
-        });
-
-        scrollContainer.addEventListener("keydown", (e) => {
-          if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
-            e.preventDefault();
-            const currentActive = wrapper.querySelector(".service-card.active");
-            const currentIndex = currentActive
-              ? parseInt(currentActive.getAttribute("data-index"))
-              : 0;
-            let newIndex = currentIndex;
-            if (e.key === "ArrowRight") {
-              newIndex = Math.min(currentIndex + 1, totalCards - 1);
-            } else {
-              newIndex = Math.max(currentIndex - 1, 0);
-            }
-            if (newIndex !== currentIndex) scrollToCard(newIndex);
-          }
-        });
-
-        if (document.readyState === "complete") {
-          setTimeout(initializePosition, 100);
-        }
-      })();
-    </script>
+    <script type="module" src="/assets/src/components/footer.js"></script>
+    <script type="module" src="/assets/src/components/back-to-top.js"></script>
+    <script src="/assets/src/core/cursor.js"></script>
+    <script src="/assets/src/core/loader.js"></script>
+    <script type="module" src="/assets/src/core/lottie-icons.js"></script>
 
     <!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
-    <script src="/assets/src/components/animations.js"></script>
+    <script src="/assets/src/core/animations.js"></script>
   </body>
 </html>

@@ -145,382 +145,249 @@
     <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
     <header-component></header-component>
 
-    <main class="has-footer-gap">
-      <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
-      <section class="hero-section">
-                        <video
-        class="hero-section__video"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="metadata"
+<main class="has-footer-gap">
+  <!-- :::::::::::::::::::::::::: HERO SECTION (دقیقاً مثل انگلیسی) :::::::::::::::::::::::::: -->
+  <section class="hero-section">
+    <video
+      class="hero-section__video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
     >
-        <source src="/assets/images/arminsilatani/services/seo/hero.mp4" type="video/mp4">
+      <source src="/assets/images/arminsilatani/services/seo/hero.mp4" type="video/mp4">
     </video>
 
     <div class="hero-section__noise" aria-hidden="true"></div>
     <div class="hero-section__scanlines" aria-hidden="true"></div>
     <div class="hero-section__glitch" aria-hidden="true"></div>
-        <div class="hero-container container-1300">
-          <language-component></language-component>
-          <div class="hero-title">
-            <h1>خدمات التسويق الرقمي</h1>
-          </div>
-        </div>
-        <div class="pro-divider">
-          <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
-            <defs>
-              <filter
-                id="dividerShadow"
-                x="0"
-                y="-30%"
-                width="100%"
-                height="150%"
-              >
-                <feDropShadow
-                  dx="0"
-                  dy="-8"
-                  stdDeviation="12"
-                  flood-color="rgba(0,0,0,0.55)"
-                />
-              </filter>
-            </defs>
-            <path
-              filter="url(#dividerShadow)"
-              fill="#0D0D0D"
-              d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
+    <div class="hero-container container-1300">
+      <language-component></language-component>
+      <div class="hero-title">
+        <h1>
+          <span class="split-title">خدمات التسويق الرقمي</span>
+          <span class="h1_sub reveal-up">استشارات تسويقية وتنفيذ يراعي السوق</span>
+        </h1>
+      </div>
+    </div>
+    <div class="pro-divider">
+      <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
+        <defs>
+          <filter
+            id="dividerShadow"
+            x="0"
+            y="-30%"
+            width="100%"
+            height="150%"
+          >
+            <feDropShadow
+              dx="0"
+              dy="-8"
+              stdDeviation="12"
+              flood-color="rgba(0,0,0,0.55)"
             />
+          </filter>
+        </defs>
+        <path
+          filter="url(#dividerShadow)"
+          fill="#0D0D0D"
+          d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
+        />
+      </svg>
+    </div>
+    <terminal-breadcrumb></terminal-breadcrumb>
+  </section>
+
+  <!-- :::::::::::::::::::::::::: SERVICES — EDITORIAL (فقط این بخش عوض شده) :::::::::::::::::::::::::: -->
+  <section class="editorial-list-section container-1300">
+    <div class="list-header">
+      <span class="line"></span>
+    </div>
+
+    <div class="editorial-list">
+
+      <!-- 01 — سئو -->
+      <a href="/services/seo" class="editorial-item reveal-item">
+        <div class="item-title-group">
+          <div class="item-icon lottie-icon"
+               data-lottie="/assets/lottie/trending-up.json"
+               data-lottie-mode="hover">
+          </div>
+          <h3>خدمات تحسين محركات البحث</h3>
+        </div>
+        <div class="item-desc">
+          <p>ضمن خدمات التسويق الرقمي، أحدّد الكلمات المفتاحية ذات الجدوى التجارية، وأنشئ محتوى يستهدف الجمهور الأقرب إلى اتخاذ قرار الشراء، لتصل إلى أشخاص يبحثون عمّا تقدّمه ولديهم <strong>نية الشراء</strong>.</p>
+        </div>
+        <div class="item-action">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
           </svg>
         </div>
-        <terminal-breadcrumb></terminal-breadcrumb>
-      </section>
+      </a>
 
-      <!-- :::::::::::::::::::::::::: SERVICES SECTION :::::::::::::::::::::::::: -->
-      <div class="services-wrapper">
-        <div class="scroll-container categories-grid" id="scrollContainer">
-          <div
-            class="service-card reveal-card"
-            data-index="0"
-            data-link="/ar/services/seo"
-          >
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-              <polyline points="17 6 23 6 23 12"></polyline>
-            </svg>
-            <h3>خدمات سيو</h3>
-            <p class="card-desc">
-              أختار الكلمات المفتاحية اللي تجيب مبيعات فعلية، وأكتب محتوى يستهدف
-              العملاء الجاهزين للشراء مش مجرد زوار عابرين.
-            </p>
+      <!-- 02 — طراحی سایت -->
+      <a href="/services/web-design" class="editorial-item reveal-item">
+        <div class="item-title-group">
+          <div class="item-icon lottie-icon"
+               data-lottie="/assets/lottie/code.json"
+               data-lottie-mode="hover">
           </div>
-
-          <div
-            class="service-card reveal-card"
-            data-index="1"
-            data-link="/ar/services/web-design"
-          >
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-              <line x1="8" y1="21" x2="16" y2="21"></line>
-              <line x1="12" y1="17" x2="12" y2="21"></line>
-            </svg>
-            <h3>تصميم المواقع الإلكترونية</h3>
-            <p class="card-desc">
-              أتابع موقعك من أول فكرة لحد ما يشتغل على الهوا. دورك بس تقول عايز
-              إيه، والباقي عليّ.
-            </p>
-          </div>
-
-          <div
-            class="service-card reveal-card"
-            data-index="2"
-            data-link="/ar/services/ecommerce"
-          >
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="9" cy="21" r="1"></circle>
-              <circle cx="20" cy="21" r="1"></circle>
-              <path
-                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
-              ></path>
-            </svg>
-            <h3>تصميم المتاجر الإلكترونية</h3>
-            <p class="card-desc">
-              أبنيلك متجر إلكتروني تقدر تدير منتجاتك وعروضك وطلباتك منه بسهولة،
-              زي ما تتصفح جوالك بالضبط.
-            </p>
-          </div>
-
-          <div
-            class="service-card reveal-card"
-            data-index="3"
-            data-link="/ar/services/google-ads"
-          >
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="12" cy="12" r="10"></circle>
-              <circle cx="12" cy="12" r="6"></circle>
-              <circle cx="12" cy="12" r="2"></circle>
-            </svg>
-            <h3>إعلانات جوجل</h3>
-            <p class="card-desc">
-              أشغّل إعلانات جوجل بدقة عشان كل كليك يجيبلك عميل جاد مهتم، مش فلوس
-              تروح على الفاضي.
-            </p>
-          </div>
-
-          <div
-            class="service-card reveal-card"
-            data-index="4"
-            data-link="/ar/services/graphics"
-          >
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
-              <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
-              <path d="M2 2l7.586 7.586"></path>
-              <circle cx="11" cy="11" r="2"></circle>
-            </svg>
-            <h3>التصميم الجرافيكي</h3>
-            <p class="card-desc">
-              التصميم عندي مش للشكل بس. كل تصميم وراه هدف واضح: يلفت النظر، يبني
-              ثقة، أو يزيد مبيعاتك.
-            </p>
-          </div>
-
-          <div
-            class="service-card reveal-card"
-            data-index="5"
-            data-link="/ar/services/social-media"
-          >
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="18" cy="5" r="3"></circle>
-              <circle cx="6" cy="12" r="3"></circle>
-              <circle cx="18" cy="19" r="3"></circle>
-              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-            </svg>
-            <h3>إدارة وسائل التواصل الاجتماعي</h3>
-            <p class="card-desc">
-              أشتغل على الهاشتاقات والترندات بذكاء عشان المحتوى بتاعك يطلع في
-              الإكسبلور ويجذب متابعين فعلاً مهتمين بمجالك.
-            </p>
-          </div>
-
-          <div
-            class="service-card reveal-card"
-            data-index="6"
-            data-link="/ar/services/ui-ux"
-          >
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-              <polyline points="2 12 12 17 22 12"></polyline>
-              <polyline points="2 17 12 22 22 17"></polyline>
-            </svg>
-            <h3>تصميم واجهة وتجربة المستخدم (UI/UX)</h3>
-            <p class="card-desc">
-              أصمم كل زر ومسافة ومسار في الموقع على أساس سيكولوجية المستخدم،
-              عشان يضغط أكثر ويكمل العملية لآخرها.
-            </p>
-          </div>
+          <h3>تصميم المواقع</h3>
         </div>
+        <div class="item-desc">
+          <p>أتولّى تصميم موقعك من الصفر حتى إطلاقه؛ ما عليك سوى تقديم الفكرة، وأتكفّل بالباقي لأخفّف عنك عبء المتابعة وأنجز العمل في موعده.</p>
+        </div>
+        <div class="item-action">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </div>
+      </a>
 
-        <div class="dots-nav" id="dotsNav"></div>
-      </div>
-    </main>
+      <!-- 03 — فروشگاه اینترنتی -->
+      <a href="/services/ecommerce" class="editorial-item reveal-item">
+        <div class="item-title-group">
+          <div class="item-icon lottie-icon"
+               data-lottie="/assets/lottie/shopping-bag.json"
+               data-lottie-mode="hover">
+          </div>
+          <h3>تصميم المتاجر الإلكترونية</h3>
+        </div>
+        <div class="item-desc">
+          <p>أصمّم لك متجرًا إلكترونيًا احترافيًا يسهل تشغيله يوميًا، لتدير المنتجات والخصومات والطلبات بسهولة تفقّد هاتفك.</p>
+        </div>
+        <div class="item-action">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- 04 — گوگل ادز -->
+      <a href="/services/google-ads" class="editorial-item reveal-item">
+        <div class="item-title-group">
+          <div class="item-icon lottie-icon"
+               data-lottie="/assets/lottie/target.json"
+               data-lottie-mode="hover">
+          </div>
+          <h3>إعلانات Google Ads</h3>
+        </div>
+        <div class="item-desc">
+          <p>أنفّذ حملات Google Ads باستهداف دقيق يهدف إلى جذب نقرات من <strong>عملاء محتملين جادّين</strong>، بدلًا من استنزاف ميزانيتك في نقرات لا ترتبط بما تقدّمه.</p>
+        </div>
+        <div class="item-action">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </div>
+      </a>
+
+    </div>
+  </section>
+  <section-divider role="presentation" aria-hidden="true"></section-divider>
+  <!-- :::::::::::::::::::::::::: SUB SERVICES :::::::::::::::::::::::::: -->
+  <section class="editorial-list-section sub-list-section container-1300">
+    <div class="list-header">
+      <h2 class="reveal-up">خدمات تكميلية</h2>
+      <span class="line"></span>
+    </div>
+
+    <div class="editorial-list sub-list">
+
+      <!-- 05 — گرافیک -->
+      <a href="/services/graphics" class="editorial-item reveal-item">
+        <div class="item-title-group">
+          <div class="item-icon lottie-icon"
+               data-lottie="/assets/lottie/move.json"
+               data-lottie-mode="hover">
+          </div>
+          <h3>التصميم الجرافيكي</h3>
+        </div>
+        <div class="item-desc">
+          <p>لا أكتفي بتصميم جميل؛ بل أوجّه كل تصميم نحو هدف محدّد، سواء كان جذب الانتباه أو بناء الثقة أو دعم زيادة المبيعات.</p>
+        </div>
+        <div class="item-action">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- 06 — شبکه‌های اجتماعی -->
+      <a href="/services/social-media" class="editorial-item reveal-item">
+        <div class="item-title-group">
+          <div class="item-icon lottie-icon"
+               data-lottie="/assets/lottie/hash.json"
+               data-lottie-mode="hover">
+          </div>
+          <h3>التسويق عبر وسائل التواصل الاجتماعي</h3>
+        </div>
+        <div class="item-desc">
+          <p>أوظّف الوسوم والاتجاهات الرائجة ضمن التسويق عبر وسائل التواصل الاجتماعي، لتعزيز فرص ظهور محتواك في قسم الاستكشاف وجذب متابعين من جمهورك المستهدف.</p>
+        </div>
+        <div class="item-action">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- 07 — رابط کاربری -->
+      <a href="/services/ui-ux" class="editorial-item reveal-item">
+        <div class="item-title-group">
+          <div class="item-icon lottie-icon"
+               data-lottie="/assets/lottie/layout.json"
+               data-lottie-mode="hover">
+          </div>
+          <h3>تصميم واجهة المستخدم وتجربة المستخدم (UI/UX)</h3>
+        </div>
+        <div class="item-desc">
+          <p>أصمّم الأزرار والمسافات ومسارات التنقّل بناءً على فهم نفسية المستخدم وسلوكه، لتخدم تفاصيل الواجهة تجربة استخدام تهدف إلى <strong>تحسين معدل النقر</strong> وتسهيل إتمام الإجراءات.</p>
+        </div>
+        <div class="item-action">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- :::::::::::::::::::::::::: CTA (با دکمه btn-dark خودتان) :::::::::::::::::::::::::: -->
+  <section class="editorial-cta container-1080">
+    <div class="cta-content reveal-item">
+      <h2>هل لديك مشروع تود البدء به؟</h2>
+      <a href="tel:+989125759466" class="btn-dark"><strong>لنتحدث عن مشروعك</strong></a>
+    </div>
+  </section>
+</main>
 
     <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
     <footer-component></footer-component>
+    <back-to-top></back-to-top>
 
-    <!-- :::::::::::::::::::::::::: EXTERNAL SCRIPTS :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: COMPONENT SCRIPTS (دقیقاً مثل انگلیسی) :::::::::::::::::::::::::: -->
     <script src="/assets/src/core/i18n.js"></script>
-<script type="module" src="/assets/src/components/header.js"></script>
+    <script type="module" src="/assets/src/components/header.js"></script>
     <script src="/assets/src/components/blurup.js"></script>
-<script type="module" src="/assets/src/components/language-selector.js"></script>    
-<script src="/assets/src/components/terminal-breadcrumb.js"></script>
-<script type="module" src="/assets/src/components/footer.js"></script>
-<script type="module" src="/assets/src/components/back-to-top.js"></script>
-<script src="/assets/src/core/cursor.js"></script>
-<script src="/assets/src/core/loader.js"></script>
-<script type="module" src="/assets/src/core/lottie-icons.js"></script>
-
-    <!-- :::::::::::::::::::::::::: SERVICES SLIDER LOGIC :::::::::::::::::::::::::: -->
-    <script>
-      (function () {
-        /* :::::::::::::::::::::::::: DOM REFERENCES :::::::::::::::::::::::::: */
-        const wrapper = document.querySelector(".services-wrapper");
-        if (!wrapper) return;
-
-        const scrollContainer = wrapper.querySelector("#scrollContainer");
-        const dotsNav = wrapper.querySelector("#dotsNav");
-        const cards = scrollContainer.querySelectorAll(".service-card");
-        const totalCards = cards.length;
-
-        /* :::::::::::::::::::::::::: NAVIGATION DOTS :::::::::::::::::::::::::: */
-        for (let i = 0; i < totalCards; i++) {
-          const dot = document.createElement("button");
-          dot.classList.add("dot");
-          dot.setAttribute("aria-label", `رفتن به کارت ${i + 1}`);
-          dot.addEventListener("click", () => scrollToCard(i));
-          dotsNav.appendChild(dot);
-        }
-        const dots = dotsNav.querySelectorAll(".dot");
-
-        function scrollToCard(index) {
-          const card = cards[index];
-          if (!card) return;
-          const containerWidth = scrollContainer.clientWidth;
-          const cardLeft = card.offsetLeft;
-          const cardWidth = card.offsetWidth;
-          const scrollTarget = cardLeft - containerWidth / 2 + cardWidth / 2;
-          scrollContainer.scrollTo({ left: scrollTarget, behavior: "smooth" });
-        }
-
-        /* :::::::::::::::::::::::::: ACTIVE CARD TRACKING :::::::::::::::::::::::::: */
-        function updateActiveCard() {
-          const containerWidth = scrollContainer.clientWidth;
-          const containerCenter =
-            scrollContainer.scrollLeft + containerWidth / 2;
-          let closestIndex = 0;
-          let closestDistance = Infinity;
-
-          cards.forEach((card, index) => {
-            const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-            const distance = Math.abs(containerCenter - cardCenter);
-            if (distance < closestDistance) {
-              closestDistance = distance;
-              closestIndex = index;
-            }
-            card.classList.remove("active");
-          });
-
-          if (cards[closestIndex]) {
-            cards[closestIndex].classList.add("active");
-          }
-
-          dots.forEach((dot, index) => {
-            dot.classList.toggle("active-dot", index === closestIndex);
-          });
-        }
-
-        /* :::::::::::::::::::::::::: EVENT LISTENERS :::::::::::::::::::::::::: */
-        let scrollTimeout;
-        scrollContainer.addEventListener(
-          "scroll",
-          () => {
-            if (scrollTimeout) cancelAnimationFrame(scrollTimeout);
-            scrollTimeout = requestAnimationFrame(updateActiveCard);
-          },
-          { passive: true },
-        );
-
-        cards.forEach((card, index) => {
-          card.addEventListener("click", () => scrollToCard(index));
-        });
-
-        /* :::::::::::::::::::::::::: KEYBOARD NAVIGATION :::::::::::::::::::::::::: */
-        scrollContainer.addEventListener("keydown", (e) => {
-          if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
-            e.preventDefault();
-            const currentActive = wrapper.querySelector(".service-card.active");
-            const currentIndex = currentActive
-              ? parseInt(currentActive.getAttribute("data-index"))
-              : 0;
-            let newIndex = currentIndex;
-            if (e.key === "ArrowLeft") {
-              newIndex = Math.min(currentIndex + 1, totalCards - 1);
-            } else {
-              newIndex = Math.max(currentIndex - 1, 0);
-            }
-            if (newIndex !== currentIndex) scrollToCard(newIndex);
-          }
-        });
-
-        /* :::::::::::::::::::::::::: INITIALIZATION :::::::::::::::::::::::::: */
-        function initializePosition() {
-          if (cards.length > 0) {
-            const firstCard = cards[0];
-            const containerWidth = scrollContainer.clientWidth;
-            const cardWidth = firstCard.offsetWidth;
-            const scrollTarget =
-              firstCard.offsetLeft - containerWidth / 2 + cardWidth / 2;
-            scrollContainer.scrollLeft = scrollTarget;
-          }
-          updateActiveCard();
-        }
-
-        window.addEventListener("load", () => {
-          setTimeout(initializePosition, 100);
-        });
-
-        if (document.readyState === "complete") {
-          setTimeout(initializePosition, 100);
-        }
-      })();
-    </script>
+    <script type="module" src="/assets/src/components/language-selector.js"></script>
+    <script src="/assets/src/components/terminal-breadcrumb.js"></script>
+    <script type="module" src="/assets/src/components/footer.js"></script>
+    <script type="module" src="/assets/src/components/back-to-top.js"></script>
+    <script src="/assets/src/core/cursor.js"></script>
+    <script src="/assets/src/core/loader.js"></script>
+    <script type="module" src="/assets/src/core/lottie-icons.js"></script>
 
     <!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
-    <script src="/assets/src/components/animations.js"></script>
+    <script src="/assets/src/core/animations.js"></script>
   </body>
 </html>

@@ -562,3 +562,109 @@ a.contact-info__value:hover {
 #faq .section-title {
     margin-top: 0;
 }
+
+/* :::::::::::::::::::::::::: RESPONSIVE :::::::::::::::::::::::::: */
+
+/* تبلت */
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .avail-grid,
+    #availability .avail-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-form-wrapper {
+        padding: 28px 22px;
+    }
+
+    .section-title {
+        font-size: 1.9rem;
+    }
+
+    .timezone-clock {
+        font-size: 3rem;
+    }
+}
+
+/* موبایل */
+@media (max-width: 640px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .avail-grid,
+    #availability .avail-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .contact-info__card {
+        padding: 10px 14px;   /* کمی فضای عمودی بیشتر برای لمس */
+    }
+
+    .contact-form-wrapper {
+        padding: 20px 16px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+        line-height: 1.35;
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 28px;
+    }
+
+    .timezone-clock {
+        font-size: 2.4rem;
+    }
+
+    .timezone-offset {
+        margin-top: 12px;
+    }
+
+    .avail-card {
+        padding: 22px 18px;
+    }
+
+    .social-dots {
+        flex-wrap: wrap;      /* در صورت نیاز بشکنن */
+        justify-content: center;
+    }
+
+    .legend-row {
+        gap: 10px;
+        justify-content: flex-start;
+    }
+
+    .legend-item {
+        font-size: 0.65rem;
+    }
+
+    /* اسکرول تقویم روی موبایل راحت‌تر */
+    .mini-week__day {
+        width: 46px;
+    }
+}
+
+/* موبایل‌های خیلی کوچک */
+@media (max-width: 380px) {
+    .timezone-clock {
+        font-size: 2rem;
+    }
+
+    .contact-form-wrapper {
+        padding: 16px 12px;
+    }
+
+    .section-title {
+        font-size: 1.45rem;
+    }
+}
