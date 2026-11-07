@@ -162,10 +162,6 @@ body {
     display: flow-root;
 }
 
-.service-section:last-child {
-    margin-bottom: 150px;
-}
-
 .service-header {
     padding-right: 40px;
     min-height: 40px;

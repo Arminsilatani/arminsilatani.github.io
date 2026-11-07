@@ -140,7 +140,6 @@
                 </div>
             </div>
         </div>
-    </div>
     <div class="pro-divider">
         <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
             <defs>
@@ -207,17 +206,15 @@
                     </div>
                 </div>
             </section>
+            <section-divider role="presentation" aria-hidden="true"></section-divider>
 
             <!-- :::::::::::::::::::::::::: SERVICES SECTION :::::::::::::::::::::::::: -->
             <section class="services-section">
                 <div class="service-item service-main reveal-up">
-                    <div class="service-header">
-                        <img
-                            src="/assets/images/arminsilatani/ServicesSlogan.webp"
-                            alt="نوشته گرافیکی عبارت «خدمات من» با طراحی دست‌نویس و رنگ فیروزه‌ای"
-                            class="service-image-top"
-                        />
-                    </div>
+                    <h2 class="script-heading script-heading--services">
+                        <span class="script-heading__word script-heading__word--accent">خدمات</span>
+                        <span class="script-heading__word script-heading__word--sub">من</span>
+                    </h2>
                     <div class="service-text">
                         <p>
                             سایت شما باید دیده شود و من کمک می‌کنم این اتفاق بیفتد، با خدمات
@@ -241,11 +238,10 @@
                     ></video>
 
                     <a href="/services/web-design/" class="service-link" aria-label="طراحی سایت">
-                        <img
-                            src="/assets/images/arminsilatani/ServicesWebDesignSlogan.webp"
-                            alt="نوشته گرافیکی عبارت «طراحی سایت» با طراحی دست‌نویس و رنگ فیروزه‌ای"
-                            class="service-image-bottom"
-                        />
+                        <h2 class="script-heading script-heading--box">
+                            <span class="script-heading__word script-heading__word--accent">طراحی</span>
+                            <span class="script-heading__word">سایت</span>
+                        </h2>
                     </a>
                     <div class="tv-noise"></div>
                 </div>
@@ -259,11 +255,10 @@
                     ></video>
 
                     <a href="/services/seo/" class="service-link" aria-label="سئو سایت">
-                        <img
-                            src="/assets/images/arminsilatani/ServicesSEOSlogan.webp"
-                            alt="نوشته گرافیکی عبارت «سئو سایت» با طراحی دست‌نویس و رنگ فیروزه‌ای"
-                            class="service-image-bottom"
-                        />
+                        <h2 class="script-heading script-heading--box">
+                            <span class="script-heading__word script-heading__word--accent">سئو</span>
+                            <span class="script-heading__word">سایت</span>
+                        </h2>
                     </a>
                     <div class="tv-noise"></div>
                 </div>
@@ -277,31 +272,24 @@
                     ></video>
 
                     <a href="/services/google-ads/" class="service-link" aria-label="گوگل ادز">
-                        <img
-                            src="/assets/images/arminsilatani/ServicesAdsSlogan.webp"
-                            alt="نوشته گرافیکی عبارت «گوگل ادز» با طراحی دست‌نویس و رنگ فیروزه‌ای"
-                            class="service-image-bottom"
-                        />
+                        <h2 class="script-heading script-heading--box">
+                            <span class="script-heading__word script-heading__word--accent">گوگل</span>
+                            <span class="script-heading__word">ادز</span>
+                        </h2>
                     </a>
                     <div class="tv-noise"></div>
                 </div>
             </section>
-            </section>
+            <section-divider role="presentation" aria-hidden="true"></section-divider>
 
             <!-- :::::::::::::::::::::::::: PARTNERS SECTION :::::::::::::::::::::::::: -->
             <section class="partners-section reveal-up">
                 <partners-component></partners-component>
             </section>
+            <section-divider role="presentation" aria-hidden="true"></section-divider>
 
             <!-- :::::::::::::::::::::::::: TESTIMONIALS SECTION :::::::::::::::::::::::::: -->
-            <section class="testimonials-section">
-                <div class="testimonials-placeholder reveal-up">
-                    <img
-                        src="/assets/images/arminsilatani/TestimonialSlogan.webp"
-                        alt="نوشته گرافیکی عبارت «صدای مشتریان من» با طراحی دست‌نویس و رنگ فیروزه‌ای"
-                    />
-                </div>
-            </section>
+
 
             <div class="testimonials-container">
                 <div class="column">
@@ -318,6 +306,7 @@
 
         <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
         <footer-component></footer-component>
+        <back-to-top></back-to-top>
 
         <!-- :::::::::::::::::::::::::: COMPONENT SCRIPTS :::::::::::::::::::::::::: -->
          <script src="/assets/src/core/i18n.js"></script>
@@ -489,7 +478,7 @@
         </script>
 
         <!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
-        <script src="/assets/src/components/animations.js"></script>
+        <script src="/assets/src/core/animations.js"></script>
 
     </body>
 
