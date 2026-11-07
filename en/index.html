@@ -243,7 +243,7 @@
                 <div class="service-item service-box-1 tv-static-container reveal-up">
                     <video
                         class="service-video"
-                        data-src="../assets/images/arminsilatani/services/web-design/Featuredvideo.mp4"
+                        data-src="/assets/images/arminsilatani/services/web-design/Featuredvideo.mp4"
                         muted
                         loop
                         playsinline
@@ -264,7 +264,7 @@
                 <div class="service-item service-box-2 tv-static-container reveal-up">
                     <video
                         class="service-video"
-                        data-src="../assets/images/arminsilatani/services/seo/Featuredvideo.mp4"
+                        data-src="/assets/images/arminsilatani/services/seo/Featuredvideo.mp4"
                         muted
                         loop
                         playsinline
@@ -285,7 +285,7 @@
                 <div class="service-item service-box-3 tv-static-container reveal-up">
                     <video
                         class="service-video"
-                        data-src="../assets/images/arminsilatani/services/google-ads/Featuredvideo.mp4"
+                        data-src="/assets/images/arminsilatani/services/google-ads/Featuredvideo.mp4"
                         muted
                         loop
                         playsinline
@@ -341,6 +341,7 @@
 <script type="module" src="/assets/src/components/back-to-top.js"></script>
 <script src="/assets/src/core/cursor.js"></script>
 <script src="/assets/src/core/loader.js"></script>
+<script src="/assets/src/components/service-video.js"></script>
 
         <!-- :::::::::::::::::::::::::: TESTIMONIALS SCRIPT :::::::::::::::::::::::::: -->
         <script>
@@ -446,80 +447,6 @@
                 fillColumn("column1");
                 fillColumn("column2");
                 fillColumn("column3");
-            });
-        </script>
-
-        <!-- :::::::::::::::::::::::::: SERVICE VIDEO SCRIPT :::::::::::::::::::::::::: -->
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                /* :::::::::::::::::::::::::: TOUCH DETECTION :::::::::::::::::::::::::: */
-                const isTouch =
-                    window.matchMedia("(hover: none)").matches ||
-                    window.matchMedia("(pointer: coarse)").matches;
-
-                /* :::::::::::::::::::::::::: VIDEO HANDLING :::::::::::::::::::::::::: */
-                document.querySelectorAll(".tv-static-container").forEach((box) => {
-                    const video = box.querySelector("video.service-video");
-                    if (!video) return;
-
-                    if (!video.getAttribute("src") && video.dataset.src) {
-                        video.setAttribute("src", video.dataset.src);
-                    }
-                    if (!video.getAttribute("src")) return;
-
-                    let videoOk = false;
-                    video.addEventListener("loadeddata", () => { videoOk = true; });
-                    video.addEventListener("error", () => { videoOk = false; });
-                    video.load();
-
-                    if (isTouch) {
-                        video.muted = true;
-                        video.defaultMuted = true;
-                        video.playsInline = true;
-                        video.loop = true;
-                        video.setAttribute("muted", "");
-                        video.setAttribute("playsinline", "");
-                        video.setAttribute("webkit-playsinline", "");
-
-                        const tryPlay = async () => {
-                            if (!videoOk) return;
-                            try {
-                                await video.play();
-                                box.classList.add("is-playing");
-                            } catch (err) {
-                                box.classList.remove("is-playing");
-                            }
-                        };
-
-                        const stop = () => {
-                            try { video.pause(); } catch (e) {}
-                            box.classList.remove("is-playing");
-                        };
-
-                        new IntersectionObserver(
-                            (entries) => {
-                                entries.forEach((e) => {
-                                    if (e.isIntersecting) tryPlay();
-                                    else stop();
-                                });
-                            },
-                            { threshold: 0.25 }
-                        ).observe(box);
-
-                        return;
-                    }
-
-                    box.addEventListener("mouseenter", () => {
-                        if (!videoOk) return;
-                        box.classList.add("is-playing");
-                        video.play().catch(() => {});
-                    });
-                    box.addEventListener("mouseleave", () => {
-                        video.pause();
-                        try { video.currentTime = 0; } catch (e) {}
-                        box.classList.remove("is-playing");
-                    });
-                });
             });
         </script>
 

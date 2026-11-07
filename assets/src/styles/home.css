@@ -357,3 +357,18 @@
         max-width: 240px;
     }
 }
+@media (orientation: portrait) {
+    .about-image {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-item {
+        min-height: 50vh;
+    }
+
+    .tv-static-container {
+        min-height: 50vh;
+    }
+}
