@@ -1,11 +1,5 @@
 /* :::::::::::::::::::::::::: CURRENCY LABELS MODULE :::::::::::::::::::::::::: */
 
-/**
- * Localized currency name labels.
- *
- * Each locale maps currency codes (IRR, USD, EUR, AED, TRY) to their
- * human‑readable representation in that language.
- */
 export const currencyLabels = {
     fa: {
         IRR: "تومان",

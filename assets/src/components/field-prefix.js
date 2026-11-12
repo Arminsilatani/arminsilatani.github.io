@@ -1,22 +1,14 @@
-/* :::::::::::::::::::::::::: FIELD PREFIX COMPONENT :::::::::::::::::::::::::: */
-/*
- * پیشوند برچسب درون فیلد را به‌صورت خودکار مدیریت می‌کند.
- * - عرض پیشوند را اندازه می‌گیرد و padding فیلد را تنظیم می‌کند.
- * - موقعیت عمودی را بر اساس نوع فیلد تعیین می‌کند.
- * - اسکرول textarea را با پیشوند همگام می‌سازد.
- * - فیلدهای اضافه‌شده به DOM (مثل مودال‌ها) را با MutationObserver می‌گیرد.
- */
+/* :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: */
+
 (function () {
     'use strict';
 
-    /* :::::::::::::::::::::::::: CONFIG :::::::::::::::::::::::::: */
     const CONFIG = {
-        innerOffset: 12,        // فاصله از لبهٔ داخل فیلد
-        gapAfterPrefix: 8,      // فاصله بعد از دونقطه
-        verticalOffset: 2       // تنظیم بصری عمودی
+        innerOffset: 12,
+        gapAfterPrefix: 8,
+        verticalOffset: 2
     };
 
-    /* :::::::::::::::::::::::::: ADJUST ONE GROUP :::::::::::::::::::::::::: */
     function adjustGroup(group) {
         const input = group.querySelector(
             'input:not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]), textarea'
@@ -26,12 +18,10 @@
 
         const isRTL = getComputedStyle(group).direction === 'rtl';
 
-        /* ::: ۱. عرض واقعی پیشوند ::: */
         const prefixWidth = prefix.getBoundingClientRect().width;
         const totalPadding =
             CONFIG.innerOffset + prefixWidth + CONFIG.gapAfterPrefix;
 
-        /* ::: ۲. padding از سمت شروع تایپ ::: */
         if (isRTL) {
             input.style.paddingRight = totalPadding + 'px';
             input.style.paddingLeft = '';
@@ -40,24 +30,20 @@
             input.style.paddingRight = '';
         }
 
-        /* ::: ۳. تراز عمودی ::: */
         const isTextarea = input.matches('textarea');
 
         if (isTextarea) {
             const styles = getComputedStyle(input);
             const paddingTop = parseFloat(styles.paddingTop) || 0;
-            // پیشوند در بالای textarea
             prefix.style.top =
                 input.offsetTop + paddingTop + CONFIG.verticalOffset + 'px';
             prefix.style.transform = 'none';
         } else {
-            // پیشوند در وسط input
             prefix.style.top =
                 input.offsetTop + input.clientHeight / 2 + CONFIG.verticalOffset + 'px';
             prefix.style.transform = 'translateY(-50%)';
         }
 
-        /* ::: ۴. همگام‌سازی اسکرول textarea (فقط یک‌بار bind) ::: */
         if (isTextarea && !input.dataset.prefixScrollBound) {
             input.dataset.prefixScrollBound = 'true';
 
@@ -73,14 +59,12 @@
         }
     }
 
-    /* :::::::::::::::::::::::::: ADJUST ALL :::::::::::::::::::::::::: */
     function adjustFieldPrefixes(root) {
         const scope = root || document;
         const groups = scope.querySelectorAll('.field-group');
         groups.forEach(adjustGroup);
     }
 
-    /* :::::::::::::::::::::::::: AUTO INIT :::::::::::::::::::::::::: */
     document.addEventListener('DOMContentLoaded', function () {
         adjustFieldPrefixes();
     });
@@ -89,7 +73,6 @@
         adjustFieldPrefixes();
     });
 
-    /* :::::::::::::::::::::::::: RESIZE :::::::::::::::::::::::::: */
     let resizeTimer = null;
     window.addEventListener('resize', function () {
         clearTimeout(resizeTimer);
@@ -98,8 +81,6 @@
         }, 120);
     });
 
-    /* :::::::::::::::::::::::::: MUTATION OBSERVER :::::::::::::::::::::::::: */
-    /* فیلدهای اضافه‌شده به‌صورت داینامیک (مودال، AJAX، ...) را می‌گیرد. */
     function startObserver() {
         const observer = new MutationObserver(function (mutations) {
             let shouldAdjust = false;
@@ -140,13 +121,6 @@
         document.addEventListener('DOMContentLoaded', startObserver);
     }
 
-    /* :::::::::::::::::::::::::: PUBLIC API :::::::::::::::::::::::::: */
-    /*
-     * در صورت نیاز به بازمحاسبهٔ دستی (مثلاً بعد از باز کردن یک مودال)،
-     * این تابع را صدا بزنید:
-     *   window.FieldPrefix.refresh();
-     *   window.FieldPrefix.refresh(someElement);
-     */
     window.FieldPrefix = {
         refresh: adjustFieldPrefixes
     };

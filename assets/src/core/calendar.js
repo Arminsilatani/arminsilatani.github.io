@@ -1,5 +1,8 @@
 /* :::::::::::::::::::::::::: SMART 60-DAY CALENDAR :::::::::::::::::::::::::: */
+
 (function () {
+
+
   /* :::::::::::::::::::::::::: CONSTANTS :::::::::::::::::::::::::: */
 
   const RRule =
@@ -14,22 +17,17 @@
     );
   }
 
-const TRACKED_EVENTS = [
-  /* ═══════════════════ PERSONAL (بلاک زمان، خارج از ظرفیت پروژه) ═══════════════════ */
-  { title: "Allenamento",          type: "personal" },   // ورزش (تک تایتل)
-  { title: "Viaggio",              type: "personal" },   // مسافرت
-  { title: "Formazione",           type: "personal" },   // آموزش، یادگیری
-  { title: "Ferie",                type: "personal" },   // مرخصی، تعطیلی
-
-  /* ═══════════════════ GENERAL WORK (کارهای عمومی، بلاک زمان) ═══════════════════ */
-  { title: "Lavoro generale",      type: "general" },    // کارهای عمومی
-  { title: "Consulenza",           type: "general" },    // تماس/جلسه با کلاینت
-
-  /* ═══════════════════ CLIENT PROJECTS (ظرفیت‌سنجی) ═══════════════════ */
-  { title: "Progetto SEO 1",       type: "seo" },        // پروژه اول سئو
-  { title: "Progetto SEO 2",       type: "seo" },        // پروژه دوم سئو
-  { title: "Progetto Web Design",  type: "design" },     // پروژه طراحی سایت
-];
+  const TRACKED_EVENTS = [
+    { title: "Allenamento", type: "personal" },
+    { title: "Viaggio", type: "personal" },
+    { title: "Formazione", type: "personal" },
+    { title: "Ferie", type: "personal" },
+    { title: "Lavoro generale", type: "general" },
+    { title: "Consulenza", type: "general" },
+    { title: "Progetto SEO 1", type: "seo" },
+    { title: "Progetto SEO 2", type: "seo" },
+    { title: "Progetto Web Design", type: "design" },
+  ];
 
   const MAX_SEO = 2;
   const MAX_DESIGN = 1;
@@ -46,6 +44,7 @@ const TRACKED_EVENTS = [
   const MOMENTUM_STOP_THRESHOLD = 0.5;
 
   let isAvailable = true;
+
 
   /* :::::::::::::::::::::::::: UTILITY FUNCTIONS :::::::::::::::::::::::::: */
 
@@ -353,43 +352,47 @@ const TRACKED_EVENTS = [
       count: event.recurrence_count || null,
     };
 
-if (event.recurrence_days && event.recurrence_type === "weekly") {
-  /* recurrence_days می‌تونه آرایه، رشته یا عدد باشه */
-  const raw = event.recurrence_days;
-  let days;
+    if (event.recurrence_days && event.recurrence_type === "weekly") {
+      const raw = event.recurrence_days;
+      let days;
 
-  if (Array.isArray(raw)) {
-    days = raw.map(Number);
-  } else if (typeof raw === "string") {
-    days = raw.split(",").map((d) => Number(d.trim()));
-  } else if (typeof raw === "number") {
-    days = [raw];
-  } else {
-    days = [];
-  }
+      if (Array.isArray(raw)) {
+        days = raw.map(Number);
+      } else if (typeof raw === "string") {
+        days = raw.split(",").map((d) => Number(d.trim()));
+      } else if (typeof raw === "number") {
+        days = [raw];
+      } else {
+        days = [];
+      }
 
-  days = days.filter((n) => Number.isFinite(n) && n >= 0 && n <= 6);
+      days = days.filter((n) => Number.isFinite(n) && n >= 0 && n <= 6);
 
-  const dayMap = [
-    RRule.SU, RRule.MO, RRule.TU, RRule.WE,
-    RRule.TH, RRule.FR, RRule.SA,
-  ];
+      const dayMap = [
+        RRule.SU,
+        RRule.MO,
+        RRule.TU,
+        RRule.WE,
+        RRule.TH,
+        RRule.FR,
+        RRule.SA,
+      ];
 
-  if (days.length > 0) {
-    options.byweekday = days.map((d) => dayMap[d]);
-  }
-}
+      if (days.length > 0) {
+        options.byweekday = days.map((d) => dayMap[d]);
+      }
+    }
 
-if (event.recurrence_day_of_month && event.recurrence_type === "monthly") {
-  const dom = Number(
-    Array.isArray(event.recurrence_day_of_month)
-      ? event.recurrence_day_of_month[0]
-      : event.recurrence_day_of_month,
-  );
-  if (Number.isFinite(dom) && dom >= 1 && dom <= 31) {
-    options.bymonthday = [dom];
-  }
-}
+    if (event.recurrence_day_of_month && event.recurrence_type === "monthly") {
+      const dom = Number(
+        Array.isArray(event.recurrence_day_of_month)
+          ? event.recurrence_day_of_month[0]
+          : event.recurrence_day_of_month,
+      );
+      if (Number.isFinite(dom) && dom >= 1 && dom <= 31) {
+        options.bymonthday = [dom];
+      }
+    }
 
     if (!options.until && !options.count) options.until = rangeEnd;
 
@@ -406,6 +409,7 @@ if (event.recurrence_day_of_month && event.recurrence_type === "monthly") {
       return [];
     }
   }
+
 
   /* :::::::::::::::::::::::::: DATA FETCHING :::::::::::::::::::::::::: */
 
@@ -446,6 +450,7 @@ if (event.recurrence_day_of_month && event.recurrence_type === "monthly") {
     }
     return allOccurrences;
   }
+
 
   /* :::::::::::::::::::::::::: CALENDAR GENERATION :::::::::::::::::::::::::: */
 
@@ -553,6 +558,7 @@ if (event.recurrence_day_of_month && event.recurrence_type === "monthly") {
     return days;
   }
 
+
   /* :::::::::::::::::::::::::: TOOLTIP :::::::::::::::::::::::::: */
 
   let tooltipEl = null;
@@ -570,7 +576,6 @@ if (event.recurrence_day_of_month && event.recurrence_type === "monthly") {
     const tip = getTooltip();
     tip.innerHTML = "";
 
-    // Always left-to-right – first block 9 to 10
     tip.setAttribute("dir", "ltr");
 
     for (let i = 0; i < day.hourlyBusy.length; i++) {
@@ -592,72 +597,72 @@ if (event.recurrence_day_of_month && event.recurrence_type === "monthly") {
     tip.style.display = "none";
   }
 
+
   /* :::::::::::::::::::::::::: RENDERING :::::::::::::::::::::::::: */
 
-async function renderCalendar() {
-  const container = document.getElementById("miniWeek");
+  async function renderCalendar() {
+    const container = document.getElementById("miniWeek");
 
-  const days = await generateDynamicDays();
+    const days = await generateDynamicDays();
 
-  /* اگر UI تقویم وجود نداره (مثل صفحه سئو)، فقط رویداد رو بفرست */
-  if (!container) {
-    dispatchSeoAvailability(days);
-    return;
-  }
-
-  container.innerHTML = "";
-
-  days.forEach((day) => {
-    if (day.isNewMonth && day.display.monthName) {
-      const sep = document.createElement("div");
-      sep.className = "mini-week__month-separator";
-      sep.textContent = day.display.monthName;
-      container.appendChild(sep);
+    if (!container) {
+      dispatchSeoAvailability(days);
+      return;
     }
 
-    let statusClass = "",
-      dotClass = "";
-    if (day.status === "available") {
-      statusClass = "mini-week__day--available";
-      dotClass = "mini-week__day-dot--green";
-    } else if (day.status === "partial") {
-      statusClass = "mini-week__day--partial";
-      dotClass = "mini-week__day-dot--yellow";
-    } else {
-      statusClass = "mini-week__day--busy";
-      dotClass = "mini-week__day-dot--red";
-    }
+    container.innerHTML = "";
 
-    const el = document.createElement("div");
-    el.className = `mini-week__day ${statusClass}`;
-    if (day.weekend) el.classList.add("mini-week__day--weekend");
-    if (day.holiday) el.classList.add("mini-week__day--holiday");
+    days.forEach((day) => {
+      if (day.isNewMonth && day.display.monthName) {
+        const sep = document.createElement("div");
+        sep.className = "mini-week__month-separator";
+        sep.textContent = day.display.monthName;
+        container.appendChild(sep);
+      }
 
-    el.innerHTML = `
+      let statusClass = "",
+        dotClass = "";
+      if (day.status === "available") {
+        statusClass = "mini-week__day--available";
+        dotClass = "mini-week__day-dot--green";
+      } else if (day.status === "partial") {
+        statusClass = "mini-week__day--partial";
+        dotClass = "mini-week__day-dot--yellow";
+      } else {
+        statusClass = "mini-week__day--busy";
+        dotClass = "mini-week__day-dot--red";
+      }
+
+      const el = document.createElement("div");
+      el.className = `mini-week__day ${statusClass}`;
+      if (day.weekend) el.classList.add("mini-week__day--weekend");
+      if (day.holiday) el.classList.add("mini-week__day--holiday");
+
+      el.innerHTML = `
               <div class="mini-week__day-name">${day.dayName}</div>
               <div class="mini-week__day-date">${day.display.dayNumber}</div>
               <div class="mini-week__day-dot ${dotClass}"></div>
           `;
 
-    const barContainer = document.createElement("div");
-    barContainer.className = "mini-week__day-bar";
-    const barFill = document.createElement("div");
-    barFill.className = "mini-week__day-bar-fill";
-    barFill.style.width = day.occupiedPercent + "%";
-    barContainer.appendChild(barFill);
-    el.appendChild(barContainer);
+      const barContainer = document.createElement("div");
+      barContainer.className = "mini-week__day-bar";
+      const barFill = document.createElement("div");
+      barFill.className = "mini-week__day-bar-fill";
+      barFill.style.width = day.occupiedPercent + "%";
+      barContainer.appendChild(barFill);
+      el.appendChild(barContainer);
 
-    el.addEventListener("mouseenter", () => showTooltip(el, day));
-    el.addEventListener("mouseleave", hideTooltip);
+      el.addEventListener("mouseenter", () => showTooltip(el, day));
+      el.addEventListener("mouseleave", hideTooltip);
 
-    container.appendChild(el);
-  });
+      container.appendChild(el);
+    });
 
-  container.scrollLeft = 0;
-  updateCapacityText(days);
-  updateOverallStatus(days);
-  dispatchSeoAvailability(days);
-}
+    container.scrollLeft = 0;
+    updateCapacityText(days);
+    updateOverallStatus(days);
+    dispatchSeoAvailability(days);
+  }
 
   function updateCapacityText(days) {
     const el = document.getElementById("capacityText");
@@ -697,89 +702,89 @@ async function renderCalendar() {
     el.textContent = translateFn(seoRemaining, designRemaining);
   }
 
-function updateOverallStatus(days) {
-  isAvailable = days.some((day) => day.status === "available");
-  updateStatusUI();
-}
-
-function updateStatusUI() {
-  const dot = document.getElementById("statusDot");
-  const text = document.getElementById("statusText");
-  if (!dot || !text) return;
-
-  const outOfHoursTexts = {
-    fa: "در حال حاضر خارج از ساعات کاری",
-    en: "Currently outside working hours",
-    de: "Derzeit außerhalb der Geschäftszeiten",
-    it: "Attualmente fuori orario di lavoro",
-    tr: "Şu anda çalışma saatleri dışında",
-    ar: "حالياً خارج ساعات العمل",
-  };
-  const availableTexts = {
-    fa: "در دسترس برای پروژه‌های جدید",
-    en: "Available for new projects",
-    de: "Verfügbar für neue Projekte",
-    it: "Disponibile per nuovi progetti",
-    tr: "Yeni projeler için müsait",
-    ar: "متاح لمشاريع جديدة",
-  };
-  const busyTexts = {
-    fa: "در حال حاضر ظرفیت تکمیل است",
-    en: "Currently fully booked",
-    de: "Derzeit ausgebucht",
-    it: "Attualmente al completo",
-    tr: "Şu anda tamamen doluyum",
-    ar: "مكتمل الحجوزات حالياً",
-  };
-
-  /* ۱) اولویت اول: ساعت پاسخگویی */
-  if (!isWithinWorkingHours()) {
-    dot.className = "status-dot status-dot--busy";
-    text.textContent = outOfHoursTexts[CURRENT_LANG] || outOfHoursTexts.en;
-    return;
+  function updateOverallStatus(days) {
+    isAvailable = days.some((day) => day.status === "available");
+    updateStatusUI();
   }
 
-  /* ۲) داخل ساعات کاری: بر اساس capacity تقویم */
-  if (isAvailable) {
-    dot.className = "status-dot";
-    text.textContent = availableTexts[CURRENT_LANG] || availableTexts.en;
-  } else {
-    dot.className = "status-dot status-dot--busy";
-    text.textContent = busyTexts[CURRENT_LANG] || busyTexts.en;
-  }
-}
+  function updateStatusUI() {
+    const dot = document.getElementById("statusDot");
+    const text = document.getElementById("statusText");
+    if (!dot || !text) return;
 
-/* :::::::::::::::::::::::::: SEO EVENT DISPATCHER :::::::::::::::::::::::::: */
+    const outOfHoursTexts = {
+      fa: "در حال حاضر خارج از ساعات کاری",
+      en: "Currently outside working hours",
+      de: "Derzeit außerhalb der Geschäftszeiten",
+      it: "Attualmente fuori orario di lavoro",
+      tr: "Şu anda çalışma saatleri dışında",
+      ar: "حالياً خارج ساعات العمل",
+    };
+    const availableTexts = {
+      fa: "در دسترس برای پروژه‌های جدید",
+      en: "Available for new projects",
+      de: "Verfügbar für neue Projekte",
+      it: "Disponibile per nuovi progetti",
+      tr: "Yeni projeler için müsait",
+      ar: "متاح لمشاريع جديدة",
+    };
+    const busyTexts = {
+      fa: "در حال حاضر ظرفیت تکمیل است",
+      en: "Currently fully booked",
+      de: "Derzeit ausgebucht",
+      it: "Attualmente al completo",
+      tr: "Şu anda tamamen doluyum",
+      ar: "مكتمل الحجوزات حالياً",
+    };
 
-function dispatchSeoAvailability(days) {
-  const today = days[0];
-  const remainingSlots = Math.max(0, MAX_SEO - today.seoCount);
+    if (!isWithinWorkingHours()) {
+      dot.className = "status-dot status-dot--busy";
+      text.textContent = outOfHoursTexts[CURRENT_LANG] || outOfHoursTexts.en;
+      return;
+    }
 
-  let firstAvailableDate = null;
-  if (remainingSlots === 0) {
-    const firstAvailDay = days.find((d) => d.seoCount < MAX_SEO);
-    if (firstAvailDay) {
-      firstAvailableDate = {
-        date: firstAvailDay.date,
-        label: firstAvailDay.display.fullLabel,
-      };
+    if (isAvailable) {
+      dot.className = "status-dot";
+      text.textContent = availableTexts[CURRENT_LANG] || availableTexts.en;
+    } else {
+      dot.className = "status-dot status-dot--busy";
+      text.textContent = busyTexts[CURRENT_LANG] || busyTexts.en;
     }
   }
 
-  const detail = {
-    maxSeo: MAX_SEO,
-    todaySeoCount: today.seoCount,
-    remainingSlots,
-    firstAvailableDate,
-    lang: CURRENT_LANG,
-  };
 
-  window.__seoAvailability = detail;
+  /* :::::::::::::::::::::::::: SEO EVENT DISPATCHER :::::::::::::::::::::::::: */
 
-  window.dispatchEvent(
-    new CustomEvent("seoAvailabilityUpdated", { detail }),
-  );
-}
+  function dispatchSeoAvailability(days) {
+    const today = days[0];
+    const remainingSlots = Math.max(0, MAX_SEO - today.seoCount);
+
+    let firstAvailableDate = null;
+    if (remainingSlots === 0) {
+      const firstAvailDay = days.find((d) => d.seoCount < MAX_SEO);
+      if (firstAvailDay) {
+        firstAvailableDate = {
+          date: firstAvailDay.date,
+          label: firstAvailDay.display.fullLabel,
+        };
+      }
+    }
+
+    const detail = {
+      maxSeo: MAX_SEO,
+      todaySeoCount: today.seoCount,
+      remainingSlots,
+      firstAvailableDate,
+      lang: CURRENT_LANG,
+    };
+
+    window.__seoAvailability = detail;
+
+    window.dispatchEvent(
+      new CustomEvent("seoAvailabilityUpdated", { detail }),
+    );
+  }
+
 
   /* :::::::::::::::::::::::::: DRAG SCROLL :::::::::::::::::::::::::: */
 
@@ -895,49 +900,49 @@ function dispatchSeoAvailability(days) {
     slider.addEventListener("mouseleave", onMouseLeave);
   }
 
-/* :::::::::::::::::::::::::: LIVE CLOCK :::::::::::::::::::::::::: */
 
-function updateLiveClock() {
-  const clock = document.getElementById("liveClock");
-  if (!clock) return;
-  const tehran = new Date(
-    new Date().toLocaleString("en-US", { timeZone: "Asia/Tehran" }),
-  );
-  const h = String(tehran.getHours()).padStart(2, "0");
-  const m = String(tehran.getMinutes()).padStart(2, "0");
-  const s = String(tehran.getSeconds()).padStart(2, "0");
-  clock.textContent = `${h}:${m}:${s}`;
-}
+  /* :::::::::::::::::::::::::: LIVE CLOCK :::::::::::::::::::::::::: */
 
-/* :::::::::::::::::::::::::: RESPONSE HOURS (Time-based) :::::::::::::::::::::::::: */
-/*
- * توجه: WORK_START_HOUR/WORK_END_HOUR (9-19) ساعات «رزرو در تقویم» هستن.
- * این دو مقدار، ساعات پاسخگوییِ اعلام‌شده در صفحه تماس هستن (9-17).
- */
-const RESPONSE_START_HOUR = 9;
-const RESPONSE_END_HOUR = 19;
+  function updateLiveClock() {
+    const clock = document.getElementById("liveClock");
+    if (!clock) return;
+    const tehran = new Date(
+      new Date().toLocaleString("en-US", { timeZone: "Asia/Tehran" }),
+    );
+    const h = String(tehran.getHours()).padStart(2, "0");
+    const m = String(tehran.getMinutes()).padStart(2, "0");
+    const s = String(tehran.getSeconds()).padStart(2, "0");
+    clock.textContent = `${h}:${m}:${s}`;
+  }
 
-function getTehranHour() {
-  const tehran = new Date(
-    new Date().toLocaleString("en-US", { timeZone: "Asia/Tehran" }),
-  );
-  return tehran.getHours();
-}
 
-function isWithinWorkingHours() {
-  const h = getTehranHour();
-  return h >= RESPONSE_START_HOUR && h < RESPONSE_END_HOUR;
-}
+  /* :::::::::::::::::::::::::: RESPONSE HOURS :::::::::::::::::::::::::: */
+
+  const RESPONSE_START_HOUR = 9;
+  const RESPONSE_END_HOUR = 19;
+
+  function getTehranHour() {
+    const tehran = new Date(
+      new Date().toLocaleString("en-US", { timeZone: "Asia/Tehran" }),
+    );
+    return tehran.getHours();
+  }
+
+  function isWithinWorkingHours() {
+    const h = getTehranHour();
+    return h >= RESPONSE_START_HOUR && h < RESPONSE_END_HOUR;
+  }
+
 
   /* :::::::::::::::::::::::::: INITIALIZATION :::::::::::::::::::::::::: */
 
-async function init() {
-  await renderCalendar();
-  enableDragScroll("miniWeek");
-  updateLiveClock();
-  setInterval(updateLiveClock, 1000);  // ثانیه‌شمار
-  setInterval(updateStatusUI, 60000);  // چک هر دقیقه: ساعت اداری عوض شد؟
-}
+  async function init() {
+    await renderCalendar();
+    enableDragScroll("miniWeek");
+    updateLiveClock();
+    setInterval(updateLiveClock, 1000);
+    setInterval(updateStatusUI, 60000);
+  }
 
   window.availabilityAPI = {
     refresh: () => renderCalendar(),

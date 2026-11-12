@@ -1,5 +1,4 @@
 export const basePricesUSD = {
-    /* :::::::::::::::::::::::::: SEO :::::::::::::::::::::::::: */
     SEO: {
         STD_BAS_KEY: 50,
         STD_BAS_CON: 200,
@@ -54,7 +53,6 @@ export const basePricesUSD = {
         ADV_PRM_REP: 120,
         ADV_PRM_SUP: 127,
 
-        /* :::::::::::::::::::::::::: ADD-ONS :::::::::::::::::::::::::: */
         ADD_CON_UNT: 25,
         ADD_BKL_UNT: 50,
         ADD_RPR_STD: 100,
@@ -64,7 +62,6 @@ export const basePricesUSD = {
         ADD_ACC_ADV: 450,
     },
 
-    /* :::::::::::::::::::::::::: WEBDESIGN :::::::::::::::::::::::::: */
     WEBDESIGN: {
         WPS_PRS_HST: 25,
         WPS_PRS_DES: 140,
@@ -115,7 +112,6 @@ export const basePricesUSD = {
         STS_PRM_SPD: 300,
         STS_PRM_SUP: 325,
 
-        /* :::::::::::::::::::::::::: ADD-ONS :::::::::::::::::::::::::: */
         ADD_DOM_COM: 15,
         ADD_PGX_WPS: 25,
         ADD_PGX_STS: 150,
@@ -131,7 +127,6 @@ export const basePricesUSD = {
         ADD_TAX: 50,
         ADD_HST: 20,
 
-        /* :::::::::::::::::::::::::: SUPPORT :::::::::::::::::::::::::: */
         SUP_WPS_PRS: 20,
         SUP_WPS_BUS: 35,
         SUP_WPS_ECO: 55,
@@ -140,7 +135,6 @@ export const basePricesUSD = {
         SUP_STS_PRM: 90,
     },
 
-    /* :::::::::::::::::::::::::: UI/UX :::::::::::::::::::::::::: */
     UIUX: {
         STD_BAS_ANL: 100,
         STD_BAS_WRF: 200,
@@ -190,7 +184,6 @@ export const basePricesUSD = {
         ADV_PRM_PRT: 600,
         ADV_PRM_REV: 350,
 
-        /* :::::::::::::::::::::::::: ADD-ONS :::::::::::::::::::::::::: */
         ADD_RES_CMP: 200,
         ADD_RES_UST: 400,
         ADD_DES_PGW: 80,
@@ -207,7 +200,6 @@ export const basePricesUSD = {
         ADD_SUP_REV: 100,
     },
 
-    /* :::::::::::::::::::::::::: ADS :::::::::::::::::::::::::: */
     ADS: {
         STD_BAS_SET: 50,
         STD_BAS_KWR: 45,
@@ -278,7 +270,6 @@ export const basePricesUSD = {
         ADV_PRM_CSL: 120,
         ADV_PRM_SUP: 280,
 
-        /* :::::::::::::::::::::::::: ADD-ONS :::::::::::::::::::::::::: */
         ADD_BNR_EXT: 16,
         ADD_SHP_SET: 195,
         ADD_CVR_ANL: 95,
@@ -288,7 +279,6 @@ export const basePricesUSD = {
         ADD_CRS_MGT: 195,
     },
 
-    /* :::::::::::::::::::::::::: SOCIAL :::::::::::::::::::::::::: */
     SOCIAL: {
         STD_BAS_STR: 70,
         STD_BAS_ANL: 50,
@@ -340,7 +330,6 @@ export const basePricesUSD = {
         ADV_PRM_REP: 340,
         ADV_PRM_CON: 360,
 
-        /* :::::::::::::::::::::::::: ADD-ONS :::::::::::::::::::::::::: */
         ADD_IGP_PST: 12,
         ADD_IGP_STO: 15,
         ADD_IGP_RLS: 25,
@@ -382,7 +371,6 @@ export const basePricesUSD = {
         ADD_YTM_ANL: 120,
     },
 
-    /* :::::::::::::::::::::::::: GRAPHIC :::::::::::::::::::::::::: */
     GRAPHIC: {
         STD_BAS_LOG: 180,
         STD_BAS_CTL: 200,
@@ -416,7 +404,6 @@ export const basePricesUSD = {
         CUS_OFF_CTL: 280,
         CUS_OFF_CNT: 70,
 
-        /* :::::::::::::::::::::::::: ADD-ONS :::::::::::::::::::::::::: */
         ADD_REV_STD: 20,
         ADD_SRC_STD: 25,
         ADD_EXP_BAS_SIM: 40,

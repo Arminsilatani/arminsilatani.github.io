@@ -1,11 +1,10 @@
-/* :::::::::::::::::::::::::: IMPORTS :::::::::::::::::::::::::: */
+/* :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: */
+
 import { notifyTelegram } from './telegram-notify.js';
 
-/* :::::::::::::::::::::::::: FORM INITIALIZATION :::::::::::::::::::::::::: */
 function init() {
     const forms = document.querySelectorAll('[data-notify-form]');
 
-    /* :::::::::::::::::::::::::: FORM EVENT LISTENERS :::::::::::::::::::::::::: */
     forms.forEach((form) => {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -16,7 +15,6 @@ function init() {
 
             const submitBtn = form.querySelector('button[type="submit"]');
 
-            /* :::::::::::::::::::::::::: REQUIRED FIELDS VALIDATION :::::::::::::::::::::::::: */
             const requiredFields = form.querySelectorAll('[required]');
             let hasError = false;
 
@@ -47,7 +45,6 @@ function init() {
 
             const formName = form.dataset.notifyForm || 'فرم';
 
-            /* :::::::::::::::::::::::::: FIELD COLLECTION :::::::::::::::::::::::::: */
             const fields = {};
             const inputs = form.querySelectorAll('input, textarea, select');
 
@@ -75,17 +72,14 @@ function init() {
 
             fields['📄 صفحه'] = window.location.pathname;
 
-            /* :::::::::::::::::::::::::: SUBMIT BUTTON LOADING STATE :::::::::::::::::::::::::: */
             if (submitBtn) {
                 submitBtn.disabled = true;
                 submitBtn.style.opacity = '0.8';
                 submitBtn.textContent = sendingText;
             }
 
-            /* :::::::::::::::::::::::::: TELEGRAM NOTIFICATION :::::::::::::::::::::::::: */
             notifyTelegram(formName, fields);
 
-            /* :::::::::::::::::::::::::: SUCCESS STATE :::::::::::::::::::::::::: */
             setTimeout(() => {
                 if (submitBtn) {
                     submitBtn.textContent = successText;
@@ -106,7 +100,6 @@ function init() {
     });
 }
 
-/* :::::::::::::::::::::::::: DOM READY INITIALIZATION :::::::::::::::::::::::::: */
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
 } else {

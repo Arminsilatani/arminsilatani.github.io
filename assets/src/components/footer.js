@@ -1,4 +1,5 @@
-/* :::::::::::::::::::::::::: FOOTER COMPONENT :::::::::::::::::::::::::: */
+/* :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: */
+
 class FooterComponent extends HTMLElement {
     constructor() {
         super();
@@ -20,9 +21,8 @@ class FooterComponent extends HTMLElement {
         this.style.setProperty("--footer-shadow-color", shadowColor);
         this.style.setProperty("--footer-dir", isRTL ? "rtl" : "ltr");
 
-        /* ✅ رنگ‌های Lottie برای فوتر */
-        this.style.setProperty("--lottie-color", "#0d0d0d");
-        this.style.setProperty("--lottie-hover-color", "#f5f5f5");
+        this.style.setProperty("--lottie-color", "#0D0D0D");
+        this.style.setProperty("--lottie-hover-color", "#F5F5F5");
 
         shadow.innerHTML = `
             <link rel="stylesheet" href="/assets/src/core/lottie-icons.css">
@@ -44,11 +44,11 @@ class FooterComponent extends HTMLElement {
                         <div class="column">
                             <h2>${ft.usefulLinks}</h2>
                             <ul class="menu">
-                                <li><a href="/#/">${ft.links.login}</a></li>
-                                <li><a href="/#/">${ft.links.blog}</a></li>
+                                <li><a href="/#/" target="_blank">${ft.links.login}</a></li>
+                                <li><a href="/#/" target="_blank">${ft.links.blog}</a></li>
                                 <li><a href="https://tools.arminsilatani.com/" target="_blank" rel="noopener noreferrer">${ft.links.tools}</a></li>
-                                <li><a href="${sitemapUrl}">${ft.links.sitemap}</a></li>
-                                <li><a href="/#/">${ft.links.downloadCV}</a></li>
+                                <li><a href="${sitemapUrl}" target="_blank">${ft.links.sitemap}</a></li>
+                                <li><a href="/#/" target="_blank">${ft.links.downloadCV}</a></li>
                             </ul>
                         </div>
 
@@ -56,20 +56,20 @@ class FooterComponent extends HTMLElement {
                             <h2>${ft.contactTitle}</h2>
 
                             <div class="contact">
-    <a href="tel:+989125759466">
-        <div class="lottie-icon footer-contact-icon"
-             data-lottie="/assets/lottie/phone-forwarded.json"
-             data-lottie-mode="hover"></div>
-        09125759466
-    </a>
+                                <a href="tel:+989125759466">
+                                    <div class="lottie-icon footer-contact-icon"
+                                         data-lottie="/assets/lottie/phone-forwarded.json"
+                                         data-lottie-mode="hover"></div>
+                                    09125759466
+                                </a>
 
-    <a href="mailto:contact@arminsilatani.com">
-        <div class="lottie-icon footer-contact-icon"
-             data-lottie="/assets/lottie/mail.json"
-             data-lottie-mode="hover"></div>
-        contact[at]arminsilatani.com
-    </a>
-</div>
+                                <a href="mailto:contact@arminsilatani.com">
+                                    <div class="lottie-icon footer-contact-icon"
+                                         data-lottie="/assets/lottie/mail.json"
+                                         data-lottie-mode="hover"></div>
+                                    contact[at]arminsilatani.com
+                                </a>
+                            </div>
 
                             <div class="social">
                                 <a href="https://www.linkedin.com/in/arminsilatani/" target="_blank" rel="noopener" aria-label="LinkedIn">
@@ -129,21 +129,19 @@ class FooterComponent extends HTMLElement {
             inner.classList.add("two-col");
         }
 
-        /* ✅ بعد از رندر شدن فوتر، Lottie رو راه‌اندازی کن */
         this._initFooterLottie();
     }
 
-    /* ✅ Lottie راه‌اندازی مخصوص فوتر (چون داخل Shadow DOM است) */
     _initFooterLottie() {
         const self = this;
 
         function tryInit(attempt = 0) {
-            if (typeof lottie === 'undefined') {
+            if (typeof lottie === "undefined") {
                 if (attempt < 20) setTimeout(() => tryInit(attempt + 1), 150);
                 return;
             }
 
-            const icons = self.shadowRoot.querySelectorAll('[data-lottie]');
+            const icons = self.shadowRoot.querySelectorAll("[data-lottie]");
             icons.forEach(container => {
                 if (container._lottieInstance) return;
                 const path = container.dataset.lottie;
@@ -151,7 +149,7 @@ class FooterComponent extends HTMLElement {
 
                 const anim = lottie.loadAnimation({
                     container,
-                    renderer: 'svg',
+                    renderer: "svg",
                     loop: false,
                     autoplay: false,
                     path
@@ -159,23 +157,21 @@ class FooterComponent extends HTMLElement {
 
                 container._lottieInstance = anim;
 
-                anim.addEventListener('DOMLoaded', () => {
-                    const svg = container.querySelector('svg');
+                anim.addEventListener("DOMLoaded", () => {
+                    const svg = container.querySelector("svg");
                     if (!svg) return;
-                    svg.style.width = '100%';
-                    svg.style.height = '100%';
+                    svg.style.width = "100%";
+                    svg.style.height = "100%";
                 });
 
-                const parent = container.closest('a') || container;
-                parent.addEventListener('mouseenter', () => anim.goToAndPlay(0, true));
-                parent.addEventListener('mouseleave', () => anim.stop());
+                const parent = container.closest("a") || container;
+                parent.addEventListener("mouseenter", () => anim.goToAndPlay(0, true));
+                parent.addEventListener("mouseleave", () => anim.stop());
             });
         }
 
-        /* بعد از اینکه DOM کامل رندر شد */
         requestAnimationFrame(() => tryInit());
 
-        /* اطمینان: یک بار دیگر بعد از ۵۰۰ms */
         setTimeout(() => tryInit(), 500);
     }
 }

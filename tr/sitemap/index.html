@@ -1,17 +1,19 @@
 <!doctype html>
 <html lang="tr" dir="ltr">
 
-    <!-- :::::::::::::::::::::::::: HEAD :::::::::::::::::::::::::: -->
-    <head>
 
-        <!-- :::::::::::::::::::::::::: SEO META :::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::: HEAD & META :::::::::::::::::::::::::: -->
+
+    <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Site Haritası ve Sayfa Listesi | Armin Silatani</title>
         <meta name="description" content="Web sitesinin tüm sayfalarının kategorilere ayrılmış bir listesi. Ana sayfa, hakkımda, fiyatlar, hizmetler, blog ve iletişim bilgilerine bu sayfadan ulaşabilirsiniz." />
         <meta name="robots" content="noindex, nofollow" />
 
-        <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
+
+        <!-- :::::::::::::::::::::::::: OPEN GRAPH & TWITTER CARDS :::::::::::::::::::::::::: -->
+
         <meta property="og:title" content="Web sitesinin tam sayfa listesi Armin Silatani" />
         <meta property="og:description" content="Kategorilere ayrılmış site haritası ve tüm sayfaların eksiksiz bir görünümü." />
         <meta property="og:type" content="website" />
@@ -25,7 +27,9 @@
         <meta name="twitter:description" content="Kategorilere ayrılmış site haritası ve tüm sayfaların eksiksiz bir görünümü." />
         <meta name="twitter:image" content="https://arminsilatani.com/assets/images/arminsilatani/sitemap/FeaturedImage.webp" />
 
+
         <!-- :::::::::::::::::::::::::: CANONICAL & HREFLANG :::::::::::::::::::::::::: -->
+
         <link rel="canonical" href="https://arminsilatani.com/tr/sitemap/" />
         <link rel="alternate" hreflang="fa" href="https://arminsilatani.com/sitemap/" />
         <link rel="alternate" hreflang="en" href="https://arminsilatani.com/en/sitemap/" />
@@ -35,15 +39,15 @@
         <link rel="alternate" hreflang="it" href="https://arminsilatani.com/it/sitemap/" />
         <link rel="alternate" hreflang="x-default" href="https://arminsilatani.com/en/sitemap/" />
 
-        <!-- :::::::::::::::::::::::::: FAVICONS :::::::::::::::::::::::::: -->
         <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
         <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
         <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
         <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icon-32.png" />
 
-        <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
-        <!-- CORE -->
-         <link rel="stylesheet" href="/assets/src/core/z-index.css" />
+
+        <!-- :::::::::::::::::::::::::: STYLESHEETS & FONTS :::::::::::::::::::::::::: -->
+
+        <link rel="stylesheet" href="/assets/src/core/z-index.css" />
         <link rel="stylesheet" href="/assets/src/core/fonts.css" />
         <link rel="stylesheet" href="/assets/src/core/base.css" />
         <link rel="stylesheet" href="/assets/src/core/typography.css" />
@@ -51,63 +55,72 @@
         <link rel="stylesheet" href="/assets/src/core/animations.css" />
         <link rel="stylesheet" href="/assets/src/core/cursor.css" />
         <link rel="stylesheet" href="/assets/src/core/loader.css" />
-
-        <!-- COMPONENTS -->
         <link rel="stylesheet" href="/assets/src/components/hero.css" />
         <link rel="stylesheet" href="/assets/src/components/terminal-breadcrumb.css" />
-
-        <!-- PAGE -->
         <link rel="stylesheet" href="/assets/src/styles/sitemap.css" />
 
-        <!-- :::::::::::::::::::::::::: STRUCTURED DATA :::::::::::::::::::::::::: -->
+
+        <!-- :::::::::::::::::::::::::: JSON-LD SCHEMA :::::::::::::::::::::::::: -->
+
+        <script type="application/ld+json">
+
+        </script>
 
 
-        <!-- :::::::::::::::::::::::::: EXTERNAL LIBRARIES :::::::::::::::::::::::::: -->
-<script src="/assets/src/core/gsap.min.js" defer></script>
-<script src="/assets/src/core/ScrollTrigger.min.js" defer></script>
-<script src="/assets/src/core/lottie_light.min.js" defer></script>
+        <!-- :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+        <script src="/assets/src/core/lottie_light.min.js" defer></script>
     </head>
 
-    <!-- :::::::::::::::::::::::::: BODY :::::::::::::::::::::::::: -->
     <body>
-  <div id="initial-loader" class="fullpage-loader">
-    <div class="lds-grid">
-      <div></div><div></div><div></div>
-      <div></div><div></div><div></div>
-      <div></div><div></div><div></div>
-    </div>
-  </div>
+        <div id="initial-loader" class="fullpage-loader">
+            <div class="lds-grid">
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+            </div>
+        </div>
         <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-        <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
+        <div class="cursor-follower"></div>
+
+
+        <!-- :::::::::::::::::::::::::: HEADER & NAVIGATION :::::::::::::::::::::::::: -->
+
         <header-component></header-component>
+
+
+        <!-- :::::::::::::::::::::::::: MAIN CONTENT :::::::::::::::::::::::::: -->
 
         <main class="has-footer-gap">
 
-            <!-- :::::::::::::::::::::::::: HERO :::::::::::::::::::::::::: -->
-            <section class="hero-section">                <video
-        class="hero-section__video"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="metadata"
-    >
-        <source src="/assets/images/arminsilatani/services/seo/hero.mp4" type="video/mp4">
-    </video>
 
-    <div class="hero-section__noise" aria-hidden="true"></div>
-    <div class="hero-section__scanlines" aria-hidden="true"></div>
-    <div class="hero-section__glitch" aria-hidden="true"></div>
-    
-                    <div class="hero-container container-1300">
-                        <language-component></language-component>
-                        <div class="hero-title">
-                            <h1>
-                        <span class="split-title">Site Haritası</span>
-                        <span class="h1_sub reveal-up">Bir bakışta tüm site bölümlerine hızlı erişim</span>
-            </h1>
-                        </div>
+            <!-- :::::::::::::::::::::::::: HERO :::::::::::::::::::::::::: -->
+
+            <section class="hero-section">
+                <video
+                    class="hero-section__video"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                >
+                    <source src="/assets/images/arminsilatani/services/seo/hero.mp4" type="video/mp4">
+                </video>
+
+                <div class="hero-section__noise" aria-hidden="true"></div>
+                <div class="hero-section__scanlines" aria-hidden="true"></div>
+                <div class="hero-section__glitch" aria-hidden="true"></div>
+
+                <div class="hero-container container-1300">
+                    <language-component></language-component>
+                    <div class="hero-title">
+                        <h1>
+                            <span class="split-title">Site Haritası</span>
+                            <span class="h1_sub reveal-up">Bir bakışta tüm site bölümlerine hızlı erişim</span>
+                        </h1>
                     </div>
                 </div>
 
@@ -125,7 +138,9 @@
                 <terminal-breadcrumb></terminal-breadcrumb>
             </section>
 
+
             <!-- :::::::::::::::::::::::::: SITEMAP :::::::::::::::::::::::::: -->
+
             <section class="sitemap-section">
                 <div class="container-1080">
                     <div class="sitemap-grid">
@@ -145,7 +160,6 @@
                                         hizmetleri hakkında bilgi almak için başlangıç noktasıdır.
                                     </div>
                                 </li>
-
                                 <li>
                                     <div class="link-row">
                                         <a href="/tr/contact/">İletişim</a>
@@ -157,7 +171,6 @@
                                         sunulmaktadır.
                                     </div>
                                 </li>
-
                                 <li>
                                     <div class="link-row">
                                         <a href="/tr/about/">Hakkımda</a>
@@ -169,7 +182,6 @@
                                         görebilirsiniz.
                                     </div>
                                 </li>
-
                                 <li>
                                     <div class="link-row">
                                         <a href="/tr/services/">Hizmetler</a>
@@ -181,7 +193,6 @@
                                         detaylarına bu sayfadan ulaşabilirsiniz.
                                     </div>
                                 </li>
-
                                 <li>
                                     <div class="link-row">
                                         <a href="/tr/tariff/">Fiyatlar</a>
@@ -194,7 +205,6 @@
                                         görebilirsiniz.
                                     </div>
                                 </li>
-
                                 <li>
                                     <div class="link-row">
                                         <a href="/tr/portfolio/">Portfolyo</a>
@@ -209,13 +219,14 @@
                         </div>
                     </div>
 
+
                     <!-- :::::::::::::::::::::::::: SERVICES :::::::::::::::::::::::::: -->
+
                     <div class="sitemap-grid">
                         <div class="sitemap-card reveal-up">
                             <div class="card-title">
                                 <h2>Hizmetler</h2>
                             </div>
-                            <ul class="sitemap-list"></ul>
                             <ul class="sitemap-list">
                                 <li>
                                     <div class="link-row">
@@ -226,10 +237,13 @@
                                         Bu sayfada SEO hizmet paketlerini ve fiyatlarını inceleyerek işletmenizin ihtiyaçlarına uygun seçeneği değerlendirebilirsiniz.
                                     </div>
                                 </li>
+                            </ul>
                         </div>
                     </div>
 
+
                     <!-- :::::::::::::::::::::::::: BLOG :::::::::::::::::::::::::: -->
+
                     <div class="sitemap-grid">
                         <div class="sitemap-card reveal-up">
                             <div class="card-title">
@@ -239,7 +253,9 @@
                         </div>
                     </div>
 
+
                     <!-- :::::::::::::::::::::::::: PORTFOLIO :::::::::::::::::::::::::: -->
+
                     <div class="sitemap-grid">
                         <div class="sitemap-card reveal-up">
                             <div class="card-title">
@@ -268,7 +284,6 @@
                                         birlikte görebilirsiniz.
                                     </div>
                                 </li>
-
                                 <li>
                                     <div class="link-row">
                                         <a href="/tr/portfolio/letterheaddesign/">Antetli Kâğıt Örnekleri</a>
@@ -280,7 +295,6 @@
                                         inceleyebilirsiniz.
                                     </div>
                                 </li>
-
                                 <li>
                                     <div class="link-row">
                                         <a href="/tr/portfolio/cataloguedesign/">Katalog Tasarımı Örnekleri</a>
@@ -292,7 +306,6 @@
                                         görüntüleyebilirsiniz.
                                     </div>
                                 </li>
-
                                 <li>
                                     <div class="link-row">
                                         <a href="/tr/portfolio/cataloguedesign/">esempi di moduli di contratto</a>
@@ -309,19 +322,23 @@
             </section>
         </main>
 
+
         <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
+
         <footer-component></footer-component>
         <back-to-top></back-to-top>
 
-        <!-- :::::::::::::::::::::::::: SCRIPTS :::::::::::::::::::::::::: -->
-<script src="/assets/src/core/i18n.js"></script>
-<script type="module" src="/assets/src/components/header.js"></script> 
-<script type="module" src="/assets/src/components/language-selector.js"></script>
+
+        <!-- :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: -->
+
+        <script src="/assets/src/core/i18n.js"></script>
+        <script type="module" src="/assets/src/components/header.js"></script>
+        <script type="module" src="/assets/src/components/language-selector.js"></script>
         <script src="/assets/src/components/terminal-breadcrumb.js"></script>
-<script type="module" src="/assets/src/components/footer.js"></script>
-        <script src="/assets/src/components/animations.js"></script>
+        <script type="module" src="/assets/src/components/footer.js"></script>
         <script type="module" src="/assets/src/components/back-to-top.js"></script>
-<script src="/assets/src/core/cursor.js"></script>
-<script src="/assets/src/core/loader.js"></script>
+        <script src="/assets/src/core/cursor.js"></script>
+        <script src="/assets/src/core/loader.js"></script>
+        <script src="/assets/src/core/animations.js"></script>
     </body>
 </html>

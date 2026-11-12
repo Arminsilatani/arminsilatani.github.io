@@ -1,9 +1,7 @@
-/* :::::::::::::::::::::::::: CONSTANTS / CONFIG :::::::::::::::::::::::::: */
-const CACHE_KEY       = "exchangeRates";
+const CACHE_KEY = "exchangeRates";
 const CACHE_TIMESTAMP = "ratesTimestamp";
-const CACHE_TIME      = 0;
+const CACHE_TIME = 0;
 
-/* :::::::::::::::::::::::::: MOCK DATA FETCH :::::::::::::::::::::::::: */
 export async function fetchExchangeRatesMock() {
     return new Promise((resolve) => {
         setTimeout(() => {
@@ -18,11 +16,10 @@ export async function fetchExchangeRatesMock() {
     });
 }
 
-/* :::::::::::::::::::::::::: CACHE-AWARE EXCHANGE RATES :::::::::::::::::::::::::: */
 export async function getExchangeRates() {
     try {
         const cachedRates = localStorage.getItem(CACHE_KEY);
-        const timestamp    = localStorage.getItem(CACHE_TIMESTAMP);
+        const timestamp = localStorage.getItem(CACHE_TIMESTAMP);
 
         if (cachedRates && timestamp) {
             const age = Date.now() - parseInt(timestamp, 10);

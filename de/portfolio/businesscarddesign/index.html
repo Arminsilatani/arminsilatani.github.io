@@ -26,8 +26,7 @@
 
         <!-- :::::::::::::::::::::::::: STYLESHEETS & FONTS :::::::::::::::::::::::::: -->
 
-        <!-- CORE -->
-         <link rel="stylesheet" href="/assets/src/core/z-index.css" />
+        <link rel="stylesheet" href="/assets/src/core/z-index.css" />
         <link rel="stylesheet" href="/assets/src/core/fonts.css" />
         <link rel="stylesheet" href="/assets/src/core/base.css" />
         <link rel="stylesheet" href="/assets/src/core/typography.css" />
@@ -36,14 +35,10 @@
         <link rel="stylesheet" href="/assets/src/core/animations.css" />
         <link rel="stylesheet" href="/assets/src/core/cursor.css" />
         <link rel="stylesheet" href="/assets/src/core/loader.css" />
-
-        <!-- COMPONENTS -->
         <link rel="stylesheet" href="/assets/src/components/hero.css" />
         <link rel="stylesheet" href="/assets/src/components/section-divider.css" />
         <link rel="stylesheet" href="/assets/src/components/terminal-breadcrumb.css" />
         <link rel="stylesheet" href="/assets/src/components/process-component.css" />
-
-        <!-- PAGE -->
         <link rel="stylesheet" href="/assets/src/styles/portfolio-graphic.css" />
 
         <link
@@ -153,20 +148,21 @@
 
         <!-- :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: -->
 
-<script src="/assets/src/core/gsap.min.js" defer></script>
-<script src="/assets/src/core/ScrollTrigger.min.js" defer></script>
-<script src="/assets/src/core/lottie_light.min.js" defer></script>
+        <script src="/assets/src/core/lottie_light.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     </head>
     <body class="portfolio-page">
-  <div id="initial-loader" class="fullpage-loader">
-    <div class="lds-grid">
-      <div></div><div></div><div></div>
-      <div></div><div></div><div></div>
-      <div></div><div></div><div></div>
-    </div>
-  </div>
+        <div id="initial-loader" class="fullpage-loader">
+            <div class="lds-grid">
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+            </div>
+        </div>
         <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+        <div class="cursor-follower"></div>
+
 
         <!-- :::::::::::::::::::::::::: HEADER & NAVIGATION :::::::::::::::::::::::::: -->
 
@@ -500,13 +496,14 @@
                 </div>
             </section>
 
-<section-divider role="presentation" aria-hidden="true"></section-divider>
+            <section-divider role="presentation" aria-hidden="true"></section-divider>
+
 
             <!-- :::::::::::::::::::::::::: PROCESS :::::::::::::::::::::::::: -->
 
             <section class="section" id="process">
                 <div class="container-1080 reveal-up">
-                    <span class="section-eyebrow">Präzises Grafikdesign für eine professionelle Markenpräsentation</span>
+                    <span class="eyebrow">Präzises Grafikdesign für eine professionelle Markenpräsentation</span>
                     <h2 class="section-title split-title">
                         Ablauf der Zusammenarbeit für Ihr Visitenkarten-Design
                     </h2>
@@ -660,9 +657,9 @@
         <script type="module" src="/assets/src/components/language-selector.js"></script>
         <script src="/assets/src/components/terminal-breadcrumb.js"></script>
         <script type="module" src="/assets/src/components/footer.js"></script>
-<script type="module" src="/assets/src/components/back-to-top.js"></script>
-<script src="/assets/src/core/cursor.js"></script>
-<script src="/assets/src/core/loader.js"></script>
+        <script type="module" src="/assets/src/components/back-to-top.js"></script>
+        <script src="/assets/src/core/cursor.js"></script>
+        <script src="/assets/src/core/loader.js"></script>
         <script type="module" src="/assets/src/components/process-component.js"></script>
         <script src="/assets/src/core/animations.js"></script>
     </body>

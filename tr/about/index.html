@@ -28,8 +28,7 @@
 
         <!-- :::::::::::::::::::::::::: STYLESHEETS & FONTS :::::::::::::::::::::::::: -->
 
-                <!-- CORE -->
-                 <link rel="stylesheet" href="/assets/src/core/z-index.css" />
+        <link rel="stylesheet" href="/assets/src/core/z-index.css" />
         <link rel="stylesheet" href="/assets/src/core/fonts.css" />
         <link rel="stylesheet" href="/assets/src/core/base.css" />
         <link rel="stylesheet" href="/assets/src/core/typography.css" />
@@ -37,13 +36,9 @@
         <link rel="stylesheet" href="/assets/src/core/animations.css" />
         <link rel="stylesheet" href="/assets/src/core/cursor.css" />
         <link rel="stylesheet" href="/assets/src/core/loader.css" />
-
-        <!-- COMPONENTS -->
         <link rel="stylesheet" href="/assets/src/components/hero.css" />
         <link rel="stylesheet" href="/assets/src/components/section-divider.css" />
         <link rel="stylesheet" href="/assets/src/components/terminal-breadcrumb.css" />
-
-        <!-- PAGE -->
         <link rel="stylesheet" href="/assets/src/styles/about.css" />
 
 
@@ -132,22 +127,22 @@
 
         <!-- :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: -->
 
-<script src="/assets/src/core/gsap.min.js" defer></script>
-<script src="/assets/src/core/ScrollTrigger.min.js" defer></script>
-<script src="/assets/src/core/lottie_light.min.js" defer></script>
+        <script src="/assets/src/core/gsap.min.js" defer></script>
+        <script src="/assets/src/core/ScrollTrigger.min.js" defer></script>
+        <script src="/assets/src/core/lottie_light.min.js" defer></script>
     </head>
 
-
     <body>
-  <div id="initial-loader" class="fullpage-loader">
-    <div class="lds-grid">
-      <div></div><div></div><div></div>
-      <div></div><div></div><div></div>
-      <div></div><div></div><div></div>
-    </div>
-  </div>
+        <div id="initial-loader" class="fullpage-loader">
+            <div class="lds-grid">
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+            </div>
+        </div>
         <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+        <div class="cursor-follower"></div>
+
 
         <!-- :::::::::::::::::::::::::: HEADER & NAVIGATION :::::::::::::::::::::::::: -->
 
@@ -172,17 +167,12 @@
                 >
                     <source src="/assets/images/arminsilatani/about/hero.mp4" type="video/mp4">
                 </video>
-
                 <div class="hero-section__noise" aria-hidden="true"></div>
-
                 <div class="hero-section__scanlines" aria-hidden="true"></div>
-
                 <div class="hero-section__glitch" aria-hidden="true"></div>
-
                 <div class="container-1300">
                     <div class="hero-container">
                         <language-component></language-component>
-
                         <div class="hero-title">
                             <h1>
                                 <span class="split-title">Hakkımda</span>
@@ -191,7 +181,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="pro-divider">
                     <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
                         <defs>
@@ -210,7 +199,6 @@
                                 />
                             </filter>
                         </defs>
-
                         <path
                             filter="url(#dividerShadow)"
                             fill="#0D0D0D"
@@ -218,20 +206,13 @@
                         />
                     </svg>
                 </div>
-
                 <terminal-breadcrumb></terminal-breadcrumb>
             </section>
-
-
-            <!-- :::::::::::::::::::::::::: STORY TIMELINE :::::::::::::::::::::::::: -->
 
             <div id="timeline-container" class="story-container">
                 <div class="container-1300"></div>
             </div>
         </main>
-
-
-        <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
 
         <footer-component></footer-component>
         <back-to-top></back-to-top>
@@ -245,9 +226,9 @@
         <script type="module" src="/assets/src/components/language-selector.js"></script>
         <script src="/assets/src/components/terminal-breadcrumb.js"></script>
         <script type="module" src="/assets/src/components/footer.js"></script>
-<script type="module" src="/assets/src/components/back-to-top.js"></script>
-<script src="/assets/src/core/cursor.js"></script>
-<script src="/assets/src/core/loader.js"></script>
+        <script type="module" src="/assets/src/components/back-to-top.js"></script>
+        <script src="/assets/src/core/cursor.js"></script>
+        <script src="/assets/src/core/loader.js"></script>
 
         <script>
             document.addEventListener("DOMContentLoaded", function () {
@@ -340,7 +321,7 @@
                         "</div>" +
                         "</div>" +
                         '<div class="content-text">' +
-                        '<span class="section-eyebrow">' +
+                        '<span class="eyebrow">' +
                         (data.context || "") +
                         "</span>" +
                         '<h2 class="step-title">' +

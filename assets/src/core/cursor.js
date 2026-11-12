@@ -19,9 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let lastX = 0, lastY = 0;
     let rafPending = false;
 
-    // ==================================================
-    // SCROLL MODE
-    // ==================================================
+
+
+    /* :::::::::::::::::::::::::: SCROLL MODE :::::::::::::::::::::::::: */
+
     let scrollModeActive = false;
     let scrollStartY = 0;
     let scrollSpeed = 0;
@@ -47,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     let savedScrollBehaviors = null;
-    
+
     function disableSmoothScroll() {
       savedScrollBehaviors = [];
       const targets = [document.documentElement, document.body];
@@ -125,9 +126,10 @@ document.addEventListener("DOMContentLoaded", () => {
       follower.classList.remove('scroll-mode');
     }
 
-    // ==================================================
-    // تشخیص Back-to-Top
-    // ==================================================
+
+
+    /* :::::::::::::::::::::::::: BACK TO TOP DETECTION :::::::::::::::::::::::::: */
+
     function isOverBackToTop(x, y) {
       const el = document.elementFromPoint(x, y);
       if (!el) return false;
@@ -152,6 +154,17 @@ document.addEventListener("DOMContentLoaded", () => {
       return false;
     }
 
+    function isOverRedCheckbox(x, y) {
+        const boxes = document.querySelectorAll('.red-checkbox-container, .red-checkbox');
+        for (const box of boxes) {
+            const rect = box.getBoundingClientRect();
+            if (x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     function forceBttState() {
       if (currentState === 'btt') return;
       currentState = 'btt';
@@ -170,9 +183,10 @@ document.addEventListener("DOMContentLoaded", () => {
       applyLight(isLight);
     }
 
-    // ==================================================
-    // تشخیص حالت toggle
-    // ==================================================
+
+
+    /* :::::::::::::::::::::::::: TOGGLE STATE DETECTION :::::::::::::::::::::::::: */
+
     function getToggleState(el) {
       if (!(el instanceof Element)) return null;
       
@@ -264,6 +278,38 @@ document.addEventListener("DOMContentLoaded", () => {
       return false;
     }
 
+    function isElementDisabled(el) {
+        if (!(el instanceof Element)) return false;
+
+        if (el.matches('[disabled], .disabled, button:disabled, input:disabled, [aria-disabled="true"], [data-cursor="disabled"]')) {
+            return true;
+        }
+
+        if (el.disabled === true) return true;
+
+        if (el.matches('.red-checkbox, .red-checkbox-container, .disabled-checkbox, .is-disabled')) {
+            return true;
+        }
+
+        if (el.matches('label')) {
+            const input = el.querySelector('input');
+            if (input && (input.disabled || input.matches('.red-checkbox, .disabled-checkbox, [disabled]'))) {
+                return true;
+            }
+        }
+
+        if (el.matches('label[for]')) {
+            try {
+                const target = document.getElementById(el.htmlFor || el.getAttribute('for'));
+                if (target && (target.disabled || target.matches('.red-checkbox, .disabled-checkbox, [disabled]'))) {
+                    return true;
+                }
+            } catch(e) {}
+        }
+
+        return false;
+    }
+
     function getAnchorDirection(el) {
       const manual = el.getAttribute && el.getAttribute('data-cursor');
       if (manual === 'up') return 'up';
@@ -301,9 +347,10 @@ document.addEventListener("DOMContentLoaded", () => {
       return rect.top > 0 ? 'down' : 'up';
     }
 
-    // ==================================================
-    // تشخیص روشن بودن پس‌زمینه (نسخه اصلاح‌شده)
-    // ==================================================
+
+
+    /* :::::::::::::::::::::::::: LIGHTNESS DETECTION :::::::::::::::::::::::::: */
+
     function parseColor(str) {
       if (!str || str === 'none' || str === 'transparent') return null;
       let m = str.match(/rgba?\(\s*(\d+)\s*[, ]\s*(\d+)\s*[, ]\s*(\d+)\s*(?:[,/]\s*([\d.]+))?\s*\)/);
@@ -347,7 +394,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return all;
     }
 
-    // ✅ تابع اصلاح‌شده: شبه‌المان‌های نامرئی (opacity < 0.5) نادیده گرفته می‌شوند
     function detectLight(x, y) {
       const els = getAllElementsAtPoint(x, y);
       for (const el of els) {
@@ -355,7 +401,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const tag = el.tagName;
         if (tag === 'IMG' || tag === 'VIDEO' || tag === 'PICTURE' || tag === 'CANVAS' || tag === 'IFRAME') continue;
         
-        // ---- بررسی المان اصلی (فقط اگر قابل مشاهده باشد) ----
         try {
           const s = getComputedStyle(el);
           const elOpacity = parseFloat(s.opacity);
@@ -378,7 +423,6 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         } catch(e) {}
         
-        // ---- بررسی ::before — فقط اگر واقعاً دیده شود (opacity >= 0.5) ----
         try {
           const b = getComputedStyle(el, '::before');
           const bOpacity = parseFloat(b.opacity);
@@ -396,7 +440,6 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         } catch(e) {}
         
-        // ---- بررسی ::after — فقط اگر واقعاً دیده شود ----
         try {
           const a = getComputedStyle(el, '::after');
           const aOpacity = parseFloat(a.opacity);
@@ -414,9 +457,10 @@ document.addEventListener("DOMContentLoaded", () => {
       follower.classList.toggle("on-light", light);
     }
 
-    // ==================================================
-    // mousedown — Toggle اسکرول
-    // ==================================================
+
+
+    /* :::::::::::::::::::::::::: MOUSEDOWN HANDLER :::::::::::::::::::::::::: */
+
     window.addEventListener('mousedown', (e) => {
       const interactive = e.target.closest && e.target.closest('a[href], button, input, textarea, select, [contenteditable="true"]');
       if (scrollModeActive) {
@@ -431,9 +475,10 @@ document.addEventListener("DOMContentLoaded", () => {
       enterScrollMode(e.clientY);
     });
 
-    // ==================================================
-    // mousemove
-    // ==================================================
+
+
+    /* :::::::::::::::::::::::::: MOUSEMOVE HANDLER :::::::::::::::::::::::::: */
+
     window.addEventListener('mousemove', (e) => {
       lastX = e.clientX;
       lastY = e.clientY;
@@ -454,11 +499,25 @@ document.addEventListener("DOMContentLoaded", () => {
           
           if (!scrollModeActive) {
             if (isOverBackToTop(lastX, lastY)) {
-              if (currentState !== 'btt') forceBttState();
+                if (currentState !== 'btt') forceBttState();
             } else if (currentState === 'btt') {
-              clearBttState();
+                clearBttState();
             }
-          }
+
+            if (isOverRedCheckbox(lastX, lastY)) {
+                if (currentState !== 'disabled') {
+                    currentState = 'disabled';
+                    cursor.classList.remove(...ALL_MODES);
+                    follower.classList.remove(...ALL_MODES);
+                    cursor.classList.add('disabled-mode');
+                    follower.classList.add('disabled-mode');
+                }
+            } else if (currentState === 'disabled' && !isOverBackToTop(lastX, lastY)) {
+                currentState = 'default';
+                cursor.classList.remove(...ALL_MODES);
+                follower.classList.remove(...ALL_MODES);
+            }
+        }
         });
       }
     });
@@ -468,9 +527,10 @@ document.addEventListener("DOMContentLoaded", () => {
       gsap.to([cursor, follower], { opacity: 0, duration: 0.3 });
     });
 
-    // ==================================================
-    // handleMouseOver
-    // ==================================================
+
+
+    /* :::::::::::::::::::::::::: MOUSE OVER HANDLER :::::::::::::::::::::::::: */
+
     function handleMouseOver(e) {
       if (scrollModeActive) return;
       
@@ -495,8 +555,8 @@ document.addEventListener("DOMContentLoaded", () => {
       for (const el of elements) {
         if (el.tagName === 'BACK-TO-TOP' || (el.matches && el.matches('back-to-top'))) {
           isBtt = true;
-        } else if (el.matches('[disabled], .disabled, button:disabled, input:disabled')) {
-          isDisabled = true;
+        } else if (isElementDisabled(el)) {
+            isDisabled = true;
         } else if (el.matches("input[type='text'], input[type='email'], input[type='password'], input[type='search'], input[type='number'], input[type='tel'], input[type='url'], textarea")) {
           isText = true;
         } else if (el.matches("[draggable='true'], .draggable")) {

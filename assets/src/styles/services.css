@@ -1,4 +1,4 @@
-
+/* :::::::::::::::::::::::::: MAIN CONTENT :::::::::::::::::::::::::: */
 
 .list-header {
     display: flex;
@@ -28,7 +28,6 @@
     transform-origin: left;
 }
 
-/* ===== Editorial list ===== */
 .editorial-list {
     display: flex;
     flex-direction: column;
@@ -68,7 +67,6 @@
     transform: translate(-50%, -50%) scale(1);
 }
 
-/* --- Title group --- */
 .item-title-group {
     display: flex;
     align-items: center;
@@ -110,7 +108,6 @@
     transform: translateX(10px);
 }
 
-/* --- Description --- */
 .item-desc p {
     color: var(--text-soft);
     font-size: 1rem;
@@ -144,15 +141,16 @@
     transform: translateX(0);
     color: var(--accent);
 }
-/* در حالت LTR فلش برعکس شود */
+
 [dir="ltr"] .item-action svg,
 [dir="ltr"] .item-action i,
 [dir="ltr"] .item-action .arrow-icon,
 [dir="ltr"] .item-action img {
     transform: scaleX(-1);
 }
-/* ===== Sub services ===== */
 
+
+/* :::::::::::::::::::::::::: SERVICES :::::::::::::::::::::::::: */
 
 .sub-list .editorial-item {
     padding-block: 35px;
@@ -162,7 +160,6 @@
     font-size: 1.4rem;
 }
 
-/* ===== CTA ===== */
 .editorial-cta {
     padding-block: 120px 0;
     text-align: center;
@@ -177,28 +174,31 @@
 
 .cta-content h2 {
     font-size: 2.5rem;
-    margin: 0;                        /* margin-bottom حذف شد چون gap جایش را گرفت */
+    margin: 0;
     font-weight: 800;
     color: var(--text);
 }
 
-/* ===== Responsive ===== */
 @media (max-width: 1100px) {
     .editorial-item {
         grid-template-columns: 1fr;
         gap: 20px;
         padding-block: 35px;
     }
+
     .item-desc p {
         padding-inline-start: 0;
         max-width: 100%;
     }
+
     .item-action {
         display: none;
     }
+
     .item-title-group h3 {
         font-size: 1.5rem;
     }
+
     .sub-list .editorial-item {
         grid-template-columns: 1fr;
     }
@@ -229,7 +229,6 @@
     .item-desc p {
         font-size: 0.95rem;
     }
-
 
     .cta-content h2 {
         font-size: 1.8rem;

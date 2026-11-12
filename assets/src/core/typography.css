@@ -1,33 +1,8 @@
-/* ===================================================================== */
-/* ============== TYPOGRAPHY — SINGLE SOURCE OF TRUTH ================== */
-/* ===================================================================== */
-
-/* ===================================================================== */
-/* ======================== TABLE OF CONTENTS ========================== */
-/* ===================================================================== */
-/*
-  1.  BASE TYPOGRAPHY (h1 - h6, p, h1 .h1_sub)
-  2.  SPLIT TEXT / GSAP PROTECTION
-  3.  RESPONSIVE TYPOGRAPHY (Global)
-  4.  STORY / ABOUT PAGE
-  5.  HERO SECTION (Light Home)
-  6.  TESTIMONIALS
-  7.  PORTFOLIO PAGE
-  8.  PORTFOLIO ROW (Global)
-  9.  MEDIA CAPTION (Hover / Overlay Text)
-  10. SECTION EYEBROW (Global Label)
-  11. SEO PAGE SECTION HEADERS
-*/
-
-
-/* ===================================================================== */
-/* ======================= 1. BASE TYPOGRAPHY ========================== */
-/* ===================================================================== */
+/* :::::::::::::::::::::::::: BASE TYPOGRAPHY :::::::::::::::::::::::::: */
 
 :root {
-    --text-light: #f5f5f5;
-    --text-dark: #0d0d0d;
-
+    --text-light: #F5F5F5;
+    --text-dark: #0D0D0D;
     --shadow-on-dark-text: 0 2px 12px rgba(245, 245, 245, 0.6);
     --shadow-on-light-text: 0 2px 12px rgba(13, 13, 13, 0.7);
 }
@@ -76,9 +51,7 @@ p {
 }
 
 
-/* ===================================================================== */
-/* ============= 2. SPLIT TEXT / GSAP PROTECTION ======================= */
-/* ===================================================================== */
+/* :::::::::::::::::::::::::: SPLIT TEXT / GSAP PROTECTION :::::::::::::::::::::::::: */
 
 .split-title .word,
 .split-title .space,
@@ -102,8 +75,13 @@ p {
     transform-origin: center bottom;
 }
 
-.split-title .space { width: 0.32em; }
-.split-text .space  { width: 0.28em; }
+.split-title .space {
+    width: 0.32em;
+}
+
+.split-text .space {
+    width: 0.28em;
+}
 
 .js h1.split-title,
 h1.split-title {
@@ -113,82 +91,17 @@ h1.split-title {
 }
 
 
-/* ===================================================================== */
-/* ================ 3. RESPONSIVE TYPOGRAPHY (Global) ================== */
-/* ===================================================================== */
-
-@media (max-width: 1024px) {
-    h1 {
-        font-size: clamp(2.2rem, 5vw, 2.8rem);
-        text-align: center;
-        text-align-last: center;
-    }
-
-    h2 { font-size: clamp(1.8rem, 4vw, 2.3rem); }
-    h3 { font-size: clamp(1.4rem, 3.5vw, 1.9rem); }
-}
-
-@media (max-width: 768px) {
-    h1,
-    h1.split-title {
-        font-size: clamp(2.4rem, 8vw, 3rem);
-        line-height: 1.3;
-        color: var(--text-light);
-        -webkit-text-fill-color: var(--text-light);
-        text-shadow: var(--shadow-on-light-text);
-        text-align: center;
-        text-align-last: center;
-    }
-
-    h1 .h1_sub {
-        font-size: 0.42em;
-        color: inherit;
-    }
-
-    h2 {
-        font-size: clamp(1.5rem, 5vw, 2rem);
-        line-height: 1.4;
-    }
-
-    h3 { font-size: clamp(1.2rem, 4vw, 1.7rem); }
-
-    p, li {
-        font-size: clamp(0.9rem, 2.8vw, 1rem);
-        line-height: 1.6;
-    }
-}
-
-@media (max-width: 480px) {
-    h1,
-    h1.split-title {
-        font-size: 2.6rem;
-        text-align: center;
-        text-align-last: center;
-        color: var(--text-light);
-        -webkit-text-fill-color: var(--text-light);
-        text-shadow: var(--shadow-on-light-text);
-    }
-
-    h1 .h1_sub { font-size: 0.45em; }
-
-    h2 { font-size: 1.6rem; }
-    h3 { font-size: 1.35rem; }
-
-    p { font-size: 1.05rem; line-height: 1.55; }
-}
-
-
-/* ===================================================================== */
-/* ==================== 4. STORY / ABOUT PAGE ========================== */
-/* ===================================================================== */
+/* :::::::::::::::::::::::::: STORY / ABOUT PAGE :::::::::::::::::::::::::: */
 
 .step-year {
     font-size: clamp(2.5rem, 5vw, 4.5rem);
     font-weight: 900;
-    color: #54595f;
+    color: #54595F;
 }
 
-.story-block.active .step-year { color: var(--text-light); }
+.story-block.active .step-year {
+    color: var(--text-light);
+}
 
 .step-context {
     font-size: 1.1rem;
@@ -204,55 +117,21 @@ h1.split-title {
 
 .step-text {
     font-size: clamp(1.2rem, 2vw, 1.8rem);
-    color: #54595f;
+    color: #54595F;
     line-height: 1.8;
     font-weight: 300;
 }
 
-@media (max-width: 768px) {
-    .step-year    { font-size: clamp(1.8rem, 4vw, 2.5rem); }
-    .step-context { font-size: 0.8rem; }
-    .step-title   { font-size: clamp(1.5rem, 4vw, 2rem); }
-    .step-text    { font-size: clamp(1rem, 2.5vw, 1.3rem); }
-}
 
-
-/* ===================================================================== */
-/* ==================== 5. HERO SECTION (Light Home) =================== */
-/* ===================================================================== */
+/* :::::::::::::::::::::::::: HERO :::::::::::::::::::::::::: */
 
 .hero-section h1 {
     color: var(--text-dark);
     text-shadow: var(--shadow-on-dark-text);
 }
 
-@media (max-width: 768px) {
-    .hero-section h1,
-    .hero-section h1 .h1_sub {
-        color: var(--text-light);
-        -webkit-text-fill-color: var(--text-light);
-        text-shadow: var(--shadow-on-light-text);
-    }
-}
 
-@media (min-width: 800px) and (max-width: 1100px) and (orientation: portrait) {
-    .hero-section h1,
-    .hero-section h1 .h1_sub,
-    .hero-section h1 .split-title,
-    .hero-section h1 .split-title .word,
-    .hero-section h1 .split-title .space,
-    .hero-section h1 .h1_sub .word,
-    .hero-section h1 .h1_sub .space {
-        color: var(--text-light);
-        -webkit-text-fill-color: var(--text-light);
-        text-shadow: var(--shadow-on-light-text);
-    }
-}
-
-
-/* ===================================================================== */
-/* ========================= 6. TESTIMONIALS =========================== */
-/* ===================================================================== */
+/* :::::::::::::::::::::::::: TESTIMONIALS :::::::::::::::::::::::::: */
 
 .testimonials-section .title {
     font-size: 30px;
@@ -261,9 +140,7 @@ h1.split-title {
 }
 
 
-/* ===================================================================== */
-/* ======================== 7. PORTFOLIO PAGE ========================== */
-/* ===================================================================== */
+/* :::::::::::::::::::::::::: PORTFOLIO :::::::::::::::::::::::::: */
 
 .section-title {
     font-size: clamp(32px, 5vw, 58px);
@@ -286,11 +163,13 @@ h1.split-title {
 }
 
 .category-badge {
-    color: #4ecdc4;
+    color: #4ECDC4;
     font-size: 13px;
 }
 
-.category-card__body h3 { font-size: 28px; }
+.category-card__body h3 {
+    font-size: 28px;
+}
 
 .category-card__body p {
     color: rgba(245, 247, 251, 0.74);
@@ -304,7 +183,9 @@ h1.split-title {
     line-height: 1;
 }
 
-.graphic-card h3 { font-size: 24px; }
+.graphic-card h3 {
+    font-size: 24px;
+}
 
 .graphic-card p {
     color: rgba(245, 247, 251, 0.74);
@@ -317,43 +198,8 @@ h1.split-title {
     letter-spacing: 0.02em;
 }
 
-@media (max-width: 768px) {
-    body.portfolio-page h1 {
-        font-size: 28px;
-        text-align: center;
-    }
 
-    body.portfolio-page .section-title.split-title .word {
-        font-size: 30px;
-    }
-
-    body.portfolio-page .quick-link { font-size: 15px; }
-    body.portfolio-page .category-number { font-size: 32px; }
-    body.portfolio-page .category-badge { font-size: 11px; }
-    body.portfolio-page .category-card__body h3 { font-size: 20px; }
-
-    body.portfolio-page .category-card__body p {
-        font-size: 14px;
-        line-height: 1.8;
-    }
-
-    body.portfolio-page .category-card__footer { font-size: 14px; }
-    body.portfolio-page .graphic-card__index { font-size: 32px; }
-    body.portfolio-page .graphic-card h3 { font-size: 20px; }
-
-    body.portfolio-page .graphic-card p {
-        font-size: 14px;
-        line-height: 1.7;
-        color: rgba(245, 247, 251, 0.74);
-    }
-
-    body.portfolio-page .cta-btn { font-size: 15px; }
-}
-
-
-/* ===================================================================== */
-/* ==================== 8. PORTFOLIO ROW (Global) ===================== */
-/* ===================================================================== */
+/* :::::::::::::::::::::::::: PORTFOLIO ROW :::::::::::::::::::::::::: */
 
 .portfolio-row__index {
     color: rgba(255, 255, 255, 0.42);
@@ -384,37 +230,8 @@ h1.split-title {
     font-weight: 500;
 }
 
-@media (max-width: 768px) {
-    body.portfolio-page .portfolio-row__year {
-        font-size: 0.65rem;
-        color: rgba(255, 255, 255, 0.42);
-        letter-spacing: 0.12em;
-    }
 
-    body.portfolio-page .portfolio-row__title {
-        font-size: 16px;
-        font-weight: 600;
-        color: #f5f7fb;
-    }
-
-    body.portfolio-page .portfolio-row__hint {
-        color: rgba(255, 255, 255, 0.42);
-        font-size: 11px;
-        font-weight: 400;
-        line-height: 1.4;
-    }
-
-    body.portfolio-page .portfolio-row__index {
-        color: rgba(255, 255, 255, 0.42);
-        font-size: 1.1rem;
-        font-weight: 700;
-    }
-}
-
-
-/* ===================================================================== */
-/* ============ 9. MEDIA CAPTION (Hover / Overlay Text) ================ */
-/* ===================================================================== */
+/* :::::::::::::::::::::::::: MEDIA CAPTION :::::::::::::::::::::::::: */
 
 .media-caption {
     color: var(--text-light);
@@ -439,27 +256,22 @@ h1.split-title {
 }
 
 
-/* ===================================================================== */
-/* ==================== 10. SECTION EYEBROW ============================ */
-/* ===================================================================== */
+/* :::::::::::::::::::::::::: SECTION EYEBROW :::::::::::::::::::::::::: */
 
-.section-eyebrow {
+.eyebrow {
     display: inline-block;
     font-size: 0.75rem;
     font-weight: 400;
     line-height: 1.4;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #4ecdc4;
+    color: #4ECDC4;
     margin-bottom: 0;
     opacity: 0.85;
 }
 
 
-/* ===================================================================== */
-/* ================== 11. SEO PAGE SECTION HEADERS ==================== */
-/* ===================================================================== */
-/* تایپوگرافی سرتیتر و متن سکشن‌های صفحه سئو                              */
+/* :::::::::::::::::::::::::: SEO PAGE SECTION HEADERS :::::::::::::::::::::::::: */
 
 .seo-section-header {
     max-width: 48rem;
@@ -482,7 +294,6 @@ h1.split-title {
     line-height: 2.1;
 }
 
-/* ---------- Portfolio & Pricing — وسط‌چین ---------- */
 .seo-page #seo-portfolio .seo-section-header,
 .seo-page #seo-pricing .seo-section-header {
     display: flex;
@@ -490,8 +301,8 @@ h1.split-title {
     align-items: center;
 }
 
-.seo-page #seo-portfolio .seo-section-header .section-eyebrow,
-.seo-page #seo-pricing .seo-section-header .section-eyebrow {
+.seo-page #seo-portfolio .seo-section-header .eyebrow,
+.seo-page #seo-pricing .seo-section-header .eyebrow {
     display: inline-flex;
     align-items: center;
     text-align: center;
@@ -522,7 +333,6 @@ h1.split-title {
     text-justify: inter-word;
 }
 
-/* ---------- LTR overrides ---------- */
 [dir="ltr"] .seo-page #seo-portfolio .seo-section-header .seo-section-title,
 [dir="ltr"] .seo-page #seo-pricing .seo-section-header .seo-section-title {
     direction: ltr;
@@ -534,11 +344,6 @@ h1.split-title {
     -moz-text-align-last: left;
 }
 
-/* ---------- Responsive ---------- */
-@media (min-width: 640px) {
-    .seo-section-title { font-size: 2.25rem; line-height: 1.4; }
-    .seo-section-sub   { font-size: 1rem; }
-}
 
 /* :::::::::::::::::::::::::: INLINE LINK STYLES :::::::::::::::::::::::::: */
 
@@ -568,100 +373,335 @@ li a:focus,
     outline-offset: 2px;
 }
 
-/* ===================================================================== */
-/* ============================ 320px = XS ============================= */
-/* iPhone 5 (568x320)                                                    */
-/* ===================================================================== */
+
+/* :::::::::::::::::::::::::: 320PX - XS - IPHONE 5 (320X568) :::::::::::::::::::::::::: */
 
 @media (min-width: 320px) {
 
+    @media (max-width: 1024px) {
+
+        h1 {
+            font-size: clamp(2.2rem, 5vw, 2.8rem);
+            text-align: center;
+            text-align-last: center;
+        }
+
+        h2 {
+            font-size: clamp(1.8rem, 4vw, 2.3rem);
+        }
+
+        h3 {
+            font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+        }
+
+    }
+
+    @media (max-width: 768px) {
+
+        h1,
+        h1.split-title {
+            font-size: clamp(2.4rem, 8vw, 3rem);
+            line-height: 1.3;
+            color: var(--text-light);
+            -webkit-text-fill-color: var(--text-light);
+            text-shadow: var(--shadow-on-light-text);
+            text-align: center;
+            text-align-last: center;
+        }
+
+        h1 .h1_sub {
+            font-size: 0.42em;
+            color: inherit;
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 5vw, 2rem);
+            line-height: 1.4;
+        }
+
+        h3 {
+            font-size: clamp(1.2rem, 4vw, 1.7rem);
+        }
+
+        p,
+        li {
+            font-size: clamp(0.9rem, 2.8vw, 1rem);
+            line-height: 1.6;
+        }
+
+    }
+
+    @media (max-width: 480px) {
+
+        h1,
+        h1.split-title {
+            font-size: 2.6rem;
+            text-align: center;
+            text-align-last: center;
+            color: var(--text-light);
+            -webkit-text-fill-color: var(--text-light);
+            text-shadow: var(--shadow-on-light-text);
+        }
+
+        h1 .h1_sub {
+            font-size: 0.45em;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+        }
+
+        h3 {
+            font-size: 1.35rem;
+        }
+
+        p {
+            font-size: 1.05rem;
+            line-height: 1.55;
+        }
+
+    }
+
+    @media (max-width: 768px) {
+
+        .step-year {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+        }
+
+        .step-context {
+            font-size: 0.8rem;
+        }
+
+        .step-title {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+        }
+
+        .step-text {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+        }
+
+    }
+
+    @media (max-width: 768px) {
+
+        .hero-section h1,
+        .hero-section h1 .h1_sub {
+            color: var(--text-light);
+            -webkit-text-fill-color: var(--text-light);
+            text-shadow: var(--shadow-on-light-text);
+        }
+
+    }
+
+    @media (max-width: 768px) {
+
+        body.portfolio-page h1 {
+            font-size: 28px;
+            text-align: center;
+        }
+
+        body.portfolio-page .section-title.split-title .word {
+            font-size: 30px;
+        }
+
+        body.portfolio-page .quick-link {
+            font-size: 15px;
+        }
+
+        body.portfolio-page .category-number {
+            font-size: 32px;
+        }
+
+        body.portfolio-page .category-badge {
+            font-size: 11px;
+        }
+
+        body.portfolio-page .category-card__body h3 {
+            font-size: 20px;
+        }
+
+        body.portfolio-page .category-card__body p {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        body.portfolio-page .category-card__footer {
+            font-size: 14px;
+        }
+
+        body.portfolio-page .graphic-card__index {
+            font-size: 32px;
+        }
+
+        body.portfolio-page .graphic-card h3 {
+            font-size: 20px;
+        }
+
+        body.portfolio-page .graphic-card p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: rgba(245, 247, 251, 0.74);
+        }
+
+        body.portfolio-page .cta-btn {
+            font-size: 15px;
+        }
+
+    }
+
+    @media (max-width: 768px) {
+
+        body.portfolio-page .portfolio-row__year {
+            font-size: 0.65rem;
+            color: rgba(255, 255, 255, 0.42);
+            letter-spacing: 0.12em;
+        }
+
+        body.portfolio-page .portfolio-row__title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #F5F7FB;
+        }
+
+        body.portfolio-page .portfolio-row__hint {
+            color: rgba(255, 255, 255, 0.42);
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        body.portfolio-page .portfolio-row__index {
+            color: rgba(255, 255, 255, 0.42);
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+    }
+
 }
 
-/* ===================================================================== */
-/* ============================ 380px = S ============================== */
-/* Galaxy Z Flip 3 (880x360) | Galaxy S24 Ultra (891x412)                */
-/* ===================================================================== */
+@media (min-width: 568px) and (max-height: 320px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 380PX - S - GALAXY Z FLIP 3 / S24 ULTRA (380X880) :::::::::::::::::::::::::: */
 
 @media (min-width: 380px) {
 
 }
 
-/* ===================================================================== */
-/* =========================== 440px = S+ ============================== */
-/* iPhone 17 Pro Max (956x440)                                           */
-/* ===================================================================== */
+@media (min-width: 880px) and (max-height: 412px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 440PX - S+ - IPHONE 17 PRO MAX (440X956) :::::::::::::::::::::::::: */
 
 @media (min-width: 440px) {
 
 }
 
-/* ===================================================================== */
-/* ============================ 480px = M ============================== */
-/* —                                                                     */
-/* ===================================================================== */
-
-@media (min-width: 480px) {
+@media (min-width: 956px) and (max-height: 440px) and (orientation: landscape) {
 
 }
 
-/* ===================================================================== */
-/* =========================== 768px = TAB ============================= */
-/* iPad Mini (1024x768) | Galaxy Fold inner (1076x768)                   */
-/* ===================================================================== */
+
+/* :::::::::::::::::::::::::: 480PX - M - LARGE MOBILE :::::::::::::::::::::::::: */
+
+@media (min-width: 480px) {
+
+    @media (min-width: 640px) {
+
+        .seo-section-title {
+            font-size: 2.25rem;
+            line-height: 1.4;
+        }
+
+        .seo-section-sub {
+            font-size: 1rem;
+        }
+
+    }
+
+}
+
+@media (min-width: 480px) and (max-height: 500px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 768PX - TAB - IPAD MINI / GALAXY FOLD INNER (768X1024) :::::::::::::::::::::::::: */
 
 @media (min-width: 768px) {
 
 }
 
-/* ===================================================================== */
-/* ========================== 800px = TAB+ ============================= */
-/* Galaxy Tab S7 (1280x800)                                              */
-/* ===================================================================== */
-
-@media (min-width: 800px) {
+@media (min-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
 
 }
 
-/* ===================================================================== */
-/* =========================== 1024px = L ============================== */
-/* iPad Pro 13 (1376x1032)                                               */
-/* ===================================================================== */
+
+/* :::::::::::::::::::::::::: 800PX - TAB+ - GALAXY TAB S7 (800X1280) :::::::::::::::::::::::::: */
+
+@media (min-width: 800px) {
+
+    @media (min-width: 800px) and (max-width: 1100px) and (orientation: portrait) {
+
+        .hero-section h1,
+        .hero-section h1 .h1_sub,
+        .hero-section h1 .split-title,
+        .hero-section h1 .split-title .word,
+        .hero-section h1 .split-title .space,
+        .hero-section h1 .h1_sub .word,
+        .hero-section h1 .h1_sub .space {
+            color: var(--text-light);
+            -webkit-text-fill-color: var(--text-light);
+            text-shadow: var(--shadow-on-light-text);
+        }
+
+    }
+
+}
+
+@media (min-width: 1280px) and (max-height: 800px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 1024PX - L - IPAD PRO 13 (1024X1376) :::::::::::::::::::::::::: */
 
 @media (min-width: 1024px) {
 
 }
 
-/* ===================================================================== */
-/* =========================== 1366px = XL ============================= */
-/* Desktop / Laptop FHD                                                  */
-/* ===================================================================== */
+@media (min-width: 1376px) and (max-height: 1032px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 1366PX - XL - DESKTOP / LAPTOP FHD :::::::::::::::::::::::::: */
 
 @media (min-width: 1366px) {
 
 }
 
-/* ===================================================================== */
-/* ========================== 1920px = 2XL ============================= */
-/* Full HD / 2K                                                          */
-/* ===================================================================== */
+
+/* :::::::::::::::::::::::::: 1920PX - 2XL - FULL HD / 2K :::::::::::::::::::::::::: */
 
 @media (min-width: 1920px) {
 
 }
 
-/* ===================================================================== */
-/* =========================== 2560px = UW ============================= */
-/* Ultrawide (3440x1440) | 4K UHD (2160x3840)                            */
-/* ===================================================================== */
+
+/* :::::::::::::::::::::::::: 2560PX - UW - ULTRAWIDE / 4K UHD :::::::::::::::::::::::::: */
 
 @media (min-width: 2560px) {
 
 }
 
-/* ===================================================================== */
-/* ======================= LANDSCAPE PHONE ============================= */
-/* iPhone 17 PM / S24 Ultra در حالت افقی (ارتفاع کم)                     */
-/* ===================================================================== */
+
+/* :::::::::::::::::::::::::: LANDSCAPE PHONE - GENERAL LOW HEIGHT :::::::::::::::::::::::::: */
 
 @media (max-height: 500px) and (orientation: landscape) {
 

@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    /* :::::::::::::::::::::::::: TOUCH DETECTION :::::::::::::::::::::::::: */
     const isTouch =
         window.matchMedia("(hover: none)").matches ||
         window.matchMedia("(pointer: coarse)").matches ||
@@ -12,33 +11,46 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!video.getAttribute("src") && video.dataset.src) {
             video.setAttribute("src", video.dataset.src);
         }
-        if (!video.getAttribute("src")) return;
+        const src = video.getAttribute("src");
+        if (!src) return;
 
-        /* :::::::::::::::::::::::::: MOBILE: PLAY ON VIEWPORT ENTRY :::::::::::::::::::::::::: */
+        video.muted = true;
+        video.defaultMuted = true;
+        video.playsInline = true;
+        video.loop = true;
+        video.setAttribute("muted", "");
+        video.setAttribute("playsinline", "");
+        video.setAttribute("webkit-playsinline", "");
+
+        const setPlaying = (on) => box.classList.toggle("is-playing", on);
+
+        const tryPlay = async () => {
+            try {
+                await video.play();
+                setPlaying(true);
+            } catch (err) {
+                setPlaying(false);
+                console.warn("[service-video] play failed:", src, "→", err.name, err.message);
+            }
+        };
+
+        const stop = () => {
+            try { video.pause(); } catch (e) {}
+            setPlaying(false);
+        };
+
+        video.addEventListener("error", () => {
+            console.error(
+                "[service-video] load error:",
+                src,
+                "→ کد:",
+                video.error && video.error.code,
+                video.error && video.error.message,
+            );
+        });
+
         if (isTouch) {
-            video.muted = true;
-            video.defaultMuted = true;
-            video.playsInline = true;
-            video.loop = true;
-            video.setAttribute("muted", "");
-            video.setAttribute("playsinline", "");
-            video.setAttribute("webkit-playsinline", "");
-
-            const tryPlay = async () => {
-                try {
-                    await video.play();
-                    box.classList.add("is-playing");
-                } catch (err) {
-                    box.classList.remove("is-playing");
-                }
-            };
-
-            const stop = () => {
-                try { video.pause(); } catch (e) {}
-                box.classList.remove("is-playing");
-            };
-
-            new IntersectionObserver(
+            const io = new IntersectionObserver(
                 (entries) => {
                     entries.forEach((e) => {
                         if (e.isIntersecting) tryPlay();
@@ -47,29 +59,31 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
                 {
                     threshold: 0.25,
-                    rootMargin: "0px 0px -10% 0px"
-                }
-            ).observe(box);
+                    rootMargin: "0px 0px -10% 0px",
+                },
+            );
+            io.observe(box);
 
-            video.load();
+            if (video.readyState === 0) video.load();
             return;
         }
 
-        /* :::::::::::::::::::::::::: DESKTOP: PLAY ON HOVER :::::::::::::::::::::::::: */
         let videoOk = false;
         video.addEventListener("loadeddata", () => { videoOk = true; });
         video.addEventListener("error", () => { videoOk = false; });
-        video.load();
+        if (video.readyState === 0) video.load();
 
         box.addEventListener("mouseenter", () => {
             if (!videoOk) return;
-            box.classList.add("is-playing");
-            video.play().catch(() => {});
+            setPlaying(true);
+            video.play().catch((err) =>
+                console.warn("[service-video] hover play failed:", src, err.name),
+            );
         });
         box.addEventListener("mouseleave", () => {
             video.pause();
             try { video.currentTime = 0; } catch (e) {}
-            box.classList.remove("is-playing");
+            setPlaying(false);
         });
     });
 });

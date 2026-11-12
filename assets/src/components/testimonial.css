@@ -1,4 +1,4 @@
-/* :::::::::::::::::::::::::: TESTIMONIALS STYLES :::::::::::::::::::::::::: */
+/* :::::::::::::::::::::::::: TESTIMONIALS :::::::::::::::::::::::::: */
 
 .testimonials-section {
     background: #0D0D0D;
@@ -24,12 +24,11 @@
     transform: translateX(-50%);
 }
 
-/* :::::::::::::::::::::::::: LAYOUT :::::::::::::::::::::::::: */
 .testimonials-container {
     display: flex;
     gap: 1.5rem;
     width: 90%;
-    max-width: 1400px;
+    max-width: 1080px;
     height: 560px;
     margin-inline: auto;
     margin-top: 3.5rem;
@@ -82,7 +81,10 @@
     animation-duration: 38s;
 }
 
-/* :::::::::::::::::::::::::: CARD (GLASS) :::::::::::::::::::::::::: */
+.testimonials-container .column:nth-child(n + 2) {
+    display: none;
+}
+
 .card {
     background: rgba(20, 20, 20, .72);
     backdrop-filter: blur(18px);
@@ -134,18 +136,26 @@
     text-align: justify;
 }
 
-/* :::::::::::::::::::::::::: ANIMATIONS :::::::::::::::::::::::::: */
 @keyframes testimonialScrollUp {
-    from { transform: translateY(0); }
-    to   { transform: translateY(-50%); }
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-50%);
+    }
 }
 
 @keyframes testimonialScrollDown {
-    from { transform: translateY(-50%); }
-    to   { transform: translateY(0); }
+    from {
+        transform: translateY(-50%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
 }
 
-/* :::::::::::::::::::::::::: PLACEHOLDER :::::::::::::::::::::::::: */
 .testimonials-placeholder {
     display: flex;
     justify-content: center;
@@ -158,15 +168,64 @@
     height: auto;
 }
 
-/* :::::::::::::::::::::::::: TESTIMONIALS COMPONENT RESPONSIVE :::::::::::::::::::::::::: */
 
-@media (max-width: 1400px) {
-    .testimonials-container {
-        max-width: 95%;
-    }
+/* :::::::::::::::::::::::::: 320PX - XS - IPHONE 5 (320X568) :::::::::::::::::::::::::: */
+
+@media (min-width: 320px) {
+
 }
 
-@media (max-width: 768px) {
+@media (min-width: 568px) and (max-height: 320px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 380PX - S - GALAXY Z FLIP 3 / S24 ULTRA (380X880) :::::::::::::::::::::::::: */
+
+@media (min-width: 380px) {
+
+}
+
+@media (min-width: 880px) and (max-height: 412px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 440PX - S+ - IPHONE 17 PRO MAX (440X956) :::::::::::::::::::::::::: */
+
+@media (min-width: 440px) {
+
+}
+
+@media (min-width: 956px) and (max-height: 440px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 480PX - M - LARGE MOBILE :::::::::::::::::::::::::: */
+
+@media (min-width: 480px) {
+
+    /* :::::::::::::::::::::::::: TESTIMONIALS :::::::::::::::::::::::::: */
+
+    .testimonials-container {
+        padding: 4px;
+        gap: 4px;
+    }
+
+}
+
+@media (min-width: 480px) and (max-height: 500px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 768PX - TAB - IPAD MINI / GALAXY FOLD INNER (768X1024) :::::::::::::::::::::::::: */
+
+@media (min-width: 768px) {
+
+    /* :::::::::::::::::::::::::: TESTIMONIALS :::::::::::::::::::::::::: */
+
     .testimonials-placeholder img {
         max-width: 80%;
     }
@@ -178,117 +237,67 @@
         height: 80vh;
     }
 
-    .testimonials-container .column {
-        display: none;
-    }
-
-    .testimonials-container .column:first-child {
-        display: block;
-    }
 }
 
-@media (max-width: 640px) {
-    .testimonials-container {
-        padding: 4px;
-        gap: 4px;
-    }
+@media (min-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
+
 }
 
 
-/* ===================================================================== */
-/* ============================ 320px = XS ============================= */
-/* iPhone 5 (568x320)                                                    */
-/* ===================================================================== */
-
-@media (min-width: 320px) {
-
-}
-
-/* ===================================================================== */
-/* ============================ 380px = S ============================== */
-/* Galaxy Z Flip 3 (880x360) | Galaxy S24 Ultra (891x412)                */
-/* ===================================================================== */
-
-@media (min-width: 380px) {
-
-}
-
-/* ===================================================================== */
-/* =========================== 440px = S+ ============================== */
-/* iPhone 17 Pro Max (956x440)                                           */
-/* ===================================================================== */
-
-@media (min-width: 440px) {
-
-}
-
-/* ===================================================================== */
-/* ============================ 480px = M ============================== */
-/* —                                                                     */
-/* ===================================================================== */
-
-@media (min-width: 480px) {
-
-}
-
-/* ===================================================================== */
-/* =========================== 768px = TAB ============================= */
-/* iPad Mini (1024x768) | Galaxy Fold inner (1076x768)                   */
-/* ===================================================================== */
-
-@media (min-width: 768px) {
-
-}
-
-/* ===================================================================== */
-/* ========================== 800px = TAB+ ============================= */
-/* Galaxy Tab S7 (1280x800)                                              */
-/* ===================================================================== */
+/* :::::::::::::::::::::::::: 800PX - TAB+ - GALAXY TAB S7 (800X1280) :::::::::::::::::::::::::: */
 
 @media (min-width: 800px) {
 
 }
 
-/* ===================================================================== */
-/* =========================== 1024px = L ============================== */
-/* iPad Pro 13 (1376x1032)                                               */
-/* ===================================================================== */
-
-@media (min-width: 1024px) {
+@media (min-width: 1280px) and (max-height: 800px) and (orientation: landscape) {
 
 }
 
-/* ===================================================================== */
-/* =========================== 1366px = XL ============================= */
-/* Desktop / Laptop FHD                                                  */
-/* ===================================================================== */
+
+/* :::::::::::::::::::::::::: 1024PX - L - IPAD PRO 13 (1024X1376) :::::::::::::::::::::::::: */
+
+@media (min-width: 1024px) {
+    
+    /* :::::::::::::::::::::::::: TESTIMONIALS :::::::::::::::::::::::::: */
+
+    .testimonials-container .column:nth-child(n + 2) {
+        display: block;
+    }
+
+    .testimonials-container {
+        gap: calc(.7rem + 5px);
+    }
+
+}
+
+@media (min-width: 1376px) and (max-height: 1032px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 1366PX - XL - DESKTOP / LAPTOP FHD :::::::::::::::::::::::::: */
 
 @media (min-width: 1366px) {
 
 }
 
-/* ===================================================================== */
-/* ========================== 1920px = 2XL ============================= */
-/* Full HD / 2K                                                          */
-/* ===================================================================== */
+
+/* :::::::::::::::::::::::::: 1920PX - 2XL - FULL HD / 2K :::::::::::::::::::::::::: */
 
 @media (min-width: 1920px) {
 
 }
 
-/* ===================================================================== */
-/* =========================== 2560px = UW ============================= */
-/* Ultrawide (3440x1440) | 4K UHD (2160x3840)                            */
-/* ===================================================================== */
+
+/* :::::::::::::::::::::::::: 2560PX - UW - ULTRAWIDE / 4K UHD :::::::::::::::::::::::::: */
 
 @media (min-width: 2560px) {
 
 }
 
-/* ===================================================================== */
-/* ======================= LANDSCAPE PHONE ============================= */
-/* iPhone 17 PM / S24 Ultra در حالت افقی (ارتفاع کم)                     */
-/* ===================================================================== */
+
+/* :::::::::::::::::::::::::: LANDSCAPE PHONE - GENERAL LOW HEIGHT :::::::::::::::::::::::::: */
 
 @media (max-height: 500px) and (orientation: landscape) {
 

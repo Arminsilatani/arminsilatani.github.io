@@ -6,7 +6,6 @@ class LanguageComponent extends HTMLElement {
 
         const shadow = this.attachShadow({ mode: "open" });
 
-        /* :::::::::::::::::::::::::: LANGUAGE DETECTION :::::::::::::::::::::::::: */
         const i18n = window.i18n;
         const currentLangCode = i18n.detectLang();
         const currentLang =
@@ -16,13 +15,11 @@ class LanguageComponent extends HTMLElement {
         const pageName = i18n.getPagePath();
         const searchAndHash = window.location.search + window.location.hash;
 
-        /* :::::::::::::::::::::::::: STYLESHEET :::::::::::::::::::::::::: */
         const link = document.createElement("link");
         link.rel = "stylesheet";
         link.href = "/assets/src/components/language-selector.css";
         shadow.appendChild(link);
 
-        /* :::::::::::::::::::::::::: DOM STRUCTURE :::::::::::::::::::::::::: */
         const container = document.createElement("div");
         container.className = "language-container";
 
@@ -36,25 +33,21 @@ class LanguageComponent extends HTMLElement {
         dropdown.className = "language-dropdown";
         dropdown.setAttribute("role", "menu");
 
-        /* :::::::::::::::::::::::::: GENERATE LANGUAGE LINKS :::::::::::::::::::::::::: */
-        /* ترتیب اولویت‌دار زبان‌ها بر اساس اهمیت در دنیای اینترنت */
         const LANG_PRIORITY = [
-            "en", // English
-            "de", // German
-            "it", // Italian
-            "ar", // Arabic
-            "tr", // Turkish
-            "fa", // Persian
+            "en",
+            "de",
+            "it",
+            "ar",
+            "tr",
+            "fa",
         ];
 
-        /* همه‌ی زبان‌ها به‌جز زبان فعلی، مرتب‌شده بر اساس اولویت */
         const otherLangs = Object.values(i18n.TRANSLATIONS)
             .filter((lang) => lang.code !== currentLangCode)
             .sort((a, b) => {
                 const posA = LANG_PRIORITY.indexOf(a.code);
                 const posB = LANG_PRIORITY.indexOf(b.code);
 
-                // زبان‌هایی که در لیست اولویت نیستند، به انتهای لیست می‌روند
                 const indexA = posA === -1 ? LANG_PRIORITY.length : posA;
                 const indexB = posB === -1 ? LANG_PRIORITY.length : posB;
 
@@ -82,7 +75,6 @@ class LanguageComponent extends HTMLElement {
         container.appendChild(dropdown);
         shadow.appendChild(container);
 
-        /* :::::::::::::::::::::::::: DROPDOWN CONTROLS :::::::::::::::::::::::::: */
         const showDropdown = () => {
             dropdown.style.display = "flex";
             requestAnimationFrame(() => dropdown.classList.add("open"));
@@ -120,7 +112,6 @@ class LanguageComponent extends HTMLElement {
     }
 }
 
-/* :::::::::::::::::::::::::: CUSTOM ELEMENT REGISTRATION :::::::::::::::::::::::::: */
 if (!customElements.get("language-component")) {
     customElements.define("language-component", LanguageComponent);
 }

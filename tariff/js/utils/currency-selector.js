@@ -1,15 +1,7 @@
-/*
-  ****************************************************
-  *  Author: Armin Silatani
-  *  Date: 2026-05-11
-  *  Version: 2.0.1
-  ****************************************************
-*/
+/* :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: */
 
 import { currencyPolicy } from "../config/currency-policy.js";
 import { currencyLabels } from "../config/currency-labels.js";
-
-/* =========================== CURRENCY SELECTOR WEB COMPONENT ============================ */
 
 class CurrencySelector extends HTMLElement {
     constructor() {
@@ -21,38 +13,30 @@ class CurrencySelector extends HTMLElement {
         this.render();
     }
 
-    /* --------------------- GET UNIQUE CURRENCIES --------------------- */
     getUniqueCurrencies() {
         const all = Object.values(currencyPolicy).map(p => p.currency || p.fallback);
         return [...new Set(all)];
     }
 
-    /* --------------------------- RENDER --------------------------- */
     render() {
         let currencies = this.getUniqueCurrencies();
 
-        // saved currency from localStorage
         const saved = localStorage.getItem("selectedCurrency") || "TOMAN";
 
-        // detect page language
         const lang = document.documentElement.lang?.split("-")[0] || "fa";
 
-        // detect page direction
         const dir = document.documentElement.dir || "rtl";
         this.setAttribute("data-dir", dir);
 
-        // choose correct translation list
         const labels = currencyLabels[lang] || currencyLabels["fa"];
 
-        // Swap IRR and USD positions for display order (IRR last)
         const irrIndex = currencies.indexOf("IRR");
         const usdIndex = currencies.indexOf("USD");
         if (irrIndex !== -1 && usdIndex !== -1) {
             [currencies[irrIndex], currencies[usdIndex]] =
-            [currencies[usdIndex], currencies[irrIndex]];
+                [currencies[usdIndex], currencies[irrIndex]];
         }
 
-        /* ---------------- HTML + STYLE ---------------- */
         this.shadowRoot.innerHTML = `
 <style>
     :host {
@@ -60,20 +44,25 @@ class CurrencySelector extends HTMLElement {
         width: 100%;
     }
 
-    :host([data-dir="ltr"]) { direction: ltr; }
-    :host([data-dir="rtl"]) { direction: rtl; }
+    :host([data-dir="ltr"]) {
+        direction: ltr;
+    }
 
-ul {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr)); /* ۳ ستون */
-    column-gap: 18px;   /* فاصله افقی (در صورت نیاز بیشتر کن) */
-    row-gap: 4px;       /* فاصله عمودی کم */
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    justify-items: start;
-    text-align: start;
-}
+    :host([data-dir="rtl"]) {
+        direction: rtl;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        column-gap: 18px;
+        row-gap: 4px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        justify-items: start;
+        text-align: start;
+    }
 
     li {
         cursor: pointer;
@@ -112,7 +101,6 @@ ul {
         this.setupListeners();
     }
 
-    /* ------------------------- CLICK HANDLERS ------------------------- */
     setupListeners() {
         this.shadowRoot.querySelectorAll("li").forEach(li => {
             li.addEventListener("click", () => {

@@ -1,16 +1,12 @@
-/* :::::::::::::::::::::::::: PARTNERS COMPONENT :::::::::::::::::::::::::: */
-
 class PartnersComponent extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
 
-        /* :::::::::::::::::::::::::: CONFIGURATION :::::::::::::::::::::::::: */
         this.logosPerRow = 11;
         this.totalRows = 6;
         this.hideCenter = false;
 
-        /* زبان و ترجمه‌ها */
         const i18n = window.i18n;
         const langCode = i18n.detectLang();
         const dict = i18n.TRANSLATIONS[langCode] || i18n.TRANSLATIONS[i18n.DEFAULT_LANG];
@@ -19,7 +15,6 @@ class PartnersComponent extends HTMLElement {
         this.centerImg = partners.centerImg;
         this.centerImgAlt = partners.centerImgAlt;
 
-        /* :::::::::::::::::::::::::: LOGO LIST (مشترک بین همه‌ی زبان‌ها) :::::::::::::::::::::::::: */
         this.logoList = [
             "/assets/images/logo-component/AlvandtasisatLogoOld.webp",
             "/assets/images/logo-component/HevaapsLogoOld.webp",
@@ -70,7 +65,6 @@ class PartnersComponent extends HTMLElement {
         ];
     }
 
-    /* :::::::::::::::::::::::::: CONNECTED CALLBACK :::::::::::::::::::::::::: */
     connectedCallback() {
         const rowsAttr = this.getAttribute("rows");
         this.totalRows = rowsAttr ? (parseInt(rowsAttr, 10) || 6) : 6;
@@ -83,7 +77,6 @@ class PartnersComponent extends HTMLElement {
         this.render();
     }
 
-    /* :::::::::::::::::::::::::: RENDER :::::::::::::::::::::::::: */
     render() {
         const template = document.createElement("template");
 
@@ -108,7 +101,6 @@ class PartnersComponent extends HTMLElement {
                     font-family: sans-serif;
                 }
 
-                /* :::::::::::::::::::::::::: PARTNERS SECTION :::::::::::::::::::::::::: */
                 .partners-section {
                     width: 100%;
                     padding: 60px 0;
@@ -117,7 +109,6 @@ class PartnersComponent extends HTMLElement {
                     direction: ltr;
                 }
 
-                /* :::::::::::::::::::::::::: MARQUEE :::::::::::::::::::::::::: */
                 .marquee-container {
                     display: flex;
                     flex-direction: column;
@@ -189,7 +180,6 @@ class PartnersComponent extends HTMLElement {
                     opacity: 1;
                 }
 
-                /* :::::::::::::::::::::::::: CENTER IMAGE :::::::::::::::::::::::::: */
                 .center-image {
                     position: absolute;
                     top: 50%;
@@ -217,7 +207,6 @@ class PartnersComponent extends HTMLElement {
                     transform: scale(1);
                 }
 
-                /* :::::::::::::::::::::::::: ANIMATIONS :::::::::::::::::::::::::: */
                 @keyframes scrollRight {
                     0% {
                         transform: translateX(-50%);
@@ -236,16 +225,86 @@ class PartnersComponent extends HTMLElement {
                     }
                 }
 
-                /* :::::::::::::::::::::::::: RESPONSIVE :::::::::::::::::::::::::: */
-                @media (max-width: 1100px) {
+
+                /* :::::::::::::::::::::::::: 320PX - XS - IPHONE 5 (320X568) :::::::::::::::::::::::::: */
+
+                @media (min-width: 320px) {
+
+                }
+
+                @media (min-width: 568px) and (max-height: 320px) and (orientation: landscape) {
+
+                }
+
+
+                /* :::::::::::::::::::::::::: 380PX - S - GALAXY Z FLIP 3 / S24 ULTRA (380X880) :::::::::::::::::::::::::: */
+
+                @media (min-width: 380px) {
+
+                }
+
+                @media (min-width: 880px) and (max-height: 412px) and (orientation: landscape) {
+
+                }
+
+
+                /* :::::::::::::::::::::::::: 440PX - S+ - IPHONE 17 PRO MAX (440X956) :::::::::::::::::::::::::: */
+
+                @media (min-width: 440px) {
+
+                }
+
+                @media (min-width: 956px) and (max-height: 440px) and (orientation: landscape) {
+
+                }
+
+
+                /* :::::::::::::::::::::::::: 480PX - M - LARGE MOBILE :::::::::::::::::::::::::: */
+
+                @media (min-width: 480px) {
+
+                }
+
+                @media (min-width: 480px) and (max-height: 500px) and (orientation: landscape) {
+
+                }
+
+
+                /* :::::::::::::::::::::::::: 768PX - TAB - IPAD MINI / GALAXY FOLD INNER (768X1024) :::::::::::::::::::::::::: */
+
+                @media (min-width: 768px) {
+
+                }
+
+                @media (min-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
+
+                }
+
+
+                /* :::::::::::::::::::::::::: 800PX - TAB+ - GALAXY TAB S7 (800X1280) :::::::::::::::::::::::::: */
+
+                @media (min-width: 800px) {
+
+                }
+
+                @media (min-width: 1280px) and (max-height: 800px) and (orientation: landscape) {
+
+                }
+
+
+                /* :::::::::::::::::::::::::: 1024PX - L - IPAD PRO 13 (1024X1376) :::::::::::::::::::::::::: */
+
+                @media (min-width: 1024px) {
                     .partners-section {
                         padding: 30px 0;
                     }
 
-                    .center-image {
-                        width: 95vw;
-                        height: calc(95vw * 0.4);
-                    }
+                        .center-image {
+                            width: min(520px, 40vw);
+                            height: auto;
+                            aspect-ratio: 2.5 / 1;
+                            max-height: 220px;
+                        }
 
                     .marquee-item {
                         width: 120px;
@@ -256,6 +315,38 @@ class PartnersComponent extends HTMLElement {
                     .marquee-item:nth-child(11n) {
                         margin-right: 0;
                     }
+                }
+
+                @media (min-width: 1376px) and (max-height: 1032px) and (orientation: landscape) {
+
+                }
+
+
+                /* :::::::::::::::::::::::::: 1366PX - XL - DESKTOP / LAPTOP FHD :::::::::::::::::::::::::: */
+
+                @media (min-width: 1366px) {
+
+                }
+
+
+                /* :::::::::::::::::::::::::: 1920PX - 2XL - FULL HD / 2K :::::::::::::::::::::::::: */
+
+                @media (min-width: 1920px) {
+
+                }
+
+
+                /* :::::::::::::::::::::::::: 2560PX - UW - ULTRAWIDE / 4K UHD :::::::::::::::::::::::::: */
+
+                @media (min-width: 2560px) {
+
+                }
+
+
+                /* :::::::::::::::::::::::::: LANDSCAPE PHONE - GENERAL LOW HEIGHT :::::::::::::::::::::::::: */
+
+                @media (max-height: 500px) and (orientation: landscape) {
+
                 }
             </style>
 
@@ -282,7 +373,6 @@ class PartnersComponent extends HTMLElement {
         this.initBlurEngine();
     }
 
-    /* :::::::::::::::::::::::::: SHUFFLE ARRAY :::::::::::::::::::::::::: */
     shuffleArray(arr) {
         for (let i = arr.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -291,7 +381,6 @@ class PartnersComponent extends HTMLElement {
         return arr;
     }
 
-    /* :::::::::::::::::::::::::: CREATE MARQUEE ROW :::::::::::::::::::::::::: */
     createMarqueeRow(logos, direction) {
         const rowDiv = document.createElement("div");
         rowDiv.className = "marquee-row";
@@ -320,7 +409,6 @@ class PartnersComponent extends HTMLElement {
         return rowDiv;
     }
 
-    /* :::::::::::::::::::::::::: BLUR-UP ENGINE :::::::::::::::::::::::::: */
     initBlurEngine() {
         const images = this.shadowRoot.querySelectorAll("img[data-blurup]");
 
@@ -356,7 +444,6 @@ class PartnersComponent extends HTMLElement {
     }
 }
 
-/* :::::::::::::::::::::::::: REGISTRATION :::::::::::::::::::::::::: */
 if (!customElements.get("partners-component")) {
     customElements.define("partners-component", PartnersComponent);
 }

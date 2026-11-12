@@ -17,7 +17,7 @@
         <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
         <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
         <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
-        <linkWordPress-SEO
+        <link
             rel="icon"
             type="image/png"
             sizes="32x32"
@@ -116,8 +116,7 @@
 
         <!-- :::::::::::::::::::::::::: STYLESHEETS & FONTS :::::::::::::::::::::::::: -->
 
-        <!-- CORE -->
-         <link rel="stylesheet" href="/assets/src/core/z-index.css" />
+        <link rel="stylesheet" href="/assets/src/core/z-index.css" />
         <link rel="stylesheet" href="/assets/src/core/fonts.css" />
         <link rel="stylesheet" href="/assets/src/core/base.css" />
         <link rel="stylesheet" href="/assets/src/core/typography.css" />
@@ -128,16 +127,12 @@
         <link rel="stylesheet" href="/assets/src/core/cursor.css" />
         <link rel="stylesheet" href="/assets/src/core/loader.css" />
         <link rel="stylesheet" href="/assets/src/core/lottie-icons.css" />
-
-        <!-- COMPONENTS -->
         <link rel="stylesheet" href="/assets/src/components/hero.css" />
         <link rel="stylesheet" href="/assets/src/components/section-divider.css" />
         <link rel="stylesheet" href="/assets/src/components/terminal-breadcrumb.css" />
         <link rel="stylesheet" href="/assets/src/components/faq.css" />
         <link rel="stylesheet" href="/assets/src/components/testimonial.css" />
         <link rel="stylesheet" href="/assets/src/components/field-prefix.css" />
-
-        <!-- PAGE -->
         <link rel="stylesheet" href="/assets/src/styles/services-landings.css" />
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
         <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
@@ -159,21 +154,28 @@
 
         <!-- :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: -->
 
-<script src="/assets/src/core/gsap.min.js" defer></script>
-<script src="/assets/src/core/ScrollTrigger.min.js" defer></script>
-<script src="/assets/src/core/lottie_light.min.js" defer></script>
+        <script src="/assets/src/core/lottie_light.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     </head>
 
     <body>
-  <div id="initial-loader" class="fullpage-loader">
-    <div class="lds-grid">
-      <div></div><div></div><div></div>
-      <div></div><div></div><div></div>
-      <div></div><div></div><div></div>
-    </div>
-  </div>
+        <div id="initial-loader" class="fullpage-loader">
+            <div class="lds-grid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
         <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+        <div class="cursor-follower"></div>
+
 
         <!-- :::::::::::::::::::::::::: HEADER & NAVIGATION :::::::::::::::::::::::::: -->
 
@@ -215,7 +217,6 @@
                 </div>
                 <terminal-breadcrumb></terminal-breadcrumb>
             </section>
-
 
             <div class="seo-page">
 
@@ -356,13 +357,13 @@
                             <div class="seo-glass-layer" aria-hidden="true"></div>
                             <div class="seo-banner-content">
                                 <h2 class="seo-banner-title split-title">Wo setzen wir bei Ihrer Website an?</h2>
-                                <p class="seo-banner-desc">
+                                <p class="seo-banner-desc reveal-up">
                                     Direkter Kontakt – ohne Vermittlung. Wir sprechen darüber, wo Ihre Website heute steht und welche Kunden Sie erreichen möchten. Im Gespräch klären wir, welche SEO-Leistungen Ihnen helfen könnten und wie der nächste Schritt aussieht. Sie können mich direkt anrufen oder das Formular für die Website-Analyse ausfüllen.
                                 </p>
                                 <a href="tel:+989125759466" class="btn-dark">
                                     <span class="seo-ltr">Kontakt</span>
                                 </a>
-                                <p class="seo-banner-note">Direkter Kontakt – ohne Vermittlung und Warteschleife</p>
+                                <p class="seo-banner-note reveal-up">Direkter Kontakt – ohne Vermittlung und Warteschleife</p>
                             </div>
                         </div>
                     </div>
@@ -376,7 +377,7 @@
                         <div class="seo-split-grid">
                             <aside class="seo-split-aside">
                                 <div class="seo-sticky">
-                                    <span class="section-eyebrow seo-eyebrow seo-reveal reveal-up">SEO im Überblick</span>
+                                    <span class="eyebrow seo-eyebrow seo-reveal reveal-up">SEO im Überblick</span>
                                     <h2 class="seo-section-title seo-reveal split-title">Was gehört zur SEO-Optimierung einer Website?</h2>
                                     <p class="seo-section-sub seo-reveal reveal-up">
                                         SEO verbindet technische Arbeit mit guten Inhalten und einer klaren Seitenstruktur. So können Suchmaschinen Ihre Seiten erfassen und einordnen. Besucher wiederum finden schneller die Informationen, Produkte oder Leistungen, nach denen sie suchen.
@@ -389,6 +390,7 @@
                                     </ul>
                                 </div>
                             </aside>
+
                             <div class="seo-split-main">
                                 <div class="seo-editorial">
                                     <p class="seo-editorial-lead seo-reveal reveal-up">
@@ -432,7 +434,7 @@
                     </div>
                     <div class="seo-container seo-relative">
                         <div class="seo-section-header">
-                            <span class="section-eyebrow seo-eyebrow seo-reveal reveal-up">Ergebnisse nachvollziehen</span>
+                            <span class="eyebrow seo-eyebrow seo-reveal reveal-up">Ergebnisse nachvollziehen</span>
                             <h2 class="seo-section-title seo-reveal split-title">SEO-Projektbeispiele</h2>
                             <p class="seo-section-sub seo-reveal reveal-up">
                                 Jedes Projekt beginnt mit einer einfachen Frage: Was hält die Website zurück, und was soll sie für das Unternehmen leisten? Danach legen wir fest, ob zuerst die Seitenstruktur, technische Probleme, Suchbegriffe oder bestehende Inhalte bearbeitet werden. Die Ergebnisse bewerten wir über einen passenden Zeitraum.
@@ -441,7 +443,7 @@
                                 Nicht alle Arbeiten kann ich öffentlich zeigen, weil Unternehmensdaten vertraulich sind. Veröffentlicht werden nur freigegebene oder anonymisierte Beispiele. Sie zeigen die Ausgangslage, die umgesetzten Maßnahmen, den Zeitraum und ein messbares Ergebnis – damit Sie die Arbeit einordnen können.
                             </p>
                         </div>
-                        <div class="seo-reveal">
+                        <div class="seo-reveal reveal-up">
                             <a href="/portfolio/#seo-projects" class="btn-dark btn-glass" target="_blank">
                                 Alle Projekte ansehen
                             </a>
@@ -455,7 +457,7 @@
                 <section id="seo-pricing" class="seo-section">
                     <div class="seo-container">
                         <div class="seo-section-header">
-                            <span class="section-eyebrow seo-eyebrow seo-reveal reveal-up">Welche Leistungen brauchen Sie – und was kosten sie?</span>
+                            <span class="eyebrow seo-eyebrow seo-reveal reveal-up">Welche Leistungen brauchen Sie – und was kosten sie?</span>
                             <h2 class="seo-section-title seo-reveal split-title">SEO-Optimierung: Preise und Leistungen</h2>
                             <p class="seo-section-sub seo-reveal reveal-up">
                                 Was SEO für Ihre Website kostet, lässt sich nicht allein an der Seitenzahl ablesen. Auch Wettbewerb, Technik, vorhandene Inhalte, Geschäftsziele und der tatsächliche Arbeitsaufwand spielen eine Rolle.
@@ -467,7 +469,7 @@
                                 Preis, Laufzeit, enthaltene Leistungen und mögliche Zusatzkosten sollten vor dem Start feststehen. Ob Sie neue Inhalte, Advertorials, zusätzliche technische Arbeiten oder ausführlichere Berichte brauchen, besprechen wir für Ihr Projekt. Für eine erste Kosteneinschätzung können Sie eine Website-Analyse anfragen.
                             </p>
                         </div>
-                        <div class="tab-switch">
+                        <div class="tab-switch reveal-up">
                             <button type="button" class="tab-switch__btn is-active" data-tab="standard">Standard</button>
                             <button type="button" class="tab-switch__btn" data-tab="advanced">Fortgeschritten</button>
                         </div>
@@ -650,8 +652,8 @@
                     </div>
                 </section>
 
+                <section-divider role="presentation" aria-hidden="true"></section-divider>
 
-<section-divider role="presentation" aria-hidden="true"></section-divider>
 
                 <!-- :::::::::::::::::::::::::: CONTACT :::::::::::::::::::::::::: -->
 
@@ -659,7 +661,7 @@
                     <div class="seo-container">
                         <div class="seo-audit-grid">
                             <div class="seo-audit-info">
-                                <span class="section-eyebrow seo-eyebrow seo-reveal reveal-up">Erfahren Sie, wo Ihre Website steht</span>
+                                <span class="eyebrow seo-eyebrow seo-reveal reveal-up">Erfahren Sie, wo Ihre Website steht</span>
                                 <h2 class="seo-section-title seo-reveal split-title">Website-Analyse anfordern</h2>
                                 <p class="seo-section-sub seo-text-right seo-reveal reveal-up">
                                     Wenn Sie das Formular absenden, sehe ich mir zunächst Ihre Angaben und Ihre Website an. Anschließend melde ich mich, um den nächsten Schritt zu besprechen. Die erste Einschätzung kann technische Hürden und Chancen bei relevanten Suchanfragen aufzeigen – ob für ein kleines Unternehmen, einen Handwerksbetrieb oder ein Immobilienbüro. Sie ist kein vollständiges SEO-Audit und keine Ergebnisgarantie.
@@ -731,7 +733,7 @@
                             <div class="seo-glass-layer" aria-hidden="true"></div>
                             <div class="seo-banner-content">
                                 <h2 class="seo-banner-title split-title">Sprechen wir über die SEO Ihrer Website</h2>
-                                <p class="seo-banner-desc">
+                                <p class="seo-banner-desc reveal-up">
                                     Sie sind unsicher, was Ihre Website gerade ausbremst? Rufen Sie mich an. Ich höre mir an, was Sie erreichen möchten, und wir besprechen, ob eine Zusammenarbeit sinnvoll ist – und womit wir anfangen würden.
                                 </p>
                                 <a href="tel:+989125759466" class="btn-dark">
@@ -748,7 +750,7 @@
                 <section id="seo-faq" class="seo-section">
                     <div class="seo-container seo-container-narrow">
                         <div class="seo-section-header">
-                            <span class="section-eyebrow seo-eyebrow seo-reveal reveal-up">Antworten vor dem Start</span>
+                            <span class="eyebrow seo-eyebrow seo-reveal reveal-up">Antworten vor dem Start</span>
                             <h2 class="seo-section-title seo-reveal split-title">Häufige Fragen zu SEO-Dienstleistungen</h2>
                             <p class="seo-section-sub seo-reveal reveal-up">Hier beantworte ich Fragen, die vor einer Zusammenarbeit oft aufkommen.</p>
                         </div>
@@ -834,15 +836,15 @@
                     </div>
                 </section>
 
+                <section-divider role="presentation" aria-hidden="true"></section-divider>
 
-<section-divider role="presentation" aria-hidden="true"></section-divider>
 
                 <!-- :::::::::::::::::::::::::: TESTIMONIALS :::::::::::::::::::::::::: -->
 
                 <section id="seo-testimonials" class="seo-section testimonials-section">
                     <div class="seo-container">
                         <div class="seo-section-header">
-                            <span class="section-eyebrow seo-eyebrow seo-reveal reveal-up">Das sagen Website-Betreiber</span>
+                            <span class="eyebrow seo-eyebrow seo-reveal reveal-up">Das sagen Website-Betreiber</span>
                             <h2 class="seo-section-title seo-reveal split-title">Kundenstimmen</h2>
                             <p class="seo-section-sub seo-reveal reveal-up">
                                 Hier finden Sie Rückmeldungen von Kunden, mit denen ich an der Sichtbarkeit und Weiterentwicklung ihrer Websites gearbeitet habe.
@@ -862,15 +864,15 @@
                     </div>
                 </section>
 
+                <section-divider role="presentation" aria-hidden="true"></section-divider>
 
-<section-divider role="presentation" aria-hidden="true"></section-divider>
 
                 <!-- :::::::::::::::::::::::::: SERVICES :::::::::::::::::::::::::: -->
 
                 <section id="seo-services" class="seo-section">
                     <div class="seo-container">
                         <div class="seo-section-header">
-                            <span class="section-eyebrow seo-eyebrow seo-reveal reveal-up">Was braucht Ihre Website?</span>
+                            <span class="eyebrow seo-eyebrow seo-reveal reveal-up">Was braucht Ihre Website?</span>
                             <h2 class="seo-section-title seo-reveal split-title">SEO-Dienstleistungen für Ihre Website</h2>
                             <p class="seo-section-sub seo-reveal reveal-up">
                                 Vielleicht hat Ihr Unternehmen bereits ein Team, dem vor allem eine zweite Meinung und klare Prioritäten fehlen. Vielleicht möchten Sie Technik, Inhalte oder lokale SEO vollständig abgeben. Welche Unterstützung passt, hängt von Ihren Zielen, dem Zustand der Website und den Kapazitäten Ihres Teams ab.
@@ -882,8 +884,8 @@
                         <div class="seo-services-grid categories-grid">
                             <article class="seo-glass seo-service-card seo-reveal reveal-card">
                                 <span class="seo-service-icon">
-                    <div class="lottie-icon" data-lottie="/assets/lottie/wordpress.json" data-lottie-mode="hover"></div>
-                </span>
+                                    <div class="lottie-icon" data-lottie="/assets/lottie/wordpress.json" data-lottie-mode="hover"></div>
+                                </span>
                                 <h3 class="seo-service-title">WordPress SEO</h3>
                                 <p class="seo-service-desc">
                                     WordPress bietet viele Möglichkeiten, doch Themes, Plugins und Einstellungen können eine Website auch ausbremsen. Ich prüfe beispielsweise Permalinks, SEO-Plugins, mögliche Konflikte, Bildgrößen und Caching. Was davon tatsächlich geändert werden sollte, zeigt erst der Blick auf Ihre Website.
@@ -892,8 +894,8 @@
 
                             <article class="seo-glass seo-service-card seo-reveal reveal-card">
                                 <span class="seo-service-icon">
-                    <div class="lottie-icon" data-lottie="/assets/lottie/message-square.json" data-lottie-mode="hover"></div>
-                </span>
+                                    <div class="lottie-icon" data-lottie="/assets/lottie/message-square.json" data-lottie-mode="hover"></div>
+                                </span>
                                 <h3 class="seo-service-title">SEO Beratung</h3>
                                 <p class="seo-service-desc">
                                     Ihr Team setzt selbst um, braucht aber eine unabhängige Einschätzung? Ich prüfe die Website, halte Stärken und Schwächen fest und erstelle einen Maßnahmenplan mit klaren Prioritäten. Bei Fragen während der Umsetzung bin ich ansprechbar.
@@ -902,8 +904,8 @@
 
                             <article class="seo-glass seo-service-card seo-reveal reveal-card">
                                 <span class="seo-service-icon">
-                    <div class="lottie-icon" data-lottie="/assets/lottie/settings.json" data-lottie-mode="hover"></div>
-                </span>
+                                    <div class="lottie-icon" data-lottie="/assets/lottie/settings.json" data-lottie-mode="hover"></div>
+                                </span>
                                 <h3 class="seo-service-title">Technisches SEO</h3>
                                 <p class="seo-service-desc">
                                     Suchmaschinen müssen wichtige Seiten erreichen und richtig einordnen können. Je nach Website prüfe ich dafür robots.txt, XML-Sitemaps, URLs, strukturierte Daten, Indexierung, 404-Fehler, Weiterleitungen, Canonical-Tags, interne Links und Core Web Vitals. Anschließend legen wir fest, welche Probleme zuerst behoben werden.
@@ -912,8 +914,8 @@
 
                             <article class="seo-glass seo-service-card seo-reveal reveal-card">
                                 <span class="seo-service-icon">
-                    <div class="lottie-icon" data-lottie="/assets/lottie/pen-tool.json" data-lottie-mode="hover"></div>
-                </span>
+                                    <div class="lottie-icon" data-lottie="/assets/lottie/pen-tool.json" data-lottie-mode="hover"></div>
+                                </span>
                                 <h3 class="seo-service-title">SEO Content Erstellen</h3>
                                 <p class="seo-service-desc">
                                     Ein guter Text hilft jemandem bei einer konkreten Frage oder Entscheidung. Auf Grundlage der Keyword-Recherche plane und überarbeite ich Blogartikel, Produktseiten und Landingpages. Verständliche Überschriften, hilfreiche Antworten und passende interne Links gehören dazu. Ob Google eine Seite als Featured Snippet anzeigt, kann niemand garantieren.
@@ -922,8 +924,8 @@
 
                             <article class="seo-glass seo-service-card seo-reveal reveal-card">
                                 <span class="seo-service-icon">
-                    <div class="lottie-icon" data-lottie="/assets/lottie/tag.json" data-lottie-mode="hover"></div>
-                </span>
+                                    <div class="lottie-icon" data-lottie="/assets/lottie/tag.json" data-lottie-mode="hover"></div>
+                                </span>
                                 <h3 class="seo-service-title">Online Shop SEO</h3>
                                 <p class="seo-service-desc">
                                     Ähnliche Produkttexte, viele Filterseiten und wechselnde Verfügbarkeiten machen Shop-SEO anspruchsvoll. Ich prüfe, welche Seiten indexiert werden sollten, überarbeite Kategorien und Produktbeschreibungen und berücksichtige strukturierte Daten für Preise und Verfügbarkeit. Entscheidend ist, dass Menschen mit konkreter Kaufabsicht auf der passenden Seite landen.
@@ -932,8 +934,8 @@
 
                             <article class="seo-glass seo-service-card seo-reveal reveal-card">
                                 <span class="seo-service-icon">
-                    <div class="lottie-icon" data-lottie="/assets/lottie/map-pin.json" data-lottie-mode="hover"></div>
-                </span>
+                                    <div class="lottie-icon" data-lottie="/assets/lottie/map-pin.json" data-lottie-mode="hover"></div>
+                                </span>
                                 <h3 class="seo-service-title">Lokale Suchmaschinenoptimierung</h3>
                                 <p class="seo-service-desc">
                                     Wenn Sie Kunden vor Ort gewinnen möchten, sollte Ihre Website bei passenden lokalen Suchanfragen sichtbar sein. Dazu können ein gepflegtes Google-Unternehmensprofil, sinnvolle Standortseiten, der Umgang mit Bewertungen und einheitliche Firmeneinträge beitragen. Was sich lohnt, hängt von Ihrem Standort und Ihrem Geschäftsmodell ab.
@@ -944,8 +946,8 @@
                                 <div class="seo-service-wide">
                                     <div>
                                         <span class="seo-service-icon">
-                    <div class="lottie-icon" data-lottie="/assets/lottie/briefcase.json" data-lottie-mode="hover"></div>
-                </span>
+                                            <div class="lottie-icon" data-lottie="/assets/lottie/briefcase.json" data-lottie-mode="hover"></div>
+                                        </span>
                                         <h3 class="seo-service-title">SEO Für Unternehmen</h3>
                                         <p class="seo-service-desc">
                                             Unternehmenswebsites sollen häufig qualifizierte Anfragen gewinnen und Vertrauen schaffen. Ich prüfe, ob Ihre Leistungen verständlich beschrieben sind, wichtige Fragen beantwortet werden und Interessenten leicht Kontakt aufnehmen können. Daraus entsteht ein Maßnahmenplan mit klaren Prioritäten.
@@ -975,10 +977,7 @@
                     </div>
                 </section>
 
-
             </div>
-
-
         </main>
 
 
@@ -1004,10 +1003,11 @@
         <script type="module" src="/assets/src/components/footer.js"></script>
         <script src="/assets/src/components/faq.js"></script>
         <script src="/tariff/js/utils/currency-selector.js" type="module"></script>
-<script type="module" src="/assets/src/components/back-to-top.js"></script>
-<script src="/assets/src/core/cursor.js"></script>
-<script src="/assets/src/core/loader.js"></script>
-<script type="module" src="/assets/src/core/lottie-icons.js"></script>
+        <script type="module" src="/assets/src/components/back-to-top.js"></script>
+        <script src="/assets/src/core/cursor.js"></script>
+        <script src="/assets/src/core/loader.js"></script>
+        <script type="module" src="/assets/src/core/lottie-icons.js"></script>
+
         <div class="seo-print-invoice" data-seo-print-invoice aria-hidden="true">
             <div class="seo-print-header">
                 <div class="seo-print-brand">

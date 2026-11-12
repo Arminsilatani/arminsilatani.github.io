@@ -2,11 +2,13 @@
 
 import { notifyTelegram } from '/assets/src/core/telegram-notify.js';
 
+
 /* :::::::::::::::::::::::::: INTERNATIONALIZATION :::::::::::::::::::::::::: */
 
 const LANG = (document.documentElement.lang || 'fa').slice(0, 2).toLowerCase();
 
 const I18N = {
+
 
     /* :::::::::::::::::::::::::: PERSIAN :::::::::::::::::::::::::: */
 
@@ -129,6 +131,7 @@ const I18N = {
         }
     },
 
+
     /* :::::::::::::::::::::::::: ARABIC :::::::::::::::::::::::::: */
 
     ar: {
@@ -249,6 +252,7 @@ const I18N = {
             nLeft: '{n} مقاعد متبقية لمشاريع السيو'
         }
     },
+
 
     /* :::::::::::::::::::::::::: ENGLISH :::::::::::::::::::::::::: */
 
@@ -371,6 +375,7 @@ const I18N = {
         }
     },
 
+
     /* :::::::::::::::::::::::::: TURKISH :::::::::::::::::::::::::: */
 
     tr: {
@@ -492,6 +497,7 @@ const I18N = {
         }
     },
 
+
     /* :::::::::::::::::::::::::: GERMAN :::::::::::::::::::::::::: */
 
     de: {
@@ -612,6 +618,7 @@ const I18N = {
             nLeft: '{n} Plätze für SEO-Projekte frei'
         }
     },
+
 
     /* :::::::::::::::::::::::::: ITALIAN :::::::::::::::::::::::::: */
 
@@ -737,6 +744,7 @@ const I18N = {
 
 const t = I18N[LANG] || I18N.fa;
 
+
 /* :::::::::::::::::::::::::: DEFAULTS :::::::::::::::::::::::::: */
 
 let basePricesUSD = { SEO: {} };
@@ -747,6 +755,7 @@ let determineCurrency = (lang) => {
     if (saved) return saved;
     return (lang || 'fa').startsWith('fa') ? 'IRR' : 'USD';
 };
+
 
 /* :::::::::::::::::::::::::: DYNAMIC IMPORTS :::::::::::::::::::::::::: */
 
@@ -771,6 +780,7 @@ try {
     console.warn('[SEO] currency-engine.js not loaded — using simple fallback.', e);
 }
 
+
 /* :::::::::::::::::::::::::: SUPABASE CLIENT :::::::::::::::::::::::::: */
 
 const SUPABASE_URL = "https://vzqicidepdmraygulrey.supabase.co";
@@ -778,6 +788,7 @@ const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_kqRWgOmLISOE2EuLL1s8fw_WN6FJRTI
 const supabaseClient =
     window.supabaseClient ||
     window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+
 
 /* :::::::::::::::::::::::::: LANDING CONFIG :::::::::::::::::::::::::: */
 
@@ -792,6 +803,7 @@ const SEO_LANDING_CONFIG = {
     }
 };
 
+
 /* :::::::::::::::::::::::::: PRICE HELPERS :::::::::::::::::::::::::: */
 
 function sumPackageUSD(prefix) {
@@ -801,10 +813,12 @@ function sumPackageUSD(prefix) {
         .reduce((sum, [, value]) => sum + value, 0);
 }
 
+
 /* :::::::::::::::::::::::::: COMPONENT LABELS :::::::::::::::::::::::::: */
 
 const PACKAGE_COMPONENT_LABELS = t.componentLabels;
 const PACKAGE_COMPONENT_FALLBACK = t.componentFallback;
+
 
 /* :::::::::::::::::::::::::: PACKAGE BREAKDOWN :::::::::::::::::::::::::: */
 
@@ -826,6 +840,7 @@ function getPackageBreakdown(prefix) {
     return rows;
 }
 
+
 /* :::::::::::::::::::::::::: MAIN PAGE :::::::::::::::::::::::::: */
 
 (function () {
@@ -833,6 +848,7 @@ function getPackageBreakdown(prefix) {
 
     const page = document.querySelector('.seo-page');
     if (!page) return;
+
 
     /* :::::::::::::::::::::::::: PRICING BRIDGE :::::::::::::::::::::::::: */
 
@@ -878,6 +894,7 @@ function getPackageBreakdown(prefix) {
         }
     }
 
+
     /* :::::::::::::::::::::::::: PACKAGE PRICE RENDERER :::::::::::::::::::::::::: */
 
     function renderPackagePrices() {
@@ -914,6 +931,7 @@ function getPackageBreakdown(prefix) {
         });
     }
 
+
     /* :::::::::::::::::::::::::: SCROLL REVEAL :::::::::::::::::::::::::: */
 
     (function initReveal() {
@@ -941,6 +959,7 @@ function getPackageBreakdown(prefix) {
 
         items.forEach((el) => io.observe(el));
     })();
+
 
     /* :::::::::::::::::::::::::: PACKAGE CONFIGURATION :::::::::::::::::::::::::: */
 
@@ -1009,6 +1028,7 @@ function getPackageBreakdown(prefix) {
             ]
         }
     };
+
 
     /* :::::::::::::::::::::::::: PRICE CALCULATOR :::::::::::::::::::::::::: */
 
@@ -1091,6 +1111,7 @@ function getPackageBreakdown(prefix) {
             el._seoAnimId = requestAnimationFrame(step);
         }
 
+
         /* :::::::::::::::::::::::::: BREAKDOWN ROWS :::::::::::::::::::::::::: */
 
         function renderBreakdownRows() {
@@ -1115,6 +1136,7 @@ function getPackageBreakdown(prefix) {
                 }
             });
         }
+
 
         /* :::::::::::::::::::::::::: INVOICE DATA :::::::::::::::::::::::::: */
 
@@ -1163,6 +1185,7 @@ function getPackageBreakdown(prefix) {
                 totalUsd: baseUsd + addonsUsd
             };
         }
+
 
         /* :::::::::::::::::::::::::: PRINT INVOICE :::::::::::::::::::::::::: */
 
@@ -1221,6 +1244,7 @@ function getPackageBreakdown(prefix) {
                 triggerPrint();
             }
         }
+
 
         /* :::::::::::::::::::::::::: ADDON UI :::::::::::::::::::::::::: */
 
@@ -1290,6 +1314,7 @@ function getPackageBreakdown(prefix) {
                 else if (addon.type === 'toggle') addonsContainer.appendChild(buildToggleAddon(addon));
             });
         }
+
 
         /* :::::::::::::::::::::::::: TOTAL SUMMARY :::::::::::::::::::::::::: */
 
@@ -1395,6 +1420,7 @@ function getPackageBreakdown(prefix) {
             state._pkgChanged = false;
         }
 
+
         /* :::::::::::::::::::::::::: PACKAGE SELECTION :::::::::::::::::::::::::: */
 
         function selectPackage(pkgKey) {
@@ -1446,6 +1472,7 @@ function getPackageBreakdown(prefix) {
         selectPackage(state.package);
     })();
 
+
     /* :::::::::::::::::::::::::: TAB SWITCH :::::::::::::::::::::::::: */
 
     (function initTabSwitch() {
@@ -1475,6 +1502,7 @@ function getPackageBreakdown(prefix) {
             });
         });
     })();
+
 
     /* :::::::::::::::::::::::::: FIELD PREFIXES :::::::::::::::::::::::::: */
 
@@ -1540,6 +1568,7 @@ function getPackageBreakdown(prefix) {
         adjustFieldPrefixes();
         setTimeout(adjustFieldPrefixes, 300);
     }
+
 
     /* :::::::::::::::::::::::::: AUDIT FORM :::::::::::::::::::::::::: */
 
@@ -1644,6 +1673,7 @@ function getPackageBreakdown(prefix) {
         });
     })();
 
+
     /* :::::::::::::::::::::::::: SMOOTH SCROLL :::::::::::::::::::::::::: */
 
     (function initSmoothScroll() {
@@ -1660,6 +1690,7 @@ function getPackageBreakdown(prefix) {
             });
         });
     })();
+
 
     /* :::::::::::::::::::::::::: PRICING SYNC :::::::::::::::::::::::::: */
 
@@ -1687,6 +1718,7 @@ function getPackageBreakdown(prefix) {
 
     refreshPackagePrices();
 })();
+
 
 /* :::::::::::::::::::::::::: CAPACITY BADGE :::::::::::::::::::::::::: */
 
@@ -1744,9 +1776,11 @@ function getPackageBreakdown(prefix) {
     });
 })();
 
+
 /* :::::::::::::::::::::::::: TESTIMONIALS :::::::::::::::::::::::::: */
 
 const TESTIMONIALS = {
+
 
     /* :::::::::::::::::::::::::: PERSIAN :::::::::::::::::::::::::: */
 
@@ -1807,6 +1841,7 @@ const TESTIMONIALS = {
         }
     ],
 
+
     /* :::::::::::::::::::::::::: ARABIC :::::::::::::::::::::::::: */
 
     ar: [
@@ -1865,6 +1900,7 @@ const TESTIMONIALS = {
             image: "/assets/images/arminsilatani/services/seo/hamidrezavosugh.webp"
         }
     ],
+
 
     /* :::::::::::::::::::::::::: ENGLISH :::::::::::::::::::::::::: */
 
@@ -1925,6 +1961,7 @@ const TESTIMONIALS = {
         }
     ],
 
+
     /* :::::::::::::::::::::::::: TURKISH :::::::::::::::::::::::::: */
 
     tr: [
@@ -1983,6 +2020,7 @@ const TESTIMONIALS = {
             image: "/assets/images/arminsilatani/services/seo/hamidrezavosugh.webp"
         }
     ],
+
 
     /* :::::::::::::::::::::::::: GERMAN :::::::::::::::::::::::::: */
 
@@ -2043,6 +2081,7 @@ const TESTIMONIALS = {
         }
     ],
 
+
     /* :::::::::::::::::::::::::: ITALIAN :::::::::::::::::::::::::: */
 
     it: [
@@ -2102,6 +2141,7 @@ const TESTIMONIALS = {
         }
     ]
 };
+
 
 /* :::::::::::::::::::::::::: TESTIMONIALS INIT :::::::::::::::::::::::::: */
 

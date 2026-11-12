@@ -1,15 +1,10 @@
-/* ===================================================================== */
-/* ========================= FOOTER COMPONENT ========================== */
-/* ===================================================================== */
+/* :::::::::::::::::::::::::: FOOTER COMPONENT :::::::::::::::::::::::::: */
 
 :host {
     --footer-color: #4ECDC4;
     --footer-shadow-color: rgba(0, 0, 0, 0.75);
-
-    /* ✅ متغیرهای رنگ Lottie — بقیه توسط lottie-icons.css مدیریت می‌شه */
-    --lottie-color: #0d0d0d;
-    --lottie-hover-color: #f5f5f5;
-
+    --lottie-color: #0D0D0D;
+    --lottie-hover-color: #F5F5F5;
     display: block;
     width: 100%;
     background: #0D0D0D;
@@ -24,7 +19,9 @@
     position: relative;
 }
 
-/* ============ DIVIDER ============ */
+
+/* :::::::::::::::::::::::::: DIVIDER :::::::::::::::::::::::::: */
+
 .footer-divider {
     position: absolute;
     top: -150px;
@@ -53,7 +50,9 @@
     );
 }
 
-/* ============ MAIN FOOTER ============ */
+
+/* :::::::::::::::::::::::::: MAIN FOOTER :::::::::::::::::::::::::: */
+
 .footer-extra {
     position: relative;
     z-index: var(--z-raised);
@@ -118,7 +117,9 @@ h2 {
     color: #F5F5F5;
 }
 
-/* ============ CONTACT ============ */
+
+/* :::::::::::::::::::::::::: CONTACT :::::::::::::::::::::::::: */
+
 .contact {
     display: flex;
     flex-direction: column;
@@ -139,7 +140,6 @@ h2 {
     color: #F5F5F5;
 }
 
-/* ✅ آیکون‌های Lottie در contact — فقط سایز و ترنزیشن */
 .contact .lottie-icon {
     width: 20px;
     height: 20px;
@@ -152,7 +152,9 @@ h2 {
     transform: scale(1.15);
 }
 
-/* ============ SOCIAL ============ */
+
+/* :::::::::::::::::::::::::: SOCIAL :::::::::::::::::::::::::: */
+
 .social {
     display: flex;
     gap: 35px;
@@ -168,7 +170,6 @@ h2 {
     justify-content: center;
 }
 
-/* ✅ سایز Lottie در سوشال */
 .social .lottie-icon {
     width: 32px;
     height: 32px;
@@ -180,7 +181,6 @@ h2 {
     transform: scale(1.15);
 }
 
-/* SVG مستقیم (اگر جایی هنوز SVG داری) */
 .social a > svg {
     width: 22px;
     height: 22px;
@@ -188,7 +188,9 @@ h2 {
     display: block;
 }
 
-/* ============ COPYRIGHT ============ */
+
+/* :::::::::::::::::::::::::: COPYRIGHT :::::::::::::::::::::::::: */
+
 .copyright {
     width: 100%;
     background: var(--footer-color);
@@ -208,11 +210,65 @@ h2 {
     display: none;
 }
 
-/* ===================================================================== */
-/* ========================== MOBILE STYLES ============================ */
-/* ===================================================================== */
+
+/* :::::::::::::::::::::::::: 320PX - XS - IPHONE 5 (320X568) :::::::::::::::::::::::::: */
+
+@media (min-width: 320px) {
+
+}
+
+@media (min-width: 568px) and (max-height: 320px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 380PX - S - GALAXY Z FLIP 3 / S24 ULTRA (380X880) :::::::::::::::::::::::::: */
+
+@media (min-width: 380px) {
+
+}
+
+@media (min-width: 880px) and (max-height: 412px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 440PX - S+ - IPHONE 17 PRO MAX (440X956) :::::::::::::::::::::::::: */
+
+@media (min-width: 440px) {
+
+}
+
+@media (min-width: 956px) and (max-height: 440px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 480PX - M - LARGE MOBILE :::::::::::::::::::::::::: */
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 480px) and (max-height: 500px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 768PX - TAB - IPAD MINI / GALAXY FOLD INNER (768X1024) :::::::::::::::::::::::::: */
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
+
+}
 
 @media (max-width: 768px) {
+
+    /* :::::::::::::::::::::::::: DIVIDER :::::::::::::::::::::::::: */
+
     .footer-divider {
         top: -100px;
         height: 100px;
@@ -229,6 +285,8 @@ h2 {
             0 100%
         );
     }
+
+    /* :::::::::::::::::::::::::: MAIN FOOTER :::::::::::::::::::::::::: */
 
     .footer-extra {
         padding: 40px 24px;
@@ -248,6 +306,8 @@ h2 {
         justify-content: center;
     }
 
+    /* :::::::::::::::::::::::::: COPYRIGHT :::::::::::::::::::::::::: */
+
     .copyright {
         display: block;
         text-align: center;
@@ -264,6 +324,8 @@ h2 {
         max-width: 100%;
         box-sizing: border-box;
     }
+
+    /* :::::::::::::::::::::::::: CONTACT :::::::::::::::::::::::::: */
 
     .contact-column {
         text-align: center;
@@ -284,9 +346,61 @@ h2 {
         align-items: center;
     }
 
+    /* :::::::::::::::::::::::::: SOCIAL :::::::::::::::::::::::::: */
+
     .contact-column .social {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+}
+
+
+/* :::::::::::::::::::::::::: 800PX - TAB+ - GALAXY TAB S7 (800X1280) :::::::::::::::::::::::::: */
+
+@media (min-width: 800px) {
+
+}
+
+@media (min-width: 1280px) and (max-height: 800px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 1024PX - L - IPAD PRO 13 (1024X1376) :::::::::::::::::::::::::: */
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1376px) and (max-height: 1032px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 1366PX - XL - DESKTOP / LAPTOP FHD :::::::::::::::::::::::::: */
+
+@media (min-width: 1366px) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 1920PX - 2XL - FULL HD / 2K :::::::::::::::::::::::::: */
+
+@media (min-width: 1920px) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 2560PX - UW - ULTRAWIDE / 4K UHD :::::::::::::::::::::::::: */
+
+@media (min-width: 2560px) {
+
+}
+
+
+/* :::::::::::::::::::::::::: LANDSCAPE PHONE - GENERAL LOW HEIGHT :::::::::::::::::::::::::: */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
 }

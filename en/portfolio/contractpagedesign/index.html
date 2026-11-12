@@ -3,7 +3,7 @@
     <head>
 
 
-        <!-- :::::::::::::::::::::::::: HEAD & META :::::::::::::::::::::::::: -->
+<!-- :::::::::::::::::::::::::: HEAD & META :::::::::::::::::::::::::: -->
 
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,10 +19,9 @@
         <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icon-32.png" />
 
 
-        <!-- :::::::::::::::::::::::::: STYLESHEETS & FONTS :::::::::::::::::::::::::: -->
+<!-- :::::::::::::::::::::::::: STYLESHEETS & FONTS :::::::::::::::::::::::::: -->
 
-         <!-- CORE -->
-          <link rel="stylesheet" href="/assets/src/core/z-index.css" />
+        <link rel="stylesheet" href="/assets/src/core/z-index.css" />
         <link rel="stylesheet" href="/assets/src/core/fonts.css" />
         <link rel="stylesheet" href="/assets/src/core/base.css" />
         <link rel="stylesheet" href="/assets/src/core/typography.css" />
@@ -31,14 +30,10 @@
         <link rel="stylesheet" href="/assets/src/core/animations.css" />
         <link rel="stylesheet" href="/assets/src/core/cursor.css" />
         <link rel="stylesheet" href="/assets/src/core/loader.css" />
-
-        <!-- COMPONENTS -->
         <link rel="stylesheet" href="/assets/src/components/hero.css" />
         <link rel="stylesheet" href="/assets/src/components/section-divider.css" />
         <link rel="stylesheet" href="/assets/src/components/terminal-breadcrumb.css" />
         <link rel="stylesheet" href="/assets/src/components/process-component.css" />
-
-        <!-- PAGE -->
         <link rel="stylesheet" href="/assets/src/styles/portfolio-graphic.css" />
         <link
             rel="preload"
@@ -54,10 +49,9 @@
             type="font/woff2"
             crossorigin
         />
-        
 
 
-        <!-- :::::::::::::::::::::::::: OPEN GRAPH & TWITTER CARDS :::::::::::::::::::::::::: -->
+<!-- :::::::::::::::::::::::::: OPEN GRAPH & TWITTER CARDS :::::::::::::::::::::::::: -->
 
         <meta
             property="og:title"
@@ -93,7 +87,7 @@
         />
 
 
-        <!-- :::::::::::::::::::::::::: CANONICAL & HREFLANG :::::::::::::::::::::::::: -->
+<!-- :::::::::::::::::::::::::: CANONICAL & HREFLANG :::::::::::::::::::::::::: -->
 
         <link
             rel="canonical"
@@ -136,42 +130,49 @@
         />
 
 
-        <!-- :::::::::::::::::::::::::: JSON-LD SCHEMA :::::::::::::::::::::::::: -->
+<!-- :::::::::::::::::::::::::: JSON-LD SCHEMA :::::::::::::::::::::::::: -->
 
         <script type="application/ld+json">
 
         </script>
 
 
-        <!-- :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: -->
+<!-- :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: -->
 
-<script src="/assets/src/core/gsap.min.js" defer></script>
-<script src="/assets/src/core/ScrollTrigger.min.js" defer></script>
-<script src="/assets/src/core/lottie_light.min.js" defer></script>
+        <script src="/assets/src/core/gsap.min.js" defer></script>
+        <script src="/assets/src/core/ScrollTrigger.min.js" defer></script>
+        <script src="/assets/src/core/lottie_light.min.js" defer></script>
     </head>
 
     <body class="portfolio-page">
-  <div id="initial-loader" class="fullpage-loader">
-    <div class="lds-grid">
-      <div></div><div></div><div></div>
-      <div></div><div></div><div></div>
-      <div></div><div></div><div></div>
-    </div>
-  </div>
+        <div id="initial-loader" class="fullpage-loader">
+            <div class="lds-grid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
         <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+        <div class="cursor-follower"></div>
 
-        <!-- :::::::::::::::::::::::::: HEADER & NAVIGATION :::::::::::::::::::::::::: -->
+
+<!-- :::::::::::::::::::::::::: HEADER & NAVIGATION :::::::::::::::::::::::::: -->
 
         <header-component></header-component>
 
 
-        <!-- :::::::::::::::::::::::::: MAIN CONTENT :::::::::::::::::::::::::: -->
+<!-- :::::::::::::::::::::::::: MAIN CONTENT :::::::::::::::::::::::::: -->
 
         <main class="has-footer-gap portfolio-main">
 
 
-            <!-- :::::::::::::::::::::::::: HERO :::::::::::::::::::::::::: -->
+<!-- :::::::::::::::::::::::::: HERO :::::::::::::::::::::::::: -->
 
             <section class="hero-section">
                 <video
@@ -231,7 +232,7 @@
             </section>
 
 
-            <!-- :::::::::::::::::::::::::: PORTFOLIO :::::::::::::::::::::::::: -->
+<!-- :::::::::::::::::::::::::: PORTFOLIO :::::::::::::::::::::::::: -->
 
             <section class="letterhead-projects-section">
                 <div class="container-1080">
@@ -306,13 +307,15 @@
                     </div>
                 </div>
             </section>
-<section-divider role="presentation" aria-hidden="true"></section-divider>
 
-            <!-- :::::::::::::::::::::::::: PROCESS :::::::::::::::::::::::::: -->
+            <section-divider role="presentation" aria-hidden="true"></section-divider>
+
+
+<!-- :::::::::::::::::::::::::: PROCESS :::::::::::::::::::::::::: -->
 
             <section class="section" id="process">
                 <div class="container-1080 reveal-up">
-                    <span class="section-eyebrow">Precise design, transparent process.</span>
+                    <span class="eyebrow">Precise design, transparent process.</span>
                     <h2 class="section-title split-title">Workflow and Collaboration Stages</h2>
                     <p class="section-subtitle">
                         The collaboration process is built to stay fast, clear, and easy to
@@ -437,13 +440,13 @@
         </main>
 
 
-        <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
+<!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
 
         <footer-component></footer-component>
         <back-to-top></back-to-top>
 
 
-        <!-- :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: -->
+<!-- :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: -->
 
         <script src="/assets/src/core/i18n.js"></script>
         <script type="module" src="/assets/src/components/header.js"></script>
@@ -451,9 +454,9 @@
         <script type="module" src="/assets/src/components/language-selector.js"></script>
         <script src="/assets/src/components/terminal-breadcrumb.js"></script>
         <script type="module" src="/assets/src/components/footer.js"></script>
-<script type="module" src="/assets/src/components/back-to-top.js"></script>
-<script src="/assets/src/core/cursor.js"></script>
-<script src="/assets/src/core/loader.js"></script>
+        <script type="module" src="/assets/src/components/back-to-top.js"></script>
+        <script src="/assets/src/core/cursor.js"></script>
+        <script src="/assets/src/core/loader.js"></script>
         <script type="module" src="/assets/src/components/process-component.js"></script>
         <script src="/assets/src/core/animations.js"></script>
     </body>

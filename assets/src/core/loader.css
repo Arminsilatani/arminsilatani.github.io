@@ -1,73 +1,204 @@
-/* =========================================
-   INITIAL FULL-PAGE LOADER
-   ========================================= */
 :root {
-  --loader-dot-size: 8px;
-  --loader-anim-speed: 1.5s;
+    --loader-dot-size: 8px;
+    --loader-anim-speed: 1.5s;
 }
 
-/* Full-page semi-transparent overlay */
 .fullpage-loader {
-  position: fixed;
-  inset: 0;
-  background: #0d0d0d;
-  z-index: var(--z-loader);   /* 100 — بود 99999 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: fixed;
+    inset: 0;
+    background: #0D0D0D;
+    z-index: var(--z-loader);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* 3×3 grid container */
 .lds-grid {
-  display: grid;
-  grid-template-columns: repeat(3, var(--loader-dot-size));
-  grid-gap: calc(var(--loader-dot-size) * 0.625);
-  justify-content: center;
-  align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, var(--loader-dot-size));
+    grid-gap: calc(var(--loader-dot-size) * 0.625);
+    justify-content: center;
+    align-items: center;
 }
 
-/* Individual neon dot */
 .lds-grid div {
-  width: var(--loader-dot-size);
-  height: var(--loader-dot-size);
-  border-radius: 50%;
-  background: var(--accent, #4ecdc4);
-  box-shadow: 0 0 calc(var(--loader-dot-size) * 0.5) var(--accent, #4ecdc4);
-  animation: neonBlink var(--loader-anim-speed) infinite ease-in-out;
+    width: var(--loader-dot-size);
+    height: var(--loader-dot-size);
+    border-radius: 50%;
+    background: var(--accent, #4ECDC4);
+    box-shadow: 0 0 calc(var(--loader-dot-size) * 0.5) var(--accent, #4ECDC4);
+    animation: neonBlink var(--loader-anim-speed) infinite ease-in-out;
 }
 
-/* Wave pattern */
-.lds-grid div:nth-child(1) { animation-delay: 0.0s;                                animation-duration: calc(var(--loader-anim-speed) * 0.80); }
-.lds-grid div:nth-child(2) { animation-delay: calc(var(--loader-anim-speed) * 0.20); animation-duration: calc(var(--loader-anim-speed) * 0.93); }
-.lds-grid div:nth-child(3) { animation-delay: calc(var(--loader-anim-speed) * 0.47); animation-duration: calc(var(--loader-anim-speed) * 0.73); }
-.lds-grid div:nth-child(4) { animation-delay: calc(var(--loader-anim-speed) * 0.07); animation-duration: calc(var(--loader-anim-speed) * 0.87); }
-.lds-grid div:nth-child(5) { animation-delay: calc(var(--loader-anim-speed) * 0.33); animation-duration: calc(var(--loader-anim-speed) * 1.07); }
-.lds-grid div:nth-child(6) { animation-delay: calc(var(--loader-anim-speed) * 0.13); animation-duration: calc(var(--loader-anim-speed) * 0.80); }
-.lds-grid div:nth-child(7) { animation-delay: calc(var(--loader-anim-speed) * 0.53); animation-duration: calc(var(--loader-anim-speed) * 1.00); }
-.lds-grid div:nth-child(8) { animation-delay: calc(var(--loader-anim-speed) * 0.27); animation-duration: calc(var(--loader-anim-speed) * 0.87); }
-.lds-grid div:nth-child(9) { animation-delay: calc(var(--loader-anim-speed) * 0.40); animation-duration: calc(var(--loader-anim-speed) * 0.73); }
+.lds-grid div:nth-child(1) {
+    animation-delay: 0.0s;
+    animation-duration: calc(var(--loader-anim-speed) * 0.80);
+}
 
-/* Corner dots dimmer */
+.lds-grid div:nth-child(2) {
+    animation-delay: calc(var(--loader-anim-speed) * 0.20);
+    animation-duration: calc(var(--loader-anim-speed) * 0.93);
+}
+
+.lds-grid div:nth-child(3) {
+    animation-delay: calc(var(--loader-anim-speed) * 0.47);
+    animation-duration: calc(var(--loader-anim-speed) * 0.73);
+}
+
+.lds-grid div:nth-child(4) {
+    animation-delay: calc(var(--loader-anim-speed) * 0.07);
+    animation-duration: calc(var(--loader-anim-speed) * 0.87);
+}
+
+.lds-grid div:nth-child(5) {
+    animation-delay: calc(var(--loader-anim-speed) * 0.33);
+    animation-duration: calc(var(--loader-anim-speed) * 1.07);
+}
+
+.lds-grid div:nth-child(6) {
+    animation-delay: calc(var(--loader-anim-speed) * 0.13);
+    animation-duration: calc(var(--loader-anim-speed) * 0.80);
+}
+
+.lds-grid div:nth-child(7) {
+    animation-delay: calc(var(--loader-anim-speed) * 0.53);
+    animation-duration: calc(var(--loader-anim-speed) * 1.00);
+}
+
+.lds-grid div:nth-child(8) {
+    animation-delay: calc(var(--loader-anim-speed) * 0.27);
+    animation-duration: calc(var(--loader-anim-speed) * 0.87);
+}
+
+.lds-grid div:nth-child(9) {
+    animation-delay: calc(var(--loader-anim-speed) * 0.40);
+    animation-duration: calc(var(--loader-anim-speed) * 0.73);
+}
+
 .lds-grid div:nth-child(1),
 .lds-grid div:nth-child(3),
 .lds-grid div:nth-child(7),
 .lds-grid div:nth-child(9) {
-  opacity: 0.35;
+    opacity: 0.35;
 }
 
-/* Neon blink keyframes */
 @keyframes neonBlink {
-  0%, 100% {
-    opacity: 0.2;
-    box-shadow: 0 0 calc(var(--loader-dot-size) * 0.25) var(--accent, #4ecdc4);
-  }
-  50% {
-    opacity: 1;
-    box-shadow: 0 0 calc(var(--loader-dot-size) * 0.75) var(--accent, #4ecdc4);
-  }
+    0%, 100% {
+        opacity: 0.2;
+        box-shadow: 0 0 calc(var(--loader-dot-size) * 0.25) var(--accent, #4ECDC4);
+    }
+
+    50% {
+        opacity: 1;
+        box-shadow: 0 0 calc(var(--loader-dot-size) * 0.75) var(--accent, #4ECDC4);
+    }
 }
 
-/* Utility class to hide the loader */
 .hidden {
-  display: none !important;
+    display: none !important;
+}
+
+
+/* :::::::::::::::::::::::::: 320PX - XS - IPHONE 5 (320X568) :::::::::::::::::::::::::: */
+
+@media (min-width: 320px) {
+
+}
+
+@media (min-width: 568px) and (max-height: 320px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 380PX - S - GALAXY Z FLIP 3 / S24 ULTRA (380X880) :::::::::::::::::::::::::: */
+
+@media (min-width: 380px) {
+
+}
+
+@media (min-width: 880px) and (max-height: 412px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 440PX - S+ - IPHONE 17 PRO MAX (440X956) :::::::::::::::::::::::::: */
+
+@media (min-width: 440px) {
+
+}
+
+@media (min-width: 956px) and (max-height: 440px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 480PX - M - LARGE MOBILE :::::::::::::::::::::::::: */
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 480px) and (max-height: 500px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 768PX - TAB - IPAD MINI / GALAXY FOLD INNER (768X1024) :::::::::::::::::::::::::: */
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 800PX - TAB+ - GALAXY TAB S7 (800X1280) :::::::::::::::::::::::::: */
+
+@media (min-width: 800px) {
+
+}
+
+@media (min-width: 1280px) and (max-height: 800px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 1024PX - L - IPAD PRO 13 (1024X1376) :::::::::::::::::::::::::: */
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1376px) and (max-height: 1032px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 1366PX - XL - DESKTOP / LAPTOP FHD :::::::::::::::::::::::::: */
+
+@media (min-width: 1366px) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 1920PX - 2XL - FULL HD / 2K :::::::::::::::::::::::::: */
+
+@media (min-width: 1920px) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 2560PX - UW - ULTRAWIDE / 4K UHD :::::::::::::::::::::::::: */
+
+@media (min-width: 2560px) {
+
+}
+
+
+/* :::::::::::::::::::::::::: LANDSCAPE PHONE - GENERAL LOW HEIGHT :::::::::::::::::::::::::: */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
 }

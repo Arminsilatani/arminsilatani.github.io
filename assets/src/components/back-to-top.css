@@ -1,10 +1,5 @@
-/* ===================================================================== */
-/* ====================== BACK TO TOP COMPONENT ======================== */
-/* ===================================================================== */
-
 :host {
     --btt-color: #4ECDC4;
-
     position: fixed;
     bottom: 1.5rem;
     right: 1.5rem;
@@ -24,9 +19,7 @@
     transform: translateY(5rem);
     pointer-events: none;
     cursor: pointer;
-    transition: opacity .5s ease, transform .5s ease,
-                background .3s ease, box-shadow .3s ease,
-                border-color .3s ease;
+    transition: opacity .5s ease, transform .5s ease, background .3s ease, box-shadow .3s ease, border-color .3s ease;
     box-sizing: border-box;
 }
 
@@ -36,7 +29,6 @@
     pointer-events: auto;
 }
 
-/* === دکمه در حالت hover: پس‌زمینه نئونی حفظ می‌شود === */
 :host(.is-visible):hover {
     background: rgba(78, 205, 196, .15);
     border-color: var(--btt-color);
@@ -58,7 +50,6 @@ button {
     box-sizing: border-box;
 }
 
-/* === SVG Icon (پیش‌فرض: نمایش کامل) === */
 svg {
     display: block;
     width: 1.25rem;
@@ -66,12 +57,9 @@ svg {
     opacity: 1;
     visibility: visible;
     transform: scale(1);
-    transition: opacity 0.2s ease,
-                visibility 0.2s ease,
-                transform 0.2s ease;
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
 }
 
-/* === مخفی کردن SVG در hover — سلکتورهای چندگانه با !important === */
 :host(:hover) #btn svg,
 :host(:hover) button svg,
 :host(:hover) svg,
@@ -82,7 +70,43 @@ button:hover svg {
     transform: scale(0.5) !important;
 }
 
-@media (max-width: 640px) {
+
+/* :::::::::::::::::::::::::: 320PX - XS - IPHONE 5 (320X568) :::::::::::::::::::::::::: */
+
+@media (min-width: 320px) {
+
+}
+
+@media (min-width: 568px) and (max-height: 320px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 380PX - S - GALAXY Z FLIP 3 / S24 ULTRA (380X880) :::::::::::::::::::::::::: */
+
+@media (min-width: 380px) {
+
+}
+
+@media (min-width: 880px) and (max-height: 412px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 440PX - S+ - IPHONE 17 PRO MAX (440X956) :::::::::::::::::::::::::: */
+
+@media (min-width: 440px) {
+
+}
+
+@media (min-width: 956px) and (max-height: 440px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 480PX - M - LARGE MOBILE :::::::::::::::::::::::::: */
+
+@media (min-width: 480px) {
     :host {
         bottom: 1rem;
         right: 1rem;
@@ -90,4 +114,69 @@ button:hover svg {
         width: 2.5rem;
         height: 2.5rem;
     }
+}
+
+@media (min-width: 480px) and (max-height: 500px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 768PX - TAB - IPAD MINI / GALAXY FOLD INNER (768X1024) :::::::::::::::::::::::::: */
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 800PX - TAB+ - GALAXY TAB S7 (800X1280) :::::::::::::::::::::::::: */
+
+@media (min-width: 800px) {
+
+}
+
+@media (min-width: 1280px) and (max-height: 800px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 1024PX - L - IPAD PRO 13 (1024X1376) :::::::::::::::::::::::::: */
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1376px) and (max-height: 1032px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 1366PX - XL - DESKTOP / LAPTOP FHD :::::::::::::::::::::::::: */
+
+@media (min-width: 1366px) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 1920PX - 2XL - FULL HD / 2K :::::::::::::::::::::::::: */
+
+@media (min-width: 1920px) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 2560PX - UW - ULTRAWIDE / 4K UHD :::::::::::::::::::::::::: */
+
+@media (min-width: 2560px) {
+
+}
+
+
+/* :::::::::::::::::::::::::: LANDSCAPE PHONE - GENERAL LOW HEIGHT :::::::::::::::::::::::::: */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
 }

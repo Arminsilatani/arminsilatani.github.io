@@ -1,4 +1,5 @@
 /* :::::::::::::::::::::::::: BACK TO TOP COMPONENT :::::::::::::::::::::::::: */
+
 class BackToTop extends HTMLElement {
     constructor() {
         super();
@@ -6,7 +7,6 @@ class BackToTop extends HTMLElement {
         const shadow = this.attachShadow({ mode: "open" });
         const color = this.getAttribute("color") || "#4ECDC4";
 
-        /* رنگ به‌عنوان CSS variable به host پاس داده می‌شود */
         this.style.setProperty("--btt-color", color);
 
         const i18n = window.i18n;
@@ -26,7 +26,6 @@ class BackToTop extends HTMLElement {
         `;
     }
 
-    /* :::::::::::::::::::::::::: LIFECYCLE :::::::::::::::::::::::::: */
     connectedCallback() {
         this._init();
     }
@@ -35,25 +34,24 @@ class BackToTop extends HTMLElement {
         this._cleanup();
     }
 
-    /* :::::::::::::::::::::::::: INIT :::::::::::::::::::::::::: */
     _init() {
         const btn = this.shadowRoot.querySelector("#btn");
         if (!btn) return;
 
-        const MOBILE_BREAKPOINT  = 140;
+        const MOBILE_BREAKPOINT = 140;
         const PORTRAIT_MAX_WIDTH = 768;
-        const GAP_DESKTOP        = -90;
-        const GAP_PORTRAIT       = -50;
-        const GAP_MOBILE         = 10;
-        const BOTTOM_DESKTOP     = 24;
-        const BOTTOM_MOBILE      = 80;
-        const SHOW_AFTER         = 500;
+        const GAP_DESKTOP = -90;
+        const GAP_PORTRAIT = -50;
+        const GAP_MOBILE = 10;
+        const BOTTOM_DESKTOP = 24;
+        const BOTTOM_MOBILE = 80;
+        const SHOW_AFTER = 500;
 
         this._scrollHandler = () => {
             const w = window.innerWidth;
             const h = window.innerHeight;
 
-            const isMobile   = w <= MOBILE_BREAKPOINT;
+            const isMobile = w <= MOBILE_BREAKPOINT;
             const isPortrait = h > w && w <= PORTRAIT_MAX_WIDTH;
 
             const GAP = isMobile
@@ -61,7 +59,6 @@ class BackToTop extends HTMLElement {
                 : (isPortrait ? GAP_PORTRAIT : GAP_DESKTOP);
             const BOTTOM_OFFSET = isMobile ? BOTTOM_MOBILE : BOTTOM_DESKTOP;
 
-            /* پیدا کردن دیوایدر فوتر داخل shadow DOM فوتر */
             const footer = document.querySelector("footer-component");
             const dividerEl = footer && footer.shadowRoot
                 ? footer.shadowRoot.querySelector(".footer-divider")
@@ -95,7 +92,6 @@ class BackToTop extends HTMLElement {
         this._scrollHandler();
     }
 
-    /* :::::::::::::::::::::::::: CLEANUP :::::::::::::::::::::::::: */
     _cleanup() {
         if (this._scrollHandler) {
             window.removeEventListener("scroll", this._scrollHandler);
@@ -108,7 +104,9 @@ class BackToTop extends HTMLElement {
     }
 }
 
+
 /* :::::::::::::::::::::::::: REGISTRATION :::::::::::::::::::::::::: */
+
 if (!customElements.get("back-to-top")) {
     customElements.define("back-to-top", BackToTop);
 }

@@ -1,13 +1,15 @@
 /* :::::::::::::::::::::::::: GSAP & SCROLLTRIGGER INITIALIZATION :::::::::::::::::::::::::: */
+
 document.documentElement.classList.add("js");
 
 if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
 }
 
+
 /* :::::::::::::::::::::::::: SPLIT TEXT & TITLES ENGINE :::::::::::::::::::::::::: */
+
 function splitTextElements() {
-    // پردازش همزمان تیترها (.split-title) و پاراگراف‌ها (.split-text)
     document.querySelectorAll(".split-title, .split-text").forEach(el => {
         if (el.dataset.splitted === "true") return;
 
@@ -16,7 +18,6 @@ function splitTextElements() {
 
         const words = text.split(" ");
 
-        // تفکیک کلمات و تزریق فاصله پایدار جهت حفظ جریان طبیعی متن در RTL/LTR
         el.innerHTML = words
             .map((word, i) =>
                 `<span class="word">${word}</span>` +
@@ -24,13 +25,14 @@ function splitTextElements() {
             )
             .join("");
 
-        // برچسب ARIA جهت حفظ دسترسی‌پذیری سئو و صفحه‌خوان‌ها
         el.setAttribute("aria-label", text);
         el.dataset.splitted = "true";
     });
 }
 
+
 /* :::::::::::::::::::::::::: SCROLL-TRIGGERED REVEAL ANIMATIONS :::::::::::::::::::::::::: */
+
 function initRevealAnimations() {
     if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
 
@@ -40,14 +42,12 @@ function initRevealAnimations() {
     const splitTitleWords = document.querySelectorAll(".split-title .word");
     const splitTextWords = document.querySelectorAll(".split-text .word");
 
-    // مقداردهی اولیه حالت نامرئی
     if (ups.length) gsap.set(ups, { y: 30, opacity: 0 });
     if (cards.length) gsap.set(cards, { y: 36, opacity: 0, scale: 0.985 });
     if (rows.length) gsap.set(rows, { y: 18, opacity: 0 });
     if (splitTitleWords.length) gsap.set(splitTitleWords, { y: 40, opacity: 0 });
     if (splitTextWords.length) gsap.set(splitTextWords, { y: 18, opacity: 0 });
 
-    // ۱. انیمیشن کلماتِ تیترها (.split-title) - نمایش پرتابی و بولد
     document.querySelectorAll(".split-title").forEach(title => {
         const words = title.querySelectorAll(".word");
         if (!words.length) return;
@@ -66,7 +66,6 @@ function initRevealAnimations() {
         });
     });
 
-    // ۲. انیمیشن کلماتِ پاراگراف‌ها (.split-text) - نمایش نرم، ابریشمی و موجی
     document.querySelectorAll(".split-text").forEach(p => {
         const words = p.querySelectorAll(".word");
         if (!words.length) return;
@@ -75,7 +74,7 @@ function initRevealAnimations() {
             y: 0,
             opacity: 1,
             duration: 0.65,
-            stagger: 0.018, // ریتم پیوسته بدون معطلی کاربر در خواندن متن
+            stagger: 0.018,
             ease: "power2.out",
             scrollTrigger: {
                 trigger: p,
@@ -85,7 +84,6 @@ function initRevealAnimations() {
         });
     });
 
-    // ۳. انیمیشن المان‌های منفرد (مستقل از استک عمودی)
     document.querySelectorAll(".reveal-up").forEach(el => {
         if (el.closest(".reveal-stack")) return;
 
@@ -102,7 +100,6 @@ function initRevealAnimations() {
         });
     });
 
-    // ۴. انیمیشن استک عمودی (.reveal-stack) با افکت پله‌ای (Stagger)
     document.querySelectorAll(".reveal-stack").forEach(stack => {
         const items = stack.querySelectorAll(":scope > .reveal-up");
         if (!items.length) return;
@@ -121,7 +118,6 @@ function initRevealAnimations() {
         });
     });
 
-    // ۵. گریدها (کارت‌ها و دسته‌بندی‌ها)
     document.querySelectorAll(".categories-grid, .graphic-grid").forEach(grid => {
         const children = grid.querySelectorAll(".reveal-card");
         if (!children.length) return;
@@ -141,7 +137,6 @@ function initRevealAnimations() {
         });
     });
 
-    // ۶. لیست سطرهای عمودی پورتفولیو
     document.querySelectorAll(".portfolio-list").forEach(list => {
         const visibleRows = list.querySelectorAll(".portfolio-row:not(.extra-item)");
         if (!visibleRows.length) return;
@@ -161,7 +156,9 @@ function initRevealAnimations() {
     });
 }
 
+
 /* :::::::::::::::::::::::::: PORTFOLIO ROW HOVER EFFECTS :::::::::::::::::::::::::: */
+
 function initProjectRowHover() {
     if (typeof gsap === "undefined") return;
 
@@ -187,7 +184,9 @@ function initProjectRowHover() {
     });
 }
 
+
 /* :::::::::::::::::::::::::: GRAPHIC CARD HOVER SHINE EFFECT :::::::::::::::::::::::::: */
+
 function initGraphicHover() {
     if (typeof gsap === "undefined") return;
 
@@ -205,7 +204,9 @@ function initGraphicHover() {
     });
 }
 
+
 /* :::::::::::::::::::::::::: EXPANDABLE LISTS :::::::::::::::::::::::::: */
+
 function initExpandableLists() {
     document.querySelectorAll("[data-toggle-list]").forEach(button => {
         const list = button.closest(".portfolio-list-section")?.querySelector("[data-expandable-list]");
@@ -282,7 +283,9 @@ function initExpandableLists() {
     });
 }
 
+
 /* :::::::::::::::::::::::::: HASH ANCHOR SCROLL :::::::::::::::::::::::::: */
+
 function initHashScroll() {
     const HEADER_OFFSET = 110;
 
@@ -327,7 +330,9 @@ function initHashScroll() {
     });
 }
 
+
 /* :::::::::::::::::::::::::: PROJECT STATUS FILTER :::::::::::::::::::::::::: */
+
 function initProjectStatus() {
     document.querySelectorAll(".portfolio-list").forEach(list => {
         const rows = Array.from(list.querySelectorAll(".portfolio-row"));
@@ -335,21 +340,17 @@ function initProjectStatus() {
 
         const hasMixedStatus = rows.some(r => r.dataset.status !== "done");
 
-        // لیست‌های همه done (SEO و Web Design) رو دست نزن
         if (!hasMixedStatus) return;
 
-        // ۱. حذف کامل پروژه‌های not-started از DOM
         list.querySelectorAll('.portfolio-row[data-status="not-started"]').forEach(el => {
             el.remove();
         });
 
-        // ۲. in-progress ها رو قابل مشاهده کن (حذف هر extra-item اضافی)
         list.querySelectorAll('.portfolio-row[data-status="in-progress"]').forEach(el => {
             el.classList.remove("extra-item");
             el.classList.remove("is-visible");
         });
 
-        // ۳. غیرفعال‌سازی لینک in-progress ها
         list.querySelectorAll('.portfolio-row[data-status="in-progress"]').forEach(el => {
             el.removeAttribute("href");
             el.setAttribute("aria-disabled", "true");
@@ -359,7 +360,10 @@ function initProjectStatus() {
         });
     });
 }
+
+
 /* :::::::::::::::::::::::::: GLOW PULSE ANIMATION :::::::::::::::::::::::::: */
+
 function initGlowPulse() {
     if (typeof gsap === "undefined") return;
 
@@ -377,14 +381,16 @@ function initGlowPulse() {
     });
 }
 
+
 /* :::::::::::::::::::::::::: INITIALIZATION :::::::::::::::::::::::::: */
+
 document.addEventListener("DOMContentLoaded", () => {
-    initProjectStatus(); 
+    initProjectStatus();
     splitTextElements();
     initRevealAnimations();
     initProjectRowHover();
     initGraphicHover();
     initExpandableLists();
     initGlowPulse();
-    initHashScroll(); 
+    initHashScroll();
 });

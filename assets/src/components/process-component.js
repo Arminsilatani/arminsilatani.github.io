@@ -1,15 +1,10 @@
-/* :::::::::::::::::::::::::: PROCESS COMPONENT :::::::::::::::::::::::::: */
-
 class ProcessComponent extends HTMLElement {
-
-    /* :::::::::::::::::::::::::: CONNECTED CALLBACK :::::::::::::::::::::::::: */
     connectedCallback() {
         if (this._wired) return;
         this._init();
         this._wired = true;
     }
 
-    /* :::::::::::::::::::::::::: INIT :::::::::::::::::::::::::: */
     _init() {
         const boxes = this.querySelectorAll(".process-box");
         if (!boxes.length) return;
@@ -19,7 +14,6 @@ class ProcessComponent extends HTMLElement {
             boxes[0].classList.add("is-open");
         }
 
-        /* ---------- HOVER → پیش‌نمایش ۱۵٪ + تصویر بلر ---------- */
         this._onMouseOver = (e) => {
             const box = e.target.closest(".process-box");
             if (!box || !this.contains(box)) return;
@@ -34,14 +28,12 @@ class ProcessComponent extends HTMLElement {
             const box = e.target.closest(".process-box");
             if (!box || !this.contains(box)) return;
 
-            /* اگر هنوز داخل همون باکس هستیم، کاری نکن */
             const related = e.relatedTarget;
             if (related && box.contains(related)) return;
 
             box.classList.remove("is-hover");
         };
 
-        /* ---------- CLICK → باز کردن کامل ---------- */
         this._onClick = (e) => {
             const box = e.target.closest(".process-box");
             if (!box || !this.contains(box)) return;
@@ -55,11 +47,10 @@ class ProcessComponent extends HTMLElement {
         };
 
         this.addEventListener("mouseover", this._onMouseOver);
-        this.addEventListener("mouseout",  this._onMouseOut);
-        this.addEventListener("click",     this._onClick);
+        this.addEventListener("mouseout", this._onMouseOut);
+        this.addEventListener("click", this._onClick);
     }
 
-    /* :::::::::::::::::::::::::: DISCONNECTED CALLBACK :::::::::::::::::::::::::: */
     disconnectedCallback() {
         if (this._onMouseOver) {
             this.removeEventListener("mouseover", this._onMouseOver);
@@ -77,7 +68,6 @@ class ProcessComponent extends HTMLElement {
     }
 }
 
-/* :::::::::::::::::::::::::: REGISTRATION :::::::::::::::::::::::::: */
 if (!customElements.get("process-component")) {
     customElements.define("process-component", ProcessComponent);
 }

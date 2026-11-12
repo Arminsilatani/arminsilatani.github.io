@@ -4,8 +4,6 @@
     'use strict';
 
 
-
-
     /* :::::::::::::::::::::::::: CARD INITIALIZATION :::::::::::::::::::::::::: */
 
     const initCard = (card) => {
@@ -18,8 +16,6 @@
         const images = Array.from(media.querySelectorAll('img'));
 
         if (!images.length) return;
-
-
 
 
         /* :::::::::::::::::::::::::: IMAGE EAGER LOADING :::::::::::::::::::::::::: */
@@ -36,8 +32,6 @@
         });
 
 
-
-
         /* :::::::::::::::::::::::::: SLIDE WRAPPERS :::::::::::::::::::::::::: */
 
         images.forEach((img) => {
@@ -48,8 +42,6 @@
         });
 
         const slides = Array.from(media.querySelectorAll('.catalogue-slide'));
-
-
 
 
         /* :::::::::::::::::::::::::: STAGE HEIGHT :::::::::::::::::::::::::: */
@@ -100,8 +92,6 @@
         let current = 0;
 
 
-
-
         /* :::::::::::::::::::::::::: DOTS :::::::::::::::::::::::::: */
 
         const dotsWrap = document.createElement('div');
@@ -125,13 +115,9 @@
         else info.appendChild(dotsWrap);
 
 
-
-
         /* :::::::::::::::::::::::::: RTL :::::::::::::::::::::::::: */
 
         const isRTL = () => getComputedStyle(media).direction === 'rtl';
-
-
 
 
         /* :::::::::::::::::::::::::: RENDER :::::::::::::::::::::::::: */
@@ -219,8 +205,6 @@
         };
 
 
-
-
         /* :::::::::::::::::::::::::: NAVIGATION :::::::::::::::::::::::::: */
 
         const goTo = (index) => {
@@ -229,8 +213,6 @@
             current = index;
             update();
         };
-
-
 
 
         /* :::::::::::::::::::::::::: DOTS EVENTS :::::::::::::::::::::::::: */
@@ -242,8 +224,6 @@
 
             goTo(Number(dot.dataset.index));
         });
-
-
 
 
         /* :::::::::::::::::::::::::: KEYBOARD EVENTS :::::::::::::::::::::::::: */
@@ -265,13 +245,9 @@
         });
 
 
-
-
         /* :::::::::::::::::::::::::: DRAG PREVENTION :::::::::::::::::::::::::: */
 
         images.forEach((img) => img.addEventListener('dragstart', (e) => e.preventDefault()));
-
-
 
 
         /* :::::::::::::::::::::::::: POINTER DRAG :::::::::::::::::::::::::: */
@@ -406,8 +382,6 @@
         media.addEventListener('pointercancel', endPointer);
 
 
-
-
         /* :::::::::::::::::::::::::: CLICK SUPPRESSION :::::::::::::::::::::::::: */
 
         media.addEventListener('click', (e) => {
@@ -416,8 +390,6 @@
                 e.stopPropagation();
             }
         }, true);
-
-
 
 
         /* :::::::::::::::::::::::::: RESIZE HANDLING :::::::::::::::::::::::::: */
@@ -444,8 +416,6 @@
 
         update();
     };
-
-
 
 
     /* :::::::::::::::::::::::::: GLOBAL INITIALIZATION :::::::::::::::::::::::::: */

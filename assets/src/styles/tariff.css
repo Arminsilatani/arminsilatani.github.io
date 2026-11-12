@@ -1,8 +1,5 @@
-/* =========================================
-   PRICING PAGE
-   ========================================= */
+/* :::::::::::::::::::::::::: GLOBAL BASE :::::::::::::::::::::::::: */
 
-/* ==== GLOBAL BASE ==== */
 body {
     background: #0B0B0B;
     color: #F5F5F5;
@@ -29,7 +26,9 @@ body {
     animation: slideText 6s linear infinite alternate;
 }
 
-/* ==== CURRENCY SELECTOR ==== */
+
+/* :::::::::::::::::::::::::: CURRENCY SELECTOR :::::::::::::::::::::::::: */
+
 .currency-selector {
     padding: 40px 40px 0;
     display: flex;
@@ -45,7 +44,7 @@ body {
 .currency-selector select {
     background: #161616;
     color: #4ECDC4;
-    border: 1px solid #333;
+    border: 1px solid #333333;
     padding: 8px 16px;
     border-radius: 8px;
     outline: none;
@@ -58,7 +57,9 @@ body {
     border-color: #4ECDC4;
 }
 
-/* ==== TABS & PACKAGE TABS ==== */
+
+/* :::::::::::::::::::::::::: TABS & PACKAGE TABS :::::::::::::::::::::::::: */
+
 .tabs-container {
     display: flex;
     justify-content: space-between;
@@ -76,7 +77,7 @@ body {
 .package-tabs-wrapper {
     padding: 10px 40px;
     margin-top: 10px;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #333333;
 }
 
 .package-tabs {
@@ -84,7 +85,9 @@ body {
     gap: 25px;
 }
 
-/* ==== PRICING TAB BUTTONS ==== */
+
+/* :::::::::::::::::::::::::: PRICING TAB BUTTONS :::::::::::::::::::::::::: */
+
 .pricing-tab {
     background: none;
     border: none;
@@ -111,7 +114,9 @@ body {
     color: #FFE76D;
 }
 
-/* ==== PACKAGE TAB BUTTONS ==== */
+
+/* :::::::::::::::::::::::::: PACKAGE TAB BUTTONS :::::::::::::::::::::::::: */
+
 .package-tab {
     background: none;
     border: none;
@@ -146,18 +151,22 @@ body {
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ==== PRICING WRAPPER ==== */
+
+/* :::::::::::::::::::::::::: PRICING WRAPPER :::::::::::::::::::::::::: */
+
 .pricing-wrapper {
     padding: 0 50px;
     margin-top: 40px;
     font-family: var(--font-family, inherit);
 }
 
-/* ==== SERVICE SECTIONS & ACCORDION ==== */
+
+/* :::::::::::::::::::::::::: SERVICE SECTIONS & ACCORDION :::::::::::::::::::::::::: */
+
 .service-section {
     margin-bottom: 40px;
     position: relative;
-    isolation: isolate;              /* ← NEW: قفل‌کردن z-index داخلی */
+    isolation: isolate;
     width: 100%;
     display: flow-root;
 }
@@ -176,10 +185,11 @@ body {
     margin: 0;
     user-select: none;
     cursor: pointer;
-    /* z-index: 2 ← حذف شد (کد مرده — بدون position اثری ندارد) */
 }
 
-/* ==== SERVICE DOT (ACCORDION INDICATOR) ==== */
+
+/* :::::::::::::::::::::::::: SERVICE DOT (ACCORDION INDICATOR) :::::::::::::::::::::::::: */
+
 .service-dot {
     position: absolute;
     right: 0;
@@ -206,7 +216,7 @@ body {
     grid-template-rows: 0fr;
     transition: grid-template-rows 0.4s ease 0s;
     position: relative;
-    z-index: var(--z-content);       /* 10 — بود 2 */
+    z-index: var(--z-content);
 }
 
 .service-content {
@@ -225,7 +235,9 @@ body {
     font-size: 0.95rem;
 }
 
-/* ==== ACCORDION ACTIVE STATES ==== */
+
+/* :::::::::::::::::::::::::: ACCORDION ACTIVE STATES :::::::::::::::::::::::::: */
+
 .service-section.active .service-dot {
     top: 45px;
     width: 100%;
@@ -254,7 +266,9 @@ body {
     transition: opacity 0.3s ease 0.7s;
 }
 
-/* ==== PIN BUTTON ==== */
+
+/* :::::::::::::::::::::::::: PIN BUTTON :::::::::::::::::::::::::: */
+
 .pin-btn {
     position: absolute;
     left: 15px;
@@ -292,7 +306,9 @@ body {
     color: #F5F5F5;
 }
 
-/* ==== SUB-SERVICES & ITEMS ==== */
+
+/* :::::::::::::::::::::::::: SUB-SERVICES & ITEMS :::::::::::::::::::::::::: */
+
 .sub-services {
     padding: 0 40px 24px;
 }
@@ -326,7 +342,9 @@ body {
     margin-left: auto;
 }
 
-/* ==== PRICE DISPLAY ==== */
+
+/* :::::::::::::::::::::::::: PRICE DISPLAY :::::::::::::::::::::::::: */
+
 .price-display {
     color: #F5F5F5;
     font-size: 1rem;
@@ -346,7 +364,9 @@ body {
     cursor: help;
 }
 
-/* ==== QUANTITY CONTROL ==== */
+
+/* :::::::::::::::::::::::::: QUANTITY CONTROL :::::::::::::::::::::::::: */
+
 .qty-control-minimal {
     display: flex;
     align-items: center;
@@ -406,7 +426,9 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     display: inline-block;
 }
 
-/* ==== GROUPED SERVICES BOX ==== */
+
+/* :::::::::::::::::::::::::: GROUPED SERVICES BOX :::::::::::::::::::::::::: */
+
 .sub-group-box {
     border: 1px solid rgba(78, 205, 196, 0.6);
     border-radius: 12px;
@@ -447,7 +469,9 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     margin-bottom: 4px;
 }
 
-/* ==== FINAL INVOICE SECTION ==== */
+
+/* :::::::::::::::::::::::::: FINAL INVOICE SECTION :::::::::::::::::::::::::: */
+
 #final-invoice-section {
     margin-top: 60px;
     visibility: hidden;
@@ -471,14 +495,16 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     box-sizing: border-box;
 }
 
-/* ==== INVOICE HEADER ==== */
+
+/* :::::::::::::::::::::::::: INVOICE HEADER :::::::::::::::::::::::::: */
+
 .invoice-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     padding-bottom: 20px;
     margin-bottom: 10px;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #333333;
 }
 
 .invoice-header h3 {
@@ -494,7 +520,9 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     color: #4ECDC4;
 }
 
-/* ==== INVOICE ITEMS LIST ==== */
+
+/* :::::::::::::::::::::::::: INVOICE ITEMS LIST :::::::::::::::::::::::::: */
+
 #invoice-items-list {
     padding: 0;
     margin: 0;
@@ -573,17 +601,37 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     --c-on: #4ECDC4;
 }
 
-.invoice-item.bullet-yellow::before { --c-on: #FFE76D; }
-.invoice-item.bullet-green::before  { --c-on: #4ECDC4; }
-.invoice-item.bullet-white::before  { --c-on: #F5F5F5; }
+.invoice-item.bullet-yellow::before {
+    --c-on: #FFE76D;
+}
 
-.invoice-item.entering { animation: slideDownItem 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
-.invoice-item.leaving  { animation: slideUpItem 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+.invoice-item.bullet-green::before {
+    --c-on: #4ECDC4;
+}
 
-/* ==== ANIMATIONS ==== */
+.invoice-item.bullet-white::before {
+    --c-on: #F5F5F5;
+}
+
+.invoice-item.entering {
+    animation: slideDownItem 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.invoice-item.leaving {
+    animation: slideUpItem 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+
+/* :::::::::::::::::::::::::: ANIMATIONS :::::::::::::::::::::::::: */
+
 @keyframes marquee {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 @keyframes pulseColorNeon {
@@ -592,6 +640,7 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
         filter: drop-shadow(0 0 1px #7A7A7A);
         opacity: 0.2;
     }
+
     50% {
         background-color: var(--c-on);
         filter: drop-shadow(0 0 4px var(--c-on));
@@ -607,6 +656,7 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
         opacity: 0;
         transform: translateY(-15px);
     }
+
     100% {
         max-height: 100px;
         padding-top: 15px;
@@ -624,6 +674,7 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
         opacity: 1;
         transform: translateY(0);
     }
+
     100% {
         max-height: 0;
         padding-top: 0;
@@ -634,26 +685,95 @@ label:has(input[type="checkbox"]:checked) ~ .qty-control-minimal {
     }
 }
 
-/* ==== LTR OVERRIDES ==== */
-[dir="ltr"] .pin-btn { left: auto; right: 15px; }
-[dir="ltr"] .service-dot { right: auto; left: 0; }
-[dir="ltr"] .service-section.active .service-dot { right: auto; left: 0; }
-[dir="ltr"] .service-header { padding-right: 0; padding-left: 40px; }
-[dir="ltr"] .sub-item { flex-direction: row; }
-[dir="ltr"] .price-display { order: 2; margin-left: auto; margin-right: 0; }
-[dir="ltr"] .sub-item label { order: 0; margin-left: 0; margin-right: 0; flex: 0 1 auto; }
-[dir="ltr"] .sub-item > .qty-control-minimal { order: 1; margin-left: auto; margin-right: 0; }
-[dir="ltr"] .invoice-item { direction: ltr; }
-[dir="ltr"] .invoice-item .item-name { text-align: left; }
-[dir="ltr"] .invoice-item .item-price { text-align: right; direction: ltr; }
-[dir="ltr"] .invoice-item::before { margin-left: 0; margin-right: 10px; }
-[dir="ltr"] .tabs-container { flex-direction: row; }
-[dir="ltr"] .pricing-tabs { flex-direction: row; }
 
-html[dir="ltr"] .yellow-checkbox-checked-label .qty-text { margin-right: 6px; }
-html[dir="ltr"] .sub-item label.white-checkbox-container { order: 1; }
-html[dir="ltr"] .sub-item .qty-control-minimal { order: 2; margin-left: 6px; }
-html[dir="ltr"] .sub-item .price-display { order: 3; margin-left: auto; }
+/* :::::::::::::::::::::::::: LTR OVERRIDES :::::::::::::::::::::::::: */
+
+[dir="ltr"] .pin-btn {
+    left: auto;
+    right: 15px;
+}
+
+[dir="ltr"] .service-dot {
+    right: auto;
+    left: 0;
+}
+
+[dir="ltr"] .service-section.active .service-dot {
+    right: auto;
+    left: 0;
+}
+
+[dir="ltr"] .service-header {
+    padding-right: 0;
+    padding-left: 40px;
+}
+
+[dir="ltr"] .sub-item {
+    flex-direction: row;
+}
+
+[dir="ltr"] .price-display {
+    order: 2;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+[dir="ltr"] .sub-item label {
+    order: 0;
+    margin-left: 0;
+    margin-right: 0;
+    flex: 0 1 auto;
+}
+
+[dir="ltr"] .sub-item > .qty-control-minimal {
+    order: 1;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+[dir="ltr"] .invoice-item {
+    direction: ltr;
+}
+
+[dir="ltr"] .invoice-item .item-name {
+    text-align: left;
+}
+
+[dir="ltr"] .invoice-item .item-price {
+    text-align: right;
+    direction: ltr;
+}
+
+[dir="ltr"] .invoice-item::before {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+[dir="ltr"] .tabs-container {
+    flex-direction: row;
+}
+
+[dir="ltr"] .pricing-tabs {
+    flex-direction: row;
+}
+
+html[dir="ltr"] .yellow-checkbox-checked-label .qty-text {
+    margin-right: 6px;
+}
+
+html[dir="ltr"] .sub-item label.white-checkbox-container {
+    order: 1;
+}
+
+html[dir="ltr"] .sub-item .qty-control-minimal {
+    order: 2;
+    margin-left: 6px;
+}
+
+html[dir="ltr"] .sub-item .price-display {
+    order: 3;
+    margin-left: auto;
+}
 
 html[dir="ltr"] .tabs-header,
 html[dir="ltr"] .pricing-header,
@@ -665,13 +785,78 @@ html[dir="ltr"] .invoice-top-row {
     width: 100%;
 }
 
-html[dir="ltr"] .pricing-tabs { order: 2 !important; display: flex; justify-content: flex-end; }
-html[dir="ltr"] .package-tabs { order: 1 !important; display: flex; justify-content: flex-start; }
-html[dir="ltr"] .pricing-tabs { display: flex !important; flex-direction: row-reverse !important; }
-html[dir="ltr"] .qty-text { margin-left: 0 !important; margin-right: 6px !important; }
+html[dir="ltr"] .pricing-tabs {
+    order: 2 !important;
+    display: flex;
+    justify-content: flex-end;
+}
 
-/* ==== MOBILE (max-width: 768px) ==== */
+html[dir="ltr"] .package-tabs {
+    order: 1 !important;
+    display: flex;
+    justify-content: flex-start;
+}
+
+html[dir="ltr"] .pricing-tabs {
+    display: flex !important;
+    flex-direction: row-reverse !important;
+}
+
+html[dir="ltr"] .qty-text {
+    margin-left: 0 !important;
+    margin-right: 6px !important;
+}
+
+
+/* :::::::::::::::::::::::::: 320PX - XS - IPHONE 5 (320X568) :::::::::::::::::::::::::: */
+
+@media (min-width: 320px) {
+
+}
+
+@media (min-width: 568px) and (max-height: 320px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 380PX - S - GALAXY Z FLIP 3 / S24 ULTRA (380X880) :::::::::::::::::::::::::: */
+
+@media (min-width: 380px) {
+
+}
+
+@media (min-width: 880px) and (max-height: 412px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 440PX - S+ - IPHONE 17 PRO MAX (440X956) :::::::::::::::::::::::::: */
+
+@media (min-width: 440px) {
+
+}
+
+@media (min-width: 956px) and (max-height: 440px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 480PX - M - LARGE MOBILE :::::::::::::::::::::::::: */
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 480px) and (max-height: 500px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 768PX - TAB - IPAD MINI / GALAXY FOLD INNER (768X1024) :::::::::::::::::::::::::: */
+
 @media (max-width: 768px) {
+
+    /* :::::::::::::::::::::::::: PRICING WRAPPER :::::::::::::::::::::::::: */
 
     .pricing-wrapper {
         padding: 20px 10px 40px;
@@ -679,6 +864,8 @@ html[dir="ltr"] .qty-text { margin-left: 0 !important; margin-right: 6px !import
         box-sizing: border-box;
         overflow-x: hidden;
     }
+
+    /* :::::::::::::::::::::::::: SERVICE SECTIONS & ACCORDION :::::::::::::::::::::::::: */
 
     .service-section,
     .service-content,
@@ -723,6 +910,8 @@ html[dir="ltr"] .qty-text { margin-left: 0 !important; margin-right: 6px !import
         box-sizing: border-box;
     }
 
+    /* :::::::::::::::::::::::::: SERVICE DOT :::::::::::::::::::::::::: */
+
     .service-dot {
         position: absolute;
         width: 14px;
@@ -758,6 +947,8 @@ html[dir="ltr"] .qty-text { margin-left: 0 !important; margin-right: 6px !import
                     border-radius 0.25s ease 0.6s;
     }
 
+    /* :::::::::::::::::::::::::: TABS & PACKAGE TABS :::::::::::::::::::::::::: */
+
     .tabs-container {
         display: flex;
         flex-direction: row;
@@ -775,7 +966,9 @@ html[dir="ltr"] .qty-text { margin-left: 0 !important; margin-right: 6px !import
         scrollbar-width: none;
     }
 
-    .tabs-container::-webkit-scrollbar { display: none; }
+    .tabs-container::-webkit-scrollbar {
+        display: none;
+    }
 
     .tabs-container::after {
         content: "";
@@ -795,12 +988,21 @@ html[dir="ltr"] .qty-text { margin-left: 0 !important; margin-right: 6px !import
         flex-shrink: 0;
     }
 
-    .package-tabs { order: 1; gap: 10px; }
-    .pricing-tabs { order: 3; gap: 4px; }
+    .package-tabs {
+        order: 1;
+        gap: 10px;
+    }
+
+    .pricing-tabs {
+        order: 3;
+        gap: 4px;
+    }
 
     .package-tabs::after,
     .pricing-tabs::after,
-    .pricing-tabs::before { display: none; }
+    .pricing-tabs::before {
+        display: none;
+    }
 
     .pricing-tab,
     .package-tab {
@@ -812,11 +1014,15 @@ html[dir="ltr"] .qty-text { margin-left: 0 !important; margin-right: 6px !import
         transition: all 0.2s ease;
     }
 
+    /* :::::::::::::::::::::::::: GROUPED SERVICES BOX :::::::::::::::::::::::::: */
+
     .grouped-services-box {
         margin-right: 0;
         margin-left: 0;
         padding: 12px 10px;
     }
+
+    /* :::::::::::::::::::::::::: SUB-SERVICES & ITEMS :::::::::::::::::::::::::: */
 
     .sub-services {
         padding: 10px 15px 20px;
@@ -836,9 +1042,16 @@ html[dir="ltr"] .qty-text { margin-left: 0 !important; margin-right: 6px !import
         border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
     }
 
-    .sub-item:last-child { border-bottom: none; }
+    .sub-item:last-child {
+        border-bottom: none;
+    }
 
-    .pin-btn { top: 9px; left: 20px; }
+    .pin-btn {
+        top: 9px;
+        left: 20px;
+    }
+
+    /* :::::::::::::::::::::::::: PRICE DISPLAY :::::::::::::::::::::::::: */
 
     .price-display {
         flex-shrink: 0;
@@ -851,12 +1064,16 @@ html[dir="ltr"] .qty-text { margin-left: 0 !important; margin-right: 6px !import
         border-radius: 6px;
     }
 
+    /* :::::::::::::::::::::::::: QUANTITY CONTROL :::::::::::::::::::::::::: */
+
     .green-checkbox,
     .green-checkbox-checked,
     .yellow-checkbox,
     .service-checkbox {
         flex: 0 0 auto;
     }
+
+    /* :::::::::::::::::::::::::: INVOICE ITEMS LIST :::::::::::::::::::::::::: */
 
     .scrolling-text-inner {
         display: inline-flex;
@@ -867,8 +1084,13 @@ html[dir="ltr"] .qty-text { margin-left: 0 !important; margin-right: 6px !import
         direction: rtl;
     }
 
-    .scrolling-text-inner br { display: none; }
-    .sliding-text { animation: slideTextInside 8s linear infinite; }
+    .scrolling-text-inner br {
+        display: none;
+    }
+
+    .sliding-text {
+        animation: slideTextInside 8s linear infinite;
+    }
 
     .invoice-item {
         display: flex;
@@ -939,7 +1161,9 @@ html[dir="ltr"] .qty-text { margin-left: 0 !important; margin-right: 6px !import
         padding: 0;
     }
 
-    .sub-item { flex-wrap: nowrap !important; }
+    .sub-item {
+        flex-wrap: nowrap !important;
+    }
 
     .sub-item label.white-checkbox-container {
         flex: 1 1 auto;
@@ -956,6 +1180,8 @@ html[dir="ltr"] .qty-text { margin-left: 0 !important; margin-right: 6px !import
         display: inline-block;
         white-space: nowrap;
     }
+
+    /* :::::::::::::::::::::::::: LTR OVERRIDES :::::::::::::::::::::::::: */
 
     html[dir="ltr"] .sliding-text-container,
     html[dir="ltr"] .invoice-item .sliding-text-container {
@@ -977,15 +1203,97 @@ html[dir="ltr"] .qty-text { margin-left: 0 !important; margin-right: 6px !import
         animation-iteration-count: infinite !important;
     }
 
-    html[dir="ltr"] .sub-item { flex-direction: row !important; }
-    html[dir="ltr"] .tabs-container { flex-direction: row !important; }
-    html[dir="ltr"] .package-tabs { order: 1 !important; }
-    html[dir="ltr"] .tabs-container::after { order: 2 !important; margin: 0 10px !important; }
-    html[dir="ltr"] .pricing-tabs { order: 3 !important; }
+    html[dir="ltr"] .sub-item {
+        flex-direction: row !important;
+    }
+
+    html[dir="ltr"] .tabs-container {
+        flex-direction: row !important;
+    }
+
+    html[dir="ltr"] .package-tabs {
+        order: 1 !important;
+    }
+
+    html[dir="ltr"] .tabs-container::after {
+        order: 2 !important;
+        margin: 0 10px !important;
+    }
+
+    html[dir="ltr"] .pricing-tabs {
+        order: 3 !important;
+    }
+
+    /* :::::::::::::::::::::::::: ANIMATIONS :::::::::::::::::::::::::: */
 
     @keyframes slideTextInsideLTR {
-        0%, 15% { transform: translateX(0); }
-        45%, 55% { transform: translateX(calc(-1 * (var(--overflow-amount, 80px) + 16px))); }
-        85%, 100% { transform: translateX(0); }
+        0%,
+        15% {
+            transform: translateX(0);
+        }
+
+        45%,
+        55% {
+            transform: translateX(calc(-1 * (var(--overflow-amount, 80px) + 16px)));
+        }
+
+        85%,
+        100% {
+            transform: translateX(0);
+        }
     }
+}
+
+@media (min-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 800PX - TAB+ - GALAXY TAB S7 (800X1280) :::::::::::::::::::::::::: */
+
+@media (min-width: 800px) {
+
+}
+
+@media (min-width: 1280px) and (max-height: 800px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 1024PX - L - IPAD PRO 13 (1024X1376) :::::::::::::::::::::::::: */
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1376px) and (max-height: 1032px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 1366PX - XL - DESKTOP / LAPTOP FHD :::::::::::::::::::::::::: */
+
+@media (min-width: 1366px) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 1920PX - 2XL - FULL HD / 2K :::::::::::::::::::::::::: */
+
+@media (min-width: 1920px) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 2560PX - UW - ULTRAWIDE / 4K UHD :::::::::::::::::::::::::: */
+
+@media (min-width: 2560px) {
+
+}
+
+
+/* :::::::::::::::::::::::::: LANDSCAPE PHONE - GENERAL LOW HEIGHT :::::::::::::::::::::::::: */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
 }

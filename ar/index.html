@@ -1,8 +1,10 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
     <head>
-        <!-- :::::::::::::::::::::::::: HEAD :::::::::::::::::::::::::: -->
-        <!-- :::::::::::::::::::::::::: SEO META :::::::::::::::::::::::::: -->
+
+
+        <!-- :::::::::::::::::::::::::: HEAD & META :::::::::::::::::::::::::: -->
+
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>آرمین سيلاطاني | أخصائي التسويق الرقمي</title>
@@ -12,7 +14,9 @@
         />
         <meta name="robots" content="noindex, nofollow" />
 
-        <!-- :::::::::::::::::::::::::: FAVICONS & STYLESHEETS :::::::::::::::::::::::::: -->
+
+        <!-- :::::::::::::::::::::::::: STYLESHEETS & FONTS :::::::::::::::::::::::::: -->
+
         <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
         <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
         <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
@@ -22,8 +26,7 @@
             sizes="32x32"
             href="/assets/images/icon-32.png"
         />
-        <!-- CORE -->
-         <link rel="stylesheet" href="/assets/src/core/z-index.css" />
+        <link rel="stylesheet" href="/assets/src/core/z-index.css" />
         <link rel="stylesheet" href="/assets/src/core/fonts.css" />
         <link rel="stylesheet" href="/assets/src/core/base.css" />
         <link rel="stylesheet" href="/assets/src/core/typography.css" />
@@ -33,17 +36,15 @@
         <link rel="stylesheet" href="/assets/src/core/animations.css" />
         <link rel="stylesheet" href="/assets/src/core/cursor.css" />
         <link rel="stylesheet" href="/assets/src/core/loader.css" />
-
-        <!-- COMPONENTS -->
         <link rel="stylesheet" href="/assets/src/components/hero.css" />
         <link rel="stylesheet" href="/assets/src/components/section-divider.css" />
         <link rel="stylesheet" href="/assets/src/components/terminal-breadcrumb.css" />
         <link rel="stylesheet" href="/assets/src/components/testimonial.css" />
-
-        <!-- PAGE -->
         <link rel="stylesheet" href="/assets/src/styles/home.css" />
 
-        <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
+
+        <!-- :::::::::::::::::::::::::: OPEN GRAPH & TWITTER CARDS :::::::::::::::::::::::::: -->
+
         <meta property="og:title" content="آرمین سيلاطاني" />
         <meta
             property="og:description"
@@ -60,8 +61,6 @@
             property="og:image:alt"
             content="رجل يعمل على حاسوب محمول جالساً على كرسي بين باج وبجانبه كلبه الصغير"
         />
-
-        <!-- :::::::::::::::::::::::::: TWITTER CARD :::::::::::::::::::::::::: -->
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="آرمین سيلاطاني" />
         <meta
@@ -73,7 +72,9 @@
             content="https://arminsilatani.com/assets/images/arminsilatani/FeaturedImage.webp"
         />
 
+
         <!-- :::::::::::::::::::::::::: CANONICAL & HREFLANG :::::::::::::::::::::::::: -->
+
         <link rel="canonical" href="https://arminsilatani.com/ar/" />
         <link rel="alternate" hreflang="fa" href="https://arminsilatani.com/" />
         <link rel="alternate" hreflang="en" href="https://arminsilatani.com/en/" />
@@ -87,36 +88,56 @@
             href="https://arminsilatani.com/en/"
         />
 
-        <!-- :::::::::::::::::::::::::: SCHEMA :::::::::::::::::::::::::: -->
+
+        <!-- :::::::::::::::::::::::::: JSON-LD SCHEMA :::::::::::::::::::::::::: -->
+
+        <script type="application/ld+json">
+
+        </script>
 
 
-        <!-- :::::::::::::::::::::::::: GSAP SCRIPTS :::::::::::::::::::::::::: -->
-<script src="/assets/src/core/gsap.min.js" defer></script>
-<script src="/assets/src/core/ScrollTrigger.min.js" defer></script>
-<script src="/assets/src/core/lottie_light.min.js" defer></script>
+        <!-- :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: -->
+
+        <script src="/assets/src/core/lottie_light.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     </head>
 
     <body>
 
-          <div id="initial-loader" class="fullpage-loader">
-    <div class="lds-grid">
-      <div></div><div></div><div></div>
-      <div></div><div></div><div></div>
-      <div></div><div></div><div></div>
-    </div>
-  </div>
+        <div id="initial-loader" class="fullpage-loader">
+            <div class="lds-grid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
         <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-        <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
+        <div class="cursor-follower"></div>
+
+
+        <!-- :::::::::::::::::::::::::: HEADER & NAVIGATION :::::::::::::::::::::::::: -->
+
         <header-component></header-component>
 
+
+        <!-- :::::::::::::::::::::::::: MAIN CONTENT :::::::::::::::::::::::::: -->
+
         <main>
+
+
             <!-- :::::::::::::::::::::::::: HERO :::::::::::::::::::::::::: -->
+
             <section class="hero-section">
-                    <!-- :::::::::::::::::::::::::: OVERLAY LAYERS :::::::::::::::::::::::::: -->
-    <div class="hero-section__noise" aria-hidden="true"></div>
-    <div class="hero-section__scanlines" aria-hidden="true"></div>
-    <div class="hero-section__glitch" aria-hidden="true"></div>
+                <div class="hero-section__noise" aria-hidden="true"></div>
+                <div class="hero-section__scanlines" aria-hidden="true"></div>
+                <div class="hero-section__glitch" aria-hidden="true"></div>
                 <div class="hero-container container-1300">
                     <language-component></language-component>
 
@@ -139,40 +160,43 @@
                         </div>
                     </div>
 
-                <div class="pro-divider">
-                    <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
-                        <defs>
-                            <filter
-                                id="dividerShadow"
-                                x="0"
-                                y="-30%"
-                                width="100%"
-                                height="150%"
-                            >
-                                <feDropShadow
-                                    dx="0"
-                                    dy="-8"
-                                    stdDeviation="12"
-                                    flood-color="rgba(0,0,0,0.55)"
-                                />
-                            </filter>
-                        </defs>
+                    <div class="pro-divider">
+                        <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
+                            <defs>
+                                <filter
+                                    id="dividerShadow"
+                                    x="0"
+                                    y="-30%"
+                                    width="100%"
+                                    height="150%"
+                                >
+                                    <feDropShadow
+                                        dx="0"
+                                        dy="-8"
+                                        stdDeviation="12"
+                                        flood-color="rgba(0,0,0,0.55)"
+                                    />
+                                </filter>
+                            </defs>
 
-                        <path
-                            filter="url(#dividerShadow)"
-                            fill="#0D0D0D"
-                            d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
-                        />
-                    </svg>
+                            <path
+                                filter="url(#dividerShadow)"
+                                fill="#0D0D0D"
+                                d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
+                            />
+                        </svg>
+                    </div>
                 </div>
             </section>
 
+
             <!-- :::::::::::::::::::::::::: ABOUT :::::::::::::::::::::::::: -->
+
             <section class="about-section" id="main-content">
                 <div class="container-1300">
                     <div class="about-container">
                         <div class="about-text reveal-up">
-                            <h1>آرمين سيلاطاني</h1>
+                            <h1 class="split-title">آرمين سيلاطاني</h1>
 
                             <p>
                                 أهلاً، أنا آرمين سيلاطاني. أساعد الشركات على استغلال القوة
@@ -190,7 +214,7 @@
                                 rel="nofollow"
                             >من أنا</a>
                         </div>
-                        <div class="about-image">
+                        <div class="about-image reveal-up">
                             <video
                                 autoplay
                                 muted
@@ -211,9 +235,11 @@
             </section>
             <section-divider role="presentation" aria-hidden="true"></section-divider>
 
+
             <!-- :::::::::::::::::::::::::: SERVICES :::::::::::::::::::::::::: -->
-            <section class="services-section">
-                <div class="service-item service-main reveal-up">
+
+            <section class="services-section categories-grid">
+                <div class="service-item service-main reveal-card">
                     <h2 class="script-heading script-heading--services">
                         <span class="script-heading__word script-heading__word--accent">ما</span>
                         <span class="script-heading__word script-heading__word--sub">أقدمه</span>
@@ -236,7 +262,7 @@
                     </div>
                 </div>
 
-                <div class="service-item service-box-1 tv-static-container reveal-up">
+                <div class="service-item service-box-1 tv-static-container reveal-card">
                     <video
                         class="service-video"
                         data-src="/assets/images/arminsilatani/services/web-design/Featuredvideo.mp4"
@@ -252,6 +278,7 @@
                         href="/ar/services/web-design/"
                         class="service-link"
                         aria-label="تصميم المواقع"
+                        target="_blank"
                     >
                         <h2 class="script-heading script-heading--box">
                             <span class="script-heading__word script-heading__word--accent">تصميم</span>
@@ -261,7 +288,7 @@
                     <div class="tv-noise"></div>
                 </div>
 
-                <div class="service-item service-box-2 tv-static-container reveal-up">
+                <div class="service-item service-box-2 tv-static-container reveal-card">
                     <video
                         class="service-video"
                         data-src="/assets/images/arminsilatani/services/seo/Featuredvideo.mp4"
@@ -277,6 +304,7 @@
                         href="/ar/services/seo/"
                         class="service-link"
                         aria-label="خدمات السيو"
+                        target="_blank"
                     >
                         <h2 class="script-heading script-heading--box">
                             <span class="script-heading__word script-heading__word--accent">خدمات</span>
@@ -286,7 +314,7 @@
                     <div class="tv-noise"></div>
                 </div>
 
-                <div class="service-item service-box-3 tv-static-container reveal-up">
+                <div class="service-item service-box-3 tv-static-container reveal-card">
                     <video
                         class="service-video"
                         data-src="/assets/images/arminsilatani/services/google-ads/Featuredvideo.mp4"
@@ -302,6 +330,7 @@
                         href="/ar/services/google-ads/"
                         class="service-link"
                         aria-label="إعلانات جوجل"
+                        target="_blank"
                     >
                         <h2 class="script-heading script-heading--box">
                             <span class="script-heading__word script-heading__word--accent">إعلانات</span>
@@ -313,14 +342,16 @@
             </section>
             <section-divider role="presentation" aria-hidden="true"></section-divider>
 
+
             <!-- :::::::::::::::::::::::::: PARTNERS :::::::::::::::::::::::::: -->
+
             <section class="partners-section reveal-up">
                 <partners-component></partners-component>
             </section>
             <section-divider role="presentation" aria-hidden="true"></section-divider>
 
-            <!-- :::::::::::::::::::::::::: TESTIMONIALS :::::::::::::::::::::::::: -->
 
+            <!-- :::::::::::::::::::::::::: TESTIMONIALS :::::::::::::::::::::::::: -->
 
             <div class="testimonials-container">
                 <div class="column">
@@ -337,25 +368,27 @@
             </div>
         </main>
 
+
         <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
+
         <footer-component></footer-component>
         <back-to-top></back-to-top>
 
-        <!-- :::::::::::::::::::::::::: COMPONENT SCRIPTS :::::::::::::::::::::::::: -->
-    <script src="/assets/src/core/i18n.js"></script>
-<script type="module" src="/assets/src/components/header.js"></script>
-        <script src="/assets/src/components/blurup.js"></script>
-<script type="module" src="/assets/src/components/language-selector.js"></script>
-<script type="module" src="/assets/src/components/partners-component.js"></script>
-<script type="module" src="/assets/src/components/footer.js"></script>
-<script type="module" src="/assets/src/components/back-to-top.js"></script>
-<script src="/assets/src/core/cursor.js"></script>
-<script src="/assets/src/core/loader.js"></script>
-<script src="/assets/src/components/service-video.js"></script>
 
-        <!-- :::::::::::::::::::::::::: TESTIMONIALS SCRIPT :::::::::::::::::::::::::: -->
+        <!-- :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: -->
+
+        <script src="/assets/src/core/i18n.js"></script>
+        <script type="module" src="/assets/src/components/header.js"></script>
+        <script src="/assets/src/components/blurup.js"></script>
+        <script type="module" src="/assets/src/components/language-selector.js"></script>
+        <script type="module" src="/assets/src/components/partners-component.js"></script>
+        <script type="module" src="/assets/src/components/footer.js"></script>
+        <script type="module" src="/assets/src/components/back-to-top.js"></script>
+        <script src="/assets/src/core/cursor.js"></script>
+        <script src="/assets/src/core/loader.js"></script>
+        <script src="/assets/src/components/service-video.js"></script>
+
         <script>
-            /* :::::::::::::::::::::::::: TESTIMONIALS DATA :::::::::::::::::::::::::: */
             document.addEventListener("DOMContentLoaded", function () {
                 const testimonials = [
                     {
@@ -417,7 +450,6 @@
                     },
                 ];
 
-                /* :::::::::::::::::::::::::: UTILITY FUNCTIONS :::::::::::::::::::::::::: */
                 const createCard = (t) => `
                     <div class="card">
                         <div class="profile">
@@ -439,7 +471,6 @@
                     return arr;
                 };
 
-                /* :::::::::::::::::::::::::: CORE LOGIC :::::::::::::::::::::::::: */
                 const fill = (columnId) => {
                     const el = document.getElementById(columnId);
                     if (!el) return;
@@ -454,14 +485,12 @@
                     el.innerHTML = html;
                 };
 
-                /* :::::::::::::::::::::::::: INITIALIZATION :::::::::::::::::::::::::: */
                 fill("column1");
                 fill("column2");
                 fill("column3");
             });
         </script>
 
-        <!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
-        <script src="/assets/src/components/animations.js"></script>
+        <script src="/assets/src/core/animations.js"></script>
     </body>
 </html>

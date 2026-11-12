@@ -2,7 +2,6 @@ import { basePricesUSD } from './data/prices.js';
 import { getExchangeRates } from './services/exchange-rates.js';
 import { determineCurrency } from "./utils/currency-engine.js";
 
-/* :::::::::::::::::::::::::: PRICE CALCULATOR :::::::::::::::::::::::::: */
 
 /* :::::::::::::::::::::::::: GLOBAL STATE :::::::::::::::::::::::::: */
 
@@ -11,6 +10,7 @@ let selectedServices = [];
 let currentDisplayedTotal = 0;
 let currentCurrencyCode = localStorage.getItem("selectedCurrency") || determineCurrency(document.documentElement.lang || "en");
 let groupUpdating = false;
+
 
 /* :::::::::::::::::::::::::: UTILITY FUNCTIONS :::::::::::::::::::::::::: */
 
@@ -54,6 +54,7 @@ function animateValue(element, start, end, duration, currencyCode) {
     };
     element.animationFrameId = requestAnimationFrame(step);
 }
+
 
 /* :::::::::::::::::::::::::: PRICE UPDATE HELPERS :::::::::::::::::::::::::: */
 
@@ -116,7 +117,6 @@ function buildInvoiceRow(name, basePrice, colorClass, rate, currency, category, 
         </span>
     `;
 
-    // Trigger scrolling animation if text overflows
     setTimeout(() => {
         const textInner = li.querySelector('.scrolling-text-inner');
         const container = li.querySelector('.scrolling-text-container');
@@ -130,10 +130,6 @@ function buildInvoiceRow(name, basePrice, colorClass, rate, currency, category, 
     return li;
 }
 
-/**
- * Determines the color class for an invoice item based on label container classes.
- * Falls back to 'bullet-green' if no specific color class is detected.
- */
 function getColorClassFromLabel(label) {
     if (
         label.classList.contains("yellow-checkbox-container") ||
@@ -149,6 +145,7 @@ function getColorClassFromLabel(label) {
     }
     return "bullet-green";
 }
+
 
 /* :::::::::::::::::::::::::: EVENT HANDLERS & INITIALIZATION :::::::::::::::::::::::::: */
 
@@ -170,7 +167,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const checkboxes = document.querySelectorAll('.service-checkbox');
     const listContainer = document.getElementById('invoice-items-list');
 
-    // Fetch initial exchange rates
     try {
         exchangeRates = await getExchangeRates();
         updateBoxPrices(currentCurrencyCode, exchangeRates);
@@ -179,13 +175,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         return;
     }
 
-    // ---------- Checkbox handling ----------
     checkboxes.forEach(box => {
         box.addEventListener("change", () => {
             const subItem = box.closest(".sub-item");
             if (subItem && subItem.offsetWidth === 0 && subItem.offsetHeight === 0) return;
 
-            // Group synchronization (multiple checkboxes with the same data-group)
             if (!groupUpdating && box.dataset.group) {
                 const group = box.dataset.group;
                 const groupItems = document.querySelectorAll(`.service-checkbox[data-group="${group}"]`);
@@ -219,7 +213,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             const existing = document.getElementById(safeId);
 
             if (box.checked) {
-                // Remove existing item with same id and update selectedServices
                 if (existing) existing.remove();
                 selectedServices = selectedServices.filter(s => !(s.category === category && s.plan === plan));
                 selectedServices.push({ category, plan, name, basePrice });
@@ -238,7 +231,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     });
 
-    // ---------- Quantity buttons ----------
     document.querySelectorAll('.sub-item').forEach(item => {
         const minusBtn = item.querySelector('.qty-minus');
         const plusBtn = item.querySelector('.qty-plus');
@@ -248,7 +240,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         if (!minusBtn || !plusBtn) return;
 
-        // Shared quantity update logic for both plus and minus buttons
         function updateItemQty(newQty) {
             const oldQty = parseInt(item.dataset.qty || "1", 10);
             item.dataset.qty = newQty;
@@ -264,7 +255,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 }
             }
 
-            // If the checkbox is checked, trigger change to update invoice totals
             if (checkbox && checkbox.checked) {
                 checkbox.dispatchEvent(new Event("change"));
             }
@@ -287,7 +277,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     });
 
-    // ---------- Hover effect for service sections ----------
     document.querySelectorAll(".service-section:not(.final-cart-section)").forEach(section => {
         const header = section.querySelector(".service-header h3");
         if (header) {

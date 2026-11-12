@@ -1,7 +1,3 @@
-/* ===================================================================== */
-/* ========================= HEADER COMPONENT ========================== */
-/* ===================================================================== */
-
 :host {
     display: block;
     --header-dir: ltr;
@@ -29,7 +25,9 @@
     box-sizing: border-box;
 }
 
+
 /* :::::::::::::::::::::::::: TOGGLE TRACK :::::::::::::::::::::::::: */
+
 .toggle-track {
     position: absolute;
     top: 50%;
@@ -49,7 +47,9 @@
     background: rgba(255, 107, 107, .3);
 }
 
+
 /* :::::::::::::::::::::::::: TOGGLE BUTTON :::::::::::::::::::::::::: */
+
 .button {
     position: absolute;
     top: 50%;
@@ -92,7 +92,9 @@
     transform: translate(-50%, -50%) rotate(180deg);
 }
 
+
 /* :::::::::::::::::::::::::: OVERLAYS :::::::::::::::::::::::::: */
+
 .overlay,
 .overlay-dark {
     position: fixed;
@@ -123,15 +125,17 @@
     transition: left .3s cubic-bezier(.19, .22, .59, .9);
 }
 
+
 /* :::::::::::::::::::::::::: MENU WRAPPER :::::::::::::::::::::::::: */
+
 .menu-wrapper {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 45%;
+    left: var(--header-menu-left);
     transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 28px;
     direction: var(--header-dir);
 }
 
@@ -154,7 +158,9 @@ svg {
     filter: drop-shadow(0 0 14px rgba(255, 255, 255, 1));
 }
 
+
 /* :::::::::::::::::::::::::: SIDEBAR :::::::::::::::::::::::::: */
+
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -162,12 +168,13 @@ svg {
     direction: var(--header-dir);
     text-align: var(--header-text-align);
     align-items: flex-start;
+    min-width: 220px;
 }
 
 .sidebar a {
     font-family: var(--main-font, sans-serif);
     font-weight: 900;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: #F5F5F5;
     text-decoration: none;
     padding: 12px 0;
@@ -177,6 +184,7 @@ svg {
     transform: translateZ(0);
     transform-origin: var(--header-transform-origin);
     transition: opacity .25s;
+    white-space: nowrap;
 }
 
 .sidebar a.active {
@@ -184,22 +192,126 @@ svg {
     opacity: 1;
 }
 
-/* :::::::::::::::::::::::::: MOBILE :::::::::::::::::::::::::: */
-@media (max-width: 768px) {
+
+/* :::::::::::::::::::::::::: 320PX - XS - IPHONE 5 (320X568) :::::::::::::::::::::::::: */
+
+@media (min-width: 320px) {
+
+}
+
+@media (min-width: 568px) and (max-height: 320px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 380PX - S - GALAXY Z FLIP 3 / S24 ULTRA (380X880) :::::::::::::::::::::::::: */
+
+@media (min-width: 380px) {
+
+}
+
+@media (min-width: 880px) and (max-height: 412px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 440PX - S+ - IPHONE 17 PRO MAX (440X956) :::::::::::::::::::::::::: */
+
+@media (min-width: 440px) {
+
+}
+
+@media (min-width: 956px) and (max-height: 440px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 480PX - M - LARGE MOBILE :::::::::::::::::::::::::: */
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 480px) and (max-height: 500px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 768PX - TAB - IPAD MINI / GALAXY FOLD INNER (768X1024) :::::::::::::::::::::::::: */
+
+@media (min-width: 768px) {
+
+    /* :::::::::::::::::::::::::: MENU WRAPPER :::::::::::::::::::::::::: */
+
     .menu-wrapper {
-        gap: 28px;
-        left: var(--header-menu-left);
-        top: 45%;
-        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        gap: 40px;
     }
 
+    /* :::::::::::::::::::::::::: SIDEBAR :::::::::::::::::::::::::: */
+
     .sidebar {
-        min-width: 220px;
-        text-align: var(--header-text-align);
+        min-width: auto;
     }
 
     .sidebar a {
-        white-space: nowrap;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+        white-space: normal;
     }
+
+}
+
+@media (min-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 800PX - TAB+ - GALAXY TAB S7 (800X1280) :::::::::::::::::::::::::: */
+
+@media (min-width: 800px) {
+
+}
+
+@media (min-width: 1280px) and (max-height: 800px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 1024PX - L - IPAD PRO 13 (1024X1376) :::::::::::::::::::::::::: */
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1376px) and (max-height: 1032px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 1366PX - XL - DESKTOP / LAPTOP FHD :::::::::::::::::::::::::: */
+
+@media (min-width: 1366px) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 1920PX - 2XL - FULL HD / 2K :::::::::::::::::::::::::: */
+
+@media (min-width: 1920px) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 2560PX - UW - ULTRAWIDE / 4K UHD :::::::::::::::::::::::::: */
+
+@media (min-width: 2560px) {
+
+}
+
+
+/* :::::::::::::::::::::::::: LANDSCAPE PHONE - GENERAL LOW HEIGHT :::::::::::::::::::::::::: */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
 }

@@ -9,8 +9,7 @@
 }
 
 
-
-/* :::::::::::::::::::::::::: DIRECTION HANDLING (RTL / LTR) :::::::::::::::::::::::::: */
+/* :::::::::::::::::::::::::: DIRECTION HANDLING :::::::::::::::::::::::::: */
 
 html[dir="rtl"] .story-container {
     direction: rtl;
@@ -42,7 +41,6 @@ html[dir="ltr"] .content-date {
 }
 
 
-
 /* :::::::::::::::::::::::::: SHARED LAYOUT :::::::::::::::::::::::::: */
 
 .story-block {
@@ -72,7 +70,6 @@ html[dir="ltr"] .content-date {
 }
 
 
-
 /* :::::::::::::::::::::::::: YEAR TIMELINE MARKER :::::::::::::::::::::::::: */
 
 .step-year {
@@ -81,10 +78,7 @@ html[dir="ltr"] .content-date {
     white-space: nowrap;
     transform-origin: center center;
     transition: color 0.3s ease;
-    transform:
-        translateY(var(--date-scroll-offset, 0px))
-        rotate(90deg)
-        scale(calc(0.4 + (0.6 * var(--progress, 0))));
+    transform: translateY(var(--date-scroll-offset, 0px)) rotate(90deg) scale(calc(0.4 + (0.6 * var(--progress, 0))));
     opacity: calc(0.1 + (0.9 * var(--progress, 0)));
 }
 
@@ -93,23 +87,17 @@ html[dir="ltr"] .content-date {
 }
 
 html[dir="ltr"] .step-year {
-    transform:
-        translateY(var(--date-scroll-offset, 0px))
-        rotate(-90deg)
-        scale(calc(0.4 + (0.6 * var(--progress, 0))));
+    transform: translateY(var(--date-scroll-offset, 0px)) rotate(-90deg) scale(calc(0.4 + (0.6 * var(--progress, 0))));
     text-align: right;
 }
 
 
-
 /* :::::::::::::::::::::::::: TEXT ELEMENTS :::::::::::::::::::::::::: */
-
 
 .step-title {
     margin-top: 0.2rem;
     margin-bottom: 1.5rem;
 }
-
 
 
 /* :::::::::::::::::::::::::: 320PX - XS - IPHONE 5 (320X568) :::::::::::::::::::::::::: */
@@ -123,7 +111,6 @@ html[dir="ltr"] .step-year {
 }
 
 
-
 /* :::::::::::::::::::::::::: 380PX - S - GALAXY Z FLIP 3 / S24 ULTRA (380X880) :::::::::::::::::::::::::: */
 
 @media (min-width: 380px) {
@@ -133,7 +120,6 @@ html[dir="ltr"] .step-year {
 @media (min-width: 880px) and (max-height: 412px) and (orientation: landscape) {
 
 }
-
 
 
 /* :::::::::::::::::::::::::: 440PX - S+ - IPHONE 17 PRO MAX (440X956) :::::::::::::::::::::::::: */
@@ -147,7 +133,6 @@ html[dir="ltr"] .step-year {
 }
 
 
-
 /* :::::::::::::::::::::::::: 480PX - M - LARGE MOBILE :::::::::::::::::::::::::: */
 
 @media (min-width: 480px) {
@@ -157,7 +142,6 @@ html[dir="ltr"] .step-year {
 @media (min-width: 480px) and (max-height: 500px) and (orientation: landscape) {
 
 }
-
 
 
 /* :::::::::::::::::::::::::: 768PX - TAB - IPAD MINI / GALAXY FOLD INNER (768X1024) :::::::::::::::::::::::::: */
@@ -205,7 +189,6 @@ html[dir="ltr"] .step-year {
 }
 
 
-
 /* :::::::::::::::::::::::::: 800PX - TAB+ - GALAXY TAB S7 (800X1280) :::::::::::::::::::::::::: */
 
 @media (min-width: 800px) {
@@ -215,7 +198,6 @@ html[dir="ltr"] .step-year {
 @media (min-width: 1280px) and (max-height: 800px) and (orientation: landscape) {
 
 }
-
 
 
 /* :::::::::::::::::::::::::: 1024PX - L - IPAD PRO 13 (1024X1376) :::::::::::::::::::::::::: */
@@ -229,13 +211,11 @@ html[dir="ltr"] .step-year {
 }
 
 
-
 /* :::::::::::::::::::::::::: 1366PX - XL - DESKTOP / LAPTOP FHD :::::::::::::::::::::::::: */
 
 @media (min-width: 1366px) {
 
 }
-
 
 
 /* :::::::::::::::::::::::::: 1920PX - 2XL - FULL HD / 2K :::::::::::::::::::::::::: */
@@ -245,13 +225,11 @@ html[dir="ltr"] .step-year {
 }
 
 
-
 /* :::::::::::::::::::::::::: 2560PX - UW - ULTRAWIDE / 4K UHD :::::::::::::::::::::::::: */
 
 @media (min-width: 2560px) {
 
 }
-
 
 
 /* :::::::::::::::::::::::::: LANDSCAPE PHONE - GENERAL LOW HEIGHT :::::::::::::::::::::::::: */

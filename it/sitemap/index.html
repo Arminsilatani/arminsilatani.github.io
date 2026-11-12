@@ -1,9 +1,10 @@
-<!-- :::::::::::::::::::::::::: DOCTYPE / ROOT :::::::::::::::::::::::::: -->
 <!doctype html>
 <html lang="it" dir="ltr">
-    <!-- :::::::::::::::::::::::::: HEAD :::::::::::::::::::::::::: -->
     <head>
-        <!-- :::::::::::::::::::::::::: SEO META :::::::::::::::::::::::::: -->
+
+
+        <!-- :::::::::::::::::::::::::: HEAD & META :::::::::::::::::::::::::: -->
+
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -14,7 +15,6 @@
         />
         <meta name="robots" content="noindex, nofollow" />
 
-        <!-- :::::::::::::::::::::::::: FAVICONS :::::::::::::::::::::::::: -->
         <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
         <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
         <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
@@ -25,9 +25,10 @@
             href="/assets/images/icon-32.png"
         />
 
-        <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
-        <!-- CORE -->
-         <link rel="stylesheet" href="/assets/src/core/z-index.css" />
+
+        <!-- :::::::::::::::::::::::::: STYLESHEETS & FONTS :::::::::::::::::::::::::: -->
+
+        <link rel="stylesheet" href="/assets/src/core/z-index.css" />
         <link rel="stylesheet" href="/assets/src/core/fonts.css" />
         <link rel="stylesheet" href="/assets/src/core/base.css" />
         <link rel="stylesheet" href="/assets/src/core/typography.css" />
@@ -35,15 +36,13 @@
         <link rel="stylesheet" href="/assets/src/core/animations.css" />
         <link rel="stylesheet" href="/assets/src/core/cursor.css" />
         <link rel="stylesheet" href="/assets/src/core/loader.css" />
-
-        <!-- COMPONENTS -->
         <link rel="stylesheet" href="/assets/src/components/hero.css" />
         <link rel="stylesheet" href="/assets/src/components/terminal-breadcrumb.css" />
-
-        <!-- PAGE -->
         <link rel="stylesheet" href="/assets/src/styles/sitemap.css" />
 
-        <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
+
+        <!-- :::::::::::::::::::::::::: OPEN GRAPH & TWITTER CARDS :::::::::::::::::::::::::: -->
+
         <meta property="og:title" content="Sitemap del sito web Armin Silatani" />
         <meta
             property="og:description"
@@ -61,7 +60,6 @@
             content="Pianificazione dei contenuti con post-it nello spazio di lavoro"
         />
 
-        <!-- :::::::::::::::::::::::::: TWITTER CARD :::::::::::::::::::::::::: -->
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Sitemap del sito web Armin Silatani" />
         <meta
@@ -73,7 +71,9 @@
             content="https://arminsilatani.com/assets/images/arminsilatani/sitemap/FeaturedImage.webp"
         />
 
+
         <!-- :::::::::::::::::::::::::: CANONICAL & HREFLANG :::::::::::::::::::::::::: -->
+
         <link rel="canonical" href="https://arminsilatani.com/it/sitemap/" />
         <link
             rel="alternate"
@@ -111,54 +111,78 @@
             href="https://arminsilatani.com/en/sitemap/"
         />
 
-        <!-- :::::::::::::::::::::::::: SCHEMA :::::::::::::::::::::::::: -->
-        
 
-        <!-- :::::::::::::::::::::::::: GSAP AND SCROLLTRIGGER :::::::::::::::::::::::::: -->
-<script src="/assets/src/core/gsap.min.js" defer></script>
-<script src="/assets/src/core/ScrollTrigger.min.js" defer></script>
-<script src="/assets/src/core/lottie_light.min.js" defer></script>
+        <!-- :::::::::::::::::::::::::: JSON-LD SCHEMA :::::::::::::::::::::::::: -->
+
+        <script type="application/ld+json">
+
+        </script>
+
+
+        <!-- :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: -->
+
+        <script src="/assets/src/core/gsap.min.js" defer></script>
+        <script src="/assets/src/core/ScrollTrigger.min.js" defer></script>
+        <script src="/assets/src/core/lottie_light.min.js" defer></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     </head>
 
-    <!-- :::::::::::::::::::::::::: BODY :::::::::::::::::::::::::: -->
     <body>
-          <div id="initial-loader" class="fullpage-loader">
-    <div class="lds-grid">
-      <div></div><div></div><div></div>
-      <div></div><div></div><div></div>
-      <div></div><div></div><div></div>
-    </div>
-  </div>
+        <div id="initial-loader" class="fullpage-loader">
+            <div class="lds-grid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
         <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-        <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
+        <div class="cursor-follower"></div>
+
+
+        <!-- :::::::::::::::::::::::::: HEADER & NAVIGATION :::::::::::::::::::::::::: -->
+
         <header-component></header-component>
 
-        <main class="has-footer-gap">
-            <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
-            <section class="hero-section">
-                                <video
-        class="hero-section__video"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="metadata"
-    >
-        <source src="/assets/images/arminsilatani/services/seo/hero.mp4" type="video/mp4">
-    </video>
 
-    <div class="hero-section__noise" aria-hidden="true"></div>
-    <div class="hero-section__scanlines" aria-hidden="true"></div>
-    <div class="hero-section__glitch" aria-hidden="true"></div>
-                       <div class="hero-container container-1300">
-                        <language-component></language-component>
-                        <div class="hero-title">
-                            <h1>
-                        <span class="split-title">Mappa del Sito</span>
-                        <span class="h1_sub reveal-up">Accesso rapido a tutte le sezioni del sito in un colpo d’occhio</span>
-            </h1>
-                        </div>
+        <!-- :::::::::::::::::::::::::: MAIN CONTENT :::::::::::::::::::::::::: -->
+
+        <main class="has-footer-gap">
+
+
+            <!-- :::::::::::::::::::::::::: HERO :::::::::::::::::::::::::: -->
+
+            <section class="hero-section">
+                <video
+                    class="hero-section__video"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                >
+                    <source src="/assets/images/arminsilatani/services/seo/hero.mp4" type="video/mp4">
+                </video>
+
+                <div class="hero-section__noise" aria-hidden="true"></div>
+                <div class="hero-section__scanlines" aria-hidden="true"></div>
+                <div class="hero-section__glitch" aria-hidden="true"></div>
+
+                <div class="hero-container container-1300">
+                    <language-component></language-component>
+                    <div class="hero-title">
+                        <h1>
+                            <span class="split-title">Mappa del Sito</span>
+                            <span class="h1_sub reveal-up">Accesso rapido a tutte le sezioni del sito in un colpo d’occhio</span>
+                        </h1>
                     </div>
                 </div>
 
@@ -192,11 +216,13 @@
                 <terminal-breadcrumb></terminal-breadcrumb>
             </section>
 
-            <!-- :::::::::::::::::::::::::: SITEMAP SECTION :::::::::::::::::::::::::: -->
+
+            <!-- :::::::::::::::::::::::::: SITEMAP :::::::::::::::::::::::::: -->
+
             <section class="sitemap-section">
                 <div class="container-1080">
-                    <div class="sitemap-grid">
-                        <div class="sitemap-card reveal-up">
+                    <div class="sitemap-grid categories-grid">
+                        <div class="sitemap-card reveal-card">
                             <div class="card-title">
                                 <h2>Pagine Principali</h2>
                             </div>
@@ -204,9 +230,7 @@
                                 <li>
                                     <div class="link-row">
                                         <a href="/it/">Home</a>
-                                        <span class="last-update"
-                                            >Ultimo aggiornamento: 30 Marzo 2026</span
-                                        >
+                                        <span class="last-update">Ultimo aggiornamento: 30 Marzo 2026</span>
                                     </div>
                                     <div class="hover-desc">
                                         Da qui puoi accedere alla homepage del sito di Armin
@@ -218,9 +242,7 @@
                                 <li>
                                     <div class="link-row">
                                         <a href="/it/contact/">Contattami</a>
-                                        <span class="last-update"
-                                            >Ultimo aggiornamento: 20 Maggio 2026</span
-                                        >
+                                        <span class="last-update">Ultimo aggiornamento: 20 Maggio 2026</span>
                                     </div>
                                     <div class="hover-desc">
                                         Questa pagina contiene il modulo di richiesta, i dettagli
@@ -232,9 +254,7 @@
                                 <li>
                                     <div class="link-row">
                                         <a href="/it/about/">Chi Sono</a>
-                                        <span class="last-update"
-                                            >Ultimo aggiornamento: 1 Aprile 2026</span
-                                        >
+                                        <span class="last-update">Ultimo aggiornamento: 1 Aprile 2026</span>
                                     </div>
                                     <div class="hover-desc">
                                         Scopri la mia storia: dall'infanzia alla migrazione in
@@ -247,9 +267,7 @@
                                 <li>
                                     <div class="link-row">
                                         <a href="/it/services/">Servizi</a>
-                                        <span class="last-update"
-                                            >Ultimo aggiornamento: 25 Maggio 2026</span
-                                        >
+                                        <span class="last-update">Ultimo aggiornamento: 25 Maggio 2026</span>
                                     </div>
                                     <div class="hover-desc">
                                         Leggendo questa pagina, vi familiarizzerete con la struttura
@@ -261,9 +279,7 @@
                                 <li>
                                     <div class="link-row">
                                         <a href="/it/tariff/">Prezzi</a>
-                                        <span class="last-update"
-                                            >Ultimo aggiornamento: 11 Maggio 2026</span
-                                        >
+                                        <span class="last-update">Ultimo aggiornamento: 11 Maggio 2026</span>
                                     </div>
                                     <div class="hover-desc">
                                         Qui trovate l’elenco completo dei pacchetti di marketing
@@ -274,9 +290,7 @@
                                 <li>
                                     <div class="link-row">
                                         <a href="/it/portfolio/">Portfolio</a>
-                                        <span class="last-update"
-                                            >Ultimo aggiornamento: 13 Luglio 2026</span
-                                        >
+                                        <span class="last-update">Ultimo aggiornamento: 13 Luglio 2026</span>
                                     </div>
                                     <div class="hover-desc">
                                         In questo portfolio puoi consultare progetti SEO, web design
@@ -287,9 +301,8 @@
                         </div>
                     </div>
 
-                    <!-- :::::::::::::::::::::::::: SERVICES :::::::::::::::::::::::::: -->
-                    <div class="sitemap-grid">
-                        <div class="sitemap-card reveal-up">
+                    <div class="sitemap-grid categories-grid">
+                        <div class="sitemap-card reveal-card">
                             <div class="card-title">
                                 <h2>Servizi</h2>
                             </div>
@@ -304,12 +317,12 @@
                                         Può confrontare servizi SEO prezzi, livelli di intervento e soluzioni pensate per migliorare la visibilità del suo sito.
                                     </div>
                                 </li>
+                            </ul>
                         </div>
                     </div>
 
-                    <!-- :::::::::::::::::::::::::: ARTICLES :::::::::::::::::::::::::: -->
-                    <div class="sitemap-grid">
-                        <div class="sitemap-card reveal-up">
+                    <div class="sitemap-grid categories-grid">
+                        <div class="sitemap-card reveal-card">
                             <div class="card-title">
                                 <h2>Articoli</h2>
                             </div>
@@ -317,9 +330,8 @@
                         </div>
                     </div>
 
-                    <!-- :::::::::::::::::::::::::: PORTFOLIO :::::::::::::::::::::::::: -->
-                    <div class="sitemap-grid">
-                        <div class="sitemap-card reveal-up">
+                    <div class="sitemap-grid categories-grid">
+                        <div class="sitemap-card reveal-card">
                             <div class="card-title">
                                 <h2>Portfolio</h2>
                             </div>
@@ -327,9 +339,7 @@
                                 <li>
                                     <div class="link-row">
                                         <a href="/it/portfolio/logodesign/">Esempi di loghi</a>
-                                        <span class="last-update"
-                                            >Ultimo aggiornamento: 7 Agosto 2026</span
-                                        >
+                                        <span class="last-update">Ultimo aggiornamento: 7 Agosto 2026</span>
                                     </div>
                                     <div class="hover-desc">
                                         In questa pagina sono raccolti i progetti di logo design
@@ -339,12 +349,8 @@
 
                                 <li>
                                     <div class="link-row">
-                                        <a href="/it/portfolio/businesscarddesign/"
-                                            >Esempi biglietti da visita</a
-                                        >
-                                        <span class="last-update"
-                                            >Ultimo aggiornamento: 13 Agosto 2026</span
-                                        >
+                                        <a href="/it/portfolio/businesscarddesign/">Esempi biglietti da visita</a>
+                                        <span class="last-update">Ultimo aggiornamento: 13 Agosto 2026</span>
                                     </div>
                                     <div class="hover-desc">
                                         In questa sezione osservate i modelli di biglietti da visita
@@ -355,12 +361,8 @@
 
                                 <li>
                                     <div class="link-row">
-                                        <a href="/it/portfolio/letterheaddesign/"
-                                            >Carta intestata esempio</a
-                                        >
-                                        <span class="last-update"
-                                            >Ultimo aggiornamento: 17 Agosto 2026</span
-                                        >
+                                        <a href="/it/portfolio/letterheaddesign/">Carta intestata esempio</a>
+                                        <span class="last-update">Ultimo aggiornamento: 17 Agosto 2026</span>
                                     </div>
                                     <div class="hover-desc">
                                         In questa pagina sono presentati diversi esempi di carta
@@ -371,12 +373,8 @@
 
                                 <li>
                                     <div class="link-row">
-                                        <a href="/it/portfolio/cataloguedesign/"
-                                            >Esempi cataloghi</a
-                                        >
-                                        <span class="last-update"
-                                            >Ultimo aggiornamento: 26 Agosto 2026</span
-                                        >
+                                        <a href="/it/portfolio/cataloguedesign/">Esempi cataloghi</a>
+                                        <span class="last-update">Ultimo aggiornamento: 26 Agosto 2026</span>
                                     </div>
                                     <div class="hover-desc">
                                         In questa pagina trovate una selezione di cataloghi
@@ -387,12 +385,8 @@
 
                                 <li>
                                     <div class="link-row">
-                                        <a href="/it/portfolio/contractpagedesign/"
-                                            >Esempi di moduli di contratto</a
-                                        >
-                                        <span class="last-update"
-                                            >Ultimo aggiornamento: 11 Settembre 2026</span
-                                        >
+                                        <a href="/it/portfolio/contractpagedesign/">Esempi di moduli di contratto</a>
+                                        <span class="last-update">Ultimo aggiornamento: 11 Settembre 2026</span>
                                     </div>
                                     <div class="hover-desc">
                                         Questa pagina presenta moduli contrattuali realizzati per freelance, agenzie e piccole imprese, accompagnati da una descrizione delle fasi di collaborazione.
@@ -403,23 +397,27 @@
                     </div>
                 </div>
             </section>
+
         </main>
 
+
         <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
+
         <footer-component></footer-component>
         <back-to-top></back-to-top>
 
-        <!-- :::::::::::::::::::::::::: COMPONENT SCRIPTS :::::::::::::::::::::::::: -->
-<script src="/assets/src/core/i18n.js"></script>
-<script type="module" src="/assets/src/components/header.js"></script> 
-<script type="module" src="/assets/src/components/language-selector.js"></script>
-        <script src="/assets/src/components/terminal-breadcrumb.js"></script>
-<script type="module" src="/assets/src/components/footer.js"></script>
-<script type="module" src="/assets/src/components/back-to-top.js"></script>
-<script src="/assets/src/core/cursor.js"></script>
-<script src="/assets/src/core/loader.js"></script>
 
-        <!-- :::::::::::::::::::::::::: GSAP ANIMATIONS :::::::::::::::::::::::::: -->
-        <script src="/assets/src/components/animations.js"></script>
+        <!-- :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: -->
+
+        <script src="/assets/src/core/i18n.js"></script>
+        <script type="module" src="/assets/src/components/header.js"></script>
+        <script type="module" src="/assets/src/components/language-selector.js"></script>
+        <script src="/assets/src/components/terminal-breadcrumb.js"></script>
+        <script type="module" src="/assets/src/components/footer.js"></script>
+        <script type="module" src="/assets/src/components/back-to-top.js"></script>
+        <script src="/assets/src/core/cursor.js"></script>
+        <script src="/assets/src/core/loader.js"></script>
+
+        <script src="/assets/src/core/animations.js"></script>
     </body>
 </html>

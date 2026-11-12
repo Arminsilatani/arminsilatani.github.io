@@ -1,30 +1,122 @@
 <!doctype html>
 <html lang="it" dir="ltr">
-  <head>
-    <!-- :::::::::::::::::::::::::: SEO META :::::::::::::::::::::::::: -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio di progetti SEO e design | Armin Silatani</title>
-    <meta
-      name="description"
-      content="Scopri una raccolta di progetti digitali che comprende SEO, design di siti web e graphic design, suddivisi per ambito operativo."
-    />
-    <meta name="robots" content="noindex, nofollow" />
+    <head>
 
-    <!-- :::::::::::::::::::::::::: FAVICONS :::::::::::::::::::::::::: -->
-    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
-    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/assets/images/icon-32.png"
-    />
 
-    <!-- :::::::::::::::::::::::::: STYLESHEETS :::::::::::::::::::::::::: -->
-                    <!-- CORE -->
-                     <link rel="stylesheet" href="/assets/src/core/z-index.css" />
+        <!-- :::::::::::::::::::::::::: HEAD & META :::::::::::::::::::::::::: -->
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio di progetti SEO e design | Armin Silatani</title>
+        <meta
+            name="description"
+            content="Scopri una raccolta di progetti digitali che comprende SEO, design di siti web e graphic design, suddivisi per ambito operativo."
+        />
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+        <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/assets/images/icon-32.png"
+        />
+
+
+        <!-- :::::::::::::::::::::::::: OPEN GRAPH & TWITTER CARDS :::::::::::::::::::::::::: -->
+
+        <meta property="og:title" content="Portfolio dei progetti Armin Silatani" />
+        <meta
+            property="og:description"
+            content="Portfolio di progetti SEO, web design e graphic design organizzati per categoria."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://arminsilatani.com/it/portfolio/" />
+        <meta property="og:locale" content="it_IT" />
+        <meta
+            property="og:image"
+            content="https://arminsilatani.com/assets/images/arminsilatani/portfolio/FeaturedImage.webp"
+        />
+        <meta
+            property="og:image:alt"
+            content="Spazio creativo per strategia e portfolio di digital marketing"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="Portfolio dei progetti Armin Silatani"
+        />
+        <meta
+            name="twitter:description"
+            content="Portfolio di progetti SEO, web design e graphic design organizzati per categoria."
+        />
+        <meta
+            name="twitter:image"
+            content="https://arminsilatani.com/assets/images/arminsilatani/portfolio/FeaturedImage.webp"
+        />
+
+
+        <!-- :::::::::::::::::::::::::: CANONICAL & HREFLANG :::::::::::::::::::::::::: -->
+
+        <link rel="canonical" href="https://arminsilatani.com/it/portfolio/" />
+        <link
+            rel="alternate"
+            hreflang="fa"
+            href="https://arminsilatani.com/portfolio/"
+        />
+        <link
+            rel="alternate"
+            hreflang="en"
+            href="https://arminsilatani.com/en/portfolio/"
+        />
+        <link
+            rel="alternate"
+            hreflang="ar"
+            href="https://arminsilatani.com/ar/portfolio/"
+        />
+        <link
+            rel="alternate"
+            hreflang="tr"
+            href="https://arminsilatani.com/tr/portfolio/"
+        />
+        <link
+            rel="alternate"
+            hreflang="de"
+            href="https://arminsilatani.com/de/portfolio/"
+        />
+        <link
+            rel="alternate"
+            hreflang="it"
+            href="https://arminsilatani.com/it/portfolio/"
+        />
+        <link
+            rel="alternate"
+            hreflang="x-default"
+            href="https://arminsilatani.com/en/portfolio/"
+        />
+        <script>
+            (function () {
+                if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+                if (window.location.hash) window.scrollTo(0, 0);
+            })();
+        </script>
+
+
+        <!-- :::::::::::::::::::::::::: JSON-LD SCHEMA :::::::::::::::::::::::::: -->
+
+        <script type="application/ld+json">
+
+        </script>
+
+        <script src="/assets/src/core/gsap.min.js" defer></script>
+        <script src="/assets/src/core/ScrollTrigger.min.js" defer></script>
+        <script src="/assets/src/core/lottie_light.min.js" defer></script>
+
+
+        <!-- :::::::::::::::::::::::::: STYLESHEETS & FONTS :::::::::::::::::::::::::: -->
+
+        <link rel="stylesheet" href="/assets/src/core/z-index.css" />
         <link rel="stylesheet" href="/assets/src/core/fonts.css" />
         <link rel="stylesheet" href="/assets/src/core/base.css" />
         <link rel="stylesheet" href="/assets/src/core/typography.css" />
@@ -34,1726 +126,1521 @@
         <link rel="stylesheet" href="/assets/src/core/animations.css" />
         <link rel="stylesheet" href="/assets/src/core/cursor.css" />
         <link rel="stylesheet" href="/assets/src/core/loader.css" />
-
-        <!-- COMPONENTS -->
         <link rel="stylesheet" href="/assets/src/components/hero.css" />
         <link rel="stylesheet" href="/assets/src/components/section-divider.css" />
         <link rel="stylesheet" href="/assets/src/components/terminal-breadcrumb.css" />
-
-        <!-- PAGE -->
         <link rel="stylesheet" href="/assets/src/styles/portfolio.css" />
+    </head>
 
-
-    <!-- :::::::::::::::::::::::::: OPEN GRAPH :::::::::::::::::::::::::: -->
-    <meta property="og:title" content="Portfolio dei progetti Armin Silatani" />
-    <meta
-      property="og:description"
-      content="Portfolio di progetti SEO, web design e graphic design organizzati per categoria."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://arminsilatani.com/it/portfolio/" />
-    <meta property="og:locale" content="it_IT" />
-    <meta
-      property="og:image"
-      content="https://arminsilatani.com/assets/images/arminsilatani/portfolio/FeaturedImage.webp"
-    />
-    <meta
-      property="og:image:alt"
-      content="Spazio creativo per strategia e portfolio di digital marketing"
-    />
-
-    <!-- :::::::::::::::::::::::::: TWITTER CARD :::::::::::::::::::::::::: -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Portfolio dei progetti Armin Silatani"
-    />
-    <meta
-      name="twitter:description"
-      content="Portfolio di progetti SEO, web design e graphic design organizzati per categoria."
-    />
-    <meta
-      name="twitter:image"
-      content="https://arminsilatani.com/assets/images/arminsilatani/portfolio/FeaturedImage.webp"
-    />
-
-    <!-- :::::::::::::::::::::::::: CANONICAL & HREFLANG :::::::::::::::::::::::::: -->
-    <link rel="canonical" href="https://arminsilatani.com/it/portfolio/" />
-    <link
-      rel="alternate"
-      hreflang="fa"
-      href="https://arminsilatani.com/portfolio/"
-    />
-    <link
-      rel="alternate"
-      hreflang="en"
-      href="https://arminsilatani.com/en/portfolio/"
-    />
-    <link
-      rel="alternate"
-      hreflang="ar"
-      href="https://arminsilatani.com/ar/portfolio/"
-    />
-    <link
-      rel="alternate"
-      hreflang="tr"
-      href="https://arminsilatani.com/tr/portfolio/"
-    />
-    <link
-      rel="alternate"
-      hreflang="de"
-      href="https://arminsilatani.com/de/portfolio/"
-    />
-    <link
-      rel="alternate"
-      hreflang="it"
-      href="https://arminsilatani.com/it/portfolio/"
-    />
-    <link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://arminsilatani.com/en/portfolio/"
-    />
-<script>
-  (function () {
-    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-    if (window.location.hash) window.scrollTo(0, 0);
-  })();
-</script>
-    <!-- :::::::::::::::::::::::::: SCHEMA :::::::::::::::::::::::::: -->
-    <script src="/assets/src/core/gsap.min.js" defer></script>
-<script src="/assets/src/core/ScrollTrigger.min.js" defer></script>
-<script src="/assets/src/core/lottie_light.min.js" defer></script>
-  </head>
-
-  <!-- :::::::::::::::::::::::::: BODY :::::::::::::::::::::::::: -->
-  <body class="portfolio-page">
-      <div id="initial-loader" class="fullpage-loader">
-    <div class="lds-grid">
-      <div></div><div></div><div></div>
-      <div></div><div></div><div></div>
-      <div></div><div></div><div></div>
-    </div>
-  </div>
+    <body class="portfolio-page">
+        <div id="initial-loader" class="fullpage-loader">
+            <div class="lds-grid">
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+            </div>
+        </div>
         <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-    <!-- :::::::::::::::::::::::::: HEADER :::::::::::::::::::::::::: -->
-    <header-component></header-component>
+        <div class="cursor-follower"></div>
 
-    <main class="has-footer-gap portfolio-main">
-      <!-- :::::::::::::::::::::::::: HERO SECTION :::::::::::::::::::::::::: -->
-      <section class="hero-section">
-                        <video
-        class="hero-section__video"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="metadata"
-    >
-        <source src="/assets/images/arminsilatani/services/seo/hero.mp4" type="video/mp4">
-    </video>
 
-    <div class="hero-section__noise" aria-hidden="true"></div>
-    <div class="hero-section__scanlines" aria-hidden="true"></div>
-    <div class="hero-section__glitch" aria-hidden="true"></div>
-        <div class="container-1300 hero-container">
-          <language-component></language-component>
-          <div class="hero-title">
-            <h1>
+        <!-- :::::::::::::::::::::::::: HEADER & NAVIGATION :::::::::::::::::::::::::: -->
+
+        <header-component></header-component>
+
+
+        <!-- :::::::::::::::::::::::::: MAIN CONTENT :::::::::::::::::::::::::: -->
+
+        <main class="has-footer-gap portfolio-main">
+
+
+            <!-- :::::::::::::::::::::::::: HERO :::::::::::::::::::::::::: -->
+
+            <section class="hero-section">
+                <video
+                    class="hero-section__video"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                >
+                    <source src="/assets/images/arminsilatani/services/seo/hero.mp4" type="video/mp4">
+                </video>
+                <div class="hero-section__noise" aria-hidden="true"></div>
+                <div class="hero-section__scanlines" aria-hidden="true"></div>
+                <div class="hero-section__glitch" aria-hidden="true"></div>
+                <div class="container-1300 hero-container">
+                    <language-component></language-component>
+                    <div class="hero-title">
+                        <h1>
                             <span class="split-title">Portfolio</span>
                             <span class="h1_sub reveal-up">Tutti i progetti in SEO, sviluppo web, programmazione e grafica.</span>
                         </h1>
-          </div>
-        </div>
+                    </div>
+                </div>
+                <div class="pro-divider">
+                    <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
+                        <defs>
+                            <filter
+                                id="dividerShadow"
+                                x="0"
+                                y="-30%"
+                                width="100%"
+                                height="150%"
+                            >
+                                <feDropShadow
+                                    dx="0"
+                                    dy="-8"
+                                    stdDeviation="12"
+                                    flood-color="rgba(0,0,0,0.55)"
+                                />
+                            </filter>
+                        </defs>
+                        <path
+                            filter="url(#dividerShadow)"
+                            fill="#0D0D0D"
+                            d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
+                        />
+                    </svg>
+                </div>
+                <terminal-breadcrumb></terminal-breadcrumb>
+            </section>
 
-        <div class="pro-divider">
-          <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
-            <defs>
-              <filter
-                id="dividerShadow"
-                x="0"
-                y="-30%"
-                width="100%"
-                height="150%"
-              >
-                <feDropShadow
-                  dx="0"
-                  dy="-8"
-                  stdDeviation="12"
-                  flood-color="rgba(0,0,0,0.55)"
-                />
-              </filter>
-            </defs>
-            <path
-              filter="url(#dividerShadow)"
-              fill="#0D0D0D"
-              d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"
-            />
-          </svg>
-        </div>
+            <section-divider role="presentation" aria-hidden="true"></section-divider>
 
-        <terminal-breadcrumb></terminal-breadcrumb>
-      </section>
 
-      <!-- :::::::::::::::::::::::::: PORTFOLIO INTRO :::::::::::::::::::::::::: -->
-      <section class="portfolio-intro section-dark">
-        <div class="container-1080">
-          <div class="portfolio-intro__grid">
-            <div class="portfolio-intro__content reveal-up">
-              <p class="eyebrow">Dall’idea alla realizzazione</p>
-              <h2 class="section-title split-title">I miei progetti</h2>
-              <p class="section-desc">
-                In questa pagina puoi esplorare una selezione dei miei progetti
-                di SEO, web design e graphic design, con accesso alle pagine di
-                approfondimento per ogni categoria o singolo progetto.
-              </p>
-            </div>
+            <!-- :::::::::::::::::::::::::: PORTFOLIO INTRO :::::::::::::::::::::::::: -->
 
-            <div class="portfolio-intro__nav reveal-up">
-              <a href="#seo-projects" class="quick-link">
-                <span>Progetti SEO</span>
-                <i></i>
-              </a>
-              <a href="#web-projects" class="quick-link">
-                <span>Progetti di web design</span>
-                <i></i>
-              </a>
-              <a href="#web-apps" class="quick-link">
-                <span>Portfolio di Sviluppo</span>
-                <i></i>
-              </a>
-              <a href="#graphic-categories" class="quick-link">
-                <span>Progetti di graphic design</span>
-                <i></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-<section-divider role="presentation" aria-hidden="true"></section-divider>
-      <!-- :::::::::::::::::::::::::: PORTFOLIO CATEGORIES :::::::::::::::::::::::::: -->
-      <section class="portfolio-categories section-dark">
-        <div class="container-1080">
-          <div class="section-heading reveal-up">
-            <p class="eyebrow">Punto di Partenza</p>
-            <h2 class="section-title split-title">
-              Categorie Principali del Portfolio
-            </h2>
-          </div>
-        </div>
+            <section class="portfolio-intro section-dark">
+                <div class="container-1080">
+                    <div class="portfolio-intro__grid">
+                        <div class="portfolio-intro__content reveal-up">
+                            <p class="eyebrow">Dall’idea alla realizzazione</p>
+                            <h2 class="section-title split-title">I miei progetti</h2>
+                            <p class="section-desc">
+                                In questa pagina puoi esplorare una selezione dei miei progetti
+                                di SEO, web design e graphic design, con accesso alle pagine di
+                                approfondimento per ogni categoria o singolo progetto.
+                            </p>
+                        </div>
+                        <div class="portfolio-intro__nav reveal-up">
+                            <a href="#seo-projects" class="quick-link">
+                                <span>Progetti SEO</span>
+                                <i></i>
+                            </a>
+                            <a href="#web-projects" class="quick-link">
+                                <span>Progetti di web design</span>
+                                <i></i>
+                            </a>
+                            <a href="#web-apps" class="quick-link">
+                                <span>Portfolio di Sviluppo</span>
+                                <i></i>
+                            </a>
+                            <a href="#graphic-categories" class="quick-link">
+                                <span>Progetti di graphic design</span>
+                                <i></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <div class="container-1300">
-          <div class="categories-grid">
-            <div class="categories-row">
-              <a
-                href="#seo-projects"
-                class="category-card reveal-card seo-card"
-              >
-                <span class="card-glow"></span>
-                <div class="category-card__top">
-                  <span class="category-number">01</span>
-                  <span class="category-badge">20+ Progetti</span>
-                </div>
-                <div class="category-card__body">
-                  <h3>Progetti SEO</h3>
-                  <p>
-                    Una raccolta di progetti SEO incentrati sulla crescita del
-                    posizionamento, l’aumento del traffico e risultati concreti.
-                  </p>
-                </div>
-                <div class="category-card__footer">
-                  <span>Vedi i Progetti</span>
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M8 5L15 12L8 19"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-              </a>
+            <section-divider role="presentation" aria-hidden="true"></section-divider>
 
-              <a
-                href="#web-projects"
-                class="category-card reveal-card web-card"
-              >
-                <span class="card-glow"></span>
-                <div class="category-card__top">
-                  <span class="category-number">02</span>
-                  <span class="category-badge">20+ Progetti</span>
-                </div>
-                <div class="category-card__body">
-                  <h3>Progetti di web design</h3>
-                  <p>
-                    Progetti di web design con un approccio moderno,
-                    un’esperienza utente curata e uno sviluppo strutturato.
-                  </p>
-                </div>
-                <div class="category-card__footer">
-                  <span>Vedi i Progetti</span>
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M8 5L15 12L8 19"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-              </a>
-            </div>
 
-            <div class="categories-row">
-              <a
-                href="#web-apps"
-                class="category-card reveal-card programming-card"
-              >
-                <span class="card-glow"></span>
-                <div class="category-card__top">
-                  <span class="category-number">03</span>
-                  <span class="category-badge">30+ Progetti</span>
-                </div>
-                <div class="category-card__body">
-                  <h3>Portfolio di Sviluppo</h3>
-                  <p>
-                    Progetti di sviluppo in cui ognuno risolve un problema reale
-                    attraverso il codice.
-                  </p>
-                </div>
-                <div class="category-card__footer">
-                  <span>Vedi i Progetti</span>
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M8 5L15 12L8 19"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-              </a>
+            <!-- :::::::::::::::::::::::::: PORTFOLIO CATEGORIES :::::::::::::::::::::::::: -->
 
-              <a
-                href="#graphic-categories"
-                class="category-card reveal-card category-graphic-card"
-              >
-                <span class="card-glow"></span>
-                <div class="category-card__top">
-                  <span class="category-number">04</span>
-                  <span class="category-badge">5 Sottocategorie</span>
+            <section class="portfolio-categories section-dark">
+                <div class="container-1080">
+                    <div class="section-heading reveal-up">
+                        <p class="eyebrow">Punto di Partenza</p>
+                        <h2 class="section-title split-title">
+                            Categorie Principali del Portfolio
+                        </h2>
+                    </div>
                 </div>
-                <div class="category-card__body">
-                  <h3>Progetti di graphic design</h3>
-                  <p>
-                    Dal design del logo ai cataloghi e alla carta intestata —
-                    organizzati per un accesso più rapido.
-                  </p>
+                <div class="container-1300">
+                    <div class="categories-grid">
+                        <div class="categories-row">
+                            <a
+                                href="#seo-projects"
+                                class="category-card reveal-card seo-card"
+                            >
+                                <span class="card-glow"></span>
+                                <div class="category-card__top">
+                                    <span class="category-number">01</span>
+                                    <span class="category-badge">20+ Progetti</span>
+                                </div>
+                                <div class="category-card__body">
+                                    <h3>Progetti SEO</h3>
+                                    <p>
+                                        Una raccolta di progetti SEO incentrati sulla crescita del
+                                        posizionamento, l’aumento del traffico e risultati concreti.
+                                    </p>
+                                </div>
+                                <div class="category-card__footer">
+                                    <span>Vedi i Progetti</span>
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M8 5L15 12L8 19"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </div>
+                            </a>
+                            <a
+                                href="#web-projects"
+                                class="category-card reveal-card web-card"
+                            >
+                                <span class="card-glow"></span>
+                                <div class="category-card__top">
+                                    <span class="category-number">02</span>
+                                    <span class="category-badge">20+ Progetti</span>
+                                </div>
+                                <div class="category-card__body">
+                                    <h3>Progetti di web design</h3>
+                                    <p>
+                                        Progetti di web design con un approccio moderno,
+                                        un’esperienza utente curata e uno sviluppo strutturato.
+                                    </p>
+                                </div>
+                                <div class="category-card__footer">
+                                    <span>Vedi i Progetti</span>
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M8 5L15 12L8 19"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="categories-row">
+                            <a
+                                href="#web-apps"
+                                class="category-card reveal-card programming-card"
+                            >
+                                <span class="card-glow"></span>
+                                <div class="category-card__top">
+                                    <span class="category-number">03</span>
+                                    <span class="category-badge">30+ Progetti</span>
+                                </div>
+                                <div class="category-card__body">
+                                    <h3>Portfolio di Sviluppo</h3>
+                                    <p>
+                                        Progetti di sviluppo in cui ognuno risolve un problema reale
+                                        attraverso il codice.
+                                    </p>
+                                </div>
+                                <div class="category-card__footer">
+                                    <span>Vedi i Progetti</span>
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M8 5L15 12L8 19"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </div>
+                            </a>
+                            <a
+                                href="#graphic-categories"
+                                class="category-card reveal-card category-graphic-card"
+                            >
+                                <span class="card-glow"></span>
+                                <div class="category-card__top">
+                                    <span class="category-number">04</span>
+                                    <span class="category-badge">5 Sottocategorie</span>
+                                </div>
+                                <div class="category-card__body">
+                                    <h3>Progetti di graphic design</h3>
+                                    <p>
+                                        Dal design del logo ai cataloghi e alla carta intestata —
+                                        organizzati per un accesso più rapido.
+                                    </p>
+                                </div>
+                                <div class="category-card__footer">
+                                    <span>Vedi le Categorie</span>
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M8 5L15 12L8 19"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="category-card__footer">
-                  <span>Vedi le Categorie</span>
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M8 5L15 12L8 19"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-<section-divider role="presentation" aria-hidden="true"></section-divider>
-      <!-- :::::::::::::::::::::::::: SEO PROJECTS :::::::::::::::::::::::::: -->
-      <section id="seo-projects" class="portfolio-list-section section-dark">
-        <div class="container-1080">
-          <div class="section-heading reveal-up">
-            <p class="eyebrow">Percorso di crescita</p>
-            <h2 class="section-title split-title">Progetti SEO</h2>
-            <p class="section-desc">
-              Una selezione di progetti SEO: cliccando su ciascun titolo puoi
-              consultare risultati, obiettivi e dettagli del lavoro svolto.
-            </p>
-          </div>
+            </section>
 
-          <div class="list-wrapper">
-            <div class="portfolio-list" data-expandable-list>
-              <a
-                href="/it/portfolio/seo-uromkaraca/"
-                class="portfolio-row reveal-row" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Urom Karaca</h3>
-                    <span class="portfolio-row__year">2025</span>
-                  </div>
-                  <span class="portfolio-row__hint">Sito web e-commerce</span>
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
+            <section-divider role="presentation" aria-hidden="true"></section-divider>
 
-              <a
-                href="/it/portfolio/seo-nickdigi/"
-                class="portfolio-row reveal-row" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">NickDigi</h3>
-                    <span class="portfolio-row__year">2025</span>
-                  </div>
-                  <span class="portfolio-row__hint">Sito web e-commerce</span>
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
 
-              <a
-                href="/it/portfolio/seo-kashanestore/"
-                class="portfolio-row reveal-row" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Kashaneh Store</h3>
-                    <span class="portfolio-row__year">2025</span>
-                  </div>
-                  <span class="portfolio-row__hint">Sito web e-commerce</span>
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
+            <!-- :::::::::::::::::::::::::: SEO PROJECTS :::::::::::::::::::::::::: -->
 
-              <a
-                href="/it/portfolio/seo-pardehoxin/"
-                class="portfolio-row reveal-row" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Pardeh Oxin</h3>
-                    <span class="portfolio-row__year">2025</span>
-                  </div>
-                  <span class="portfolio-row__hint">Sito web e-commerce</span>
+            <section id="seo-projects" class="portfolio-list-section section-dark">
+                <div class="container-1080">
+                    <div class="section-heading reveal-up">
+                        <p class="eyebrow">Percorso di crescita</p>
+                        <h2 class="section-title split-title">Progetti SEO</h2>
+                        <p class="section-desc">
+                            Una selezione di progetti SEO: cliccando su ciascun titolo puoi
+                            consultare risultati, obiettivi e dettagli del lavoro svolto.
+                        </p>
+                    </div>
+                    <div class="list-wrapper">
+                        <div class="portfolio-list" data-expandable-list>
+                            <a
+                                href="/it/portfolio/seo-uromkaraca/"
+                                class="portfolio-row reveal-row" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Urom Karaca</h3>
+                                        <span class="portfolio-row__year">2025</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web e-commerce</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/seo-nickdigi/"
+                                class="portfolio-row reveal-row" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">NickDigi</h3>
+                                        <span class="portfolio-row__year">2025</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web e-commerce</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/seo-kashanestore/"
+                                class="portfolio-row reveal-row" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Kashaneh Store</h3>
+                                        <span class="portfolio-row__year">2025</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web e-commerce</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/seo-pardehoxin/"
+                                class="portfolio-row reveal-row" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Pardeh Oxin</h3>
+                                        <span class="portfolio-row__year">2025</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web e-commerce</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/seo-kralhome/"
+                                class="portfolio-row reveal-row" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Kral Home</h3>
+                                        <span class="portfolio-row__year">2025</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web e-commerce</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/seo-timarteb/"
+                                class="portfolio-row reveal-row" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Timar Teb</h3>
+                                        <span class="portfolio-row__year">2025</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web e-commerce</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/seo-shahabmarco/"
+                                class="portfolio-row reveal-row" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Shahab Marco</h3>
+                                        <span class="portfolio-row__year">2025</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web e-commerce</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/seo-dorfaksazehrayan/"
+                                class="portfolio-row reveal-row" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Dorfak Sazeh Rayan</h3>
+                                        <span class="portfolio-row__year">2025</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web e-commerce</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/seo-megalightled/"
+                                class="portfolio-row reveal-row" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Mega Light</h3>
+                                        <span class="portfolio-row__year">2025</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web e-commerce</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/seo-hampadigital/"
+                                class="portfolio-row reveal-row" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Hampa Digital</h3>
+                                        <span class="portfolio-row__year">2025</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web e-commerce</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/seo-linex/"
+                                class="portfolio-row reveal-row extra-item" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Linex</h3>
+                                        <span class="portfolio-row__year">2024</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web e-commerce</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/seo-ayeghbama/"
+                                class="portfolio-row reveal-row extra-item" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Ayegh Ba Ma</h3>
+                                        <span class="portfolio-row__year">2024</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web e-commerce</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/seo-shahrekhab/"
+                                class="portfolio-row reveal-row extra-item" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Shahr Khab</h3>
+                                        <span class="portfolio-row__year">2024</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web e-commerce</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/seo-alvandtasisat/"
+                                class="portfolio-row reveal-row extra-item" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Alvand Tasisat</h3>
+                                        <span class="portfolio-row__year">2024</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web e-commerce</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/seo-iranpapernet/"
+                                class="portfolio-row reveal-row extra-item" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Iran Paper Network</h3>
+                                        <span class="portfolio-row__year">2024</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web e-commerce</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/seo-niavaransabt/"
+                                class="portfolio-row reveal-row extra-item" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Niavaran Sabt</h3>
+                                        <span class="portfolio-row__year">2023</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web per servizi di registrazione societaria</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/seo-permonmed/"
+                                class="portfolio-row reveal-row extra-item" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">PermonMed</h3>
+                                        <span class="portfolio-row__year">2023</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web e-commerce</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/seo-sabtfarhang/"
+                                class="portfolio-row reveal-row extra-item" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Farhang Sabt</h3>
+                                        <span class="portfolio-row__year">2022</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web per servizi di registrazione societaria</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/seo-arminsilatani/"
+                                class="portfolio-row reveal-row extra-item" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Armin Silatani</h3>
+                                        <span class="portfolio-row__year">2021</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web personale</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                        </div>
+                        <div class="list-action reveal-up">
+                            <button class="show-more-btn" data-toggle-list type="button">
+                                <span>Mostra di più</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
+            </section>
 
-              <a
-                href="/it/portfolio/seo-kralhome/"
-                class="portfolio-row reveal-row" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Kral Home</h3>
-                    <span class="portfolio-row__year">2025</span>
-                  </div>
-                  <span class="portfolio-row__hint">Sito web e-commerce</span>
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
+            <section-divider role="presentation" aria-hidden="true"></section-divider>
 
-              <a
-                href="/it/portfolio/seo-timarteb/"
-                class="portfolio-row reveal-row" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Timar Teb</h3>
-                    <span class="portfolio-row__year">2025</span>
-                  </div>
-                  <span class="portfolio-row__hint">Sito web e-commerce</span>
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
 
-              <a
-                href="/it/portfolio/seo-shahabmarco/"
-                class="portfolio-row reveal-row" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Shahab Marco</h3>
-                    <span class="portfolio-row__year">2025</span>
-                  </div>
-                  <span class="portfolio-row__hint">Sito web e-commerce</span>
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
+            <!-- :::::::::::::::::::::::::: WEB PROJECTS :::::::::::::::::::::::::: -->
 
-              <a
-                href="/it/portfolio/seo-dorfaksazehrayan/"
-                class="portfolio-row reveal-row" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Dorfak Sazeh Rayan</h3>
-                    <span class="portfolio-row__year">2025</span>
-                  </div>
-                  <span class="portfolio-row__hint">Sito web e-commerce</span>
+            <section id="web-projects" class="portfolio-list-section section-dark">
+                <div class="container-1080">
+                    <div class="section-heading reveal-up">
+                        <p class="eyebrow">Percorso creativo</p>
+                        <h2 class="section-title split-title">Progetti di web design</h2>
+                        <p class="section-desc">
+                            Progetti di web design di cui puoi visualizzare il titolo e
+                            accedere alla relativa pagina di approfondimento.
+                        </p>
+                    </div>
+                    <div class="list-wrapper">
+                        <div class="portfolio-list" data-expandable-list>
+                            <a
+                                href="/it/portfolio/onlineshop-apakala/"
+                                class="portfolio-row reveal-row" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Apa Kala</h3>
+                                        <span class="portfolio-row__year">2025</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web e-commerce</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/onlineshop-partban/"
+                                class="portfolio-row reveal-row" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Part Ban</h3>
+                                        <span class="portfolio-row__year">2024</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Marketplace multi-venditore di ricambi auto</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/webdesign-mehmandar/"
+                                class="portfolio-row reveal-row" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Mehmandar</h3>
+                                        <span class="portfolio-row__year">2024</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web di agenzia viaggi</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/webdesign-aplusvfx/"
+                                class="portfolio-row reveal-row" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">A Plus VFX</h3>
+                                        <span class="portfolio-row__year">2024</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web di studio creativo</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/webdesign-payetakhtetala/"
+                                class="portfolio-row reveal-row" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Paytakht Tala</h3>
+                                        <span class="portfolio-row__year">2024</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web aziendale</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/webdesign-sabtfarhang/"
+                                class="portfolio-row reveal-row" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Farhang Sabt</h3>
+                                        <span class="portfolio-row__year">2024</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web per servizi di registrazione societaria</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/webdesign-hevaaps/"
+                                class="portfolio-row reveal-row" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Heva ApS</h3>
+                                        <span class="portfolio-row__year">2023</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web aziendale</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/webdesign-rabi-foundation/"
+                                class="portfolio-row reveal-row" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Rabi Foundation</h3>
+                                        <span class="portfolio-row__year">2023</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Piattaforma per progetto crypto</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/webdesign-niavaransabt/"
+                                class="portfolio-row reveal-row" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Niavaran Sabt</h3>
+                                        <span class="portfolio-row__year">2023</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web per servizi di registrazione societaria</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/webdesign-ptahvie/"
+                                class="portfolio-row reveal-row" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Parsa Tahie</h3>
+                                        <span class="portfolio-row__year">1401</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web aziendale</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/webdesign-spantaweb/"
+                                class="portfolio-row reveal-row extra-item" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Spanta Web</h3>
+                                        <span class="portfolio-row__year">2021</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web di agenzia digitale</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/webdesign-pouyanabi/"
+                                class="portfolio-row reveal-row extra-item" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Pouya Nabi</h3>
+                                        <span class="portfolio-row__year">2021</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Portfolio personale</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/landingpage-cadinu/"
+                                class="portfolio-row reveal-row extra-item" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Cadinu Inu</h3>
+                                        <span class="portfolio-row__year">2021</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Landing page per progetto crypto</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/onlineshop-zrmr/"
+                                class="portfolio-row reveal-row extra-item" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Zomorrod Rokh</h3>
+                                        <span class="portfolio-row__year">2020</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web e-commerce</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/webdesign-alzahravfx/"
+                                class="portfolio-row reveal-row extra-item" data-status="done"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Alzahra VFX</h3>
+                                        <span class="portfolio-row__year">2020</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Sito web di studio creativo</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                        </div>
+                        <div class="list-action reveal-up">
+                            <button class="show-more-btn" data-toggle-list type="button">
+                                <span>Mostra di più</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
+            </section>
 
-              <a
-                href="/it/portfolio/seo-megalightled/"
-                class="portfolio-row reveal-row" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Mega Light</h3>
-                    <span class="portfolio-row__year">2025</span>
-                  </div>
-                  <span class="portfolio-row__hint">Sito web e-commerce</span>
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
+            <section-divider role="presentation" aria-hidden="true"></section-divider>
 
-              <a
-                href="/it/portfolio/seo-hampadigital/"
-                class="portfolio-row reveal-row" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Hampa Digital</h3>
-                    <span class="portfolio-row__year">2025</span>
-                  </div>
-                  <span class="portfolio-row__hint">Sito web e-commerce</span>
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
 
-              <a
-                href="/it/portfolio/seo-linex/"
-                class="portfolio-row reveal-row extra-item" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Linex</h3>
-                    <span class="portfolio-row__year">2024</span>
-                  </div>
-                  <span class="portfolio-row__hint">Sito web e-commerce</span>
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
+            <!-- :::::::::::::::::::::::::: WEB APPS :::::::::::::::::::::::::: -->
 
-              <a
-                href="/it/portfolio/seo-ayeghbama/"
-                class="portfolio-row reveal-row extra-item" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Ayegh Ba Ma</h3>
-                    <span class="portfolio-row__year">2024</span>
-                  </div>
-                  <span class="portfolio-row__hint">Sito web e-commerce</span>
+            <section id="web-apps" class="portfolio-list-section section-dark">
+                <div class="container-1080">
+                    <div class="section-heading reveal-up">
+                        <p class="eyebrow">Percorso di Sviluppo</p>
+                        <h2 class="section-title split-title">Portfolio di Sviluppo</h2>
+                        <p class="section-desc">
+                            Progetti software, applicazioni web e script personalizzati —
+                            clicca su qualsiasi titolo per scoprire i dettagli.
+                        </p>
+                    </div>
+                    <div class="list-wrapper">
+                        <div class="portfolio-list" data-expandable-list>
+                            <a
+                                href="/it/portfolio/develop-qerlo/"
+                                class="portfolio-row reveal-row" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Qerlo</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Accorciatore di link (HTML / CSS / JS)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-tivra/"
+                                class="portfolio-row reveal-row" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Tivra</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Minificatore di codice (HTML / CSS / JS)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-valeno/"
+                                class="portfolio-row reveal-row" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Valeno</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Promemoria scadenze (HTML / CSS / JS)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-brilo/"
+                                class="portfolio-row reveal-row" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Brilo</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Test di velocità (HTML / CSS / JS)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-fiora/"
+                                class="portfolio-row reveal-row" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Fiora</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Tracker del ciclo mestruale (HTML / CSS / JS / Supabase)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-sorbi/"
+                                class="portfolio-row reveal-row" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Sorbi</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Generatore robots.txt (HTML / CSS / JS)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-belluno/"
+                                class="portfolio-row reveal-row" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Belluno</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Lista dei desideri (HTML / CSS / JS / Supabase)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-nuvello/"
+                                class="portfolio-row reveal-row" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Nuvello</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">App sfondi (HTML / CSS / JS / Supabase)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-velto/"
+                                class="portfolio-row reveal-row" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Velto</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Ispettore meta tag (HTML / CSS / JS)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-alviano/"
+                                class="portfolio-row reveal-row" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Alviano</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Gestore ricette (HTML / CSS / JS / Supabase)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-galvo/"
+                                class="portfolio-row reveal-row extra-item" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Galvo</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Convertitore video (HTML / CSS / JS)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-xelpo/"
+                                class="portfolio-row reveal-row extra-item" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Xelpo</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Generatore di password (HTML / CSS / JS / Supabase)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-lemro/"
+                                class="portfolio-row reveal-row extra-item" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Lemro</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Ricerca parole chiave (HTML / CSS / JS / Supabase)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-dirmo/"
+                                class="portfolio-row reveal-row extra-item" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Dirmo</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Controllo DNS (HTML / CSS / JS)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-hirvo/"
+                                class="portfolio-row reveal-row extra-item" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Hirvo</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Densità parole chiave (HTML / CSS / JS)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-jorvi/"
+                                class="portfolio-row reveal-row extra-item" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Jorvi</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Gestore redirect (HTML / CSS / JS)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-mirto/"
+                                class="portfolio-row reveal-row extra-item" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Mirto</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Gestione clienti (HTML / CSS / JS / Supabase)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-rinvo/"
+                                class="portfolio-row reveal-row extra-item" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Rinvo</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Contabilità (HTML / CSS / JS / Supabase)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-yelmo/"
+                                class="portfolio-row reveal-row extra-item" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Yelmo</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Generatore nomi brand (HTML / CSS / JS)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-fresca/"
+                                class="portfolio-row reveal-row extra-item" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Fresca</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Strumento colori (HTML / CSS / JS)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-mavero/"
+                                class="portfolio-row reveal-row extra-item" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Mavero</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Tracker allenamenti (HTML / CSS / JS / Supabase)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-cedro/"
+                                class="portfolio-row reveal-row extra-item" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Cedro</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Flashcard (HTML / CSS / JS / Supabase)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-orvella/"
+                                class="portfolio-row reveal-row extra-item" data-status="in-progress"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Orvella</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Gestore link interni (HTML / CSS / JS / Supabase)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-tempozio/"
+                                class="portfolio-row reveal-row extra-item" data-status="in-progress"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Tempozio</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Tracker del tempo (HTML / CSS / JS / Supabase)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-ravlo/"
+                                class="portfolio-row reveal-row extra-item" data-status="in-progress"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Ravlo</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Calendario (HTML / CSS / JS / Supabase)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-dashboard/"
+                                class="portfolio-row reveal-row extra-item" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Pannello utente</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">HTML / CSS / JS / Supabase</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-tavio/"
+                                class="portfolio-row reveal-row extra-item" data-status="in-progress"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Tavio</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Libreria prompt (HTML / CSS / JS / Supabase)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-codara/"
+                                class="portfolio-row reveal-row extra-item" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Codara</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Generatore servizi (HTML / CSS / JS)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-falco/"
+                                class="portfolio-row reveal-row extra-item" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Falco</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Generatore favicon (HTML / CSS / JS)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-lume/"
+                                class="portfolio-row reveal-row extra-item" data-status="in-progress"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Lume</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Convertitore epoch (HTML / CSS / JS)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-ubiro/"
+                                class="portfolio-row reveal-row extra-item" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Ubiro</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Calcolatore costo birra (HTML / CSS / JS)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-semora/"
+                                class="portfolio-row reveal-row extra-item" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Semora</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Generatore schema (HTML / CSS / JS)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-nolvo/"
+                                class="portfolio-row reveal-row extra-item" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Nolvo</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Generatore sitemap (HTML / CSS / JS)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-zorio/"
+                                class="portfolio-row reveal-row extra-item" data-status="in-progress"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Zorio</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Convertitore immagini (HTML / CSS / JS)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-refacto/"
+                                class="portfolio-row reveal-row extra-item" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Refacto</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Formattatore codice (HTML / CSS / JS)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                            <a
+                                href="/it/portfolio/develop-pilvo/"
+                                class="portfolio-row reveal-row extra-item" data-status="not-started"
+                            >
+                                <span class="portfolio-row__index"></span>
+                                <div class="portfolio-row__content">
+                                    <div class="portfolio-row__top">
+                                        <h3 class="portfolio-row__title">Pilvo</h3>
+                                        <span class="portfolio-row__year">2026</span>
+                                    </div>
+                                    <span class="portfolio-row__hint">Editor di testo (HTML / CSS / JS)</span>
+                                </div>
+                                <span class="portfolio-row__glow"></span>
+                                <span class="portfolio-row__line"></span>
+                            </a>
+                        </div>
+                        <div class="list-action reveal-up">
+                            <button class="show-more-btn" data-toggle-list type="button">
+                                <span>Mostra di Più</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
+            </section>
 
-              <a
-                href="/it/portfolio/seo-shahrekhab/"
-                class="portfolio-row reveal-row extra-item" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Shahr Khab</h3>
-                    <span class="portfolio-row__year">2024</span>
-                  </div>
-                  <span class="portfolio-row__hint">Sito web e-commerce</span>
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
+            <section-divider role="presentation" aria-hidden="true"></section-divider>
 
-              <a
-                href="/it/portfolio/seo-alvandtasisat/"
-                class="portfolio-row reveal-row extra-item" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Alvand Tasisat</h3>
-                    <span class="portfolio-row__year">2024</span>
-                  </div>
-                  <span class="portfolio-row__hint">Sito web e-commerce</span>
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
 
-              <a
-                href="/it/portfolio/seo-iranpapernet/"
-                class="portfolio-row reveal-row extra-item" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Iran Paper Network</h3>
-                    <span class="portfolio-row__year">2024</span>
-                  </div>
-                  <span class="portfolio-row__hint">Sito web e-commerce</span>
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
+            <!-- :::::::::::::::::::::::::: GRAPHIC DESIGN :::::::::::::::::::::::::: -->
 
-              <a
-                href="/it/portfolio/seo-niavaransabt/"
-                class="portfolio-row reveal-row extra-item" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Niavaran Sabt</h3>
-                    <span class="portfolio-row__year">2023</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Sito web per servizi di registrazione societaria</span
-                  >
+            <section id="graphic-categories" class="graphic-section section-dark">
+                <div class="container-1080">
+                    <div class="section-heading reveal-up">
+                        <p class="eyebrow">Percorso di realizzazione</p>
+                        <h2 class="section-title split-title">
+                            Progetti di graphic design
+                        </h2>
+                        <p class="section-desc">
+                            I progetti di graphic design sono suddivisi per categoria e
+                            disponibili in pagine dedicate.
+                        </p>
+                    </div>
                 </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
+                <div class="container-1300">
+                    <div class="graphic-grid">
+                        <a
+                            href="/it/portfolio/logodesign/"
+                            class="graphic-card reveal-card"
+                        >
+                            <span class="graphic-card__shine"></span>
+                            <div class="graphic-card__content">
+                                <span class="graphic-card__index">01</span>
+                                <h3>Esempi di loghi</h3>
+                                <p>
+                                    Scopri una selezione di loghi creati per brand e attività di
+                                    settori diversi.
+                                </p>
+                            </div>
+                        </a>
+                        <a
+                            href="/it/portfolio/businesscarddesign/"
+                            class="graphic-card reveal-card"
+                        >
+                            <span class="graphic-card__shine"></span>
+                            <div class="graphic-card__content">
+                                <span class="graphic-card__index">02</span>
+                                <h3>Esempi biglietti da visita</h3>
+                                <p>
+                                    Una raccolta di biglietti da visita dal design moderno,
+                                    professionale e minimalista.
+                                </p>
+                            </div>
+                        </a>
+                        <a
+                            href="/it/portfolio/letterheaddesign/"
+                            class="graphic-card reveal-card"
+                        >
+                            <span class="graphic-card__shine"></span>
+                            <div class="graphic-card__content">
+                                <span class="graphic-card__index">03</span>
+                                <h3>Carta intestata esempio</h3>
+                                <p>
+                                    Progettazione di carta intestata aziendale e istituzionale,
+                                    coerente con l’identità visiva del brand.
+                                </p>
+                            </div>
+                        </a>
+                        <a
+                            href="/it/portfolio/cataloguedesign/"
+                            class="graphic-card reveal-card"
+                        >
+                            <span class="graphic-card__shine"></span>
+                            <div class="graphic-card__content">
+                                <span class="graphic-card__index">04</span>
+                                <h3>Esempi cataloghi</h3>
+                                <p>
+                                    Progetti di cataloghi pensati per presentare prodotti e
+                                    servizi in modo professionale e convincente.
+                                </p>
+                            </div>
+                        </a>
+                        <a
+                            href="/it/portfolio/contractpagedesign/"
+                            class="graphic-card reveal-card"
+                        >
+                            <span class="graphic-card__shine"></span>
+                            <div class="graphic-card__content">
+                                <span class="graphic-card__index">05</span>
+                                <h3>Esempi di moduli di contratto</h3>
+                                <p>
+                                    Progettazione di moduli e documenti contrattuali ordinati,
+                                    professionali e coerenti con l’immagine del brand.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
 
-              <a
-                href="/it/portfolio/seo-permonmed/"
-                class="portfolio-row reveal-row extra-item" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">PermonMed</h3>
-                    <span class="portfolio-row__year">2023</span>
-                  </div>
-                  <span class="portfolio-row__hint">Sito web e-commerce</span>
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
+            <section-divider role="presentation" aria-hidden="true"></section-divider>
 
-              <a
-                href="/it/portfolio/seo-sabtfarhang/"
-                class="portfolio-row reveal-row extra-item" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Farhang Sabt</h3>
-                    <span class="portfolio-row__year">2022</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Sito web per servizi di registrazione societaria</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
 
-              <a
-                href="/it/portfolio/seo-arminsilatani/"
-                class="portfolio-row reveal-row extra-item" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Armin Silatani</h3>
-                    <span class="portfolio-row__year">2021</span>
-                  </div>
-                  <span class="portfolio-row__hint">Sito web personale</span>
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-            </div>
+            <!-- :::::::::::::::::::::::::: PORTFOLIO CTA :::::::::::::::::::::::::: -->
 
-            <div class="list-action reveal-up">
-              <button class="show-more-btn" data-toggle-list type="button">
-                <span>Mostra di più</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-<section-divider role="presentation" aria-hidden="true"></section-divider>
-      <!-- :::::::::::::::::::::::::: WEB PROJECTS :::::::::::::::::::::::::: -->
-      <section id="web-projects" class="portfolio-list-section section-dark">
-        <div class="container-1080">
-          <div class="section-heading reveal-up">
-            <p class="eyebrow">Percorso creativo</p>
-            <h2 class="section-title split-title">Progetti di web design</h2>
-            <p class="section-desc">
-              Progetti di web design di cui puoi visualizzare il titolo e
-              accedere alla relativa pagina di approfondimento.
-            </p>
-          </div>
+            <section class="portfolio-cta section-dark">
+                <div class="container-1080">
+                    <div class="cta-box reveal-up">
+                        <span class="cta-glow"></span>
+                        <p class="eyebrow">Iniziamo da qui</p>
+                        <h2 class="section-title split-title">
+                            Pronto a dare vita al tuo prossimo progetto?
+                        </h2>
+                        <p class="section-desc">
+                            Se cerchi una collaborazione professionale per SEO, web design o
+                            graphic design, possiamo iniziare proprio da qui.
+                        </p>
+                        <div class="cta-actions">
+                            <a href="/it/contact/" class="cta-btn primary-btn"
+                                >Richiedi una collaborazione</a
+                            >
+                            <a href="/it/services/" class="cta-btn secondary-btn"
+                                >Scopri i servizi</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-          <div class="list-wrapper">
-            <div class="portfolio-list" data-expandable-list>
-              <a
-                href="/it/portfolio/onlineshop-apakala/"
-                class="portfolio-row reveal-row" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Apa Kala</h3>
-                    <span class="portfolio-row__year">2025</span>
-                  </div>
-                  <span class="portfolio-row__hint">Sito web e-commerce</span>
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-
-              <a
-                href="/it/portfolio/onlineshop-partban/"
-                class="portfolio-row reveal-row" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Part Ban</h3>
-                    <span class="portfolio-row__year">2024</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Marketplace multi-venditore di ricambi auto</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-
-              <a
-                href="/it/portfolio/webdesign-mehmandar/"
-                class="portfolio-row reveal-row" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Mehmandar</h3>
-                    <span class="portfolio-row__year">2024</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Sito web di agenzia viaggi</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-
-              <a
-                href="/it/portfolio/webdesign-aplusvfx/"
-                class="portfolio-row reveal-row" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">A Plus VFX</h3>
-                    <span class="portfolio-row__year">2024</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Sito web di studio creativo</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-
-              <a
-                href="/it/portfolio/webdesign-payetakhtetala/"
-                class="portfolio-row reveal-row" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Paytakht Tala</h3>
-                    <span class="portfolio-row__year">2024</span>
-                  </div>
-                  <span class="portfolio-row__hint">Sito web aziendale</span>
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-
-              <a
-                href="/it/portfolio/webdesign-sabtfarhang/"
-                class="portfolio-row reveal-row" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Farhang Sabt</h3>
-                    <span class="portfolio-row__year">2024</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Sito web per servizi di registrazione societaria</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-
-              <a
-                href="/it/portfolio/webdesign-hevaaps/"
-                class="portfolio-row reveal-row" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Heva ApS</h3>
-                    <span class="portfolio-row__year">2023</span>
-                  </div>
-                  <span class="portfolio-row__hint">Sito web aziendale</span>
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-
-              <a
-                href="/it/portfolio/webdesign-rabi-foundation/"
-                class="portfolio-row reveal-row" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Rabi Foundation</h3>
-                    <span class="portfolio-row__year">2023</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Piattaforma per progetto crypto</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-
-              <a
-                href="/it/portfolio/webdesign-niavaransabt/"
-                class="portfolio-row reveal-row" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Niavaran Sabt</h3>
-                    <span class="portfolio-row__year">2023</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Sito web per servizi di registrazione societaria</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-
-              <a
-                href="/it/portfolio/webdesign-ptahvie/"
-                class="portfolio-row reveal-row" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Parsa Tahie</h3>
-                    <span class="portfolio-row__year">1401</span>
-                  </div>
-                  <span class="portfolio-row__hint">Sito web aziendale</span>
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-
-              <a
-                href="/it/portfolio/webdesign-spantaweb/"
-                class="portfolio-row reveal-row extra-item" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Spanta Web</h3>
-                    <span class="portfolio-row__year">2021</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Sito web di agenzia digitale</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-
-              <a
-                href="/it/portfolio/webdesign-pouyanabi/"
-                class="portfolio-row reveal-row extra-item" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Pouya Nabi</h3>
-                    <span class="portfolio-row__year">2021</span>
-                  </div>
-                  <span class="portfolio-row__hint">Portfolio personale</span>
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-
-              <a
-                href="/it/portfolio/landingpage-cadinu/"
-                class="portfolio-row reveal-row extra-item" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Cadinu Inu</h3>
-                    <span class="portfolio-row__year">2021</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Landing page per progetto crypto</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-
-              <a
-                href="/it/portfolio/onlineshop-zrmr/"
-                class="portfolio-row reveal-row extra-item" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Zomorrod Rokh</h3>
-                    <span class="portfolio-row__year">2020</span>
-                  </div>
-                  <span class="portfolio-row__hint">Sito web e-commerce</span>
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-
-              <a
-                href="/it/portfolio/webdesign-alzahravfx/"
-                class="portfolio-row reveal-row extra-item" data-status="done"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Alzahra VFX</h3>
-                    <span class="portfolio-row__year">2020</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Sito web di studio creativo</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-            </div>
-
-            <div class="list-action reveal-up">
-              <button class="show-more-btn" data-toggle-list type="button">
-                <span>Mostra di più</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-<section-divider role="presentation" aria-hidden="true"></section-divider>
-      <!-- :::::::::::::::::::::::::: WEB APPS / PROGRAMMING :::::::::::::::::::::::::: -->
-      <section id="web-apps" class="portfolio-list-section section-dark">
-        <div class="container-1080">
-          <div class="section-heading reveal-up">
-            <p class="eyebrow">Percorso di Sviluppo</p>
-            <h2 class="section-title split-title">Portfolio di Sviluppo</h2>
-            <p class="section-desc">
-              Progetti software, applicazioni web e script personalizzati —
-              clicca su qualsiasi titolo per scoprire i dettagli.
-            </p>
-          </div>
-
-          <div class="list-wrapper">
-            <div class="portfolio-list" data-expandable-list>
-              <a
-                href="/it/portfolio/develop-qerlo/"
-                class="portfolio-row reveal-row" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Qerlo</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Accorciatore di link (HTML / CSS / JS)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-
-              <a
-                href="/it/portfolio/develop-tivra/"
-                class="portfolio-row reveal-row" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Tivra</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Minificatore di codice (HTML / CSS / JS)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-
-              <a
-                href="/it/portfolio/develop-valeno/"
-                class="portfolio-row reveal-row" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Valeno</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Promemoria scadenze (HTML / CSS / JS)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-
-              <a
-                href="/it/portfolio/develop-brilo/"
-                class="portfolio-row reveal-row" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Brilo</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Test di velocità (HTML / CSS / JS)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-
-              <a
-                href="/it/portfolio/develop-fiora/"
-                class="portfolio-row reveal-row" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Fiora</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Tracker del ciclo mestruale (HTML / CSS / JS /
-                    Supabase)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-
-              <a
-                href="/it/portfolio/develop-sorbi/"
-                class="portfolio-row reveal-row" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Sorbi</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Generatore robots.txt (HTML / CSS / JS)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-
-              <a
-                href="/it/portfolio/develop-belluno/"
-                class="portfolio-row reveal-row" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Belluno</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Lista dei desideri (HTML / CSS / JS / Supabase)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-
-              <a
-                href="/it/portfolio/develop-nuvello/"
-                class="portfolio-row reveal-row" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Nuvello</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >App sfondi (HTML / CSS / JS / Supabase)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-
-              <a
-                href="/it/portfolio/develop-velto/"
-                class="portfolio-row reveal-row" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Velto</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Ispettore meta tag (HTML / CSS / JS)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-
-              <a
-                href="/it/portfolio/develop-alviano/"
-                class="portfolio-row reveal-row" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Alviano</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Gestore ricette (HTML / CSS / JS / Supabase)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-
-              <a
-                href="/it/portfolio/develop-galvo/"
-                class="portfolio-row reveal-row extra-item" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Galvo</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Convertitore video (HTML / CSS / JS)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-xelpo/"
-                class="portfolio-row reveal-row extra-item" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Xelpo</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Generatore di password (HTML / CSS / JS / Supabase)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-lemro/"
-                class="portfolio-row reveal-row extra-item" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Lemro</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Ricerca parole chiave (HTML / CSS / JS / Supabase)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-dirmo/"
-                class="portfolio-row reveal-row extra-item" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Dirmo</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Controllo DNS (HTML / CSS / JS)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-hirvo/"
-                class="portfolio-row reveal-row extra-item" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Hirvo</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Densità parole chiave (HTML / CSS / JS)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-jorvi/"
-                class="portfolio-row reveal-row extra-item" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Jorvi</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Gestore redirect (HTML / CSS / JS)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-mirto/"
-                class="portfolio-row reveal-row extra-item" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Mirto</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Gestione clienti (HTML / CSS / JS / Supabase)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-rinvo/"
-                class="portfolio-row reveal-row extra-item" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Rinvo</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Contabilità (HTML / CSS / JS / Supabase)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-yelmo/"
-                class="portfolio-row reveal-row extra-item" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Yelmo</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Generatore nomi brand (HTML / CSS / JS)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-fresca/"
-                class="portfolio-row reveal-row extra-item" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Fresca</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Strumento colori (HTML / CSS / JS)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-mavero/"
-                class="portfolio-row reveal-row extra-item" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Mavero</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Tracker allenamenti (HTML / CSS / JS / Supabase)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-cedro/"
-                class="portfolio-row reveal-row extra-item" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Cedro</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Flashcard (HTML / CSS / JS / Supabase)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-orvella/"
-                class="portfolio-row reveal-row" data-status="in-progress"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Orvella</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Gestore link interni (HTML / CSS / JS / Supabase)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-tempozio/"
-                class="portfolio-row reveal-row" data-status="in-progress"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Tempozio</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Tracker del tempo (HTML / CSS / JS / Supabase)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-ravlo/"
-                class="portfolio-row reveal-row" data-status="in-progress"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Ravlo</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Calendario (HTML / CSS / JS / Supabase)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-dashboard/"
-                class="portfolio-row reveal-row extra-item" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Pannello utente</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >HTML / CSS / JS / Supabase</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-tavio/"
-                class="portfolio-row reveal-row" data-status="in-progress"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Tavio</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Libreria prompt (HTML / CSS / JS / Supabase)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-codara/"
-                class="portfolio-row reveal-row extra-item" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Codara</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Generatore servizi (HTML / CSS / JS)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-falco/"
-                class="portfolio-row reveal-row extra-item" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Falco</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Generatore favicon (HTML / CSS / JS)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-lume/"
-                class="portfolio-row reveal-row" data-status="in-progress"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Lume</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Convertitore epoch (HTML / CSS / JS)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-ubiro/"
-                class="portfolio-row reveal-row extra-item" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Ubiro</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Calcolatore costo birra (HTML / CSS / JS)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-semora/"
-                class="portfolio-row reveal-row extra-item" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Semora</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Generatore schema (HTML / CSS / JS)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-nolvo/"
-                class="portfolio-row reveal-row extra-item" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Nolvo</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Generatore sitemap (HTML / CSS / JS)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-zorio/"
-                class="portfolio-row reveal-row" data-status="in-progress"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Zorio</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Convertitore immagini (HTML / CSS / JS)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-refacto/"
-                class="portfolio-row reveal-row extra-item" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Refacto</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Formattatore codice (HTML / CSS / JS)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-              <a
-                href="/it/portfolio/develop-pilvo/"
-                class="portfolio-row reveal-row extra-item" data-status="not-started"
-              >
-                <span class="portfolio-row__index"></span>
-                <div class="portfolio-row__content">
-                  <div class="portfolio-row__top">
-                    <h3 class="portfolio-row__title">Pilvo</h3>
-                    <span class="portfolio-row__year">2026</span>
-                  </div>
-                  <span class="portfolio-row__hint"
-                    >Editor di testo (HTML / CSS / JS)</span
-                  >
-                </div>
-                <span class="portfolio-row__glow"></span>
-                <span class="portfolio-row__line"></span>
-              </a>
-            </div>
-
-            <div class="list-action reveal-up">
-              <button class="show-more-btn" data-toggle-list type="button">
-                <span>Mostra di Più</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-<section-divider role="presentation" aria-hidden="true"></section-divider>
-      <!-- :::::::::::::::::::::::::: GRAPHIC DESIGN CATEGORIES :::::::::::::::::::::::::: -->
-      <section id="graphic-categories" class="graphic-section section-dark">
-        <div class="container-1080">
-          <div class="section-heading reveal-up">
-            <p class="eyebrow">Percorso di realizzazione</p>
-            <h2 class="section-title split-title">
-              Progetti di graphic design
-            </h2>
-            <p class="section-desc">
-              I progetti di graphic design sono suddivisi per categoria e
-              disponibili in pagine dedicate.
-            </p>
-          </div>
-        </div>
-
-        <div class="container-1300">
-          <div class="graphic-grid">
-            <a
-              href="/it/portfolio/logodesign/"
-              class="graphic-card reveal-card"
-            >
-              <span class="graphic-card__shine"></span>
-              <div class="graphic-card__content">
-                <span class="graphic-card__index">01</span>
-                <h3>Esempi di loghi</h3>
-                <p>
-                  Scopri una selezione di loghi creati per brand e attività di
-                  settori diversi.
-                </p>
-              </div>
-            </a>
-
-            <a
-              href="/it/portfolio/businesscarddesign/"
-              class="graphic-card reveal-card"
-            >
-              <span class="graphic-card__shine"></span>
-              <div class="graphic-card__content">
-                <span class="graphic-card__index">02</span>
-                <h3>Esempi biglietti da visita</h3>
-                <p>
-                  Una raccolta di biglietti da visita dal design moderno,
-                  professionale e minimalista.
-                </p>
-              </div>
-            </a>
-
-            <a
-              href="/it/portfolio/letterheaddesign/"
-              class="graphic-card reveal-card"
-            >
-              <span class="graphic-card__shine"></span>
-              <div class="graphic-card__content">
-                <span class="graphic-card__index">03</span>
-                <h3>Carta intestata esempio</h3>
-                <p>
-                  Progettazione di carta intestata aziendale e istituzionale,
-                  coerente con l’identità visiva del brand.
-                </p>
-              </div>
-            </a>
-
-            <a
-              href="/it/portfolio/cataloguedesign/"
-              class="graphic-card reveal-card"
-            >
-              <span class="graphic-card__shine"></span>
-              <div class="graphic-card__content">
-                <span class="graphic-card__index">04</span>
-                <h3>Esempi cataloghi</h3>
-                <p>
-                  Progetti di cataloghi pensati per presentare prodotti e
-                  servizi in modo professionale e convincente.
-                </p>
-              </div>
-            </a>
-
-            <a
-              href="/it/portfolio/contractpagedesign/"
-              class="graphic-card reveal-card"
-            >
-              <span class="graphic-card__shine"></span>
-              <div class="graphic-card__content">
-                <span class="graphic-card__index">05</span>
-                <h3>Esempi di moduli di contratto</h3>
-                <p>
-                  Progettazione di moduli e documenti contrattuali ordinati,
-                  professionali e coerenti con l’immagine del brand.
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-<section-divider role="presentation" aria-hidden="true"></section-divider>
-      <!-- :::::::::::::::::::::::::: PORTFOLIO CTA :::::::::::::::::::::::::: -->
-      <section class="portfolio-cta section-dark">
-        <div class="container-1080">
-          <div class="cta-box reveal-up">
-            <span class="cta-glow"></span>
-            <p class="eyebrow">Iniziamo da qui</p>
-            <h2 class="section-title split-title">
-              Pronto a dare vita al tuo prossimo progetto?
-            </h2>
-            <p class="section-desc">
-              Se cerchi una collaborazione professionale per SEO, web design o
-              graphic design, possiamo iniziare proprio da qui.
-            </p>
-            <div class="cta-actions">
-              <a href="/it/contact/" class="cta-btn primary-btn"
-                >Richiedi una collaborazione</a
-              >
-              <a href="/it/services/" class="cta-btn secondary-btn"
-                >Scopri i servizi</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
 
         <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
 
@@ -1762,15 +1649,16 @@
 
 
         <!-- :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: -->
+
         <script src="/assets/src/core/i18n.js"></script>
         <script type="module" src="/assets/src/components/header.js"></script>
         <script src="/assets/src/components/blurup.js"></script>
         <script type="module" src="/assets/src/components/language-selector.js"></script>
         <script src="/assets/src/components/terminal-breadcrumb.js"></script>
         <script type="module" src="/assets/src/components/footer.js"></script>
-<script type="module" src="/assets/src/components/back-to-top.js"></script>
-<script src="/assets/src/core/cursor.js"></script>
-<script src="/assets/src/core/loader.js"></script>
+        <script type="module" src="/assets/src/components/back-to-top.js"></script>
+        <script src="/assets/src/core/cursor.js"></script>
+        <script src="/assets/src/core/loader.js"></script>
         <script src="/assets/src/core/animations.js"></script>
-  </body>
+    </body>
 </html>

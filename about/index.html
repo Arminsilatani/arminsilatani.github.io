@@ -3,7 +3,6 @@
     <head>
 
 
-
         <!-- :::::::::::::::::::::::::: HEAD & META :::::::::::::::::::::::::: -->
 
         <meta charset="UTF-8" />
@@ -30,7 +29,6 @@
 
         <!-- :::::::::::::::::::::::::: STYLESHEETS & FONTS :::::::::::::::::::::::::: -->
 
-        <!-- CORE -->
         <link rel="stylesheet" href="/assets/src/core/z-index.css" />
         <link rel="stylesheet" href="/assets/src/core/fonts.css" />
         <link rel="stylesheet" href="/assets/src/core/base.css" />
@@ -39,14 +37,11 @@
         <link rel="stylesheet" href="/assets/src/core/animations.css" />
         <link rel="stylesheet" href="/assets/src/core/cursor.css" />
         <link rel="stylesheet" href="/assets/src/core/loader.css" />
-
-        <!-- COMPONENTS -->
         <link rel="stylesheet" href="/assets/src/components/hero.css" />
         <link rel="stylesheet" href="/assets/src/components/section-divider.css" />
         <link rel="stylesheet" href="/assets/src/components/terminal-breadcrumb.css" />
-
-        <!-- PAGE -->
         <link rel="stylesheet" href="/assets/src/styles/about.css" />
+
 
 
         <!-- :::::::::::::::::::::::::: OPEN GRAPH & TWITTER CARDS :::::::::::::::::::::::::: -->
@@ -141,25 +136,30 @@
 
 
         <!-- :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: -->
-<!-- در تگ HEAD -->
-<script src="/assets/src/core/gsap.min.js" defer></script>
-<script src="/assets/src/core/ScrollTrigger.min.js" defer></script>
-<script src="/assets/src/core/lottie_light.min.js" defer></script>
 
+        <script src="/assets/src/core/lottie_light.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     </head>
 
     <body>
 
-          <!-- Neon Dots Full-Page Loader -->
-  <div id="initial-loader" class="fullpage-loader">
-    <div class="lds-grid">
-      <div></div><div></div><div></div>
-      <div></div><div></div><div></div>
-      <div></div><div></div><div></div>
-    </div>
-  </div>
+        <div id="initial-loader" class="fullpage-loader">
+            <div class="lds-grid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
         <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+        <div class="cursor-follower"></div>
 
 
 
@@ -342,7 +342,7 @@
                         <div class="step-year">${year}</div>
                     </div>
                     <div class="content-text">
-                        <span class="section-eyebrow">${data.context || ""}</span>
+                        <span class="eyebrow">${data.context || ""}</span>
                         <h2 class="step-title">${data.title}</h2>
                         <p class="step-text">${data.text}</p>
                     </div>

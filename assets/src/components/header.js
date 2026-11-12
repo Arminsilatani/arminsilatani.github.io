@@ -6,12 +6,13 @@ class HeaderComponent extends HTMLElement {
 
         const shadow = this.attachShadow({ mode: "open" });
 
-        /* :::::::::::::::::::::::::: LANGUAGE DETECTION :::::::::::::::::::::::::: */
+
+/* :::::::::::::::::::::::::: LANGUAGE DETECTION :::::::::::::::::::::::::: */
+
         const lang = window.i18n.detectLang();
         const dict = window.i18n.TRANSLATIONS[lang];
         const isRTL = dict.dir === "rtl";
 
-        /* مقادیر وابسته به جهت — به‌عنوان CSS variable پاس داده می‌شوند */
         const textAlign       = isRTL ? "right" : "left";
         const transformOrigin = isRTL ? "right center" : "left center";
         const menuWrapperLeft = isRTL ? "43%" : "57%";
@@ -22,13 +23,16 @@ class HeaderComponent extends HTMLElement {
         this.style.setProperty("--header-transform-origin", transformOrigin);
         this.style.setProperty("--header-menu-left", menuWrapperLeft);
 
-        /* :::::::::::::::::::::::::: STYLESHEET :::::::::::::::::::::::::: */
+
+/* :::::::::::::::::::::::::: STYLESHEET :::::::::::::::::::::::::: */
+
         const link = document.createElement("link");
         link.rel = "stylesheet";
         link.href = "/assets/src/components/header.css";
         shadow.appendChild(link);
 
-        /* :::::::::::::::::::::::::: DOM STRUCTURE :::::::::::::::::::::::::: */
+
+/* :::::::::::::::::::::::::: DOM STRUCTURE :::::::::::::::::::::::::: */
 
         const container = document.createElement("div");
         container.className = "container";
@@ -74,7 +78,9 @@ class HeaderComponent extends HTMLElement {
 
         const path = lineBox.querySelector(".elastic");
 
-        /* :::::::::::::::::::::::::: MENU ITEMS (خودکار از i18n) :::::::::::::::::::::::::: */
+
+/* :::::::::::::::::::::::::: MENU ITEMS :::::::::::::::::::::::::: */
+
         const menuItems = window.i18n.getMenuItems();
 
         const menu = document.createElement("nav");
@@ -90,7 +96,9 @@ class HeaderComponent extends HTMLElement {
         wrapper.append(lineBox, menu);
         overlayDark.appendChild(wrapper);
 
-        /* :::::::::::::::::::::::::: TOGGLE LOGIC :::::::::::::::::::::::::: */
+
+/* :::::::::::::::::::::::::: TOGGLE LOGIC :::::::::::::::::::::::::: */
+
         let animating = false;
 
         button.addEventListener("click", () => {
@@ -114,7 +122,9 @@ class HeaderComponent extends HTMLElement {
             toggleTrack.classList.toggle("active");
         });
 
-        /* :::::::::::::::::::::::::: ANIMATION ENGINE :::::::::::::::::::::::::: */
+
+/* :::::::::::::::::::::::::: ANIMATION ENGINE :::::::::::::::::::::::::: */
+
         const links = [...menu.querySelectorAll("a")];
         const currentUrl = window.location.pathname;
 
@@ -150,7 +160,9 @@ class HeaderComponent extends HTMLElement {
             requestAnimationFrame(animate);
         }
 
-        /* :::::::::::::::::::::::::: HOVER EFFECTS :::::::::::::::::::::::::: */
+
+/* :::::::::::::::::::::::::: HOVER EFFECTS :::::::::::::::::::::::::: */
+
         links.forEach((a, i) => {
             a.addEventListener("mouseenter", () => {
                 targets.fill(0);
@@ -170,12 +182,16 @@ class HeaderComponent extends HTMLElement {
             targetY = 192;
         });
 
-        /* :::::::::::::::::::::::::: MOUNT :::::::::::::::::::::::::: */
+
+/* :::::::::::::::::::::::::: MOUNT :::::::::::::::::::::::::: */
+
         shadow.append(container, overlay, overlayDark);
     }
 }
 
+
 /* :::::::::::::::::::::::::: REGISTER :::::::::::::::::::::::::: */
+
 if (!customElements.get("header-component")) {
     customElements.define("header-component", HeaderComponent);
 }

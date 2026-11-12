@@ -1,24 +1,25 @@
-/* ===================================================================== */
-/* ABOUT SECTION                                                         */
-/* ===================================================================== */
+/* :::::::::::::::::::::::::: ABOUT :::::::::::::::::::::::::: */
 
 .about-section {
     height: auto;
     align-items: flex-start;
     box-sizing: border-box;
+    padding: 40px 0;
 }
 
 .about-container {
     width: 100%;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 25px;
+    text-align: center;
 }
 
 .about-image {
-    width: 275px;
+    width: 80%;
+    max-width: 240px;
 }
 
 .about-image img,
@@ -30,14 +31,12 @@
 }
 
 .about-text {
-    max-width: 600px;
+    max-width: 90%;
 }
 
 .about-text h1 {
     margin-bottom: 20px;
 }
-
-/* در home.css */
 
 .about-section h1 {
     color: #F5F5F5;
@@ -45,19 +44,21 @@
     text-shadow: none;
 }
 
-/* ===================================================================== */
-/* SERVICES SECTION                                                      */
-/* ===================================================================== */
+
+/* :::::::::::::::::::::::::: SERVICES :::::::::::::::::::::::::: */
 
 .services-section {
     width: 100%;
     max-width: 1080px;
     margin: 0 auto;
-    padding: 60px 0;
     background: #0D0D0D;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr) 1fr;
-    gap: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 25px;
+    padding: 0 25px;
+    box-sizing: border-box;
     align-items: stretch;
 }
 
@@ -66,11 +67,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 0 15px;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    min-height: 50vh;
+    justify-content: center;
 }
 
 .service-main {
     overflow: visible;
+    padding: 0 15px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .service-main .service-header img {
@@ -81,15 +89,13 @@
     transition: transform 0.4s ease;
 }
 
-/* کلمه‌ی اول */
 .script-heading__word--accent {
     color: #4ECDC4;
     font-weight: 900;
 }
 
-/* کلمه‌ی دوم */
 .script-heading__word--sub {
-    color: #f5f5f5;
+    color: #F5F5F5;
     letter-spacing: 0.02em;
 }
 
@@ -105,11 +111,6 @@
 
 .script-heading__word {
     display: inline-block;
-    
-}
-
-.script-heading__word--accent {
-    color: #4ECDC4;
 }
 
 .script-heading--box {
@@ -122,18 +123,8 @@
     gap: 0 0.1em;
 }
 
-/* فقط هدینگ‌های داخل باکس‌های TV */
 .script-heading--box .script-heading__word {
     font-size: clamp(1.5rem, 1.6vw, 1.15rem);
-    
-}
-
-.tv-static-container .script-heading--box {
-    transition: transform 0.3s ease-in-out;
-}
-
-.tv-static-container:hover .script-heading--box {
-    transform: scale(1.15);
 }
 
 .script-heading--services {
@@ -141,9 +132,9 @@
     justify-content: flex-start;
     text-align: start;
 }
-/* ===================================================================== */
-/* TESTIMONIALS SECTION                                                  */
-/* ===================================================================== */
+
+
+/* :::::::::::::::::::::::::: TESTIMONIALS :::::::::::::::::::::::::: */
 
 .testimonials-section {
     background: #0D0D0D;
@@ -179,14 +170,7 @@
 }
 
 
-/* ===================================================================== */
-/* TV STATIC COMPONENT                                                   */
-/* ===================================================================== */
-/*
- * clip-path روی کانتینر یه stacking context می‌سازه.
- * در نتیجه تمام z-indexهای داخل این کامپوننت «محلی» هستن
- * و با هدر/منو/مودال مقایسه نمی‌شن.
- */
+/* :::::::::::::::::::::::::: TV STATIC COMPONENT :::::::::::::::::::::::::: */
 
 .tv-static-container {
     position: relative;
@@ -194,14 +178,14 @@
     cursor: pointer;
     clip-path: polygon(35px 0, 100% 0, 100% 100%, 0 100%, 0 35px);
     overflow: hidden;
+    min-height: 50vh;
 }
 
-/* --- خط تزئینی گوشه (بالای همه چیز، به‌جز link) --- */
 .tv-static-container::before {
     content: "";
     position: absolute;
     inset: 0;
-    z-index: calc(var(--z-decorative) + 2);    /* 3 — بود 3 */
+    z-index: calc(var(--z-decorative) + 2);
     background: linear-gradient(135deg, #4ECDC4 24px, transparent 25px);
     opacity: 0.7;
     transition: opacity 0.3s ease, filter 0.3s ease;
@@ -214,14 +198,13 @@
             drop-shadow(0 0 30px rgba(78, 205, 196, 0.4));
 }
 
-/* --- ویدیو پس‌زمینه --- */
 .tv-static-container .service-video {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: var(--z-decorative);              /* 1 — بود 1 */
+    z-index: var(--z-decorative);
     opacity: 0;
     pointer-events: none;
     filter: grayscale(1);
@@ -233,12 +216,11 @@
     opacity: 1;
 }
 
-/* --- گرادیان تیره برای خوانایی --- */
 .tv-static-container::after {
     content: "";
     position: absolute;
     inset: 0;
-    z-index: calc(var(--z-decorative) + 1);    /* 2 — بود 2 */
+    z-index: calc(var(--z-decorative) + 1);
     pointer-events: none;
     background: linear-gradient(
         to bottom,
@@ -256,119 +238,240 @@
     opacity: 1;
 }
 
-/* --- لایه‌ی کلیک (stretched link) — بالاترین لایه --- */
 .tv-static-container .service-link {
     position: absolute;
     inset: 0;
-    z-index: var(--z-raised);                  /* 20 — بود 5 */
+    z-index: var(--z-raised);
     display: block;
     cursor: pointer;
 }
-/* در home.css */
 
-/* پس‌زمینه‌ی روشن برای هیرو صفحه اصلی */
+.tv-static-container .script-heading--box {
+    transition: transform 0.3s ease-in-out;
+    transform-origin: bottom right;
+}
+
+.tv-static-container:hover .script-heading--box {
+    transform: scale(1.15);
+}
+
+
+/* :::::::::::::::::::::::::: HERO :::::::::::::::::::::::::: */
+
 .hero-section {
     background: #F5F5F5;
 }
 
-/* حذف سایه‌ی تیره‌ی پایین که فقط برای خوانایی روی ویدیو لازم بود */
 .hero-section::before {
     display: none;
 }
-.tv-static-container .script-heading--box {
-    transform-origin: bottom right;
+
+@media (orientation: portrait) {
+
+    .about-image {
+        display: none;
+    }
+
 }
-/* ===================================================================== */
-/* RESPONSIVE                                                            */
-/* ===================================================================== */
 
-@media (max-width: 768px) {
+/* :::::::::::::::::::::::::: MOBILE ONLY :::::::::::::::::::::::::: */
 
-    /* --- SERVICES --- */
+@media (max-width: 767px) {
+
+    /* :::::::::::::::::::::::::: SERVICES :::::::::::::::::::::::::: */
+
     .services-section {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        gap: 25px;
-        padding: 0 25px;
-        box-sizing: border-box;
+        --active-width: 75%;
+        padding-inline: calc((100% - var(--active-width)) / 2);
     }
 
-    .service-item {
+    .services-section .service-item {
         flex: 0 0 100%;
-        scroll-snap-align: start;
+        scroll-snap-align: center;
     }
 
-    .service-item,
-    .service-main {
-        padding: 0 15px;
-    }
-
-    .service-main {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-text {
-        text-align: center;
-    }
-
-    /* --- BOXES HEIGHT --- */
-    .service-item {
-        flex: 0 0 100%;
-        scroll-snap-align: start;
-        min-height: 70vh;
-        display: flex;
-        flex-direction: column;
+    .services-section .script-heading--services {
+        font-size: 3rem;
         justify-content: center;
+        text-align: center; 
     }
 
-    .tv-static-container {
-        min-height: 70vh;
-    }
+}
 
-    /* --- ABOUT --- */
-    .about-section {
-        height: auto;
-        padding: 40px 0;
-    }
+/* :::::::::::::::::::::::::: 320PX - XS - IPHONE 5 (320X568) :::::::::::::::::::::::::: */
 
-    .about-container {
-        flex-direction: column;
-        gap: 25px;
-        text-align: center;
-    }
+@media (min-width: 320px) {
+
+}
+
+@media (min-width: 568px) and (max-height: 320px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 380PX - S - GALAXY Z FLIP 3 / S24 ULTRA (380X880) :::::::::::::::::::::::::: */
+
+@media (min-width: 380px) {
+
+}
+
+@media (min-width: 880px) and (max-height: 412px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 440PX - S+ - IPHONE 17 PRO MAX (440X956) :::::::::::::::::::::::::: */
+
+@media (min-width: 440px) {
+
+}
+
+@media (min-width: 956px) and (max-height: 440px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 480PX - M - LARGE MOBILE :::::::::::::::::::::::::: */
+
+@media (min-width: 480px) {
+
+    /* :::::::::::::::::::::::::: ABOUT :::::::::::::::::::::::::: */
 
     .about-image {
         width: 70%;
         max-width: 280px;
     }
 
+}
+
+@media (min-width: 480px) and (max-height: 500px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 768PX - TAB - IPAD MINI / GALAXY FOLD INNER (768X1024) :::::::::::::::::::::::::: */
+
+@media (min-width: 768px) {
+
+    /* :::::::::::::::::::::::::: ABOUT :::::::::::::::::::::::::: */
+
+    .about-section {
+        padding: 0;
+    }
+
+    .about-container {
+        flex-direction: row-reverse;
+        gap: 40px;
+        text-align: start;
+    }
+
+    .about-image {
+        width: 275px;
+        max-width: none;
+    }
+
     .about-text {
-        max-width: 90%;
+        max-width: 600px;
     }
-}
 
 
-@media (max-width: 480px) {
-    .about-image {
-        width: 80%;
-        max-width: 240px;
-    }
-}
-@media (orientation: portrait) {
-    .about-image {
-        display: none;
-    }
-}
+    /* :::::::::::::::::::::::::: SERVICES :::::::::::::::::::::::::: */
 
-@media (max-width: 768px) {
+    .services-section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) 1fr;
+        gap: 20px;
+        padding: 60px 0;
+        flex-wrap: initial;
+        overflow-x: visible;
+        scroll-snap-type: none;
+        box-sizing: content-box;
+    }
+
     .service-item {
-        min-height: 50vh;
+        padding: 20px;
+        flex: initial;
+        scroll-snap-align: none;
+        min-height: auto;
+        justify-content: normal;
     }
+
+    .service-main {
+        padding: 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    /* :::::::::::::::::::::::::: TV STATIC COMPONENT :::::::::::::::::::::::::: */
 
     .tv-static-container {
-        min-height: 50vh;
+        min-height: auto;
     }
+
+}
+
+@media (min-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 800PX - TAB+ - GALAXY TAB S7 (800X1280) :::::::::::::::::::::::::: */
+
+@media (min-width: 800px) {
+
+}
+
+@media (min-width: 1280px) and (max-height: 800px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 1024PX - L - IPAD PRO 13 (1024X1376) :::::::::::::::::::::::::: */
+
+@media (min-width: 1024px) {
+
+    /* :::::::::::::::::::::::::: SERVICES :::::::::::::::::::::::::: */
+
+    .services-section .service-main {
+        justify-content: center;
+    }
+
+    .services-section .service-item,
+    .services-section .tv-static-container {
+        min-height: clamp(380px, 45vh, 540px);
+    }
+
+}
+
+@media (min-width: 1376px) and (max-height: 1032px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 1366PX - XL - DESKTOP / LAPTOP FHD :::::::::::::::::::::::::: */
+
+@media (min-width: 1366px) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 1920PX - 2XL - FULL HD / 2K :::::::::::::::::::::::::: */
+
+@media (min-width: 1920px) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 2560PX - UW - ULTRAWIDE / 4K UHD :::::::::::::::::::::::::: */
+
+@media (min-width: 2560px) {
+
+}
+
+
+/* :::::::::::::::::::::::::: LANDSCAPE PHONE - GENERAL LOW HEIGHT :::::::::::::::::::::::::: */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
 }

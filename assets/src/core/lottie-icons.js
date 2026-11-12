@@ -1,6 +1,5 @@
-// =========================================
-// LOTTIE ICONS — راه‌اندازی مرکزی
-// =========================================
+/* :::::::::::::::::::::::::: LOTTIE ICONS :::::::::::::::::::::::::: */
+
 function initLottieIcons() {
   if (typeof lottie === 'undefined') {
     console.warn('[lottie-icons] lottie library not loaded');
@@ -8,7 +7,7 @@ function initLottieIcons() {
   }
 
   document.querySelectorAll('[data-lottie]').forEach(container => {
-    if (container._lottieInstance) return; // دوبار لود نشود
+    if (container._lottieInstance) return;
 
     const path = container.dataset.lottie;
     if (!path) return;
@@ -25,7 +24,6 @@ function initLottieIcons() {
 
     container._lottieInstance = anim;
 
-    // رنگ‌آمیزی با متغیر CSS (var(--accent) یا currentColor)
     anim.addEventListener('DOMLoaded', () => {
       const svg = container.querySelector('svg');
       if (!svg) return;
@@ -37,7 +35,6 @@ function initLottieIcons() {
       });
     });
 
-    // رفتار بر اساس mode
     if (mode === 'hover') {
       const parent = container.closest('.editorial-item, .service-box, .card, a, button') || container;
       parent.addEventListener('mouseenter', () => anim.goToAndPlay(0, true));
@@ -50,7 +47,6 @@ function initLottieIcons() {
   });
 }
 
-// اجرا بعد از لود کامل DOM
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initLottieIcons);
 } else {

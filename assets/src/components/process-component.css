@@ -1,33 +1,6 @@
-/* ===================================================================== */
-/* PROCESS COMPONENT                                                     */
-/* ===================================================================== */
-/*
- * استفاده:
- *   <process-component class="process-grid categories-grid">
- *       <article class="process-box"> ... </article>
- *   </process-component>
- *
- * نکته: id="process" روی section والد باید باشد.
- *
- * حالت‌ها:
- *   - عادی (بدون کلاس) : بسته، فقط step و vtitle
- *   - is-hover         : هاور، ۱۵٪ بزرگ‌تر + تصویر بلر به عنوان پیش‌نمایش
- *   - is-open          : کلیک، باز کامل با تصویر شارپ و محتوا
- */
-
-
-/* ===================================================================== */
-/* ========================= CUSTOM ELEMENT ============================ */
-/* ===================================================================== */
-
 process-component {
     display: block;
 }
-
-
-/* ===================================================================== */
-/* ======================= BASE / VARIABLES ============================ */
-/* ===================================================================== */
 
 #process {
     --process-box-h: 400px;
@@ -43,18 +16,12 @@ process-component {
     --closed-line-height: 20px;
     --open-line-width: 30px;
 
-    /* مقدار بزرگ‌شدن باکس هنگام هاور (1.15 = ۱۵٪) */
     --process-hover-flex: 1.15;
 }
 
 #process .section-title {
     margin-top: 0;
 }
-
-
-/* ===================================================================== */
-/* ============================== GRID ================================= */
-/* ===================================================================== */
 
 #process .process-grid {
     display: flex;
@@ -66,14 +33,9 @@ process-component {
     justify-content: flex-start;
 }
 
-
-/* ===================================================================== */
-/* ============================== BOX ================================== */
-/* ===================================================================== */
-
 #process .process-box {
     position: relative;
-    isolation: isolate;          /* ← زمینه‌ی انباشت محلی */
+    isolation: isolate;
 
     height: var(--process-box-h, 400px);
     min-height: var(--process-box-h, 400px);
@@ -97,15 +59,10 @@ process-component {
     flex: 3.5 1 0%;
 }
 
-
-/* ===================================================================== */
-/* ========================= MEDIA / IMAGE ============================= */
-/* ===================================================================== */
-
 #process .process-box__media {
     position: absolute;
     inset: 0;
-    z-index: var(--z-decorative);   /* 1 */
+    z-index: var(--z-decorative);
 
     opacity: 0;
     visibility: hidden;
@@ -122,29 +79,22 @@ process-component {
     height: 100%;
     object-fit: cover;
 
-    /* 🔑 بلر پایه — همیشه اعمال است.
-       چون media در حالت بسته opacity: 0 است، دیده نمی‌شود.
-       نتیجه: هنگام خروج هاور (fade-out) هم تصویر بلر است و فلش شارپ نمی‌دهد.
-       ⚠️ filter عمداً در transition نیست تا آنی باشد */
     filter: blur(6px) brightness(0.55);
 
     transition: transform 0.45s ease;
 }
 
-/* --- حالت باز: تصویر نمایان --- */
 #process .process-box.is-open .process-box__media {
     opacity: 1;
     visibility: visible;
     transform: scale(1);
 }
 
-/* --- حالت باز: unblur نرم روی کلیک --- */
 #process .process-box.is-open .process-box__media img {
     filter: none;
     transition: transform 0.45s ease, filter 0.45s ease;
 }
 
-/* --- حالت باز: گرادیان تیره برای خوانایی متن روی تصویر --- */
 #process .process-box.is-open .process-box__media::after {
     content: '';
     position: absolute;
@@ -155,7 +105,7 @@ process-component {
         rgba(0, 0, 0, 0.55) 35%,
         rgba(0, 0, 0, 0.05) 70%
     );
-    z-index: var(--z-decorative);   /* 1 */
+    z-index: var(--z-decorative);
     pointer-events: none;
 }
 
@@ -168,14 +118,9 @@ process-component {
     );
 }
 
-
-/* ===================================================================== */
-/* ========================= META / CONTENT ============================ */
-/* ===================================================================== */
-
 #process .process-box__meta,
 #process .process-box__content {
-    z-index: var(--z-content);   /* 10 */
+    z-index: var(--z-content);
 }
 
 #process .process-box__meta {
@@ -213,7 +158,6 @@ process-component {
     opacity: 0.92;
 }
 
-/* ---------- LTR (desktop): چرخش vtitle ---------- */
 [dir="ltr"] #process .process-box:not(.is-open) .process-box__vtitle {
     writing-mode: vertical-rl;
     text-orientation: mixed;
@@ -255,16 +199,11 @@ process-component {
     overflow: hidden;
 }
 
-
-/* ===================================================================== */
-/* ==================== CLOSED STATE (desktop) ========================= */
-/* ===================================================================== */
-
 #process .process-box::before {
     content: '';
     position: absolute;
     background: var(--accent-line);
-    z-index: var(--z-content);   /* 10 */
+    z-index: var(--z-content);
     pointer-events: none;
     transition: all 0.3s ease;
 }
@@ -295,49 +234,6 @@ process-component {
     transform: translateY(10px);
     pointer-events: none;
 }
-
-
-/* ===================================================================== */
-/* ==================== HOVER PREVIEW STATE ============================ */
-/* ===================================================================== */
-/*
- * فقط روی دستگاه‌های دارای هاور واقعی و عرض دسکتاپ (min-width: 769px).
- * نتیجه: باکس ۱۵٪ بزرگ‌تر + تصویر بلر + خط تزئینی جلوی تصویر.
- * کلیک → باز شدن کامل (is-open).
- *
- * 🔑 نکته: filter این‌جا ست نمی‌شود — بلر از قاعده‌ی پایه‌ی img می‌آید.
- * این باعث می‌شود هنگام خروج هاور هم تصویر بلر بماند و فلش شارپ ندهد.
- */
-@media (hover: hover) and (min-width: 769px) {
-
-    /* ---------- ۱) باکس ۱۵٪ بزرگ‌تر ---------- */
-    #process .process-box.is-hover:not(.is-open) {
-        flex: var(--process-hover-flex, 1.15) 1 0%;
-    }
-
-    /* ---------- ۲) تصویر ظاهر می‌شود ---------- */
-    #process .process-box.is-hover:not(.is-open) .process-box__media {
-        opacity: 1;
-        visibility: visible;
-        transform: scale(1);
-    }
-
-    /* ---------- ۳) فقط زوم — بلر از قبل روی img پایه است ---------- */
-    #process .process-box.is-hover:not(.is-open) .process-box__media img {
-        transform: scale(1.1);
-    }
-
-    /* ---------- ۴) خط تزئینی بالای باکس — جلوی تصویر بلر باقی بماند ---------- */
-    #process .process-box.is-hover:not(.is-open)::before {
-        opacity: 1;
-        z-index: var(--z-raised);   /* 20 — بالای media و meta */
-    }
-}
-
-
-/* ===================================================================== */
-/* ====================== OPEN STATE (desktop) ========================= */
-/* ===================================================================== */
 
 #process .process-box.is-open::before {
     opacity: 0;
@@ -382,11 +278,6 @@ process-component {
     background: var(--accent-line);
 }
 
-
-/* ===================================================================== */
-/* ==================== LTR (desktop open) ============================= */
-/* ===================================================================== */
-
 [dir="ltr"] #process .process-box.is-open .process-box__meta {
     right: auto;
     left: var(--process-pad-x);
@@ -412,222 +303,317 @@ process-component {
 }
 
 
-/* ===================================================================== */
-/* ========================== RESPONSIVE =============================== */
-/* ===================================================================== */
+/* :::::::::::::::::::::::::: 320PX - XS - IPHONE 5 (320X568) :::::::::::::::::::::::::: */
 
-/* --------------------------------------------------------------------- */
-/* --- <=768px: Vertical Accordion ------------------------------------ */
-/* --------------------------------------------------------------------- */
-@media (max-width: 768px) {
+@media (min-width: 320px) {
 
-    /* ---------- Reset GSAP reveal ---------- */
-    #process .process-box.reveal-card,
-    #process .process-box.reveal-up {
-        opacity: 1;
-        visibility: visible;
-    }
+    @media (max-width: 768px) {
 
-    /* ---------- Grid عمودی ---------- */
-    #process .process-grid {
-        flex-direction: column;
-        height: auto;
-        overflow: visible;
-    }
+        #process .process-box.reveal-card,
+        #process .process-box.reveal-up {
+            opacity: 1;
+            visibility: visible;
+        }
 
-    /* ---------- BOX (بسته) ---------- */
-    #process .process-grid .process-box:not(.is-open) {
-        flex: 0 0 auto;
-        width: 100%;
-        height: 80px;
-        min-height: 80px;
-        max-height: 80px;
-        border-radius: 5px;
-    }
+        #process .process-grid {
+            flex-direction: column;
+            height: auto;
+            overflow: visible;
+        }
 
-    /* ---------- BOX (باز) ---------- */
-    #process .process-grid .process-box.is-open {
-        flex: 0 0 auto;
-        width: 100%;
-        height: 420px;
-        min-height: 420px;
-        max-height: 420px;
-    }
+        #process .process-grid .process-box:not(.is-open) {
+            flex: 0 0 auto;
+            width: 100%;
+            height: 80px;
+            min-height: 80px;
+            max-height: 80px;
+            border-radius: 5px;
+        }
 
-    /* ---------- خط تزئینی کنار باکس بسته ---------- */
-    #process .process-grid .process-box:not(.is-open)::before {
-        left: 0;
-        right: auto;
-        top: 50%;
-        width: var(--closed-line-height);
-        height: 1px;
-        transform: translateY(-50%);
-    }
+        #process .process-grid .process-box.is-open {
+            flex: 0 0 auto;
+            width: 100%;
+            height: 420px;
+            min-height: 420px;
+            max-height: 420px;
+        }
 
-    [dir="ltr"] #process .process-grid .process-box:not(.is-open)::before {
-        left: auto;
-        right: 0;
-    }
+        #process .process-grid .process-box:not(.is-open)::before {
+            left: 0;
+            right: auto;
+            top: 50%;
+            width: var(--closed-line-height);
+            height: 1px;
+            transform: translateY(-50%);
+        }
 
-    /* ---------- META — بستر کامل روی باکس ---------- */
-    #process .process-grid .process-box:not(.is-open) .process-box__meta {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: auto;
-        height: auto;
-        padding: 0;
-        margin: 0;
-        display: block;
-        transform: none;
-        gap: 0;
-        text-align: initial;
-        transition: none;
-    }
+        [dir="ltr"] #process .process-grid .process-box:not(.is-open)::before {
+            left: auto;
+            right: 0;
+        }
 
-    /* ---------- STEP ---------- */
-    #process .process-grid .process-box:not(.is-open) .process-box__step {
-        position: absolute;
-        top: 50%;
-        right: 20px;
-        left: auto;
-        bottom: auto;
-        transform: translateY(-50%) rotate(180deg);
-        margin: 0;
+        #process .process-grid .process-box:not(.is-open) .process-box__meta {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: auto;
+            height: auto;
+            padding: 0;
+            margin: 0;
+            display: block;
+            transform: none;
+            gap: 0;
+            text-align: initial;
+            transition: none;
+        }
 
-        writing-mode: vertical-rl;
-        text-orientation: mixed;
-        font-weight: bold;
-        font-size: 1.3rem;
-        line-height: 1;
-        color: #F5F5F5;
-    }
+        #process .process-grid .process-box:not(.is-open) .process-box__step {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            left: auto;
+            bottom: auto;
+            transform: translateY(-50%) rotate(180deg);
+            margin: 0;
 
-    /* ---------- VTITLE — دقیقاً وسط باکس ---------- */
-    #process .process-grid .process-box:not(.is-open) .process-box__vtitle {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        right: auto;
-        bottom: auto;
-        transform: translate(-50%, -50%);
-        margin: 0;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-weight: bold;
+            font-size: 1.3rem;
+            line-height: 1;
+            color: #F5F5F5;
+        }
 
-        writing-mode: horizontal-tb;
-        font-size: 0.9rem;
-        white-space: nowrap;
-        direction: rtl;
-        text-align: center;
-        color: #F5F5F5;
-        opacity: 0.92;
-    }
+        #process .process-grid .process-box:not(.is-open) .process-box__vtitle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            right: auto;
+            bottom: auto;
+            transform: translate(-50%, -50%);
+            margin: 0;
 
-    /* ---------- LTR: step و vtitle ---------- */
-    [dir="ltr"] #process .process-grid .process-box:not(.is-open) .process-box__step {
-        right: auto;
-        left: 20px;
-        transform: translateY(-50%);
-        font-size: 1rem;
-    }
+            writing-mode: horizontal-tb;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            direction: rtl;
+            text-align: center;
+            color: #F5F5F5;
+            opacity: 0.92;
+        }
 
-    [dir="ltr"] #process .process-grid .process-box:not(.is-open) .process-box__vtitle {
-        direction: ltr;
-    }
+        [dir="ltr"] #process .process-grid .process-box:not(.is-open) .process-box__step {
+            right: auto;
+            left: 20px;
+            transform: translateY(-50%);
+            font-size: 1rem;
+        }
 
-    /* ---------- حالت باز: step برگردد به حالت عادی ---------- */
-    #process .process-grid .process-box.is-open .process-box__step {
-        position: static;
-        top: auto;
-        right: auto;
-        bottom: auto;
-        left: auto;
-        transform: none;
-        writing-mode: horizontal-tb;
-        text-orientation: initial;
-        font-weight: 400;
-        font-size: 0.95rem;
-        line-height: 2.2;
-    }
+        [dir="ltr"] #process .process-grid .process-box:not(.is-open) .process-box__vtitle {
+            direction: ltr;
+        }
 
-    /* ---------- باکس باز ---------- */
-    #process .process-grid .process-box.is-open::before {
-        display: none;
-    }
+        #process .process-grid .process-box.is-open .process-box__step {
+            position: static;
+            top: auto;
+            right: auto;
+            bottom: auto;
+            left: auto;
+            transform: none;
+            writing-mode: horizontal-tb;
+            text-orientation: initial;
+            font-weight: 400;
+            font-size: 0.95rem;
+            line-height: 2.2;
+        }
 
-    #process .process-grid .process-box.is-open .process-box__content {
-        top: auto;
-        bottom: 24px;
-        right: var(--process-pad-x);
-        left: auto;
-        max-width: 80%;
-        transform: none;
-        text-align: right;
-    }
+        #process .process-grid .process-box.is-open::before {
+            display: none;
+        }
 
-    #process .process-grid .process-box.is-open .process-box__title {
-        font-size: 1.1rem;
-    }
+        #process .process-grid .process-box.is-open .process-box__content {
+            top: auto;
+            bottom: 24px;
+            right: var(--process-pad-x);
+            left: auto;
+            max-width: 80%;
+            transform: none;
+            text-align: right;
+        }
 
-    #process .process-grid .process-box.is-open .process-box__title::after {
-        width: 35px;
-        right: -20px;
-        top: 12px;
-    }
+        #process .process-grid .process-box.is-open .process-box__title {
+            font-size: 1.1rem;
+        }
 
-    #process .process-grid .process-box__media img {
-        object-position: center 30%;
-    }
+        #process .process-grid .process-box.is-open .process-box__title::after {
+            width: 35px;
+            right: -20px;
+            top: 12px;
+        }
 
-    /* ---------- LTR: باکس باز ---------- */
-    [dir="ltr"] #process .process-grid .process-box.is-open .process-box__content {
-        right: auto;
-        left: var(--process-pad-x);
-        text-align: left;
-    }
+        #process .process-grid .process-box__media img {
+            object-position: center 30%;
+        }
 
-    [dir="ltr"] #process .process-grid .process-box.is-open .process-box__title {
-        padding-right: 0;
-        padding-left: calc(var(--open-line-width) - 5px);
-    }
+        [dir="ltr"] #process .process-grid .process-box.is-open .process-box__content {
+            right: auto;
+            left: var(--process-pad-x);
+            text-align: left;
+        }
 
-    [dir="ltr"] #process .process-grid .process-box.is-open .process-box__title::after {
-        right: auto;
-        left: -15px;
-        top: 12px;
-    }
-}
+        [dir="ltr"] #process .process-grid .process-box.is-open .process-box__title {
+            padding-right: 0;
+            padding-left: calc(var(--open-line-width) - 5px);
+        }
 
+        [dir="ltr"] #process .process-grid .process-box.is-open .process-box__title::after {
+            right: auto;
+            left: -15px;
+            top: 12px;
+        }
 
-/* --------------------------------------------------------------------- */
-/* --- LTR — closed box height (mobile) -------------------------------- */
-/* --------------------------------------------------------------------- */
-@media (max-width: 768px) {
-    [dir="ltr"] #process .process-grid .process-box:not(.is-open) {
-        height: 110px;
-        min-height: 110px;
-        max-height: 110px;
+        [dir="ltr"] #process .process-grid .process-box:not(.is-open) {
+            height: 110px;
+            min-height: 110px;
+            max-height: 110px;
+        }
+
+        @media (max-width: 480px) {
+
+            #process .process-grid .process-box.is-open {
+                height: 380px;
+                min-height: 380px;
+                max-height: 380px;
+            }
+
+            #process .process-grid .process-box.is-open .process-box__content {
+                max-width: 90%;
+            }
+
+            #process .process-grid .process-box:not(.is-open) .process-box__vtitle {
+                font-size: 0.85rem;
+            }
+        }
     }
 }
 
+@media (min-width: 568px) and (max-height: 320px) and (orientation: landscape) {
 
-/* --------------------------------------------------------------------- */
-/* --- <=480px: Narrow mobile ------------------------------------------ */
-/* --------------------------------------------------------------------- */
-@media (max-width: 480px) {
+}
 
-    #process .process-grid .process-box.is-open {
-        height: 380px;
-        min-height: 380px;
-        max-height: 380px;
+
+/* :::::::::::::::::::::::::: 380PX - S - GALAXY Z FLIP 3 / S24 ULTRA (380X880) :::::::::::::::::::::::::: */
+
+@media (min-width: 380px) {
+
+}
+
+@media (min-width: 880px) and (max-height: 412px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 440PX - S+ - IPHONE 17 PRO MAX (440X956) :::::::::::::::::::::::::: */
+
+@media (min-width: 440px) {
+
+}
+
+@media (min-width: 956px) and (max-height: 440px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 480PX - M - LARGE MOBILE :::::::::::::::::::::::::: */
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 480px) and (max-height: 500px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 768PX - TAB - IPAD MINI / GALAXY FOLD INNER (768X1024) :::::::::::::::::::::::::: */
+
+@media (min-width: 768px) {
+
+    @media (hover: hover) and (min-width: 769px) {
+
+        #process .process-box.is-hover:not(.is-open) {
+            flex: var(--process-hover-flex, 1.15) 1 0%;
+        }
+
+        #process .process-box.is-hover:not(.is-open) .process-box__media {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+        }
+
+        #process .process-box.is-hover:not(.is-open) .process-box__media img {
+            transform: scale(1.1);
+        }
+
+        #process .process-box.is-hover:not(.is-open)::before {
+            opacity: 1;
+            z-index: var(--z-raised);
+        }
     }
+}
 
-    #process .process-grid .process-box.is-open .process-box__content {
-        max-width: 90%;
-    }
+@media (min-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
 
-    #process .process-grid .process-box:not(.is-open) .process-box__vtitle {
-        font-size: 0.85rem;
-    }
+}
+
+
+/* :::::::::::::::::::::::::: 800PX - TAB+ - GALAXY TAB S7 (800X1280) :::::::::::::::::::::::::: */
+
+@media (min-width: 800px) {
+
+}
+
+@media (min-width: 1280px) and (max-height: 800px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 1024PX - L - IPAD PRO 13 (1024X1376) :::::::::::::::::::::::::: */
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1376px) and (max-height: 1032px) and (orientation: landscape) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 1366PX - XL - DESKTOP / LAPTOP FHD :::::::::::::::::::::::::: */
+
+@media (min-width: 1366px) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 1920PX - 2XL - FULL HD / 2K :::::::::::::::::::::::::: */
+
+@media (min-width: 1920px) {
+
+}
+
+
+/* :::::::::::::::::::::::::: 2560PX - UW - ULTRAWIDE / 4K UHD :::::::::::::::::::::::::: */
+
+@media (min-width: 2560px) {
+
+}
+
+
+/* :::::::::::::::::::::::::: LANDSCAPE PHONE - GENERAL LOW HEIGHT :::::::::::::::::::::::::: */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
 }
