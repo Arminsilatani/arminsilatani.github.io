@@ -38,7 +38,6 @@
     grid-template-columns: 350px 1fr 140px;
     align-items: center;
     padding-block: 45px;
-    border-bottom: 1px solid var(--border);
     position: relative;
     transition: background-color 0.4s ease;
     text-decoration: none;

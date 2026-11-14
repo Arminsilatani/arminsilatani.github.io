@@ -1375,7 +1375,6 @@
 }
 
 .seo-summary-list li.seo-breakdown-row {
-    padding-right: 1.25rem;
     font-size: .6875rem;
     color: var(--seo-text-40);
     opacity: 0;
@@ -2520,7 +2519,7 @@ html:not([dir="ltr"]) .seo-audit-form .field-group textarea {
             max-width: calc(100% + 2rem);
             -webkit-overflow-scrolling: touch;
             scrollbar-width: none;
-            touch-action: pan-x;
+            touch-action: pan-x pan-y;
             overscroll-behavior-x: contain;
             -webkit-user-select: none;
             user-select: none;
@@ -2541,7 +2540,7 @@ html:not([dir="ltr"]) .seo-audit-form .field-group textarea {
             margin-top: 0;
             margin-bottom: 0;
             box-sizing: border-box;
-            touch-action: pan-x;
+            touch-action: pan-x pan-y;
             animation: none;
         }
 

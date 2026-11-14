@@ -1,10 +1,12 @@
+/* :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: */
+
 document.addEventListener("DOMContentLoaded", () => {
   const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
-  
+
   if (!isTouchDevice) {
     const cursor = document.querySelector(".cursor");
     const follower = document.querySelector(".cursor-follower");
-    
+
     if (!cursor || !follower) return;
 
     gsap.set([cursor, follower], { xPercent: -50, yPercent: -50 });
@@ -18,10 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let isLight = false;
     let lastX = 0, lastY = 0;
     let rafPending = false;
-
-
-
-    /* :::::::::::::::::::::::::: SCROLL MODE :::::::::::::::::::::::::: */
 
     let scrollModeActive = false;
     let scrollStartY = 0;
@@ -65,8 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!savedScrollBehaviors) return;
       savedScrollBehaviors.forEach(({ el, value }) => {
         if (!el || !el.style) return;
-        if (value) el.style.setProperty('scroll-behavior', value);
-        else el.style.removeProperty('scroll-behavior');
+        if (value) {
+          el.style.setProperty('scroll-behavior', value);
+        } else {
+          el.style.removeProperty('scroll-behavior');
+        }
       });
       savedScrollBehaviors = null;
     }
@@ -74,8 +75,9 @@ document.addEventListener("DOMContentLoaded", () => {
     function instantScroll(step) {
       const container = findScrollContainer();
       if (container === document.documentElement || container === document.body) {
-        try { window.scrollBy({ top: step, left: 0, behavior: 'instant' }); }
-        catch(e) {
+        try {
+          window.scrollBy({ top: step, left: 0, behavior: 'instant' });
+        } catch (e) {
           const currentY = window.scrollY || window.pageYOffset || 0;
           window.scrollTo(0, currentY + step);
         }
@@ -99,9 +101,9 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollRAF = requestAnimationFrame(autoScrollLoop);
     }
 
-    const ALL_MODES = ['link-mode', 'text-mode', 'card-mode', 'drag-mode', 'disabled-mode', 
-                       'scroll-up-mode', 'scroll-down-mode', 'download-mode', 'tel-mode', 
-                       'mail-mode', 'send-mode', 'toggle-closed-mode', 'toggle-open-mode', 'btt-mode'];
+    const ALL_MODES = ['link-mode', 'text-mode', 'card-mode', 'drag-mode', 'disabled-mode',
+      'scroll-up-mode', 'scroll-down-mode', 'download-mode', 'tel-mode',
+      'mail-mode', 'send-mode', 'toggle-closed-mode', 'toggle-open-mode', 'btt-mode'];
 
     function enterScrollMode(clientY) {
       scrollModeActive = true;
@@ -120,23 +122,22 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!scrollModeActive) return;
       scrollModeActive = false;
       scrollSpeed = 0;
-      if (scrollRAF) { cancelAnimationFrame(scrollRAF); scrollRAF = null; }
+      if (scrollRAF) {
+        cancelAnimationFrame(scrollRAF);
+        scrollRAF = null;
+      }
       restoreSmoothScroll();
       cursor.classList.remove('scroll-mode');
       follower.classList.remove('scroll-mode');
     }
 
-
-
-    /* :::::::::::::::::::::::::: BACK TO TOP DETECTION :::::::::::::::::::::::::: */
-
     function isOverBackToTop(x, y) {
       const el = document.elementFromPoint(x, y);
       if (!el) return false;
-      
+
       let check = el;
       let safety = 0;
-      
+
       while (check && safety < 10) {
         if (check.tagName === 'BACK-TO-TOP' || (check.matches && check.matches('back-to-top'))) {
           return true;
@@ -147,7 +148,9 @@ document.addEventListener("DOMContentLoaded", () => {
           try {
             const root = check.getRootNode && check.getRootNode();
             check = (root && root.host) || null;
-          } catch(e) { check = null; }
+          } catch (e) {
+            check = null;
+          }
         }
         safety++;
       }
@@ -155,14 +158,38 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function isOverRedCheckbox(x, y) {
-        const boxes = document.querySelectorAll('.red-checkbox-container, .red-checkbox');
-        for (const box of boxes) {
-            const rect = box.getBoundingClientRect();
-            if (x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom) {
-                return true;
-            }
+      const boxes = document.querySelectorAll('.red-checkbox-container, .red-checkbox');
+      for (const box of boxes) {
+        const rect = box.getBoundingClientRect();
+        if (x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom) {
+          return true;
         }
-        return false;
+      }
+      return false;
+    }
+
+    function isOverDisabledArea(x, y) {
+      if (isOverRedCheckbox(x, y)) return true;
+      const el = document.elementFromPoint(x, y);
+      if (!el) return false;
+      let check = el;
+      for (let i = 0; i < 8 && check && check !== document.documentElement; i++) {
+        if (isElementDisabled(check)) return true;
+        check = check.parentElement;
+      }
+      return false;
+    }
+
+    function isOverDisabledArea(x, y) {
+      if (isOverRedCheckbox(x, y)) return true;
+      const el = document.elementFromPoint(x, y);
+      if (!el) return false;
+      let check = el;
+      for (let i = 0; i < 8 && check && check !== document.documentElement; i++) {
+        if (isElementDisabled(check)) return true;
+        check = check.parentElement;
+      }
+      return false;
     }
 
     function forceBttState() {
@@ -183,26 +210,22 @@ document.addEventListener("DOMContentLoaded", () => {
       applyLight(isLight);
     }
 
-
-
-    /* :::::::::::::::::::::::::: TOGGLE STATE DETECTION :::::::::::::::::::::::::: */
-
     function getToggleState(el) {
       if (!(el instanceof Element)) return null;
-      
-      const isToggle = 
+
+      const isToggle =
         el.hasAttribute('aria-expanded') ||
         el.classList.contains('process-box') ||
         el.classList.contains('faq-question') ||
         (el.getAttribute && el.getAttribute('data-cursor') === 'toggle') ||
         el.hasAttribute('data-toggle');
-      
+
       if (!isToggle) return null;
-      
+
       if (el.hasAttribute('aria-expanded')) {
         return el.getAttribute('aria-expanded') === 'true' ? 'open' : 'closed';
       }
-      
+
       if (el.classList.contains('process-box')) {
         if (el.classList.contains('is-open')) return null;
         let parent = el.parentElement;
@@ -214,9 +237,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         return 'closed';
       }
-      
+
       if (el.classList.contains('is-open')) return 'open';
-      
+
       let parent = el.parentElement;
       let depth = 0;
       while (parent && depth < 3) {
@@ -273,55 +296,55 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
           const target = document.getElementById(el.getAttribute('for'));
           if (target && target.matches && target.matches('input[type="file"]')) return true;
-        } catch(e) {}
+        } catch (e) {}
       }
       return false;
     }
 
     function isElementDisabled(el) {
-        if (!(el instanceof Element)) return false;
+      if (!(el instanceof Element)) return false;
 
-        if (el.matches('[disabled], .disabled, button:disabled, input:disabled, [aria-disabled="true"], [data-cursor="disabled"]')) {
+      if (el.matches('[disabled], .disabled, button:disabled, input:disabled, [aria-disabled="true"], [data-cursor="disabled"]')) {
+        return true;
+      }
+
+      if (el.disabled === true) return true;
+
+      if (el.matches('.red-checkbox, .red-checkbox-container, .disabled-checkbox, .is-disabled')) {
+        return true;
+      }
+
+      if (el.matches('label')) {
+        const input = el.querySelector('input');
+        if (input && (input.disabled || input.matches('.red-checkbox, .disabled-checkbox, [disabled]'))) {
+          return true;
+        }
+      }
+
+      if (el.matches('label[for]')) {
+        try {
+          const target = document.getElementById(el.htmlFor || el.getAttribute('for'));
+          if (target && (target.disabled || target.matches('.red-checkbox, .disabled-checkbox, [disabled]'))) {
             return true;
-        }
+          }
+        } catch (e) {}
+      }
 
-        if (el.disabled === true) return true;
-
-        if (el.matches('.red-checkbox, .red-checkbox-container, .disabled-checkbox, .is-disabled')) {
-            return true;
-        }
-
-        if (el.matches('label')) {
-            const input = el.querySelector('input');
-            if (input && (input.disabled || input.matches('.red-checkbox, .disabled-checkbox, [disabled]'))) {
-                return true;
-            }
-        }
-
-        if (el.matches('label[for]')) {
-            try {
-                const target = document.getElementById(el.htmlFor || el.getAttribute('for'));
-                if (target && (target.disabled || target.matches('.red-checkbox, .disabled-checkbox, [disabled]'))) {
-                    return true;
-                }
-            } catch(e) {}
-        }
-
-        return false;
+      return false;
     }
 
     function getAnchorDirection(el) {
       const manual = el.getAttribute && el.getAttribute('data-cursor');
       if (manual === 'up') return 'up';
       if (manual === 'down') return 'down';
-      
+
       const href = el.getAttribute && el.getAttribute('href');
       if (!href || !href.includes('#')) return null;
-      
+
       const hashIndex = href.indexOf('#');
       const path = href.slice(0, hashIndex);
       const hash = href.slice(hashIndex + 1);
-      
+
       let isSamePage = false;
       if (path === '' || path === '#' || path === location.pathname) {
         isSamePage = true;
@@ -329,27 +352,27 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
           const url = new URL(href, location.href);
           if (url.pathname === location.pathname && url.search === location.search) isSamePage = true;
-        } catch(e) {}
+        } catch (e) {}
       }
       if (!isSamePage) return null;
-      
+
       if (!hash) return 'up';
-      
+
       let target = null;
-      try { target = document.getElementById(decodeURIComponent(hash)); } catch(e) {}
+      try {
+        target = document.getElementById(decodeURIComponent(hash));
+      } catch (e) {}
       if (!target) {
-        try { target = document.querySelector(`[name="${CSS.escape(hash)}"]`); } catch(e) {}
+        try {
+          target = document.querySelector(`[name="${CSS.escape(hash)}"]`);
+        } catch (e) {}
       }
       if (!target) return null;
-      
+
       const rect = target.getBoundingClientRect();
       if (rect.top >= 0 && rect.bottom <= window.innerHeight) return null;
       return rect.top > 0 ? 'down' : 'up';
     }
-
-
-
-    /* :::::::::::::::::::::::::: LIGHTNESS DETECTION :::::::::::::::::::::::::: */
 
     function parseColor(str) {
       if (!str || str === 'none' || str === 'transparent') return null;
@@ -358,9 +381,9 @@ document.addEventListener("DOMContentLoaded", () => {
       m = str.match(/^#([0-9a-fA-F]{3,8})$/);
       if (m) {
         const h = m[1];
-        if (h.length === 3) return { r: parseInt(h[0]+h[0],16), g: parseInt(h[1]+h[1],16), b: parseInt(h[2]+h[2],16), a: 1 };
-        if (h.length === 6) return { r: parseInt(h.slice(0,2),16), g: parseInt(h.slice(2,4),16), b: parseInt(h.slice(4,6),16), a: 1 };
-        if (h.length === 8) return { r: parseInt(h.slice(0,2),16), g: parseInt(h.slice(2,4),16), b: parseInt(h.slice(4,6),16), a: parseInt(h.slice(6,8),16)/255 };
+        if (h.length === 3) return { r: parseInt(h[0] + h[0], 16), g: parseInt(h[1] + h[1], 16), b: parseInt(h[2] + h[2], 16), a: 1 };
+        if (h.length === 6) return { r: parseInt(h.slice(0, 2), 16), g: parseInt(h.slice(2, 4), 16), b: parseInt(h.slice(4, 6), 16), a: 1 };
+        if (h.length === 8) return { r: parseInt(h.slice(0, 2), 16), g: parseInt(h.slice(2, 4), 16), b: parseInt(h.slice(4, 6), 16), a: parseInt(h.slice(6, 8), 16) / 255 };
       }
       return null;
     }
@@ -375,9 +398,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const seen = new Set();
       try {
         document.elementsFromPoint(x, y).forEach(el => {
-          if (el instanceof Element && !seen.has(el)) { seen.add(el); all.push(el); }
+          if (el instanceof Element && !seen.has(el)) {
+            seen.add(el);
+            all.push(el);
+          }
         });
-      } catch(e) {}
+      } catch (e) {}
       let i = 0;
       while (i < all.length && i < 100) {
         const el = all[i];
@@ -385,9 +411,12 @@ document.addEventListener("DOMContentLoaded", () => {
           try {
             const inner = el.shadowRoot.elementsFromPoint(x, y);
             if (inner) inner.forEach(e => {
-              if (e instanceof Element && !seen.has(e)) { seen.add(e); all.push(e); }
+              if (e instanceof Element && !seen.has(e)) {
+                seen.add(e);
+                all.push(e);
+              }
             });
-          } catch(e) {}
+          } catch (e) {}
         }
         i++;
       }
@@ -400,14 +429,14 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!(el instanceof Element)) continue;
         const tag = el.tagName;
         if (tag === 'IMG' || tag === 'VIDEO' || tag === 'PICTURE' || tag === 'CANVAS' || tag === 'IFRAME') continue;
-        
+
         try {
           const s = getComputedStyle(el);
           const elOpacity = parseFloat(s.opacity);
           if (elOpacity >= 0.5) {
             const bg = parseColor(s.backgroundColor);
             if (bg && bg.a > 0.5) return luminance(bg) > 0.6;
-            
+
             if (s.backgroundImage && s.backgroundImage.includes('gradient')) {
               const matches = s.backgroundImage.match(/rgba?\([^)]+\)/g);
               if (matches && matches.length > 0) {
@@ -415,21 +444,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (c && c.a > 0.5) return luminance(c) > 0.6;
               }
             }
-            
+
             if (el instanceof SVGElement && s.fill && s.fill !== 'none' && !s.fill.startsWith('url(')) {
               const fill = parseColor(s.fill);
               if (fill && fill.a > 0.5) return luminance(fill) > 0.6;
             }
           }
-        } catch(e) {}
-        
+        } catch (e) {}
+
         try {
           const b = getComputedStyle(el, '::before');
           const bOpacity = parseFloat(b.opacity);
           if (b.content !== 'none' && b.content !== 'normal' && bOpacity >= 0.5) {
             const bg = parseColor(b.backgroundColor);
             if (bg && bg.a > 0.5) return luminance(bg) > 0.6;
-            
+
             if (b.backgroundImage && b.backgroundImage.includes('gradient')) {
               const matches = b.backgroundImage.match(/rgba?\([^)]+\)/g);
               if (matches && matches.length > 0) {
@@ -438,8 +467,8 @@ document.addEventListener("DOMContentLoaded", () => {
               }
             }
           }
-        } catch(e) {}
-        
+        } catch (e) {}
+
         try {
           const a = getComputedStyle(el, '::after');
           const aOpacity = parseFloat(a.opacity);
@@ -447,7 +476,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const bg = parseColor(a.backgroundColor);
             if (bg && bg.a > 0.5) return luminance(bg) > 0.6;
           }
-        } catch(e) {}
+        } catch (e) {}
       }
       return false;
     }
@@ -457,15 +486,18 @@ document.addEventListener("DOMContentLoaded", () => {
       follower.classList.toggle("on-light", light);
     }
 
-
-
-    /* :::::::::::::::::::::::::: MOUSEDOWN HANDLER :::::::::::::::::::::::::: */
-
     window.addEventListener('mousedown', (e) => {
       const interactive = e.target.closest && e.target.closest('a[href], button, input, textarea, select, [contenteditable="true"]');
       if (scrollModeActive) {
-        if (e.button === 1 && interactive) { exitScrollMode(); return; }
-        if (e.button === 1) { e.preventDefault(); exitScrollMode(); return; }
+        if (e.button === 1 && interactive) {
+          exitScrollMode();
+          return;
+        }
+        if (e.button === 1) {
+          e.preventDefault();
+          exitScrollMode();
+          return;
+        }
         exitScrollMode();
         return;
       }
@@ -475,49 +507,50 @@ document.addEventListener("DOMContentLoaded", () => {
       enterScrollMode(e.clientY);
     });
 
-
-
-    /* :::::::::::::::::::::::::: MOUSEMOVE HANDLER :::::::::::::::::::::::::: */
-
     window.addEventListener('mousemove', (e) => {
       lastX = e.clientX;
       lastY = e.clientY;
-      
+
       if (scrollModeActive) scrollSpeed = computeScrollSpeed(e.clientY - scrollStartY);
 
       gsap.to(cursor, { opacity: 1, duration: 0.3, overwrite: "auto" });
       gsap.to(follower, { opacity: 1, duration: 0.3, overwrite: "auto" });
-      xTo(lastX); yTo(lastY);
-      xToFollower(lastX); yToFollower(lastY);
+      xTo(lastX);
+      yTo(lastY);
+      xToFollower(lastX);
+      yToFollower(lastY);
 
       if (!rafPending) {
         rafPending = true;
         requestAnimationFrame(() => {
           rafPending = false;
           const nowLight = detectLight(lastX, lastY);
-          if (nowLight !== isLight) { isLight = nowLight; applyLight(isLight); }
-          
+          if (nowLight !== isLight) {
+            isLight = nowLight;
+            applyLight(isLight);
+          }
+
           if (!scrollModeActive) {
             if (isOverBackToTop(lastX, lastY)) {
-                if (currentState !== 'btt') forceBttState();
+              if (currentState !== 'btt') forceBttState();
             } else if (currentState === 'btt') {
-                clearBttState();
+              clearBttState();
             }
 
-            if (isOverRedCheckbox(lastX, lastY)) {
-                if (currentState !== 'disabled') {
-                    currentState = 'disabled';
-                    cursor.classList.remove(...ALL_MODES);
-                    follower.classList.remove(...ALL_MODES);
-                    cursor.classList.add('disabled-mode');
-                    follower.classList.add('disabled-mode');
-                }
-            } else if (currentState === 'disabled' && !isOverBackToTop(lastX, lastY)) {
-                currentState = 'default';
+            if (isOverDisabledArea(lastX, lastY)) {
+              if (currentState !== 'disabled') {
+                currentState = 'disabled';
                 cursor.classList.remove(...ALL_MODES);
                 follower.classList.remove(...ALL_MODES);
+                cursor.classList.add('disabled-mode');
+                follower.classList.add('disabled-mode');
+              }
+            } else if (currentState === 'disabled' && !isOverBackToTop(lastX, lastY) && !isOverDisabledArea(lastX, lastY)) {
+              currentState = 'default';
+              cursor.classList.remove(...ALL_MODES);
+              follower.classList.remove(...ALL_MODES);
             }
-        }
+          }
         });
       }
     });
@@ -527,13 +560,9 @@ document.addEventListener("DOMContentLoaded", () => {
       gsap.to([cursor, follower], { opacity: 0, duration: 0.3 });
     });
 
-
-
-    /* :::::::::::::::::::::::::: MOUSE OVER HANDLER :::::::::::::::::::::::::: */
-
     function handleMouseOver(e) {
       if (scrollModeActive) return;
-      
+
       const elements = [];
       if (e.target instanceof Element) elements.push(e.target);
       if (e.composedPath) {
@@ -551,12 +580,12 @@ document.addEventListener("DOMContentLoaded", () => {
       let isDisabled = false, isText = false, isCard = false, isLink = false, isDrag = false;
       let anchorUp = false, anchorDown = false, isDownload = false, isTel = false, isMail = false, isSend = false;
       let isToggleOpen = false, isToggleClosed = false, isBtt = false;
-      
+
       for (const el of elements) {
         if (el.tagName === 'BACK-TO-TOP' || (el.matches && el.matches('back-to-top'))) {
           isBtt = true;
         } else if (isElementDisabled(el)) {
-            isDisabled = true;
+          isDisabled = true;
         } else if (el.matches("input[type='text'], input[type='email'], input[type='password'], input[type='search'], input[type='number'], input[type='tel'], input[type='url'], textarea")) {
           isText = true;
         } else if (el.matches("[draggable='true'], .draggable")) {

@@ -11,13 +11,7 @@
     overflow: hidden;
     margin-bottom: 70px;
     box-sizing: border-box;
-    background: linear-gradient(
-        to bottom,
-        #F5F5F5 0%,
-        #F5F5F5 calc(100% - 160px),
-        #0D0D0D calc(100% - 160px),
-        #0D0D0D 100%
-    );
+    background: #F5F5F5;
 }
 
 .hero-container {

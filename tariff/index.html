@@ -6903,16 +6903,29 @@
                 const header = section.querySelector(".service-header");
                 const pinBtn = section.querySelector(".pin-btn");
 
+                function togglePin() {
+                    const isPinned = section.classList.contains("pinned");
+
+                    if (isPinned) {
+                        section.classList.remove("pinned", "active");
+                    } else {
+                        section.classList.add("pinned", "active");
+                        document.querySelectorAll(".service-section:not(.final-cart-section)").forEach(s => {
+                            if (s !== section && !s.classList.contains("pinned")) {
+                                s.classList.remove("active");
+                            }
+                        });
+                    }
+                }
+
                 if (header) {
-                    header.addEventListener("click", () => {
-                        section.classList.toggle("active");
-                    });
+                    header.addEventListener("click", togglePin);
                 }
 
                 if (pinBtn) {
                     pinBtn.addEventListener("click", (e) => {
                         e.stopPropagation();
-                        section.classList.toggle("pinned");
+                        togglePin();
                     });
                 }
 

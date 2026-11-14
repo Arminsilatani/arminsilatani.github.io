@@ -137,6 +137,23 @@ function initRevealAnimations() {
         });
     });
 
+    document.querySelectorAll(".reveal-card").forEach(el => {
+        if (el.closest(".categories-grid, .graphic-grid")) return;
+
+        gsap.to(el, {
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            duration: 0.85,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: el,
+                start: "top 90%",
+                once: true
+            }
+        });
+    });
+
     document.querySelectorAll(".portfolio-list").forEach(list => {
         const visibleRows = list.querySelectorAll(".portfolio-row:not(.extra-item)");
         if (!visibleRows.length) return;
@@ -393,4 +410,12 @@ document.addEventListener("DOMContentLoaded", () => {
     initExpandableLists();
     initGlowPulse();
     initHashScroll();
+});
+
+/* :::::::::::::::::::::::::: REFRESH ON LOAD :::::::::::::::::::::::::: */
+
+window.addEventListener("load", () => {
+    if (typeof ScrollTrigger !== "undefined") {
+        ScrollTrigger.refresh();
+    }
 });

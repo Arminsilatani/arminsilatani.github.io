@@ -10095,14 +10095,31 @@ serviceSections.forEach(section => {
     const pinBtn = section.querySelector(".pin-btn");
     const title  = section.querySelector(".service-header h3");   // ← جدید
 
-    if (header) {
-        header.addEventListener("click", (e) => {
-            section.classList.toggle("active");
-            if (e.target.closest("h3")) {
-                section.classList.toggle("pinned");
+    function togglePin() {
+                const isPinned = section.classList.contains("pinned");
+
+                if (isPinned) {
+                    section.classList.remove("pinned", "active");
+                } else {
+                    section.classList.add("pinned", "active");
+                    document.querySelectorAll(".service-section:not(.final-cart-section)").forEach(s => {
+                        if (s !== section && !s.classList.contains("pinned")) {
+                            s.classList.remove("active");
+                        }
+                    });
+                }
             }
-        });
-    }
+
+            if (header) {
+                header.addEventListener("click", togglePin);
+            }
+
+            if (pinBtn) {
+                pinBtn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    togglePin();
+                });
+            }
 
     if (pinBtn) {
         pinBtn.addEventListener("click", (e) => {
