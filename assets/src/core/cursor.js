@@ -269,11 +269,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function isTelElement(el) {
-      if (!(el instanceof Element)) return false;
-      const href = el.getAttribute && el.getAttribute('href');
-      if (href && href.trim().toLowerCase().startsWith('tel:')) return true;
-      if (el.getAttribute && el.getAttribute('data-cursor') === 'tel') return true;
-      return false;
+        if (!(el instanceof Element)) return false;
+        const href = el.getAttribute && el.getAttribute('href');
+        if (href && href.trim().toLowerCase().startsWith('tel:')) return true;
+        if (href && href.trim().toLowerCase().includes('meet.google.com')) return true;
+        if (el.getAttribute && el.getAttribute('data-cursor') === 'tel') return true;
+        return false;
     }
 
     function isMailElement(el) {
@@ -394,33 +395,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function getAllElementsAtPoint(x, y) {
-      const all = [];
-      const seen = new Set();
-      try {
-        document.elementsFromPoint(x, y).forEach(el => {
-          if (el instanceof Element && !seen.has(el)) {
-            seen.add(el);
-            all.push(el);
-          }
-        });
-      } catch (e) {}
-      let i = 0;
-      while (i < all.length && i < 100) {
-        const el = all[i];
-        if (el.shadowRoot) {
-          try {
-            const inner = el.shadowRoot.elementsFromPoint(x, y);
-            if (inner) inner.forEach(e => {
-              if (e instanceof Element && !seen.has(e)) {
-                seen.add(e);
-                all.push(e);
-              }
-            });
-          } catch (e) {}
+        const all = [];
+        const seen = new Set();
+
+        function collect(root) {
+            let els;
+            try {
+                els = root.elementsFromPoint(x, y);
+            } catch (e) {
+                return;
+            }
+            for (const el of els) {
+                if (!(el instanceof Element) || seen.has(el)) continue;
+                seen.add(el);
+                all.push(el);
+                if (el.shadowRoot) {
+                    collect(el.shadowRoot);
+                }
+            }
         }
-        i++;
-      }
-      return all;
+
+        collect(document);
+        return all;
     }
 
     function detectLight(x, y) {

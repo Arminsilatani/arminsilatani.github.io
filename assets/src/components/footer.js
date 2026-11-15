@@ -15,7 +15,10 @@ class FooterComponent extends HTMLElement {
         const ft = dict.footer;
 
         const langBase = i18n.getLangUrl(langCode);
+        const phone = isRTL ? "09125759466" : "+989125759466";
         const sitemapUrl = langBase + "sitemap/";
+        const meetUrl = "https://meet.google.com/ttc-nybt-grr";
+        const blogUrl = langBase + "blog/";
 
         this.style.setProperty("--footer-color", color);
         this.style.setProperty("--footer-shadow-color", shadowColor);
@@ -44,8 +47,8 @@ class FooterComponent extends HTMLElement {
                         <div class="column">
                             <h2>${ft.usefulLinks}</h2>
                             <ul class="menu">
-                                <li><a href="/#/" target="_blank">${ft.links.login}</a></li>
-                                <li><a href="/#/" target="_blank">${ft.links.blog}</a></li>
+                                <li><a href="https://dashboard.arminsilatani.com/" target="_blank">${ft.links.login}</a></li>
+                                <li><a href="${blogUrl}" target="_blank">${ft.links.blog}</a></li>
                                 <li><a href="https://tools.arminsilatani.com/" target="_blank" rel="noopener noreferrer">${ft.links.tools}</a></li>
                                 <li><a href="${sitemapUrl}" target="_blank">${ft.links.sitemap}</a></li>
                                 <li><a href="/#/" target="_blank">${ft.links.downloadCV}</a></li>
@@ -56,12 +59,19 @@ class FooterComponent extends HTMLElement {
                             <h2>${ft.contactTitle}</h2>
 
                             <div class="contact">
-                                <a href="tel:+989125759466">
-                                    <div class="lottie-icon footer-contact-icon"
-                                         data-lottie="/assets/lottie/phone-forwarded.json"
-                                         data-lottie-mode="hover"></div>
-                                    09125759466
-                                </a>
+                                ${langCode === "fa" ? `
+<a href="tel:+989125759466">
+                            <div class="lottie-icon footer-contact-icon"
+                                data-lottie="/assets/lottie/phone-forwarded.json"
+                                data-lottie-mode="hover"></div>
+                            ${phone}
+                        </a>` : `
+                        <a href="${meetUrl}" target="_blank" rel="noopener">
+                            <div class="lottie-icon footer-contact-icon"
+                                data-lottie="/assets/lottie/google-meet.json"
+                                data-lottie-mode="hover"></div>
+                            +989125759466
+                        </a>`}
 
                                 <a href="mailto:contact@arminsilatani.com">
                                     <div class="lottie-icon footer-contact-icon"
@@ -101,6 +111,7 @@ class FooterComponent extends HTMLElement {
                                          data-lottie="/assets/lottie/telegram.json"
                                          data-lottie-mode="hover"></div>
                                 </a>
+                            
                             </div>
                         </div>
                     </div>

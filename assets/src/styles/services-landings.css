@@ -457,7 +457,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 5px;
-    padding: 3rem 1.5rem;
+    padding: 100px 1.5rem 3rem;
     text-align: center;
     background: #0A0A0A;
 }
@@ -608,7 +608,7 @@
     text-align: center;
 }
 
-.seo-banner-title {
+.seo-page .seo-banner-title {
     text-align: center;
     text-align-last: center;
     width: 100%;
@@ -619,7 +619,6 @@
     padding-left: 0;
     padding-right: 0;
     float: none;
-    direction: rtl;
 }
 
 .seo-banner-desc {
@@ -2863,10 +2862,6 @@ html:not([dir="ltr"]) .seo-audit-form .field-group textarea {
 
         .seo-hero-desc {
             font-size: 1rem;
-        }
-
-        .seo-banner {
-            padding: 4rem 3.5rem;
         }
 
         .seo-banner-title {

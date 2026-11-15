@@ -148,6 +148,11 @@
     transform: scaleX(-1);
 }
 
+.seo-banner-note {
+    margin-top: .01rem;
+    font-size: .75rem;
+    color: rgba(255, 255, 255, .35);
+}
 
 /* :::::::::::::::::::::::::: SERVICES :::::::::::::::::::::::::: */
 
