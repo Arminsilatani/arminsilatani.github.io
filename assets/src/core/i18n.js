@@ -1,8 +1,11 @@
-/* :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: */
+/* :::::::::::::::::::::::::: I18N CORE :::::::::::::::::::::::::: */
 
 const SUPPORTED_LANGS = ["fa", "en", "ar", "tr", "de", "it"];
 const DEFAULT_LANG = "fa";
 const LANG_FOLDERS = ["/en/", "/ar/", "/tr/", "/de/", "/it/"];
+
+
+/* :::::::::::::::::::::::::: LANGUAGE DETECTION :::::::::::::::::::::::::: */
 
 function detectLang() {
     let path = window.location.pathname;
@@ -48,7 +51,12 @@ function getLangUrl(langCode) {
     return "/" + langCode + "/";
 }
 
+
+/* :::::::::::::::::::::::::: TRANSLATIONS :::::::::::::::::::::::::: */
+
 const TRANSLATIONS = {
+
+    /* ------------------------------ FA ------------------------------ */
     fa: {
         code: "fa",
         dir: "rtl",
@@ -83,8 +91,20 @@ const TRANSLATIONS = {
             centerImg: "/assets/images/logo-component/LogoComponentSlogan.webp",
             centerImgAlt: "نوشته گرافیکی «آن‌ها که انتخابم کردند» با طراحی دست‌نویس",
         },
+
+        blog: {
+            popularHeading: "پربازدیدترین مطالب {category}",
+            latestHeading: "آخرین مطالب منتشر شده — {category}",
+            comingSoon: "این مطلب در حال آماده‌سازی است",
+            comingSoonExcerpt: "محتوای این مقاله در حال نگارش است.",
+            comingSoonLabel: "در حال آماده‌سازی",
+            prevPage: "صفحه قبل",
+            nextPage: "صفحه بعد",
+            pagesLabel: "صفحه‌های اسلایدر",
+        },
     },
 
+    /* ------------------------------ EN ------------------------------ */
     en: {
         code: "en",
         dir: "ltr",
@@ -119,8 +139,20 @@ const TRANSLATIONS = {
             centerImg: "/assets/images/logo-component/LogoComponentSloganEN.webp",
             centerImgAlt: "Those who chose me",
         },
+
+        blog: {
+            popularHeading: "Most viewed {category} articles",
+            latestHeading: "Latest published articles — {category}",
+            comingSoon: "This article is being prepared",
+            comingSoonExcerpt: "Content for this article is being written.",
+            comingSoonLabel: "Coming soon",
+            prevPage: "Previous page",
+            nextPage: "Next page",
+            pagesLabel: "Slider pages",
+        },
     },
 
+    /* ------------------------------ AR ------------------------------ */
     ar: {
         code: "ar",
         dir: "rtl",
@@ -155,8 +187,20 @@ const TRANSLATIONS = {
             centerImg: "/assets/images/logo-component/LogoComponentSloganAR.webp",
             centerImgAlt: "نص جرافيكي عملاء وثقوا بي بتصميم بخط اليد",
         },
+
+        blog: {
+            popularHeading: "أكثر مقالات {category} قراءةً",
+            latestHeading: "أحدث المقالات المنشورة — {category}",
+            comingSoon: "هذا المقال قيد الإعداد",
+            comingSoonExcerpt: "محتوى هذا المقال قيد الكتابة.",
+            comingSoonLabel: "قيد الإعداد",
+            prevPage: "الصفحة السابقة",
+            nextPage: "الصفحة التالية",
+            pagesLabel: "صفحات العرض",
+        },
     },
 
+    /* ------------------------------ TR ------------------------------ */
     tr: {
         code: "tr",
         dir: "ltr",
@@ -191,8 +235,20 @@ const TRANSLATIONS = {
             centerImg: "/assets/images/logo-component/LogoComponentSloganTR.webp",
             centerImgAlt: "El yazısı ile Beni seçenler",
         },
+
+        blog: {
+            popularHeading: "En çok okunan {category} yazıları",
+            latestHeading: "Son yayınlanan yazılar — {category}",
+            comingSoon: "Bu makale hazırlanıyor",
+            comingSoonExcerpt: "Bu makalenin içeriği yazılıyor.",
+            comingSoonLabel: "Hazırlanıyor",
+            prevPage: "Önceki sayfa",
+            nextPage: "Sonraki sayfa",
+            pagesLabel: "Slayt sayfaları",
+        },
     },
 
+    /* ------------------------------ DE ------------------------------ */
     de: {
         code: "de",
         dir: "ltr",
@@ -227,8 +283,20 @@ const TRANSLATIONS = {
             centerImg: "/assets/images/logo-component/LogoComponentSloganDE.webp",
             centerImgAlt: "Handgezeichneter Text: Die mich gewählt haben",
         },
+
+        blog: {
+            popularHeading: "Meistgelesene {category}-Artikel",
+            latestHeading: "Zuletzt veröffentlichte Artikel — {category}",
+            comingSoon: "Dieser Artikel wird vorbereitet",
+            comingSoonExcerpt: "Der Inhalt dieses Artikels wird gerade geschrieben.",
+            comingSoonLabel: "In Vorbereitung",
+            prevPage: "Vorherige Seite",
+            nextPage: "Nächste Seite",
+            pagesLabel: "Slider-Seiten",
+        },
     },
 
+    /* ------------------------------ IT ------------------------------ */
     it: {
         code: "it",
         dir: "ltr",
@@ -263,8 +331,22 @@ const TRANSLATIONS = {
             centerImg: "/assets/images/logo-component/LogoComponentSloganIT.webp",
             centerImgAlt: "Scritta grafica Si sono fidati di me con calligrafia manuale",
         },
+
+        blog: {
+            popularHeading: "Articoli {category} più letti",
+            latestHeading: "Ultimi articoli pubblicati — {category}",
+            comingSoon: "Questo articolo è in preparazione",
+            comingSoonExcerpt: "Il contenuto di questo articolo è in fase di scrittura.",
+            comingSoonLabel: "In preparazione",
+            prevPage: "Pagina precedente",
+            nextPage: "Pagina successiva",
+            pagesLabel: "Pagine dello slider",
+        },
     },
 };
+
+
+/* :::::::::::::::::::::::::: MENU :::::::::::::::::::::::::: */
 
 const MENU_PATHS = {
     home: "",
@@ -275,12 +357,23 @@ const MENU_PATHS = {
     portfolio: "portfolio/",
 };
 
-function t(path) {
+
+/* :::::::::::::::::::::::::: TRANSLATE FUNCTION :::::::::::::::::::::::::: */
+
+function t(path, vars = {}) {
     const lang = detectLang();
     const dict = TRANSLATIONS[lang] || TRANSLATIONS[DEFAULT_LANG];
 
-    return path.split(".").reduce((acc, key) => acc?.[key], dict) ?? path;
+    let str = path.split(".").reduce((acc, key) => acc?.[key], dict) ?? path;
+
+    if (typeof str === "string") {
+        str = str.replace(/\{(\w+)\}/g, (_, k) => vars[k] ?? "");
+    }
+    return str;
 }
+
+
+/* :::::::::::::::::::::::::: MENU ITEMS :::::::::::::::::::::::::: */
 
 function getMenuItems() {
     const lang = detectLang();
@@ -294,6 +387,9 @@ function getMenuItems() {
     }));
 }
 
+
+/* :::::::::::::::::::::::::: DOCUMENT LANG :::::::::::::::::::::::::: */
+
 function applyDocumentLang() {
     const lang = detectLang();
     const dict = TRANSLATIONS[lang] || TRANSLATIONS[DEFAULT_LANG];
@@ -303,6 +399,9 @@ function applyDocumentLang() {
 }
 
 applyDocumentLang();
+
+
+/* :::::::::::::::::::::::::: EXPORT :::::::::::::::::::::::::: */
 
 window.i18n = {
     detectLang,

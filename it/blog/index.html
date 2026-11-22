@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+    <head>
+
+
+        <!-- :::::::::::::::::::::::::: HEAD & META :::::::::::::::::::::::::: -->
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>----------</title>
+        <meta name="description" content="----------" />
+        <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+        <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icon-32.png" />
+
+
+        <!-- :::::::::::::::::::::::::: STYLESHEETS & FONTS :::::::::::::::::::::::::: -->
+
+        <link rel="stylesheet" href="/assets/src/core/z-index.css" />
+        <link rel="stylesheet" href="/assets/src/core/fonts.css" />
+        <link rel="stylesheet" href="/assets/src/core/base.css" />
+        <link rel="stylesheet" href="/assets/src/core/typography.css" />
+        <link rel="stylesheet" href="/assets/src/core/containers.css" />
+        <link rel="stylesheet" href="/assets/src/core/animations.css" />
+        <link rel="stylesheet" href="/assets/src/core/cursor.css" />
+        <link rel="stylesheet" href="/assets/src/core/lottie-icons.css" />
+        <link rel="stylesheet" href="/assets/src/core/loader.css" />
+        <link rel="stylesheet" href="/assets/src/components/hero.css" />
+        <link rel="stylesheet" href="/assets/src/components/section-divider.css" />
+        <link rel="stylesheet" href="/assets/src/components/terminal-breadcrumb.css" />
+        <link rel="stylesheet" href="/assets/src/styles/blog.css" />
+
+
+        <!-- :::::::::::::::::::::::::: OPEN GRAPH & TWITTER CARDS :::::::::::::::::::::::::: -->
+
+        <meta property="og:title" content="----------" />
+        <meta property="og:description" content="----------" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://arminsilatani.com/it/services/" />
+        <meta property="og:locale" content="it_IT" />
+        <meta property="og:image" content="https://arminsilatani.com/assets/images/og-services.jpg" />
+        <meta property="og:image:alt" content="----------" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="----------" />
+        <meta name="twitter:description" content="----------" />
+        <meta name="twitter:image" content="https://arminsilatani.com/assets/images/og-services.jpg" />
+
+
+        <!-- :::::::::::::::::::::::::: CANONICAL & HREFLANG :::::::::::::::::::::::::: -->
+
+        <link rel="canonical" href="https://arminsilatani.com/it/blog/" />
+        <link rel="alternate" hreflang="fa" href="https://arminsilatani.com/blog/" />
+        <link rel="alternate" hreflang="en" href="https://arminsilatani.com/en/blog/" />
+        <link rel="alternate" hreflang="ar" href="https://arminsilatani.com/ar/blog/" />
+        <link rel="alternate" hreflang="tr" href="https://arminsilatani.com/tr/blog/" />
+        <link rel="alternate" hreflang="de" href="https://arminsilatani.com/de/blog/" />
+        <link rel="alternate" hreflang="it" href="https://arminsilatani.com/it/blog/" />
+        <link rel="alternate" hreflang="x-default" href="https://arminsilatani.com/en/blog/" />
+
+
+        <!-- :::::::::::::::::::::::::: JSON-LD SCHEMA :::::::::::::::::::::::::: -->
+
+        <script type="application/ld+json">
+
+        </script>
+
+
+        <!-- :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: -->
+
+        <script src="/assets/src/core/gsap.min.js" defer></script>
+        <script src="/assets/src/core/ScrollTrigger.min.js" defer></script>
+    </head>
+
+    <body>
+
+        <div id="initial-loader" class="fullpage-loader">
+            <div class="lds-grid">
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+            </div>
+        </div>
+        <div class="cursor"></div>
+        <div class="cursor-follower"></div>
+
+
+        <!-- :::::::::::::::::::::::::: HEADER & NAVIGATION :::::::::::::::::::::::::: -->
+
+        <header-component></header-component>
+
+
+        <!-- :::::::::::::::::::::::::: MAIN CONTENT :::::::::::::::::::::::::: -->
+
+        <main class="has-footer-gap">
+
+
+            <!-- :::::::::::::::::::::::::: HERO :::::::::::::::::::::::::: -->
+
+            <section class="hero-section">
+                <div class="container-1300">
+                    <video class="hero-section__video" autoplay muted loop playsinline preload="metadata">
+                        <source src="/assets/images/hero-bg.mp4" type="video/mp4">
+                    </video>
+                    <div class="hero-section__noise" aria-hidden="true"></div>
+                    <div class="hero-section__scanlines" aria-hidden="true"></div>
+                    <div class="hero-section__glitch" aria-hidden="true"></div>
+                    <div class="hero-container container-1300">
+                        <language-component></language-component>
+                        <div class="hero-title">
+                            <h1>
+                                <span class="split-title">Blog sul web</span>
+                                <span class="h1_sub reveal-up">Sviluppo web, SEO e design di prodotto</span>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="pro-divider">
+                        <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
+                            <defs>
+                                <filter id="dividerShadow" x="0" y="-30%" width="100%" height="150%">
+                                    <feDropShadow dx="0" dy="-8" stdDeviation="12" flood-color="rgba(0,0,0,0.55)"/>
+                                </filter>
+                            </defs>
+                            <path filter="url(#dividerShadow)" fill="#0D0D0D"
+                                  d="M0,0 L0,70 L100,70 L200,110 L1440,110 L1440,160 L0,160 Z"/>
+                        </svg>
+                    </div>
+                    <terminal-breadcrumb></terminal-breadcrumb>
+                </div>
+            </section>
+
+
+            <!-- :::::::::::::::::::::::::: SERVICES :::::::::::::::::::::::::: -->
+
+            <section class="services-overview" aria-label="دسته‌بندی خدمات">
+                <div class="container-1080">
+                    <div class="services-overview__header">
+                        <span class="eyebrow reveal-up">Scrivo di quello che imparo</span>
+                        <h2 class="section-title split-title">Informazioni sul blog</h2>
+                        <p class="section-desc reveal-up">In questo blog sul web racconto quello che ho imparato lavorando ai miei progetti: le scelte tecniche, gli esperimenti SEO e i dettagli del design delle interfacce. Alcune soluzioni hanno funzionato, altre no. In entrambi i casi mi interessa raccontare non solo il risultato, ma anche come ci sono arrivato.</p>
+                    </div>
+                </div>
+                <div class="container-1300">
+                    <nav class="services-nav-grid categories-grid" aria-label="پیمایش سریع خدمات">
+                        <a class="service-nav-card reveal-card" href="#web-design" data-category="web-design">
+                            <div class="service-nav-card__icon" aria-hidden="true">
+                                <div class="lottie-icon" data-lottie="/assets/lottie/code.json" data-lottie-mode="hover"></div>
+                            </div>
+                            <div class="service-nav-card__body">
+                                <h3 class="service-nav-card__title">Progettazione di siti web</h3>
+                                <p class="service-nav-card__desc">Velocità di caricamento, struttura e sviluppo web.</p>
+                            </div>
+                            <span class="service-nav-card__arrow" aria-hidden="true">←</span>
+                        </a>
+                        <a class="service-nav-card reveal-card" href="#seo" data-category="seo">
+                            <div class="service-nav-card__icon" aria-hidden="true">
+                                <div class="lottie-icon" data-lottie="/assets/lottie/trending-up.json" data-lottie-mode="hover"></div>
+                            </div>
+                            <div class="service-nav-card__body">
+                                <h3 class="service-nav-card__title">SEO</h3>
+                                <p class="service-nav-card__desc">Scansione, indicizzazione e struttura dei contenuti.</p>
+                            </div>
+                            <span class="service-nav-card__arrow" aria-hidden="true">←</span>
+                        </a>
+                        <a class="service-nav-card reveal-card" href="#ecommerce" data-category="ecommerce">
+                            <div class="service-nav-card__icon" aria-hidden="true">
+                                <div class="lottie-icon" data-lottie="/assets/lottie/shopping-bag.json" data-lottie-mode="hover"></div>
+                            </div>
+                            <div class="service-nav-card__body">
+                                <h3 class="service-nav-card__title">Progettazione di siti e-commerce</h3>
+                                <p class="service-nav-card__desc">Da WooCommerce ai dettagli del processo di acquisto.</p>
+                            </div>
+                            <span class="service-nav-card__arrow" aria-hidden="true">←</span>
+                        </a>
+                        <a class="service-nav-card reveal-card" href="#google-ads" data-category="google-ads">
+                            <div class="service-nav-card__icon" aria-hidden="true">
+                                <div class="lottie-icon" data-lottie="/assets/lottie/target.json" data-lottie-mode="hover"></div>
+                            </div>
+                            <div class="service-nav-card__body">
+                                <h3 class="service-nav-card__title">Google Ads</h3>
+                                <p class="service-nav-card__desc">Dalla scelta delle parole chiave all’analisi del rendimento.</p>
+                            </div>
+                            <span class="service-nav-card__arrow" aria-hidden="true">←</span>
+                        </a>
+                        <a class="service-nav-card reveal-card" href="#graphic" data-category="graphic">
+                            <div class="service-nav-card__icon" aria-hidden="true">
+                                <div class="lottie-icon" data-lottie="/assets/lottie/move.json" data-lottie-mode="hover"></div>
+                            </div>
+                            <div class="service-nav-card__body">
+                                <h3 class="service-nav-card__title">Grafica</h3>
+                                <p class="service-nav-card__desc">Identità visiva, colore e tipografia.</p>
+                            </div>
+                            <span class="service-nav-card__arrow" aria-hidden="true">←</span>
+                        </a>
+                        <a class="service-nav-card reveal-card" href="#ui-ux" data-category="ui-ux">
+                            <div class="service-nav-card__icon" aria-hidden="true">
+                                <div class="lottie-icon" data-lottie="/assets/lottie/layout.json" data-lottie-mode="hover"></div>
+                            </div>
+                            <div class="service-nav-card__body">
+                                <h3 class="service-nav-card__title">UI/UX</h3>
+                                <p class="service-nav-card__desc">Dal prototipo all’implementazione.</p>
+                            </div>
+                            <span class="service-nav-card__arrow" aria-hidden="true">←</span>
+                        </a>
+                    </nav>
+                </div>
+            </section>
+
+            <section-divider role="presentation" aria-hidden="true"></section-divider>
+
+
+            <!-- :::::::::::::::::::::::::: WEB DESIGN :::::::::::::::::::::::::: -->
+
+            <section id="web-design" class="service-block" aria-labelledby="heading-web-design">
+                <div class="container-1080">
+                    <div class="service-block__layout">
+                        <div class="service-block__media reveal-card">
+                            <div class="service-block__lottie-wrap">
+                                <span class="service-block__chapter-number" aria-hidden="true">۰۱</span>
+                                <div class="lottie-icon lottie-icon--large" data-lottie="/assets/lottie/web-design-large.json" data-lottie-mode="once"></div>
+                            </div>
+                        </div>
+                        <div class="service-block__content">
+                            <span class="eyebrow reveal-up">01 · Codice pulito, pagine rapide, un sito facile da aggiornare</span>
+                            <h2 id="heading-web-design" class="section-title split-title">Progettazione di siti web</h2>
+                            <p class="section-desc reveal-up">Quando progetto un sito web, tengo conto della <strong>velocità di caricamento</strong>, di come funziona sui dispositivi mobili e di come strutturare le pagine con HTML semantico. Penso anche a chi dovrà modificarlo senza riscrivere tutto da capo. Qui racconto come ho affrontato queste scelte nei miei progetti, da quelli in JavaScript senza framework a quelli in WordPress.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section-divider role="presentation" aria-hidden="true"></section-divider>
+
+
+            <!-- :::::::::::::::::::::::::: SEO :::::::::::::::::::::::::: -->
+
+            <section id="seo" class="service-block service-block--alt service-block--secondary" aria-labelledby="heading-seo">
+                <div class="container-1080">
+                    <div class="service-block__layout service-block__layout--reverse">
+                        <div class="service-block__media reveal-card">
+                            <div class="service-block__lottie-wrap">
+                                <span class="service-block__chapter-number" aria-hidden="true">۰۲</span>
+                                <div class="lottie-icon lottie-icon--large" data-lottie="/assets/lottie/seo-large.json" data-lottie-mode="once"></div>
+                            </div>
+                        </div>
+                        <div class="service-block__content">
+                            <span class="eyebrow reveal-up">02 · Puntare a risultati che durino oltre il prossimo aggiornamento</span>
+                            <h2 id="heading-seo" class="section-title split-title">SEO</h2>
+                            <p class="section-desc reveal-up">Per capire dove e come migliorare la visibilità di un sito, parto dai suoi dati. Negli articoli spiego come ho organizzato i <strong>link interni</strong>, raggruppato i contenuti in cluster e lavorato sulla <strong>SEO tecnica</strong>. L’obiettivo era far crescere il sito nella ricerca organica: racconto quali risultati ho osservato dopo gli interventi.</p>
+                            <div class="popular-posts">
+                                <div class="popular-posts__header">
+                                    <span class="eyebrow">Articoli SEO più letti</span>
+                                </div>
+                                <ul class="popular-posts__list" role="list">
+                                    <li class="popular-posts__item">
+                                        <a href="/blog/technical-seo-guide" class="popular-posts__link">
+                                            <span class="popular-posts__rank" aria-hidden="true">۰۱</span>
+                                            <div class="popular-posts__body">
+                                                <strong class="popular-posts__title">Guida completa alla SEO tecnica per principianti</strong>
+                                                <p class="popular-posts__meta"><span>18,5 mila visualizzazioni</span><span class="popular-posts__divider">·</span><span>12 min di lettura</span></p>
+                                            </div>
+                                            <svg class="popular-posts__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        </a>
+                                    </li>
+                                    <li class="popular-posts__item">
+                                        <a href="/blog/keyword-research" class="popular-posts__link">
+                                            <span class="popular-posts__rank" aria-hidden="true">۰۲</span>
+                                            <div class="popular-posts__body">
+                                                <strong class="popular-posts__title">Come trovare parole chiave redditizie</strong>
+                                                <p class="popular-posts__meta"><span>14,2 mila visualizzazioni</span><span class="popular-posts__divider">·</span><span>10 min di lettura</span></p>
+                                            </div>
+                                            <svg class="popular-posts__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        </a>
+                                    </li>
+                                    <li class="popular-posts__item">
+                                        <a href="/blog/internal-linking" class="popular-posts__link">
+                                            <span class="popular-posts__rank" aria-hidden="true">۰۳</span>
+                                            <div class="popular-posts__body">
+                                                <strong class="popular-posts__title">Link interni: cosa sono e come implementarli</strong>
+                                                <p class="popular-posts__meta"><span>10,3 mila visualizzazioni</span><span class="popular-posts__divider">·</span><span>7 min di lettura</span></p>
+                                            </div>
+                                            <svg class="popular-posts__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-1300">
+                    <div class="latest-posts-slider" aria-roledescription="carousel" aria-label="آخرین مطالب منتشر شده — سئو">
+                        <div class="latest-posts-slider__viewport">
+                            <div class="latest-posts-slider__track">
+                                <div class="latest-posts-slide">
+                                    <div class="latest-posts-grid">
+                                        <a href="/blog/technical-seo-guide" class="latest-post-card latest-post-card--warning">
+                                            <div class="latest-post-card__meta">
+                                                <span class="latest-post-card__category">SEO</span>
+                                                <span class="latest-post-card__divider">·</span>
+                                                <time datetime="2025-11-12">12 novembre 2025</time>
+                                            </div>
+                                            <h3 class="latest-post-card__title">Guida completa alla SEO tecnica per principianti</h3>
+                                            <p class="latest-post-card__excerpt">Una guida pratica alla SEO tecnica, dalla scansione delle pagine ai Core Web Vitals.</p>
+                                            <span class="latest-post-card__cta">Leggi l’articolo <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                                        </a>
+                                        <a href="/blog/keyword-research" class="latest-post-card latest-post-card--warning">
+                                            <div class="latest-post-card__meta">
+                                                <span class="latest-post-card__category">SEO</span>
+                                                <span class="latest-post-card__divider">·</span>
+                                                <time datetime="2025-11-10">10 novembre 2025</time>
+                                            </div>
+                                            <h3 class="latest-post-card__title">Come trovare parole chiave redditizie</h3>
+                                            <p class="latest-post-card__excerpt">Metodi pratici per distinguere le parole chiave che possono contribuire alle vendite da quelle che portano solo traffico.</p>
+                                            <span class="latest-post-card__cta">Leggi l’articolo <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                                        </a>
+                                        <a href="/blog/internal-linking" class="latest-post-card latest-post-card--warning">
+                                            <div class="latest-post-card__meta">
+                                                <span class="latest-post-card__category">SEO</span>
+                                                <span class="latest-post-card__divider">·</span>
+                                                <time datetime="2025-11-07">7 novembre 2025</time>
+                                            </div>
+                                            <h3 class="latest-post-card__title">Link interni: cosa sono e come implementarli</h3>
+                                            <p class="latest-post-card__excerpt">Perché la struttura dei link interni conta per la SEO e come impostarla passo dopo passo.</p>
+                                            <span class="latest-post-card__cta">Leggi l’articolo <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                                        </a>
+                                        <a href="/blog/schema-org" class="latest-post-card latest-post-card--warning">
+                                            <div class="latest-post-card__meta">
+                                                <span class="latest-post-card__category">SEO</span>
+                                                <span class="latest-post-card__divider">·</span>
+                                                <time datetime="2025-11-05">5 novembre 2025</time>
+                                            </div>
+                                            <h3 class="latest-post-card__title">Schema.org e il posizionamento su Google</h3>
+                                            <p class="latest-post-card__excerpt">Come i <strong>dati strutturati</strong> possono rendere una pagina più riconoscibile nei risultati di Google, senza migliorarne direttamente il posizionamento.</p>
+                                            <span class="latest-post-card__cta">Leggi l’articolo <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="latest-posts-slide">
+                                    <div class="latest-posts-grid">
+                                        <a href="/blog/backlink-building" class="latest-post-card latest-post-card--warning">
+                                            <div class="latest-post-card__meta">
+                                                <span class="latest-post-card__category">SEO</span>
+                                                <span class="latest-post-card__divider">·</span>
+                                                <time datetime="2025-10-28">28 ottobre 2025</time>
+                                            </div>
+                                            <h3 class="latest-post-card__title">Guida alla costruzione naturale di backlink</h3>
+                                            <p class="latest-post-card__excerpt">I backlink di qualità possono contribuire alla reputazione di un sito. La guida spiega come ottenerli in modo naturale.</p>
+                                            <span class="latest-post-card__cta">Leggi l’articolo <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                                        </a>
+                                        <a href="/blog/google-search-console" class="latest-post-card latest-post-card--warning">
+                                            <div class="latest-post-card__meta">
+                                                <span class="latest-post-card__category">SEO</span>
+                                                <span class="latest-post-card__divider">·</span>
+                                                <time datetime="2025-10-20">20 ottobre 2025</time>
+                                            </div>
+                                            <h3 class="latest-post-card__title">Guida completa a Google Search Console</h3>
+                                            <p class="latest-post-card__excerpt">A cosa serve Google Search Console, quali attività semplifica e come usare questo strumento gratuito di Google.</p>
+                                            <span class="latest-post-card__cta">Leggi l’articolo <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                                        </a>
+                                        <a href="/blog/on-page-seo" class="latest-post-card latest-post-card--warning">
+                                            <div class="latest-post-card__meta">
+                                                <span class="latest-post-card__category">SEO</span>
+                                                <span class="latest-post-card__divider">·</span>
+                                                <time datetime="2025-10-14">14 ottobre 2025</time>
+                                            </div>
+                                            <h3 class="latest-post-card__title">SEO on-page: la checklist completa</h3>
+                                            <p class="latest-post-card__excerpt">Una checklist per ottimizzare le singole pagine, dall’elemento <code>title</code> alla gerarchia delle intestazioni H1–H6.</p>
+                                            <span class="latest-post-card__cta">Leggi l’articolo <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                                        </a>
+                                        <a href="/blog/seo-content-writing" class="latest-post-card latest-post-card--warning">
+                                            <div class="latest-post-card__meta">
+                                                <span class="latest-post-card__category">SEO</span>
+                                                <span class="latest-post-card__divider">·</span>
+                                                <time datetime="2025-10-08">8 ottobre 2025</time>
+                                            </div>
+                                            <h3 class="latest-post-card__title">Come scrivere contenuti ottimizzati per la SEO</h3>
+                                            <p class="latest-post-card__excerpt">Una guida per scrivere contenuti web utili a chi legge e chiari anche per Google.</p>
+                                            <span class="latest-post-card__cta">Leggi l’articolo <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="latest-posts-slider__controls">
+                            <button type="button" class="latest-posts-slider__btn latest-posts-slider__btn--prev" aria-label="صفحه قبل">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+                            <div class="latest-posts-slider__dots" role="tablist" aria-label="صفحه‌های اسلایدر"></div>
+                            <button type="button" class="latest-posts-slider__btn latest-posts-slider__btn--next" aria-label="صفحه بعد">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section-divider role="presentation" aria-hidden="true"></section-divider>
+
+
+            <!-- :::::::::::::::::::::::::: ECOMMERCE :::::::::::::::::::::::::: -->
+
+            <section id="ecommerce" class="service-block" aria-labelledby="heading-ecommerce">
+                <div class="container-1080">
+                    <div class="service-block__layout">
+                        <div class="service-block__media reveal-card">
+                            <div class="service-block__lottie-wrap">
+                                <span class="service-block__chapter-number" aria-hidden="true">۰۳</span>
+                                <div class="lottie-icon lottie-icon--large" data-lottie="/assets/lottie/ecommerce-large.json" data-lottie-mode="once"></div>
+                            </div>
+                        </div>
+                        <div class="service-block__content">
+                            <span class="eyebrow reveal-up">03 · I dettagli di un acquisto online</span>
+                            <h2 id="heading-ecommerce" class="section-title split-title">Progettazione di negozi online</h2>
+                            <p class="section-desc reveal-up">Quasi sempre parto da un problema incontrato in un progetto e-commerce: un <strong>modulo di checkout</strong> troppo lungo, una ricerca interna che non trova quello che serve, filtri poco utili o un sito che rallenta sotto il peso del catalogo. Racconto quale approccio ho provato, che cosa ho cambiato e con quale esito.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section-divider role="presentation" aria-hidden="true"></section-divider>
+
+
+            <!-- :::::::::::::::::::::::::: GOOGLE ADS :::::::::::::::::::::::::: -->
+
+            <section id="google-ads" class="service-block service-block--alt service-block--danger" aria-labelledby="heading-google-ads">
+                <div class="service-block__band" aria-hidden="true" data-color="danger"></div>
+                <div class="container-1080">
+                    <div class="service-block__layout service-block__layout--reverse">
+                        <div class="service-block__media reveal-card">
+                            <div class="service-block__lottie-wrap">
+                                <span class="service-block__chapter-number" aria-hidden="true">۰۴</span>
+                                <div class="lottie-icon lottie-icon--large" data-lottie="/assets/lottie/ads-large.json" data-lottie-mode="once"></div>
+                            </div>
+                        </div>
+                        <div class="service-block__content">
+                            <span class="eyebrow reveal-up">04 · Spesa, clic, risultati</span>
+                            <h2 id="heading-google-ads" class="section-title split-title">Google Ads</h2>
+                            <p class="section-desc reveal-up">Su Google Ads, i risultati dipendono anche da come si definiscono le <strong>conversioni</strong>, da quali parole chiave si escludono e da come si testa la struttura delle campagne prima di ampliarle. Nei miei articoli ripercorro il lavoro su account piccoli e medi: le strategie che hanno funzionato e i casi in cui i risultati si sono discostati dalle aspettative.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section-divider role="presentation" aria-hidden="true"></section-divider>
+
+
+            <!-- :::::::::::::::::::::::::: GRAPHIC :::::::::::::::::::::::::: -->
+
+            <section id="graphic" class="service-block" aria-labelledby="heading-graphic">
+                <div class="container-1080">
+                    <div class="service-block__layout">
+                        <div class="service-block__media reveal-card">
+                            <div class="service-block__lottie-wrap">
+                                <span class="service-block__chapter-number" aria-hidden="true">۰۵</span>
+                                <div class="lottie-icon lottie-icon--large" data-lottie="/assets/lottie/graphic-large.json" data-lottie-mode="once"></div>
+                            </div>
+                        </div>
+                        <div class="service-block__content">
+                            <span class="eyebrow reveal-up">05 · Quello che si vede prima del testo</span>
+                            <h2 id="heading-graphic" class="section-title split-title">Grafica</h2>
+                            <p class="section-desc reveal-up">Nella maggior parte degli articoli di design grafico mi soffermo su ciò che si nota prima ancora di leggere una parola: il colore, la spaziatura, la gerarchia visiva e le proporzioni. Riprendo i progetti in cui ho lavorato a <strong>identità visive</strong> e materiali di campagna per spiegare quali scelte ho fatto e perché.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section-divider role="presentation" aria-hidden="true"></section-divider>
+
+
+            <!-- :::::::::::::::::::::::::: UI/UX :::::::::::::::::::::::::: -->
+
+            <section id="ui-ux" class="service-block service-block--alt service-block--secondary" aria-labelledby="heading-ui-ux">
+                <div class="container-1080">
+                    <div class="service-block__layout service-block__layout--reverse">
+                        <div class="service-block__media reveal-card">
+                            <div class="service-block__lottie-wrap">
+                                <span class="service-block__chapter-number" aria-hidden="true">۰۶</span>
+                                <div class="lottie-icon lottie-icon--large" data-lottie="/assets/lottie/uiux-large.json" data-lottie-mode="once"></div>
+                            </div>
+                        </div>
+                        <div class="service-block__content">
+                            <span class="eyebrow reveal-up">06 · Progettare, dalla ricerca al componente</span>
+                            <h2 id="heading-ui-ux" class="section-title split-title">UI/UX</h2>
+                            <p class="section-desc reveal-up">Scrivo di progettazione delle interfacce e dell’esperienza utente: da ciò che mi hanno raccontato gli utenti durante la ricerca fino ai prototipi che ho testato. Mi interessa distinguere le modifiche che hanno cambiato il modo in cui le persone usano l’interfaccia da quelle che ne hanno cambiato soltanto l’aspetto.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+
+        <!-- :::::::::::::::::::::::::: FOOTER :::::::::::::::::::::::::: -->
+
+        <footer-component></footer-component>
+        <back-to-top></back-to-top>
+
+
+        <!-- :::::::::::::::::::::::::: SCRIPTS & ANALYTICS :::::::::::::::::::::::::: -->
+
+        <script src="/assets/src/core/i18n.js"></script>
+        <script type="module" src="/assets/src/components/header.js"></script>
+        <script type="module" src="/assets/src/components/language-selector.js"></script>
+        <script src="/assets/src/components/terminal-breadcrumb.js"></script>
+        <script type="module" src="/assets/src/components/footer.js"></script>
+        <script type="module" src="/assets/src/components/back-to-top.js"></script>
+        <script src="/assets/src/core/cursor.js"></script>
+        <script src="/assets/src/core/loader.js"></script>
+        <script src="/assets/src/core/animations.js"></script>
+        <script src="/assets/src/core/lottie_light.min.js"></script>
+        <script type="module" src="/assets/src/core/lottie-icons.js"></script>
+        <script type="module" src="/assets/src/components/latest-posts-slider.js"></script>
+        <script type="module" src="/assets/src/components/service-nav-auto-disable.js"></script>
+    </body>
+</html>
